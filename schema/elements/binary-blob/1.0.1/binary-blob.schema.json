@@ -1,0 +1,25 @@
+{
+  "$id": "/elements/binary-blob/1.0.1/binary-blob.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Binary blob",
+  "oneOf": [
+    {
+      "type": "string",
+      "description": "File hash. This is preferred over unique identifier.",
+      "pattern": "^[0-9A-Fa-f]{64}$",
+      "minLength": 64,
+      "maxLength": 64
+    },
+    {
+      "type": "string",
+      "description": "Unique identifier.",
+      "format": "uuid",
+      "minLength": 36,
+      "maxLength": 36
+    },
+    {
+      "type": "null",
+      "description": "no binary data"
+    }
+  ]
+}

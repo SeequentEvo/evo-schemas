@@ -1,0 +1,22 @@
+{
+  "$id": "/components/resistivity-ip-phaseip-survey-properties/1.0.0/resistivity-ip-phaseip-survey-properties.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Resistivity-IP properties for Phased Induced Polarization (PHASEIP) surveys.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "description": "Type of survey.",
+      "type": "string",
+      "const": "PHASEIP"
+    },
+    "frequency": {
+      "description": "Frequency (Hz) used during measurements.",
+      "type": "number",
+      "minimum": 0.0
+    }
+  },
+  "required": [
+    "type",
+    "frequency"
+  ]
+}

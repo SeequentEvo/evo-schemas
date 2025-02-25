@@ -1,0 +1,40 @@
+{
+  "$id": "/components/embedded-line-geometry/1.0.0/embedded-line-geometry.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A set of polylines composed of straight line segments.",
+  "type": "object",
+  "properties": {
+    "vertices": {
+      "description": "Vertex coordinates in 2D space. Columns: u, v.",
+      "allOf": [
+        {
+          "$ref": "/elements/float-array-2/1.0.1/float-array-2.schema.json"
+        },
+        {
+          "$ref": "/components/attribute-list-property/1.2.0/attribute-list-property.schema.json",
+          "description": "Attributes associated with each vertex."
+        }
+      ]
+    },
+    "chunks": {
+      "description": "A tuple defining the first index and the length of a chunk of vertices, forming a polyline/polygon.\nIf indices is defined, the chunk refers to a segment of the indices array.\nOtherwise, the chunk refers to a segment of the vertices array.\nChunks can overlap.\nColumns: offset, count",
+      "allOf": [
+        {
+          "$ref": "/elements/index-array-2/1.0.1/index-array-2.schema.json"
+        },
+        {
+          "$ref": "/components/attribute-list-property/1.2.0/attribute-list-property.schema.json",
+          "description": "Attributes associated with each chunk."
+        }
+      ]
+    },
+    "indices": {
+      "description": "An optional index array into the vertices.\nThis is used to define chunks if the vertices list do not contain contiguous chunks.",
+      "$ref": "/elements/index-array-1/1.0.1/index-array-1.schema.json"
+    }
+  },
+  "required": [
+    "vertices",
+    "chunks"
+  ]
+}

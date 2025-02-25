@@ -1,0 +1,193 @@
+{
+  "schema": "/objects/gravity/1.1.0/gravity.schema.json",
+  "name": "Example of a gravity survey data object",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "description": "This is example data to ensure the object validates properly.",
+  "bounding_box": {
+    "min_y": 0,
+    "max_y": 10,
+    "min_x": 0,
+    "max_x": 10,
+    "min_z": 0,
+    "max_z": 0
+  },
+  "coordinate_reference_system": {
+    "epsg_code": 1024
+  },
+  "type": "GROUND",
+  "survey_type": "AGG",
+  "base_stations": [
+    {
+      "name": "1",
+      "location": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "gravity_line_list": [
+        {
+          "line_number": "CG-6_0009_TEST20180404",
+          "date": "2018-04-04T20:20:39+00:00",
+          "version": 0,
+          "group": 0,
+          "type": "Line",
+          "location_channels": {
+            "x": "X",
+            "y": "Y"
+          },
+          "channel_attributes": [
+            {
+              "name": "X",
+              "start_fiducial": 1.0,
+              "fiducial_increment": 1.0,
+              "attribute": {
+                "name": "X channel",
+                "key": "X",
+                "attribute_type": "scalar",
+                "nan_description": {
+                  "values": [
+                    -99999.9
+                  ]
+                },
+                "attribute_description": {
+                  "discipline": "Geophysics",
+                  "scale": "linear",
+                  "type": "Gravity",
+                  "unit": "m"
+                },
+                "values": {
+                  "data_type": "float64",
+                  "length": 3,
+                  "width": 1,
+                  "data": "abababababababababababababababababababababababababababababababab"
+                }
+              }
+            },
+            {
+              "name": "Y",
+              "start_fiducial": 1.0,
+              "fiducial_increment": 1.0,
+              "attribute": {
+                "name": "Y channel",
+                "key": "Y",
+                "attribute_type": "scalar",
+                "nan_description": {
+                  "values": [
+                    -99999.9
+                  ]
+                },
+                "attribute_description": {
+                  "discipline": "Geophysics",
+                  "scale": "linear",
+                  "type": "Gravity",
+                  "unit": "m"
+                },
+                "values": {
+                  "data_type": "float64",
+                  "length": 3,
+                  "width": 1,
+                  "data": "abababababababababababababababababababababababababababababababab"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "gravity_line_list": [
+    {
+      "line_number": "0302_APR04",
+      "date": "2018-04-04T20:20:39+00:00",
+      "version": 0,
+      "group": 0,
+      "type": "Line",
+      "location_channels": {
+        "x": "X",
+        "y": "Y"
+      },
+      "channel_attributes": [
+        {
+          "name": "X",
+          "start_fiducial": 1.0,
+          "fiducial_increment": 1.0,
+          "attribute": {
+            "name": "X channel",
+            "key": "X",
+            "attribute_type": "scalar",
+            "nan_description": {
+              "values": [
+                -99999.9
+              ]
+            },
+            "attribute_description": {
+              "discipline": "Geophysics",
+              "scale": "linear",
+              "type": "Gravity",
+              "unit": "m"
+            },
+            "values": {
+              "data_type": "float64",
+              "length": 100,
+              "width": 1,
+              "data": "abababababababababababababababababababababababababababababababab"
+            }
+          }
+        },
+        {
+          "name": "Y",
+          "start_fiducial": 1.0,
+          "fiducial_increment": 1.0,
+          "attribute": {
+            "name": "Y channel",
+            "key": "Y",
+            "attribute_type": "scalar",
+            "nan_description": {
+              "values": [
+                -99999.9
+              ]
+            },
+            "attribute_description": {
+              "discipline": "Geophysics",
+              "scale": "linear",
+              "type": "Gravity",
+              "unit": "m"
+            },
+            "values": {
+              "data_type": "float64",
+              "length": 100,
+              "width": 1,
+              "data": "abababababababababababababababababababababababababababababababab"
+            }
+          }
+        },
+        {
+          "name": "RawGrav",
+          "start_fiducial": 1.0,
+          "fiducial_increment": 1.0,
+          "attribute": {
+            "name": "Raw Gravity data",
+            "key": "RawGrav",
+            "attribute_type": "scalar",
+            "nan_description": {
+              "values": [
+                -99999.9
+              ]
+            },
+            "attribute_description": {
+              "discipline": "Geophysics",
+              "scale": "linear",
+              "type": "Gravity"
+            },
+            "values": {
+              "data_type": "float64",
+              "length": 100,
+              "width": 1,
+              "data": "abababababababababababababababababababababababababababababababab"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

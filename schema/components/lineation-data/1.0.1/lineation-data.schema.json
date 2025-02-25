@@ -1,0 +1,15 @@
+{
+  "$id": "/components/lineation-data/1.0.1/lineation-data.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "An extension used to associate lineation data with locations.",
+  "type": "object",
+  "properties": {
+    "lineations": {
+      "description": "Lineation data. Columns: trend, plunge.",
+      "$ref": "/elements/float-array-2/1.0.1/float-array-2.schema.json"
+    }
+  },
+  "required": [
+    "lineations"
+  ]
+}

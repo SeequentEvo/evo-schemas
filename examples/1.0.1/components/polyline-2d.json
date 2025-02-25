@@ -1,0 +1,7 @@
+{
+  "$schema": "/components/polyline-2d/1.0.1/polyline-2d.schema.json",
+  "begin": 1,
+  "count": 10,
+  "closed": "Closed",
+  "shape": "Straight"
+}

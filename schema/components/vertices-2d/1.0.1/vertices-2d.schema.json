@@ -1,0 +1,15 @@
+{
+  "$id": "/components/vertices-2d/1.0.1/vertices-2d.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "This component describes 2D vertices.",
+  "type": "object",
+  "properties": {
+    "vertices": {
+      "$ref": "/elements/float-array-2/1.0.1/float-array-2.schema.json",
+      "description": "Vertex coordinate in 2D space. Columns: x, y."
+    }
+  },
+  "required": [
+    "vertices"
+  ]
+}

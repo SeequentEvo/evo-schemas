@@ -1,0 +1,11 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-moment-of-inertia.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (moment of inertia)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "kg.m2",
+    "lbm.ft2"
+  ]
+}

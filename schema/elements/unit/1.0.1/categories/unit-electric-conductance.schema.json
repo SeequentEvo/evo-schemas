@@ -1,0 +1,22 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-electric-conductance.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (electric conductance)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "S",
+    "cS",
+    "dS",
+    "ES",
+    "fS",
+    "GS",
+    "kS",
+    "mS",
+    "MS",
+    "nS",
+    "pS",
+    "TS",
+    "uS"
+  ]
+}

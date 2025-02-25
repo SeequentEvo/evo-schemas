@@ -1,0 +1,44 @@
+{
+  "$id": "/components/polyline-2d/1.0.1/polyline-2d.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "This component describes a 2D polyline.",
+  "type": "object",
+  "properties": {
+    "begin": {
+      "title": "Index of the first line segment in lines-2d.",
+      "type": "integer",
+      "minimum": 0,
+      "description": "Index of the first line segment in lines-2d."
+    },
+    "count": {
+      "title": "The number of line segments.",
+      "type": "integer",
+      "minimum": 0,
+      "description": "The number of line segments."
+    },
+    "closed": {
+      "title": "Closed or open",
+      "type": "string",
+      "description": "Closed or open.",
+      "enum": [
+        "Open",
+        "Closed"
+      ]
+    },
+    "shape": {
+      "title": "Straight or curved lines.",
+      "type": "string",
+      "description": "Straight or curved.",
+      "enum": [
+        "Straight",
+        "Curved"
+      ]
+    }
+  },
+  "required": [
+    "begin",
+    "count",
+    "closed",
+    "shape"
+  ]
+}

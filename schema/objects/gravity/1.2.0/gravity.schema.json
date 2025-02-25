@@ -1,0 +1,90 @@
+{
+  "$id": "/objects/gravity/1.2.0/gravity.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Gravity survey data.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.1.0/base-spatial-data-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/gravity/1.2.0/gravity.schema.json"
+        },
+        "type": {
+          "description": "Survey mode.",
+          "type": "string",
+          "enum": [
+            "GROUND",
+            "AIR",
+            "MARINE"
+          ]
+        },
+        "survey_type": {
+          "description": "Type of survey.",
+          "type": "string",
+          "enum": [
+            "GRAV",
+            "FTG",
+            "AGG"
+          ]
+        },
+        "base_stations": {
+          "type": "array",
+          "description": "Base stations.",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "description": "Base station.",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Base station name."
+              },
+              "location": {
+                "type": "array",
+                "description": "Base station location, (x, y, z)-triple.",
+                "maxItems": 3,
+                "minItems": 3,
+                "items": {
+                  "type": "number"
+                }
+              },
+              "gravity_line_list": {
+                "description": "Base station gravity line list.",
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "description": "Gravity survey line.",
+                  "$ref": "/components/survey-line/1.1.0/survey-line.schema.json"
+                }
+              }
+            },
+            "required": [
+              "name",
+              "location",
+              "gravity_line_list"
+            ]
+          }
+        },
+        "gravity_line_list": {
+          "description": "Gravity line list.",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "description": "Gravity survey line.",
+            "$ref": "/components/survey-line/1.1.0/survey-line.schema.json"
+          }
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "type",
+    "survey_type",
+    "gravity_line_list"
+  ],
+  "unevaluatedProperties": false
+}

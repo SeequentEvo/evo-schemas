@@ -1,0 +1,14 @@
+{
+  "$schema": "/components/resistivity-ip-plpl-configuration-properties/1.0.0/resistivity-ip-plpl-configuration-properties.schema.json",
+  "type": "PLPL",
+  "receiver_remote": {
+    "x": -5000,
+    "y": 5000,
+    "z": 0
+  },
+  "transmitter_remote": {
+    "x": 5000,
+    "y": 5000,
+    "z": 0
+  }
+}

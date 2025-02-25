@@ -1,0 +1,13 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-electric-conductivity.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (electric conductivity)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "S/m",
+    "kS/m",
+    "mS/cm",
+    "mS/m"
+  ]
+}

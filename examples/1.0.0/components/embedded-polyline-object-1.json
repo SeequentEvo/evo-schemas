@@ -1,0 +1,16 @@
+{
+  "$schema": "/components/embedded-polyline-object/1.0.0/embedded-polyline-object.schema.json",
+  "name": "Veins at 174.0",
+  "parts": [
+    {
+      "index": 0
+    },
+    {
+      "index": 1,
+      "reversed": true
+    },
+    {
+      "index": 5
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-volume-per-time-per-pressure-length.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units ((volume per time) per (pressure length))",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "m2/(Pa.s)",
+    "TD[API]/(Pa.s)",
+    "bbl/(ft.psi.d)",
+    "ft3/(ft.psi.d)",
+    "m2/(kPa.d)",
+    "D/(Pa.s)",
+    "D/cP",
+    "mD.ft2/(lbf.s)",
+    "mD.in2/(lbf.s)",
+    "mD/(Pa.s)",
+    "mD/cP"
+  ]
+}

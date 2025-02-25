@@ -1,0 +1,73 @@
+{
+  "$id": "/objects/regular-masked-3d-grid/1.2.0/regular-masked-3d-grid.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A 3D regular masked grid (all cells are equal size). The mask attribute will indicate which cells have values.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.0.1/base-spatial-data-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/regular-masked-3d-grid/1.2.0/regular-masked-3d-grid.schema.json"
+        },
+        "origin": {
+          "description": "The coordinates of the origin [x,y,z]",
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "number"
+          }
+        },
+        "size": {
+          "description": "Number of cells in each direction. [grid_size_x, grid_size_y, grid_size_z]",
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "cell_size": {
+          "description": "The size of each cell in the grid. [cell_size_x, cell_size_y, cell_size_z]",
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          }
+        },
+        "rotation": {
+          "description": "Orientation of the grid.",
+          "$ref": "/components/rotation/1.1.0/rotation.schema.json"
+        },
+        "mask": {
+          "description": "Attribute that indicates which cells have values.",
+          "$ref": "/components/bool-attribute/1.1.0/bool-attribute.schema.json"
+        },
+        "number_of_active_cells": {
+          "type": "integer",
+          "description": "Number of active cells.",
+          "exclusiveMinimum": 0
+        },
+        "cell_attributes": {
+          "description": "Attributes associated with the cells.",
+          "$ref": "/components/one-of-attribute/1.2.0/one-of-attribute.schema.json"
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "origin",
+    "size",
+    "cell_size",
+    "mask",
+    "number_of_active_cells"
+  ],
+  "unevaluatedProperties": false
+}

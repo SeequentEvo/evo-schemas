@@ -1,0 +1,42 @@
+{
+  "$id": "/components/resistivity-ip-line/1.1.0/resistivity-ip-line.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Resistivity IP Line.",
+  "type": "object",
+  "properties": {
+    "group_number": {
+      "description": "Group number.",
+      "type": "string"
+    },
+    "date": {
+      "description": "Date.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "station": {
+      "description": "Station identifier.",
+      "type": "string"
+    },
+    "number_of_electrodes": {
+      "description": "Number of electrodes.",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 6
+    },
+    "channel_attributes": {
+      "title": "List of Channel Attributes",
+      "description": "List of channel attributes.",
+      "type": "array",
+      "items": {
+        "$ref": "/components/channel-attribute/1.1.0/channel-attribute.schema.json"
+      }
+    }
+  },
+  "required": [
+    "group_number",
+    "date",
+    "station",
+    "number_of_electrodes",
+    "channel_attributes"
+  ]
+}

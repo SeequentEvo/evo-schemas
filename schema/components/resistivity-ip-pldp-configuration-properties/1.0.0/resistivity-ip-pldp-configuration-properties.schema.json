@@ -1,0 +1,23 @@
+{
+  "$id": "/components/resistivity-ip-pldp-configuration-properties/1.0.0/resistivity-ip-pldp-configuration-properties.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Resistivity-IP properties for pole-dipole or offset pole-dipole configurations.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "description": "Type of configuration.",
+      "type": "string",
+      "enum": [
+        "PLDP",
+        "OPLDP"
+      ]
+    },
+    "transmitter_remote": {
+      "description": "Location of transmitter remote.",
+      "$ref": "/elements/coordinates-3d/1.0.0/coordinates-3d.schema.json"
+    }
+  },
+  "required": [
+    "type"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "$id": "/components/locations/1.0.1/locations.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Locations are coordinates in 3D space.",
+  "type": "object",
+  "properties": {
+    "coordinates": {
+      "$ref": "/elements/float-array-3/1.0.1/float-array-3.schema.json",
+      "description": "Coordinates. Columns: x, y, z."
+    }
+  },
+  "required": [
+    "coordinates"
+  ]
+}

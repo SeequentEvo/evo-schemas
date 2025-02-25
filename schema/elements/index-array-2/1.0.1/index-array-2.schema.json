@@ -1,0 +1,32 @@
+{
+  "$id": "/elements/index-array-2/1.0.1/index-array-2.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Array of 2 indices.",
+  "type": "object",
+  "properties": {
+    "data": {
+      "description": "Data stored as a binary blob.",
+      "$ref": "/elements/binary-blob/1.0.1/binary-blob.schema.json"
+    },
+    "length": {
+      "type": "integer",
+      "description": "length of array",
+      "minimum": 0,
+      "default": 0
+    },
+    "width": {
+      "description": "number of columns",
+      "const": 2
+    },
+    "data_type": {
+      "description": "data type",
+      "const": "uint64"
+    }
+  },
+  "required": [
+    "data",
+    "length",
+    "width",
+    "data_type"
+  ]
+}

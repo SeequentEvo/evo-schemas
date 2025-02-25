@@ -1,0 +1,90 @@
+{
+  "$id": "/components/cumulative-distribution-function/1.0.1/cumulative-distribution-function.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Cumulative distribution function (CDF).",
+  "type": "object",
+  "properties": {
+    "values": {
+      "$ref": "/elements/float-array-2/1.0.1/float-array-2.schema.json",
+      "description": "Array of values and probabilities. Columns: values, probabilities."
+    },
+    "lower_tail_extrapolation": {
+      "description": "Lower tail extrapolation.",
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "power_model": {
+              "description": "Power model",
+              "type": "object",
+              "properties": {
+                "min": {
+                  "type": "number",
+                  "description": "minimum"
+                },
+                "power": {
+                  "type": "number",
+                  "description": "power",
+                  "minimum": 1.0
+                }
+              },
+              "required": [
+                "min",
+                "power"
+              ]
+            }
+          },
+          "required": [
+            "power_model"
+          ]
+        },
+        {
+          "description": "No extrapolation.",
+          "const": "no_extrapolation"
+        }
+      ]
+    },
+    "upper_tail_extrapolation": {
+      "description": "Upper tail extrapolation.",
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "power_model": {
+              "description": "Power model",
+              "type": "object",
+              "properties": {
+                "max": {
+                  "type": "number",
+                  "description": "maximum"
+                },
+                "power": {
+                  "type": "number",
+                  "description": "power",
+                  "exclusiveMinimum": 0.0,
+                  "maximum": 1.0
+                }
+              },
+              "required": [
+                "max",
+                "power"
+              ]
+            }
+          },
+          "required": [
+            "power_model"
+          ]
+        },
+        {
+          "description": "No extrapolation.",
+          "const": "no_extrapolation"
+        }
+      ]
+    }
+  },
+  "required": [
+    "values",
+    "lower_tail_extrapolation",
+    "upper_tail_extrapolation"
+  ]
+}

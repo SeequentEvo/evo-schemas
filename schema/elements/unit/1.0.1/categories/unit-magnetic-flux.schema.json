@@ -1,0 +1,22 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-magnetic-flux.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (magnetic flux)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "Wb",
+    "cWb",
+    "dWb",
+    "EWb",
+    "fWb",
+    "GWb",
+    "kWb",
+    "mWb",
+    "MWb",
+    "nWb",
+    "pWb",
+    "TWb",
+    "uWb"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "$id": "/objects/unstructured-tet-grid/1.3.0/unstructured-tet-grid.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "An unstructured tetrahedral grid.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.1.0/base-spatial-data-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/unstructured-tet-grid/1.3.0/unstructured-tet-grid.schema.json"
+        },
+        "tetrahedra": {
+          "description": "The tetrahedra of the unstructured grid.",
+          "$ref": "/components/tetrahedra/1.2.0/tetrahedra.schema.json"
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "tetrahedra"
+  ],
+  "unevaluatedProperties": false
+}

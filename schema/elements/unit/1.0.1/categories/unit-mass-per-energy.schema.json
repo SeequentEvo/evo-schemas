@@ -1,0 +1,14 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-mass-per-energy.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (mass per energy)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "kg/J",
+    "kg/(kW.h)",
+    "kg/MJ",
+    "lbm/(hp.h)",
+    "mg/J"
+  ]
+}

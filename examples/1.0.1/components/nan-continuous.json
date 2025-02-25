@@ -1,0 +1,7 @@
+{
+  "$schema": "/components/nan-continuous/1.0.1/nan-continuous.schema.json",
+  "values": [
+    -999.999,
+    123.456
+  ]
+}

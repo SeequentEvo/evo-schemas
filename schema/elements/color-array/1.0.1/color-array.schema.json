@@ -1,0 +1,27 @@
+{
+  "$id": "/elements/color-array/1.0.1/color-array.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Array of RGBA colors. The channels are arranged in memory in such manner that a single 32-bit unsigned integer has the alpha sample in the highest 8 bits, followed by the blue sample, green sample and finally the red sample in the lowest 8 bits.",
+  "type": "object",
+  "properties": {
+    "data": {
+      "description": "Data stored as a binary blob.",
+      "$ref": "/elements/binary-blob/1.0.1/binary-blob.schema.json"
+    },
+    "length": {
+      "type": "integer",
+      "description": "length of array",
+      "minimum": 0,
+      "default": 0
+    },
+    "data_type": {
+      "description": "data type",
+      "const": "uint32"
+    }
+  },
+  "required": [
+    "data",
+    "length",
+    "data_type"
+  ]
+}

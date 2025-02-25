@@ -1,0 +1,205 @@
+{
+  "schema": "/objects/triangle-mesh/2.2.0/triangle-mesh.schema.json",
+  "name": "Example Triangle Mesh",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "description": "This is example data to ensure triangle mesh validates properly",
+  "bounding_box": {
+    "min_y": 5,
+    "max_y": 10,
+    "min_x": 0,
+    "max_x": 10,
+    "min_z": 5,
+    "max_z": 10
+  },
+  "coordinate_reference_system": {
+    "epsg_code": 1024
+  },
+  "triangles": {
+    "vertices": {
+      "width": 3,
+      "data_type": "float64",
+      "length": 64,
+      "data": "abababababababababababababababababababababababababababababababab",
+      "attributes": [
+        {
+          "name": "lithology",
+          "key": "lith",
+          "attribute_type": "category",
+          "nan_description": {
+            "values": [
+              -99
+            ]
+          },
+          "attribute_description": {
+            "discipline": "Geology",
+            "type": "Rock Type"
+          },
+          "values": {
+            "data_type": "int32",
+            "length": 64,
+            "width": 1,
+            "data": "abababababababababababababababababababababababababababababababab"
+          },
+          "table": {
+            "keys_data_type": "int32",
+            "values_data_type": "string",
+            "length": 6,
+            "data": "abababababababababababababababababababababababababababababababab"
+          }
+        }
+      ]
+    },
+    "indices": {
+      "width": 3,
+      "data_type": "uint64",
+      "length": 48,
+      "data": "abababababababababababababababababababababababababababababababab",
+      "attributes": [
+        {
+          "name": "chemicals",
+          "key": "chemicals",
+          "attribute_type": "ensemble_category",
+          "nan_description": {
+            "values": [
+              -99,
+              -999
+            ]
+          },
+          "attribute_description": {
+            "discipline": "Geochemistry",
+            "type": "Classification"
+          },
+          "values": {
+            "data_type": "int32",
+            "width": 5,
+            "length": 48,
+            "data": "abababababababababababababababababababababababababababababababab"
+          },
+          "table": {
+            "keys_data_type": "int32",
+            "values_data_type": "string",
+            "length": 12,
+            "data": "abababababababababababababababababababababababababababababababab"
+          }
+        }
+      ]
+    }
+  },
+  "parts": {
+    "chunks": {
+      "width": 2,
+      "data_type": "uint64",
+      "length": 3,
+      "data": "abababababababababababababababababababababababababababababababab"
+    },
+    "triangle_indices": {
+      "width": 1,
+      "data_type": "uint64",
+      "length": 64,
+      "data": "abababababababababababababababababababababababababababababababab"
+    },
+    "attributes": [
+      {
+        "name": "Source",
+        "key": "source",
+        "attribute_type": "string",
+        "values": {
+          "data_type": "string",
+          "length": 3,
+          "data": "abababababababababababababababababababababababababababababababab"
+        }
+      }
+    ]
+  },
+  "edges": {
+    "indices": {
+      "width": 2,
+      "data_type": "uint64",
+      "length": 90,
+      "data": "abababababababababababababababababababababababababababababababab"
+    },
+    "parts": {
+      "chunks": {
+        "width": 2,
+        "data_type": "uint64",
+        "length": 6,
+        "data": "abababababababababababababababababababababababababababababababab"
+      },
+      "attributes": [
+        {
+          "name": "Source",
+          "key": "source",
+          "attribute_type": "string",
+          "values": {
+            "data_type": "string",
+            "length": 6,
+            "data": "abababababababababababababababababababababababababababababababab"
+          }
+        }
+      ]
+    },
+    "attributes": [
+      {
+        "name": "Length",
+        "key": "length",
+        "attribute_type": "scalar",
+        "nan_description": {
+          "values": []
+        },
+        "values": {
+          "data_type": "float64",
+          "width": 1,
+          "length": 90,
+          "data": "abababababababababababababababababababababababababababababababab"
+        }
+      }
+    ]
+  },
+  "tags": {},
+  "extensions": {},
+  "lineage": {
+    "events": [
+      {
+        "eventType": "START",
+        "eventTime": "2018-11-13T20:20:39+00:00",
+        "producer": "https:://compute.seequent.com",
+        "schemaURL": "https://www.seequent.com/schemas/compute/start.schema.json",
+        "run": {
+          "runId": "00000000-0000-0000-0000-000000000002",
+          "facets": {
+            "ran-on": {
+              "_producer": "https:://compute.seequent.com",
+              "_schemaURL": "https://www.seequent.com/schemas/compute/facets/ran-on.schema.json",
+              "ran-on": "GCP"
+            }
+          }
+        },
+        "job": {
+          "namespace": "https:://compute.seequent.com",
+          "name": "triangle-mesh-producer",
+          "facets": {
+            "scheduled-on": {
+              "_producer": "https:://compute.seequent.com",
+              "_schemaURL": "https://www.seequent.com/schemas/compute/facets/runs-on.schema.json",
+              "runs-on": "GCP"
+            }
+          }
+        },
+        "outputs": [
+          {
+            "namespace": "objects",
+            "name": "00000000-0000-0000-0000-000000000001",
+            "facets": {
+              "ran-on": {
+                "_producer": "https:://compute.seequent.com",
+                "_schemaURL": "https://www.seequent.com/schemas/compute/facets/ran-on.schema.json",
+                "ran-on": "GCP"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "self_link": "/events/0/outputs/0"
+  }
+}

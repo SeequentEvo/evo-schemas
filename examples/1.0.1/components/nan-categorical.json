@@ -1,0 +1,7 @@
+{
+  "$schema": "/components/nan-categorical/1.0.1/nan-categorical.schema.json",
+  "values": [
+    -999,
+    -1
+  ]
+}

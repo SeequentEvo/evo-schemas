@@ -1,0 +1,53 @@
+{
+  "schema": "/objects/tensor-2d-grid/1.1.0/tensor-2d-grid.schema.json",
+  "name": "Example 2D tensor grid",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "description": "This is example data to ensure the object validates properly.",
+  "bounding_box": {
+    "min_y": 0,
+    "max_y": 10,
+    "min_x": 0,
+    "max_x": 10,
+    "min_z": 0,
+    "max_z": 0
+  },
+  "coordinate_reference_system": {
+    "epsg_code": 1024
+  },
+  "origin": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "size": [
+    3,
+    3
+  ],
+  "grid_cells_2d": {
+    "cell_sizes_x": [
+      0.5,
+      0.2,
+      0.5
+    ],
+    "cell_sizes_y": [
+      0.9,
+      1.2,
+      1.5
+    ]
+  },
+  "rotation": {
+    "dip_azimuth": 0.0,
+    "dip": 0.0,
+    "pitch": 0.0
+  },
+  "cell_attributes": [],
+  "vertex_attributes": [],
+  "tags": {},
+  "extensions": {
+    "subobjects": {
+      "foo": 12
+    },
+    "whatever": "you want",
+    "times": 3.14159
+  }
+}

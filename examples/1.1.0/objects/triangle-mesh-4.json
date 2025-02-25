@@ -1,0 +1,88 @@
+{
+  "schema": "/objects/triangle-mesh/1.1.0/triangle-mesh.schema.json",
+  "name": "Example Triangle Mesh",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "description": "This is example data to triangle mesh validates properly",
+  "bounding_box": {
+    "min_y": 5,
+    "max_y": 10,
+    "min_x": 0,
+    "max_x": 10,
+    "min_z": 5,
+    "max_z": 10
+  },
+  "coordinate_reference_system": {
+    "epsg_code": 1024
+  },
+  "triangles": {
+    "vertices": {
+      "width": 3,
+      "data_type": "float64",
+      "length": 64,
+      "data": "abababababababababababababababababababababababababababababababab",
+      "attributes": [
+        {
+          "name": "lithology",
+          "attribute_type": "category",
+          "nan_description": {
+            "values": [
+              -99
+            ]
+          },
+          "attribute_description": {
+            "discipline": "Geology",
+            "type": "Rock Type"
+          },
+          "values": {
+            "data_type": "int32",
+            "length": 48,
+            "width": 1,
+            "data": "abababababababababababababababababababababababababababababababab"
+          },
+          "table": {
+            "keys_data_type": "int32",
+            "values_data_type": "string",
+            "length": 6,
+            "data": "abababababababababababababababababababababababababababababababab"
+          }
+        }
+      ]
+    },
+    "indices": {
+      "width": 3,
+      "data_type": "uint64",
+      "length": 48,
+      "data": "abababababababababababababababababababababababababababababababab",
+      "attributes": [
+        {
+          "name": "chemicals",
+          "attribute_type": "ensemble_category",
+          "nan_description": {
+            "values": [
+              -99,
+              -999
+            ]
+          },
+          "attribute_description": {
+            "discipline": "Geochemistry",
+            "type": "Classification"
+          },
+          "values": {
+            "data_type": "int32",
+            "width": 5,
+            "length": 64,
+            "data": "abababababababababababababababababababababababababababababababab"
+          },
+          "table": {
+            "keys_data_type": "int32",
+            "values_data_type": "string",
+            "length": 12,
+            "data": "abababababababababababababababababababababababababababababababab"
+          }
+        }
+      ]
+    }
+  },
+  "tags": {},
+  "extensions": {}
+}

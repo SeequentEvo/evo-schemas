@@ -1,0 +1,15 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-electrical-resistivity.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (electrical resistivity)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "ohm.m",
+    "kohm.m",
+    "nohm.mil2/ft",
+    "nohm.mm2/m",
+    "ohm.cm",
+    "ohm.m2/m"
+  ]
+}

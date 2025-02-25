@@ -1,0 +1,17 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-specific-heat-capacity.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (specific heat capacity)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "J/(kg.deltaK)",
+    "Btu[IT]/(lbm.deltaF)",
+    "Btu[IT]/(lbm.deltaR)",
+    "cal[th]/(g.deltaK)",
+    "J/(g.deltaK)",
+    "kcal[th]/(kg.deltaC)",
+    "kJ/(kg.deltaK)",
+    "kW.h/(kg.deltaC)"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "$id": "/elements/color/1.0.1/color.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Color. A single 32-bit unsigned integer has the alpha sample in the highest 8 bits, followed by the blue sample, green sample and finally the red sample in the lowest 8 bits.",
+  "type": "integer",
+  "minimum": 0
+}

@@ -1,0 +1,12 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-second-moment-of-area.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (second moment of area)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "cm4",
+    "m4",
+    "in4"
+  ]
+}

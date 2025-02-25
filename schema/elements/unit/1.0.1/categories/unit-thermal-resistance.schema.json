@@ -1,0 +1,10 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-thermal-resistance.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (thermal resistance)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "deltaK/W"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-mass-per-time-per-area.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units ((mass per time) per area)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "kg/(m2.s)",
+    "g.ft/(cm3.s)",
+    "g.m/(cm3.s)",
+    "kPa.s/m",
+    "lbm/(ft2.h)",
+    "lbm/(ft2.s)",
+    "MPa.s/m"
+  ]
+}

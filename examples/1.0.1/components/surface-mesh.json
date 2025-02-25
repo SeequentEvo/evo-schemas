@@ -1,0 +1,16 @@
+{
+  "$schema": "/components/surface-mesh/1.0.1/surface-mesh.schema.json",
+  "kind": "Open",
+  "quality": {
+    "characteristics": [
+      "NonSelfIntersecting",
+      "Continuous"
+    ]
+  },
+  "triangles": {
+    "width": 3,
+    "data_type": "uint64",
+    "length": 32,
+    "data": "abababababababababababababababababababababababababababababababab"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "$id": "/components/variogram-generalisedcauchy-structure/1.1.0/variogram-generalisedcauchy-structure.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Generalised Cauchy variogram structure.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "contribution": {
+      "type": "number",
+      "description": "The scaling of the structure and contribution to the total sill of the variogram model.",
+      "exclusiveMinimum": 0
+    },
+    "alpha": {
+      "title": "AlphaValue",
+      "description": "Shape factor of the cauchy model.",
+      "enum": [
+        3,
+        5,
+        7,
+        9
+      ],
+      "type": "integer"
+    },
+    "anisotropy": {
+      "title": "Anisotropy",
+      "description": "The spatial extent and orientation of the variogram structure.",
+      "$ref": "/components/ellipsoid/1.1.0/ellipsoid.schema.json"
+    },
+    "variogram_type": {
+      "title": "Structure Type",
+      "description": "type of structure - generalisedcauchy",
+      "const": "generalisedcauchy"
+    }
+  },
+  "required": [
+    "contribution",
+    "anisotropy",
+    "alpha",
+    "variogram_type"
+  ]
+}

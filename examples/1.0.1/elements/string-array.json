@@ -1,0 +1,6 @@
+{
+  "$schema": "/elements/string-array/1.0.1/string-array.schema.json",
+  "data_type": "string",
+  "length": 100,
+  "data": "abababababababababababababababababababababababababababababababab"
+}

@@ -1,0 +1,26 @@
+{
+  "$id": "/components/resistivity-ip-sip-survey-properties/1.0.0/resistivity-ip-sip-survey-properties.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Resistivity-IP properties for Spectral Induced Polarization (SIP) surveys.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "description": "Type of survey.",
+      "type": "string",
+      "const": "SIP"
+    },
+    "frequencies": {
+      "description": "Frequencies (Hz) used during measurements.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "number",
+        "minimum": 0.0
+      }
+    }
+  },
+  "required": [
+    "type",
+    "frequencies"
+  ]
+}

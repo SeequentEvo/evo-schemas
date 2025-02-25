@@ -1,0 +1,18 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-force-area.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (force area)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "N.m2",
+    "dyne.cm2",
+    "kgf.m2",
+    "kN.m2",
+    "lbf.in2",
+    "mN.m2",
+    "pdl.cm2",
+    "tonf[UK].ft2",
+    "tonf[US].ft2"
+  ]
+}

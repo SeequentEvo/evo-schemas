@@ -1,0 +1,50 @@
+{
+  "$id": "/objects/local-ellipsoids/1.0.1/local-ellipsoids.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Local ellipsoids.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.0.1/base-spatial-data-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/local-ellipsoids/1.0.1/local-ellipsoids.schema.json"
+        },
+        "locations": {
+          "description": "The locations of the ellipsoids.",
+          "$ref": "/components/locations/1.0.1/locations.schema.json"
+        },
+        "ellipsoids": {
+          "description": "Ellipsoid properties.",
+          "allOf": [
+            {
+              "$ref": "/components/ellipsoids/1.0.1/ellipsoids.schema.json"
+            },
+            {
+              "$ref": "/components/attribute-list-property/1.0.1/attribute-list-property.schema.json"
+            }
+          ]
+        },
+        "domain": {
+          "title": "Domain",
+          "description": "The domain the local ellipsoids are modelled for",
+          "type": "string"
+        },
+        "attribute": {
+          "title": "Attribute",
+          "description": "The attribute the local ellipsoids are modelled for",
+          "type": "string"
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "ellipsoids",
+    "domain",
+    "attribute"
+  ],
+  "unevaluatedProperties": false
+}

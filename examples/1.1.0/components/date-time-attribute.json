@@ -1,0 +1,20 @@
+{
+  "$schema": "/components/date-time-attribute/1.1.0/date-time-attribute.schema.json",
+  "name": "sample date",
+  "key": "sample_date",
+  "attribute_type": "date_time",
+  "nan_description": {
+    "values": [
+      0
+    ]
+  },
+  "attribute_description": {
+    "discipline": "None",
+    "type": "Date"
+  },
+  "values": {
+    "data_type": "timestamp",
+    "length": 64,
+    "data": "abababababababababababababababababababababababababababababababab"
+  }
+}

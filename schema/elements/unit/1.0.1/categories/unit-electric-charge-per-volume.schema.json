@@ -1,0 +1,13 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-electric-charge-per-volume.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (electric charge per volume)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "A.s/m3",
+    "C/cm3",
+    "C/mm3",
+    "C/m3"
+  ]
+}

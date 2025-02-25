@@ -1,0 +1,40 @@
+{
+  "$id": "/components/one-of-attribute/1.0.1/one-of-attribute.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A component describing the list of attributes that can be used.",
+  "type": "array",
+  "items": {
+    "oneOf": [
+      {
+        "$ref": "/components/bool-attribute/1.0.1/bool-attribute.schema.json"
+      },
+      {
+        "$ref": "/components/continuous-attribute/1.0.1/continuous-attribute.schema.json"
+      },
+      {
+        "$ref": "/components/continuous-ensemble/1.0.1/continuous-ensemble.schema.json"
+      },
+      {
+        "$ref": "/components/category-attribute/1.0.1/category-attribute.schema.json"
+      },
+      {
+        "$ref": "/components/category-ensemble/1.0.1/category-ensemble.schema.json"
+      },
+      {
+        "$ref": "/components/date-time-attribute/1.0.1/date-time-attribute.schema.json"
+      },
+      {
+        "$ref": "/components/string-attribute/1.0.1/string-attribute.schema.json"
+      },
+      {
+        "$ref": "/components/bool-time-series/1.0.1/bool-time-series.schema.json"
+      },
+      {
+        "$ref": "/components/category-time-series/1.0.1/category-time-series.schema.json"
+      },
+      {
+        "$ref": "/components/continuous-time-series/1.0.1/continuous-time-series.schema.json"
+      }
+    ]
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "$id": "/objects/tensor-3d-grid/1.2.0/tensor-3d-grid.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A 3D tensor grid (cells may have different sizes).",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.0.1/base-spatial-data-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/tensor-3d-grid/1.2.0/tensor-3d-grid.schema.json"
+        },
+        "origin": {
+          "description": "The coordinates of the origin [x,y,z]",
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "number"
+          }
+        },
+        "size": {
+          "description": "Number of cells in each direction. [grid_size_x, grid_size_y, grid_size_z]",
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "grid_cells_3d": {
+          "type": "object",
+          "description": "Grid cell sizes along the axes",
+          "properties": {
+            "cell_sizes_x": {
+              "type": "array",
+              "description": "An array of float values that represent the cell sizes along the x-axis.",
+              "minItems": 1,
+              "items": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              }
+            },
+            "cell_sizes_y": {
+              "type": "array",
+              "description": "An array of float values that represent the cell sizes along the y-axis.",
+              "minItems": 1,
+              "items": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              }
+            },
+            "cell_sizes_z": {
+              "type": "array",
+              "description": "An array of float values that represent the cell sizes along the z-axis.",
+              "minItems": 1,
+              "items": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              }
+            }
+          },
+          "required": [
+            "cell_sizes_x",
+            "cell_sizes_y",
+            "cell_sizes_z"
+          ]
+        },
+        "rotation": {
+          "description": "Orientation of the grid.",
+          "$ref": "/components/rotation/1.1.0/rotation.schema.json"
+        },
+        "cell_attributes": {
+          "description": "Attributes associated with the cells.",
+          "$ref": "/components/one-of-attribute/1.2.0/one-of-attribute.schema.json"
+        },
+        "vertex_attributes": {
+          "description": "Attributes associated with the vertices.",
+          "$ref": "/components/one-of-attribute/1.2.0/one-of-attribute.schema.json"
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "origin",
+    "size",
+    "grid_cells_3d"
+  ],
+  "unevaluatedProperties": false
+}

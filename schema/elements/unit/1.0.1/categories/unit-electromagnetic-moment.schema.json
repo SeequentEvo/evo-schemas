@@ -1,0 +1,10 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-electromagnetic-moment.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (electromagnetic moment)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "A.m2"
+  ]
+}

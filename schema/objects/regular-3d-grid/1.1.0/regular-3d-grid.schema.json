@@ -1,0 +1,66 @@
+{
+  "$id": "/objects/regular-3d-grid/1.1.0/regular-3d-grid.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A 3D regular grid (all cells are equal size).",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.0.1/base-spatial-data-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/regular-3d-grid/1.1.0/regular-3d-grid.schema.json"
+        },
+        "origin": {
+          "description": "The coordinates of the origin [x,y,z]",
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "number"
+          }
+        },
+        "size": {
+          "description": "The size of the entire grid. [grid_size_x, grid_size_y, grid_size_z]",
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "cell_size": {
+          "description": "The size of each cell in the grid. [cell_size_x, cell_size_y, cell_size_z]",
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          }
+        },
+        "rotation": {
+          "description": "Orientation of the grid.",
+          "$ref": "/components/rotation/1.0.1/rotation.schema.json"
+        },
+        "cell_attributes": {
+          "description": "Attributes associated with the cells.",
+          "$ref": "/components/one-of-attribute/1.1.0/one-of-attribute.schema.json"
+        },
+        "vertex_attributes": {
+          "description": "Attributes associated with the vertices.",
+          "$ref": "/components/one-of-attribute/1.1.0/one-of-attribute.schema.json"
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "origin",
+    "size",
+    "cell_size"
+  ],
+  "unevaluatedProperties": false
+}

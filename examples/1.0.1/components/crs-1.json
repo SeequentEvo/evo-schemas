@@ -1,0 +1,4 @@
+{
+  "$schema": "/components/crs/1.0.1/crs.schema.json",
+  "epsg_code": 1024
+}

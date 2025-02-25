@@ -1,0 +1,34 @@
+{
+  "$id": "/components/polyline-3d/1.0.1/polyline-3d.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "This component describes a 3D polyline.",
+  "type": "object",
+  "properties": {
+    "begin": {
+      "title": "Index of the first line segment in lines-3d.",
+      "type": "integer",
+      "minimum": 0,
+      "description": "Index of the first line segment in lines-3d."
+    },
+    "count": {
+      "title": "The number of line segments.",
+      "type": "integer",
+      "minimum": 0,
+      "description": "The number of line segments."
+    },
+    "closed": {
+      "title": "Closed or open",
+      "type": "string",
+      "description": "Closed or open.",
+      "enum": [
+        "Open",
+        "Closed"
+      ]
+    }
+  },
+  "required": [
+    "begin",
+    "count",
+    "closed"
+  ]
+}

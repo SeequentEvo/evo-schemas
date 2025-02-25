@@ -1,0 +1,36 @@
+{
+  "$id": "/components/category-attribute/1.0.1/category-attribute.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "An attribute that describes a category.",
+  "allOf": [
+    {
+      "$ref": "/components/category-data/1.0.1/category-data.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the attribute."
+        },
+        "attribute_type": {
+          "description": "Type of the attribute.",
+          "const": "category"
+        },
+        "nan_description": {
+          "description": "Describes the values used to designate not-a-number.",
+          "$ref": "/components/nan-categorical/1.0.1/nan-categorical.schema.json"
+        },
+        "attribute_description": {
+          "description": "The attribute description record.",
+          "$ref": "/components/category-attribute-description/1.0.1/category-attribute-description.schema.json"
+        }
+      }
+    }
+  ],
+  "required": [
+    "name",
+    "attribute_type",
+    "nan_description"
+  ]
+}

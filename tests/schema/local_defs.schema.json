@@ -1,0 +1,33 @@
+{
+  "$id": "/../tests/schemas/local_defs.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A schema used for the unit tests",
+  "type": "object",
+  "properties": {
+    "first": {
+      "description": "Reference a local schema that references another local schema",
+      "$ref": "#/$defs/local_one"
+    }
+  },
+  "$defs": {
+    "local_one": {
+      "type": "object",
+      "allOf": [
+        {
+          "properties": {
+            "inner_prop": {
+              "description": "Easy test number",
+              "type": "number"
+            }
+          }
+        },
+        {
+          "$ref": "#/$defs/local_two"
+        }
+      ]
+    },
+    "local_two": {
+      "$ref": "/elements/binary-blob/1.0.1/binary-blob.schema.json"
+    }
+  }
+}

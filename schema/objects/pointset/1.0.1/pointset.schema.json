@@ -1,0 +1,34 @@
+{
+  "$id": "/objects/pointset/1.0.1/pointset.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A set of points in space and their associated attributes.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.0.1/base-spatial-data-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/pointset/1.0.1/pointset.schema.json"
+        },
+        "locations": {
+          "description": "The points in the pointset.",
+          "allOf": [
+            {
+              "$ref": "/components/locations/1.0.1/locations.schema.json"
+            },
+            {
+              "$ref": "/components/attribute-list-property/1.0.1/attribute-list-property.schema.json"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "locations"
+  ],
+  "unevaluatedProperties": false
+}

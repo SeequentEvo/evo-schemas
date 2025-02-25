@@ -1,0 +1,33 @@
+{
+  "schema": "/objects/triangle-mesh/1.0.1/triangle-mesh.schema.json",
+  "name": "Example Triangle Mesh",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "description": "This is example data to triangle mesh validates properly",
+  "bounding_box": {
+    "min_y": 5,
+    "max_y": 10,
+    "min_x": 0,
+    "max_x": 10,
+    "min_z": 5,
+    "max_z": 10
+  },
+  "coordinate_reference_system": "unspecified",
+  "triangles": {
+    "vertices": {
+      "width": 3,
+      "data_type": "float64",
+      "length": 3,
+      "data": "abababababababababababababababababababababababababababababababab",
+      "attributes": []
+    },
+    "indices": {
+      "width": 3,
+      "data_type": "uint64",
+      "length": 1,
+      "data": "abababababababababababababababababababababababababababababababab",
+      "attributes": []
+    }
+  },
+  "tags": {},
+  "extensions": {}
+}

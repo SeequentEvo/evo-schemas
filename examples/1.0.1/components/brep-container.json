@@ -1,0 +1,26 @@
+{
+  "$schema": "/components/brep-container/1.0.1/brep-container.schema.json",
+  "format": "STEP",
+  "producer": "Plaxis",
+  "brep": {
+    "width": 1,
+    "data_type": "uint8",
+    "length": 2000,
+    "data": "abababababababababababababababababababababababababababababababab"
+  },
+  "discretized_brep": {
+    "kind": "Open",
+    "quality": {
+      "characteristics": [
+        "NonSelfIntersecting",
+        "Continuous"
+      ]
+    },
+    "triangles": {
+      "width": 3,
+      "data_type": "uint64",
+      "length": 32,
+      "data": "abababababababababababababababababababababababababababababababab"
+    }
+  }
+}

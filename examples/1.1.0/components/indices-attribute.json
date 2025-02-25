@@ -1,0 +1,17 @@
+{
+  "$schema": "/components/indices-attribute/1.1.0/indices-attribute.schema.json",
+  "name": "sample indices attribute",
+  "key": "sample indices attribute",
+  "attribute_type": "indices",
+  "values": {
+    "data_type": "uint64",
+    "length": 64,
+    "width": 1,
+    "data": "abababababababababababababababababababababababababababababababab"
+  },
+  "related_object": {
+    "uuid": "00000000-0000-0000-0000-000000000000",
+    "version": "1.0.1",
+    "component": "object component sample"
+  }
+}

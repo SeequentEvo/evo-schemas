@@ -1,0 +1,29 @@
+{
+  "$id": "/components/base-spatial-data-properties/1.0.1/base-spatial-data-properties.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Properties common to all types of Geoscience spatial data such as name, unique identifier, and bounding box",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-object-properties/1.0.1/base-object-properties.schema.json"
+    },
+    {
+      "properties": {
+        "bounding_box": {
+          "title": "Bounding box",
+          "description": "Bounding box of the spatial data.",
+          "$ref": "/components/bounding-box/1.0.1/bounding-box.schema.json"
+        },
+        "coordinate_reference_system": {
+          "title": "Coordinate reference system",
+          "description": "Coordinate system of the spatial data",
+          "$ref": "/components/crs/1.0.1/crs.schema.json"
+        }
+      }
+    }
+  ],
+  "required": [
+    "bounding_box",
+    "coordinate_reference_system"
+  ]
+}

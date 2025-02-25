@@ -1,0 +1,7 @@
+{
+  "$schema": "/elements/integer-array-md/1.0.1/integer-array-md.schema.json",
+  "width": 5,
+  "data_type": "int64",
+  "length": 0,
+  "data": null
+}

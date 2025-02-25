@@ -1,0 +1,7 @@
+{
+  "$schema": "/components/attribute-description/1.0.1/attribute-description.schema.json",
+  "discipline": "Geochemistry",
+  "type": "Ag",
+  "unit": "ppm",
+  "scale": "lin"
+}

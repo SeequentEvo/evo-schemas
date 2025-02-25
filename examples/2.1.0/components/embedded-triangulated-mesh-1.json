@@ -1,0 +1,45 @@
+{
+  "$schema": "/components/embedded-triangulated-mesh/2.1.0/embedded-triangulated-mesh.schema.json",
+  "triangles": {
+    "vertices": {
+      "width": 3,
+      "data_type": "float64",
+      "length": 30,
+      "data": "abababababababababababababababababababababababababababababababab",
+      "attributes": []
+    },
+    "indices": {
+      "width": 3,
+      "data_type": "uint64",
+      "length": 50,
+      "data": "abababababababababababababababababababababababababababababababab",
+      "attributes": []
+    }
+  },
+  "parts": {
+    "chunks": {
+      "width": 2,
+      "data_type": "uint64",
+      "length": 3,
+      "data": "abababababababababababababababababababababababababababababababab"
+    },
+    "triangle_indices": {
+      "width": 1,
+      "data_type": "uint64",
+      "length": 50,
+      "data": "abababababababababababababababababababababababababababababababab"
+    },
+    "attributes": [
+      {
+        "name": "Source",
+        "key": "source",
+        "attribute_type": "string",
+        "values": {
+          "data_type": "string",
+          "length": 3,
+          "data": "abababababababababababababababababababababababababababababababab"
+        }
+      }
+    ]
+  }
+}

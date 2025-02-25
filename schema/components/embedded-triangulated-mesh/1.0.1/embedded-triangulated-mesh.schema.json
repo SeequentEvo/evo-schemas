@@ -1,0 +1,60 @@
+{
+  "$id": "/components/embedded-triangulated-mesh/1.0.1/embedded-triangulated-mesh.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A mesh made up of triangles, which is part of an object.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/triangles/1.0.1/triangles.schema.json"
+    },
+    {
+      "properties": {
+        "kind": {
+          "description": "The kind of mesh.",
+          "enum": [
+            "Open",
+            "Closed"
+          ],
+          "type": "string"
+        },
+        "quality": {
+          "$ref": "/components/mesh-quality/1.0.1/mesh-quality.schema.json",
+          "description": "Mesh quality."
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the object."
+        },
+        "description": {
+          "title": "Description",
+          "type": "string",
+          "description": "Optional field for adding additional description to uniquely identify this object."
+        },
+        "material_key": {
+          "type": "string",
+          "description": "Unique identifier of the material."
+        },
+        "feature": {
+          "type": "string",
+          "description": "Kind of feature.",
+          "enum": [
+            "Void",
+            "Fault",
+            "ContactSurface",
+            "Topography",
+            "BoundarySurface",
+            "OutputVolume",
+            "StratigraphicContactSurface",
+            "Vein",
+            "VeinSystem"
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "name",
+        "feature"
+      ]
+    }
+  ]
+}

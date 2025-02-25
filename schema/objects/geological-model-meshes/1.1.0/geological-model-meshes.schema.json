@@ -1,0 +1,65 @@
+{
+  "$id": "/objects/geological-model-meshes/1.1.0/geological-model-meshes.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A collection of geological meshes.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.0.1/base-spatial-data-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/geological-model-meshes/1.1.0/geological-model-meshes.schema.json"
+        },
+        "folders": {
+          "type": "array",
+          "description": "A recursive list of folders containing meshes.",
+          "items": {
+            "$ref": "#/$defs/folder"
+          }
+        },
+        "materials": {
+          "type": "array",
+          "description": "Materials used by this mesh collection.",
+          "items": {
+            "$ref": "/components/material/1.0.1/material.schema.json"
+          }
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "folders"
+  ],
+  "$defs": {
+    "folder": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the folder."
+        },
+        "items": {
+          "type": "array",
+          "description": "A list of folders containing meshes and subfolders.",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/folder"
+              },
+              {
+                "$ref": "/components/embedded-triangulated-mesh/1.1.0/embedded-triangulated-mesh.schema.json"
+              }
+            ]
+          }
+        }
+      },
+      "required": [
+        "name",
+        "items"
+      ]
+    }
+  }
+}

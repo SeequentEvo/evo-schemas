@@ -1,0 +1,12 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-reciprocal-mass-time.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (reciprocal (mass time))",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "1/(kg.s)",
+    "pCi/g",
+    "Bq/kg"
+  ]
+}

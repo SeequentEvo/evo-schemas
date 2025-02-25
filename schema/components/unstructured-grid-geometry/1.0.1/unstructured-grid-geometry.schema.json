@@ -1,0 +1,68 @@
+{
+  "$id": "/components/unstructured-grid-geometry/1.0.1/unstructured-grid-geometry.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "This component describes a set of vertices, indices and cell information.",
+  "type": "object",
+  "properties": {
+    "vertices": {
+      "description": "Vertex coordinates. Columns: x, y, z.",
+      "allOf": [
+        {
+          "$ref": "/elements/float-array-3/1.0.1/float-array-3.schema.json"
+        },
+        {
+          "$ref": "/components/attribute-list-property/1.0.1/attribute-list-property.schema.json",
+          "description": "Attributes associated with each vertex."
+        }
+      ]
+    },
+    "cells": {
+      "description": "Cell descriptions which consists of an array of triples. The first item in the triple represents the shape, second item is an offset to the indices array and the third item is the number of vertices for the shape. Columns: shape, offset, num_vertices.",
+      "allOf": [
+        {
+          "type": "object",
+          "properties": {
+            "data": {
+              "description": "Data stored as a binary blob.",
+              "$ref": "/elements/binary-blob/1.0.1/binary-blob.schema.json"
+            },
+            "length": {
+              "type": "integer",
+              "description": "length of array",
+              "minimum": 0,
+              "default": 0
+            },
+            "width": {
+              "description": "number of columns",
+              "const": 3
+            },
+            "data_type": {
+              "type": "string",
+              "description": "Data type for the columns. 1st column is of type int32, 2nd is uint64 and 3rd is int32.",
+              "const": "int32/uint64/int32"
+            }
+          },
+          "required": [
+            "data",
+            "length",
+            "width",
+            "data_type"
+          ]
+        },
+        {
+          "$ref": "/components/attribute-list-property/1.0.1/attribute-list-property.schema.json",
+          "description": "Attributes associated with each cell."
+        }
+      ]
+    },
+    "indices": {
+      "$ref": "/elements/index-array-1/1.0.1/index-array-1.schema.json",
+      "description": "0-based indices into the vertices."
+    }
+  },
+  "required": [
+    "vertices",
+    "cells",
+    "indices"
+  ]
+}

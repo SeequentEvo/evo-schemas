@@ -1,0 +1,12 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-reciprocal-mass.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (reciprocal mass)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "1/g",
+    "1/lbm",
+    "1/kg"
+  ]
+}

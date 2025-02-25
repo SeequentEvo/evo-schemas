@@ -1,0 +1,21 @@
+{
+  "$schema": "/components/embedded-triangulated-mesh/1.0.1/embedded-triangulated-mesh.schema.json",
+  "vertices": {
+    "width": 3,
+    "data_type": "float64",
+    "length": 3,
+    "data": "abababababababababababababababababababababababababababababababab",
+    "attributes": []
+  },
+  "indices": {
+    "width": 3,
+    "data_type": "uint64",
+    "length": 1,
+    "data": "abababababababababababababababababababababababababababababababab",
+    "attributes": []
+  },
+  "kind": "Closed",
+  "name": "Lithology A",
+  "material_key": "part 1",
+  "feature": "OutputVolume"
+}

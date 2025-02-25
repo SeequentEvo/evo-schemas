@@ -1,0 +1,6 @@
+{
+  "$schema": "/elements/bool-array-1/1.0.1/bool-array-1.schema.json",
+  "data_type": "bool",
+  "length": 10,
+  "data": "abababababababababababababababababababababababababababababababab"
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "/components/cumulative-distribution-function/1.0.1/cumulative-distribution-function.schema.json",
+  "values": {
+    "width": 2,
+    "data_type": "float64",
+    "length": 10,
+    "data": "abababababababababababababababababababababababababababababababab"
+  },
+  "lower_tail_extrapolation": {
+    "power_model": {
+      "min": 0.0,
+      "power": 5.0
+    }
+  },
+  "upper_tail_extrapolation": "no_extrapolation"
+}

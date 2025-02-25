@@ -1,0 +1,39 @@
+{
+  "$id": "/components/time-step-continuous-attribute/1.0.1/time-step-continuous-attribute.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A component that represents elapsed time (sec, min, hours, months, etc.) since a start time.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the attribute."
+    },
+    "attribute_type": {
+      "description": "Type of the attribute.",
+      "const": "scalar"
+    },
+    "attribute_description": {
+      "description": "The attribute description record.",
+      "$ref": "/components/attribute-description/1.0.1/attribute-description.schema.json"
+    },
+    "values": {
+      "description": "The values of the attributes.",
+      "$ref": "/elements/float-array-1/1.0.1/float-array-1.schema.json"
+    },
+    "unit": {
+      "description": "Time step unit.",
+      "$ref": "/elements/unit/1.0.1/categories/unit-time.schema.json"
+    },
+    "start_time": {
+      "description": "start time",
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "name",
+    "attribute_type",
+    "values",
+    "unit"
+  ]
+}

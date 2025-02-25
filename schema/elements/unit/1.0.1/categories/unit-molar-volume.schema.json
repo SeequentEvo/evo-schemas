@@ -1,0 +1,15 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-molar-volume.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (molar volume)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "m3/mol",
+    "dm3/kmol",
+    "ft3/lbmol",
+    "L/kmol",
+    "L/mol",
+    "m3/kmol"
+  ]
+}

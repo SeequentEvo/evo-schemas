@@ -1,0 +1,20 @@
+{
+  "$id": "/components/category-data/1.0.1/category-data.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A base-class that describes a category lookup attribute",
+  "type": "object",
+  "properties": {
+    "table": {
+      "description": "Lookup table associated with the attributes.",
+      "$ref": "/elements/lookup-table/1.0.1/lookup-table.schema.json"
+    },
+    "values": {
+      "description": "The index values of the attributes.",
+      "$ref": "/elements/integer-array-1/1.0.1/integer-array-1.schema.json"
+    }
+  },
+  "required": [
+    "table",
+    "values"
+  ]
+}

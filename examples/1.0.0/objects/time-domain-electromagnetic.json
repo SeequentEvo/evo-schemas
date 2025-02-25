@@ -1,0 +1,226 @@
+{
+  "schema": "/objects/time-domain-electromagnetic/1.0.0/time-domain-electromagnetic.schema.json",
+  "name": "Example of a time domain electromagnetic object",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "description": "This is example data to ensure the object validates properly.",
+  "bounding_box": {
+    "min_y": 0,
+    "max_y": 10,
+    "min_x": 0,
+    "max_x": 10,
+    "min_z": 0,
+    "max_z": 0
+  },
+  "coordinate_reference_system": {
+    "epsg_code": 1024
+  },
+  "survey": {
+    "type": "GROUND"
+  },
+  "geometry_category": "STXMRX",
+  "gps": {
+    "x": 0,
+    "y": 10,
+    "z": 0
+  },
+  "channels": [
+    {
+      "index": 1,
+      "repetition_frequency": 20,
+      "zero_time": 1000,
+      "start_time": 2500,
+      "transmitter_id": 1,
+      "receiver_id": 1,
+      "waveform_id": 1,
+      "gates_id": 1,
+      "inclinometers_transmitter_position": [
+        {
+          "x": 100,
+          "y": 100,
+          "z": 0
+        }
+      ],
+      "inclinometers_receiver_position": [
+        {
+          "x": 100,
+          "y": 150,
+          "z": 0
+        }
+      ],
+      "gates_factor": 1.0,
+      "gates_time_shift": 0.0,
+      "uniform_standard_deviation": 0.0,
+      "number_of_transmitter_turns": 4,
+      "base_transmitter_frequency": 35,
+      "peak_transmitter_frequency": 263,
+      "front_gate_filter": {
+        "order": 0.99,
+        "frequency": 21000
+      },
+      "front_gate_time": 0.002,
+      "front_gate_slope_low_pass_filter": {
+        "order": 0.99,
+        "frequency": 21000
+      }
+    },
+    {
+      "index": 2,
+      "repetition_frequency": 30,
+      "zero_time": 1000,
+      "start_time": 500,
+      "transmitter_id": 2,
+      "receiver_id": 2,
+      "waveform_id": 2,
+      "gates_id": 2,
+      "inclinometers_transmitter_position": [
+        {
+          "x": 150,
+          "y": 100,
+          "z": 0
+        }
+      ],
+      "inclinometers_receiver_position": [
+        {
+          "x": 250,
+          "y": 100,
+          "z": 0
+        }
+      ],
+      "gates_factor": 1.0,
+      "gates_time_shift": 0.0,
+      "uniform_standard_deviation": 0.0,
+      "number_of_transmitter_turns": 4,
+      "base_transmitter_frequency": 30,
+      "peak_transmitter_frequency": 300,
+      "front_gate_filter": {
+        "order": 0.99,
+        "frequency": 23000
+      },
+      "front_gate_time": 0.004,
+      "front_gate_slope_low_pass_filter": {
+        "order": 0.99,
+        "frequency": 23000
+      }
+    }
+  ],
+  "line_list": [
+    {
+      "line_number": "L1300",
+      "date": "2018-11-13T20:20:39+00:00",
+      "version": 0,
+      "group": 0,
+      "type": "Line",
+      "location_channels": {
+        "x": "X",
+        "y": "Y",
+        "z": "Clearance"
+      },
+      "channel_attributes": [
+        {
+          "name": "X",
+          "start_fiducial": 1,
+          "fiducial_increment": 1,
+          "attribute": {
+            "name": "X channel",
+            "key": "X",
+            "attribute_type": "scalar",
+            "nan_description": {
+              "values": [
+                -99999.9
+              ]
+            },
+            "attribute_description": {
+              "discipline": "Geophysics",
+              "scale": "linear",
+              "type": "Time Domain Electromagnetic"
+            },
+            "values": {
+              "data_type": "float64",
+              "length": 20,
+              "width": 1,
+              "data": "abababababababababababababababababababababababababababababababab"
+            }
+          }
+        },
+        {
+          "name": "Y",
+          "start_fiducial": 1,
+          "fiducial_increment": 1,
+          "attribute": {
+            "name": "Y channel",
+            "key": "Y",
+            "attribute_type": "scalar",
+            "nan_description": {
+              "values": [
+                -99999.9
+              ]
+            },
+            "attribute_description": {
+              "discipline": "Geophysics",
+              "scale": "linear",
+              "type": "Time Domain Electromagnetic"
+            },
+            "values": {
+              "data_type": "float64",
+              "length": 20,
+              "width": 1,
+              "data": "abababababababababababababababababababababababababababababababab"
+            }
+          }
+        },
+        {
+          "name": "Clearance",
+          "start_fiducial": 1,
+          "fiducial_increment": 1,
+          "attribute": {
+            "name": "Z channel",
+            "key": "Z",
+            "attribute_type": "scalar",
+            "nan_description": {
+              "values": [
+                -99999.9
+              ]
+            },
+            "attribute_description": {
+              "discipline": "Geophysics",
+              "scale": "linear",
+              "type": "Time Domain Electromagnetic"
+            },
+            "values": {
+              "data_type": "float64",
+              "length": 20,
+              "width": 1,
+              "data": "abababababababababababababababababababababababababababababababab"
+            }
+          }
+        },
+        {
+          "name": "DBDT_OBS",
+          "start_fiducial": 1,
+          "fiducial_increment": 1,
+          "attribute": {
+            "name": "Observed channel (dB/dt)",
+            "key": "DBDT_OBS",
+            "attribute_type": "ensemble_continuous",
+            "nan_description": {
+              "values": [
+                -99999.9
+              ]
+            },
+            "attribute_description": {
+              "discipline": "Geophysics",
+              "scale": "linear",
+              "type": "Time Domain Electromagnetic"
+            },
+            "values": {
+              "data_type": "float64",
+              "width": 40,
+              "length": 20,
+              "data": "abababababababababababababababababababababababababababababababab"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

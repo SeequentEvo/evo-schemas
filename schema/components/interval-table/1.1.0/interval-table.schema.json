@@ -1,0 +1,35 @@
+{
+  "$id": "/components/interval-table/1.1.0/interval-table.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "An interval table.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "title": "Name",
+      "description": "The name of the table.",
+      "type": "string"
+    },
+    "collection_type": {
+      "title": "Collection type",
+      "description": "The type of the collection.",
+      "const": "interval"
+    },
+    "from_to": {
+      "description": "The from-to of the intervals.",
+      "allOf": [
+        {
+          "$ref": "/components/from-to/1.0.1/from-to.schema.json"
+        },
+        {
+          "description": "Attributes associated with each interval.",
+          "$ref": "/components/attribute-list-property/1.1.0/attribute-list-property.schema.json"
+        }
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "collection_type",
+    "from_to"
+  ]
+}

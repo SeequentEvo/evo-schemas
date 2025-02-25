@@ -1,0 +1,59 @@
+{
+  "$id": "/components/brep-container/1.0.1/brep-container.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "This component describes a BRep container.",
+  "type": "object",
+  "properties": {
+    "format": {
+      "title": "Format",
+      "type": "string",
+      "description": "The format."
+    },
+    "producer": {
+      "title": "producer",
+      "type": "string",
+      "description": "Product used to generate the BREP."
+    },
+    "discretized_brep": {
+      "title": "Surface mesh.",
+      "$ref": "/components/surface-mesh/1.0.1/surface-mesh.schema.json",
+      "description": "Optional discretized version of BREP data."
+    },
+    "brep": {
+      "title": "BRep object",
+      "type": "object",
+      "description": "BRep object.",
+      "properties": {
+        "data": {
+          "description": "Data stored as a binary blob.",
+          "$ref": "/elements/binary-blob/1.0.1/binary-blob.schema.json"
+        },
+        "length": {
+          "type": "integer",
+          "description": "length of array",
+          "minimum": 0,
+          "default": 0
+        },
+        "width": {
+          "description": "number of columns",
+          "const": 1
+        },
+        "data_type": {
+          "description": "Data type.",
+          "const": "uint8"
+        }
+      },
+      "required": [
+        "data",
+        "length",
+        "width",
+        "data_type"
+      ]
+    }
+  },
+  "required": [
+    "format",
+    "producer",
+    "brep"
+  ]
+}

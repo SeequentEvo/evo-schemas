@@ -1,0 +1,14 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-energy-per-mass-per-time.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units ((energy per mass) per time)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "Sv/s",
+    "mrem/h",
+    "mSv/h",
+    "rem/h",
+    "Sv/h"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "$id": "/components/indices-attribute/1.0.1/indices-attribute.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "An attribute for a range of indices.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the attribute."
+    },
+    "attribute_type": {
+      "description": "Type of the attribute.",
+      "const": "indices"
+    },
+    "attribute_description": {
+      "description": "The attribute description record.",
+      "$ref": "/components/attribute-description/1.0.1/attribute-description.schema.json"
+    },
+    "values": {
+      "description": "The values of the attributes.",
+      "$ref": "/elements/index-array-1/1.0.1/index-array-1.schema.json"
+    },
+    "related_object": {
+      "description": "Related Geoscience Object.",
+      "type": "object",
+      "properties": {
+        "uuid": {
+          "type": "string",
+          "description": "Unique identifier of related Geoscience Object.",
+          "format": "uuid",
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "version": {
+          "type": "string",
+          "description": "Geoscience object version.",
+          "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)$"
+        },
+        "component": {
+          "type": "string",
+          "description": "component type."
+        }
+      },
+      "required": [
+        "uuid",
+        "version",
+        "component"
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "attribute_type",
+    "values",
+    "related_object"
+  ]
+}

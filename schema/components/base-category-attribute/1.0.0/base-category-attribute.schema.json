@@ -1,0 +1,19 @@
+{
+  "$id": "/components/base-category-attribute/1.0.0/base-category-attribute.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A base schema for categorial attributes.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-attribute/1.0.0/base-attribute.schema.json"
+    },
+    {
+      "properties": {
+        "attribute_description": {
+          "description": "The attribute description record.",
+          "$ref": "/components/category-attribute-description/1.0.1/category-attribute-description.schema.json"
+        }
+      }
+    }
+  ]
+}

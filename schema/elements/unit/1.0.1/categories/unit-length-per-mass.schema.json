@@ -1,0 +1,11 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-length-per-mass.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (length per mass)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "m/kg",
+    "ft/lbm"
+  ]
+}

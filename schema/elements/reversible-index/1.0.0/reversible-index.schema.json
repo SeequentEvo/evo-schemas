@@ -1,0 +1,21 @@
+{
+  "$id": "/elements/reversible-index/1.0.0/reversible-index.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A structure holding an index of a model part, and optionally, a flag speficying whether the part should be reversed.",
+  "type": "object",
+  "properties": {
+    "index": {
+      "type": "integer",
+      "description": "The index of the part in the geometry parts list.",
+      "minimum": 0
+    },
+    "reversed": {
+      "type": "boolean",
+      "description": "Whether the part should be reversed.",
+      "default": false
+    }
+  },
+  "required": [
+    "index"
+  ]
+}

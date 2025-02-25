@@ -1,0 +1,13 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-illuminance.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (illuminance)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "lx",
+    "footcandle",
+    "lm/m2",
+    "klx"
+  ]
+}

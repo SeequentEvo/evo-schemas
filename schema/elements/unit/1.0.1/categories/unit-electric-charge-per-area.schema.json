@@ -1,0 +1,13 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-electric-charge-per-area.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (electric charge per area)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "C/cm2",
+    "C/mm2",
+    "mC/m2",
+    "C/m2"
+  ]
+}

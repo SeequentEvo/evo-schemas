@@ -1,0 +1,26 @@
+{
+  "$id": "/components/time-step-date-time-attribute/1.1.0/time-step-date-time-attribute.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "An attribute for a range of timestamps in a time series.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-continuous-attribute/1.0.0/base-continuous-attribute.schema.json"
+    },
+    {
+      "properties": {
+        "attribute_type": {
+          "const": "date_time"
+        },
+        "values": {
+          "description": "The values of the attributes.",
+          "$ref": "/elements/date-time-array/1.0.1/date-time-array.schema.json"
+        }
+      }
+    }
+  ],
+  "required": [
+    "attribute_type",
+    "values"
+  ]
+}

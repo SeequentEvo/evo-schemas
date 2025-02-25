@@ -1,0 +1,30 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-energy-per-area.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (energy per area)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "J/m2",
+    "N/m",
+    "erg/cm2",
+    "J/cm2",
+    "kgf.m/cm2",
+    "lbf.ft/in2",
+    "mJ/cm2",
+    "mJ/m2",
+    "0.01 lbf/ft",
+    "1/30 lbf/m",
+    "1/30 N/m",
+    "dyne/cm",
+    "kgf/cm",
+    "kN/m",
+    "lbf/ft",
+    "lbf/in",
+    "mN/km",
+    "mN/m",
+    "pdl/cm",
+    "tonf[UK]/ft",
+    "tonf[US]/ft"
+  ]
+}

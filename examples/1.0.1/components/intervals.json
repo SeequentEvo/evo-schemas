@@ -1,0 +1,9 @@
+{
+  "$schema": "/components/intervals/1.0.1/intervals.schema.json",
+  "start_and_end": {
+    "width": 2,
+    "data_type": "float64",
+    "length": 4,
+    "data": "abababababababababababababababababababababababababababababababab"
+  }
+}

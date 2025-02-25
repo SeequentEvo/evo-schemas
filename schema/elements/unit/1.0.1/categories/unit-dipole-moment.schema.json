@@ -1,0 +1,10 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-dipole-moment.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (dipole moment)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "C.m"
+  ]
+}

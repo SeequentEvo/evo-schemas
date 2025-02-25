@@ -1,0 +1,7 @@
+{
+  "$schema": "/components/material/1.0.1/material.schema.json",
+  "key": "rock",
+  "name": "rock",
+  "color": 4278190335,
+  "data_source": "Link_to_another_GeoscienceObject"
+}

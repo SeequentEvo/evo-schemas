@@ -1,0 +1,13 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-thermal-insulance.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (thermal insulance)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "deltaC.m2.h/kcal[th]",
+    "deltaF.ft2.h/Btu[IT]",
+    "deltaK.m2/kW",
+    "deltaK.m2/W"
+  ]
+}

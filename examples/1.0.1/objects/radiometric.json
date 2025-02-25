@@ -1,0 +1,141 @@
+{
+  "schema": "/objects/radiometric/1.0.1/radiometric.schema.json",
+  "name": "Example of a radiometric object",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "description": "This is example data to ensure the object validates properly.",
+  "bounding_box": {
+    "min_y": 0,
+    "max_y": 10,
+    "min_x": 0,
+    "max_x": 10,
+    "min_z": 0,
+    "max_z": 0
+  },
+  "coordinate_reference_system": {
+    "epsg_code": 1024
+  },
+  "survey": {
+    "type": "GROUND"
+  },
+  "dead_time": 1000.0,
+  "live_time": 10000.0,
+  "idle_time": 500.0,
+  "array_dimension": 1024,
+  "energy_level": 0.5,
+  "line_list": [
+    {
+      "line_number": "L01",
+      "date": "2018-11-13T20:20:39+00:00",
+      "version": 0,
+      "group": 0,
+      "type": "Line",
+      "location_channels": {
+        "x": "XDEV",
+        "y": "YDEV",
+        "z": "ZDEV"
+      },
+      "channel_attributes": [
+        {
+          "name": "XDEV",
+          "start_fiducial": 1.0,
+          "fiducial_increment": 1.0,
+          "attribute": {
+            "name": "XDEV channel",
+            "attribute_type": "scalar",
+            "nan_description": {
+              "values": [
+                -99999.9
+              ]
+            },
+            "attribute_description": {
+              "discipline": "Geophysics",
+              "scale": "linear",
+              "type": "Radiometric"
+            },
+            "values": {
+              "data_type": "float64",
+              "length": 100,
+              "width": 1,
+              "data": "abababababababababababababababababababababababababababababababab"
+            }
+          }
+        },
+        {
+          "name": "YDEV",
+          "start_fiducial": 1.0,
+          "fiducial_increment": 1.0,
+          "attribute": {
+            "name": "YDEV channel",
+            "attribute_type": "scalar",
+            "nan_description": {
+              "values": [
+                -99999.9
+              ]
+            },
+            "attribute_description": {
+              "discipline": "Geophysics",
+              "scale": "linear",
+              "type": "Radiometric"
+            },
+            "values": {
+              "data_type": "float64",
+              "length": 100,
+              "width": 1,
+              "data": "abababababababababababababababababababababababababababababababab"
+            }
+          }
+        },
+        {
+          "name": "ZDEV",
+          "start_fiducial": 1.0,
+          "fiducial_increment": 1.0,
+          "attribute": {
+            "name": "ZDEV channel",
+            "attribute_type": "scalar",
+            "nan_description": {
+              "values": [
+                -99999.9
+              ]
+            },
+            "attribute_description": {
+              "discipline": "Geophysics",
+              "scale": "linear",
+              "type": "Radiometric"
+            },
+            "values": {
+              "data_type": "float64",
+              "length": 100,
+              "width": 1,
+              "data": "abababababababababababababababababababababababababababababababab"
+            }
+          }
+        },
+        {
+          "name": "TC",
+          "start_fiducial": 1.0,
+          "fiducial_increment": 1.0,
+          "attribute": {
+            "name": "TC channel",
+            "attribute_type": "ensemble_continuous",
+            "nan_description": {
+              "values": [
+                -99999.9
+              ]
+            },
+            "attribute_description": {
+              "discipline": "Geophysics",
+              "scale": "linear",
+              "type": "Radiometric"
+            },
+            "values": {
+              "data_type": "float64",
+              "width": 256,
+              "length": 100,
+              "data": "abababababababababababababababababababababababababababababababab"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-inductance.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (inductance)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "H",
+    "cH",
+    "dH",
+    "EH",
+    "fH",
+    "GH",
+    "kH",
+    "mH",
+    "MH",
+    "nH",
+    "TH",
+    "uH"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-time-per-mass.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (time per mass)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "s/kg"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "schema": "/objects/triangle-mesh/1.0.1/triangle-mesh.schema.json",
+  "name": "Example Triangle Mesh",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "description": "This is example data to triangle mesh validates properly",
+  "bounding_box": {
+    "min_y": 5,
+    "max_y": 10,
+    "min_x": 0,
+    "max_x": 10,
+    "min_z": 5,
+    "max_z": 10
+  },
+  "coordinate_reference_system": {
+    "epsg_code": 1024
+  },
+  "triangles": {
+    "vertices": {
+      "width": 3,
+      "data_type": "float64",
+      "length": 4000,
+      "data": "abababababababababababababababababababababababababababababababab",
+      "attributes": []
+    },
+    "indices": {
+      "width": 3,
+      "data_type": "uint64",
+      "length": 3500,
+      "data": "abababababababababababababababababababababababababababababababab",
+      "attributes": [
+        {
+          "name": "data values",
+          "attribute_type": "scalar",
+          "nan_description": {
+            "values": [
+              -99.0099,
+              -999.9999
+            ]
+          },
+          "attribute_description": {
+            "discipline": "Geochemistry",
+            "type": "Ag",
+            "unit": "ppm[mass]",
+            "scale": "log10"
+          },
+          "values": {
+            "data_type": "float64",
+            "length": 4000,
+            "width": 1,
+            "data": "abababababababababababababababababababababababababababababababab"
+          }
+        },
+        {
+          "name": "minerals",
+          "attribute_type": "ensemble_continuous",
+          "nan_description": {
+            "values": [
+              -99.9999999,
+              -1.00000001
+            ]
+          },
+          "attribute_description": {
+            "discipline": "Geochemistry",
+            "type": "Zr",
+            "unit": "g/t",
+            "scale": "log10"
+          },
+          "values": {
+            "data_type": "float64",
+            "width": 5,
+            "length": 4000,
+            "data": "abababababababababababababababababababababababababababababababab"
+          }
+        }
+      ]
+    }
+  },
+  "tags": {},
+  "extensions": {}
+}

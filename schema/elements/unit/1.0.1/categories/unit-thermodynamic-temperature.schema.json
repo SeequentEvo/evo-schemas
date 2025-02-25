@@ -1,0 +1,13 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-thermodynamic-temperature.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (thermodynamic temperature)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "K",
+    "degC",
+    "degF",
+    "degR"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "$id": "/components/continuous-attribute/1.1.0/continuous-attribute.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "An attribute for a range of values.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-continuous-attribute/1.0.0/base-continuous-attribute.schema.json"
+    },
+    {
+      "properties": {
+        "attribute_type": {
+          "const": "scalar"
+        },
+        "nan_description": {
+          "description": "Describes the values used to designate not-a-number.",
+          "$ref": "/components/nan-continuous/1.0.1/nan-continuous.schema.json"
+        },
+        "values": {
+          "description": "The values of the attributes.",
+          "$ref": "/elements/float-array-1/1.0.1/float-array-1.schema.json"
+        }
+      }
+    }
+  ],
+  "required": [
+    "attribute_type",
+    "nan_description",
+    "values"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "/components/geometry-part/1.0.1/geometry-part.schema.json",
+  "key": "part 1",
+  "name": "geometry part 1",
+  "data_source": "https://mycompany/mesh11.stl",
+  "feature": {
+    "name": "feature 1",
+    "kind": "Soil",
+    "material_key": "soil"
+  },
+  "transform": [
+    1.0,
+    0.0,
+    0.0,
+    45.0,
+    0.0,
+    1.0,
+    0.0,
+    45.0,
+    0.0,
+    0.0,
+    1.0,
+    30.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "bounding_box": {
+    "min_y": 5,
+    "max_y": 10,
+    "min_x": 0,
+    "max_x": 10,
+    "min_z": 5,
+    "max_z": 10
+  },
+  "geometry": {
+    "part_key": "part 2"
+  }
+}

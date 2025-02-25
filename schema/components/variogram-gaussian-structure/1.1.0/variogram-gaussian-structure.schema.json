@@ -1,0 +1,29 @@
+{
+  "$id": "/components/variogram-gaussian-structure/1.1.0/variogram-gaussian-structure.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Gaussian variogram structure.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "contribution": {
+      "type": "number",
+      "description": "The scaling of the structure and contribution to the total sill of the variogram model.",
+      "exclusiveMinimum": 0
+    },
+    "anisotropy": {
+      "title": "Anisotropy",
+      "description": "The spatial extent and orientation of the variogram structure.",
+      "$ref": "/components/ellipsoid/1.1.0/ellipsoid.schema.json"
+    },
+    "variogram_type": {
+      "title": "Structure Type",
+      "description": "type of structure - gaussian",
+      "const": "gaussian"
+    }
+  },
+  "required": [
+    "contribution",
+    "anisotropy",
+    "variogram_type"
+  ]
+}

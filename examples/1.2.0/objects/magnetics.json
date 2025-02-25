@@ -1,0 +1,206 @@
+{
+  "schema": "/objects/magnetics/1.2.0/magnetics.schema.json",
+  "name": "Example of a magnetics object",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "description": "This is example data to ensure the object validates properly.",
+  "bounding_box": {
+    "min_y": 0,
+    "max_y": 10,
+    "min_x": 0,
+    "max_x": 10,
+    "min_z": 0,
+    "max_z": 0
+  },
+  "coordinate_reference_system": {
+    "epsg_code": 1024
+  },
+  "type": "GROUND",
+  "survey_type": "TMI",
+  "gradient_magnetic": {
+    "number_of_sensors": 1,
+    "sensor_offsets": [
+      [
+        0.0,
+        1.0,
+        0.0
+      ]
+    ]
+  },
+  "base_stations": [
+    {
+      "name": "S01",
+      "location": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "survey_type": "TMI",
+      "magnetic_line_list": [
+        {
+          "line_number": "L01",
+          "date": "2018-11-13T20:20:39+00:00",
+          "version": 0,
+          "group": 0,
+          "type": "Line",
+          "location_channels": {
+            "x": "X",
+            "y": "Y"
+          },
+          "channel_attributes": [
+            {
+              "name": "X",
+              "start_fiducial": 1.0,
+              "fiducial_increment": 1.0,
+              "attribute": {
+                "name": "X channel",
+                "key": "X",
+                "attribute_type": "scalar",
+                "nan_description": {
+                  "values": [
+                    -99999.9
+                  ]
+                },
+                "attribute_description": {
+                  "discipline": "Geophysics",
+                  "scale": "linear",
+                  "type": "Magnetics",
+                  "unit": "m"
+                },
+                "values": {
+                  "data_type": "float64",
+                  "length": 3,
+                  "width": 1,
+                  "data": "abababababababababababababababababababababababababababababababab"
+                }
+              }
+            },
+            {
+              "name": "Y",
+              "start_fiducial": 1.0,
+              "fiducial_increment": 1.0,
+              "attribute": {
+                "name": "Y channel",
+                "key": "Y",
+                "attribute_type": "scalar",
+                "nan_description": {
+                  "values": [
+                    -99999.9
+                  ]
+                },
+                "attribute_description": {
+                  "discipline": "Geophysics",
+                  "scale": "linear",
+                  "type": "Magnetics",
+                  "unit": "m"
+                },
+                "values": {
+                  "data_type": "float64",
+                  "length": 3,
+                  "width": 1,
+                  "data": "abababababababababababababababababababababababababababababababab"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "magnetic_line_list": [
+    {
+      "line_number": "L01",
+      "date": "2018-11-13T20:20:39+00:00",
+      "version": 0,
+      "group": 0,
+      "type": "Line",
+      "location_channels": {
+        "x": "X",
+        "y": "Y"
+      },
+      "channel_attributes": [
+        {
+          "name": "X",
+          "start_fiducial": 1.0,
+          "fiducial_increment": 1.0,
+          "attribute": {
+            "name": "X channel",
+            "key": "X",
+            "attribute_type": "scalar",
+            "nan_description": {
+              "values": [
+                -99999.9
+              ]
+            },
+            "attribute_description": {
+              "discipline": "Geophysics",
+              "scale": "linear",
+              "type": "Magnetics",
+              "unit": "m"
+            },
+            "values": {
+              "data_type": "float64",
+              "length": 100,
+              "width": 1,
+              "data": "abababababababababababababababababababababababababababababababab"
+            }
+          }
+        },
+        {
+          "name": "Y",
+          "start_fiducial": 1.0,
+          "fiducial_increment": 1.0,
+          "attribute": {
+            "name": "Y channel",
+            "key": "Y",
+            "attribute_type": "scalar",
+            "nan_description": {
+              "values": [
+                -99999.9
+              ]
+            },
+            "attribute_description": {
+              "discipline": "Geophysics",
+              "scale": "linear",
+              "type": "Magnetics",
+              "unit": "m"
+            },
+            "values": {
+              "data_type": "float64",
+              "length": 100,
+              "width": 1,
+              "data": "abababababababababababababababababababababababababababababababab"
+            }
+          }
+        },
+        {
+          "name": "mag",
+          "start_fiducial": 1.0,
+          "fiducial_increment": 1.0,
+          "attribute": {
+            "name": "Mag data",
+            "key": "mag",
+            "attribute_type": "scalar",
+            "nan_description": {
+              "values": [
+                -99999.9
+              ]
+            },
+            "attribute_description": {
+              "discipline": "Geophysics",
+              "scale": "linear",
+              "type": "Magnetics"
+            },
+            "values": {
+              "data_type": "float64",
+              "length": 100,
+              "width": 1,
+              "data": "abababababababababababababababababababababababababababababababab"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "qaqc_magnetic_azimuth_test_list": [],
+  "qaqc_noise_test_list": []
+}

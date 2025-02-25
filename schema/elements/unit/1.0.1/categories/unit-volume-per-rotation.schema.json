@@ -1,0 +1,12 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-volume-per-rotation.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (volume per rotation)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "m3/rad",
+    "ft3/rad",
+    "m3/rev"
+  ]
+}

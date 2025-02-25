@@ -1,0 +1,57 @@
+{
+  "$id": "/components/relative-planar-data-table/1.2.0/relative-planar-data-table.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A table of planar data relative to a drillhole",
+  "type": "object",
+  "properties": {
+    "name": {
+      "title": "Name",
+      "description": "The name of the table.",
+      "type": "string"
+    },
+    "collection_type": {
+      "title": "Collection type",
+      "description": "The type of the collection.",
+      "const": "planar"
+    },
+    "distance": {
+      "description": "The distance down the drillhole.",
+      "type": "object",
+      "allOf": [
+        {
+          "description": "Attributes associated with each distance.",
+          "$ref": "/components/attribute-list-property/1.2.0/attribute-list-property.schema.json"
+        },
+        {
+          "properties": {
+            "values": {
+              "description": "The distance down the drillhole.",
+              "$ref": "/elements/float-array-1/1.0.1/float-array-1.schema.json"
+            },
+            "unit": {
+              "description": "Unit",
+              "$ref": "/elements/unit/1.0.1/categories/unit-length.schema.json"
+            }
+          },
+          "required": [
+            "values"
+          ]
+        }
+      ]
+    },
+    "relative_plane_angles": {
+      "description": "Planar measurements relative to the drillhole. Columns: alpha, beta",
+      "$ref": "/elements/float-array-2/1.0.1/float-array-2.schema.json"
+    },
+    "plane_polarity": {
+      "description": "Polarity of the planar measurements. Column: has_positive_polarity",
+      "$ref": "/elements/bool-array-1/1.0.1/bool-array-1.schema.json"
+    }
+  },
+  "required": [
+    "name",
+    "collection_type",
+    "distance",
+    "relative_plane_angles"
+  ]
+}

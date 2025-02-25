@@ -1,0 +1,15 @@
+{
+  "$schema": "/components/distance-table/1.0.1/distance-table.schema.json",
+  "name": "Validation distance table.",
+  "collection_type": "distance",
+  "distance": {
+    "values": {
+      "data_type": "float64",
+      "length": 10,
+      "width": 1,
+      "data": "abababababababababababababababababababababababababababababababab"
+    },
+    "attributes": [],
+    "unit": "m"
+  }
+}

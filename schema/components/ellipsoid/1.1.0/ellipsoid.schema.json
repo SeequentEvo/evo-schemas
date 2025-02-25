@@ -1,0 +1,46 @@
+{
+  "$id": "/components/ellipsoid/1.1.0/ellipsoid.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Ellipsoid specification",
+  "type": "object",
+  "properties": {
+    "ellipsoid_ranges": {
+      "title": "EllipsoidRanges",
+      "description": "An ellipsoid as defined by three lengths, for the major, semi-major and minor axes rotated in space as defined by the rotation.",
+      "type": "object",
+      "properties": {
+        "major": {
+          "title": "Major",
+          "description": "The major axis length of the ellipsoid",
+          "exclusiveMinimum": 0,
+          "type": "number"
+        },
+        "semi_major": {
+          "title": "Semi Major",
+          "description": "The semi-major axis length of the ellipsoid",
+          "exclusiveMinimum": 0,
+          "type": "number"
+        },
+        "minor": {
+          "title": "Minor",
+          "description": "The minor axis length of the ellipsoid",
+          "exclusiveMinimum": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "major",
+        "semi_major",
+        "minor"
+      ]
+    },
+    "rotation": {
+      "$ref": "/components/rotation/1.1.0/rotation.schema.json",
+      "description": "Rotation of the ellipsoid"
+    }
+  },
+  "required": [
+    "ellipsoid_ranges",
+    "rotation"
+  ]
+}

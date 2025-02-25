@@ -1,0 +1,68 @@
+{
+  "$id": "/objects/design-geometry/1.1.0/design-geometry.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "2D/3D Geometry",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.1.0/base-spatial-data-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/design-geometry/1.1.0/design-geometry.schema.json"
+        },
+        "kind": {
+          "title": "Kind",
+          "description": "The kind of geometry.",
+          "enum": [
+            "Planar2D",
+            "Domain3D"
+          ],
+          "type": "string"
+        },
+        "distance_unit": {
+          "description": "Distance unit.",
+          "$ref": "/elements/unit/1.0.1/categories/unit-length.schema.json"
+        },
+        "materials": {
+          "type": "array",
+          "description": "Materials for this geometry.",
+          "items": {
+            "$ref": "/components/material/1.0.1/material.schema.json"
+          }
+        },
+        "vertices_2d": {
+          "$ref": "/components/vertices-2d/1.0.1/vertices-2d.schema.json",
+          "description": "Vertex coordinates in 2D space."
+        },
+        "vertices_3d": {
+          "$ref": "/components/vertices-3d/1.0.1/vertices-3d.schema.json",
+          "description": "Vertex coordinates in 3D space."
+        },
+        "lines_2d": {
+          "$ref": "/components/lines-2d-indices/1.0.1/lines-2d-indices.schema.json",
+          "description": "2D line indices."
+        },
+        "lines_3d": {
+          "$ref": "/components/lines-3d-indices/1.0.1/lines-3d-indices.schema.json",
+          "description": "3D line indices."
+        },
+        "parts": {
+          "type": "array",
+          "description": "List of geometry parts.",
+          "items": {
+            "$ref": "/components/geometry-part/1.0.1/geometry-part.schema.json"
+          }
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "kind",
+    "materials",
+    "parts"
+  ],
+  "unevaluatedProperties": false
+}

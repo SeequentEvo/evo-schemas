@@ -1,0 +1,7 @@
+{
+  "$schema": "/elements/lookup-table/1.0.1/lookup-table.schema.json",
+  "keys_data_type": "int32",
+  "values_data_type": "string",
+  "length": 10,
+  "data": "abababababababababababababababababababababababababababababababab"
+}

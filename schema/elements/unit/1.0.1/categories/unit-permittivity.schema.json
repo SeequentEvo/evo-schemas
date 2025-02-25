@@ -1,0 +1,11 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-permittivity.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (permittivity)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "uF/m",
+    "F/m"
+  ]
+}

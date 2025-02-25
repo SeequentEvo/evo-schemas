@@ -1,0 +1,9 @@
+{
+  "$schema": "/components/vertices-2d/1.0.1/vertices-2d.schema.json",
+  "vertices": {
+    "width": 2,
+    "data_type": "float64",
+    "length": 3,
+    "data": "abababababababababababababababababababababababababababababababab"
+  }
+}

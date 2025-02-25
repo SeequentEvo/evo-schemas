@@ -1,0 +1,7 @@
+{
+  "$schema": "/elements/index-array-3/1.0.1/index-array-3.schema.json",
+  "width": 3,
+  "data_type": "uint64",
+  "length": 32,
+  "data": "abababababababababababababababababababababababababababababababab"
+}

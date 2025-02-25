@@ -1,0 +1,23 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-volume-per-time-per-time.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units ((volume per time) per time)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "m3/s2",
+    "bbl/d2",
+    "bbl/h2",
+    "dm3/s2",
+    "ft3/d2",
+    "ft3/h2",
+    "ft3/min2",
+    "ft3/s2",
+    "gal[UK]/h2",
+    "gal[UK]/min2",
+    "gal[US]/h2",
+    "gal[US]/min2",
+    "L/s2",
+    "m3/d2"
+  ]
+}

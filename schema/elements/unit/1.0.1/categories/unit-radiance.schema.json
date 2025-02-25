@@ -1,0 +1,10 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-radiance.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (radiance)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "W/(m2.sr)"
+  ]
+}

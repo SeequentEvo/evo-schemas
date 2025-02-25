@@ -1,0 +1,13 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-area-per-mass.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (area per mass)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "m2/kg",
+    "cm2/g",
+    "ft2/lbm",
+    "m2/g"
+  ]
+}

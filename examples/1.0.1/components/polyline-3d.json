@@ -1,0 +1,6 @@
+{
+  "$schema": "/components/polyline-3d/1.0.1/polyline-3d.schema.json",
+  "begin": 1,
+  "count": 10,
+  "closed": "Closed"
+}

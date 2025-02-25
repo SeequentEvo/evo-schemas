@@ -1,0 +1,15 @@
+{
+  "$schema": "/components/color-attribute/1.1.0/color-attribute.schema.json",
+  "name": "Color values",
+  "key": "color values",
+  "attribute_type": "color",
+  "attribute_description": {
+    "discipline": "Geochemistry",
+    "type": "Rock codes"
+  },
+  "values": {
+    "data_type": "uint32",
+    "length": 20,
+    "data": "abababababababababababababababababababababababababababababababab"
+  }
+}

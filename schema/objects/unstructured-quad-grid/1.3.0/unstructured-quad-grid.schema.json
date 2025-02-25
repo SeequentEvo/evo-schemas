@@ -1,0 +1,27 @@
+{
+  "$id": "/objects/unstructured-quad-grid/1.3.0/unstructured-quad-grid.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "An unstructured quadrilateral grid.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.1.0/base-spatial-data-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/unstructured-quad-grid/1.3.0/unstructured-quad-grid.schema.json"
+        },
+        "quadrilaterals": {
+          "description": "The quadrilaterals of the unstructured grid.",
+          "$ref": "/components/quadrilaterals/1.2.0/quadrilaterals.schema.json"
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "quadrilaterals"
+  ],
+  "unevaluatedProperties": false
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "/components/category-attribute/1.1.0/category-attribute.schema.json",
+  "name": "lith",
+  "key": "lith",
+  "attribute_type": "category",
+  "nan_description": {
+    "values": [
+      -99
+    ]
+  },
+  "attribute_description": {
+    "discipline": "Geology",
+    "type": "Lithology"
+  },
+  "values": {
+    "data_type": "int32",
+    "length": 64,
+    "width": 1,
+    "data": "abababababababababababababababababababababababababababababababab"
+  },
+  "table": {
+    "keys_data_type": "int32",
+    "values_data_type": "string",
+    "length": 64,
+    "data": "abababababababababababababababababababababababababababababababab"
+  }
+}

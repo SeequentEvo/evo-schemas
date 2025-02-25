@@ -1,0 +1,15 @@
+{
+  "$id": "/components/intervals/1.0.1/intervals.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Intervals are a set of ranges between 2 numbers.",
+  "type": "object",
+  "properties": {
+    "start_and_end": {
+      "$ref": "/elements/float-array-2/1.0.1/float-array-2.schema.json",
+      "description": "A set of intervals"
+    }
+  },
+  "required": [
+    "start_and_end"
+  ]
+}

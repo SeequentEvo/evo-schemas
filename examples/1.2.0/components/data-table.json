@@ -1,0 +1,6 @@
+{
+  "$schema": "/components/data-table/1.2.0/data-table.schema.json",
+  "name": "Validation data",
+  "collection_type": "data",
+  "attributes": []
+}

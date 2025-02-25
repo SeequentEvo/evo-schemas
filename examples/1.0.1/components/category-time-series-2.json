@@ -1,0 +1,39 @@
+{
+  "$schema": "/components/category-time-series/1.0.1/category-time-series.schema.json",
+  "key": "lithology",
+  "attribute_type": "categoral_time_series",
+  "nan_description": {
+    "values": [
+      -99
+    ]
+  },
+  "num_time_steps": 10,
+  "time_step": {
+    "name": "values",
+    "attribute_type": "scalar",
+    "values": {
+      "data_type": "float64",
+      "length": 10,
+      "width": 1,
+      "data": "abababababababababababababababababababababababababababababababab"
+    },
+    "unit": "min",
+    "start_time": "2018-11-13T20:20:39+00:00"
+  },
+  "values": {
+    "data_type": "int64",
+    "length": 16,
+    "width": 10,
+    "data": "abababababababababababababababababababababababababababababababab"
+  },
+  "table": {
+    "keys_data_type": "int64",
+    "values_data_type": "string",
+    "length": 10,
+    "data": "abababababababababababababababababababababababababababababababab"
+  },
+  "attribute_description": {
+    "discipline": "Geology",
+    "type": "Lithology"
+  }
+}

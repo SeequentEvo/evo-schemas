@@ -1,0 +1,11 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-pressure-time-per-volume.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (pressure time per volume)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "Pa.s/m3",
+    "psi.d/bbl"
+  ]
+}

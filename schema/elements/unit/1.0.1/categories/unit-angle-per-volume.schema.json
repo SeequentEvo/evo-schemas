@@ -1,0 +1,11 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-angle-per-volume.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (angle per volume)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "rad/m3",
+    "rad/ft3"
+  ]
+}

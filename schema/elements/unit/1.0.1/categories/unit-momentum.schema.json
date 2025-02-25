@@ -1,0 +1,11 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-momentum.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (momentum)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "kg.m/s",
+    "lbm.ft/s"
+  ]
+}

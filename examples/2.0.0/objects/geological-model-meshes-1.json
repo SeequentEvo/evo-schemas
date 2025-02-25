@@ -1,0 +1,202 @@
+{
+  "schema": "/objects/geological-model-meshes/2.0.0/geological-model-meshes.schema.json",
+  "name": "Example geological meshes collection",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "description": "This is example data to ensure the object validates properly.",
+  "bounding_box": {
+    "min_x": 0,
+    "max_x": 10,
+    "min_y": 0,
+    "max_y": 10,
+    "min_z": 10,
+    "max_z": 20
+  },
+  "coordinate_reference_system": {
+    "epsg_code": 1024
+  },
+  "folders": [
+    {
+      "name": "Output Volumes",
+      "items": [
+        {
+          "name": "Domains",
+          "items": [
+            {
+              "volume_index": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Contact Surfaces",
+      "items": [
+        {
+          "surface_index": 0
+        },
+        {
+          "surface_index": 1
+        }
+      ]
+    }
+  ],
+  "triangle_geometry": {
+    "triangles": {
+      "vertices": {
+        "width": 3,
+        "data_type": "float64",
+        "length": 3,
+        "data": "abababababababababababababababababababababababababababababababab",
+        "attributes": []
+      },
+      "indices": {
+        "width": 3,
+        "data_type": "uint64",
+        "length": 1,
+        "data": "abababababababababababababababababababababababababababababababab",
+        "attributes": []
+      }
+    },
+    "parts": {
+      "chunks": {
+        "width": 2,
+        "data_type": "uint64",
+        "length": 6,
+        "data": "abababababababababababababababababababababababababababababababab"
+      },
+      "attributes": [
+        {
+          "name": "Source",
+          "key": "source",
+          "attribute_type": "string",
+          "values": {
+            "data_type": "string",
+            "length": 6,
+            "data": "abababababababababababababababababababababababababababababababab"
+          }
+        }
+      ]
+    }
+  },
+  "materials": [
+    {
+      "key": "rock",
+      "name": "Rock",
+      "color": 4278190335,
+      "data_source": "Link_to_another_Geoscience_Object"
+    },
+    {
+      "key": "soil",
+      "name": "Soil",
+      "color": 4294901760
+    }
+  ],
+  "volumes": [
+    {
+      "name": "Lithology A",
+      "quality": {
+        "characteristics": [
+          "Manifold",
+          "NonSelfIntersecting"
+        ]
+      },
+      "parts": [
+        {
+          "index": 0
+        },
+        {
+          "index": 1,
+          "reversed": true
+        },
+        {
+          "index": 2
+        }
+      ],
+      "material_key": "rock",
+      "feature": "OutputVolume"
+    }
+  ],
+  "volume_attributes": [
+    {
+      "name": "Lithology",
+      "key": "lithology",
+      "attribute_type": "category",
+      "nan_description": {
+        "values": [
+          -1
+        ]
+      },
+      "attribute_description": {
+        "discipline": "Geology",
+        "type": "Lithology"
+      },
+      "values": {
+        "data_type": "int32",
+        "length": 1,
+        "width": 1,
+        "data": "abababababababababababababababababababababababababababababababab"
+      },
+      "table": {
+        "keys_data_type": "int32",
+        "values_data_type": "string",
+        "length": 1,
+        "data": "abababababababababababababababababababababababababababababababab"
+      }
+    }
+  ],
+  "surfaces": [
+    {
+      "name": "Topography",
+      "parts": [
+        {
+          "index": 0
+        }
+      ],
+      "feature": "Topography"
+    },
+    {
+      "name": "A Deposit",
+      "quality": {
+        "characteristics": [
+          "Manifold"
+        ]
+      },
+      "parts": [
+        {
+          "index": 1
+        }
+      ],
+      "feature": "ContactSurface"
+    }
+  ],
+  "surface_attributes": [
+    {
+      "name": "Front Lithology",
+      "key": "front",
+      "attribute_type": "string",
+      "attribute_description": {
+        "discipline": "Geology",
+        "type": "Lithology"
+      },
+      "values": {
+        "data_type": "string",
+        "length": 2,
+        "data": "abababababababababababababababababababababababababababababababab"
+      }
+    },
+    {
+      "name": "Back Lithology",
+      "key": "back",
+      "attribute_type": "string",
+      "attribute_description": {
+        "discipline": "Geology",
+        "type": "Lithology"
+      },
+      "values": {
+        "data_type": "string",
+        "length": 2,
+        "data": "abababababababababababababababababababababababababababababababab"
+      }
+    }
+  ]
+}

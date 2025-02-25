@@ -1,0 +1,16 @@
+{
+  "$schema": "/components/base-object-properties/1.0.1/base-object-properties.schema.json",
+  "name": "Test Base Properties",
+  "description": "Description of the test base properties",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "tags": {
+    "source_type": "Leapfrog isosurface"
+  },
+  "extensions": {
+    "subobjects": {
+      "foo": 12
+    },
+    "whatever": "you want",
+    "times": 3.14159
+  }
+}

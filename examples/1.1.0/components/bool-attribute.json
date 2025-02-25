@@ -1,0 +1,15 @@
+{
+  "$schema": "/components/bool-attribute/1.1.0/bool-attribute.schema.json",
+  "name": "measurement valid",
+  "key": "measurement valid",
+  "attribute_type": "bool",
+  "attribute_description": {
+    "discipline": "Geophysics",
+    "type": "Validity"
+  },
+  "values": {
+    "data_type": "bool",
+    "length": 64,
+    "data": "abababababababababababababababababababababababababababababababab"
+  }
+}

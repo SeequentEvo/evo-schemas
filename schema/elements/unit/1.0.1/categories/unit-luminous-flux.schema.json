@@ -1,0 +1,10 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-luminous-flux.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (luminous flux)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "lm"
+  ]
+}

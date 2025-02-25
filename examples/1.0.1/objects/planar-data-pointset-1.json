@@ -1,0 +1,81 @@
+{
+  "schema": "/objects/planar-data-pointset/1.0.1/planar-data-pointset.schema.json",
+  "name": "Example planar data pointset.",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "description": "This is example data to ensure the planar-data-pointset works.",
+  "locations": {
+    "coordinates": {
+      "width": 3,
+      "data_type": "float64",
+      "length": 64,
+      "data": "abababababababababababababababababababababababababababababababab"
+    },
+    "plane_orientations": {
+      "width": 2,
+      "data_type": "float64",
+      "length": 64,
+      "data": "abababababababababababababababababababababababababababababababab"
+    },
+    "plane_polarity": {
+      "data_type": "bool",
+      "length": 64,
+      "data": "abababababababababababababababababababababababababababababababab"
+    },
+    "attributes": [
+      {
+        "name": "resistivity",
+        "attribute_type": "scalar",
+        "nan_description": {
+          "values": [
+            -1.00001,
+            -9999999.99
+          ]
+        },
+        "attribute_description": {
+          "discipline": "Geophysics",
+          "scale": "log10",
+          "type": "Resistivity",
+          "unit": "ohm.m"
+        },
+        "values": {
+          "data_type": "float64",
+          "length": 64,
+          "width": 1,
+          "data": "abababababababababababababababababababababababababababababababab"
+        }
+      },
+      {
+        "name": "measurement valid",
+        "attribute_type": "bool",
+        "attribute_description": {
+          "discipline": "Geophysics",
+          "type": "Validity"
+        },
+        "values": {
+          "data_type": "bool",
+          "length": 64,
+          "data": "abababababababababababababababababababababababababababababababab"
+        }
+      }
+    ]
+  },
+  "bounding_box": {
+    "min_y": 5,
+    "max_y": 10,
+    "min_x": 0,
+    "max_x": 10,
+    "min_z": 5,
+    "max_z": 10
+  },
+  "coordinate_reference_system": {
+    "epsg_code": 2048
+  },
+  "tags": {},
+  "extensions": {
+    "subobjects": {
+      "foo": 12
+    },
+    "whatever": "you want",
+    "times": 3.14159
+  }
+}

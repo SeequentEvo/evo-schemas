@@ -1,0 +1,107 @@
+{
+  "$id": "/components/geometry-part/1.0.1/geometry-part.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "This component describes a geometry part.",
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "string",
+      "description": "Unique identifier of the geometry part."
+    },
+    "name": {
+      "type": "string",
+      "description": "Name."
+    },
+    "data_source": {
+      "type": "string",
+      "description": "Data source."
+    },
+    "feature": {
+      "title": "Geometry part feature",
+      "type": "object",
+      "description": "Geometry part feature.",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Feature name."
+        },
+        "kind": {
+          "type": "string",
+          "description": "Kind of feature.",
+          "enum": [
+            "Void",
+            "Soil",
+            "GMV",
+            "Discontinuity",
+            "Plate",
+            "Geogrid",
+            "Beam",
+            "EmbeddedBeam",
+            "Cable",
+            "Anchor"
+          ]
+        },
+        "material_key": {
+          "type": "string",
+          "description": "Unique identifier of the material."
+        }
+      },
+      "required": [
+        "name",
+        "kind"
+      ]
+    },
+    "transform": {
+      "title": "Transformation matrix",
+      "type": "array",
+      "description": "4x4 transformation matrix flattened in row-major order.",
+      "maxItems": 16,
+      "minItems": 16,
+      "items": {
+        "type": "number"
+      }
+    },
+    "bounding_box": {
+      "title": "Bounding box",
+      "description": "Bounding box of the geometry part.",
+      "$ref": "/components/bounding-box/1.0.1/bounding-box.schema.json"
+    },
+    "layer": {
+      "type": "string",
+      "description": "Geometry part layer."
+    },
+    "color": {
+      "description": "Geometry part color.",
+      "$ref": "/elements/color/1.0.1/color.schema.json"
+    },
+    "geometry": {
+      "description": "Another part in the geometry or a geometry composite.",
+      "oneOf": [
+        {
+          "type": "object",
+          "description": "Another part in the geometry",
+          "properties": {
+            "part_key": {
+              "type": "string",
+              "description": "Unique identifier of another part in the geometry."
+            }
+          },
+          "required": [
+            "part_key"
+          ]
+        },
+        {
+          "description": "Geometry composite.",
+          "$ref": "/components/geometry-composite/1.0.1/geometry-composite.schema.json"
+        }
+      ]
+    }
+  },
+  "required": [
+    "key",
+    "name",
+    "feature",
+    "bounding_box",
+    "geometry"
+  ]
+}

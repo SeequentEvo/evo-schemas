@@ -1,0 +1,18 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-temperature-interval-per-length.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (temperature interval per length)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "0.01 deltaF/ft",
+    "deltaC/ft",
+    "deltaC/hm",
+    "deltaC/km",
+    "deltaC/m",
+    "deltaF/ft",
+    "deltaF/m",
+    "deltaK/km",
+    "deltaK/m"
+  ]
+}

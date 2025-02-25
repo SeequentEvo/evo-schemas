@@ -1,0 +1,23 @@
+{
+  "$schema": "/components/continuous-ensemble/1.0.1/continuous-ensemble.schema.json",
+  "name": "minerals",
+  "attribute_type": "ensemble_continuous",
+  "nan_description": {
+    "values": [
+      -99.9999999,
+      -1.00000001
+    ]
+  },
+  "attribute_description": {
+    "discipline": "Geochemistry",
+    "type": "Zr",
+    "unit": "kg",
+    "scale": "log10"
+  },
+  "values": {
+    "data_type": "float64",
+    "width": 5,
+    "length": 1024,
+    "data": "abababababababababababababababababababababababababababababababab"
+  }
+}

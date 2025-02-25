@@ -1,0 +1,22 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-electric-current.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (electric current)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "A",
+    "cA",
+    "dA",
+    "EA",
+    "fA",
+    "GA",
+    "kA",
+    "mA",
+    "MA",
+    "nA",
+    "pA",
+    "TA",
+    "uA"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "$schema": "/components/geometry-composite/1.0.1/geometry-composite.schema.json",
+  "brep_container": {
+    "format": "STEP",
+    "producer": "Plaxis",
+    "brep": {
+      "width": 1,
+      "data_type": "uint8",
+      "length": 2000,
+      "data": "abababababababababababababababababababababababababababababababab"
+    }
+  },
+  "mesh": {
+    "kind": "Open",
+    "quality": {
+      "characteristics": [
+        "NonSelfIntersecting",
+        "Continuous"
+      ]
+    },
+    "triangles": {
+      "width": 3,
+      "data_type": "uint64",
+      "length": 4,
+      "data": "abababababababababababababababababababababababababababababababab"
+    }
+  },
+  "points_2d": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "polylines_2d": [
+    {
+      "begin": 1,
+      "count": 3,
+      "closed": "Closed",
+      "shape": "Straight"
+    },
+    {
+      "begin": 7,
+      "count": 3,
+      "closed": "Closed",
+      "shape": "Curved"
+    }
+  ],
+  "points_3d": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "polylines_3d": [
+    {
+      "begin": 1,
+      "count": 2,
+      "closed": "Closed"
+    },
+    {
+      "begin": 5,
+      "count": 3,
+      "closed": "Open"
+    }
+  ]
+}

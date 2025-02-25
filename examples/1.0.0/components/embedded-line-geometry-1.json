@@ -1,0 +1,23 @@
+{
+  "$schema": "/components/embedded-line-geometry/1.0.0/embedded-line-geometry.schema.json",
+  "vertices": {
+    "width": 2,
+    "data_type": "float64",
+    "length": 30,
+    "data": "abababababababababababababababababababababababababababababababab",
+    "attributes": []
+  },
+  "chunks": {
+    "width": 2,
+    "data_type": "uint64",
+    "length": 3,
+    "data": "abababababababababababababababababababababababababababababababab",
+    "attributes": []
+  },
+  "indices": {
+    "width": 1,
+    "data_type": "uint64",
+    "length": 30,
+    "data": "abababababababababababababababababababababababababababababababab"
+  }
+}

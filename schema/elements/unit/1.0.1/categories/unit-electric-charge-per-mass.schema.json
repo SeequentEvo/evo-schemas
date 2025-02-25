@@ -1,0 +1,12 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-electric-charge-per-mass.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (electric charge per mass)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "A.s/kg",
+    "C/g",
+    "C/kg"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-temperature-interval-per-pressure.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (temperature interval per pressure)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "deltaC/kPa",
+    "deltaF/psi",
+    "deltaK/Pa"
+  ]
+}

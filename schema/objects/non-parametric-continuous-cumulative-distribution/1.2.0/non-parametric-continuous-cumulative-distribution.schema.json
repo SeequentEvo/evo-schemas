@@ -1,0 +1,93 @@
+{
+  "$id": "/objects/non-parametric-continuous-cumulative-distribution/1.2.0/non-parametric-continuous-cumulative-distribution.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A description of a non parametric continuous cumulative distribution.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.1.0/base-spatial-data-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/non-parametric-continuous-cumulative-distribution/1.2.0/non-parametric-continuous-cumulative-distribution.schema.json"
+        },
+        "cdf": {
+          "description": "Cumulative distribution function.",
+          "$ref": "/components/cumulative-distribution-function/1.0.1/cumulative-distribution-function.schema.json"
+        },
+        "is_declustered": {
+          "title": "Is declustered",
+          "description": "Is declustered.",
+          "type": "boolean"
+        },
+        "support": {
+          "description": "Support options.",
+          "oneOf": [
+            {
+              "description": "Point option.",
+              "const": "point"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "block": {
+                  "description": "Block option.",
+                  "type": "object",
+                  "properties": {
+                    "size_x": {
+                      "description": "Size in x direction",
+                      "$ref": "#/$defs/block_size"
+                    },
+                    "size_y": {
+                      "description": "Size in y direction",
+                      "$ref": "#/$defs/block_size"
+                    },
+                    "size_z": {
+                      "description": "Size in x direction",
+                      "$ref": "#/$defs/block_size"
+                    },
+                    "rotation": {
+                      "description": "Rotation.",
+                      "$ref": "/components/rotation/1.1.0/rotation.schema.json"
+                    }
+                  },
+                  "required": [
+                    "size_x",
+                    "size_y",
+                    "size_z"
+                  ]
+                }
+              },
+              "required": [
+                "block"
+              ]
+            },
+            {
+              "description": "Other option.",
+              "const": "other"
+            }
+          ]
+        },
+        "attribute_description": {
+          "description": "The attribute description record.",
+          "$ref": "/components/attribute-description/1.0.1/attribute-description.schema.json"
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "cdf",
+    "is_declustered",
+    "support"
+  ],
+  "unevaluatedProperties": false,
+  "$defs": {
+    "block_size": {
+      "type": "number",
+      "description": "block size",
+      "exclusiveMinimum": 0.0
+    }
+  }
+}

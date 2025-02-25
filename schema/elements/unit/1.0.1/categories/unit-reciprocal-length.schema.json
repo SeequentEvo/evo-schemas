@@ -1,0 +1,24 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-reciprocal-length.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (reciprocal length)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "cu",
+    "1/angstrom",
+    "1/cm",
+    "1/ft",
+    "1/in",
+    "1/mi",
+    "1/mm",
+    "1/nm",
+    "1/yd",
+    "1E-9 1/ft",
+    "b/cm3",
+    "ft2/in3",
+    "m2/cm3",
+    "1/m",
+    "m2/m3"
+  ]
+}

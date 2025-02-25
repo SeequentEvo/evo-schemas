@@ -1,0 +1,9 @@
+{
+  "$schema": "/components/lines-3d-indices/1.0.1/lines-3d-indices.schema.json",
+  "indices": {
+    "width": 2,
+    "data_type": "uint64",
+    "length": 15,
+    "data": "abababababababababababababababababababababababababababababababab"
+  }
+}

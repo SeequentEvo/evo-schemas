@@ -1,0 +1,27 @@
+{
+  "$id": "/objects/unstructured-grid/1.1.0/unstructured-grid.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "An unstructured grid.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.0.1/base-spatial-data-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/unstructured-grid/1.1.0/unstructured-grid.schema.json"
+        },
+        "geometry": {
+          "description": "The geometry information of the unstructured grid.",
+          "$ref": "/components/unstructured-grid-geometry/1.1.0/unstructured-grid-geometry.schema.json"
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "geometry"
+  ],
+  "unevaluatedProperties": false
+}

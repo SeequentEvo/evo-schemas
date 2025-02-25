@@ -1,0 +1,19 @@
+{
+  "$id": "/components/planar-data/1.0.1/planar-data.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "An extension used to associate planar data with locations.",
+  "type": "object",
+  "properties": {
+    "plane_orientations": {
+      "description": "Plane orientation. Columns: dip_azimuth, dip.",
+      "$ref": "/elements/float-array-2/1.0.1/float-array-2.schema.json"
+    },
+    "plane_polarity": {
+      "description": "Plane polarity. Column: has_positive_polarity.",
+      "$ref": "/elements/bool-array-1/1.0.1/bool-array-1.schema.json"
+    }
+  },
+  "required": [
+    "plane_orientations"
+  ]
+}

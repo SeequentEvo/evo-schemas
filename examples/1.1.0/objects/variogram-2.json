@@ -1,0 +1,49 @@
+{
+  "schema": "/objects/variogram/1.1.0/variogram.schema.json",
+  "uuid": "981e3e01-527d-42c7-a3d2-9e8f0d76b08e",
+  "description": "Example Variogram",
+  "name": "Normalized Zn Variogram",
+  "attribute": "Zn_pc",
+  "data_variance": 0.1,
+  "domain": "upperblock",
+  "extensions": {},
+  "is_rotation_fixed": true,
+  "modelling_space": "data",
+  "nugget": 0.31057841890390486,
+  "sill": 1.0,
+  "tags": {},
+  "structures": [
+    {
+      "variogram_type": "linear",
+      "contribution": 0.3412164533143768,
+      "anisotropy": {
+        "rotation": {
+          "dip_azimuth": 22.96471772035046,
+          "dip": 84.81022642360875,
+          "pitch": 194.02466873660597
+        },
+        "ellipsoid_ranges": {
+          "major": 37.95302909337734,
+          "semi_major": 37.95302909337734,
+          "minor": 10.604338347802232
+        }
+      }
+    },
+    {
+      "variogram_type": "linear",
+      "contribution": 0.3482051277817184,
+      "anisotropy": {
+        "rotation": {
+          "dip_azimuth": 22.96471772035046,
+          "dip": 84.81022642360875,
+          "pitch": 134.02466873660597
+        },
+        "ellipsoid_ranges": {
+          "major": 90.78457576881164,
+          "semi_major": 52.6990099531403,
+          "minor": 37.95302909337734
+        }
+      }
+    }
+  ]
+}

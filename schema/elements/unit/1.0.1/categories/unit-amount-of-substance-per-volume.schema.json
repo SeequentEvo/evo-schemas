@@ -1,0 +1,14 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-amount-of-substance-per-volume.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (amount of substance per volume)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "mol/m3",
+    "kmol/m3",
+    "lbmol/ft3",
+    "lbmol/gal[UK]",
+    "lbmol/gal[US]"
+  ]
+}

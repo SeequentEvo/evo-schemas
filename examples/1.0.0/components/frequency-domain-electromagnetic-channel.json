@@ -1,0 +1,43 @@
+{
+  "$schema": "/components/frequency-domain-electromagnetic-channel/1.0.0/frequency-domain-electromagnetic-channel.schema.json",
+  "id": 1,
+  "relative_quadrature_standard_deviation": 5,
+  "relative_in_phase_standard_deviation": 5,
+  "coil_configuration": [
+    {
+      "frequency": 400,
+      "geometry": "HCP",
+      "separation": 7.86
+    },
+    {
+      "frequency": 1800,
+      "geometry": "HCP",
+      "separation": 7.86
+    },
+    {
+      "frequency": 3300,
+      "geometry": "VCA",
+      "separation": 8.99
+    },
+    {
+      "frequency": 8200,
+      "geometry": "HCP",
+      "separation": 7.86
+    },
+    {
+      "frequency": 40000,
+      "geometry": "HCP",
+      "separation": 7.86
+    },
+    {
+      "frequency": 140000,
+      "geometry": "HCP",
+      "separation": 7.86
+    }
+  ],
+  "gps": {
+    "x": 0,
+    "y": 10,
+    "z": 0
+  }
+}

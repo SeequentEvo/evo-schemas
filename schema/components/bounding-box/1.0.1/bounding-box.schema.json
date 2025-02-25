@@ -1,0 +1,40 @@
+{
+  "$id": "/components/bounding-box/1.0.1/bounding-box.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Defines the geographic bounds of the dataset",
+  "type": "object",
+  "properties": {
+    "min_x": {
+      "type": "number",
+      "description": "minimum value on the x-axis"
+    },
+    "max_x": {
+      "type": "number",
+      "description": "maximum value on the x-axis"
+    },
+    "min_y": {
+      "type": "number",
+      "description": "minimum value on the y-axis"
+    },
+    "max_y": {
+      "type": "number",
+      "description": "maximum value on the y-axis"
+    },
+    "min_z": {
+      "type": "number",
+      "description": "minimum value on the z-axis"
+    },
+    "max_z": {
+      "type": "number",
+      "description": "maximum value on the z-axis"
+    }
+  },
+  "required": [
+    "min_x",
+    "max_x",
+    "min_y",
+    "max_y",
+    "min_z",
+    "max_z"
+  ]
+}

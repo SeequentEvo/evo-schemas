@@ -1,0 +1,27 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-non-dimensional.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (non-dimensional)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "B",
+    "dAPI",
+    "gAPI",
+    "nAPI",
+    "O",
+    "dB.mW",
+    "dB.MW",
+    "dB.W",
+    "dB/ft",
+    "dB/km",
+    "dB/m",
+    "dB/O",
+    "B.W",
+    "B/m",
+    "B/O",
+    "V/B",
+    "V/dB",
+    "dB"
+  ]
+}

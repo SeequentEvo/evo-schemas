@@ -1,0 +1,12 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-amount-of-substance-per-time-per-area.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units ((amount of substance per time) per area)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "mol/(s.m2)",
+    "lbmol/(h.ft2)",
+    "lbmol/(s.ft2)"
+  ]
+}

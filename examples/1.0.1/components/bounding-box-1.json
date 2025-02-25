@@ -1,0 +1,9 @@
+{
+  "$schema": "/components/bounding-box/1.0.1/bounding-box.schema.json",
+  "min_x": 10647.5,
+  "min_y": 12617.5,
+  "min_z": 162.5,
+  "max_x": 10892.5,
+  "max_y": 12807.5,
+  "max_z": 372.5
+}

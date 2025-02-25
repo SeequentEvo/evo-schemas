@@ -1,0 +1,129 @@
+{
+  "schema": "/objects/line-segments/2.0.0/line-segments.schema.json",
+  "name": "Example Line Segments with groups",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "description": "This is example data to ensure the object validates properly.",
+  "bounding_box": {
+    "min_y": 5,
+    "max_y": 10,
+    "min_x": 0,
+    "max_x": 10,
+    "min_z": 5,
+    "max_z": 10
+  },
+  "coordinate_reference_system": {
+    "epsg_code": 1024
+  },
+  "segments": {
+    "vertices": {
+      "width": 3,
+      "data_type": "float64",
+      "length": 5,
+      "data": "abababababababababababababababababababababababababababababababab",
+      "attributes": [
+        {
+          "name": "length",
+          "attribute_type": "scalar",
+          "nan_description": {
+            "values": [
+              -99999.9,
+              -999.99
+            ]
+          },
+          "attribute_description": {
+            "discipline": "Geology",
+            "type": "Distance",
+            "unit": "m",
+            "scale": "lin",
+            "tags": {
+              "note": "These are attributes of the vertices. The length of the attribute values must match the length of the vertices."
+            }
+          },
+          "values": {
+            "data_type": "float64",
+            "width": 1,
+            "length": 5,
+            "data": "abababababababababababababababababababababababababababababababab"
+          }
+        }
+      ]
+    },
+    "indices": {
+      "width": 2,
+      "data_type": "uint64",
+      "length": 4,
+      "data": "abababababababababababababababababababababababababababababababab",
+      "attributes": [
+        {
+          "name": "chemicals",
+          "attribute_type": "ensemble_category",
+          "nan_description": {
+            "values": [
+              -99,
+              -999
+            ]
+          },
+          "attribute_description": {
+            "discipline": "Geochemistry",
+            "type": "Ag",
+            "tags": {
+              "note": "These are attributes of the segments. The length of the attribute values must match the length of the segments."
+            }
+          },
+          "values": {
+            "data_type": "int32",
+            "width": 8,
+            "length": 4,
+            "data": "abababababababababababababababababababababababababababababababab"
+          },
+          "table": {
+            "keys_data_type": "int32",
+            "values_data_type": "string",
+            "length": 2,
+            "data": "abababababababababababababababababababababababababababababababab"
+          }
+        }
+      ]
+    }
+  },
+  "parts": {
+    "chunks": {
+      "width": 2,
+      "data_type": "uint64",
+      "length": 3,
+      "data": "abababababababababababababababababababababababababababababababab"
+    },
+    "attributes": [
+      {
+        "name": "Line number",
+        "attribute_type": "scalar",
+        "attribute_description": {
+          "discipline": "None",
+          "type": "Info",
+          "tags": {
+            "note": "These are attributes of the chunks. The length of the attribute values must match the length of the chunks."
+          }
+        },
+        "nan_description": {
+          "values": [
+            0.0
+          ]
+        },
+        "values": {
+          "data_type": "float64",
+          "length": 3,
+          "width": 1,
+          "data": "abababababababababababababababababababababababababababababababab"
+        }
+      }
+    ]
+  },
+  "tags": {},
+  "extensions": {
+    "subobjects": {
+      "foo": 12
+    },
+    "whatever": "you want",
+    "times": 3.14159
+  }
+}

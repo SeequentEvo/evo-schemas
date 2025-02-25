@@ -1,0 +1,27 @@
+{
+  "$id": "/objects/triangle-mesh/1.1.0/triangle-mesh.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A description of a triangular mesh.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.0.1/base-spatial-data-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/triangle-mesh/1.1.0/triangle-mesh.schema.json"
+        },
+        "triangles": {
+          "description": "The triangles of the mesh.",
+          "$ref": "/components/triangles/1.1.0/triangles.schema.json"
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "triangles"
+  ],
+  "unevaluatedProperties": false
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "/components/hexahedrons/1.1.0/hexahedrons.schema.json",
+  "vertices": {
+    "width": 3,
+    "data_type": "float64",
+    "length": 8,
+    "data": "abababababababababababababababababababababababababababababababab",
+    "attributes": []
+  },
+  "indices": {
+    "width": 8,
+    "data_type": "uint64",
+    "length": 1,
+    "data": "babababababababababababababababababababababababababababababababa",
+    "attributes": []
+  }
+}

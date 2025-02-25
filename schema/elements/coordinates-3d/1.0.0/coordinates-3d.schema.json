@@ -1,0 +1,25 @@
+{
+  "$id": "/elements/coordinates-3d/1.0.0/coordinates-3d.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "3D Coordinates",
+  "type": "object",
+  "properties": {
+    "x": {
+      "description": "x-coordinate position.",
+      "type": "number"
+    },
+    "y": {
+      "description": "y-coordinate position.",
+      "type": "number"
+    },
+    "z": {
+      "description": "z-coordinate position.",
+      "type": "number"
+    }
+  },
+  "required": [
+    "x",
+    "y",
+    "z"
+  ]
+}

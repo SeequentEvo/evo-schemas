@@ -1,0 +1,9 @@
+{
+  "$schema": "/components/locations/1.0.1/locations.schema.json",
+  "coordinates": {
+    "width": 3,
+    "data_type": "float64",
+    "length": 3,
+    "data": "abababababababababababababababababababababababababababababababab"
+  }
+}

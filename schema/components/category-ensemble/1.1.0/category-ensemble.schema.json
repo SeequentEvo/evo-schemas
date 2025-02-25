@@ -1,0 +1,36 @@
+{
+  "$id": "/components/category-ensemble/1.1.0/category-ensemble.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Category ensemble.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-category-attribute/1.0.0/base-category-attribute.schema.json"
+    },
+    {
+      "properties": {
+        "attribute_type": {
+          "const": "ensemble_category"
+        },
+        "nan_description": {
+          "description": "Describes the values used to designate not-a-number.",
+          "$ref": "/components/nan-categorical/1.0.1/nan-categorical.schema.json"
+        },
+        "table": {
+          "description": "Lookup table associated with the attributes.",
+          "$ref": "/elements/lookup-table/1.0.1/lookup-table.schema.json"
+        },
+        "values": {
+          "description": "The values of the attributes.",
+          "$ref": "/elements/integer-array-md/1.0.1/integer-array-md.schema.json"
+        }
+      }
+    }
+  ],
+  "required": [
+    "attribute_type",
+    "nan_description",
+    "table",
+    "values"
+  ]
+}

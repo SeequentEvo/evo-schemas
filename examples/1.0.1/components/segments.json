@@ -1,0 +1,17 @@
+{
+  "$schema": "/components/segments/1.0.1/segments.schema.json",
+  "vertices": {
+    "width": 3,
+    "data_type": "float64",
+    "length": 5,
+    "data": "abababababababababababababababababababababababababababababababab",
+    "attributes": []
+  },
+  "indices": {
+    "width": 2,
+    "data_type": "uint64",
+    "length": 5,
+    "data": "abababababababababababababababababababababababababababababababab",
+    "attributes": []
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "$id": "/components/category-attribute-description/1.0.1/category-attribute-description.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "General information for a categorical attribute.",
+  "type": "object",
+  "properties": {
+    "discipline": {
+      "type": "string",
+      "description": "Discipline"
+    },
+    "type": {
+      "type": "string",
+      "description": "Type"
+    },
+    "extensions": {
+      "description": "Extended properties that may be associated to the attribute, but not specified in the schema",
+      "type": "object"
+    },
+    "tags": {
+      "type": "object",
+      "description": "Key-value pairs of user-defined metadata",
+      "additionalProperties": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "discipline",
+    "type"
+  ]
+}

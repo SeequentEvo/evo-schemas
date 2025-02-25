@@ -1,0 +1,53 @@
+{
+  "$id": "/components/base-object-properties/1.1.0/base-object-properties.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Properties common to all types of Geoscience Objects such as their name, unique identifier.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the object."
+    },
+    "uuid": {
+      "description": "Identifier of the object.",
+      "oneOf": [
+        {
+          "description": "Previously assigned universally unique identifier.",
+          "type": "string",
+          "format": "uuid",
+          "minLength": 36,
+          "maxLength": 36
+        },
+        {
+          "description": "Identifier used for a new object.",
+          "type": "null"
+        }
+      ]
+    },
+    "description": {
+      "title": "Description",
+      "type": "string",
+      "description": "Optional field for adding additional description to uniquely identify this object."
+    },
+    "extensions": {
+      "description": "Extended properties that may be associated to the object, but not specified in the schema",
+      "type": "object"
+    },
+    "tags": {
+      "type": "object",
+      "description": "Key-value pairs of user-defined metadata",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "lineage": {
+      "title": "Object lineage",
+      "description": "Information about the history of the object",
+      "$ref": "/components/lineage/1.0.0/lineage.schema.json"
+    }
+  },
+  "required": [
+    "name",
+    "uuid"
+  ]
+}

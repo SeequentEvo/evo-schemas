@@ -1,0 +1,29 @@
+{
+  "$id": "/components/surface-mesh/1.0.1/surface-mesh.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "This component describes a surface mesh.",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "title": "Kind",
+      "description": "The kind of surface mesh.",
+      "enum": [
+        "Open",
+        "Closed"
+      ],
+      "type": "string"
+    },
+    "quality": {
+      "$ref": "/components/mesh-quality/1.0.1/mesh-quality.schema.json",
+      "description": "Mesh quality."
+    },
+    "triangles": {
+      "$ref": "/elements/index-array-3/1.0.1/index-array-3.schema.json",
+      "description": "0-based indices. Each triple is a triangle. Columns: i, j, k."
+    }
+  },
+  "required": [
+    "kind",
+    "triangles"
+  ]
+}

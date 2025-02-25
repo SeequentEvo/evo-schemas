@@ -1,0 +1,36 @@
+{
+  "$id": "/components/triangles/1.2.0/triangles.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Triangles are made up of vertices and indices.",
+  "type": "object",
+  "properties": {
+    "vertices": {
+      "description": "Vertex coordinates. Columns: x, y, z.",
+      "allOf": [
+        {
+          "$ref": "/elements/float-array-3/1.0.1/float-array-3.schema.json"
+        },
+        {
+          "$ref": "/components/attribute-list-property/1.2.0/attribute-list-property.schema.json",
+          "description": "Attributes associated with each vertex."
+        }
+      ]
+    },
+    "indices": {
+      "description": "0-based indices into the vertices. Each triple is a triangle. Columns: n0, n1, n2.",
+      "allOf": [
+        {
+          "$ref": "/elements/index-array-3/1.0.1/index-array-3.schema.json"
+        },
+        {
+          "$ref": "/components/attribute-list-property/1.2.0/attribute-list-property.schema.json",
+          "description": "Attributes associated with each triangle."
+        }
+      ]
+    }
+  },
+  "required": [
+    "vertices",
+    "indices"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "/objects/non-parametric-continuous-cumulative-distribution/1.1.0/non-parametric-continuous-cumulative-distribution.schema.json",
+  "name": "Example non parametric continuous cumulative distribution",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "description": "This is example data to ensure the object validates properly.",
+  "bounding_box": {
+    "min_y": 0,
+    "max_y": 10,
+    "min_x": 0,
+    "max_x": 10,
+    "min_z": 0,
+    "max_z": 0
+  },
+  "coordinate_reference_system": {
+    "epsg_code": 1024
+  },
+  "cdf": {
+    "values": {
+      "width": 2,
+      "data_type": "float64",
+      "length": 10,
+      "data": "abababababababababababababababababababababababababababababababab"
+    },
+    "lower_tail_extrapolation": "no_extrapolation",
+    "upper_tail_extrapolation": {
+      "power_model": {
+        "max": 10.0,
+        "power": 0.5
+      }
+    }
+  },
+  "is_declustered": true,
+  "support": {
+    "block": {
+      "size_x": 1.0,
+      "size_y": 1.0,
+      "size_z": 1.0,
+      "rotation": {
+        "dip_azimuth": 45.0,
+        "dip": 130.0,
+        "pitch": 35.0
+      }
+    }
+  },
+  "attribute_description": {
+    "discipline": "Resource Modelling",
+    "type": "Gold"
+  },
+  "tags": {},
+  "extensions": {
+    "subobjects": {
+      "foo": 12
+    },
+    "whatever": "you want",
+    "times": 3.14159
+  }
+}

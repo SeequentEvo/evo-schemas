@@ -1,0 +1,22 @@
+{
+  "$schema": "/components/embedded-mesh-object/1.0.0/embedded-mesh-object.schema.json",
+  "name": "Veins",
+  "quality": {
+    "characteristics": [
+      "Continuous",
+      "Manifold"
+    ]
+  },
+  "parts": [
+    {
+      "index": 0
+    },
+    {
+      "index": 1,
+      "reversed": true
+    },
+    {
+      "index": 5
+    }
+  ]
+}

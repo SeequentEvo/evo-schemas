@@ -1,0 +1,9 @@
+{
+  "$schema": "/components/resistivity-ip-sip-survey-properties/1.0.0/resistivity-ip-sip-survey-properties.schema.json",
+  "type": "SIP",
+  "frequencies": [
+    10000,
+    12000,
+    14000
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "/components/continuous-attribute/1.1.0/continuous-attribute.schema.json",
+  "name": "cell values",
+  "key": "cell_values",
+  "attribute_type": "scalar",
+  "nan_description": {
+    "values": [
+      -99
+    ]
+  },
+  "attribute_description": {
+    "discipline": "Geophysics",
+    "scale": "log10",
+    "type": "Resistivity",
+    "unit": "ohm.m"
+  },
+  "values": {
+    "data_type": "float64",
+    "length": 64,
+    "width": 1,
+    "data": "abababababababababababababababababababababababababababababababab"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-volumetric-heat-transfer-coefficient.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (volumetric heat transfer coefficient)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "W/(m3.deltaK)",
+    "Btu[IT]/(h.ft3.deltaF)",
+    "Btu[IT]/(s.ft3.deltaF)",
+    "kW/(m3.deltaK)"
+  ]
+}

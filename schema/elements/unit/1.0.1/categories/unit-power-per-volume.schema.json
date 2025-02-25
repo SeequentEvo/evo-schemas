@@ -1,0 +1,31 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-power-per-volume.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (power per volume)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "Pa/s",
+    "Pa2/(Pa.s)",
+    "W/m3",
+    "atm/h",
+    "bar/h",
+    "kPa/h",
+    "kPa/min",
+    "MPa/h",
+    "Pa/h",
+    "psi/h",
+    "psi/min",
+    "0.001 kPa2/cP",
+    "bar2/cP",
+    "kPa2/cP",
+    "psi2/cP",
+    "Btu[IT]/(h.ft3)",
+    "Btu[IT]/(s.ft3)",
+    "cal[th]/(h.cm3)",
+    "cal[th]/(s.cm3)",
+    "hp/ft3",
+    "kW/m3",
+    "uW/m3"
+  ]
+}

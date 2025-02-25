@@ -1,0 +1,27 @@
+{
+  "$id": "/objects/line-segments/1.1.0/line-segments.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "List of line segments",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.0.1/base-spatial-data-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/line-segments/1.1.0/line-segments.schema.json"
+        },
+        "segments": {
+          "description": "The line segments.",
+          "$ref": "/components/segments/1.1.0/segments.schema.json"
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "segments"
+  ],
+  "unevaluatedProperties": false
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "/objects/line-segments/1.0.1/line-segments.schema.json",
+  "name": "Example Line Segments",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "description": "This is example data to ensure the object validates properly.",
+  "bounding_box": {
+    "min_y": 5,
+    "max_y": 10,
+    "min_x": 0,
+    "max_x": 10,
+    "min_z": 5,
+    "max_z": 10
+  },
+  "coordinate_reference_system": "unspecified",
+  "segments": {
+    "vertices": {
+      "width": 3,
+      "data_type": "float64",
+      "length": 5,
+      "data": "abababababababababababababababababababababababababababababababab",
+      "attributes": []
+    },
+    "indices": {
+      "width": 2,
+      "data_type": "uint64",
+      "length": 4,
+      "data": "abababababababababababababababababababababababababababababababab",
+      "attributes": []
+    }
+  },
+  "tags": {},
+  "extensions": {
+    "subobjects": {
+      "foo": 12
+    },
+    "whatever": "you want",
+    "times": 3.14159
+  }
+}

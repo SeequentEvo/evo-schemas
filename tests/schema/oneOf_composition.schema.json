@@ -1,0 +1,76 @@
+{
+  "$id": "/../tests/schemas/oneOf_composition.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A schema used for the unit tests",
+  "type": "object",
+  "properties": {
+    "pick_one": {
+      "type": "object",
+      "description": "Description of the parent property",
+      "oneOf": [
+        {
+          "properties": {
+            "first_property": {
+              "description": "Description of first property",
+              "type": "integer"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "first_property"
+          ]
+        },
+        {
+          "properties": {
+            "second_property": {
+              "description": "Description of second property",
+              "type": "number"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "second_property"
+          ]
+        }
+      ]
+    },
+    "third_property": {
+      "description": "Description of third property",
+      "type": "string"
+    },
+    "pass": {
+      "description": "Tells the unit-test if an example should pass",
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "unevaluatedProperties": false,
+  "required": [
+    "third_property"
+  ],
+  "examples": [
+    {
+      "pick_one": {
+        "first_property": 1
+      },
+      "third_property": "three"
+    },
+    {
+      "third_property": "three"
+    },
+    {
+      "pick_one": {
+        "first_property": 1,
+        "second_property": 2.0
+      },
+      "third_property": "three",
+      "pass": false
+    },
+    {
+      "pick_one": {
+        "first_property": 1
+      },
+      "pass": false
+    }
+  ]
+}

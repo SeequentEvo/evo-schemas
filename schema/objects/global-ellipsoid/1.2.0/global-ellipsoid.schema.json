@@ -1,0 +1,37 @@
+{
+  "$id": "/objects/global-ellipsoid/1.2.0/global-ellipsoid.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Global ellipsoid.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.1.0/base-spatial-data-properties.schema.json"
+    },
+    {
+      "$ref": "/components/ellipsoid/1.1.0/ellipsoid.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/global-ellipsoid/1.2.0/global-ellipsoid.schema.json"
+        },
+        "domain": {
+          "title": "Domain",
+          "description": "The domain the ellipsoid is modelled for",
+          "type": "string"
+        },
+        "attribute": {
+          "title": "Attribute",
+          "description": "The attribute the ellipsoid is modelled for",
+          "type": "string"
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "domain",
+    "attribute"
+  ],
+  "unevaluatedProperties": false
+}

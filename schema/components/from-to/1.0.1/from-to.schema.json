@@ -1,0 +1,19 @@
+{
+  "$id": "/components/from-to/1.0.1/from-to.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "From-to description.",
+  "type": "object",
+  "properties": {
+    "intervals": {
+      "description": "From-to intervals. Columns: from, to.",
+      "$ref": "/components/intervals/1.0.1/intervals.schema.json"
+    },
+    "unit": {
+      "description": "Unit",
+      "$ref": "/elements/unit/1.0.1/categories/unit-length.schema.json"
+    }
+  },
+  "required": [
+    "intervals"
+  ]
+}

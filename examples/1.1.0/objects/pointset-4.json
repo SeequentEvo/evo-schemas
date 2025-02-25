@@ -1,0 +1,32 @@
+{
+  "schema": "/objects/pointset/1.1.0/pointset.schema.json",
+  "name": "Example pointset.",
+  "uuid": null,
+  "description": "This example tests various type conversion edge-cases",
+  "locations": {
+    "coordinates": {
+      "width": 3.0,
+      "data_type": "float64",
+      "length": 3.0,
+      "data": "00000000-0000-0000-0000-000000000001"
+    },
+    "attributes": []
+  },
+  "bounding_box": {
+    "min_y": 5,
+    "max_y": 10,
+    "min_x": 0,
+    "max_x": 10,
+    "min_z": 5,
+    "max_z": 10
+  },
+  "coordinate_reference_system": "unspecified",
+  "tags": {},
+  "extensions": {
+    "subobjects": {
+      "foo": 12
+    },
+    "whatever": "you want",
+    "times": 3.14159
+  }
+}

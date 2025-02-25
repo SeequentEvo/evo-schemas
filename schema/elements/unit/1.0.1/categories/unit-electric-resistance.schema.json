@@ -1,0 +1,22 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-electric-resistance.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (electric resistance)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "ohm",
+    "cohm",
+    "dohm",
+    "Eohm",
+    "fohm",
+    "Gohm",
+    "kohm",
+    "mohm",
+    "Mohm",
+    "nohm",
+    "pohm",
+    "Tohm",
+    "uohm"
+  ]
+}

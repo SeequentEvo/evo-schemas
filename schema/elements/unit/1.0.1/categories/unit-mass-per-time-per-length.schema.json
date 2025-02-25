@@ -1,0 +1,33 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-mass-per-time-per-length.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units ((mass per time) per length)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "P",
+    "kg/(m.s)",
+    "Pa.s",
+    "lbm/(ft.h)",
+    "lbm/(ft.s)",
+    "dyne.s/cm2",
+    "kgf.s/m2",
+    "lbf.s/ft2",
+    "lbf.s/in2",
+    "mPa.s",
+    "N.s/m2",
+    "psi.s",
+    "cP",
+    "dP",
+    "EP",
+    "fP",
+    "GP",
+    "kP",
+    "mP",
+    "MP",
+    "nP",
+    "pP",
+    "TP",
+    "uP"
+  ]
+}

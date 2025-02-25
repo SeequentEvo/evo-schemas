@@ -1,0 +1,15 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-pressure-squared.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (pressure squared)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "GPa2",
+    "kPa2",
+    "kpsi2",
+    "Pa2",
+    "bar2",
+    "psi2"
+  ]
+}

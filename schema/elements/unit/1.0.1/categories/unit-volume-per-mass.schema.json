@@ -1,0 +1,31 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-volume-per-mass.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (volume per mass)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "m3/kg",
+    "0.01 L/kg",
+    "bbl/ton[UK]",
+    "bbl/ton[US]",
+    "cm3/g",
+    "dm3/kg",
+    "dm3/t",
+    "ft3/kg",
+    "ft3/lbm",
+    "ft3/sack[94lbm]",
+    "gal[UK]/lbm",
+    "gal[US]/lbm",
+    "gal[US]/sack[94lbm]",
+    "gal[US]/ton[UK]",
+    "gal[US]/ton[US]",
+    "L/kg",
+    "L/t",
+    "L/ton[UK]",
+    "m3/g",
+    "m3/t",
+    "m3/ton[UK]",
+    "m3/ton[US]"
+  ]
+}

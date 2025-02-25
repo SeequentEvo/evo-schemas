@@ -1,0 +1,115 @@
+{
+  "$schema": "/components/resistivity-ip-line/1.1.0/resistivity-ip-line.schema.json",
+  "group_number": "L01",
+  "date": "2018-11-13T20:20:39+00:00",
+  "station": "1",
+  "number_of_electrodes": 4,
+  "channel_attributes": [
+    {
+      "name": "T1X",
+      "start_fiducial": 1,
+      "fiducial_increment": 1,
+      "attribute": {
+        "name": "Current Electrode #1",
+        "key": "T1X",
+        "attribute_type": "scalar",
+        "nan_description": {
+          "values": [
+            -99999.9
+          ]
+        },
+        "attribute_description": {
+          "discipline": "Geophysics",
+          "scale": "linear",
+          "type": "Resistivity",
+          "unit": "m"
+        },
+        "values": {
+          "data_type": "float64",
+          "length": 50,
+          "width": 1,
+          "data": "abababababababababababababababababababababababababababababababab"
+        }
+      }
+    },
+    {
+      "name": "T2X",
+      "start_fiducial": 1,
+      "fiducial_increment": 1,
+      "attribute": {
+        "name": "Current Electrode #2",
+        "key": "T2X",
+        "attribute_type": "scalar",
+        "nan_description": {
+          "values": [
+            -99999.9
+          ]
+        },
+        "attribute_description": {
+          "discipline": "Geophysics",
+          "scale": "linear",
+          "type": "Resistivity",
+          "unit": "m"
+        },
+        "values": {
+          "data_type": "float64",
+          "length": 50,
+          "width": 1,
+          "data": "abababababababababababababababababababababababababababababababab"
+        }
+      }
+    },
+    {
+      "name": "R1X",
+      "start_fiducial": 1,
+      "fiducial_increment": 1,
+      "attribute": {
+        "name": "Potential Electrode #1",
+        "key": "R1X",
+        "attribute_type": "scalar",
+        "nan_description": {
+          "values": [
+            -99999.9
+          ]
+        },
+        "attribute_description": {
+          "discipline": "Geophysics",
+          "scale": "linear",
+          "type": "Resistivity"
+        },
+        "values": {
+          "data_type": "float64",
+          "length": 50,
+          "width": 1,
+          "data": "abababababababababababababababababababababababababababababababab"
+        }
+      }
+    },
+    {
+      "name": "R2X",
+      "start_fiducial": 1,
+      "fiducial_increment": 1,
+      "attribute": {
+        "name": "Potential Electrode #2",
+        "key": "R2X",
+        "attribute_type": "scalar",
+        "nan_description": {
+          "values": [
+            -99999.9
+          ]
+        },
+        "attribute_description": {
+          "discipline": "Geophysics",
+          "scale": "linear",
+          "type": "Resistivity"
+        },
+        "values": {
+          "data_type": "float64",
+          "length": 50,
+          "width": 1,
+          "data": "abababababababababababababababababababababababababababababababab"
+        }
+      }
+    }
+  ]
+}

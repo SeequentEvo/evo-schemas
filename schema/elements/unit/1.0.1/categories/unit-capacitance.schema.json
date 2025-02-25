@@ -1,0 +1,22 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-capacitance.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (capacitance)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "F",
+    "cF",
+    "dF",
+    "EF",
+    "fF",
+    "GF",
+    "kF",
+    "mF",
+    "MF",
+    "nF",
+    "pF",
+    "TF",
+    "uF"
+  ]
+}

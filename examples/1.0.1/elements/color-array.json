@@ -1,0 +1,6 @@
+{
+  "$schema": "/elements/color-array/1.0.1/color-array.schema.json",
+  "data_type": "uint32",
+  "length": 20,
+  "data": "abababababababababababababababababababababababababababababababab"
+}

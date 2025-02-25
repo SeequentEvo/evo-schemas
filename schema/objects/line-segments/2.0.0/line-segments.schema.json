@@ -1,0 +1,53 @@
+{
+  "$id": "/objects/line-segments/2.0.0/line-segments.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A collection of lines composed of straight segments.\nOptionally, consecutive chunks of segments can be grouped and attributed.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.0.1/base-spatial-data-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/line-segments/2.0.0/line-segments.schema.json"
+        },
+        "segments": {
+          "description": "Vertices and segments.",
+          "$ref": "/components/segments/1.1.0/segments.schema.json"
+        },
+        "parts": {
+          "description": "An optional structure defining segment chunks the line collection is composed of.",
+          "$ref": "#/$defs/parts"
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "segments"
+  ],
+  "unevaluatedProperties": false,
+  "$defs": {
+    "parts": {
+      "description": "A structure defining chunks the line collection is composed of.\nAttributes are associated with each chunk.",
+      "allOf": [
+        {
+          "$ref": "/components/attribute-list-property/1.1.0/attribute-list-property.schema.json",
+          "description": "Attributes associated with each part."
+        },
+        {
+          "properties": {
+            "chunks": {
+              "description": "A list of chunks of segments.\nA chunk consists of consecutive segments, defined by the index of the first segment and the number of segments.\nChunks do not have to include all segments, and chunks can overlap.\nColumns: offset, count",
+              "$ref": "/elements/index-array-2/1.0.1/index-array-2.schema.json"
+            }
+          },
+          "required": [
+            "chunks"
+          ]
+        }
+      ]
+    }
+  }
+}

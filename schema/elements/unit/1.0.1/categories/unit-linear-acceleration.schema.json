@@ -1,0 +1,17 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-linear-acceleration.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (linear acceleration)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "Gal",
+    "gn",
+    "m/s2",
+    "cm/s2",
+    "ft/s2",
+    "in/s2",
+    "mGal",
+    "mgn"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-length-per-temperature.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (length per temperature)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "m/deltaK",
+    "ft/deltaF"
+  ]
+}

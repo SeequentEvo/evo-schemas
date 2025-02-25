@@ -1,0 +1,16 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-mass-per-volume-per-length.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units ((mass per volume) per length)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "kg/m4",
+    "g/cm4",
+    "kg/dm4",
+    "lbm/(gal[UK].ft)",
+    "lbm/(gal[US].ft)",
+    "lbm/ft4",
+    "Pa.s2/m3"
+  ]
+}

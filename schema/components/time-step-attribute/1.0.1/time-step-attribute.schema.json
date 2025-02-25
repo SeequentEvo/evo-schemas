@@ -1,0 +1,14 @@
+{
+  "$id": "/components/time-step-attribute/1.0.1/time-step-attribute.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A time step attribute that can either be represented by dates or elapsed time (sec, min, hours, months, etc).",
+  "type": "object",
+  "oneOf": [
+    {
+      "$ref": "/components/time-step-continuous-attribute/1.0.1/time-step-continuous-attribute.schema.json"
+    },
+    {
+      "$ref": "/components/time-step-date-time-attribute/1.0.1/time-step-date-time-attribute.schema.json"
+    }
+  ]
+}

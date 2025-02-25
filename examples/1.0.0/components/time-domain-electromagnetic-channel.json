@@ -1,0 +1,40 @@
+{
+  "$schema": "/components/time-domain-electromagnetic-channel/1.0.0/time-domain-electromagnetic-channel.schema.json",
+  "index": 1,
+  "repetition_frequency": 20,
+  "zero_time": 1000,
+  "start_time": 2500,
+  "transmitter_id": 1,
+  "receiver_id": 1,
+  "waveform_id": 1,
+  "gates_id": 1,
+  "inclinometers_transmitter_position": [
+    {
+      "x": 100,
+      "y": 100,
+      "z": 0
+    }
+  ],
+  "inclinometers_receiver_position": [
+    {
+      "x": 100,
+      "y": 150,
+      "z": 0
+    }
+  ],
+  "gates_factor": 1.0,
+  "gates_time_shift": 0.0,
+  "uniform_standard_deviation": 0.0,
+  "number_of_transmitter_turns": 4,
+  "base_transmitter_frequency": 35,
+  "peak_transmitter_frequency": 263,
+  "front_gate_filter": {
+    "order": 0.99,
+    "frequency": 21000
+  },
+  "front_gate_time": 0.002,
+  "front_gate_slope_low_pass_filter": {
+    "order": 0.99,
+    "frequency": 21000
+  }
+}

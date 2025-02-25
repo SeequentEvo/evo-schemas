@@ -1,0 +1,11 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-magnetic-vector-potential.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (magnetic vector potential)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "Wb/m",
+    "Wb/mm"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "$id": "/elements/integer-array-md/1.0.1/integer-array-md.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Multidimensional array of integers.",
+  "type": "object",
+  "properties": {
+    "data": {
+      "description": "Data stored as a binary blob.",
+      "$ref": "/elements/binary-blob/1.0.1/binary-blob.schema.json"
+    },
+    "length": {
+      "type": "integer",
+      "description": "length of array",
+      "minimum": 0,
+      "default": 0
+    },
+    "width": {
+      "type": "integer",
+      "description": "number of columns"
+    },
+    "data_type": {
+      "description": "data type",
+      "type": "string",
+      "enum": [
+        "int32",
+        "int64"
+      ]
+    }
+  },
+  "required": [
+    "data",
+    "length",
+    "width",
+    "data_type"
+  ]
+}

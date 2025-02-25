@@ -1,0 +1,17 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-electric-current-density.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (electric current density)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "A/cm2",
+    "A/ft2",
+    "A/mm2",
+    "mA/cm2",
+    "mA/ft2",
+    "uA/cm2",
+    "uA/in2",
+    "A/m2"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-power-per-area.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (power per area)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "W/m2",
+    "Btu[IT]/(h.ft2)",
+    "Btu[IT]/(s.ft2)",
+    "cal[th]/(h.cm2)",
+    "hp/in2",
+    "hp[hyd]/in2",
+    "kW/cm2",
+    "kW/m2",
+    "mW/m2",
+    "ucal[th]/(s.cm2)",
+    "W/cm2",
+    "W/mm2"
+  ]
+}

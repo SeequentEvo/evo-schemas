@@ -1,0 +1,91 @@
+{
+  "$schema": "/components/survey-line/1.0.1/survey-line.schema.json",
+  "line_number": "L01",
+  "date": "2018-11-13T20:20:39+00:00",
+  "version": 0,
+  "group": 0,
+  "type": "Line",
+  "location_channels": {
+    "x": "X",
+    "y": "Y"
+  },
+  "channel_attributes": [
+    {
+      "name": "X",
+      "start_fiducial": 1.0,
+      "fiducial_increment": 1.0,
+      "attribute": {
+        "name": "X channel",
+        "attribute_type": "scalar",
+        "nan_description": {
+          "values": [
+            -99999.9
+          ]
+        },
+        "attribute_description": {
+          "discipline": "Geophysics",
+          "scale": "linear",
+          "type": "Magnetics",
+          "unit": "m"
+        },
+        "values": {
+          "data_type": "float64",
+          "length": 100,
+          "width": 1,
+          "data": "abababababababababababababababababababababababababababababababab"
+        }
+      }
+    },
+    {
+      "name": "Y",
+      "start_fiducial": 1.0,
+      "fiducial_increment": 1.0,
+      "attribute": {
+        "name": "Y channel",
+        "attribute_type": "scalar",
+        "nan_description": {
+          "values": [
+            -99999.9
+          ]
+        },
+        "attribute_description": {
+          "discipline": "Geophysics",
+          "scale": "linear",
+          "type": "Magnetics",
+          "unit": "m"
+        },
+        "values": {
+          "data_type": "float64",
+          "length": 100,
+          "width": 1,
+          "data": "abababababababababababababababababababababababababababababababab"
+        }
+      }
+    },
+    {
+      "name": "mag",
+      "start_fiducial": 1.0,
+      "fiducial_increment": 1.0,
+      "attribute": {
+        "name": "Mag data",
+        "attribute_type": "scalar",
+        "nan_description": {
+          "values": [
+            -99999.9
+          ]
+        },
+        "attribute_description": {
+          "discipline": "Geophysics",
+          "scale": "linear",
+          "type": "Magnetics"
+        },
+        "values": {
+          "data_type": "float64",
+          "length": 100,
+          "width": 1,
+          "data": "abababababababababababababababababababababababababababababababab"
+        }
+      }
+    }
+  ]
+}

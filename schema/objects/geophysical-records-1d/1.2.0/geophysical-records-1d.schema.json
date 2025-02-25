@@ -1,0 +1,56 @@
+{
+  "$id": "/objects/geophysical-records-1d/1.2.0/geophysical-records-1d.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "1D geophysical records.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.0.1/base-spatial-data-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/geophysical-records-1d/1.2.0/geophysical-records-1d.schema.json"
+        },
+        "number_of_layers": {
+          "description": "Number of layers.",
+          "type": "integer",
+          "exclusiveMinimum": 0
+        },
+        "locations": {
+          "description": "Array of locations.",
+          "allOf": [
+            {
+              "$ref": "/components/locations/1.0.1/locations.schema.json"
+            },
+            {
+              "$ref": "/components/attribute-list-property/1.2.0/attribute-list-property.schema.json"
+            }
+          ]
+        },
+        "depths": {
+          "description": "Array of depths.",
+          "allOf": [
+            {
+              "$ref": "/components/lengths/1.0.1/lengths.schema.json"
+            },
+            {
+              "$ref": "/components/attribute-list-property/1.2.0/attribute-list-property.schema.json"
+            }
+          ]
+        },
+        "line_numbers": {
+          "description": "Line numbers.",
+          "$ref": "/components/category-data/1.0.1/category-data.schema.json"
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "number_of_layers",
+    "locations",
+    "depths"
+  ],
+  "unevaluatedProperties": false
+}

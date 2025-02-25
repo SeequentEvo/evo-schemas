@@ -1,0 +1,12 @@
+{
+  "$id": "/components/attribute-list-property/1.0.1/attribute-list-property.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A component describing the list of attributes that can be used.",
+  "type": "object",
+  "properties": {
+    "attributes": {
+      "description": "Attribute data.",
+      "$ref": "/components/one-of-attribute/1.0.1/one-of-attribute.schema.json"
+    }
+  }
+}

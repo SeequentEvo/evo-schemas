@@ -1,0 +1,26 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-time-per-length.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (time per length)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "s/m",
+    "0.001 h/ft",
+    "h/km",
+    "min/ft",
+    "min/m",
+    "ms/cm",
+    "ms/ft",
+    "ms/in",
+    "ms/m",
+    "ns/ft",
+    "ns/m",
+    "s/cm",
+    "s/ft",
+    "s/in",
+    "us/ft",
+    "us/in",
+    "us/m"
+  ]
+}

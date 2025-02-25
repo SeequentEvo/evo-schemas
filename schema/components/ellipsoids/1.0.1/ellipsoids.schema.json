@@ -1,0 +1,15 @@
+{
+  "$id": "/components/ellipsoids/1.0.1/ellipsoids.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Ellipsoids specification",
+  "type": "object",
+  "properties": {
+    "values": {
+      "$ref": "/elements/float-array-6/1.0.1/float-array-6.schema.json",
+      "description": "Array of ellipsoids. Columns: dip_azimuth, dip, pitch, major, semi_major, minor."
+    }
+  },
+  "required": [
+    "values"
+  ]
+}

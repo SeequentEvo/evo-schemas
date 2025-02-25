@@ -1,0 +1,27 @@
+{
+  "$id": "/elements/string-array/1.0.1/string-array.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "List of strings.",
+  "type": "object",
+  "properties": {
+    "data": {
+      "description": "Data stored as a binary blob.",
+      "$ref": "/elements/binary-blob/1.0.1/binary-blob.schema.json"
+    },
+    "length": {
+      "type": "integer",
+      "description": "length of array",
+      "minimum": 0,
+      "default": 0
+    },
+    "data_type": {
+      "description": "data type",
+      "const": "string"
+    }
+  },
+  "required": [
+    "data",
+    "length",
+    "data_type"
+  ]
+}

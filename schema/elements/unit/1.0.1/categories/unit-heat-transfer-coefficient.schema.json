@@ -1,0 +1,20 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-heat-transfer-coefficient.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (heat transfer coefficient)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "W/(m2.deltaK)",
+    "Btu[IT]/(h.ft2.deltaF)",
+    "Btu[IT]/(h.ft2.deltaR)",
+    "Btu[IT]/(h.m2.deltaC)",
+    "Btu[IT]/(s.ft2.deltaF)",
+    "cal[th]/(h.cm2.deltaC)",
+    "cal[th]/(s.cm2.deltaC)",
+    "J/(s.m2.deltaC)",
+    "kcal[th]/(h.m2.deltaC)",
+    "kJ/(h.m2.deltaK)",
+    "kW/(m2.deltaK)"
+  ]
+}

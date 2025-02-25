@@ -1,0 +1,12 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-magnetic-field-strength.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (magnetic field strength)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "Oe",
+    "A/mm",
+    "A/m"
+  ]
+}

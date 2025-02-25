@@ -1,0 +1,23 @@
+{
+  "$schema": "/components/unstructured-grid-geometry/1.2.0/unstructured-grid-geometry.schema.json",
+  "vertices": {
+    "width": 3,
+    "data_type": "float64",
+    "length": 10,
+    "data": "abababababababababababababababababababababababababababababababab",
+    "attributes": []
+  },
+  "cells": {
+    "width": 3,
+    "data_type": "int32/uint64/int32",
+    "length": 3,
+    "data": "abababababababababababababababababababababababababababababababab",
+    "attributes": []
+  },
+  "indices": {
+    "width": 1,
+    "data_type": "uint64",
+    "length": 15,
+    "data": "abababababababababababababababababababababababababababababababab"
+  }
+}

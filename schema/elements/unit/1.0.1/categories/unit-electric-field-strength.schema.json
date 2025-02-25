@@ -1,0 +1,14 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-electric-field-strength.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (electric field strength)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "V/m",
+    "mV/ft",
+    "mV/m",
+    "uV/ft",
+    "uV/m"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "$id": "/components/lengths/1.0.1/lengths.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Array of length values.",
+  "type": "object",
+  "properties": {
+    "lengths": {
+      "$ref": "/elements/float-array-1/1.0.1/float-array-1.schema.json",
+      "description": "Length values."
+    }
+  },
+  "required": [
+    "lengths"
+  ]
+}

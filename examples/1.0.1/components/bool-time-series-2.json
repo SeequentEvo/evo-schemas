@@ -1,0 +1,29 @@
+{
+  "$schema": "/components/bool-time-series/1.0.1/bool-time-series.schema.json",
+  "key": "measurement valid",
+  "attribute_type": "bool_time_series",
+  "num_time_steps": 10,
+  "time_step": {
+    "name": "values",
+    "attribute_type": "scalar",
+    "values": {
+      "data_type": "float64",
+      "length": 10,
+      "width": 1,
+      "data": "abababababababababababababababababababababababababababababababab"
+    },
+    "unit": "min",
+    "start_time": "2018-11-13T20:20:39+00:00"
+  },
+  "values": {
+    "data_type": "bool",
+    "length": 16,
+    "width": 10,
+    "data": "abababababababababababababababababababababababababababababababab"
+  },
+  "attribute_description": {
+    "discipline": "Geophysics",
+    "scale": "lin",
+    "type": "Validity"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "$id": "/components/vertices-3d/1.0.1/vertices-3d.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "This component describes 3D vertices.",
+  "type": "object",
+  "properties": {
+    "vertices": {
+      "$ref": "/elements/float-array-3/1.0.1/float-array-3.schema.json",
+      "description": "Vertex coordinate in 3D space. Columns: x, y, z."
+    }
+  },
+  "required": [
+    "vertices"
+  ]
+}

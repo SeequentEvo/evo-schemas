@@ -1,0 +1,98 @@
+{
+  "$id": "/objects/variogram/1.2.0/variogram.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Variogram model and associated metadata. The variogram model is defined by the nugget, and multiple structures using the leapfrog-convention rotation. See struture and rotation components for additional details.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-object-properties/1.1.0/base-object-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/variogram/1.2.0/variogram.schema.json"
+        },
+        "nugget": {
+          "title": "Nugget",
+          "description": "The variance between two samples separated by near-zero lag distance, representing the randomness present. When plotted, this value is the y-intercept.",
+          "default": 0.0,
+          "minimum": 0.0,
+          "type": "number"
+        },
+        "sill": {
+          "title": "Sill",
+          "description": "The variance of the variogram. This must be within a very small tolerance of the nugget plus the sum of all structure's contributions.",
+          "minimum": 0.0,
+          "type": "number"
+        },
+        "data_variance": {
+          "title": "Data Variance",
+          "description": "The variance of the data, if different from the sill value, this is used for normalising or rescaling the variogram",
+          "minimum": 0.0,
+          "type": "number"
+        },
+        "is_rotation_fixed": {
+          "title": "Is Rotation Fixed",
+          "description": "Boolean value specifying whether all structure's rotations are the same.",
+          "type": "boolean"
+        },
+        "structures": {
+          "title": "Structures",
+          "description": "A list of at least one mathematical model, which are parameterised to represent the spatial structure of the variogram model.",
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "/components/variogram-exponential-structure/1.1.0/variogram-exponential-structure.schema.json"
+              },
+              {
+                "$ref": "/components/variogram-gaussian-structure/1.1.0/variogram-gaussian-structure.schema.json"
+              },
+              {
+                "$ref": "/components/variogram-generalisedcauchy-structure/1.1.0/variogram-generalisedcauchy-structure.schema.json"
+              },
+              {
+                "$ref": "/components/variogram-spherical-structure/1.1.0/variogram-spherical-structure.schema.json"
+              },
+              {
+                "$ref": "/components/variogram-spheroidal-structure/1.1.0/variogram-spheroidal-structure.schema.json"
+              },
+              {
+                "$ref": "/components/variogram-linear-structure/1.1.0/variogram-linear-structure.schema.json"
+              },
+              {
+                "$ref": "/components/variogram-cubic-structure/1.1.0/variogram-cubic-structure.schema.json"
+              }
+            ]
+          }
+        },
+        "modelling_space": {
+          "title": "Modelling Space",
+          "description": "The modelling space the variogram model was fitted in either data for original units or normalscore for gaussian space.",
+          "enum": [
+            "data",
+            "normalscore"
+          ],
+          "type": "string"
+        },
+        "domain": {
+          "title": "Domain",
+          "description": "The domain the variogram is modelled for",
+          "type": "string"
+        },
+        "attribute": {
+          "title": "Attribute",
+          "description": "The attribute the variogram is modelled for",
+          "type": "string"
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "sill",
+    "is_rotation_fixed",
+    "structures"
+  ],
+  "unevaluatedProperties": false
+}

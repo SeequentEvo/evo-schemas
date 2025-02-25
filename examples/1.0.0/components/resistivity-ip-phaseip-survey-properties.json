@@ -1,0 +1,5 @@
+{
+  "$schema": "/components/resistivity-ip-phaseip-survey-properties/1.0.0/resistivity-ip-phaseip-survey-properties.schema.json",
+  "type": "PHASEIP",
+  "frequency": 10000
+}

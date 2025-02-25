@@ -1,0 +1,45 @@
+{
+  "$id": "/components/continuous-time-series/1.0.1/continuous-time-series.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "An attribute that describes a continuous time series.",
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "string",
+      "description": "The key"
+    },
+    "attribute_type": {
+      "description": "Type of the attribute.",
+      "const": "continuous_time_series"
+    },
+    "nan_description": {
+      "description": "Describes the values used to designate not-a-number.",
+      "$ref": "/components/nan-continuous/1.0.1/nan-continuous.schema.json"
+    },
+    "num_time_steps": {
+      "description": "Number of time steps.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "time_step": {
+      "description": "Time step attribute component.",
+      "$ref": "/components/time-step-attribute/1.0.1/time-step-attribute.schema.json"
+    },
+    "values": {
+      "description": "The values of the series where 'num_time_steps' is the width of the array.",
+      "$ref": "/elements/float-array-md/1.0.1/float-array-md.schema.json"
+    },
+    "attribute_description": {
+      "description": "The attribute description record.",
+      "$ref": "/components/attribute-description/1.0.1/attribute-description.schema.json"
+    }
+  },
+  "required": [
+    "key",
+    "attribute_type",
+    "nan_description",
+    "num_time_steps",
+    "time_step",
+    "values"
+  ]
+}

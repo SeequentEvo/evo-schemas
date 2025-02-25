@@ -1,0 +1,123 @@
+{
+  "schema": "/objects/downhole-intervals/1.1.0/downhole-intervals.schema.json",
+  "name": "Example downhole intervals",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "description": "This is example data to ensure downhole intervals validate properly",
+  "bounding_box": {
+    "min_y": 5,
+    "max_y": 10,
+    "min_x": 0,
+    "max_x": 10,
+    "min_z": 5,
+    "max_z": 10
+  },
+  "coordinate_reference_system": {
+    "epsg_code": 1024
+  },
+  "is_composited": true,
+  "start": {
+    "coordinates": {
+      "width": 3,
+      "data_type": "float64",
+      "length": 4096,
+      "data": "abababababababababababababababababababababababababababababababab"
+    }
+  },
+  "end": {
+    "coordinates": {
+      "width": 3,
+      "data_type": "float64",
+      "length": 4096,
+      "data": "abababababababababababababababababababababababababababababababab"
+    }
+  },
+  "mid_points": {
+    "coordinates": {
+      "width": 3,
+      "data_type": "float64",
+      "length": 4096,
+      "data": "abababababababababababababababababababababababababababababababab"
+    }
+  },
+  "from_to": {
+    "intervals": {
+      "start_and_end": {
+        "width": 2,
+        "data_type": "float64",
+        "length": 4096,
+        "data": "abababababababababababababababababababababababababababababababab"
+      }
+    },
+    "unit": "m"
+  },
+  "hole_id": {
+    "values": {
+      "data_type": "int32",
+      "length": 4096,
+      "width": 1,
+      "data": "abababababababababababababababababababababababababababababababab"
+    },
+    "table": {
+      "keys_data_type": "int32",
+      "values_data_type": "string",
+      "length": 128,
+      "data": "abababababababababababababababababababababababababababababababab"
+    }
+  },
+  "attributes": [
+    {
+      "name": "chemicals",
+      "attribute_type": "scalar",
+      "nan_description": {
+        "values": [
+          -99999.9,
+          -999.99
+        ]
+      },
+      "attribute_description": {
+        "discipline": "Geophysics",
+        "type": "Ag",
+        "unit": "kg",
+        "scale": "log10"
+      },
+      "values": {
+        "data_type": "float64",
+        "width": 1,
+        "length": 4096,
+        "data": "abababababababababababababababababababababababababababababababab"
+      }
+    },
+    {
+      "name": "lithology",
+      "attribute_type": "category",
+      "nan_description": {
+        "values": [
+          -99
+        ]
+      },
+      "attribute_description": {
+        "discipline": "Geochem",
+        "type": "Resistivity"
+      },
+      "values": {
+        "data_type": "int32",
+        "length": 4096,
+        "width": 1,
+        "data": "abababababababababababababababababababababababababababababababab"
+      },
+      "table": {
+        "keys_data_type": "int32",
+        "values_data_type": "string",
+        "length": 64,
+        "data": "abababababababababababababababababababababababababababababababab"
+      }
+    }
+  ],
+  "tags": {},
+  "extensions": {
+    "subobjects": {
+      "foo": 12
+    },
+    "project": "drillhole"
+  }
+}

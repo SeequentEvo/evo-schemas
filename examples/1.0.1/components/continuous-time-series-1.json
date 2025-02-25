@@ -1,0 +1,31 @@
+{
+  "$schema": "/components/continuous-time-series/1.0.1/continuous-time-series.schema.json",
+  "key": "res",
+  "attribute_type": "continuous_time_series",
+  "nan_description": {
+    "values": [
+      -999.999
+    ]
+  },
+  "num_time_steps": 10,
+  "time_step": {
+    "name": "sample date",
+    "attribute_type": "date_time",
+    "values": {
+      "data_type": "timestamp",
+      "length": 10,
+      "data": "abababababababababababababababababababababababababababababababab"
+    }
+  },
+  "values": {
+    "data_type": "float64",
+    "length": 16,
+    "width": 10,
+    "data": "abababababababababababababababababababababababababababababababab"
+  },
+  "attribute_description": {
+    "discipline": "Geophysics",
+    "scale": "lin",
+    "type": "Resistivity"
+  }
+}

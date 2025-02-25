@@ -1,0 +1,144 @@
+{
+  "$id": "/objects/magnetics/1.0.1/magnetics.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Magnetics survey data.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.0.1/base-spatial-data-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/magnetics/1.0.1/magnetics.schema.json"
+        },
+        "type": {
+          "description": "Survey mode.",
+          "type": "string",
+          "enum": [
+            "GROUND",
+            "AIR",
+            "MARINE"
+          ]
+        },
+        "survey_type": {
+          "description": "Type of survey.",
+          "type": "string",
+          "enum": [
+            "TMI",
+            "VMG",
+            "MGRM"
+          ]
+        },
+        "gradient_magnetic": {
+          "type": "object",
+          "description": "Gradient magnetic details.",
+          "properties": {
+            "number_of_sensors": {
+              "type": "integer",
+              "description": "Number of sensors.",
+              "minimum": 1,
+              "default": 1
+            },
+            "sensor_offsets": {
+              "type": "array",
+              "description": "Sensor offsets.",
+              "items": {
+                "type": "array",
+                "description": "Offset location, (x, y, z)-triple.",
+                "minItems": 3,
+                "maxItems": 3,
+                "items": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "required": [
+            "number_of_sensors",
+            "sensor_offsets"
+          ]
+        },
+        "base_stations": {
+          "type": "array",
+          "description": "Base stations.",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "description": "Base station.",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Base station name."
+              },
+              "location": {
+                "type": "array",
+                "description": "Base station location, (x, y, z)-triple.",
+                "maxItems": 3,
+                "minItems": 3,
+                "items": {
+                  "type": "number"
+                }
+              },
+              "survey_type": {
+                "description": "Type of survey.",
+                "type": "string",
+                "enum": [
+                  "TMI",
+                  "VMG"
+                ]
+              },
+              "magnetic_line_list": {
+                "description": "Base station magnetic line list.",
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "description": "Magnetic survey line.",
+                  "$ref": "/components/survey-line/1.0.1/survey-line.schema.json"
+                }
+              }
+            },
+            "required": [
+              "name",
+              "location",
+              "survey_type",
+              "magnetic_line_list"
+            ]
+          }
+        },
+        "magnetic_line_list": {
+          "description": "Magnetic line list.",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "description": "Magnetic survey line.",
+            "$ref": "/components/survey-line/1.0.1/survey-line.schema.json"
+          }
+        },
+        "qaqc_magnetic_azimuth_test_list": {
+          "description": "QA/QC Magnetic azimuth test list.",
+          "type": "array",
+          "items": {
+            "description": "QA/QC Magnetic azimuth test line.",
+            "$ref": "/components/survey-line/1.0.1/survey-line.schema.json"
+          }
+        },
+        "qaqc_noise_test_list": {
+          "description": "QA/QC Magnetic noise test list.",
+          "type": "array",
+          "items": {
+            "description": "QA/QC Magnetic noise test line.",
+            "$ref": "/components/survey-line/1.0.1/survey-line.schema.json"
+          }
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "type",
+    "survey_type",
+    "magnetic_line_list"
+  ],
+  "unevaluatedProperties": false
+}

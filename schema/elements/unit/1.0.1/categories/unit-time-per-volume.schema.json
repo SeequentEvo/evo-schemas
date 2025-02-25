@@ -1,0 +1,20 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-time-per-volume.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (time per volume)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "s/m3",
+    "0.001 d/ft3",
+    "d/bbl",
+    "d/ft3",
+    "d/m3",
+    "h/ft3",
+    "h/m3",
+    "s/ft3",
+    "s/L",
+    "s/qt[UK]",
+    "s/qt[US]"
+  ]
+}

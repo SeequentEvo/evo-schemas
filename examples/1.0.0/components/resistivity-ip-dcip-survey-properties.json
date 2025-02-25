@@ -1,0 +1,10 @@
+{
+  "$schema": "/components/resistivity-ip-dcip-survey-properties/1.0.0/resistivity-ip-dcip-survey-properties.schema.json",
+  "type": "DCIP",
+  "delay_time": 0.15,
+  "duty_cycle": 2.0,
+  "number_of_time_gates": 20,
+  "gate_times": 0.2,
+  "wave_type": 50,
+  "pulses": 4
+}

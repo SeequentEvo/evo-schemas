@@ -1,0 +1,24 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-electric-charge.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (electric charge)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "C",
+    "A.h",
+    "A.s",
+    "cC",
+    "dC",
+    "EC",
+    "fC",
+    "GC",
+    "kC",
+    "mC",
+    "MC",
+    "nC",
+    "pC",
+    "TC",
+    "uC"
+  ]
+}

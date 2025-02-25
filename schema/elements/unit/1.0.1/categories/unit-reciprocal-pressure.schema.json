@@ -1,0 +1,21 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-reciprocal-pressure.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (reciprocal pressure)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "1/bar",
+    "1/kPa",
+    "1/pPa",
+    "1/psi",
+    "1/upsi",
+    "1/Pa",
+    "m3/J",
+    "dm3/(kW.h)",
+    "dm3/MJ",
+    "m3/(kW.h)",
+    "mm3/J",
+    "pt[UK]/(hp.h)"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "$id": "/objects/unstructured-hex-grid/1.3.0/unstructured-hex-grid.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "An unstructured hexahedral grid.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.1.0/base-spatial-data-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/unstructured-hex-grid/1.3.0/unstructured-hex-grid.schema.json"
+        },
+        "hexahedrons": {
+          "description": "The hexahedrons of the unstructured grid.",
+          "$ref": "/components/hexahedrons/1.2.0/hexahedrons.schema.json"
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "hexahedrons"
+  ],
+  "unevaluatedProperties": false
+}

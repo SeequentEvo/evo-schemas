@@ -1,0 +1,35 @@
+{
+  "schema": "/objects/unstructured-hex-grid/1.3.0/unstructured-hex-grid.schema.json",
+  "name": "Example Unstructured Hexahedral Grid",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "description": "This is example data to ensure the unstructured hexahedral grid validates properly",
+  "bounding_box": {
+    "min_y": 5,
+    "max_y": 10,
+    "min_x": 0,
+    "max_x": 10,
+    "min_z": 5,
+    "max_z": 10
+  },
+  "coordinate_reference_system": {
+    "epsg_code": 1024
+  },
+  "hexahedrons": {
+    "vertices": {
+      "width": 3,
+      "data_type": "float64",
+      "length": 8,
+      "data": "abababababababababababababababababababababababababababababababab",
+      "attributes": []
+    },
+    "indices": {
+      "width": 8,
+      "data_type": "uint64",
+      "length": 1,
+      "data": "abababababababababababababababababababababababababababababababab",
+      "attributes": []
+    }
+  },
+  "tags": {},
+  "extensions": {}
+}

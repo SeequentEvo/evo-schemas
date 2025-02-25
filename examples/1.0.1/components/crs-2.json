@@ -1,0 +1,4 @@
+{
+  "$schema": "/components/crs/1.0.1/crs.schema.json",
+  "ogc_wkt": "Some Well-known-text representation"
+}

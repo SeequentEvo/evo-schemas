@@ -1,0 +1,57 @@
+{
+  "$id": "/components/channel-attribute/1.1.0/channel-attribute.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "An attribute for a channel.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the channel."
+    },
+    "start_fiducial": {
+      "description": "Starting fiducial number.",
+      "type": "number"
+    },
+    "fiducial_increment": {
+      "description": "Fiducial increment amount.",
+      "type": "number",
+      "exclusiveMinimum": 0.0
+    },
+    "significant_digits": {
+      "description": "Significant digits.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "attribute": {
+      "description": "Attribute associated with the channel.",
+      "type": "object",
+      "oneOf": [
+        {
+          "$ref": "/components/bool-attribute/1.1.0/bool-attribute.schema.json"
+        },
+        {
+          "$ref": "/components/continuous-attribute/1.1.0/continuous-attribute.schema.json"
+        },
+        {
+          "$ref": "/components/continuous-ensemble/1.1.0/continuous-ensemble.schema.json"
+        },
+        {
+          "$ref": "/components/category-attribute/1.1.0/category-attribute.schema.json"
+        },
+        {
+          "$ref": "/components/category-ensemble/1.1.0/category-ensemble.schema.json"
+        },
+        {
+          "$ref": "/components/date-time-attribute/1.1.0/date-time-attribute.schema.json"
+        },
+        {
+          "$ref": "/components/string-attribute/1.1.0/string-attribute.schema.json"
+        }
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "attribute"
+  ]
+}

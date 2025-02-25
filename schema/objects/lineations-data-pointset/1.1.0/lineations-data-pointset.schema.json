@@ -1,0 +1,37 @@
+{
+  "$id": "/objects/lineations-data-pointset/1.1.0/lineations-data-pointset.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A set of structural lineations points and their associated attributes.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.0.1/base-spatial-data-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/lineations-data-pointset/1.1.0/lineations-data-pointset.schema.json"
+        },
+        "locations": {
+          "description": "The structural lineations data and attributes.",
+          "allOf": [
+            {
+              "$ref": "/components/locations/1.0.1/locations.schema.json"
+            },
+            {
+              "$ref": "/components/lineation-data/1.0.1/lineation-data.schema.json"
+            },
+            {
+              "$ref": "/components/attribute-list-property/1.1.0/attribute-list-property.schema.json"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "locations"
+  ],
+  "unevaluatedProperties": false
+}

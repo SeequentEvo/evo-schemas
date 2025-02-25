@@ -1,0 +1,75 @@
+{
+  "$id": "/objects/triangle-mesh/2.0.0/triangle-mesh.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A mesh composed of triangles.\nThe triangles are defined by triplets of indices into a vertex list.\nOptionally, parts and edges can be defined.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.0.1/base-spatial-data-properties.schema.json"
+    },
+    {
+      "$ref": "/components/embedded-triangulated-mesh/2.0.0/embedded-triangulated-mesh.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/triangle-mesh/2.0.0/triangle-mesh.schema.json"
+        },
+        "edges": {
+          "description": "An optional structure defining edges and edge chunks of the mesh.",
+          "$ref": "#/$defs/edges"
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema"
+  ],
+  "unevaluatedProperties": false,
+  "$defs": {
+    "edges": {
+      "description": "A structure defining edges and edge chunks of the mesh.",
+      "allOf": [
+        {
+          "$ref": "/components/attribute-list-property/1.1.0/attribute-list-property.schema.json",
+          "description": "Attributes associated with each edge."
+        },
+        {
+          "properties": {
+            "indices": {
+              "description": "Edges defined by tuples of indices into the vertex list. Columns: start, end",
+              "$ref": "/elements/index-array-2/1.0.1/index-array-2.schema.json"
+            },
+            "parts": {
+              "description": "An optional structure defining edge chunks the mesh is composed of.",
+              "$ref": "#/$defs/edge_parts"
+            }
+          },
+          "required": [
+            "indices"
+          ]
+        }
+      ]
+    },
+    "edge_parts": {
+      "description": "A structure defining edge chunks of the mesh.",
+      "allOf": [
+        {
+          "$ref": "/components/attribute-list-property/1.1.0/attribute-list-property.schema.json",
+          "description": "Attributes associated with each edge chunk."
+        },
+        {
+          "properties": {
+            "chunks": {
+              "description": "A tuple defining the first index and the length of a chunk.\nThe chunk refers to a segment of the edges array.\nChunks do not have to include all edges, and chunks can overlap.\nColumns: offset, count",
+              "$ref": "/elements/index-array-2/1.0.1/index-array-2.schema.json"
+            }
+          },
+          "required": [
+            "chunks"
+          ]
+        }
+      ]
+    }
+  }
+}

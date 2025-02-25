@@ -1,0 +1,48 @@
+{
+  "$id": "/components/distance-table/1.1.0/distance-table.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A table of distances.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "title": "Name",
+      "description": "The name of the table.",
+      "type": "string"
+    },
+    "collection_type": {
+      "title": "Collection type",
+      "description": "The type of the collection.",
+      "const": "distance"
+    },
+    "distance": {
+      "description": "The distance.",
+      "type": "object",
+      "allOf": [
+        {
+          "description": "Attributes associated with each depth.",
+          "$ref": "/components/attribute-list-property/1.1.0/attribute-list-property.schema.json"
+        },
+        {
+          "properties": {
+            "values": {
+              "description": "The distances.",
+              "$ref": "/elements/float-array-1/1.0.1/float-array-1.schema.json"
+            },
+            "unit": {
+              "description": "Unit",
+              "$ref": "/elements/unit/1.0.1/categories/unit-length.schema.json"
+            }
+          },
+          "required": [
+            "values"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "collection_type",
+    "distance"
+  ]
+}

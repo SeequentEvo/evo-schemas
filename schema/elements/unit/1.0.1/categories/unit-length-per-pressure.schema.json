@@ -1,0 +1,12 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-length-per-pressure.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (length per pressure)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "m/Pa",
+    "ft/psi",
+    "m/kPa"
+  ]
+}

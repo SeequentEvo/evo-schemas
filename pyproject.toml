@@ -1,0 +1,87 @@
+[project]
+name = "Seequent-Geoscience-Object-Schemas"
+version = "2024.12.1dev23"
+authors = []
+description = "Seequent Geoscience Object Schemas define metadata and data serialisation of various geoscience objects."
+keywords = []
+readme = "README.md"
+requires-python = ">=3.7"
+
+classifiers = [
+    "Programming Language :: Python",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "Operating System :: Unix",
+    "Operating System :: MacOS",
+    "Natural Language :: English",
+]
+
+dependencies = [
+    "jsonpointer>=2.4",
+    "rfc3986-validator>=0.1",
+]
+
+[project.optional-dependencies]
+test = [
+    "black==24.10.0",
+    "jsonschema==4.17.3",
+    "pre-commit==4.0.1",
+    "pytest==8.3.4",
+    "pytest-subtests==0.13.1",
+    "ruff==0.8.1",
+    "semver==3.0.2",
+]
+
+tools = [
+    "Seequent-Geoscience-Object-Schemas[test]",
+    "GitPython>=3.1.43",
+    "PyGithub>=2.4.0",
+]
+
+examples = [
+    "Seequent-Geoscience-Object-Schemas[test]",
+    "azure-storage-blob",
+    "jupyter",
+    "pandas",
+    "pyarrow",
+    "python-dotenv",
+]
+
+release = [
+    "bump-my-version",
+    "twine",
+]
+
+
+[project.urls]
+repository = "https://github.com/seequent/geoscience-object-schemas"
+
+[tool.black]
+line-length = 120
+target-version = ['py37', 'py38', 'py39', 'py310', 'py311']
+
+[tool.ruff]
+line-length = 120
+select = ["E", "F", "I"]
+
+[tool.pytest.ini_options]
+minversion = "7.2"
+testpaths = ["tests"]
+addopts = "--tb=short"
+
+[build-system]
+requires = [
+    "black==24.10.0",
+    "setuptools",
+    "jsonschema==4.17.3",
+    "semver==3.0.2",
+]
+build-backend = "build_meta"
+backend-path = ["tools"]
+
+[tool.setuptools.packages.find]
+where = ["docs/python"]
+include = ["geoscience_object_models*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.json"]

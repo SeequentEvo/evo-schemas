@@ -1,0 +1,9 @@
+{
+  "$schema": "/components/resistivity-ip-pldp-configuration-properties/1.0.0/resistivity-ip-pldp-configuration-properties.schema.json",
+  "type": "PLDP",
+  "transmitter_remote": {
+    "x": 5000,
+    "y": 5000,
+    "z": 0
+  }
+}

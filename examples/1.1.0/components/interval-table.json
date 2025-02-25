@@ -1,0 +1,17 @@
+{
+  "$schema": "/components/interval-table/1.1.0/interval-table.schema.json",
+  "name": "Validation interval table",
+  "collection_type": "interval",
+  "from_to": {
+    "intervals": {
+      "start_and_end": {
+        "width": 2,
+        "data_type": "float64",
+        "length": 10,
+        "data": "abababababababababababababababababababababababababababababababab"
+      }
+    },
+    "attributes": [],
+    "unit": "m"
+  }
+}

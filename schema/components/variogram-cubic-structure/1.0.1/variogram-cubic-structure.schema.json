@@ -1,0 +1,29 @@
+{
+  "$id": "/components/variogram-cubic-structure/1.0.1/variogram-cubic-structure.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Cubic variogram structure.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "contribution": {
+      "type": "number",
+      "description": "The scaling of the structure and contribution to the total sill of the variogram model.",
+      "exclusiveMinimum": 0
+    },
+    "anisotropy": {
+      "title": "Anisotropy",
+      "description": "The spatial extent and orientation of the variogram structure.",
+      "$ref": "/components/ellipsoid/1.0.1/ellipsoid.schema.json"
+    },
+    "variogram_type": {
+      "title": "Structure Type",
+      "description": "type of structure - cubic",
+      "const": "cubic"
+    }
+  },
+  "required": [
+    "contribution",
+    "anisotropy",
+    "variogram_type"
+  ]
+}

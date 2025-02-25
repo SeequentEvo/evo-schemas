@@ -1,0 +1,244 @@
+{
+  "$id": "/objects/geological-sections/1.0.0/geological-sections.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A collection of cross-sections made up from multiple polygons/polylines.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.0.1/base-spatial-data-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/geological-sections/1.0.0/geological-sections.schema.json"
+        },
+        "folders": {
+          "type": "array",
+          "description": "A recursive list of folders containing indices into the sections list.",
+          "items": {
+            "$ref": "#/$defs/folder"
+          }
+        },
+        "line_geometry": {
+          "$ref": "/components/embedded-line-geometry/1.0.0/embedded-line-geometry.schema.json",
+          "description": "The embedded line geometry, defining vertices, segments and parts."
+        },
+        "materials": {
+          "type": "array",
+          "description": "Materials used by this planar geology collection.",
+          "items": {
+            "$ref": "/components/material/1.0.1/material.schema.json"
+          }
+        },
+        "sections": {
+          "type": "array",
+          "description": "A list of cross-sections.",
+          "items": {
+            "$ref": "#/$defs/section"
+          }
+        },
+        "section_attributes": {
+          "description": "Attributes associated with each section. The attribute tables have one row per section.",
+          "$ref": "/components/one-of-attribute/1.2.0/one-of-attribute.schema.json"
+        },
+        "volumes": {
+          "type": "array",
+          "description": "A list of embedded polygon volumes. Each volume consists of a number of parts.",
+          "items": {
+            "$ref": "#/$defs/gm_embedded_polygon_volume"
+          }
+        },
+        "volume_attributes": {
+          "description": "Attributes associated with each polygon volume. The attribute tables have one row per volume.",
+          "$ref": "/components/one-of-attribute/1.2.0/one-of-attribute.schema.json"
+        },
+        "surfaces": {
+          "type": "array",
+          "description": "A list of embedded polyline surfaces. Each surface consists of a number of parts.",
+          "items": {
+            "$ref": "#/$defs/gm_embedded_polyline_surface"
+          }
+        },
+        "surface_attributes": {
+          "description": "Attributes associated with each polyline surface. The attribute tables have one row per surface.",
+          "$ref": "/components/one-of-attribute/1.2.0/one-of-attribute.schema.json"
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "folders",
+    "line_geometry",
+    "sections",
+    "volumes",
+    "surfaces"
+  ],
+  "$defs": {
+    "folder": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the folder."
+        },
+        "items": {
+          "type": "array",
+          "description": "A list of folders containing cross-sections.",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/folder"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "section_index": {
+                    "description": "The index of the section in the sections list.",
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "required": [
+                  "section_index"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "required": [
+        "name",
+        "items"
+      ]
+    },
+    "indices_range": {
+      "type": "object",
+      "properties": {
+        "offset": {
+          "description": "The first index",
+          "type": "integer",
+          "minimum": 0
+        },
+        "count": {
+          "description": "The number of objects referenced.",
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "offset",
+        "count"
+      ]
+    },
+    "section": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the section."
+        },
+        "description": {
+          "title": "Description",
+          "type": "string",
+          "description": "Optional field for adding additional description to uniquely identify this object."
+        },
+        "origin": {
+          "description": "The coordinates of the section origin. [x, y, z]",
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "number"
+          }
+        },
+        "rotation": {
+          "description": "The orientation of the section.",
+          "$ref": "/components/rotation/1.1.0/rotation.schema.json"
+        },
+        "volumes": {
+          "$ref": "#/$defs/indices_range",
+          "description": "The consecutive group of volumes in the volumes list."
+        },
+        "surfaces": {
+          "$ref": "#/$defs/indices_range",
+          "description": "The consecutive group of surfaces in the surface list."
+        }
+      },
+      "required": [
+        "name",
+        "origin",
+        "rotation"
+      ]
+    },
+    "gm_embedded_polygon_volume": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "/components/embedded-polyline-object/1.0.0/embedded-polyline-object.schema.json"
+        },
+        {
+          "properties": {
+            "layer": {
+              "type": "string",
+              "description": "Identifier for the layer containing the polygon. Polygons in the same layer should not overlap. Polygons in different layers can overlap."
+            },
+            "material_key": {
+              "type": "string",
+              "description": "Unique identifier of the material."
+            },
+            "feature": {
+              "type": "string",
+              "description": "Kind of feature.",
+              "enum": [
+                "Void",
+                "OutputVolume",
+                "Vein",
+                "VeinSystem"
+              ]
+            }
+          }
+        }
+      ],
+      "required": [
+        "layer",
+        "feature"
+      ]
+    },
+    "gm_embedded_polyline_surface": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "/components/embedded-polyline-object/1.0.0/embedded-polyline-object.schema.json"
+        },
+        {
+          "properties": {
+            "layer": {
+              "type": "string",
+              "description": "Identifier for the layer containing the polyline. Polylines in the same layer should not overlap. Polylines in different layers can overlap."
+            },
+            "material_key": {
+              "type": "string",
+              "description": "Unique identifier of the material."
+            },
+            "feature": {
+              "type": "string",
+              "description": "Kind of feature.",
+              "enum": [
+                "Fault",
+                "ContactSurface",
+                "Topography",
+                "BoundarySurface",
+                "StratigraphicContactSurface"
+              ]
+            }
+          }
+        }
+      ],
+      "required": [
+        "layer",
+        "feature"
+      ]
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "$id": "/components/survey-line/1.1.0/survey-line.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A survey line.",
+  "type": "object",
+  "properties": {
+    "line_number": {
+      "description": "The number of the line, can be alphanumeric.",
+      "type": "string"
+    },
+    "date": {
+      "description": "Date.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "version": {
+      "description": "Version.",
+      "type": "integer",
+      "default": 0,
+      "minimum": 0
+    },
+    "group": {
+      "description": "Represents the group when the data is collected.",
+      "type": "integer",
+      "default": 0,
+      "minimum": 0
+    },
+    "type": {
+      "description": "Survey line type.",
+      "enum": [
+        "Line",
+        "Base",
+        "Tie",
+        "Trend",
+        "Special",
+        "Random",
+        "Test"
+      ],
+      "type": "string",
+      "default": "Line"
+    },
+    "location_channels": {
+      "type": "object",
+      "description": "Survey location coordinate channels.",
+      "properties": {
+        "x": {
+          "type": "string",
+          "description": "Channel name indicating which of the channel attributes corresponds to the X channel."
+        },
+        "y": {
+          "type": "string",
+          "description": "Channel name indicating which of the channel attributes corresponds to the Y channel."
+        },
+        "z": {
+          "type": "string",
+          "description": "Channel name indicating which of the channel attributes corresponds to the Z channel."
+        }
+      },
+      "required": [
+        "x",
+        "y"
+      ]
+    },
+    "channel_attributes": {
+      "title": "List of Channel Attributes",
+      "description": "List of channel attributes.",
+      "type": "array",
+      "items": {
+        "$ref": "/components/channel-attribute/1.1.0/channel-attribute.schema.json"
+      }
+    }
+  },
+  "required": [
+    "line_number",
+    "date",
+    "version",
+    "group",
+    "type",
+    "location_channels",
+    "channel_attributes"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-amount-of-substance.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (amount of substance)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "mol",
+    "lbmol",
+    "kmol",
+    "mmol",
+    "umol"
+  ]
+}

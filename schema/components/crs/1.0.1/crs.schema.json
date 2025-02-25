@@ -1,0 +1,37 @@
+{
+  "$id": "/components/crs/1.0.1/crs.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Coordinate Reference System",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "epsg_code": {
+          "description": "EPSG Geodetic Parameter Dataset. EPSG codes are between 1024-32767",
+          "type": "integer",
+          "minimum": 1024,
+          "maximum": 32767
+        }
+      },
+      "required": [
+        "epsg_code"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "ogc_wkt": {
+          "description": "Well-known text representation of coordinate reference systems.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ogc_wkt"
+      ]
+    },
+    {
+      "description": "Unspecified coordinate reference system.",
+      "const": "unspecified"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-reciprocal-area.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (reciprocal area)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "1/ft2",
+    "1/km2",
+    "1/mi2",
+    "1/m2",
+    "m/m3",
+    "ft/bbl",
+    "ft/ft3",
+    "ft/gal[US]",
+    "km/dm3",
+    "km/L",
+    "mi/gal[UK]",
+    "mi/gal[US]"
+  ]
+}

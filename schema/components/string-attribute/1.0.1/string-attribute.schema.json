@@ -1,0 +1,29 @@
+{
+  "$id": "/components/string-attribute/1.0.1/string-attribute.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "List of attributes that are just strings.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the attribute."
+    },
+    "attribute_type": {
+      "description": "Type of the attribute.",
+      "const": "string"
+    },
+    "attribute_description": {
+      "description": "The attribute description record.",
+      "$ref": "/components/attribute-description/1.0.1/attribute-description.schema.json"
+    },
+    "values": {
+      "description": "List of strings. One per item.",
+      "$ref": "/elements/string-array/1.0.1/string-array.schema.json"
+    }
+  },
+  "required": [
+    "name",
+    "attribute_type",
+    "values"
+  ]
+}

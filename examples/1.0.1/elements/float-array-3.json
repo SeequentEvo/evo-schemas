@@ -1,0 +1,7 @@
+{
+  "$schema": "/elements/float-array-3/1.0.1/float-array-3.schema.json",
+  "width": 3,
+  "data_type": "float64",
+  "length": 5,
+  "data": "abababababababababababababababababababababababababababababababab"
+}

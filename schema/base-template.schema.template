@@ -1,0 +1,53 @@
+{
+    "$id": << For example: /objects/variogram/1.0.1/variogram >>,
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "additionalProperties": true,
+    "properties": {        
+        "uuid": {
+            "description": "Unique identifier of the object",
+            "type": "string",
+            "format": "uuid"
+        },
+        "name": {
+            "description": "Human readable short name of the object",
+            "type": "string"
+        },
+        "description": {
+            "description": "Additional description of the object",
+            "type": "string"
+        },
+        "extensions": {
+            "description": "Extended properties that may be associated to the object, but not specified in the schema",
+            "type": "object"
+        },
+        "tags": {
+            "type": "object",
+            "description": "Key-value pairs of user-defined metadata",
+            "additionalProperties": {
+                "type": "string"
+            }
+        },
+        "coordinate-reference-system": {
+            "type": "object",
+            "$ref": "/components/crs/1.0.1/crs"
+        },
+        "bounding-box": {
+            "type": "object",
+            "description": "Bounding box defined in the CRS of this object",
+            "$ref": "/components/bbox/1.0.1/bbox"
+        },
+        "wgs84-bounding-box": {
+            "type": "object",
+            "description": "Bounding box defined in WGS84",
+            "$ref": "/components/bbox/1.0.1/bbox"
+        }
+        << Add object-specific properties from this point >>
+    },
+    "required": [
+        "id",
+        "name",
+        "coordinate-reference-system",
+        "bounding-box",
+        "wgs84-bounding-box"
+    ]
+}

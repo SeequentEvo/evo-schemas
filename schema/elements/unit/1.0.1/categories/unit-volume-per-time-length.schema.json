@@ -1,0 +1,12 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-volume-per-time-length.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units ((volume per time) length)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "m4/s",
+    "1000 bbl.ft/d",
+    "1000 m4/d"
+  ]
+}

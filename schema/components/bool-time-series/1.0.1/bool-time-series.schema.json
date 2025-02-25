@@ -1,0 +1,40 @@
+{
+  "$id": "/components/bool-time-series/1.0.1/bool-time-series.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "An attribute that describes a bool time series.",
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "string",
+      "description": "The key"
+    },
+    "attribute_type": {
+      "description": "Type of the attribute.",
+      "const": "bool_time_series"
+    },
+    "num_time_steps": {
+      "description": "Number of time steps.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "time_step": {
+      "description": "Time step attribute component.",
+      "$ref": "/components/time-step-attribute/1.0.1/time-step-attribute.schema.json"
+    },
+    "values": {
+      "description": "The values of the series where 'num_time_steps' is the width of the array.",
+      "$ref": "/elements/bool-array-md/1.0.1/bool-array-md.schema.json"
+    },
+    "attribute_description": {
+      "description": "The attribute description record.",
+      "$ref": "/components/attribute-description/1.0.1/attribute-description.schema.json"
+    }
+  },
+  "required": [
+    "key",
+    "attribute_type",
+    "num_time_steps",
+    "time_step",
+    "values"
+  ]
+}

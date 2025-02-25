@@ -1,0 +1,21 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-reciprocal-temperature.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (reciprocal temperature)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "1/deltaC",
+    "1/deltaF",
+    "1/deltaR",
+    "1/deltaK",
+    "m/(m.deltaK)",
+    "m3/(m3.deltaK)",
+    "in/(in.deltaF)",
+    "mm/(mm.deltaK)",
+    "1E-6 m3/(m3.deltaC)",
+    "1E-6 m3/(m3.deltaF)",
+    "ppm[vol]/deltaC",
+    "ppm[vol]/deltaF"
+  ]
+}

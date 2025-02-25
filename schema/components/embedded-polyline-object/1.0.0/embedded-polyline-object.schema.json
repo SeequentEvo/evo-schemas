@@ -1,0 +1,28 @@
+{
+  "$id": "/components/embedded-polyline-object/1.0.0/embedded-polyline-object.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A base polyline/polygon object referencing parts in an embedded-line-geometry.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the object."
+    },
+    "description": {
+      "title": "Description",
+      "type": "string",
+      "description": "Optional field for adding additional description to uniquely identify this object."
+    },
+    "parts": {
+      "type": "array",
+      "description": "A list of parts and whether they are reversed.",
+      "items": {
+        "$ref": "/elements/reversible-index/1.0.0/reversible-index.schema.json"
+      }
+    }
+  },
+  "required": [
+    "name",
+    "parts"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-magnetic-flux-density-per-length.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (magnetic flux density per length)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "T/m",
+    "gauss/cm",
+    "mT/dm"
+  ]
+}

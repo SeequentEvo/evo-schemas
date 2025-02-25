@@ -1,0 +1,27 @@
+{
+  "$schema": "/components/category-ensemble/1.0.1/category-ensemble.schema.json",
+  "name": "chemicals",
+  "attribute_type": "ensemble_category",
+  "nan_description": {
+    "values": [
+      -99,
+      -999
+    ]
+  },
+  "attribute_description": {
+    "discipline": "Geochemistry",
+    "type": "Chemicals"
+  },
+  "values": {
+    "data_type": "int32",
+    "width": 5,
+    "length": 1024,
+    "data": "abababababababababababababababababababababababababababababababab"
+  },
+  "table": {
+    "keys_data_type": "int32",
+    "values_data_type": "string",
+    "length": 1024,
+    "data": "abababababababababababababababababababababababababababababababab"
+  }
+}

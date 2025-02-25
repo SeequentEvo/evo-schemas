@@ -1,0 +1,18 @@
+{
+  "$id": "/components/nan-categorical/1.0.1/nan-categorical.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Values used to designate not-a-number (NaN) for integral values. Can be used for error codes.",
+  "type": "object",
+  "properties": {
+    "values": {
+      "type": "array",
+      "description": "An array of integral values that represent not-a-number (NaN).",
+      "items": {
+        "type": "integer"
+      }
+    }
+  },
+  "required": [
+    "values"
+  ]
+}

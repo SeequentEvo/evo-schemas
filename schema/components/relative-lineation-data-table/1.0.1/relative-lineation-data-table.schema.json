@@ -1,0 +1,53 @@
+{
+  "$id": "/components/relative-lineation-data-table/1.0.1/relative-lineation-data-table.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A table of lineation data relative to a drillhole",
+  "type": "object",
+  "properties": {
+    "name": {
+      "title": "Name",
+      "description": "The name of the table.",
+      "type": "string"
+    },
+    "collection_type": {
+      "title": "Collection type",
+      "description": "The type of the collection.",
+      "const": "lineation"
+    },
+    "distance": {
+      "description": "The distance down the drillhole.",
+      "type": "object",
+      "allOf": [
+        {
+          "description": "Attributes associated with each distance.",
+          "$ref": "/components/attribute-list-property/1.0.1/attribute-list-property.schema.json"
+        },
+        {
+          "properties": {
+            "values": {
+              "description": "The distance down the drillhole.",
+              "$ref": "/elements/float-array-1/1.0.1/float-array-1.schema.json"
+            },
+            "unit": {
+              "description": "Unit",
+              "$ref": "/elements/unit/1.0.1/categories/unit-length.schema.json"
+            }
+          },
+          "required": [
+            "values"
+          ]
+        }
+      ]
+    },
+    "relative_lineation_angles": {
+      "description": "Lineation measurements relative to the drillhole. Columns: alpha, beta, gamma",
+      "$ref": "/elements/float-array-3/1.0.1/float-array-3.schema.json"
+    }
+  },
+  "required": [
+    "name",
+    "collection_type",
+    "distance",
+    "relative_lineation_angles"
+  ]
+}

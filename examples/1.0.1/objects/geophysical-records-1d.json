@@ -1,0 +1,58 @@
+{
+  "schema": "/objects/geophysical-records-1d/1.0.1/geophysical-records-1d.schema.json",
+  "name": "Example 1D geophysical records",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "description": "This is example data to ensure the object validates properly.",
+  "bounding_box": {
+    "min_y": 0,
+    "max_y": 10,
+    "min_x": 0,
+    "max_x": 10,
+    "min_z": 0,
+    "max_z": 0
+  },
+  "coordinate_reference_system": {
+    "epsg_code": 1024
+  },
+  "number_of_layers": 10,
+  "locations": {
+    "coordinates": {
+      "width": 3,
+      "data_type": "float64",
+      "length": 30,
+      "data": "abababababababababababababababababababababababababababababababab"
+    },
+    "attributes": []
+  },
+  "depths": {
+    "lengths": {
+      "width": 1,
+      "data_type": "float64",
+      "length": 300,
+      "data": "abababababababababababababababababababababababababababababababab"
+    },
+    "attributes": []
+  },
+  "line_numbers": {
+    "values": {
+      "data_type": "int32",
+      "length": 30,
+      "width": 1,
+      "data": "abababababababababababababababababababababababababababababababab"
+    },
+    "table": {
+      "keys_data_type": "int32",
+      "values_data_type": "string",
+      "length": 30,
+      "data": "abababababababababababababababababababababababababababababababab"
+    }
+  },
+  "tags": {},
+  "extensions": {
+    "subobjects": {
+      "foo": 12
+    },
+    "whatever": "you want",
+    "times": 3.14159
+  }
+}

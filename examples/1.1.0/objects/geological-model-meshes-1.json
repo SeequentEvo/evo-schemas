@@ -1,0 +1,218 @@
+{
+  "schema": "/objects/geological-model-meshes/1.1.0/geological-model-meshes.schema.json",
+  "name": "Example geological meshes collection",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "description": "This is example data to ensure the object validates properly.",
+  "bounding_box": {
+    "min_y": 0,
+    "max_y": 10,
+    "min_x": 0,
+    "max_x": 10,
+    "min_z": 0,
+    "max_z": 0
+  },
+  "coordinate_reference_system": {
+    "epsg_code": 1024
+  },
+  "materials": [
+    {
+      "key": "rock",
+      "name": "Rock",
+      "color": 4278190335,
+      "data_source": "Link_to_another_Geoscience_Object"
+    },
+    {
+      "key": "soil",
+      "name": "Soil",
+      "color": 4294901760
+    }
+  ],
+  "folders": [
+    {
+      "name": "Output Volumes",
+      "items": [
+        {
+          "name": "Domains",
+          "items": [
+            {
+              "vertices": {
+                "width": 3,
+                "data_type": "float64",
+                "length": 3,
+                "data": "abababababababababababababababababababababababababababababababab",
+                "attributes": []
+              },
+              "indices": {
+                "width": 3,
+                "data_type": "uint64",
+                "length": 1,
+                "data": "abababababababababababababababababababababababababababababababab",
+                "attributes": []
+              },
+              "kind": "Closed",
+              "name": "Lithology A",
+              "material_key": "rock",
+              "feature": "OutputVolume"
+            },
+            {
+              "vertices": {
+                "width": 3,
+                "data_type": "float64",
+                "length": 3,
+                "data": "abababababababababababababababababababababababababababababababab",
+                "attributes": []
+              },
+              "indices": {
+                "width": 3,
+                "data_type": "uint64",
+                "length": 1,
+                "data": "abababababababababababababababababababababababababababababababab",
+                "attributes": []
+              },
+              "kind": "Closed",
+              "name": "Lithology B",
+              "material_key": "rock",
+              "feature": "OutputVolume"
+            }
+          ]
+        },
+        {
+          "vertices": {
+            "width": 3,
+            "data_type": "float64",
+            "length": 3,
+            "data": "abababababababababababababababababababababababababababababababab",
+            "attributes": []
+          },
+          "indices": {
+            "width": 3,
+            "data_type": "uint64",
+            "length": 1,
+            "data": "abababababababababababababababababababababababababababababababab",
+            "attributes": []
+          },
+          "kind": "Closed",
+          "name": "Unknown",
+          "material_key": "soil",
+          "feature": "OutputVolume"
+        }
+      ]
+    },
+    {
+      "name": "Contact Surfaces",
+      "items": [
+        {
+          "vertices": {
+            "data": "abababababababababababababababababababababababababababababababab",
+            "length": 426,
+            "width": 3,
+            "data_type": "float64"
+          },
+          "indices": {
+            "data": "abababababababababababababababababababababababababababababababab",
+            "length": 728,
+            "width": 3,
+            "data_type": "uint64"
+          },
+          "kind": "Open",
+          "name": "Unknown - A contacts",
+          "feature": "ContactSurface",
+          "quality": {
+            "characteristics": [
+              "NonDegenerate",
+              "Continuous",
+              "NonSelfIntersecting"
+            ]
+          }
+        },
+        {
+          "name": "Stratigraphic Sequence",
+          "items": [
+            {
+              "vertices": {
+                "data": "abababababababababababababababababababababababababababababababab",
+                "length": 384,
+                "width": 3,
+                "data_type": "float64"
+              },
+              "indices": {
+                "data": "abababababababababababababababababababababababababababababababab",
+                "length": 678,
+                "width": 3,
+                "data_type": "uint64"
+              },
+              "kind": "Open",
+              "name": "D - C Contacts",
+              "feature": "StratigraphicContactSurface",
+              "quality": {
+                "characteristics": [
+                  "Manifold",
+                  "NonSelfIntersecting"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "B Vein System",
+          "items": [
+            {
+              "vertices": {
+                "data": "abababababababababababababababababababababababababababababababab",
+                "length": 325,
+                "width": 3,
+                "data_type": "float64"
+              },
+              "indices": {
+                "data": "abababababababababababababababababababababababababababababababab",
+                "length": 646,
+                "width": 3,
+                "data_type": "uint64"
+              },
+              "kind": "Closed",
+              "name": "B Vein System",
+              "feature": "VeinSystem",
+              "quality": {
+                "characteristics": [
+                  "NonDegenerate",
+                  "Continuous",
+                  "ConsistentWinding",
+                  "Manifold",
+                  "NonSelfIntersecting"
+                ]
+              }
+            },
+            {
+              "name": "Veins",
+              "items": [
+                {
+                  "vertices": {
+                    "data": "abababababababababababababababababababababababababababababababab",
+                    "length": 325,
+                    "width": 3,
+                    "data_type": "float64"
+                  },
+                  "indices": {
+                    "data": "abababababababababababababababababababababababababababababababab",
+                    "length": 646,
+                    "width": 3,
+                    "data_type": "uint64"
+                  },
+                  "kind": "Closed",
+                  "name": "B",
+                  "feature": "Vein",
+                  "quality": {
+                    "characteristics": [
+                      "Continuous",
+                      "Manifold"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

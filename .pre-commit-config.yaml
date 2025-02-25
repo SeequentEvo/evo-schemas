@@ -1,0 +1,33 @@
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.4.0
+  hooks:
+    -  id: check-json
+       exclude: ^(.vscode|.ruff_cache)/
+    -  id: pretty-format-json
+       args: [--autofix, --no-ensure-ascii, --no-sort-keys, --indent=2]
+       exclude: ^(.vscode|.ruff_cache)/
+    -  id: check-toml
+    -  id: check-yaml
+    -  id: debug-statements
+- repo: https://github.com/charliermarsh/ruff-pre-commit
+  # Ruff version.
+  rev: v0.0.254
+  hooks:
+    - id: ruff
+      exclude: ^docs/
+      args: [--fix, --exit-non-zero-on-fix]
+- repo: https://github.com/psf/black
+  rev: 23.1.0
+  hooks:
+    - id: black
+      exclude: ^docs/
+      language_version: python3.11
+- repo: local
+  hooks:
+  -   id: root_schema
+      name: Update root schema
+      entry: python tools/update_root_schema.py
+      language: python
+      additional_dependencies: ["jsonschema==4.17.3", "semver>=2.13,<3"]
+      pass_filenames: false

@@ -1,0 +1,26 @@
+{
+  "$id": "/components/data-table/1.2.0/data-table.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A table storing extra data.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "title": "Name",
+      "description": "The name of the table.",
+      "type": "string"
+    },
+    "collection_type": {
+      "title": "Collection type",
+      "description": "The type of the collection.",
+      "const": "data"
+    },
+    "attributes": {
+      "description": "Attribute data.",
+      "$ref": "/components/one-of-attribute/1.2.0/one-of-attribute.schema.json"
+    }
+  },
+  "required": [
+    "name",
+    "collection_type"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-plane-angle.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (plane angle)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "rad",
+    "ccgr",
+    "cgr",
+    "dega",
+    "gon",
+    "mila",
+    "mina",
+    "rev",
+    "seca",
+    "0.001 seca",
+    "krad",
+    "mrad",
+    "Mrad",
+    "urad"
+  ]
+}

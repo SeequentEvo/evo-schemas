@@ -1,0 +1,53 @@
+{
+  "$id": "/components/resistivity-ip-dcip-survey-properties/1.0.0/resistivity-ip-dcip-survey-properties.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Resistivity-IP properties for Direct Current Induced Polarization (DCIP) surveys.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "description": "Type of survey.",
+      "type": "string",
+      "const": "DCIP"
+    },
+    "delay_time": {
+      "description": "Delay time (sec). Integration start time since current shut off.",
+      "type": "number",
+      "minimum": 0.0
+    },
+    "duty_cycle": {
+      "description": "Time (sec) cycle.",
+      "type": "number",
+      "minimum": 0.0
+    },
+    "number_of_time_gates": {
+      "description": "Number of time gates.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "gate_times": {
+      "description": "Width of each IP time (sec) gate.",
+      "type": "number",
+      "minimum": 0.0
+    },
+    "wave_type": {
+      "description": "Wave type. 50% or 100% duty cycle.",
+      "type": "integer",
+      "enum": [
+        50,
+        100
+      ]
+    },
+    "pulses": {
+      "description": "Number of pulses.",
+      "type": "integer",
+      "minimum": 0,
+      "default": 4
+    }
+  },
+  "required": [
+    "type",
+    "delay_time",
+    "number_of_time_gates",
+    "gate_times"
+  ]
+}

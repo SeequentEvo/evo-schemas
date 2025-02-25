@@ -1,0 +1,12 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-volume-per-pressure.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (volume per pressure)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "m3/Pa",
+    "bbl/psi",
+    "m3/kPa"
+  ]
+}

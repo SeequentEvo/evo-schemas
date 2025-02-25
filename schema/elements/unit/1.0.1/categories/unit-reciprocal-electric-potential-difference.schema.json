@@ -1,0 +1,11 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-reciprocal-electric-potential-difference.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (reciprocal electric potential difference)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "1/uV",
+    "1/V"
+  ]
+}

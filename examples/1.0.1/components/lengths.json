@@ -1,0 +1,9 @@
+{
+  "$schema": "/components/lengths/1.0.1/lengths.schema.json",
+  "lengths": {
+    "width": 1,
+    "data_type": "float64",
+    "length": 10,
+    "data": "abababababababababababababababababababababababababababababababab"
+  }
+}

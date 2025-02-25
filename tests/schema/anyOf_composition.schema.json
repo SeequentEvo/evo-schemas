@@ -1,0 +1,54 @@
+{
+  "$id": "/../tests/schemas/anyOf_composition.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A schema used for the unit tests",
+  "type": "object",
+  "anyOf": [
+    {
+      "properties": {
+        "first_property": {
+          "description": "Description of first property",
+          "type": "integer"
+        }
+      }
+    },
+    {
+      "properties": {
+        "second_property": {
+          "description": "Description of second property",
+          "type": "number"
+        }
+      }
+    }
+  ],
+  "properties": {
+    "third_property": {
+      "description": "Description of third property",
+      "type": "string"
+    },
+    "pass": {
+      "description": "Tells the unit-test if an example should pass",
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "unevaluatedProperties": false,
+  "required": [
+    "third_property"
+  ],
+  "examples": [
+    {
+      "first_property": 1,
+      "second_property": 2.0,
+      "third_property": "three"
+    },
+    {
+      "third_property": "three"
+    },
+    {
+      "pass": false,
+      "first_property": 1,
+      "second_property": 2.0
+    }
+  ]
+}

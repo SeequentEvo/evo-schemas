@@ -1,0 +1,14 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-mass-per-area.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (mass per area)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "kg/m2",
+    "0.01 lbm/ft2",
+    "lbm/ft2",
+    "Mg/m2",
+    "ton[US]/ft2"
+  ]
+}

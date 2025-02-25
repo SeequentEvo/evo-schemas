@@ -1,0 +1,33 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-time.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (time)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "s",
+    "a",
+    "a[t]",
+    "d",
+    "h",
+    "min",
+    "wk",
+    "1/2 ms",
+    "100 ka[t]",
+    "ca",
+    "cs",
+    "ds",
+    "Ea[t]",
+    "fa",
+    "Ga[t]",
+    "hs",
+    "ka[t]",
+    "Ma[t]",
+    "ms",
+    "na",
+    "ns",
+    "ps",
+    "Ta[t]",
+    "us"
+  ]
+}

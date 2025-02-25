@@ -1,0 +1,16 @@
+{
+  "$schema": "/components/integer-attribute/1.0.1/integer-attribute.schema.json",
+  "name": "sample integer attribute",
+  "attribute_type": "integer",
+  "nan_description": {
+    "values": [
+      0
+    ]
+  },
+  "values": {
+    "data_type": "int64",
+    "length": 64,
+    "width": 1,
+    "data": "abababababababababababababababababababababababababababababababab"
+  }
+}

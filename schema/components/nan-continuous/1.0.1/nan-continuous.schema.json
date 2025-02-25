@@ -1,0 +1,18 @@
+{
+  "$id": "/components/nan-continuous/1.0.1/nan-continuous.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Values used to designate not-a-number (NaN) for floating point values. Can be used for error codes.",
+  "type": "object",
+  "properties": {
+    "values": {
+      "type": "array",
+      "description": "An array of floating point values that represent not-a-number (NaN). IEEE-754 NaN is always considered NaN and should not be specified.",
+      "items": {
+        "type": "number"
+      }
+    }
+  },
+  "required": [
+    "values"
+  ]
+}

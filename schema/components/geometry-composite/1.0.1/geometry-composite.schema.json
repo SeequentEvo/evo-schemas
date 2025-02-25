@@ -1,0 +1,54 @@
+{
+  "$id": "/components/geometry-composite/1.0.1/geometry-composite.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "This component describes a geometry composite.",
+  "type": "object",
+  "properties": {
+    "brep_container": {
+      "title": "BRep container",
+      "$ref": "/components/brep-container/1.0.1/brep-container.schema.json",
+      "description": "BRep container."
+    },
+    "mesh": {
+      "title": "Surface mesh",
+      "$ref": "/components/surface-mesh/1.0.1/surface-mesh.schema.json",
+      "description": "Surface mesh."
+    },
+    "points_2d": {
+      "title": "List of indices to 2D vertices",
+      "description": "Indices to 2D vertices.",
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "description": "Index to vertices array.",
+        "minimum": 0
+      }
+    },
+    "polylines_2d": {
+      "title": "List of 2D lines",
+      "description": "List of 2D lines.",
+      "type": "array",
+      "items": {
+        "$ref": "/components/polyline-2d/1.0.1/polyline-2d.schema.json"
+      }
+    },
+    "points_3d": {
+      "title": "List of indices to 3D vertices",
+      "description": "Indices to 3D vertices.",
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "description": "Index to vertices array.",
+        "minimum": 0
+      }
+    },
+    "polylines_3d": {
+      "title": "List of 3D lines",
+      "description": "List of 3D lines.",
+      "type": "array",
+      "items": {
+        "$ref": "/components/polyline-3d/1.0.1/polyline-3d.schema.json"
+      }
+    }
+  }
+}

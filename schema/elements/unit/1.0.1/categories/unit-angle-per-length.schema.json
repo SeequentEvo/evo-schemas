@@ -1,0 +1,18 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-angle-per-length.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (angle per length)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "rad/m",
+    "0.01 dega/ft",
+    "1/30 dega/ft",
+    "1/30 dega/m",
+    "dega/ft",
+    "dega/m",
+    "rad/ft",
+    "rev/ft",
+    "rev/m"
+  ]
+}

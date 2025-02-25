@@ -1,0 +1,6 @@
+{
+  "$schema": "/components/rotation/1.0.1/rotation.schema.json",
+  "dip_azimuth": 130.0,
+  "dip": 46.7,
+  "pitch": 81.4
+}

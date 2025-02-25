@@ -1,0 +1,11 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-pressure-per-volume.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (pressure per volume)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "Pa/m3",
+    "psi2.d/(cP.ft3)"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "$id": "/components/bool-attribute/1.0.1/bool-attribute.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "An attribute for boolean values.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the attribute"
+    },
+    "attribute_type": {
+      "description": "Type of the attribute.",
+      "const": "bool"
+    },
+    "attribute_description": {
+      "description": "The attribute description record.",
+      "$ref": "/components/category-attribute-description/1.0.1/category-attribute-description.schema.json"
+    },
+    "values": {
+      "description": "The values of the attributes.",
+      "$ref": "/elements/bool-array-1/1.0.1/bool-array-1.schema.json"
+    }
+  },
+  "required": [
+    "name",
+    "attribute_type",
+    "values"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-angular-acceleration.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (angular acceleration)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "rad/s2",
+    "rpm/s"
+  ]
+}

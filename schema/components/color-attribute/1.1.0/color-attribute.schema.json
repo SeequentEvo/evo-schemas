@@ -1,0 +1,26 @@
+{
+  "$id": "/components/color-attribute/1.1.0/color-attribute.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "An attribute for color values.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-continuous-attribute/1.0.0/base-continuous-attribute.schema.json"
+    },
+    {
+      "properties": {
+        "attribute_type": {
+          "const": "color"
+        },
+        "values": {
+          "description": "The values of the attributes.",
+          "$ref": "/elements/color-array/1.0.1/color-array.schema.json"
+        }
+      }
+    }
+  ],
+  "required": [
+    "attribute_type",
+    "values"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "/elements/date-time-array/1.0.1/date-time-array.schema.json",
+  "data_type": "timestamp",
+  "length": 10,
+  "data": "abababababababababababababababababababababababababababababababab"
+}

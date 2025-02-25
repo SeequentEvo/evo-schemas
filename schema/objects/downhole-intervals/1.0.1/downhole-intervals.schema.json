@@ -1,0 +1,54 @@
+{
+  "$id": "/objects/downhole-intervals/1.0.1/downhole-intervals.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A description for downhole intervals.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.0.1/base-spatial-data-properties.schema.json"
+    },
+    {
+      "$ref": "/components/attribute-list-property/1.0.1/attribute-list-property.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/downhole-intervals/1.0.1/downhole-intervals.schema.json"
+        },
+        "is_composited": {
+          "description": "Is composited?",
+          "type": "boolean"
+        },
+        "start": {
+          "description": "Start locations.",
+          "$ref": "/components/locations/1.0.1/locations.schema.json"
+        },
+        "end": {
+          "description": "End locations.",
+          "$ref": "/components/locations/1.0.1/locations.schema.json"
+        },
+        "mid_points": {
+          "description": "Mid-point locations.",
+          "$ref": "/components/locations/1.0.1/locations.schema.json"
+        },
+        "from_to": {
+          "description": "From-to description.",
+          "$ref": "/components/from-to/1.0.1/from-to.schema.json"
+        },
+        "hole_id": {
+          "description": "Hole IDs.",
+          "$ref": "/components/category-data/1.0.1/category-data.schema.json"
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "is_composited",
+    "start",
+    "end",
+    "mid_points",
+    "from_to",
+    "hole_id"
+  ]
+}

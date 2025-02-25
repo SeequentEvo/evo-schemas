@@ -1,0 +1,14 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-molar-energy.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (molar energy)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "J/mol",
+    "Btu[IT]/lbmol",
+    "kcal[th]/mol",
+    "kJ/kmol",
+    "MJ/kmol"
+  ]
+}

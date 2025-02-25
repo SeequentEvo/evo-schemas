@@ -1,0 +1,29 @@
+{
+  "$schema": "/components/channel-attribute/1.1.0/channel-attribute.schema.json",
+  "name": "T1X",
+  "start_fiducial": 1.0,
+  "fiducial_increment": 1.0,
+  "significant_digits": 4,
+  "attribute": {
+    "name": "Current Electrode #1",
+    "key": "T1X",
+    "attribute_type": "scalar",
+    "nan_description": {
+      "values": [
+        -99999.9
+      ]
+    },
+    "attribute_description": {
+      "discipline": "Geophysics",
+      "scale": "log10",
+      "type": "Induced Polarization",
+      "unit": "m"
+    },
+    "values": {
+      "data_type": "float64",
+      "length": 64,
+      "width": 1,
+      "data": "abababababababababababababababababababababababababababababababab"
+    }
+  }
+}

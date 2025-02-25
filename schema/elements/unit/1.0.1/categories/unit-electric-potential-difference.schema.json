@@ -1,0 +1,21 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-electric-potential-difference.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (electric potential difference)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "V",
+    "cV",
+    "dV",
+    "fV",
+    "GV",
+    "kV",
+    "mV",
+    "MV",
+    "nV",
+    "pV",
+    "TV",
+    "uV"
+  ]
+}

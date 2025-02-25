@@ -1,0 +1,91 @@
+{
+  "schema": "/objects/line-segments/1.1.0/line-segments.schema.json",
+  "name": "Example Line Segments",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "description": "This is example data to ensure the object validates properly.",
+  "bounding_box": {
+    "min_y": 5,
+    "max_y": 10,
+    "min_x": 0,
+    "max_x": 10,
+    "min_z": 5,
+    "max_z": 10
+  },
+  "coordinate_reference_system": {
+    "epsg_code": 1024
+  },
+  "segments": {
+    "vertices": {
+      "width": 3,
+      "data_type": "float64",
+      "length": 5,
+      "data": "abababababababababababababababababababababababababababababababab",
+      "attributes": [
+        {
+          "name": "length",
+          "attribute_type": "scalar",
+          "nan_description": {
+            "values": [
+              -99999.9,
+              -999.99
+            ]
+          },
+          "attribute_description": {
+            "discipline": "Geology",
+            "type": "Distance",
+            "unit": "m",
+            "scale": "lin"
+          },
+          "values": {
+            "data_type": "float64",
+            "width": 1,
+            "length": 4,
+            "data": "abababababababababababababababababababababababababababababababab"
+          }
+        }
+      ]
+    },
+    "indices": {
+      "width": 2,
+      "data_type": "uint64",
+      "length": 4,
+      "data": "abababababababababababababababababababababababababababababababab",
+      "attributes": [
+        {
+          "name": "chemicals",
+          "attribute_type": "ensemble_category",
+          "nan_description": {
+            "values": [
+              -99,
+              -999
+            ]
+          },
+          "attribute_description": {
+            "discipline": "Geochemistry",
+            "type": "Ag"
+          },
+          "values": {
+            "data_type": "int32",
+            "width": 8,
+            "length": 5,
+            "data": "abababababababababababababababababababababababababababababababab"
+          },
+          "table": {
+            "keys_data_type": "int32",
+            "values_data_type": "string",
+            "length": 2,
+            "data": "abababababababababababababababababababababababababababababababab"
+          }
+        }
+      ]
+    }
+  },
+  "tags": {},
+  "extensions": {
+    "subobjects": {
+      "foo": 12
+    },
+    "whatever": "you want",
+    "times": 3.14159
+  }
+}

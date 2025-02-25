@@ -1,0 +1,18 @@
+{
+  "$schema": "/components/attribute-description/1.0.1/attribute-description.schema.json",
+  "discipline": "Structural",
+  "type": "Azimuth",
+  "unit": "dega",
+  "scale": "lin",
+  "tags": {
+    "tag_1": "value_1",
+    "tag_2": "value_2"
+  },
+  "extensions": {
+    "subobjects": {
+      "foo": 12
+    },
+    "whatever": "you want",
+    "times": 3.14159
+  }
+}

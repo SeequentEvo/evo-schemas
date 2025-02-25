@@ -1,0 +1,17 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-thermal-conductivity.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (thermal conductivity)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "J.m/(s.m2.deltaK)",
+    "W/(m.deltaK)",
+    "Btu[IT].in/(h.ft2.deltaF)",
+    "kJ.m/(h.m2.deltaK)",
+    "Btu[IT]/(h.ft.deltaF)",
+    "cal[th]/(h.cm.deltaC)",
+    "cal[th]/(s.cm.deltaC)",
+    "kcal[th]/(h.m.deltaC)"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-reciprocal-volume.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (reciprocal volume)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "1/bbl",
+    "1/ft3",
+    "1/gal[UK]",
+    "1/gal[US]",
+    "1/L",
+    "1/m3"
+  ]
+}

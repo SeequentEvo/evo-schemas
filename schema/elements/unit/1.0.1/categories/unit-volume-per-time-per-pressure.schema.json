@@ -1,0 +1,20 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-volume-per-time-per-pressure.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units ((volume per time) per pressure)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "m3/(Pa.s)",
+    "1000 ft3/(psi.d)",
+    "bbl/(kPa.d)",
+    "bbl/(psi.d)",
+    "L/(bar.min)",
+    "m3/(bar.d)",
+    "m3/(bar.h)",
+    "m3/(bar.min)",
+    "m3/(kPa.d)",
+    "m3/(kPa.h)",
+    "m3/(psi.d)"
+  ]
+}

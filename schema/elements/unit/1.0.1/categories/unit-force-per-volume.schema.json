@@ -1,0 +1,26 @@
+{
+  "$id": "/elements/unit/1.0.1/categories/unit-force-per-volume.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Units (force per volume)",
+  "$comment": "OSDU Units",
+  "type": "string",
+  "enum": [
+    "N/m3",
+    "0.001 psi/ft",
+    "0.01 psi/ft",
+    "atm/ft",
+    "atm/hm",
+    "atm/m",
+    "bar/km",
+    "bar/m",
+    "GPa/cm",
+    "kPa/hm",
+    "kPa/m",
+    "lbf/ft3",
+    "lbf/gal[US]",
+    "MPa/m",
+    "Pa/m",
+    "psi/ft",
+    "psi/m"
+  ]
+}

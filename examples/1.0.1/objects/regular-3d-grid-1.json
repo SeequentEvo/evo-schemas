@@ -1,0 +1,41 @@
+{
+  "schema": "/objects/regular-3d-grid/1.0.1/regular-3d-grid.schema.json",
+  "name": "Example Regular 3D grid",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "description": "This is example data to ensure the object validates properly.",
+  "bounding_box": {
+    "min_y": 0,
+    "max_y": 10,
+    "min_x": 0,
+    "max_x": 10,
+    "min_z": 0,
+    "max_z": 25.0
+  },
+  "coordinate_reference_system": {
+    "epsg_code": 1024
+  },
+  "origin": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "size": [
+    10,
+    10,
+    25
+  ],
+  "cell_size": [
+    1.5,
+    1.5,
+    2.5
+  ],
+  "rotation": {
+    "dip_azimuth": 0.0,
+    "dip": 0.0,
+    "pitch": 0.0
+  },
+  "cell_attributes": [],
+  "vertex_attributes": [],
+  "tags": {},
+  "extensions": {}
+}

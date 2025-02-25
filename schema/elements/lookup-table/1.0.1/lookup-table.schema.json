@@ -1,0 +1,36 @@
+{
+  "$id": "/elements/lookup-table/1.0.1/lookup-table.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Key-value pairs where keys are integers and values are strings.",
+  "type": "object",
+  "properties": {
+    "data": {
+      "description": "Data stored as a binary blob. Columns: key, value.",
+      "$ref": "/elements/binary-blob/1.0.1/binary-blob.schema.json"
+    },
+    "length": {
+      "type": "integer",
+      "description": "Number of key-value pairs.",
+      "minimum": 0,
+      "default": 0
+    },
+    "keys_data_type": {
+      "description": "Data type for the keys.",
+      "type": "string",
+      "enum": [
+        "int32",
+        "int64"
+      ]
+    },
+    "values_data_type": {
+      "description": "Data type for the values.",
+      "const": "string"
+    }
+  },
+  "required": [
+    "data",
+    "length",
+    "keys_data_type",
+    "values_data_type"
+  ]
+}

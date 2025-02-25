@@ -1,0 +1,14 @@
+{
+  "$schema": "/components/string-attribute/1.0.1/string-attribute.schema.json",
+  "name": "descriptions",
+  "attribute_type": "string",
+  "attribute_description": {
+    "discipline": "Geology",
+    "type": "Descriptions"
+  },
+  "values": {
+    "data_type": "string",
+    "length": 2048,
+    "data": "abababababababababababababababababababababababababababababababab"
+  }
+}

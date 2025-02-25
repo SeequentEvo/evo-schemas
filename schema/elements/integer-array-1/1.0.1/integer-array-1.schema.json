@@ -1,0 +1,22 @@
+{
+  "$id": "/elements/integer-array-1/1.0.1/integer-array-1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Array of integers.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/elements/integer-array-md/1.0.1/integer-array-md.schema.json"
+    },
+    {
+      "properties": {
+        "width": {
+          "description": "number of columns",
+          "const": 1
+        }
+      },
+      "required": [
+        "width"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "$id": "/components/category-time-series/1.0.1/category-time-series.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "An attribute that describes a category time series.",
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "string",
+      "description": "The key"
+    },
+    "attribute_type": {
+      "description": "Type of the attribute.",
+      "const": "categoral_time_series"
+    },
+    "nan_description": {
+      "description": "Describes the values used to designate not-a-number.",
+      "$ref": "/components/nan-categorical/1.0.1/nan-categorical.schema.json"
+    },
+    "num_time_steps": {
+      "description": "Number of time steps.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "time_step": {
+      "description": "Time step attribute component.",
+      "$ref": "/components/time-step-attribute/1.0.1/time-step-attribute.schema.json"
+    },
+    "values": {
+      "description": "The values of the series where 'num_time_steps' is the width of the array.",
+      "$ref": "/elements/integer-array-md/1.0.1/integer-array-md.schema.json"
+    },
+    "table": {
+      "description": "Lookup table associated with the attributes.",
+      "$ref": "/elements/lookup-table/1.0.1/lookup-table.schema.json"
+    },
+    "attribute_description": {
+      "description": "The attribute description record.",
+      "$ref": "/components/category-attribute-description/1.0.1/category-attribute-description.schema.json"
+    }
+  },
+  "required": [
+    "key",
+    "attribute_type",
+    "nan_description",
+    "num_time_steps",
+    "time_step",
+    "values",
+    "table"
+  ]
+}

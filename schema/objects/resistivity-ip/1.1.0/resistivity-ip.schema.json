@@ -1,0 +1,113 @@
+{
+  "$id": "/objects/resistivity-ip/1.1.0/resistivity-ip.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Resistivity-IP data.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.1.0/base-spatial-data-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/resistivity-ip/1.1.0/resistivity-ip.schema.json"
+        },
+        "number_of_dimensions": {
+          "description": "Survey dimension.",
+          "type": "string",
+          "enum": [
+            "1D",
+            "2D",
+            "3D"
+          ]
+        },
+        "number_contributing_electrodes": {
+          "description": "Number of contributing electrodes. Not including remote electrodes.",
+          "type": "integer",
+          "minimum": 1
+        },
+        "survey": {
+          "description": "Survey information.",
+          "type": "object",
+          "oneOf": [
+            {
+              "$ref": "/components/resistivity-ip-dcip-survey-properties/1.0.0/resistivity-ip-dcip-survey-properties.schema.json"
+            },
+            {
+              "$ref": "/components/resistivity-ip-sip-survey-properties/1.0.0/resistivity-ip-sip-survey-properties.schema.json"
+            },
+            {
+              "$ref": "/components/resistivity-ip-phaseip-survey-properties/1.0.0/resistivity-ip-phaseip-survey-properties.schema.json"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "description": "Type of survey.",
+                  "type": "string",
+                  "const": "DCRES"
+                }
+              },
+              "required": [
+                "type"
+              ]
+            }
+          ]
+        },
+        "configuration": {
+          "description": "Configuration information.",
+          "type": "object",
+          "oneOf": [
+            {
+              "$ref": "/components/resistivity-ip-plpl-configuration-properties/1.0.0/resistivity-ip-plpl-configuration-properties.schema.json"
+            },
+            {
+              "$ref": "/components/resistivity-ip-pldp-configuration-properties/1.0.0/resistivity-ip-pldp-configuration-properties.schema.json"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "description": "Type of configuration.",
+                  "type": "string",
+                  "enum": [
+                    "GRAD",
+                    "SCHL",
+                    "WENN",
+                    "DPDP",
+                    "DPPL",
+                    "SBH",
+                    "BHBH",
+                    "EDPDP",
+                    "VECTOR",
+                    "GENERAL"
+                  ]
+                }
+              },
+              "required": [
+                "type"
+              ]
+            }
+          ]
+        },
+        "line_list": {
+          "description": "Line list.",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "/components/resistivity-ip-line/1.1.0/resistivity-ip-line.schema.json"
+          }
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "number_of_dimensions",
+    "number_contributing_electrodes",
+    "line_list",
+    "survey",
+    "configuration"
+  ],
+  "unevaluatedProperties": false
+}

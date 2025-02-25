@@ -1,0 +1,26 @@
+{
+  "$id": "/components/mesh-quality/1.0.1/mesh-quality.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "This component describes a mesh quality.",
+  "type": "object",
+  "properties": {
+    "characteristics": {
+      "type": "array",
+      "description": "Mesh characteristics.",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "Manifold",
+          "ConsistentWinding",
+          "NonDegenerate",
+          "NonSelfIntersecting",
+          "Continuous"
+        ]
+      }
+    }
+  },
+  "required": [
+    "characteristics"
+  ]
+}

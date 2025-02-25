@@ -1,0 +1,32 @@
+{
+  "$id": "/components/embedded-mesh-object/1.0.0/embedded-mesh-object.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A base mesh object referencing parts in an embedded-triangulated-mesh.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the object."
+    },
+    "description": {
+      "title": "Description",
+      "type": "string",
+      "description": "Optional field for adding additional description to uniquely identify this object."
+    },
+    "quality": {
+      "$ref": "/components/mesh-quality/1.0.1/mesh-quality.schema.json",
+      "description": "Mesh quality."
+    },
+    "parts": {
+      "type": "array",
+      "description": "A list of parts and whether they are reversed.",
+      "items": {
+        "$ref": "/elements/reversible-index/1.0.0/reversible-index.schema.json"
+      }
+    }
+  },
+  "required": [
+    "name",
+    "parts"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "$id": "/components/embedded-triangulated-mesh/2.0.0/embedded-triangulated-mesh.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A mesh composed of triangles.\nThe triangles are defined by triplets of indices into a vertex list.\nOptionally, parts can be defined.",
+  "type": "object",
+  "properties": {
+    "triangles": {
+      "description": "The vertices and triangle indices of the mesh.",
+      "$ref": "/components/triangles/1.1.0/triangles.schema.json"
+    },
+    "parts": {
+      "description": "A structure defining triangle chunks the mesh is composed of.",
+      "$ref": "#/$defs/parts"
+    }
+  },
+  "required": [
+    "triangles"
+  ],
+  "$defs": {
+    "parts": {
+      "description": "A structure defining chunks the mesh is composed of.",
+      "allOf": [
+        {
+          "$ref": "/components/attribute-list-property/1.1.0/attribute-list-property.schema.json",
+          "description": "Attributes associated with each part."
+        },
+        {
+          "properties": {
+            "chunks": {
+              "description": "A tuple defining the first index and the length of a chunk.\nIf triangle_indices is defined, the chunk refers to a segment of the triangle_indices array.\nOtherwise, the chunk refers to a segment of the triangles array.\nChunks do not have to include all triangles, and chunks can overlap.\nColumns: offset, count",
+              "$ref": "/elements/index-array-2/1.0.1/index-array-2.schema.json"
+            },
+            "triangle_indices": {
+              "description": "An optional index array into the triangle indices set.\nThis is used to define chunks if the mesh triangle indices do not contain contiguous chunks.",
+              "$ref": "/elements/index-array-1/1.0.1/index-array-1.schema.json"
+            }
+          },
+          "required": [
+            "chunks"
+          ]
+        }
+      ]
+    }
+  }
+}
