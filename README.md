@@ -1,7 +1,7 @@
 <p align="center"><a href="https://seequent.com" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="https://developer.seequent.com/img/seequent-logo-dark.svg" alt="Seequent logo" width="400" /><img src="https://developer.seequent.com/img/seequent-logo.svg" alt="Seequent logo" width="400" /></picture></a></p>
 <p align="center">
-    <a href="https://github.com/seequent/evo-schemas/actions/workflows/run-tests.yml"><img src="https://github.com/seequent/evo-schemas/actions/workflows/run-tests.yml/badge.svg" alt="" /></a>
-    <a href=""><img src="https://github.com/seequent/evo-schemas/actions/workflows/pre-commit.yml/badge.svg" alt="" /></a>
+    <a href="https://github.com/seequentevo/evo-schemas/actions/workflows/run-tests.yml"><img src="https://github.com/seequentevo/evo-schemas/actions/workflows/run-tests.yml/badge.svg" alt="" /></a>
+    <a href=""><img src="https://github.com/seequentevo/evo-schemas/actions/workflows/pre-commit.yml/badge.svg" alt="" /></a>
 </p>
 <p align="center">
     <a href="https://developer.seequent.com/" target="_blank">Seequent Developer Portal</a>
