@@ -54,7 +54,7 @@ release = [
 
 
 [project.urls]
-repository = "https://github.com/seequent/geoscience-object-schemas"
+repository = "https://github.com/seequentevo/evo-schemas"
 
 [tool.black]
 line-length = 120
