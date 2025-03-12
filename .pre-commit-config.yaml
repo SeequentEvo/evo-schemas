@@ -31,3 +31,7 @@ repos:
       language: python
       additional_dependencies: ["jsonschema==4.17.3", "semver>=2.13,<3"]
       pass_filenames: false
+  -   id: audit-commits
+      name: Audit commit
+      language: script
+      entry: ./tools/audit-commits.sh
