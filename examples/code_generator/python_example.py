@@ -22,7 +22,7 @@ generated_python_code = os.path.abspath(os.path.join(os.path.dirname(__file__), 
 sys.path.append(generated_python_code)
 
 # ruff: noqa: E402
-from evo_schemas import components, elements, json_load, json_loads, objects
+from evo.schemas import components, elements, json_load, json_loads, objects
 
 
 def build_points_object():

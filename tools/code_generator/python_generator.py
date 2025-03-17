@@ -823,7 +823,7 @@ def generate_python_files(parser, result_path=None) -> pathlib.Path:
     Returns the path at which the schemas were generated.
     """
     if result_path is None:
-        result_path = (schema_base_path() / ".." / "docs" / "python" / "evo_schemas").resolve()
+        result_path = (schema_base_path() / ".." / "docs" / "python" / "evo-schemas").resolve()
     generator = PythonGenerator(parser, result_path)
     generator.generate()
     return result_path

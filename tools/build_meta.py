@@ -22,7 +22,7 @@ def _prebuild() -> None:
     from code_generator.python_generator import generate_python_files
 
     root_dir = Path(__file__).parent.parent.absolute()
-    output_dir = root_dir / "docs" / "python" / "evo_schemas"
+    output_dir = root_dir / "docs" / "python" / "evo-schemas"
     if output_dir.exists():
         shutil.rmtree(output_dir)
 
