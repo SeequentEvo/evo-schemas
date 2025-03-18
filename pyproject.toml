@@ -81,7 +81,7 @@ backend-path = ["tools"]
 
 [tool.setuptools.packages.find]
 where = ["docs/python"]
-include = ["evo-schemas*"]
+include = ["evo_schemas*"]
 
 [tool.setuptools.package-data]
 "*" = ["*.json"]

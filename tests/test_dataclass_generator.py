@@ -24,7 +24,7 @@ def test_dataclasses():
     # Test models can be imported without error
     sys.path[:0] = [str(output_path.parent)]
 
-    from evo.schemas import components, elements, objects  # noqa: F401
+    from evo_schemas import components, elements, objects  # noqa: F401
 
 
 def test_examples():
