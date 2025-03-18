@@ -1,5 +1,5 @@
 [project]
-name = "Seequent-Geoscience-Object-Schemas"
+name = "Evo-Schemas"
 version = "2024.12.1dev23"
 authors = []
 description = "Seequent Geoscience Object Schemas define metadata and data serialisation of various geoscience objects."
@@ -33,13 +33,13 @@ test = [
 ]
 
 tools = [
-    "Seequent-Geoscience-Object-Schemas[test]",
+    "Evo-Schemas[test]",
     "GitPython>=3.1.43",
     "PyGithub>=2.4.0",
 ]
 
 examples = [
-    "Seequent-Geoscience-Object-Schemas[test]",
+    "Evo-Schemas[test]",
     "azure-storage-blob",
     "jupyter",
     "pandas",
@@ -81,7 +81,7 @@ backend-path = ["tools"]
 
 [tool.setuptools.packages.find]
 where = ["docs/python"]
-include = ["geoscience_object_models*"]
+include = ["evo_schemas*"]
 
 [tool.setuptools.package-data]
 "*" = ["*.json"]
