@@ -51,7 +51,7 @@ NOTE: To keep things simple, only the required properties are defined. For a ful
 |   name	    |   The human-readable name of the downhole collection object. This is the value that users will see when they browse an Evo workspace or list out objects through the Evo API.	 | `"Summer 24 Drill Program"` |
 |   uuid	    |   The universally unique identifier of the downhole collection object. 	|   `dd037871-4279-4954-bd43-3ead9d40a56e`    |
 | bounding_box	|   The geographic bounds of the drill hole locations contained in the downhole collection object. This is used for spatial search in the Evo web portal.   | `{"min_y": 0, "max_y": 10, "min_x": 0, "max_x": 10, "min_z": 0, "max_z": 10}` |
-|   coordinate_reference_system |   The coordinate reference system (CRS) that all location data is in. This applies to the bounding box as well as the drill hole locations. See ["Common data types"](/docs/api/fundamentals/common-data-types#coordinate-reference-systems) for more information.   |   `{"epsg_code": 32617}` |
+|   coordinate_reference_system |   The coordinate reference system (CRS) that all location data is in. This applies to the bounding box as well as the drill hole locations. See ["Common data types"](https://developer.seequent.com/docs/api/fundamentals/common-data-types/#coordinate-reference-systems) for more information.   |   `{"epsg_code": 32617}` |
 
 ## Downhole collection properties
 

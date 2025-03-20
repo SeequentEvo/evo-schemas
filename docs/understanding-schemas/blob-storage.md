@@ -51,7 +51,7 @@ Schemas referring to a Parquet array with more than one column define the requir
 
 ## Hash vs UUID
 
-Blobs can be identified by their hash or by a [UUID](/docs/api/fundamentals/common-data-types#uuid). Using a hash is the preferred option.
+Blobs can be identified by their hash or by a [UUID](https://developer.seequent.com/docs/api/fundamentals/common-data-types/#uuid). Using a hash is the preferred option.
 
 ### Hash
 
@@ -59,4 +59,4 @@ The [SHA-256 algorithm](https://en.wikipedia.org/wiki/SHA-2) is used to calculat
 
 ### UUID
 
-A [UUID](/docs/api/fundamentals/common-data-types#uuid) can be used if you need to upload the blob in chunks. In this case, it is impossible to calculate the hash prior to uploading the data. This does not allow automatic deduplication and should only be used if calculating the hash is not possible.
+A [UUID](https://developer.seequent.com/docs/api/fundamentals/common-data-types/#uuid) can be used if you need to upload the blob in chunks. In this case, it is impossible to calculate the hash prior to uploading the data. This does not allow automatic deduplication and should only be used if calculating the hash is not possible.
