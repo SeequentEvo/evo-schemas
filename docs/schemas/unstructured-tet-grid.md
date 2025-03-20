@@ -13,9 +13,9 @@ The grid's data are all stored on the `tetrahedra` attribute, which includes the
 
 See also:
 
-- For an unstructured grid with arbitrary shapes, see [`unstructured-grid`](unstructured-grid).
-- For an unstructured hexahedral grid, see [`unstructured-hex-grid`](unstructured-hex-grid).
-- For an unstructured quadrilateral grid, see [`unstructured-quad-grid`](unstructured-quad-grid).
+- For an unstructured grid with arbitrary shapes, see [`unstructured-grid`](unstructured-grid.md).
+- For an unstructured hexahedral grid, see [`unstructured-hex-grid`](unstructured-hex-grid.md).
+- For an unstructured quadrilateral grid, see [`unstructured-quad-grid`](unstructured-quad-grid.md).
 
 ## Properties
 

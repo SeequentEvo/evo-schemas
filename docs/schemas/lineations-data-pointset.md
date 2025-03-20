@@ -5,7 +5,7 @@ import FlatProperties from './_generated/flatmd/objects/lineations-data-pointset
 
 <SchemaUri uri="schema/objects/lineations-data-pointset/1.3.0/lineations-data-pointset.schema.json" />
 
-The `lineations-data-pointset` schema is a variant of the generic [pointset](pointset) schema. See that schema for general information.
+The `lineations-data-pointset` schema is a variant of the generic [pointset](pointset.md) schema. See that schema for general information.
 
 It enhances the base pointset by allowing lineation data to be associated with each point.
 
@@ -16,7 +16,7 @@ It enhances the base pointset by allowing lineation data to be associated with e
  * *trend* angle. The azimuth of the lineation direction.
  * *plunge* angle. The angle below the horizontal that the lineation plunges at.
 
-The angles are similar to the first two used for specifying [rotations](components/rotation).  The *dip_azimuth* and *dip* pair correspond to the *trend* and plunge of the down-dip direction (itself a lineation) on the rotated xy plane.
+The angles are similar to the first two used for specifying [rotations](components/rotation.md).  The *dip_azimuth* and *dip* pair correspond to the *trend* and plunge of the down-dip direction (itself a lineation) on the rotated xy plane.
 
 ## Locations
 
@@ -26,11 +26,11 @@ This property has three sub-properties, one with the lineation data and two from
 
 * `lineations` - a two column float array with the *trend* and *plunge* angles.
 * `coordinates` - an array property with the coordinates (xyz) of each point.
-* An optional [attribute list.](../understanding-schemas/understanding-attributes)
+* An optional [attribute list.](../understanding-schemas/understanding-attributes.md)
 
 See also:
-- The base [pointset](pointset) documentation.
-- For a pointset with planar orientation measurements, see [planar-data-pointset](planar-data-pointset).
+- The base [pointset](pointset.md) documentation.
+- For a pointset with planar orientation measurements, see [planar-data-pointset](planar-data-pointset.md).
 
 ## Properties
 

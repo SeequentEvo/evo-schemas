@@ -148,7 +148,7 @@ The first step is to break out the from-to values into their own array, with app
 
 Next is to break out each column as a separate attribute. In this example, the attribute columns are “Rock Type” and “Grain Size”. In this case, both attributes would be considered “category” attributes – because they can both be normalized to a lookup table.
 
-NOTE: There many attribute types to choose from, depending on the data type (boolean, date, string, integer, etc.). For more details on how attributes work in general [see "Understanding attributes".](../understanding-schemas/understanding-attributes)
+NOTE: There many attribute types to choose from, depending on the data type (boolean, date, string, integer, etc.). For more details on how attributes work in general [see "Understanding attributes".](../understanding-schemas/understanding-attributes.md)
 
 If we isolate the “Rock Type” attribute:
 

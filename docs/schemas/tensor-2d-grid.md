@@ -17,8 +17,8 @@ Fields `cell_attributes` and `vertex_attributes` accept a variety of scalar valu
 
 See also:
 
-- For a 3D tensor grid, see [`tensor-3d-grid`](tensor-3d-grid).
-- For a 2D grid with equal cell sizes, see [`regular-2d-grid`](regular-2d-grid).
+- For a 3D tensor grid, see [`tensor-3d-grid`](tensor-3d-grid.md).
+- For a 2D grid with equal cell sizes, see [`regular-2d-grid`](regular-2d-grid.md).
 
 ## Properties
 

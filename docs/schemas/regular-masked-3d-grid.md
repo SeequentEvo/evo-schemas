@@ -28,8 +28,8 @@ As with all objects, this grid implements spatial properties including a coordin
 
 See also:
 
-- For a 3D grid with data defined on all cells or vertices, see [`regular-3d-grid`](regular-3d-grid).
-- For a 3D grid with tensor values, see [`tensor-3d-grid`](tensor-3d-grid).
+- For a 3D grid with data defined on all cells or vertices, see [`regular-3d-grid`](regular-3d-grid.md).
+- For a 3D grid with tensor values, see [`tensor-3d-grid`](tensor-3d-grid.md).
 
 ## Properties
 

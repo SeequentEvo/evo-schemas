@@ -11,7 +11,7 @@ An ellipsoid is defined by three lengths for the major, semi-major, and minor ax
 
 The rotation in 3D space is described by three angles (azimuth, dip, and pitch), all rotating clockwise about the Z, then X, and finally Z axes. All angles must be positive values, specified in degrees, within the bounds defined for each rotation. 0 degrees in the xy plane (dip azimuth) is 90 degrees East of North.
 
-This object is related to [the variogram object](variogram) as both can be used to describe anisotropy.
+This object is related to [the variogram object](variogram.md) as both can be used to describe anisotropy.
 
 ## Properties
 
