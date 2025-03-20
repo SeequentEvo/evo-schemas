@@ -9,9 +9,9 @@ The generic attributes are defined using the `one-of-attribute` component schema
 
 This is usually implemented using an optional `attributes` property on one or more of geometric components using the `attribute-list-property` component schema.
 
-For instance the [triangle-mesh](../schemas/triangle-mesh) schema can have attributes attached for both the `vertices` and `indices` properties of its `triangles` property. The dimension of the attribute array in each case corresponds with the length of the geometry property; i.e., one value per vertex in the case of an attribute attached to mesh vertices or one value per triangle in the case of an attribute attached to triangle indices.
+For instance the [triangle-mesh](../schemas/triangle-mesh.md) schema can have attributes attached for both the `vertices` and `indices` properties of its `triangles` property. The dimension of the attribute array in each case corresponds with the length of the geometry property; i.e., one value per vertex in the case of an attribute attached to mesh vertices or one value per triangle in the case of an attribute attached to triangle indices.
 
-In some cases where the geometry is implied the list will have a different name. An example of this is for the [regular-grid-3d](../schemas/regular-3d-grid) schema where `cell_attributes` and `vertex_attributes` properties are used for attributes for the cells and vertices of the grid respectively.
+In some cases where the geometry is implied the list will have a different name. An example of this is for the [regular-grid-3d](../schemas/regular-3d-grid.md) schema where `cell_attributes` and `vertex_attributes` properties are used for attributes for the cells and vertices of the grid respectively.
 
 ## Attribute definitions
 

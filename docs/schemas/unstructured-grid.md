@@ -12,13 +12,13 @@ The grid implements spatial properties including a coordinate reference system a
 The grid's data are all stored on the `geometry` attribute, which defines the spatial layout of the grid, including the coordinates of the vertices and the connectivity between them to form cells.
 
 `vertices` - Table of 3D coordinates (x,y,z)
-`cells`- Table of cell descriptions. Each entry is an array of triples. The first item in the triple represents the shape, second item is an offset to the indices array and the third item is the number of vertices for the shape. Columns: shape, offset, num_vertices.". See [Cell Type Geometry](../understanding-schemas/cell-type-geometry).
+`cells`- Table of cell descriptions. Each entry is an array of triples. The first item in the triple represents the shape, second item is an offset to the indices array and the third item is the number of vertices for the shape. Columns: shape, offset, num_vertices.". See [Cell Type Geometry](../understanding-schemas/cell-type-geometry.md).
 
 See also:
 
-- For an unstructured hexahedral grid, see [`unstructured-hex-grid`](unstructured-hex-grid)
-- For an unstructured quadrilateral grid, see [`unstructured-quad-grid`](unstructured-quad-grid)
-- For an unstructured tetrahedral grid, see [`unstructured-tet-grid`](unstructured-tet-grid)
+- For an unstructured hexahedral grid, see [`unstructured-hex-grid`](unstructured-hex-grid.md)
+- For an unstructured quadrilateral grid, see [`unstructured-quad-grid`](unstructured-quad-grid.md)
+- For an unstructured tetrahedral grid, see [`unstructured-tet-grid`](unstructured-tet-grid.md)
 
 ## Properties
 

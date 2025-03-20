@@ -23,7 +23,7 @@ Each volume contains:
 
 * `description`: Optional field for adding an additional description about this object.
 
-* `quality`: Optional hint about mesh [Quality](components/mesh-quality) characteristics that provide guarantees about the mesh.
+* `quality`: Optional hint about mesh [Quality](components/mesh-quality.md) characteristics that provide guarantees about the mesh.
 
 * `parts` : list of mesh parts that make up this volume, and a flag if traversal order within the part is reversed.
 
@@ -49,7 +49,7 @@ Each surface contains:
 
 * `description`: Optional field for adding additional description about this object.
 
-* `quality` : Optional hint about mesh [Quality](components/mesh-quality) characteristics that provide guarantees about the mesh.
+* `quality` : Optional hint about mesh [Quality](components/mesh-quality.md) characteristics that provide guarantees about the mesh.
 
 * `parts` : list of mesh parts that make up this volume, and a flag if traversal order within the part is reversed.
 
@@ -68,7 +68,7 @@ Attributes associated with each surface. Attribute tables have one row per surfa
 
 ## triangle_geometry
 
-A set of triangulated mesh parts in 3D space. [Parts](../understanding-schemas/understanding-parts) (mesh subsections) can be defined in a way that can be shared between adjacent volumes and surfaces.
+A set of triangulated mesh parts in 3D space. [Parts](../understanding-schemas/understanding-parts.md) (mesh subsections) can be defined in a way that can be shared between adjacent volumes and surfaces.
 
 * `triangles`: The vertices and triangle indices of the mesh. Triangles are defined by triplets of indices into a vertex list.
 

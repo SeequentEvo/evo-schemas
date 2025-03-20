@@ -26,7 +26,7 @@ A list of planar cross sections. Each cross section contains a set of volumes an
 
 * `origin` - The coordinates of the section origin. [x, y, z].
 
-* `Rotation` Section [Rotation](components/rotation) in model space.
+* `Rotation` Section [Rotation](components/rotation.md) in model space.
 
 ### `volumes` *array*
 
@@ -36,7 +36,7 @@ A list of polygon volumes. Each volume consists of one or more connected polylin
 
 * `description` : Optional additional description.
 
-* `parts` : Array of polyline [parts.](../understanding-schemas/understanding-parts) The entire array of parts creates a closed polygon. Each entry is a pair of values - an `index` to a line_geometry [chunk](#line_geometry) which represents a sequence of line segments, and a `reversed` flag. The same chunk can be used for directed traversal by different volumes, surfaces, or both.
+* `parts` : Array of polyline [parts.](../understanding-schemas/understanding-parts.md) The entire array of parts creates a closed polygon. Each entry is a pair of values - an `index` to a line_geometry [chunk](#line_geometry) which represents a sequence of line segments, and a `reversed` flag. The same chunk can be used for directed traversal by different volumes, surfaces, or both.
 
 * `material_key`: Unique identifier to a material in the materials list. 
 
@@ -62,7 +62,7 @@ A list of polyline surfaces. Each surface consists of one or more connected poly
 
 * `description` : Optional additional description.
 
-* `parts` : Array of polyline [parts.](../understanding-schemas/understanding-parts) Each entry is a pair of values — an `index` to a line_geometry [chunk,](#line_geometry) which represents a sequence of line segments, and a `reversed` flag. The same chunk can be used for directed traversal by different volumes, surfaces, or both.
+* `parts` : Array of polyline [parts.](../understanding-schemas/understanding-parts.md) Each entry is a pair of values — an `index` to a line_geometry [chunk,](#line_geometry) which represents a sequence of line segments, and a `reversed` flag. The same chunk can be used for directed traversal by different volumes, surfaces, or both.
 
 * `material_key`: Unique identifier to a material in the materials list. 
 
@@ -81,7 +81,7 @@ Attributes associated with each polyline surface. The attribute tables have one 
 
 ### `line_geometry`
 
-Container of chunks of vertices. Each volume/surface [part](../understanding-schemas/understanding-parts) references a chunk of vertices to represent a collection of connected line segments. A given part may or may not be shared between adjacent volumes and surfaces. Storing a connected geometry using shared parts is preferred but not guaranteed as it depends on information available to the producer when the object is created. When unconnected, line segments in one part may overlap line segments in another part. 
+Container of chunks of vertices. Each volume/surface [part](../understanding-schemas/understanding-parts.md) references a chunk of vertices to represent a collection of connected line segments. A given part may or may not be shared between adjacent volumes and surfaces. Storing a connected geometry using shared parts is preferred but not guaranteed as it depends on information available to the producer when the object is created. When unconnected, line segments in one part may overlap line segments in another part. 
 
 * `vertices` Table of u,v (local x,y) coordinates on the section. 
 

@@ -24,15 +24,15 @@ To define a pointset, the object requires a `locations` property.
 This property has two sub-properties
 
 * `coordinates` - an array property with the coordinates (xyz) of each point.
-* An optional [attribute list.](../understanding-schemas/understanding-attributes)
+* An optional [attribute list.](../understanding-schemas/understanding-attributes.md)
 
 
 See also:
 
 There are two derived schema for storing specific data at the locations.
 
-- For a pointset with lineation measurements, see [lineations-data-pointset](lineations-data-pointset).
-- For a pointset with planar orientation measurements, see [planar-data-pointset](planar-data-pointset).
+- For a pointset with lineation measurements, see [lineations-data-pointset](lineations-data-pointset.md).
+- For a pointset with planar orientation measurements, see [planar-data-pointset](planar-data-pointset.md).
 
 ## Properties
 

@@ -12,20 +12,20 @@ The vertices and triangle indices of the mesh.
 
 `vertices` : Table of vertex coordinates. Columns: x, y, z.
 
-- An optional [attribute list](../understanding-schemas/understanding-attributes) can be associated with the vertices.
+- An optional [attribute list](../understanding-schemas/understanding-attributes.md) can be associated with the vertices.
 
 `indices` : Table of 0-based indices into vertices. Each triple is a triangle. Columns: n0, n1, n2.
 
-- An optional [attribute list](../understanding-schemas/understanding-attributes) can be associated with the triangles.
+- An optional [attribute list](../understanding-schemas/understanding-attributes.md) can be associated with the triangles.
 
 ## `parts`
 
-A structure defining triangle chunks the mesh is composed of. [Parts](../understanding-schemas/understanding-parts) allow us to share common sections of one volume or surface with another. Parts are made up from chunks of triangle indices.
+A structure defining triangle chunks the mesh is composed of. [Parts](../understanding-schemas/understanding-parts.md) allow us to share common sections of one volume or surface with another. Parts are made up from chunks of triangle indices.
 
 `chunks`
 Each chunk is a tuple defining the first index and the length of a chunk of vertices. If triangle_indices is defined, the chunk refers to a segment of the triangle_indices array, Otherwise, the chunk refers to a segment of the triangles array. Chunks do not have to include all triangles, and chunks can overlap. Columns: offset, count.
 
-`attributes` — the parts can have an optional [attribute list](../understanding-schemas/understanding-attributes) in the standard manner.
+`attributes` — the parts can have an optional [attribute list](../understanding-schemas/understanding-attributes.md) in the standard manner.
 
 `triangle_indices`
 An optional index array into the triangle indices set. This is used to define chunks if the mesh triangle indices do not contain contiguous chunks.
