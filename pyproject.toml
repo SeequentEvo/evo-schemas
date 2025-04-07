@@ -1,6 +1,6 @@
 [project]
 name = "evo-schemas"
-version = "2024.12.1dev23"
+version = "2024.4"
 authors = []
 description = "Seequent Geoscience Object Schemas define metadata and data serialisation of various geoscience objects."
 keywords = []
