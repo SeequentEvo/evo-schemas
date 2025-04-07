@@ -1,0 +1,38 @@
+on:
+  release:
+    types: [released]
+
+jobs:
+  build-and-publish:
+    name: Build and publish release
+    runs-on: ubuntu-latest
+    permissions:
+      # Required for publishing release artifacts
+      contents: write
+      # Required for PyPI trusted publishing
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+
+      # Note: uses .python-version file by default
+      - name: Set up Python
+        uses: actions/setup-python@v5
+
+      - name: Install dependencies
+        run: pip install --upgrade pip .[test,release]
+
+      - name: Build wheel
+        run: python -m pip wheel --no-deps .
+
+      - name: Publish wheel to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+
+      - name: Bundle JSON schemas
+        run: zip -r evo-schemas-${{ github.event.release.tag_name }}-schemas.zip schema
+
+      - name: Upload wheel and JSON schemas to GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            *.whl
+            evo-schemas-${{ github.event.release.tag_name }}-schemas.zip
