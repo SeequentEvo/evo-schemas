@@ -1,10 +1,13 @@
 [project]
 name = "evo-schemas"
 version = "2024.4"
-authors = []
+authors = [
+    { name = "Seequent", email = "support@seequent.com" }
+]
 description = "Seequent Geoscience Object Schemas define metadata and data serialisation of various geoscience objects."
 keywords = []
 readme = "README.md"
+license-files = ["LICENSE.md"]
 requires-python = ">=3.7"
 
 classifiers = [
