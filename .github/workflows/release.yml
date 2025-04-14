@@ -25,14 +25,14 @@ jobs:
         run: pip install --upgrade pip .[test,release]
 
       - name: Build wheel
-        run: python -m pip wheel --no-deps .
+        run: python -m pip wheel --no-deps . -w dist
 
       - name: Publish wheel to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
 
       - name: Bundle JSON schemas
-        run: zip -r evo-schemas-${{ github.event.release.tag_name }}-schemas.zip schema
+        run: zip -r dist/evo-schemas-${{ github.event.release.tag_name }}-schemas.zip schema
 
       - name: Upload wheel and JSON schemas to GitHub Release
         shell: bash
-        run: gh release upload ${{ github.event.release.tag_name }} *.whl evo-schemas-${{ github.event.release.tag_name }}-schemas.zip
+        run: gh release upload ${{ github.event.release.tag_name }} dist/*
