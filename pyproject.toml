@@ -1,10 +1,13 @@
 [project]
-name = "Evo-Schemas"
-version = "2024.12.1dev23"
-authors = []
+name = "evo-schemas"
+version = "2024.4"
+authors = [
+    { name = "Seequent", email = "support@seequent.com" }
+]
 description = "Seequent Geoscience Object Schemas define metadata and data serialisation of various geoscience objects."
 keywords = []
 readme = "README.md"
+license-files = ["LICENSE.md"]
 requires-python = ">=3.7"
 
 classifiers = [
@@ -33,13 +36,13 @@ test = [
 ]
 
 tools = [
-    "Evo-Schemas[test]",
+    "evo-schemas[test]",
     "GitPython>=3.1.43",
     "PyGithub>=2.4.0",
 ]
 
 examples = [
-    "Evo-Schemas[test]",
+    "evo-schemas[test]",
     "azure-storage-blob",
     "jupyter",
     "pandas",
