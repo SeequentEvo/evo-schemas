@@ -1,5 +1,6 @@
 <p align="center"><a href="https://seequent.com" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="https://developer.seequent.com/img/seequent-logo-dark.svg" alt="Seequent logo" width="400" /><img src="https://developer.seequent.com/img/seequent-logo.svg" alt="Seequent logo" width="400" /></picture></a></p>
 <p align="center">
+    <a href="https://pypi.org/project/evo-schemas/"><img alt="PyPI - Version" src="https://img.shields.io/pypi/v/evo-schemas" /></a>
     <a href="https://github.com/seequentevo/evo-schemas/actions/workflows/run-tests.yml"><img src="https://github.com/seequentevo/evo-schemas/actions/workflows/run-tests.yml/badge.svg" alt="" /></a>
     <a href=""><img src="https://github.com/seequentevo/evo-schemas/actions/workflows/pre-commit.yml/badge.svg" alt="" /></a>
 </p>
@@ -23,14 +24,18 @@ Seequent geoscience object schemas define metadata and data serialisation of var
 
 For more details on geoscience object schemas, see the geoscience object schema [documentation.](https://developer.seequent.com/docs/data-structures/geoscience-objects/)
 
-## Installation
-
-### Pre-requisites
+## Pre-requisites
 - Python >= 3.10
 
-Steps for setting up the development environment can be found in the [developer documentation](./DEVELOPER.md) 
+## Installation
+
+```
+pip install evo-schemas
+```
 
 ## Contributing
+
+Steps for setting up the development environment can be found in the [developer documentation](./DEVELOPER.md)
 
 Thank you for your interest in contributing to Seequent software. Please have a look over our [contribution guide](./CONTRIBUTING.md).
 
