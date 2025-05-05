@@ -1,4 +1,4 @@
-# Schemas
+# Geoscience object schemas
 
 The following schemas are supported:
 
