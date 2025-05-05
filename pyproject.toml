@@ -8,7 +8,7 @@ description = "Seequent Geoscience Object Schemas define metadata and data seria
 keywords = []
 readme = "README.md"
 license-files = ["LICENSE.md"]
-requires-python = ">=3.7"
+requires-python = ">=3.10"
 
 classifiers = [
     "Programming Language :: Python",
