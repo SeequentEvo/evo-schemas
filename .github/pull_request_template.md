@@ -14,5 +14,4 @@ By making a pull request, you confirm you agree to our [Contributor License Agre
 
 ## Checklist
 
-- [ ] I have submitted a Contributor License Agreement
 - [ ] I have read the contributing guide and the code of conduct
