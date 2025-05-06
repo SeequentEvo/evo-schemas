@@ -8,7 +8,7 @@ description = "Seequent Geoscience Object Schemas define metadata and data seria
 keywords = []
 readme = "README.md"
 license-files = ["LICENSE.md"]
-requires-python = ">=3.7"
+requires-python = ">=3.10"
 
 classifiers = [
     "Programming Language :: Python",
@@ -61,7 +61,7 @@ repository = "https://github.com/seequentevo/evo-schemas"
 
 [tool.black]
 line-length = 120
-target-version = ['py37', 'py38', 'py39', 'py310', 'py311']
+target-version = ['py310', 'py311']
 
 [tool.ruff]
 line-length = 120
