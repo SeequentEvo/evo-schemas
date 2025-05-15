@@ -3,7 +3,7 @@ import FlatProperties from './_generated/flatmd/objects/non-parametric-continuou
 
 # non-parametric-continuous-cumulative-distribution
 
-<SchemaUri uri="schema/objects/non-parametric-continuous-cumulative-distribution/1.1.0/non-parametric-continuous-cumulative-distribution.schema.json" />
+<SchemaUri uri="schema/objects/non-parametric-continuous-cumulative-distribution/1.2.0/non-parametric-continuous-cumulative-distribution.schema.json" />
 
 The non-parametric-continuous-cumulative-distribution object captures the statistical cumulative distribution function (CDF) of a property. It is non-parametric since the CDF is not characterized by a known distribution (e.g., normal or lognormal) or by a mathematical formula. Instead, the cumulative probability is calculated directly from the data and from an extrapolation function if the data does not capture the full range of possible values.
 
