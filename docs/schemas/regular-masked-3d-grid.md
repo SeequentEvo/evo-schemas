@@ -3,7 +3,7 @@ import FlatProperties from './_generated/flatmd/objects/regular-masked-3d-grid-1
 
 # regular-masked-3d-grid
 
-<SchemaUri uri="schema/objects/regular-masked-3d-grid/1.2.0/regular-masked-3d-grid.schema.json" />
+<SchemaUri uri="schema/objects/regular-masked-3d-grid/1.3.0/regular-masked-3d-grid.schema.json" />
 
 The regular-masked-3d-grid object captures the geometry and attributes of a regular grid with inactive cells. This object is used to represent a 3D grid where only active cells are considered for attribute properties. As a result, the size of the attribute data can be much smaller than the underlying regular grid.
 

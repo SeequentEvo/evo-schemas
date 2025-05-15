@@ -3,7 +3,7 @@ import FlatProperties from './_generated/flatmd/objects/downhole-intervals-1.3.0
 
 # downhole-intervals
 
-<SchemaUri uri="schema/objects/downhole-intervals/1.2.0/downhole-intervals.schema.json" />
+<SchemaUri uri="schema/objects/downhole-intervals/1.3.0/downhole-intervals.schema.json" />
 
 The downhole-intervals object captures the downhole geometry and data once desurveyed and possibly composited into target length intervals. They are represented as a series of lines grouped by hole ID.
 
