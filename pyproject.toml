@@ -57,7 +57,10 @@ release = [
 
 
 [project.urls]
-repository = "https://github.com/seequentevo/evo-schemas"
+Source = "https://github.com/SeequentEvo/evo-schemas"
+Tracker = "https://github.com/SeequentEvo/evo-schemas/issues"
+Homepage = "https://www.seequent.com/"
+Documentation = "https://developer.seequent.com/"
 
 [tool.black]
 line-length = 120
