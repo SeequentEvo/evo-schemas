@@ -1,5 +1,5 @@
 name: RFC
-description: Raise an RFC to discuss a significant change to the package that requires discussion and wider input.
+description: Raise an RFC to discuss a significant change to the project that requires discussion and wider input.
 title: "RFC: "
 labels: ["rfc", "rfc/open"]
 body:
