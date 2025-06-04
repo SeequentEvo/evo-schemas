@@ -1,0 +1,38 @@
+name: Bug report
+description: Report a bug you've found, or something not working correctly.
+title: "Bug: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to raise a bug report. Please provide a summary of the issue below.
+  - type: textarea
+    id: description
+    attributes:
+      label: What's the problem?
+      description: Please describe what's happening, how you got to the issue, and what you expect to happen.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Enter the version of the package you have installed.
+      placeholder: v1.2.3
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Extra context
+      description: Provide any extra context, example code, steps to reproduce the issue, log output, etc.
+      render: shell
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Contributing guidelines
+      description: By submitting this issue, you acknowledge you've read our [contributing guidelines.](https://github.com/SeequentEvo/evo-schemas/blob/main/CONTRIBUTING.md)
+      options:
+        - label: I have read the contributing guidelines.
+          required: true
