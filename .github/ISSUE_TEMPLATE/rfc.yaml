@@ -1,0 +1,63 @@
+name: RFC
+description: Raise an RFC to discuss a significant change to the package that requires discussion and wider input.
+title: "RFC: "
+labels: ["rfc", "rfc/open"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to raise an RFC. Once created, the RFC will remain open for a period of time while feedback from the wider community is gathered. For more information about the RFC lifecycle, see ["Open source" in the Seequent Developer Portal.](https://developer.seequent.com/docs/guides/open-source)
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Provide a brief explanation of the change.
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Why would this change be valuable? What use cases does it support? What is the expected outcome?
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Basic example
+      description: If the proposal involves a new or changed API, include a basic code example.
+  - type: textarea
+    id: details
+    attributes:
+      label: Detailed design
+      description: Provide a more detailed explanation of your design. Explain in enough detail for somebody familiar with Evo to understand. Consider specifics, corner-cases, and include examples of how the change will be used or implemented.
+    validations:
+      required: true
+  - type: textarea
+    id: drawbacks
+    attributes:
+      label: Drawbacks
+      description: Why should we _not_ do this? Please consider implementation cost (code size and complexity), impact on teaching people, integration with other existing systems and features, cost of migration if changes are breaking changes. There are tradeoffs to choosing any path. Attempt to identify them here.
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives
+      description: What other designs have been considered? What is the impact of not doing this?
+  - type: textarea
+    id: adoption
+    attributes:
+      label: Adoption strategy
+      description: If this proposal is implemented, how will existing developers adopt it? Is this a breaking change? Should it be coordinated with other projects or libraries?
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything extra
+      description: Provide anything extra that may seem relevant. For example, relevant links, log files, operating system versions, etc.
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Contributing guidelines
+      description: By submitting this issue, you acknowledge you've read our [contributing guidelines.](https://github.com/SeequentEvo/evo-schemas/blob/main/CONTRIBUTING.md)
+      options:
+        - label: I have read the contributing guidelines
+          required: true
