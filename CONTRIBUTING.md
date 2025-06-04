@@ -22,6 +22,13 @@ If you can't find an existing issue that represents your request, open a new iss
 provide a clear description of the problem or idea, along with any necessary context (software version, operating
 system, example code, steps to reproduce, etc.). We also welcome pull requests to fix bugs instead of opening issues!
 
+### RFCs (Request for Comments)
+
+An RFC (request for comments) is a way of gathering broader discussion on a proposed change you would like to make. You
+can open an RFC at any time by creating an issue, and selecting the "RFC" issue type.
+
+For more information on the RFC lifecycle, please see ["Open source" in the Seequent Developer Portal.](https://developer.seequent.com/docs/guides/open-source)
+
 ## Opening a pull request
 
 We welcome all forms of pull requests, and strive to ensure contributions are reviewed and merged promptly.
