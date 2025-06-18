@@ -29,7 +29,7 @@ Fields:
 
 * `name`: user friendly name for the part. The name is not guaranteed to be unique from other geometry-part’s.
 
-* `data_source`?: If a BRep/mesh is generated from another Evo object, the data source link is useful to support automation workflows. Placing the data_source in the part extends this concept to other objects.
+* `data_source`: If a BRep/mesh is generated from another Evo object, the data source link is useful to support automation workflows. Placing the data_source in the part extends this concept to other objects.
 
   Example use cases:
   - auto update a model on change to bore hole logs
