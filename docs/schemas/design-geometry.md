@@ -29,11 +29,11 @@ Fields:
 
 * `name`: user friendly name for the part. The name is not guaranteed to be unique from other geometry-part’s.
 
-* `data_source`?: If a BRep/mesh is generated from another EVO object, the data source link is useful to support automation workflows. Placing the data_source in the part extends this concept to other objects.
+* `data_source`: If a BRep/mesh is generated from another Evo object, the data source link is useful to support automation workflows. Placing the data_source in the part extends this concept to other objects.
 
   Example use cases:
   - auto update a model on change to bore hole logs
-  - auto update cross section when leap-frog pushes new cross sections to EVO.
+  - auto update cross section when leap-frog pushes new cross sections to Evo.
 
 * `feature`: We use the feature as an identifier for the kind of 'thing' represented by the part. The feature is one of:
   - "Void"
