@@ -6,7 +6,7 @@
 </p>
 <p align="center">
     <a href="https://developer.seequent.com/" target="_blank">Seequent Developer Portal</a>
-    &bull; <a href="https://community.seequent.com/" target="_blank">Seequent Community</a>
+    &bull; <a href="https://community.seequent.com/group/19-evo" target="_blank">Seequent Community</a>
     &bull; <a href="https://seequent.com" target="_blank">Seequent website</a>
 </p>
 
