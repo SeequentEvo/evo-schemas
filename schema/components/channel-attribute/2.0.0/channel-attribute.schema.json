@@ -1,0 +1,45 @@
+{
+  "$id": "/components/channel-attribute/2.0.0/channel-attribute.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "An attribute for a channel.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/channel-attribute-properties/1.0.0/channel-attribute-properties.schema.json"
+    },
+    {
+      "properties": {
+        "attribute": {
+          "description": "Attribute associated with the channel.",
+          "type": "object",
+          "oneOf": [
+            {
+              "$ref": "/components/bool-attribute/1.1.0/bool-attribute.schema.json"
+            },
+            {
+              "$ref": "/components/continuous-attribute/1.1.0/continuous-attribute.schema.json"
+            },
+            {
+              "$ref": "/components/continuous-ensemble/1.1.0/continuous-ensemble.schema.json"
+            },
+            {
+              "$ref": "/components/category-attribute/1.1.0/category-attribute.schema.json"
+            },
+            {
+              "$ref": "/components/category-ensemble/1.1.0/category-ensemble.schema.json"
+            },
+            {
+              "$ref": "/components/date-time-attribute/1.1.0/date-time-attribute.schema.json"
+            },
+            {
+              "$ref": "/components/string-attribute/1.1.0/string-attribute.schema.json"
+            }
+          ]
+        }
+      },
+      "required": [
+        "attribute"
+      ]
+    }
+  ]
+}

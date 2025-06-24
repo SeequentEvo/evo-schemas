@@ -1,0 +1,88 @@
+{
+  "$id": "/components/survey-line/2.0.0/survey-line.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A survey line with coordinates as first-class properties.",
+  "type": "object",
+  "properties": {
+    "line_number": {
+      "description": "The number of the line, can be alphanumeric.",
+      "type": "string"
+    },
+    "date": {
+      "description": "Date.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "version": {
+      "description": "Version.",
+      "type": "integer",
+      "default": 0,
+      "minimum": 0
+    },
+    "group": {
+      "description": "Represents the group when the data is collected.",
+      "type": "integer",
+      "default": 0,
+      "minimum": 0
+    },
+    "type": {
+      "description": "Survey line type.",
+      "enum": [
+        "Line",
+        "Base",
+        "Tie",
+        "Trend",
+        "Special",
+        "Random",
+        "Test"
+      ],
+      "type": "string",
+      "default": "Line"
+    },
+    "coordinates": {
+      "type": "object",
+      "description": "First-class survey location coordinates.",
+      "allOf": [
+        {
+          "$ref": "/components/channel-attribute-properties/1.0.0/channel-attribute-properties.schema.json"
+        },
+        {
+          "properties": {
+            "name": {
+              "const": "coordinates"
+            },
+            "attribute_type": {
+              "const": "ensemble_continuous"
+            },
+            "nan_description": {
+              "description": "Describes the values used to designate not-a-number.",
+              "$ref": "/components/nan-continuous/1.0.1/nan-continuous.schema.json"
+            },
+            "values": {
+              "description": "Array of coordinate values. Each element is an array of 3 floats [x, y, z].",
+              "$ref": "/elements/float-array-3/1.0.1/float-array-3.schema.json"
+            }
+          },
+          "required": [
+            "attribute_type",
+            "nan_description",
+            "values"
+          ]
+        }
+      ]
+    },
+    "channel_attributes": {
+      "title": "List of Channel Attributes",
+      "description": "List of channel attributes.",
+      "type": "array",
+      "items": {
+        "$ref": "/components/channel-attribute/2.0.0/channel-attribute.schema.json"
+      }
+    }
+  },
+  "required": [
+    "line_number",
+    "type",
+    "channel_attributes"
+  ]
+}
