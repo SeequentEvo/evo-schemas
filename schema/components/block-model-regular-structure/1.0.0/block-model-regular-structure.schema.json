@@ -1,0 +1,53 @@
+{
+  "$id": "/components/block-model-regular-structure/1.0.0/block-model-regular-structure.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "The structure of a regular, non-subblocked block model.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "model_type": {
+      "description": "The model geometry type.",
+      "type": "string",
+      "const": "regular"
+    },
+    "n_blocks": {
+      "description": "The number of blocks in the model. [nx, ny, nz]",
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "integer",
+        "minimum": 1
+      }
+    },
+    "block_size": {
+      "description": "The size of each block in the model. [dx, dy, dz]",
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "number",
+        "exclusiveMinimum": 0
+      }
+    },
+    "origin": {
+      "description": "The coordinates of the model origin. [x, y, z]",
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "number"
+      }
+    },
+    "rotation": {
+      "description": "The orientation of the model.",
+      "$ref": "/components/rotation/1.1.0/rotation.schema.json"
+    }
+  },
+  "required": [
+    "model_type",
+    "n_blocks",
+    "block_size",
+    "origin"
+  ]
+}

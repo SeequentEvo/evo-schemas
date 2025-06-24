@@ -1,0 +1,31 @@
+{
+  "$id": "/components/block-model-category-attribute/1.0.0/block-model-category-attribute.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A block model category/string attribute stored by the Block Model Service.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-category-attribute/1.0.0/base-category-attribute.schema.json"
+    },
+    {
+      "properties": {
+        "attribute_type": {
+          "description": "The data type of the attribute as stored in the Block Model Service.",
+          "enum": [
+            "Boolean",
+            "Utf8"
+          ]
+        },
+        "block_model_column_uuid": {
+          "description": "The unique ID of the attribute on the block model.",
+          "type": "string",
+          "format": "uuid"
+        }
+      }
+    }
+  ],
+  "required": [
+    "attribute_type",
+    "block_model_column_uuid"
+  ]
+}
