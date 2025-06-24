@@ -1,0 +1,57 @@
+{
+  "schema": "/objects/block-model/1.0.0/block-model.schema.json",
+  "name": "Example Block Model",
+  "uuid": "00000000-0000-0000-0000-000000000003",
+  "description": "This is example data to ensure the object validates properly.",
+  "bounding_box": {
+    "min_x": 0,
+    "max_x": 15,
+    "min_y": 0,
+    "max_y": 15,
+    "min_z": 0,
+    "max_z": 50.0
+  },
+  "coordinate_reference_system": {
+    "epsg_code": 1024
+  },
+  "block_model_uuid": "00000000-0000-0000-0000-000000000004",
+  "block_model_version_uuid": "00000000-0000-0000-0000-000000000016",
+  "geometry": {
+    "model_type": "variable-octree",
+    "origin": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_parent_blocks": [
+      10,
+      10,
+      20
+    ],
+    "parent_block_size": [
+      1.5,
+      1.5,
+      2.5
+    ],
+    "n_subblocks_per_parent": [
+      8,
+      16,
+      4
+    ],
+    "rotation": {
+      "dip_azimuth": 70.0,
+      "dip": 50.0,
+      "pitch": 1.0
+    }
+  },
+  "attributes": [
+    {
+      "name": "example_attr",
+      "key": "00000000-0000-0000-0000-000000000032",
+      "block_model_column_uuid": "00000000-0000-0000-0000-000000000032",
+      "attribute_type": "Date32"
+    }
+  ],
+  "tags": {},
+  "extensions": {}
+}

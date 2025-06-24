@@ -1,0 +1,42 @@
+{
+  "$id": "/components/block-model-attribute/1.0.0/block-model-attribute.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A block model attribute.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-continuous-attribute/1.0.0/base-continuous-attribute.schema.json"
+    },
+    {
+      "properties": {
+        "attribute_type": {
+          "description": "The data type of the attribute as stored in the Block Model Service.",
+          "enum": [
+            "Int8",
+            "Int16",
+            "Int32",
+            "Int64",
+            "UInt8",
+            "UInt16",
+            "UInt32",
+            "UInt64",
+            "Float16",
+            "Float32",
+            "Float64",
+            "Date32",
+            "Timestamp"
+          ]
+        },
+        "block_model_column_uuid": {
+          "description": "The unique ID of the attribute on the block model.",
+          "type": "string",
+          "format": "uuid"
+        }
+      }
+    }
+  ],
+  "required": [
+    "attribute_type",
+    "block_model_column_uuid"
+  ]
+}
