@@ -1,0 +1,24 @@
+{
+  "$schema": "/components/block-model-regular-structure/1.0.0/block-model-regular-structure.schema.json",
+  "model_type": "regular",
+  "origin": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "n_blocks": [
+    10,
+    10,
+    20
+  ],
+  "block_size": [
+    1.5,
+    1.5,
+    2.5
+  ],
+  "rotation": {
+    "dip_azimuth": 91.0,
+    "dip": 14.5,
+    "pitch": 11.0
+  }
+}

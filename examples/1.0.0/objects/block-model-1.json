@@ -1,0 +1,57 @@
+{
+  "schema": "/objects/block-model/1.0.0/block-model.schema.json",
+  "name": "Example Block Model",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "description": "This is example data to ensure the object validates properly.",
+  "bounding_box": {
+    "min_x": 0,
+    "max_x": 15,
+    "min_y": 0,
+    "max_y": 15,
+    "min_z": 0,
+    "max_z": 50.0
+  },
+  "coordinate_reference_system": {
+    "epsg_code": 1024
+  },
+  "block_model_uuid": "00000000-0000-0000-0000-000000000001",
+  "block_model_version_uuid": "00000000-0000-0000-0000-000000000002",
+  "geometry": {
+    "model_type": "regular",
+    "origin": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_blocks": [
+      10,
+      10,
+      20
+    ],
+    "block_size": [
+      1.5,
+      1.5,
+      2.5
+    ],
+    "rotation": {
+      "dip_azimuth": 0.0,
+      "dip": 0.0,
+      "pitch": 0.0
+    }
+  },
+  "attributes": [
+    {
+      "name": "AU",
+      "key": "00000000-0000-0000-0000-000000000003",
+      "block_model_column_uuid": "00000000-0000-0000-0000-000000000003",
+      "attribute_type": "Float16",
+      "attribute_description": {
+        "discipline": "Geochemistry",
+        "type": "Gold",
+        "unit": "%"
+      }
+    }
+  ],
+  "tags": {},
+  "extensions": {}
+}

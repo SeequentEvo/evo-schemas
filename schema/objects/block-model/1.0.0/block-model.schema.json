@@ -1,0 +1,65 @@
+{
+  "$id": "/objects/block-model/1.0.0/block-model.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A reference to a block model stored in the Block Model Service.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.1.0/base-spatial-data-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/block-model/1.0.0/block-model.schema.json"
+        },
+        "block_model_uuid": {
+          "description": "The unique ID of the block model in the Block Model Service.",
+          "type": "string",
+          "format": "uuid"
+        },
+        "block_model_version_uuid": {
+          "description": "The unique ID of this version of the block model in the Block Model Service.",
+          "type": "string",
+          "format": "uuid"
+        },
+        "geometry": {
+          "description": "The geometry (including subblocking parameters, if applicable) of the block model.",
+          "oneOf": [
+            {
+              "$ref": "/components/block-model-flexible-structure/1.0.0/block-model-flexible-structure.schema.json"
+            },
+            {
+              "$ref": "/components/block-model-fully-subblocked-structure/1.0.0/block-model-fully-subblocked-structure.schema.json"
+            },
+            {
+              "$ref": "/components/block-model-regular-structure/1.0.0/block-model-regular-structure.schema.json"
+            },
+            {
+              "$ref": "/components/block-model-variable-octree-structure/1.0.0/block-model-variable-octree-structure.schema.json"
+            }
+          ]
+        },
+        "attributes": {
+          "description": "The attributes found on this version of the block model.",
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "/components/block-model-attribute/1.0.0/block-model-attribute.schema.json"
+              },
+              {
+                "$ref": "/components/block-model-category-attribute/1.0.0/block-model-category-attribute.schema.json"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "block_model_uuid",
+    "geometry"
+  ],
+  "unevaluatedProperties": false
+}

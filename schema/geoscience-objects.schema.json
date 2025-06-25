@@ -5,6 +5,9 @@
   "type": "object",
   "oneOf": [
     {
+      "$ref": "/objects/block-model/1.0.0/block-model.schema.json"
+    },
+    {
       "$ref": "/objects/design-geometry/1.0.1/design-geometry.schema.json"
     },
     {

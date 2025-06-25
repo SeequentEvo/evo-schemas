@@ -1,0 +1,65 @@
+{
+  "$id": "/components/block-model-flexible-structure/1.0.0/block-model-flexible-structure.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "The structure of a flexibly-subblocked block model. Subblocking is carried out by dividing each parent block into a fixed grid of subblocks defined by n_subblocks_per_parent, before recombining the subblocks into larger chunks. The resulting subblocks can have different sizes within the same parent block, but must remain cuboid and completely fill the parent block.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "model_type": {
+      "description": "The model geometry type.",
+      "type": "string",
+      "const": "flexible"
+    },
+    "n_parent_blocks": {
+      "description": "The number of parent blocks in the model. [nx, ny, nz]",
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "integer",
+        "minimum": 1
+      }
+    },
+    "parent_block_size": {
+      "description": "The size of each parent block in the model. [dx, dy, dz]",
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "number",
+        "exclusiveMinimum": 0
+      }
+    },
+    "n_subblocks_per_parent": {
+      "description": "The number of blocks per axis in the underlying subblock grid in each parent block in the model. [nx, ny, nz]",
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 100
+      }
+    },
+    "origin": {
+      "description": "The coordinates of the model origin. [x, y, z]",
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "number"
+      }
+    },
+    "rotation": {
+      "description": "The orientation of the model.",
+      "$ref": "/components/rotation/1.1.0/rotation.schema.json"
+    }
+  },
+  "required": [
+    "model_type",
+    "n_parent_blocks",
+    "parent_block_size",
+    "n_subblocks_per_parent",
+    "origin"
+  ]
+}
