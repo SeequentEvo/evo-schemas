@@ -1,0 +1,187 @@
+{
+  "$id": "/objects/drilling-campaign/1.0.0/drilling-campaign.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A planned drillholes and interim drillhole data for a drilling campaign.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.1.0/base-spatial-data-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/drilling-campaign/1.0.0/drilling-campaign.schema.json"
+        },
+        "depth_units": {
+          "description": "The units of depth for the drillholes.",
+          "$ref": "/elements/unit/1.0.1/categories/unit-length.schema.json"
+        },
+        "hole_id": {
+          "description": "Hole IDs.",
+          "$ref": "/components/category-data/1.0.1/category-data.schema.json"
+        },
+        "planned": {
+          "description": "Planned data for the drilling campaign.",
+          "allOf": [
+            {
+              "properties": {
+                "collar": {
+                  "description": "Collar data for the planned drillholes.",
+                  "$ref": "#/$defs/collar"
+                },
+                "path": {
+                  "description": "The path taken by the downhole segment. Columns: distance, inclination, azimuth, dip, toolface, lift rate, drift rate.",
+                  "allOf": [
+                    {
+                      "$ref": "/elements/float-array-md/1.0.1/float-array-md.schema.json",
+                      "properties": {
+                        "width": {
+                          "description": "number of columns",
+                          "const": 7
+                        }
+                      },
+                      "required": [
+                        "width"
+                      ]
+                    },
+                    {
+                      "$ref": "/components/attribute-list-property/1.2.0/attribute-list-property.schema.json"
+                    }
+                  ]
+                },
+                "results": {
+                  "description": "Planned attributes for the drilling campaign.",
+                  "type": "array",
+                  "oneOf": [
+                    {
+                      "$ref": "/components/interval-table/1.2.0/interval-table.schema.json"
+                    },
+                    {
+                      "$ref": "/components/distance-table/1.2.0/distance-table.schema.json"
+                    },
+                    {
+                      "$ref": "/components/data-table/1.2.0/data-table.schema.json"
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "required": [
+            "collar",
+            "path"
+          ]
+        },
+        "interim": {
+          "description": "Interim drillhole data for the drilling campaign.",
+          "allOf": [
+            {
+              "properties": {
+                "collar": {
+                  "description": "Collar data for the interim drillholes.",
+                  "$ref": "#/$defs/collar"
+                },
+                "path": {
+                  "description": "The path taken by the downhole segment. Columns: distance, azimuth, dip.",
+                  "allOf": [
+                    {
+                      "$ref": "/elements/float-array-3/1.0.1/float-array-3.schema.json"
+                    },
+                    {
+                      "$ref": "/components/attribute-list-property/1.2.0/attribute-list-property.schema.json"
+                    }
+                  ]
+                },
+                "results": {
+                  "description": "Interim attributes for the drilling campaign.",
+                  "type": "array",
+                  "oneOf": [
+                    {
+                      "$ref": "/components/interval-table/1.2.0/interval-table.schema.json"
+                    },
+                    {
+                      "$ref": "/components/distance-table/1.2.0/distance-table.schema.json"
+                    },
+                    {
+                      "$ref": "/components/data-table/1.2.0/data-table.schema.json"
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "required": [
+            "collar",
+            "path"
+          ]
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "depth_units",
+    "hole_id",
+    "planned"
+  ],
+  "$defs": {
+    "holes": {
+      "type": "object",
+      "description": "The indices, counts, and offsets into locations of each hole. Columns: hole_index, offset, count.",
+      "properties": {
+        "data": {
+          "description": "The binary data for the holes. Columns: hole_index, offset, count.",
+          "$ref": "/elements/binary-blob/1.0.1/binary-blob.schema.json"
+        },
+        "length": {
+          "type": "integer",
+          "description": "length of array",
+          "minimum": 0,
+          "default": 0
+        },
+        "width": {
+          "description": "number of columns",
+          "const": 3
+        },
+        "data_type": {
+          "type": "string",
+          "description": "Data type for the columns. 1st column is of type int32, 2nd is uint64 and 3rd is uint64.",
+          "const": "int32/uint64/uint64"
+        }
+      },
+      "required": [
+        "data",
+        "length",
+        "width",
+        "data_type"
+      ]
+    },
+    "collar": {
+      "type": "object",
+      "description": "The collar data for the drilling campaign.",
+      "properties": {
+        "locations": {
+          "description": "Collar locations for the drilling campaign.",
+          "$ref": "/elements/float-array-3/1.0.1/float-array-3.schema.json"
+        },
+        "holes": {
+          "description": "Indices, offsets and segment counts of each hole.",
+          "$ref": "#/$defs/holes"
+        },
+        "depths": {
+          "description": "Collar depth for the drilling campaign.",
+          "$ref": "/elements/float-array-1/1.0.1/float-array-1.schema.json"
+        },
+        "attributes": {
+          "description": "Attributes associated with the collar data.",
+          "$ref": "/components/attribute-list-property/1.2.0/attribute-list-property.schema.json"
+        }
+      },
+      "required": [
+        "locations",
+        "holes",
+        "depths"
+      ]
+    }
+  }
+}
