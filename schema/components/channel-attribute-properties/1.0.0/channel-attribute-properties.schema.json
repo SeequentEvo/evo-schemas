@@ -1,0 +1,29 @@
+{
+  "$id": "/components/channel-attribute-properties/1.0.0/channel-attribute-properties.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Common properties for channel attributes in geophysical data.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the channel."
+    },
+    "start_fiducial": {
+      "description": "Starting fiducial number.",
+      "type": "number"
+    },
+    "fiducial_increment": {
+      "description": "Fiducial increment amount.",
+      "type": "number",
+      "exclusiveMinimum": 0.0
+    },
+    "significant_digits": {
+      "description": "Significant digits.",
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "required": [
+    "name"
+  ]
+}
