@@ -38,6 +38,9 @@
       "$ref": "/objects/downhole-intervals/1.3.0/downhole-intervals.schema.json"
     },
     {
+      "$ref": "/objects/drilling-campaign/1.0.0/drilling-campaign.schema.json"
+    },
+    {
       "$ref": "/objects/frequency-domain-electromagnetic/1.0.0/frequency-domain-electromagnetic.schema.json"
     },
     {
