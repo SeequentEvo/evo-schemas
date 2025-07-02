@@ -125,37 +125,6 @@
     "planned"
   ],
   "$defs": {
-    "holes": {
-      "type": "object",
-      "description": "The indices, counts, and offsets into locations of each hole. Columns: hole_index, offset, count.",
-      "properties": {
-        "data": {
-          "description": "The binary data for the holes. Columns: hole_index, offset, count.",
-          "$ref": "/elements/binary-blob/1.0.1/binary-blob.schema.json"
-        },
-        "length": {
-          "type": "integer",
-          "description": "length of array",
-          "minimum": 0,
-          "default": 0
-        },
-        "width": {
-          "description": "number of columns",
-          "const": 3
-        },
-        "data_type": {
-          "type": "string",
-          "description": "Data type for the columns. 1st column is of type int32, 2nd is uint64 and 3rd is uint64.",
-          "const": "int32/uint64/uint64"
-        }
-      },
-      "required": [
-        "data",
-        "length",
-        "width",
-        "data_type"
-      ]
-    },
     "collar": {
       "type": "object",
       "description": "The collar data for the drilling campaign.",
@@ -166,7 +135,7 @@
         },
         "holes": {
           "description": "Indices, offsets and segment counts of each hole.",
-          "$ref": "#/$defs/holes"
+          "$ref": "/components/hole-chunks/1.0.0/hole-chunks.schema.json"
         },
         "depths": {
           "description": "Collar depth for the drilling campaign.",
