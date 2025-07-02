@@ -26,6 +26,9 @@
       "$ref": "/objects/downhole-collection/1.3.0/downhole-collection.schema.json"
     },
     {
+      "$ref": "/objects/downhole-collection/1.4.0/downhole-collection.schema.json"
+    },
+    {
       "$ref": "/objects/downhole-intervals/1.0.1/downhole-intervals.schema.json"
     },
     {
