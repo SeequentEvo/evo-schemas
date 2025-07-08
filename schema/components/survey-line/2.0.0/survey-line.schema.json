@@ -41,33 +41,14 @@
     },
     "coordinates": {
       "type": "object",
-      "description": "First-class survey location coordinates.",
+      "description": "Survey location coordinates.",
       "allOf": [
         {
-          "$ref": "/components/channel-attribute-properties/1.0.0/channel-attribute-properties.schema.json"
+          "$ref": "/elements/float-array-3/1.0.1/float-array-3.schema.json",
+          "description": "Coordinates. Columns: x, y, z."
         },
         {
-          "properties": {
-            "name": {
-              "const": "coordinates"
-            },
-            "attribute_type": {
-              "const": "ensemble_continuous"
-            },
-            "nan_description": {
-              "description": "Describes the values used to designate not-a-number.",
-              "$ref": "/components/nan-continuous/1.0.1/nan-continuous.schema.json"
-            },
-            "values": {
-              "description": "Array of coordinate values. Each element is an array of 3 floats [x, y, z].",
-              "$ref": "/elements/float-array-3/1.0.1/float-array-3.schema.json"
-            }
-          },
-          "required": [
-            "attribute_type",
-            "nan_description",
-            "values"
-          ]
+          "$ref": "/components/channel-attribute-properties/1.0.0/channel-attribute-properties.schema.json"
         }
       ]
     },
