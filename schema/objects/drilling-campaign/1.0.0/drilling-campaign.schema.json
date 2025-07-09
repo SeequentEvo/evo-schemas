@@ -31,38 +31,18 @@
                 },
                 "path": {
                   "description": "The path taken by the downhole segment. Columns: distance, inclination, azimuth, dip, toolface, lift rate, drift rate.",
-                  "allOf": [
+                  "oneOf": [
                     {
-                      "$ref": "/elements/float-array-md/1.0.1/float-array-md.schema.json",
-                      "properties": {
-                        "width": {
-                          "description": "number of columns",
-                          "const": 7
-                        }
-                      },
-                      "required": [
-                        "width"
-                      ]
+                      "$ref": "#/$defs/natural_devatiaton"
                     },
                     {
-                      "$ref": "/components/attribute-list-property/1.2.0/attribute-list-property.schema.json"
+                      "$ref": "#/$defs/mixed_devatiaton"
                     }
                   ]
                 },
                 "results": {
-                  "description": "Planned attributes for the drilling campaign.",
-                  "type": "array",
-                  "oneOf": [
-                    {
-                      "$ref": "/components/interval-table/1.2.0/interval-table.schema.json"
-                    },
-                    {
-                      "$ref": "/components/distance-table/1.2.0/distance-table.schema.json"
-                    },
-                    {
-                      "$ref": "/components/data-table/1.2.0/data-table.schema.json"
-                    }
-                  ]
+                  "description": "Actual attributes for the interim data.",
+                  "$ref": "#/$defs/results_array"
                 }
               }
             }
@@ -93,19 +73,8 @@
                   ]
                 },
                 "results": {
-                  "description": "Interim attributes for the drilling campaign.",
-                  "type": "array",
-                  "oneOf": [
-                    {
-                      "$ref": "/components/interval-table/1.2.0/interval-table.schema.json"
-                    },
-                    {
-                      "$ref": "/components/distance-table/1.2.0/distance-table.schema.json"
-                    },
-                    {
-                      "$ref": "/components/data-table/1.2.0/data-table.schema.json"
-                    }
-                  ]
+                  "description": "Interim attributes for the planned drillholes.",
+                  "$ref": "#/$defs/results_array"
                 }
               }
             }
@@ -150,6 +119,86 @@
         "locations",
         "holes",
         "depths"
+      ]
+    },
+    "results_array": {
+      "type": "array",
+      "description": "An array of results for the drilling campaign.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "/components/interval-table/1.2.0/interval-table.schema.json"
+          },
+          {
+            "$ref": "/components/distance-table/1.2.0/distance-table.schema.json"
+          },
+          {
+            "$ref": "/components/data-table/1.2.0/data-table.schema.json"
+          }
+        ]
+      }
+    },
+    "natural_devatiaton": {
+      "description": "The path taken by the planned drillhole using only natural deviations. Columns: distance, azimuth, dip, lift rate, drift rate, deviation rate distance",
+      "allOf": [
+        {
+          "properties": {
+            "deviation_type": {
+              "description": "Type of deviation",
+              "const": "natural"
+            }
+          },
+          "required": [
+            "deviation_type"
+          ]
+        },
+        {
+          "$ref": "/elements/float-array-6/1.0.1/float-array-6.schema.json"
+        },
+        {
+          "$ref": "/components/attribute-list-property/1.2.0/attribute-list-property.schema.json"
+        }
+      ]
+    },
+    "mixed_devatiaton": {
+      "description": "The path taken by the planned drillhole using both natural and directed deviations. Columns: distance, azimuth, dip, deviation type, lift rate, drift rate, deviation rate distance, tool face angle, dog leg severity",
+      "allOf": [
+        {
+          "properties": {
+            "deviation_type": {
+              "description": "Type of deviation",
+              "const": "mixed"
+            },
+            "data": {
+              "description": "Data stored as a binary blob.",
+              "$ref": "/elements/binary-blob/1.0.1/binary-blob.schema.json"
+            },
+            "length": {
+              "type": "integer",
+              "description": "Number of segments in the planned drillhole",
+              "minimum": 0,
+              "default": 0
+            },
+            "width": {
+              "type": "integer",
+              "description": "number of columns",
+              "const": 9
+            },
+            "data_type": {
+              "description": "data type",
+              "const": "float64/float64/float64/string/float64/float64/float64/float64/float64"
+            }
+          },
+          "required": [
+            "data",
+            "length",
+            "width",
+            "data_type"
+          ]
+        },
+        {
+          "$ref": "/components/attribute-list-property/1.2.0/attribute-list-property.schema.json"
+        }
       ]
     }
   }
