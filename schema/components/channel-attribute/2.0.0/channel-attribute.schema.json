@@ -8,11 +8,11 @@
       "$ref": "/components/channel-attribute-properties/1.0.0/channel-attribute-properties.schema.json"
     },
     {
-      "description": "Location of channel measurements relative to point of reference.",
-      "$ref": "/elements/coordinates-3d/1.0.0/coordinates-3d.schema.json"
-    },
-    {
       "properties": {
+        "location_offset": {
+          "description": "Location of channel measurements relative to the point of reference.",
+          "$ref": "/elements/coordinates-3d/1.0.0/coordinates-3d.schema.json"
+        },
         "attribute": {
           "description": "Attribute associated with the channel.",
           "type": "object",
