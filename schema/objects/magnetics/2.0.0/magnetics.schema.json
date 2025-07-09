@@ -42,15 +42,9 @@
             },
             "sensor_offsets": {
               "type": "array",
-              "description": "Sensor offsets.",
+              "description": "Sensor offsets relative to the point of reference.",
               "items": {
-                "type": "array",
-                "description": "Offset location, (x, y, z)-triple.",
-                "minItems": 3,
-                "maxItems": 3,
-                "items": {
-                  "type": "number"
-                }
+                "$ref": "/elements/coordinates-3d/1.0.0/coordinates-3d.schema.json"
               }
             }
           },
