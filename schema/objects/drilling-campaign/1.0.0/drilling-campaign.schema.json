@@ -12,6 +12,11 @@
         "schema": {
           "const": "/objects/drilling-campaign/1.0.0/drilling-campaign.schema.json"
         },
+        "type": {
+          "title": "Type",
+          "description": "The type of the planned drillholes.",
+          "const": "campaign"
+        },
         "depth_units": {
           "description": "The units of depth for the drillholes.",
           "$ref": "/elements/unit/1.0.1/categories/unit-length.schema.json"
@@ -107,8 +112,8 @@
           "$ref": "/components/hole-chunks/1.0.0/hole-chunks.schema.json"
         },
         "depths": {
-          "description": "Collar depth for the drilling campaign.",
-          "$ref": "/elements/float-array-1/1.0.1/float-array-1.schema.json"
+          "description": "The distances stored in columns final, target, current.",
+          "$ref": "/elements/float-array-3/1.0.1/float-array-3.schema.json"
         },
         "attributes": {
           "description": "Attributes associated with the collar data.",
