@@ -1,0 +1,7 @@
+{
+  "$schema": "/components/hole-chunks/1.0.0/hole-chunks.schema.json",
+  "width": 3,
+  "data_type": "int32/uint64/uint64",
+  "length": 30,
+  "data": "abababababababababababababababababababababababababababababababab"
+}
