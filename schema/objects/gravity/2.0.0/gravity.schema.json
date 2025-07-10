@@ -43,13 +43,8 @@
                 "description": "Base station name."
               },
               "location": {
-                "type": "array",
-                "description": "Base station location, (x, y, z)-triple.",
-                "maxItems": 3,
-                "minItems": 3,
-                "items": {
-                  "type": "number"
-                }
+                "description": "Base station location.",
+                "$ref": "/elements/coordinates-3d/1.0.0/coordinates-3d.schema.json"
               },
               "gravity_line_list": {
                 "description": "Base station gravity line list.",
