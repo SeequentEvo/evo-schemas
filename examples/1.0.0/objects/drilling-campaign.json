@@ -14,6 +14,7 @@
   "coordinate_reference_system": {
     "epsg_code": 1024
   },
+  "type": "campaign",
   "depth_units": "m",
   "hole_id": {
     "values": {
@@ -44,7 +45,7 @@
         "data": "abababababababababababababababababababababababababababababababab"
       },
       "depths": {
-        "width": 1,
+        "width": 3,
         "data_type": "float64",
         "length": 5,
         "data": "abababababababababababababababababababababababababababababababab"
