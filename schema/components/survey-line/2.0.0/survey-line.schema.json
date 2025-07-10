@@ -1,0 +1,68 @@
+{
+  "$id": "/components/survey-line/2.0.0/survey-line.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A survey line containing a line number, type, and channel attributes.",
+  "type": "object",
+  "properties": {
+    "line_number": {
+      "description": "The number of the line, can be alphanumeric.",
+      "type": "string"
+    },
+    "date": {
+      "description": "The date the survey line was conducted.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "version": {
+      "description": "The version of the survey line.",
+      "type": "integer",
+      "default": 0,
+      "minimum": 0
+    },
+    "group": {
+      "description": "The group of the survey line.",
+      "type": "integer",
+      "default": 0,
+      "minimum": 0
+    },
+    "type": {
+      "description": "Survey line type.",
+      "enum": [
+        "Line",
+        "Base",
+        "Tie",
+        "Trend",
+        "Special",
+        "Random",
+        "Test"
+      ],
+      "type": "string",
+      "default": "Line"
+    },
+    "locations": {
+      "type": "object",
+      "description": "Survey line locations.",
+      "allOf": [
+        {
+          "$ref": "/components/locations/1.0.1/locations.schema.json"
+        },
+        {
+          "$ref": "/components/channel-attribute-properties/1.0.0/channel-attribute-properties.schema.json"
+        }
+      ]
+    },
+    "channel_attributes": {
+      "title": "List of Channel Attributes",
+      "description": "List of channel attributes.",
+      "type": "array",
+      "items": {
+        "$ref": "/components/channel-attribute/2.0.0/channel-attribute.schema.json"
+      }
+    }
+  },
+  "required": [
+    "line_number",
+    "type",
+    "channel_attributes"
+  ]
+}
