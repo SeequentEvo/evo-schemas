@@ -45,9 +45,6 @@
       "allOf": [
         {
           "$ref": "/components/locations/1.0.1/locations.schema.json"
-        },
-        {
-          "$ref": "/components/channel-attribute-properties/1.0.0/channel-attribute-properties.schema.json"
         }
       ]
     },

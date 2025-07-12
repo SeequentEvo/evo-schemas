@@ -3,47 +3,43 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "An attribute for a channel.",
   "type": "object",
-  "allOf": [
-    {
-      "$ref": "/components/channel-attribute-properties/1.0.0/channel-attribute-properties.schema.json"
+  "properties": {
+    "channel_reference": {
+      "description": "A reference to the definition of the channel in the survey object header (the 'key' of the channel).",
+      "type": "string"
     },
-    {
-      "properties": {
-        "location_offset": {
-          "description": "Location of channel measurements relative to the point of reference.",
-          "$ref": "/elements/coordinates-3d/1.0.0/coordinates-3d.schema.json"
+    "fiducial_start": {
+      "description": "Starting fiducial number.",
+      "type": "number"
+    },
+    "fiducial_increment": {
+      "description": "Fiducial increment amount.",
+      "type": "number",
+      "exclusiveMinimum": 0.0
+    },
+    "values": {
+      "description": "Values associated with the channel.",
+      "type": "object",
+      "oneOf": [
+        {
+          "$ref": "/elements/bool-array-1/1.0.1/bool-array-1.schema.json"
         },
-        "attribute": {
-          "description": "Attribute associated with the channel.",
-          "type": "object",
-          "oneOf": [
-            {
-              "$ref": "/components/bool-attribute/1.1.0/bool-attribute.schema.json"
-            },
-            {
-              "$ref": "/components/continuous-attribute/1.1.0/continuous-attribute.schema.json"
-            },
-            {
-              "$ref": "/components/continuous-ensemble/1.1.0/continuous-ensemble.schema.json"
-            },
-            {
-              "$ref": "/components/category-attribute/1.1.0/category-attribute.schema.json"
-            },
-            {
-              "$ref": "/components/category-ensemble/1.1.0/category-ensemble.schema.json"
-            },
-            {
-              "$ref": "/components/date-time-attribute/1.1.0/date-time-attribute.schema.json"
-            },
-            {
-              "$ref": "/components/string-attribute/1.1.0/string-attribute.schema.json"
-            }
-          ]
+        {
+          "$ref": "/elements/float-array-1/1.0.1/float-array-1.schema.json"
+        },
+        {
+          "$ref": "/elements/float-array-md/1.0.1/float-array-md.schema.json"
+        },
+        {
+          "$ref": "/elements/integer-array-1/1.0.1/integer-array-1.schema.json"
+        },
+        {
+          "$ref": "/elements/date-time-array/1.0.1/date-time-array.schema.json"
+        },
+        {
+          "$ref": "/elements/string-array/1.0.1/string-array.schema.json"
         }
-      },
-      "required": [
-        "attribute"
       ]
     }
-  ]
+  }
 }

@@ -1,0 +1,32 @@
+{
+  "$id": "/components/channel-definition/1.0.0/channel-definition.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Common properties for channel attributes in geophysical data.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the channel."
+    },
+    "key": {
+      "type": "string",
+      "description": "An identifier of the channel. Must be unique within a list of channels."
+    },
+    "offset": {
+      "description": "Offset of channel measurements relative to the point of reference.",
+      "$ref": "/elements/coordinates-3d/1.0.0/coordinates-3d.schema.json"
+    },
+    "significant_digits": {
+      "description": "Significant digits.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "channel_description": {
+      "description": "Attributes describing the channel data.",
+      "$ref": "/components/attribute-description/1.0.1/attribute-description.schema.json"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}
