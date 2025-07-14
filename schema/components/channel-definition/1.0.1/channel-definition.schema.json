@@ -27,6 +27,7 @@
     }
   },
   "required": [
-    "name"
+    "name",
+    "key"
   ]
 }
