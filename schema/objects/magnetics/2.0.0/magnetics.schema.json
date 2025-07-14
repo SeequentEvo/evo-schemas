@@ -77,7 +77,7 @@
                   "VMG"
                 ]
               },
-              "magnetic_line_list": {
+              "line_list": {
                 "description": "Base station magnetic line list.",
                 "type": "array",
                 "minItems": 1,
@@ -91,7 +91,7 @@
               "name",
               "location",
               "survey_type",
-              "magnetic_line_list"
+              "line_list"
             ]
           }
         },
@@ -100,10 +100,10 @@
           "type": "array",
           "minItems": 1,
           "items": {
-            "$ref": "/components/channel-definition/1.0.0/channel-definition.schema.json"
+            "$ref": "/components/channel-definition/1.0.1/channel-definition.schema.json"
           }
         },
-        "magnetic_line_list": {
+        "line_list": {
           "description": "Magnetic line list.",
           "type": "array",
           "minItems": 1,
@@ -135,7 +135,8 @@
     "schema",
     "type",
     "survey_type",
-    "magnetic_line_list"
+    "channel_definition_list",
+    "line_list"
   ],
   "unevaluatedProperties": false
 }

@@ -1,0 +1,21 @@
+{
+  "$id": "/components/fiducial-description/1.0.1/fiducial-description.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A fiducial is a value which uniquely describes data acquired at a specific instance.",
+  "type": "object",
+  "properties": {
+    "start": {
+      "description": "Starting fiducial number.",
+      "type": "number"
+    },
+    "increment": {
+      "description": "Fiducial increment amount.",
+      "type": "number",
+      "exclusiveMinimum": 0.0
+    }
+  },
+  "required": [
+    "start",
+    "increment"
+  ]
+}
