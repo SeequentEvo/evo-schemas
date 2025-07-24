@@ -27,31 +27,27 @@
         },
         "planned": {
           "description": "Planned data for the drilling campaign.",
-          "allOf": [
-            {
-              "properties": {
-                "collar": {
-                  "description": "Collar data for the planned drillholes.",
-                  "$ref": "#/$defs/collar"
+          "properties": {
+            "collar": {
+              "description": "Collar data for the planned drillholes.",
+              "$ref": "/components/hole-collars/1.0.0/hole-collars.schema.json"
+            },
+            "path": {
+              "description": "The path taken by the downhole segment. Columns required depends on deviations used.",
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/natural_deviation"
                 },
-                "path": {
-                  "description": "The path taken by the downhole segment. Columns: distance, inclination, azimuth, dip, toolface, lift rate, drift rate.",
-                  "oneOf": [
-                    {
-                      "$ref": "#/$defs/natural_devatiaton"
-                    },
-                    {
-                      "$ref": "#/$defs/mixed_devatiaton"
-                    }
-                  ]
-                },
-                "results": {
-                  "description": "Actual attributes for the interim data.",
-                  "$ref": "#/$defs/results_array"
+                {
+                  "$ref": "#/$defs/mixed_deviation"
                 }
-              }
+              ]
+            },
+            "collections": {
+              "description": "Projected attributes for the planned drillholes.",
+              "$ref": "/components/downhole-attributes/1.0.0/downhole-attributes.schema.json"
             }
-          ],
+          },
           "required": [
             "collar",
             "path"
@@ -59,31 +55,20 @@
         },
         "interim": {
           "description": "Interim drillhole data for the drilling campaign.",
-          "allOf": [
-            {
-              "properties": {
-                "collar": {
-                  "description": "Collar data for the interim drillholes.",
-                  "$ref": "#/$defs/collar"
-                },
-                "path": {
-                  "description": "The path taken by the downhole segment. Columns: distance, azimuth, dip.",
-                  "allOf": [
-                    {
-                      "$ref": "/elements/float-array-3/1.0.1/float-array-3.schema.json"
-                    },
-                    {
-                      "$ref": "/components/attribute-list-property/1.2.0/attribute-list-property.schema.json"
-                    }
-                  ]
-                },
-                "results": {
-                  "description": "Interim attributes for the planned drillholes.",
-                  "$ref": "#/$defs/results_array"
-                }
-              }
+          "properties": {
+            "collar": {
+              "description": "Collar data for the interim drillholes.",
+              "$ref": "/components/hole-collars/1.0.0/hole-collars.schema.json"
+            },
+            "path": {
+              "description": "The path taken by the downhole segment. Columns: distance, azimuth, dip.",
+              "$ref": "/components/downhole-direction-vector/1.0.0/downhole-direction-vector.schema.json"
+            },
+            "collections": {
+              "description": "Interim attributes for the planned drillholes.",
+              "$ref": "/components/downhole-attributes/1.0.0/downhole-attributes.schema.json"
             }
-          ],
+          },
           "required": [
             "collar",
             "path"
@@ -99,51 +84,7 @@
     "planned"
   ],
   "$defs": {
-    "collar": {
-      "type": "object",
-      "description": "The collar data for the drilling campaign.",
-      "properties": {
-        "locations": {
-          "description": "Collar locations for the drilling campaign.",
-          "$ref": "/elements/float-array-3/1.0.1/float-array-3.schema.json"
-        },
-        "holes": {
-          "description": "Indices, offsets and segment counts of each hole.",
-          "$ref": "/components/hole-chunks/1.0.0/hole-chunks.schema.json"
-        },
-        "depths": {
-          "description": "The distances stored in columns final, target, current.",
-          "$ref": "/elements/float-array-3/1.0.1/float-array-3.schema.json"
-        },
-        "attributes": {
-          "description": "Attributes associated with the collar data.",
-          "$ref": "/components/attribute-list-property/1.2.0/attribute-list-property.schema.json"
-        }
-      },
-      "required": [
-        "locations",
-        "holes",
-        "depths"
-      ]
-    },
-    "results_array": {
-      "type": "array",
-      "description": "An array of results for the drilling campaign.",
-      "items": {
-        "oneOf": [
-          {
-            "$ref": "/components/interval-table/1.2.0/interval-table.schema.json"
-          },
-          {
-            "$ref": "/components/distance-table/1.2.0/distance-table.schema.json"
-          },
-          {
-            "$ref": "/components/data-table/1.2.0/data-table.schema.json"
-          }
-        ]
-      }
-    },
-    "natural_devatiaton": {
+    "natural_deviation": {
       "description": "The path taken by the planned drillhole using only natural deviations. Columns: distance, azimuth, dip, lift rate, drift rate, deviation rate distance",
       "allOf": [
         {
@@ -152,10 +93,7 @@
               "description": "Type of deviation",
               "const": "natural"
             }
-          },
-          "required": [
-            "deviation_type"
-          ]
+          }
         },
         {
           "$ref": "/elements/float-array-6/1.0.1/float-array-6.schema.json"
@@ -163,10 +101,13 @@
         {
           "$ref": "/components/attribute-list-property/1.2.0/attribute-list-property.schema.json"
         }
+      ],
+      "required": [
+        "deviation_type"
       ]
     },
-    "mixed_devatiaton": {
-      "description": "The path taken by the planned drillhole using both natural and directed deviations. Columns: distance, azimuth, dip, deviation type, lift rate, drift rate, deviation rate distance, tool face angle, dog leg severity",
+    "mixed_deviation": {
+      "description": "The path taken by the planned drillhole using both natural and directed deviations. Columns: distance, azimuth, dip, lift rate, drift rate, deviation rate distance, tool face angle, dog leg severity.",
       "allOf": [
         {
           "properties": {
@@ -174,31 +115,34 @@
               "description": "Type of deviation",
               "const": "mixed"
             },
-            "data": {
-              "description": "Data stored as a binary blob.",
-              "$ref": "/elements/binary-blob/1.0.1/binary-blob.schema.json"
+            "segment_type": {
+              "description": "Type of segment deviation, 'natural' or 'directed'",
+              "$ref": "/elements/string-array/1.0.1/string-array.schema.json"
             },
-            "length": {
-              "type": "integer",
-              "description": "Number of segments in the planned drillhole",
-              "minimum": 0,
-              "default": 0
-            },
-            "width": {
-              "type": "integer",
-              "description": "number of columns",
-              "const": 9
-            },
-            "data_type": {
-              "description": "data type",
-              "const": "float64/float64/float64/string/float64/float64/float64/float64/float64"
+            "segment_properties": {
+              "description": "The path taken by the planned drillhole using both natural and directed deviations. Columns: distance, azimuth, dip, lift rate, drift rate, deviation rate distance, tool face angle, dog leg severity",
+              "allOf": [
+                {
+                  "$ref": "/elements/float-array-md/1.0.1/float-array-md.schema.json"
+                },
+                {
+                  "properties": {
+                    "width": {
+                      "description": "number of columns",
+                      "const": 8
+                    }
+                  },
+                  "required": [
+                    "width"
+                  ]
+                }
+              ]
             }
           },
           "required": [
-            "data",
-            "length",
-            "width",
-            "data_type"
+            "deviation_type",
+            "segment_type",
+            "segment_properties"
           ]
         },
         {

@@ -1,0 +1,122 @@
+{
+  "$id": "/components/downhole-attributes/1.0.0/downhole-attributes.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Represents the attributes associated with downhole locations, including indices, counts, and offsets into locations and attribute tables.",
+  "type": "array",
+  "items": {
+    "oneOf": [
+      {
+        "$ref": "#/$defs/data_table"
+      },
+      {
+        "$ref": "#/$defs/distance_table"
+      },
+      {
+        "$ref": "#/$defs/interval_table"
+      },
+      {
+        "$ref": "#/$defs/relative_planar_data_table"
+      },
+      {
+        "$ref": "#/$defs/relative_lineation_data_table"
+      }
+    ]
+  },
+  "$defs": {
+    "data_table": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "/components/data-table/1.2.0/data-table.schema.json"
+        },
+        {
+          "properties": {
+            "holes": {
+              "description": "The data describing the holes.",
+              "$ref": "/components/hole-chunks/1.0.0/hole-chunks.schema.json"
+            }
+          },
+          "required": [
+            "holes"
+          ]
+        }
+      ]
+    },
+    "distance_table": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "/components/distance-table/1.2.0/distance-table.schema.json"
+        },
+        {
+          "properties": {
+            "holes": {
+              "description": "The data describing the holes.",
+              "$ref": "/components/hole-chunks/1.0.0/hole-chunks.schema.json"
+            }
+          },
+          "required": [
+            "holes"
+          ]
+        }
+      ]
+    },
+    "interval_table": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "/components/interval-table/1.2.0/interval-table.schema.json"
+        },
+        {
+          "properties": {
+            "holes": {
+              "description": "The data describing the holes.",
+              "$ref": "/components/hole-chunks/1.0.0/hole-chunks.schema.json"
+            }
+          },
+          "required": [
+            "holes"
+          ]
+        }
+      ]
+    },
+    "relative_planar_data_table": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "/components/relative-planar-data-table/1.2.0/relative-planar-data-table.schema.json"
+        },
+        {
+          "properties": {
+            "holes": {
+              "description": "The data describing the holes.",
+              "$ref": "/components/hole-chunks/1.0.0/hole-chunks.schema.json"
+            }
+          },
+          "required": [
+            "holes"
+          ]
+        }
+      ]
+    },
+    "relative_lineation_data_table": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "/components/relative-lineation-data-table/1.2.0/relative-lineation-data-table.schema.json"
+        },
+        {
+          "properties": {
+            "holes": {
+              "description": "The data describing the holes.",
+              "$ref": "/components/hole-chunks/1.0.0/hole-chunks.schema.json"
+            }
+          },
+          "required": [
+            "holes"
+          ]
+        }
+      ]
+    }
+  }
+}
