@@ -1,0 +1,30 @@
+{
+  "$id": "/components/hole-collars/1.0.0/hole-collars.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Hole collars represent the locations occupied by a drillhole. Contains the locations, path references and attributes for the collars of drillholes. Paths between locations are defined elsewhere.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/locations/1.0.1/locations.schema.json"
+    },
+    {
+      "$ref": "/components/attribute-list-property/1.2.0/attribute-list-property.schema.json"
+    },
+    {
+      "properties": {
+        "distances": {
+          "$ref": "/elements/float-array-3/1.0.1/float-array-3.schema.json",
+          "description": "The distances stored in columns final, target, current."
+        },
+        "holes": {
+          "description": "The data describing the hole paths.",
+          "$ref": "/components/hole-chunks/1.0.0/hole-chunks.schema.json"
+        }
+      }
+    }
+  ],
+  "required": [
+    "distances",
+    "holes"
+  ]   
+}
