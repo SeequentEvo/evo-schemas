@@ -29,7 +29,7 @@ For more details on geoscience object schemas, see the geoscience object schema 
 
 ## Installation
 
-```
+```shell
 pip install evo-schemas
 ```
 

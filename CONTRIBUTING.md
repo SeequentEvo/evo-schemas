@@ -41,7 +41,7 @@ for more information.
 
 To ensure your pull request is merged as quickly as possible, please consider the following:
 
-* If this is your first contribution to this project, check out our [contributing guide](CONTRIBUTING.md).
+* If this is your first contribution to this project, familiarise yourself with this contributing guide.
 * Try to prevent breaking changes and ensure backwards compatibility. If a breaking change is necessary, please call
   them out in your pull request.
 * Reference issues in your pull request if you're closing one.
@@ -50,7 +50,11 @@ To ensure your pull request is merged as quickly as possible, please consider th
 
 ### Contributor License Agreement (CLA)
 
-By making a pull request, you confirm you agree to our [Contributor License Agreement (CLA).](https://gist.github.com/imodeljs-admin/9a071844d3a8d420092b5cf360e978ca)
+The first time you make a pull request, you will be required to sign a Contributor License Agreement (CLA). This is
+managed and tracked by a bot, and only needs to be done once per repository.
+
+The CLA ensures you retain copyright to your contributions, and provides us the right to use, modify, and redistribute
+your contributions using the Apache 2.0 License.
 
 ## Code of conduct
 
