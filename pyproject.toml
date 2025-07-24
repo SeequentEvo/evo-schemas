@@ -51,7 +51,6 @@ examples = [
 ]
 
 release = [
-    "bump-my-version",
     "twine",
 ]
 
