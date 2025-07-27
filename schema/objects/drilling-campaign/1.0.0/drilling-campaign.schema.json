@@ -64,8 +64,12 @@
               "description": "The path taken by the downhole segment. Columns: distance, azimuth, dip.",
               "$ref": "/components/downhole-direction-vector/1.0.0/downhole-direction-vector.schema.json"
             },
+            "desurvey": {
+              "description": "The desurvey method used.",
+              "$ref": "/components/desurvey-method/1.0.0/desurvey-method.schema.json"
+            },
             "collections": {
-              "description": "Interim attributes for the planned drillholes.",
+              "description": "Collection of attributes for the interim drilling data.",
               "$ref": "/components/downhole-attributes/1.0.0/downhole-attributes.schema.json"
             }
           },

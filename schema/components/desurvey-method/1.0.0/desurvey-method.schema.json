@@ -1,0 +1,11 @@
+{
+  "$id": "/components/desurvey-method/1.0.0/desurvey-method.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "The desurvey algorithm.",
+  "enum": [
+    "minimum_curvature",
+    "balanced_tangent",
+    "trench"
+  ],
+  "type": "string"
+}
