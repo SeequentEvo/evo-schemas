@@ -23,6 +23,7 @@
         },
         "desurvey": {
           "title": "Desurvey",
+          "description": "The desurvey method used to calculate the drillhole geometry.",
           "$ref": "/components/desurvey-method/1.0.0/desurvey-method.schema.json"
         },
         "location": {
