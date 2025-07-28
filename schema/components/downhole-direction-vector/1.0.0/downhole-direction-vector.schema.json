@@ -1,7 +1,7 @@
 {
   "$id": "/components/downhole-direction-vector/1.0.0/downhole-direction-vector.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "description": "Represents the direction and size of a downhole segment and any associated attributes. Contains azimuth, dip, distance and an attribute table.",
+  "description": "Represents the direction and size of a downhole segment and any associated attributes. Columns: distance, azimuth, dip.",
   "type": "object",
   "allOf": [
     {
