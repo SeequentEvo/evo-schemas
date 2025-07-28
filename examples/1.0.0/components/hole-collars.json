@@ -1,0 +1,22 @@
+{
+  "$schema": "/components/hole-collars/1.0.0/hole-collars.schema.json",
+  "coordinates": {
+    "width": 3,
+    "data_type": "float64",
+    "length": 3,
+    "data": "abababababababababababababababababababababababababababababababab"
+  },
+  "distances": {
+    "width": 3,
+    "data_type": "float64",
+    "length": 3,
+    "data": "abababababababababababababababababababababababababababababababab"
+  },
+  "holes": {
+    "data": "abababababababababababababababababababababababababababababababab",
+    "length": 2,
+    "width": 3,
+    "data_type": "int32/uint64/uint64"
+  },
+  "attributes": []
+}

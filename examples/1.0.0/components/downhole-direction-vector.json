@@ -1,0 +1,8 @@
+{
+  "$schema": "/components/downhole-direction-vector/1.0.0/downhole-direction-vector.schema.json",
+  "width": 3,
+  "data_type": "float64",
+  "length": 4,
+  "data": "abababababababababababababababababababababababababababababababab",
+  "attributes": []
+}
