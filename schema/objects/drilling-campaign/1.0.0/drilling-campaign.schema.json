@@ -27,6 +27,7 @@
         },
         "planned": {
           "description": "Planned data for the drilling campaign.",
+          "type": "object",
           "properties": {
             "collar": {
               "description": "Collar data for the planned drillholes.",
@@ -55,6 +56,7 @@
         },
         "interim": {
           "description": "Interim drillhole data for the drilling campaign.",
+          "type": "object",
           "properties": {
             "collar": {
               "description": "Collar data for the interim drillholes.",
@@ -111,7 +113,7 @@
       ]
     },
     "mixed_deviation": {
-      "description": "The path taken by the planned drillhole using both natural and directed deviations. Columns: distance, azimuth, dip, lift rate, drift rate, deviation rate distance, tool face angle, dog leg severity.",
+      "description": "The path taken by the planned drillhole using both natural and directed deviations. Columns: distance, azimuth, dip, lift rate, drift rate, deviation rate distance, tool face angle, dogleg severity.",
       "allOf": [
         {
           "properties": {
@@ -124,7 +126,7 @@
               "$ref": "/elements/string-array/1.0.1/string-array.schema.json"
             },
             "segment_properties": {
-              "description": "The path taken by the planned drillhole using both natural and directed deviations. Columns: distance, azimuth, dip, lift rate, drift rate, deviation rate distance, tool face angle, dog leg severity",
+              "description": "The path taken by the planned drillhole using both natural and directed deviations. Columns: distance, azimuth, dip, lift rate, drift rate, deviation rate distance, tool face angle, dogleg severity",
               "allOf": [
                 {
                   "$ref": "/elements/float-array-md/1.0.1/float-array-md.schema.json"
