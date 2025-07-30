@@ -87,7 +87,7 @@ NOTE: To keep things simple, only the required properties are defined. For a ful
 |   Property  |   Value |
 | ----------- | ------- |
 | deviation type | The type of deviation used to define the segment geometry. Mixed deviation uses both natural and directed deviations to define the rate of change in  of each segment. |
-| segment_type | A list to indicate which settings should be used for each segment either deviation rate distance, lift rate and drift rate for 'natural' or deviation rate distance, tool face angle and dogleg severity for 'directed'|
+| segment_type | A list to indicate which settings should be used for each segment either deviation rate distance, lift rate and drift rate for 'natural' or deviation rate distance, toolface angle and dogleg severity for 'directed'|
 | segment_properties | The columns are “distance” (length of the segment), “azimuth”, “dip” (angle down from horizontal), "deviation rate distance" (The distance over which the given lift and drift rates occur), "lift rate", "drift rate", "toolface angle" (The direction of deviation clockwise from the top side of the drillhole), "dogleg severity" (The total angle change of the segment). These are the parameters that define each segment of the planned drillhole. |
 
 ### Interim
