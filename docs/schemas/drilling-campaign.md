@@ -21,8 +21,8 @@ The drilling campaign geoscience object is meant to be used for a set of planned
 
 ### Audience
 
--	Developers
--	Geoscientists
+-  Developers
+-  Geoscientists
 - Mine planning professionals
 - Geotechnical engineers
 
@@ -52,25 +52,25 @@ NOTE: To keep things simple, only the required properties are defined. For a ful
 
 ### Base spatial data properties
 
-|   Property	|   Value | Example |
+|   Property  |   Value | Example |
 | ------------- | ------- | ------- |
-|   name	    |   The human-readable name of the drilling campaign object. This is the value that users will see when they browse an Evo workspace or list out objects through the Evo API.	 | `"Summer 24 Drill Program"` |
-|   uuid	    |   The universally unique identifier of the drilling campaign object. 	|   `dd037871-4279-4954-bd43-3ead9d40a56e`    |
-| bounding_box	|   The geographic bounds of the drillhole locations contained in the drilling campaign object. This is used for spatial search in the Evo web portal.   | `{"min_y": 0, "max_y": 10, "min_x": 0, "max_x": 10, "min_z": 0, "max_z": 10}` |
+|   name      |   The human-readable name of the drilling campaign object. This is the value that users will see when they browse an Evo workspace or list out objects through the Evo API.   | `"Summer 24 Drill Program"` |
+|   uuid      |   The universally unique identifier of the drilling campaign object.   |   `dd037871-4279-4954-bd43-3ead9d40a56e`    |
+| bounding_box  |   The geographic bounds of the drillhole locations contained in the drilling campaign object. This is used for spatial search in the Evo web portal.   | `{"min_y": 0, "max_y": 10, "min_x": 0, "max_x": 10, "min_z": 0, "max_z": 10}` |
 |   coordinate_reference_system |   The coordinate reference system (CRS) that all location data is in. This applies to the bounding box as well as the drillhole locations. See ["Common data types"](https://developer.seequent.com/docs/api/fundamentals/common-data-types/#coordinate-reference-systems) for more information.   |   `{"epsg_code": 32617}` |
 
 ## Drilling campaign properties
 
-|   Property	| Value | Example |
+|   Property  | Value | Example |
 | ------------- | ------- | ------- |
-|   schema        |   The specific version of the schema that the drilling campaign object will use. This will be used by the Geoscience Object Service to validate the properties of the object.	|   `"/objects/drilling-campaign/1.0.0/drilling-campaign.schema.json"` |
-|   type    |	The geoscience object type. For drilling campaign objects, this should be set as campaign.  |	`"campaign"` |
-|   depth_units   |	The unit of measure that all depth values are in. This applies to all depth/from/to values across all collections.  |	`"m"` |
+|   schema        |   The specific version of the schema that the drilling campaign object will use. This will be used by the Geoscience Object Service to validate the properties of the object.  |   `"/objects/drilling-campaign/1.0.0/drilling-campaign.schema.json"` |
+|   type    |  The geoscience object type. For drilling campaign objects, this should be set as campaign.  |  `"campaign"` |
+|   depth_units   |  The unit of measure that all depth values are in. This applies to all depth/from/to values across all collections.  |  `"m"` |
 |   hole_id |   A category attribute that provides the main index order for both planned drillholes and their associated interim drilling data in the drilling campaign. Category attributes are made up of a table and values. The values represent the index order of each drillhole and provide the main lookup for other attributes or properties. Each drillhole is represented by an integer index value, and the actual drillhole string value is included in the lookup table.    |
 
 ### Planned
 
-|   Property	|   Value |
+|   Property  |   Value |
 | ------------- | ------- |
 |   collar   | The geographic location of each plannned drillhole in the drilling campaign. Each location is represented as X, Y, Z values (northing, easting, elevation). The coordinates array has 3 columns appropriately named “x”, “y”, and “z” and each value is a float. The row index where the coordinates appear in the array must match the row index where the drillholes appear in the hole_id property. For example, the values at index 4 of the coordinates array are the coordinates for the drillhole at index 4 in the hole_id array. |
 |   path    |   The trajectory of each drillhole in the drilling campaign. The columns required depend on the deviation type. There is no reference to the hole id directly, this is handled by the holes property that provides the offset and count of rows for each drillhole.|
@@ -95,9 +95,9 @@ NOTE: To keep things simple, only the required properties are defined. For a ful
 
 The properties of interim drilling data are substantially the same as those of planned drillholes, with the only difference being the path description and choice of desurvey method.
 
-|   Property	|   Value |
+|   Property  |   Value |
 | ------------- | ------- |
-|   collar |	The geographic location of each interim drillhole in the drilling campaign. Each location is represented as X, Y, Z values (northing, easting, elevation). The coordinates array has 3 columns appropriately named “x”, “y”, and “z” and each value is a float. The row index where the coordinates appear in the array must match the row index where the drillholes appear in the hole_id property. For example, the values at index 4 of the coordinates array are the coordinates for the drillhole at index 4 in the hole_id array.   |
+|   collar |  The geographic location of each interim drillhole in the drilling campaign. Each location is represented as X, Y, Z values (northing, easting, elevation). The coordinates array has 3 columns appropriately named “x”, “y”, and “z” and each value is a float. The row index where the coordinates appear in the array must match the row index where the drillholes appear in the hole_id property. For example, the values at index 4 of the coordinates array are the coordinates for the drillhole at index 4 in the hole_id array.   |
 |   path    |   The trajectory of each drillhole in the drilling campaign. The columns are "distance" (length of the segment), "azimuth", "dip" (angle down from horizontal). This is the raw downhole survey data. There is no reference to the hole id directly, this is handled by the holes property that provides the offset and count of rows for each drillhole.|
 |   desurvey   |The desurvey method used to calculate the drillhole geometry. Available options are "minimum_curvature", "balanced_tangent" and "trench".|
 |   collections   | Attributes of the interim drillholes at specific depths or depth intervals. Each collection contains a table including the downhole location and value of attributes, and an array indicating which table rows are associated with each interim drillhole.|
@@ -105,9 +105,9 @@ The properties of interim drilling data are substantially the same as those of p
 ### Collar
 | Property | Value |
 | ------------- | ------- |
-|   locations |	The geographic location of each drillhole in the drilling campaign. Each location is represented as X, Y, Z values (northing, easting, elevation). The coordinates array has 3 columns appropriately named “x”, “y”, and “z” and each value is a float. The row index where the coordinates appear in the array must match the row index where the drillholes appear in the hole_id property. For example, the values at index 4 of the coordinates array are the coordinates for the drillhole at index 4 in the hole_id array.   |
+|   locations |  The geographic location of each drillhole in the drilling campaign. Each location is represented as X, Y, Z values (northing, easting, elevation). The coordinates array has 3 columns appropriately named “x”, “y”, and “z” and each value is a float. The row index where the coordinates appear in the array must match the row index where the drillholes appear in the hole_id property. For example, the values at index 4 of the coordinates array are the coordinates for the drillhole at index 4 in the hole_id array.   |
 |   distances   |   The total depth values of each drillhole in the drilling campaign. The columns are “final”, “target”, and “current”. These are the final/target/current depth values for every drillhole. Each depth value is a float and the row index in the distances must match the row index of the hole_id array.   |
-|   holes   |	The row offset and counts for the drillhole path data. Each drillhole in the drilling campaign appears once, using the hole index provided by the hole_id lookup. The offset is the starting row for each drillhole, and the count is the number of rows for each drillhole.  |
+|   holes   |  The row offset and counts for the drillhole path data. Each drillhole in the drilling campaign appears once, using the hole index provided by the hole_id lookup. The offset is the starting row for each drillhole, and the count is the number of rows for each drillhole.  |
 
 #### Planned drillholes example
 
