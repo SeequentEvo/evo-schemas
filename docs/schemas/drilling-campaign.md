@@ -72,8 +72,9 @@ NOTE: To keep things simple, only the required properties are defined. For a ful
 
 |   Property	|   Value |
 | ------------- | ------- |
-|   collar   | The information related to the physical location of the planned drillhole in 3d space and includes references to the path and collection table row indices for each segment. |
+|   collar   | The geographic location of each plannned drillhole in the drilling campaign. Each location is represented as X, Y, Z values (northing, easting, elevation). The coordinates array has 3 columns appropriately named “x”, “y”, and “z” and each value is a float. The row index where the coordinates appear in the array must match the row index where the drillholes appear in the hole_id property. For example, the values at index 4 of the coordinates array are the coordinates for the drillhole at index 4 in the hole_id array. |
 |   path    |   The trajectory of each drillhole in the drilling campaign. The columns required depend on the deviation type. There is no reference to the hole id directly, this is handled by the holes property that provides the offset and count of rows for each drillhole.|
+|   collections   | Expected attributes of the planned drillholes at specific depths or depth intervals. Each collection contains a table including the downhole location and value of attributes, and an array indicating which table rows are associated with each planned drillhole.|
 
 #### Planned path (natural deviation)
 
@@ -86,16 +87,20 @@ NOTE: To keep things simple, only the required properties are defined. For a ful
 
 |   Property  |   Value |
 | ----------- | ------- |
-| deviation type | The type of deviation used to define the segment geometry. Mixed deviation uses both natural and directed deviations to define the rate of change in  of each segment. |
-| segment_type | A list to indicate which settings should be used for each segment either deviation rate distance, lift rate and drift rate for 'natural' or deviation rate distance, toolface angle and dogleg severity for 'directed'|
+| deviation type | The type of deviation used to define the segment geometry. Mixed deviation uses both natural and directed deviations to define the angle and rate of change of each segment. |
+| segment_type | A list to indicate which settings should be used for each segment: either deviation rate distance, lift rate and drift rate for 'natural' or deviation rate distance, toolface angle and dogleg severity for 'directed'.|
 | segment_properties | The columns are “distance” (length of the segment), “azimuth”, “dip” (angle down from horizontal), "deviation rate distance" (The distance over which the given lift and drift rates occur), "lift rate", "drift rate", "toolface angle" (The direction of deviation clockwise from the top side of the drillhole), "dogleg severity" (The total angle change of the segment). These are the parameters that define each segment of the planned drillhole. |
 
 ### Interim
 
+The properties of interim drilling data are substantially the same as those of planned drillholes, with the only difference being the path description and choice of desurvey method.
+
 |   Property	|   Value |
 | ------------- | ------- |
-|   collar   | The information related to the physical location of the planned drillhole in 3d space and includes references to the path and collection table row indices for each segment. |
-|   path    |   The trajectory of each drillhole in the drilling campaign. The columns are “distance” (length of the segment), "inclination", “azimuth”, “dip” (angle down from horizontal). These are the parameters that define each segment of the planned drillhole. There is no reference to the hole id directly, this is handled by the holes property that provides the offset and count of rows for each drillhole.|
+|   collar |	The geographic location of each interim drillhole in the drilling campaign. Each location is represented as X, Y, Z values (northing, easting, elevation). The coordinates array has 3 columns appropriately named “x”, “y”, and “z” and each value is a float. The row index where the coordinates appear in the array must match the row index where the drillholes appear in the hole_id property. For example, the values at index 4 of the coordinates array are the coordinates for the drillhole at index 4 in the hole_id array.   |
+|   path    |   The trajectory of each drillhole in the drilling campaign. The columns are "distance" (length of the segment), "azimuth", "dip" (angle down from horizontal). This is the raw downhole survey data. There is no reference to the hole id directly, this is handled by the holes property that provides the offset and count of rows for each drillhole.|
+|   desurvey   |The desurvey method used to calculate the drillhole geometry. Available options are "minimum_curvature", "balanced_tangent" and "trench".|
+|   collections   | Attributes of the interim drillholes at specific depths or depth intervals. Each collection contains a table including the downhole location and value of attributes, and an array indicating which table rows are associated with each interim drillhole.|
 
 ### Collar
 | Property | Value |
@@ -162,16 +167,6 @@ Both the interval and distance collections are made up of 3 main components:
 - The from-to interval values (for interval) OR the distance values (for distance)
 - The attributes (the columns) related to the intervals/depths
 - The index/offset/counts, like the path, that provides the instructions how to parse out the data and link it to the drillholes in the campaign
-
-### Interim
-
-The properties of interim drilling data are substantially the same as those of planned drillholes, with the only difference being the path description and choice of desurvey method.
-
-|   Property	|   Value |
-| ------------- | ------- |
-|   collar |	The geographic location of each drillhole in the drilling campaign. Each location is represented as X, Y, Z values (northing, easting, elevation). The coordinates array has 3 columns appropriately named “x”, “y”, and “z” and each value is a float. The row index where the coordinates appear in the array must match the row index where the drillholes appear in the hole_id property. For example, the values at index 4 of the coordinates array are the coordinates for the drillhole at index 4 in the hole_id array.   |
-|   path    |   The trajectory of each drillhole in the drilling campaign. The columns are “distance” (length of the segment), “azimuth”, “dip” (angle down from horizontal). This is the raw downhole survey data. There is no reference to the hole id directly, this is handled by the holes property that provides the offset and count of rows for each drillhole.|
-|   desurvey   |The desurvey method used to calculate the drillhole geometry. Available options are "minimum_curvature", "balanced_tangent" and "trench".|
 
 ## Troubleshooting common validation errors
 Common validation errors and their solutions:
