@@ -113,7 +113,7 @@
       ]
     },
     "mixed_deviation": {
-      "description": "The path taken by the planned drillhole using both natural and directed deviations. Columns: distance, azimuth, dip, lift rate, drift rate, deviation rate distance, toolface angle, dogleg severity.",
+      "description": "The path taken by the planned drillhole using both natural and directed deviations.",
       "allOf": [
         {
           "properties": {
