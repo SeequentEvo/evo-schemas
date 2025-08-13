@@ -17,7 +17,7 @@
           "description": "The type of the planned drillholes.",
           "const": "campaign"
         },
-        "depth_units": {
+        "distance_unit": {
           "description": "The units of depth for the drillholes.",
           "$ref": "/elements/unit/1.0.1/categories/unit-length.schema.json"
         },
@@ -85,7 +85,6 @@
   ],
   "required": [
     "schema",
-    "depth_units",
     "hole_id",
     "planned"
   ],

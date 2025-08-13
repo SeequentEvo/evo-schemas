@@ -63,10 +63,10 @@ NOTE: To keep things simple, only the required properties are defined. For a ful
 
 |   Property  | Value | Example |
 | ------------- | ------- | ------- |
-|   schema        |   The specific version of the schema that the drilling campaign object will use. This will be used by the Geoscience Object Service to validate the properties of the object.  |   `"/objects/drilling-campaign/1.0.0/drilling-campaign.schema.json"` |
+|   schema        |  The specific version of the schema that the drilling campaign object will use. This will be used by the Geoscience Object Service to validate the properties of the object.  |   `"/objects/drilling-campaign/1.0.0/drilling-campaign.schema.json"` |
 |   type    |  The geoscience object type. For drilling campaign objects, this should be set as campaign.  |  `"campaign"` |
-|   depth_units   |  The unit of measure that all depth values are in. This applies to all depth/from/to values across all collections.  |  `"m"` |
-|   hole_id |   A category attribute that provides the main index order for both planned drillholes and their associated interim drilling data in the drilling campaign. Category attributes are made up of a table and values. The values represent the index order of each drillhole and provide the main lookup for other attributes or properties. Each drillhole is represented by an integer index value, and the actual drillhole string value is included in the lookup table.    |
+|   distance_unit   |  The unit of measure that all depth values are in. This applies to all depth/from/to values across all collections.  |  `"m"` |
+|   hole_id |  A category attribute that provides the main index order for both planned drillholes and their associated interim drilling data in the drilling campaign. Category attributes are made up of a table and values. The values represent the index order of each drillhole and provide the main lookup for other attributes or properties. Each drillhole is represented by an integer index value, and the actual drillhole string value is included in the lookup table.    |
 
 ### Planned
 
@@ -142,7 +142,7 @@ Where the distances at index [0] are the depth values for the drillhole at index
 
 ![](_img/drilling-campaign-05.png)
 
-Remember: the distance values should be in the unit of measure established by the base "depth_units" property.
+Remember: the distance values should be in the unit of measure established by the base "distance_unit" property.
 
 Remember: the dip convention adopted by the Geoscience Object Service is that “positive dip points down”. Make sure your dip values honour this convention.
 
