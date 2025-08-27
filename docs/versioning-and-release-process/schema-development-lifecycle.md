@@ -40,7 +40,7 @@ In the event there is a request for a new schema but no capacity to build it, th
 
 ### Publication
 
-The **Publication** phase tracks the schema as it makes its way to being publicly available. In the event that a schema has been developed in private, it must be disclosed commercially for it to enter the **Tech Preview** state. Functionally, a schema that is in **Tech Preview** is fully usable within the running instances of the [Geoscience Objects API](https://developer.seequent.com/docs/api/geoscience-object/geoscience-object-api). This enables development against the schema by any Evo user (including Seequent developers, customers and partners).
+The **Publication** phase tracks the schema as it makes its way to being publicly available. In the event that a schema has been developed in private, it must be disclosed commercially for it to enter the **Tech Preview** state. Functionally, a schema that is in **Tech Preview** is fully usable within the running instances of the [Geoscience Object API](https://developer.seequent.com/docs/api/geoscience-object/geoscience-object-api). This enables development against the schema by any Evo user (including Seequent developers, customers and partners).
 
 For schemas in **Tech Preview**, no Service Level Agreements (SLA) or Deprecation guarantees apply.
 
