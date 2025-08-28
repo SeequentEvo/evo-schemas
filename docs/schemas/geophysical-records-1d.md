@@ -1,8 +1,11 @@
+import CheckIcon from '@mui/icons-material/Check';
+import Chip from '@mui/material/Chip';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from './_generated/flatmd/objects/geophysical-records-1d-1.3.0.md';
 
 # geophysical-records-1d
 
+<Chip color="info" icon={<CheckIcon />} label="Supported" />
 <SchemaUri uri="schema/objects/geophysical-records-1d/1.3.0/geophysical-records-1d.schema.json" />
 
 The geophysical-records-1d object captures physical properties related to 1D geophysical records. These records are the product of geophysical inversion. These are composed of a series of 1D, vertical (columnar) datasets, each of which contains records (or dummy values) for a series of layers.

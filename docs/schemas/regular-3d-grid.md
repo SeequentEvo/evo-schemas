@@ -1,8 +1,11 @@
+import CheckIcon from '@mui/icons-material/Check';
+import Chip from '@mui/material/Chip';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from './_generated/flatmd/objects/regular-3d-grid-1.3.0.md';
 
 # regular-3d-grid
 
+<Chip color="info" icon={<CheckIcon />} label="Supported" />
 <SchemaUri uri="schema/objects/regular-3d-grid/1.3.0/regular-3d-grid.schema.json" />
 
 Represents a regularly-sampled three-dimensional grid (i.e., image) and data attached to the cells and vertices.

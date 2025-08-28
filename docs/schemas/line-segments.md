@@ -1,8 +1,11 @@
+import CheckIcon from '@mui/icons-material/Check';
+import Chip from '@mui/material/Chip';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from './_generated/flatmd/objects/line-segments-2.2.0.md';
 
 # line-segments
 
+<Chip color="info" icon={<CheckIcon />} label="Supported" />
 <SchemaUri uri="schema/objects/line-segments/2.2.0/line-segments.schema.json" />
 
 A collection of lines composed of straight segments.

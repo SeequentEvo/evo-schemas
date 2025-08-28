@@ -1,8 +1,11 @@
+import CheckIcon from '@mui/icons-material/Check';
+import Chip from '@mui/material/Chip';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from './_generated/flatmd/objects/tensor-2d-grid-1.3.0.md';
 
 # tensor-2d-grid
 
+<Chip color="info" icon={<CheckIcon />} label="Supported" />
 <SchemaUri uri="schema/objects/tensor-2d-grid/1.3.0/tensor-2d-grid.schema.json" />
 
 Represents a two-dimensional tensor grid where cells may have different sizes.

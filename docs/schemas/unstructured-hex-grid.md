@@ -1,8 +1,11 @@
+import CheckIcon from '@mui/icons-material/Check';
+import Chip from '@mui/material/Chip';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from './_generated/flatmd/objects/unstructured-hex-grid-1.3.0.md';
 
 # unstructured-hex-grid
 
+<Chip color="info" icon={<CheckIcon />} label="Supported" />
 <SchemaUri uri="schema/objects/unstructured-hex-grid/1.3.0/unstructured-hex-grid.schema.json" />
 
 Represents an unstructured hexahedral grid where cells are hexahedrons.

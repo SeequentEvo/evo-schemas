@@ -1,8 +1,11 @@
+import CheckIcon from '@mui/icons-material/Check';
+import Chip from '@mui/material/Chip';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from './_generated/flatmd/objects/time-domain-electromagnetic-1.1.0.md';
 
 # time-domain-electromagnetic
 
+<Chip color="info" icon={<CheckIcon />} label="Supported" />
 <SchemaUri uri="schema/objects/time-domain-electromagnetic/1.1.0/time-domain-electromagnetic.schema.json" />
 
 A time-domain electromagnetic (TDEM) object represents geolocated, time-stamped TDEM survey data. This data is used extensively in exploration for mineral resources, groundwater investigations, and other fields where the electrical conductivity of subsurface materials provides insight.
