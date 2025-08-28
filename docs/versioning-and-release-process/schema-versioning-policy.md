@@ -124,7 +124,7 @@ Be flexible when faced with fields you don't expect, if possible. Interpret data
 
 Equally, if your application is able to interpret a range of data versions effectively, consider which ones are valuable to support. For example, there may be valuable historical data written to an earlier schema that your users or customers already have stored in Evo. If you are able to interpret a range of versions, you are less dependent on data conversion tools offered by the platform (or yet to be built by Seequent or other developers).
 
-Please reach out to the Evo support team or Developer Community Champions if you'd like to discuss these best practices.
+Please reach out to the Seequent Evo support team or Developer Community Champions if you'd like to discuss these best practices.
 
 ### Lossiness
 
