@@ -5,7 +5,7 @@ import FlatProperties from './_generated/flatmd/objects/local-ellipsoids-1.3.0.m
 
 # local-ellipsoids
 
-<Chip color="info" icon={<CheckIcon />} label="Supported" />
+<Chip color="info" icon={<CheckIcon />} label="Supported" /><br />
 <SchemaUri uri="schema/objects/local-ellipsoids/1.3.0/local-ellipsoids.schema.json" />
 
 The local-ellipsoids object captures a set of spatially located ellipsoids. Each ellipsoid is assigned a 3D location. This object is used to model spatially varying anisotropy. It is useful for exploring the spatial continuity of geological structures or as a locally-varying field in geostatistical workflows.

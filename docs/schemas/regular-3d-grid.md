@@ -5,7 +5,7 @@ import FlatProperties from './_generated/flatmd/objects/regular-3d-grid-1.3.0.md
 
 # regular-3d-grid
 
-<Chip color="info" icon={<CheckIcon />} label="Supported" />
+<Chip color="info" icon={<CheckIcon />} label="Supported" /><br />
 <SchemaUri uri="schema/objects/regular-3d-grid/1.3.0/regular-3d-grid.schema.json" />
 
 Represents a regularly-sampled three-dimensional grid (i.e., image) and data attached to the cells and vertices.

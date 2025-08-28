@@ -5,7 +5,7 @@ import FlatProperties from './_generated/flatmd/objects/unstructured-tet-grid-1.
 
 # unstructured-tet-grid
 
-<Chip color="info" icon={<CheckIcon />} label="Supported" />
+<Chip color="info" icon={<CheckIcon />} label="Supported" /><br />
 <SchemaUri uri="schema/objects/unstructured-tet-grid/1.3.0/unstructured-tet-grid.schema.json" />
 
 Represents an unstructured tetrahedral grid where cells are tetrahedrons.

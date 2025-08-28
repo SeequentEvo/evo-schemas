@@ -5,7 +5,7 @@ import FlatProperties from './_generated/flatmd/objects/line-segments-2.2.0.md';
 
 # line-segments
 
-<Chip color="info" icon={<CheckIcon />} label="Supported" />
+<Chip color="info" icon={<CheckIcon />} label="Supported" /><br />
 <SchemaUri uri="schema/objects/line-segments/2.2.0/line-segments.schema.json" />
 
 A collection of lines composed of straight segments.

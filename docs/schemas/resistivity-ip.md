@@ -5,7 +5,7 @@ import FlatProperties from './_generated/flatmd/objects/resistivity-ip-1.1.0.md'
 
 # resistivity-ip
 
-<Chip color="info" icon={<CheckIcon />} label="Supported" />
+<Chip color="info" icon={<CheckIcon />} label="Supported" /><br />
 <SchemaUri uri="schema/objects/resistivity-ip/1.1.0/resistivity-ip.schema.json" />
 
 A resistivity-IP object represents geolocated, time-stamped resistivity and induced polarization (IP) survey data. This data is used extensively in exploration for mineral resources, environmental investigations, and other fields where the electrical properties of subsurface materials provide insight.

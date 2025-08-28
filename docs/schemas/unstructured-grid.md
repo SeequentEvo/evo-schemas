@@ -5,7 +5,7 @@ import FlatProperties from './_generated/flatmd/objects/unstructured-grid-1.3.0.
 
 # unstructured-grid
 
-<Chip color="info" icon={<CheckIcon />} label="Supported" />
+<Chip color="info" icon={<CheckIcon />} label="Supported" /><br />
 <SchemaUri uri="schema/objects/unstructured-grid/1.3.0/unstructured-grid.schema.json" />
 
 Represents an unstructured grid where cells can have arbitrary shapes and sizes.
