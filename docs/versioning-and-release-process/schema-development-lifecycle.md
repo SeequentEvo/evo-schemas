@@ -1,3 +1,5 @@
+import Alert from '@mui/material/Alert';
+
 # Schema Development Lifecycle
 
 The development of new Geoscience Object Schemas is a critical part of how Seequent Evo continues to evolve to support the Geoscience community. The present set of schemas will *always* have some gaps, as the range of data types and techniques within the geosciences is always growing.
