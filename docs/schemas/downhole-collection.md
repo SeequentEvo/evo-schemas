@@ -5,7 +5,7 @@ import FlatProperties from './_generated/flatmd/objects/downhole-collection-1.3.
 
 # downhole-collection
 
-<Chip color="info" icon={<CheckIcon />} label="Supported" />
+<Chip color="info" icon={<CheckIcon />} label="Supported" /><br />
 <SchemaUri uri="schema/objects/downhole-collection/1.3.0/downhole-collection.schema.json" />
 
 ## Overview

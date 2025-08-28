@@ -5,7 +5,7 @@ import FlatProperties from './_generated/flatmd/objects/unstructured-quad-grid-1
 
 # unstructured-quad-grid
 
-<Chip color="info" icon={<CheckIcon />} label="Supported" />
+<Chip color="info" icon={<CheckIcon />} label="Supported" /><br />
 <SchemaUri uri="schema/objects/unstructured-quad-grid/1.3.0/unstructured-quad-grid.schema.json" />
 
 Represents an unstructured grid where cells are quadrilaterals.

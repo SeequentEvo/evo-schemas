@@ -5,7 +5,7 @@ import FlatProperties from './_generated/flatmd/objects/frequency-domain-electro
 
 # frequency-domain-electromagnetic
 
-<Chip color="info" icon={<CheckIcon />} label="Supported" />
+<Chip color="info" icon={<CheckIcon />} label="Supported" /><br />
 <SchemaUri uri="schema/objects/frequency-domain-electromagnetic/1.1.0/frequency-domain-electromagnetic.schema.json" />
 
 The frequency-domain-electromagnetic object captures the properties and measurements related to frequency domain electromagnetic surveys. This object is used to represent the data collected during such surveys, including the configuration of the equipment and the resulting measurements.

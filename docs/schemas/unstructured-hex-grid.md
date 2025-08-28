@@ -5,7 +5,7 @@ import FlatProperties from './_generated/flatmd/objects/unstructured-hex-grid-1.
 
 # unstructured-hex-grid
 
-<Chip color="info" icon={<CheckIcon />} label="Supported" />
+<Chip color="info" icon={<CheckIcon />} label="Supported" /><br />
 <SchemaUri uri="schema/objects/unstructured-hex-grid/1.3.0/unstructured-hex-grid.schema.json" />
 
 Represents an unstructured hexahedral grid where cells are hexahedrons.

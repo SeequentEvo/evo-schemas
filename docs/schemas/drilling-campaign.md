@@ -5,7 +5,7 @@ import FlatProperties from './_generated/flatmd/objects/drilling-campaign-1.0.0.
 
 # drilling-campaign
 
-<Chip color="warning" icon={<FlaskIcon />} label="Tech Preview" />
+<Chip color="warning" icon={<FlaskIcon />} label="Tech Preview" /><br />
 <SchemaUri uri="schema/objects/drilling-campaign/1.0.0/drilling-campaign.schema.json" />
 
 ## Overview

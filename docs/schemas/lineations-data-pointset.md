@@ -5,7 +5,7 @@ import FlatProperties from './_generated/flatmd/objects/lineations-data-pointset
 
 # lineations-data-pointset
 
-<Chip color="info" icon={<CheckIcon />} label="Supported" />
+<Chip color="info" icon={<CheckIcon />} label="Supported" /><br />
 <SchemaUri uri="schema/objects/lineations-data-pointset/1.3.0/lineations-data-pointset.schema.json" />
 
 The `lineations-data-pointset` schema is a variant of the generic [pointset](pointset.md) schema. See that schema for general information.

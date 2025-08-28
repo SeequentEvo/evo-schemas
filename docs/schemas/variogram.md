@@ -5,7 +5,7 @@ import FlatProperties from './_generated/flatmd/objects/variogram-1.2.0.md';
 
 # variogram
 
-<Chip color="info" icon={<CheckIcon />} label="Supported" />
+<Chip color="info" icon={<CheckIcon />} label="Supported" /><br />
 <SchemaUri uri="schema/objects/variogram/1.2.0/variogram.schema.json" />
 
 The variogram object captures the parameters of variogram models as used in geostatistical analysis and modelling. A variogram describes the degree of spatial dependence of properties such as mineral grades, porosity, or petrophysical properties. It is used to quantify how data points are related to each other based on their spatial separation and direction.

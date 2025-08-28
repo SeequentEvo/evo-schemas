@@ -5,7 +5,7 @@ import FlatProperties from './_generated/flatmd/objects/magnetics-1.2.0.md';
 
 # magnetics
 
-<Chip color="info" icon={<CheckIcon />} label="Supported" />
+<Chip color="info" icon={<CheckIcon />} label="Supported" /><br />
 <SchemaUri uri="schema/objects/magnetics/1.2.0/magnetics.schema.json" />
 
 A magnetics object represents geolocated, time stamped geomagnetic survey data. This data is used extensively in exploration for mineral resources, environmental investigations, fundamental earth science mapping, and other fields where the magnetic properties of subsurface materials provide insight.

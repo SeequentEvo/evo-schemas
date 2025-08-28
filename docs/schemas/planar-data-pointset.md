@@ -5,7 +5,7 @@ import FlatProperties from './_generated/flatmd/objects/planar-data-pointset-1.3
 
 # planar-data-pointset
 
-<Chip color="info" icon={<CheckIcon />} label="Supported" />
+<Chip color="info" icon={<CheckIcon />} label="Supported" /><br />
 <SchemaUri uri="schema/objects/planar-data-pointset/1.3.0/planar-data-pointset.schema.json" />
 
 The `planar-data-pointset` schema is a variant of the generic [pointset](pointset.md) schema. See that schema for general information.

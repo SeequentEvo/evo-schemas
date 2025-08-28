@@ -5,7 +5,7 @@ import FlatProperties from './_generated/flatmd/objects/global-ellipsoid-1.2.0.m
 
 # global-ellipsoid
 
-<Chip color="info" icon={<CheckIcon />} label="Supported" />
+<Chip color="info" icon={<CheckIcon />} label="Supported" /><br />
 <SchemaUri uri="schema/objects/global-ellipsoid/1.2.0/global-ellipsoid.schema.json" />
 
 The global-ellipsoid object captures the parameters of an ellipsoid. Such an object is typically used to represent the anisotropy or the main direction of continuity of spatial geological properties such as mineral grades, petrophysical properties, or lithology.
