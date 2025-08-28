@@ -40,7 +40,7 @@ In the event there is a request for a new schema but no capacity to build it, th
 
 ### Publication
 
-The **Publication** phase tracks the schema as it makes its way to being publicly available. In the event that a schema has been developed in private, it must be disclosed commercially for it to enter the **Tech Preview** state. Functionally, a schema that is in **Tech Preview** is fully usable within the running instances of the [Geoscience Object API](https://developer.seequent.com/docs/api/geoscience-object/geoscience-object-api). This enables development against the schema by any Evo user (including Seequent developers, customers and partners).
+The **Publication** phase tracks the schema as it makes its way to being publicly available. In the event that a schema has been developed in private, it must be disclosed commercially for it to enter the **Tech Preview** state. Functionally, a schema that is in **Tech Preview** is fully usable within the running instances of the [Geoscience Object API](https://developer.seequent.com/docs/api/geoscience-object/geoscience-object-api). This enables development against the schema by any Seequent Evo user (including Seequent developers, customers and partners).
 
 For schemas in **Tech Preview**, no Service Level Agreements (SLA) or Deprecation guarantees apply.
 
@@ -50,8 +50,6 @@ Customers and partners should expect that Seequent products have mixed support f
 
 ### Operation
 
-For schemas that are fully **Supported**, the usual Evo SLAs and Deprecation policy apply. That doesn't mean they are supported everywhere (which schemas are supported depends on the product and workflow).
+For schemas that are fully **Supported**, the usual Seequent Evo SLAs and Deprecation policy apply. That doesn't mean they are available for use in all applications (which schemas are implemented depends on the product and workflow).
 
-Sometimes, a **Supported** schema might no longer be useful (perhaps it has been superseded or didn't receive sufficient uptake in products). In that situation, the schema will enter the **Deprecated** state, which means we recommend that it not be used for new integrations.
-
-In the event that a schema is **Deprecated**, Seequent will communicate any proposed changes to the support, including a clear estimate of when and how anything might change.
+Sometimes, a **Supported** schema might no longer be useful (perhaps it has been superseded or didn't receive sufficient uptake in products). In that situation, the schema will enter the **Deprecated** state, which means we recommend that it not be used for new integrations. Seequent will communicate any planned changes to the availability of the schema within the Geoscience Object API, along with their timeline. If the deprecation of a schema impacts your workflow, please reach out to the Seequent Evo support team or Developer Community Champions.
