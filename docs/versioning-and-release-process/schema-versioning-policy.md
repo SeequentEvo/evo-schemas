@@ -1,3 +1,5 @@
+import Alert from '@mui/material/Alert';
+
 # Schema Versioning Policy
 
 Geoscience Data Objects in Evo are how we represent core geoscientific concepts in digital form. The schemas governing these Geoscience Data Objects are called “Geoscience Object Schemas” or Evo Schemas, and the authoritative version of this open source schema library may be found on the [Seequent Evo GitHub repository called evo-schemas](https://github.com/SeequentEvo/evo-schemas). Documentation for these schemas is available in the [Seequent Developer Portal section on Data structures](https://developer.seequent.com/docs/data-structures/geoscience-objects).
