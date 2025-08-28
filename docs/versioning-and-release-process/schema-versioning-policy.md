@@ -112,7 +112,7 @@ When a referenced schema changes and a schema that uses it incorporates that cha
 
 Within a given Workspace or Evo Instance, there may be data that follow the same broad schema but that are written with different versions. In some cases, this reflects historical data (once data in the Geoscience Object Service are written, a given revision is *immutable*, and therefore tied to the schema it was written in). In others, brand new data may be entered by an application that writes an earlier specification (either because they have not upgraded, or because they wish to be backwards compatible).
 
-Having multiple versions simultaneously in use adds some complexity. However, having multiple versions is fundamental to storing what *truly happened*. A common alternative would be to seamlessly "upgrade" data to a new schema, where possible. Seamlessly upgrading should be employed in many cases, but the *the data is different*. In Evo, performing an update means either a new Object or a new Object Revision: both may be tracked by Audit Logs and Lineage where supported.
+Having multiple versions simultaneously in use adds some complexity. However, having multiple versions is fundamental to storing what *truly happened*. A common alternative would be to seamlessly "upgrade" data to a new schema, where possible. Seamlessly upgrading should be employed in many cases, but *the data is different*. In Evo, performing an update means either a new Object or a new Object Revision: both may be tracked by Audit Logs and Lineage where supported.
 
 ## Concepts and design concerns
 
