@@ -1,8 +1,11 @@
+import Chip from '@mui/material/Chip';
+import { Flask as FlaskIcon } from '@local/web-design-system-2/dist/icons';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from './_generated/flatmd/objects/drilling-campaign-1.0.0.md';
 
 # drilling-campaign
 
+<Chip color="warning" icon={<FlaskIcon />} label="Tech Preview" />
 <SchemaUri uri="schema/objects/drilling-campaign/1.0.0/drilling-campaign.schema.json" />
 
 ## Overview
