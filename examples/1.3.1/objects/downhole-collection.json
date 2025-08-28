@@ -1,0 +1,140 @@
+{
+  "schema": "/objects/downhole-collection/1.3.1/downhole-collection.schema.json",
+  "name": "Example downhole collection",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "description": "This is example data to ensure the object validates properly.",
+  "bounding_box": {
+    "min_y": 0,
+    "max_y": 10,
+    "min_x": 0,
+    "max_x": 10,
+    "min_z": 0,
+    "max_z": 0
+  },
+  "coordinate_reference_system": {
+    "epsg_code": 1024
+  },
+  "type": "downhole",
+  "distance_unit": "m",
+  "desurvey": "balanced_tangent",
+  "location": {
+    "coordinates": {
+      "width": 3,
+      "data_type": "float64",
+      "length": 3,
+      "data": "abababababababababababababababababababababababababababababababab"
+    },
+    "attributes": [],
+    "distances": {
+      "width": 3,
+      "data_type": "float64",
+      "length": 3,
+      "data": "abababababababababababababababababababababababababababababababab"
+    },
+    "holes": {
+      "width": 3,
+      "data_type": "int32/uint64/uint64",
+      "length": 3,
+      "data": "abababababababababababababababababababababababababababababababab"
+    },
+    "hole_id": {
+      "values": {
+        "data_type": "int32",
+        "length": 3,
+        "width": 1,
+        "data": "abababababababababababababababababababababababababababababababab"
+      },
+      "table": {
+        "keys_data_type": "int32",
+        "values_data_type": "string",
+        "length": 3,
+        "data": "abababababababababababababababababababababababababababababababab"
+      }
+    },
+    "path": {
+      "width": 3,
+      "data_type": "float64",
+      "length": 3,
+      "data": "abababababababababababababababababababababababababababababababab",
+      "attributes": []
+    }
+  },
+  "collections": [
+    {
+      "name": "Validation distance table.",
+      "collection_type": "distance",
+      "distance": {
+        "values": {
+          "data_type": "float64",
+          "length": 3,
+          "width": 1,
+          "data": "abababababababababababababababababababababababababababababababab"
+        },
+        "attributes": [],
+        "unit": "m"
+      },
+      "holes": {
+        "width": 3,
+        "data_type": "int32/uint64/uint64",
+        "length": 3,
+        "data": "abababababababababababababababababababababababababababababababab"
+      }
+    },
+    {
+      "name": "Downhole structural measurements",
+      "collection_type": "planar",
+      "distance": {
+        "values": {
+          "data_type": "float64",
+          "length": 42,
+          "width": 1,
+          "data": "abababababababababababababababababababababababababababababababab"
+        },
+        "attributes": [],
+        "unit": "m"
+      },
+      "relative_plane_angles": {
+        "data_type": "float64",
+        "length": 42,
+        "width": 2,
+        "data": "abababababababababababababababababababababababababababababababab"
+      },
+      "plane_polarity": {
+        "data_type": "bool",
+        "length": 42,
+        "data": "abababababababababababababababababababababababababababababababab"
+      },
+      "holes": {
+        "width": 3,
+        "data_type": "int32/uint64/uint64",
+        "length": 42,
+        "data": "abababababababababababababababababababababababababababababababab"
+      }
+    },
+    {
+      "name": "Downhole lineations measurements.",
+      "collection_type": "lineation",
+      "distance": {
+        "values": {
+          "data_type": "float64",
+          "length": 42,
+          "width": 1,
+          "data": "abababababababababababababababababababababababababababababababab"
+        },
+        "unit": "m"
+      },
+      "relative_lineation_angles": {
+        "data_type": "float64",
+        "length": 42,
+        "width": 3,
+        "data": "abababababababababababababababababababababababababababababababab"
+      },
+      "holes": {
+        "width": 3,
+        "data_type": "int32/uint64/uint64",
+        "length": 42,
+        "data": "abababababababababababababababababababababababababababababababab"
+      }
+    }
+  ]
+}
