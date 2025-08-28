@@ -82,13 +82,13 @@ This mainly represents changes that are done to improve quality, without impacti
 - **Clarifications**: Adding more precise descriptions or examples without altering validation rules
 - **Shifting sub-schema definitions to or from a `$ref` block**: For example, moving a data structure to a component to enable reuse. As the “flattened” form of the schema is the same, data valid under one definition is valid under the other.
 
-:::info
+<Alert severity="info">
 API clients may choose to ignore `PATCH` changes, as they make no difference to the data flowing over the wire.
 
 There are types of consumers for whom `PATCH` changes are very important. This includes anything generating documentation (for example, our own [Developer Portal](https://developer.seequent.com/)), since changes to descriptions and examples are quite important for that use case.
 
 Another consumer that may wish to track `PATCH` releases is anyone interacting with Evo via AI / LLM tools for code generation – updates to the documentation can have a profound effect on the usefulness of these tools.
-:::
+</Alert>
 
 ### Individual versioning
 
@@ -98,7 +98,7 @@ The individual versioning reflects the broad range of geoscientific domains supp
 
 This means that `tensor-3d-grid` v`1.3.0` might be older than `block-model` v`1.0.0` (it is), and that publishing a change to `tensor-3d-grid` that moved it to v`1.3.1` doesn’t imply any change to any other schema.
 
-:::info
+<Alert severity="info">
 #### Component versioning
 
 Many schemas depend on “components” – i.e., sub-schemas that are referenced to implement shared functionality. For example, `base-object-properties` is referenced broadly because it implements all the common behaviours for Geoscience Objects; most object schemas reference it via a transitive reference in `base-spatial-data-properties`.
@@ -106,7 +106,7 @@ Many schemas depend on “components” – i.e., sub-schemas that are reference
 When the lineage component v`1.0.0` was introduced, it was referenced by `base-object-properties` v`1.1.0`, and this minor revision cascaded through all of the objects, incrementing their minor versions by 1 as well. In some objects, this took them from v`1.1.0` to v`1.2.0`; in others, it took them from v`1.2.0` to v`1.3.0`.
 
 When a referenced schema changes and a schema that uses it incorporates that change, it will always be (at least) as significant a version increase as the referenced sub-schema. However, the exact number will depend on the history of the schema evolution for the schema that references it.
-:::
+</Alert>
 
 ### Multiple versions in use
 
