@@ -4,7 +4,7 @@ The development of new Geoscience Object Schemas is a critical part of how Seequ
 
 Here, we describe the process that (depending on decisions made along the way) may lead to the development and release of a new schema.
 
-<Alert severity="info">
+:::info
 #### A note on secrecy
 
 Seequent is a part of Bentley Systems, a publicly-traded company listed on the NASDAQ stock exchange. As with all large companies, and especially publicly-traded companies, there are internal rules and international laws that govern the disclosure of certain information. Sometimes, the development of a new schema might represent this kind of disclosure (for example, it might signal a move into a new market segment or an integration with a new partner).
@@ -12,7 +12,7 @@ Seequent is a part of Bentley Systems, a publicly-traded company listed on the N
 While we *always* prefer to develop these schemas in the open, there will be circumstances where some of the steps outlined below are *not* publicly visible.
 
 Responsible commercial disclosure is a necessary step before a schema enters **Tech Preview** (see below). In the (most common) situation wherein a schema is developed fully in the open, there is functionally no difference between **Approved** and **Tech Preview**.
-</Alert>
+:::
 
 ## Process
 
@@ -22,9 +22,11 @@ Responsible commercial disclosure is a necessary step before a schema enters **T
 
 The first step is to define the "problem to solve". This might come from a Seequent partner or customer (*that could be you*), from feedback Seequent has received, or from a new product need or idea we surface internally. Wherever possible, the *best* place to define the problem is in a public RFC (Request for Comment; see [Open source](https://developer.seequent.com/docs/guides/open-source)).
 
-<Alert severity="info" actionText="See active RFCs" actionLink="https://github.com/SeequentEvo/evo-schemas/issues">
+:::info
 You can see the active RFCs on the `SeequentEvo/evo-schemas` GitHub repository—they're all issues of type `rfc`. This is also where you can go to *create a new RFC*.
-</Alert>
+
+[See active RFCs](https://github.com/SeequentEvo/evo-schemas/issues")
+:::
 
 Once an RFC has been created, the maintainers of the [`SeequentEvo/evo-schemas`](https://github.com/SeequentEvo/evo-schemas) repository will work with the submitter to help characterize the problem. Depending on the scope of the work, the submitter or maintainers may solicit input from other parties, and this conversation happens on the RFC discussion thread (where possible).
 
