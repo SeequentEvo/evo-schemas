@@ -1,8 +1,11 @@
+import CheckIcon from '@mui/icons-material/Check';
+import Chip from '@mui/material/Chip';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from './_generated/flatmd/objects/global-ellipsoid-1.2.0.md';
 
 # global-ellipsoid
 
+<Chip color="info" icon={<CheckIcon />} label="Supported" />
 <SchemaUri uri="schema/objects/global-ellipsoid/1.2.0/global-ellipsoid.schema.json" />
 
 The global-ellipsoid object captures the parameters of an ellipsoid. Such an object is typically used to represent the anisotropy or the main direction of continuity of spatial geological properties such as mineral grades, petrophysical properties, or lithology.

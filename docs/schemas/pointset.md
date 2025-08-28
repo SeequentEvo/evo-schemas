@@ -1,8 +1,11 @@
+import CheckIcon from '@mui/icons-material/Check';
+import Chip from '@mui/material/Chip';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from './_generated/flatmd/objects/pointset-1.3.0.md';
 
 # pointset
 
+<Chip color="info" icon={<CheckIcon />} label="Supported" />
 <SchemaUri uri="schema/objects/pointset/1.3.0/pointset.schema.json" />
 
 The pointset object captures a set of points in space and their associated attributes. This object is widely used in earth sciences for various applications such as geological mapping, geostatistical analysis, and environmental monitoring.
