@@ -1,0 +1,159 @@
+{
+  "$id": "/objects/drilling-campaign/1.0.0/drilling-campaign.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A planned drillholes and interim drillhole data for a drilling campaign.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.1.0/base-spatial-data-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/drilling-campaign/1.0.0/drilling-campaign.schema.json"
+        },
+        "type": {
+          "title": "Type",
+          "description": "The type of the planned drillholes.",
+          "const": "campaign"
+        },
+        "distance_unit": {
+          "description": "The units of depth for the drillholes.",
+          "$ref": "/elements/unit/1.0.1/categories/unit-length.schema.json"
+        },
+        "hole_id": {
+          "description": "Hole IDs.",
+          "$ref": "/components/category-data/1.0.1/category-data.schema.json"
+        },
+        "planned": {
+          "description": "Planned data for the drilling campaign.",
+          "type": "object",
+          "properties": {
+            "collar": {
+              "description": "Collar data for the planned drillholes.",
+              "$ref": "/components/hole-collars/1.0.0/hole-collars.schema.json"
+            },
+            "path": {
+              "description": "The path taken by the downhole segment. Columns required depends on deviations used.",
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/natural_deviation"
+                },
+                {
+                  "$ref": "#/$defs/mixed_deviation"
+                }
+              ]
+            },
+            "collections": {
+              "description": "Projected attributes for the planned drillholes.",
+              "$ref": "/components/downhole-attributes/1.0.0/downhole-attributes.schema.json"
+            }
+          },
+          "required": [
+            "collar",
+            "path"
+          ]
+        },
+        "interim": {
+          "description": "Interim drillhole data for the drilling campaign.",
+          "type": "object",
+          "properties": {
+            "collar": {
+              "description": "Collar data for the interim drillholes.",
+              "$ref": "/components/hole-collars/1.0.0/hole-collars.schema.json"
+            },
+            "path": {
+              "description": "The path taken by the downhole segment. Columns: distance, azimuth, dip.",
+              "$ref": "/components/downhole-direction-vector/1.0.0/downhole-direction-vector.schema.json"
+            },
+            "desurvey": {
+              "description": "The desurvey method used.",
+              "$ref": "/components/desurvey-method/1.0.0/desurvey-method.schema.json"
+            },
+            "collections": {
+              "description": "Collection of attributes for the interim drilling data.",
+              "$ref": "/components/downhole-attributes/1.0.0/downhole-attributes.schema.json"
+            }
+          },
+          "required": [
+            "collar",
+            "path"
+          ]
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "hole_id",
+    "planned"
+  ],
+  "$defs": {
+    "natural_deviation": {
+      "description": "The path taken by the planned drillhole using only natural deviations. Columns: distance, azimuth, dip, lift rate, drift rate, deviation rate distance",
+      "allOf": [
+        {
+          "properties": {
+            "deviation_type": {
+              "description": "Type of deviation",
+              "const": "natural"
+            }
+          }
+        },
+        {
+          "$ref": "/elements/float-array-6/1.0.1/float-array-6.schema.json"
+        },
+        {
+          "$ref": "/components/attribute-list-property/1.2.0/attribute-list-property.schema.json"
+        }
+      ],
+      "required": [
+        "deviation_type"
+      ]
+    },
+    "mixed_deviation": {
+      "description": "The path taken by the planned drillhole using both natural and directed deviations.",
+      "allOf": [
+        {
+          "properties": {
+            "deviation_type": {
+              "description": "Type of deviation",
+              "const": "mixed"
+            },
+            "segment_type": {
+              "description": "Type of segment deviation, 'natural' or 'directed'",
+              "$ref": "/elements/string-array/1.0.1/string-array.schema.json"
+            },
+            "segment_properties": {
+              "description": "The path taken by the planned drillhole using both natural and directed deviations. Columns: distance, azimuth, dip, lift rate, drift rate, deviation rate distance, toolface angle, dogleg severity",
+              "allOf": [
+                {
+                  "$ref": "/elements/float-array-md/1.0.1/float-array-md.schema.json"
+                },
+                {
+                  "properties": {
+                    "width": {
+                      "description": "number of columns",
+                      "const": 8
+                    }
+                  },
+                  "required": [
+                    "width"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "deviation_type",
+            "segment_type",
+            "segment_properties"
+          ]
+        },
+        {
+          "$ref": "/components/attribute-list-property/1.2.0/attribute-list-property.schema.json"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "schema": "/objects/drilling-campaign/1.0.0/drilling-campaign.schema.json",
+  "name": "Example drilling campaign",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "description": "This is example data to ensure the object validates properly.",
+  "bounding_box": {
+    "min_y": 0,
+    "max_y": 10,
+    "min_x": 0,
+    "max_x": 10,
+    "min_z": 0,
+    "max_z": 0
+  },
+  "coordinate_reference_system": {
+    "epsg_code": 1024
+  },
+  "type": "campaign",
+  "distance_unit": "m",
+  "hole_id": {
+    "values": {
+      "data_type": "int32",
+      "length": 3,
+      "width": 1,
+      "data": "abababababababababababababababababababababababababababababababab"
+    },
+    "table": {
+      "keys_data_type": "int32",
+      "values_data_type": "string",
+      "length": 3,
+      "data": "abababababababababababababababababababababababababababababababab"
+    }
+  },
+  "planned": {
+    "collar": {
+      "coordinates": {
+        "width": 3,
+        "data_type": "float64",
+        "length": 5,
+        "data": "abababababababababababababababababababababababababababababababab"
+      },
+      "holes": {
+        "width": 3,
+        "data_type": "int32/uint64/uint64",
+        "length": 5,
+        "data": "abababababababababababababababababababababababababababababababab"
+      },
+      "distances": {
+        "width": 3,
+        "data_type": "float64",
+        "length": 5,
+        "data": "abababababababababababababababababababababababababababababababab"
+      }
+    },
+    "path": {
+      "deviation_type": "mixed",
+      "segment_type": {
+        "data": "abababababababababababababababababababababababababababababababab",
+        "data_type": "string",
+        "length": 6
+      },
+      "segment_properties": {
+        "width": 8,
+        "data_type": "float64",
+        "length": 6,
+        "data": "abababababababababababababababababababababababababababababababab"
+      }
+    },
+    "collections": [
+      {
+        "name": "Validation distance table.",
+        "collection_type": "distance",
+        "distance": {
+          "values": {
+            "data_type": "float64",
+            "length": 3,
+            "width": 1,
+            "data": "abababababababababababababababababababababababababababababababab"
+          },
+          "attributes": [],
+          "unit": "m"
+        },
+        "holes": {
+          "width": 3,
+          "data_type": "int32/uint64/uint64",
+          "length": 3,
+          "data": "abababababababababababababababababababababababababababababababab"
+        }
+      },
+      {
+        "name": "Downhole structural measurements",
+        "collection_type": "planar",
+        "distance": {
+          "values": {
+            "data_type": "float64",
+            "length": 42,
+            "width": 1,
+            "data": "abababababababababababababababababababababababababababababababab"
+          },
+          "attributes": [],
+          "unit": "m"
+        },
+        "relative_plane_angles": {
+          "data_type": "float64",
+          "length": 42,
+          "width": 2,
+          "data": "abababababababababababababababababababababababababababababababab"
+        },
+        "plane_polarity": {
+          "data_type": "bool",
+          "length": 42,
+          "data": "abababababababababababababababababababababababababababababababab"
+        },
+        "holes": {
+          "width": 3,
+          "data_type": "int32/uint64/uint64",
+          "length": 42,
+          "data": "abababababababababababababababababababababababababababababababab"
+        }
+      },
+      {
+        "name": "Downhole lineations measurements.",
+        "collection_type": "lineation",
+        "distance": {
+          "values": {
+            "data_type": "float64",
+            "length": 42,
+            "width": 1,
+            "data": "abababababababababababababababababababababababababababababababab"
+          },
+          "unit": "m"
+        },
+        "relative_lineation_angles": {
+          "data_type": "float64",
+          "length": 42,
+          "width": 3,
+          "data": "abababababababababababababababababababababababababababababababab"
+        },
+        "holes": {
+          "width": 3,
+          "data_type": "int32/uint64/uint64",
+          "length": 42,
+          "data": "abababababababababababababababababababababababababababababababab"
+        }
+      }
+    ]
+  }
+}
