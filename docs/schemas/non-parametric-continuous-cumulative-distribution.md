@@ -1,11 +1,13 @@
 import CheckIcon from '@mui/icons-material/Check';
 import Chip from '@mui/material/Chip';
+import Grid from '@mui/material/Grid';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from './_generated/flatmd/objects/non-parametric-continuous-cumulative-distribution-1.2.0.md';
 
+<Grid container>
 # non-parametric-continuous-cumulative-distribution
-
-<Chip color="info" icon={<CheckIcon />} label="Supported" /><br />
+<Chip color="info" icon={<CheckIcon />} label="Supported" style={{margin: '0.75em'}} />
+</Grid>
 <SchemaUri uri="schema/objects/non-parametric-continuous-cumulative-distribution/1.2.0/non-parametric-continuous-cumulative-distribution.schema.json" />
 
 The non-parametric-continuous-cumulative-distribution object captures the statistical cumulative distribution function (CDF) of a property. It is non-parametric since the CDF is not characterized by a known distribution (e.g., normal or lognormal) or by a mathematical formula. Instead, the cumulative probability is calculated directly from the data and from an extrapolation function if the data does not capture the full range of possible values.

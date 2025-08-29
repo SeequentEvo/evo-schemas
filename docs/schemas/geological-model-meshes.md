@@ -1,11 +1,13 @@
 import CheckIcon from '@mui/icons-material/Check';
 import Chip from '@mui/material/Chip';
+import Grid from '@mui/material/Grid';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from './_generated/flatmd/objects/geological-model-meshes-2.1.0.md';
 
+<Grid container>
 # geological-model-meshes
-
-<Chip color="info" icon={<CheckIcon />} label="Supported" /><br />
+<Chip color="info" icon={<CheckIcon />} label="Supported" style={{margin: '0.75em'}} />
+</Grid>
 <SchemaUri uri="schema/objects/geological-model-meshes/2.1.0/geological-model-meshes.schema.json" />
 
 A collection of one or more meshes from a geological model, organized by folder. Volumes are represented as a triangular mesh hull, surfaces as a triangular mesh surface. Volumes and surfaces may reference a material. Only geology and its associated properties are expected in a geological-model-meshes object.

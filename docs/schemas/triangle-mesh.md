@@ -1,11 +1,13 @@
 import CheckIcon from '@mui/icons-material/Check';
 import Chip from '@mui/material/Chip';
+import Grid from '@mui/material/Grid';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from './_generated/flatmd/objects/triangle-mesh-2.2.0.md';
 
+<Grid container>
 # triangle-mesh
-
-<Chip color="info" icon={<CheckIcon />} label="Supported" /><br />
+<Chip color="info" icon={<CheckIcon />} label="Supported" style={{margin: '0.75em'}} />
+</Grid>
 <SchemaUri uri="schema/objects/triangle-mesh/2.2.0/triangle-mesh.schema.json" />
 
 A discretization of a 3D domain into triangles. The triangles are defined by triplets of indices into a vertex list. Optionally, parts and edges can be specified.
