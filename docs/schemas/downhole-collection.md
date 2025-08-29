@@ -1,11 +1,13 @@
 import CheckIcon from '@mui/icons-material/Check';
 import Chip from '@mui/material/Chip';
+import Grid from '@mui/material/Grid';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from './_generated/flatmd/objects/downhole-collection-1.3.0.md';
 
+<Grid container>
 # downhole-collection
-
-<Chip color="info" icon={<CheckIcon />} label="Supported" /><br />
+<Chip color="info" icon={<CheckIcon />} label="Supported" style={{margin: '0.75em'}} />
+</Grid>
 <SchemaUri uri="schema/objects/downhole-collection/1.3.0/downhole-collection.schema.json" />
 
 ## Overview
