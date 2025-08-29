@@ -1,10 +1,11 @@
 # Geoscience object schemas
 
-The following schemas are supported:
+The following schemas are available for use:
 
 * [design-geometry](design-geometry.md)
 * [downhole-collection](downhole-collection.md)
 * [downhole-intervals](downhole-intervals.md)
+* [drilling-campaign](drilling-campaign.md)
 * [frequency-domain-electromagnetic](frequency-domain-electromagnetic.md)
 * [geological-model-meshes](geological-model-meshes.md)
 * [geological-sections](geological-sections.md)
