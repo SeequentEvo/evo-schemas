@@ -1,8 +1,13 @@
+import CheckIcon from '@mui/icons-material/Check';
+import Chip from '@mui/material/Chip';
+import Grid from '@mui/material/Grid';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from './_generated/flatmd/objects/unstructured-grid-1.3.0.md';
 
+<Grid container>
 # unstructured-grid
-
+<Chip color="info" icon={<CheckIcon />} label="Supported" style={{margin: '0.75em'}} />
+</Grid>
 <SchemaUri uri="schema/objects/unstructured-grid/1.3.0/unstructured-grid.schema.json" />
 
 Represents an unstructured grid where cells can have arbitrary shapes and sizes.

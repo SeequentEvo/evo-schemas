@@ -1,8 +1,13 @@
+import CheckIcon from '@mui/icons-material/Check';
+import Chip from '@mui/material/Chip';
+import Grid from '@mui/material/Grid';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from './_generated/flatmd/objects/geological-sections-1.1.0.md';
 
+<Grid container>
 # geological-sections
-
+<Chip color="info" icon={<CheckIcon />} label="Supported" style={{margin: '0.75em'}} />
+</Grid>
 <SchemaUri uri="schema/objects/geological-sections/1.1.0/geological-sections.schema.json" />
 
 The geological-sections schema is used to store geology as a set of planar cross sections. Soil layers and volumes are represented using 2D line segments on the section plane. This object does not support curved or crooked sections. Only geology and its associated properties are expected in a geological-sections object.
