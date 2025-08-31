@@ -1,6 +1,5 @@
 # Evo schemas changelog
 
-## Version 1.0.0
-
-### Additions :tada:
-- Initial release.
+## v2024.4
+### What's Changed
+**Full Changelog**: https://github.com/SeequentEvo/evo-schemas/commits/v2024.4
