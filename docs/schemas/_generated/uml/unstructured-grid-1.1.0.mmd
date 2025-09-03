@@ -1,0 +1,108 @@
+---
+config:
+    class:
+        hideEmptyMembersBox: true
+---
+
+classDiagram
+    class `components/base-object-properties-1.0.1`:::schemaComponent {
+        name: string
+        uuid: components/base-object-properties-1.0.1-uuid
+        description: string
+        extensions: object
+        tags: object
+    }
+    class `components/base-spatial-data-properties-1.0.1`:::schemaComponent {
+        name: string*
+        uuid: components/base-object-properties-1.0.1-uuid*
+        description: string*
+        extensions: object*
+        tags: object*
+        bounding_box: components/bounding-box-1.0.1
+        coordinate_reference_system: components/crs-1.0.1
+    }
+    `components/base-object-properties-1.0.1` <|-- `components/base-spatial-data-properties-1.0.1`
+    class `objects/unstructured-grid-1.1.0`:::schemaObject {
+        name: string*
+        uuid: components/base-object-properties-1.0.1-uuid*
+        description: string*
+        extensions: object*
+        tags: object*
+        bounding_box: components/bounding-box-1.0.1*
+        coordinate_reference_system: components/crs-1.0.1*
+        geometry: components/unstructured-grid-geometry-1.1.0
+    }
+    `components/base-spatial-data-properties-1.0.1` <|-- `objects/unstructured-grid-1.1.0`
+    `components/base-object-properties-1.0.1` *-- `components/base-object-properties-1.0.1-uuid` : ref uuid*
+    `components/base-spatial-data-properties-1.0.1` *-- `components/bounding-box-1.0.1` : ref bounding_box*
+    `components/base-spatial-data-properties-1.0.1` *-- `components/crs-1.0.1` : ref coordinate_reference_system*
+    `objects/unstructured-grid-1.1.0` *-- `components/unstructured-grid-geometry-1.1.0` : ref geometry*
+    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
+    }
+    class `components/unstructured-grid-geometry-1.1.0`:::schemaComponent {
+        vertices: components/unstructured-grid-geometry-1.1.0-vertices
+        cells: components/unstructured-grid-geometry-1.1.0-cells
+        indices: elements/index-array-1-1.0.1
+    }
+    `components/unstructured-grid-geometry-1.1.0` *-- `components/unstructured-grid-geometry-1.1.0-vertices` : ref vertices*
+    `components/unstructured-grid-geometry-1.1.0` *-- `components/unstructured-grid-geometry-1.1.0-cells` : ref cells*
+    `components/unstructured-grid-geometry-1.1.0` *-- `elements/index-array-1-1.0.1` : ref indices*
+    class `elements/float-array-md-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1
+        length: integer
+        width: integer
+        data_type: string = float64
+    }
+    class `elements/float-array-3-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1*
+        length: integer*
+        data_type: string = float64*
+        width: integer = 3
+    }
+    `elements/float-array-md-1.0.1` <|-- `elements/float-array-3-1.0.1`
+    class `components/attribute-list-property-1.1.0`:::schemaComponent {
+        attributes: components/one-of-attribute-1.1.0
+    }
+    class `components/unstructured-grid-geometry-1.1.0-vertices`:::schemaImplicit {
+        data: elements/binary-blob-1.0.1*
+        length: integer*
+        width: integer*
+        data_type: string = float64*
+        width: integer = 3*
+        attributes: components/one-of-attribute-1.1.0*
+    }
+    `elements/float-array-md-1.0.1` <|-- `components/unstructured-grid-geometry-1.1.0-vertices`
+    `elements/float-array-3-1.0.1` <|-- `components/unstructured-grid-geometry-1.1.0-vertices`
+    `components/attribute-list-property-1.1.0` <|-- `components/unstructured-grid-geometry-1.1.0-vertices`
+    `elements/float-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
+    `components/attribute-list-property-1.1.0` *-- `components/one-of-attribute-1.1.0` : ref attributes*
+    class `elements/binary-blob-1.0.1`:::schemaElement {
+    }
+    class `components/one-of-attribute-1.1.0`:::schemaComponent {
+    }
+    class `elements/index-array-1-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1
+        length: integer
+        width: integer = 1
+        data_type: string = uint64
+    }
+    `elements/index-array-1-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
+    class `components/unstructured-grid-geometry-1.1.0-cells`:::schemaImplicit {
+        attributes: components/one-of-attribute-1.1.0*
+        data: elements/binary-blob-1.0.1
+        length: integer
+        width: integer = 3
+        data_type: string
+    }
+    `components/attribute-list-property-1.1.0` <|-- `components/unstructured-grid-geometry-1.1.0-cells`
+    `components/unstructured-grid-geometry-1.1.0-cells` *-- `elements/binary-blob-1.0.1` : ref data*
+    class `components/crs-1.0.1`:::schemaComponent {
+    }
+    class `components/bounding-box-1.0.1`:::schemaComponent {
+        min_x: number
+        max_x: number
+        min_y: number
+        max_y: number
+        min_z: number
+        max_z: number
+    }

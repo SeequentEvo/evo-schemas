@@ -1,0 +1,65 @@
+---
+config:
+    class:
+        hideEmptyMembersBox: true
+---
+
+classDiagram
+    class `components/base-object-properties-1.0.1`:::schemaComponent {
+        name: string
+        uuid: components/base-object-properties-1.0.1-uuid
+        description: string
+        extensions: object
+        tags: object
+    }
+    class `components/base-spatial-data-properties-1.0.1`:::schemaComponent {
+        name: string*
+        uuid: components/base-object-properties-1.0.1-uuid*
+        description: string*
+        extensions: object*
+        tags: object*
+        bounding_box: components/bounding-box-1.0.1
+        coordinate_reference_system: components/crs-1.0.1
+    }
+    `components/base-object-properties-1.0.1` <|-- `components/base-spatial-data-properties-1.0.1`
+    class `objects/regular-3d-grid-1.2.0`:::schemaObject {
+        name: string*
+        uuid: components/base-object-properties-1.0.1-uuid*
+        description: string*
+        extensions: object*
+        tags: object*
+        bounding_box: components/bounding-box-1.0.1*
+        coordinate_reference_system: components/crs-1.0.1*
+        origin: array
+        size: array
+        cell_size: array
+        rotation: components/rotation-1.1.0
+        cell_attributes: components/one-of-attribute-1.2.0
+        vertex_attributes: components/one-of-attribute-1.2.0
+    }
+    `components/base-spatial-data-properties-1.0.1` <|-- `objects/regular-3d-grid-1.2.0`
+    `components/base-object-properties-1.0.1` *-- `components/base-object-properties-1.0.1-uuid` : ref uuid*
+    `components/base-spatial-data-properties-1.0.1` *-- `components/bounding-box-1.0.1` : ref bounding_box*
+    `components/base-spatial-data-properties-1.0.1` *-- `components/crs-1.0.1` : ref coordinate_reference_system*
+    `objects/regular-3d-grid-1.2.0` *-- `components/rotation-1.1.0` : ref rotation*
+    `objects/regular-3d-grid-1.2.0` *-- `components/one-of-attribute-1.2.0` : ref cell_attributes*
+    `objects/regular-3d-grid-1.2.0` *-- `components/one-of-attribute-1.2.0` : ref vertex_attributes*
+    class `components/rotation-1.1.0`:::schemaComponent {
+        dip_azimuth: number
+        dip: number
+        pitch: number
+    }
+    class `components/one-of-attribute-1.2.0`:::schemaComponent {
+    }
+    class `components/bounding-box-1.0.1`:::schemaComponent {
+        min_x: number
+        max_x: number
+        min_y: number
+        max_y: number
+        min_z: number
+        max_z: number
+    }
+    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
+    }
+    class `components/crs-1.0.1`:::schemaComponent {
+    }

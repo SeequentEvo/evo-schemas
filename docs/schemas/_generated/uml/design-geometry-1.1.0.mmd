@@ -1,0 +1,125 @@
+---
+config:
+    class:
+        hideEmptyMembersBox: true
+---
+
+classDiagram
+    class `components/base-object-properties-1.1.0`:::schemaComponent {
+        name: string
+        uuid: components/base-object-properties-1.1.0-uuid
+        description: string
+        extensions: object
+        tags: object
+        lineage: components/lineage-1.0.0
+    }
+    class `components/base-spatial-data-properties-1.1.0`:::schemaComponent {
+        name: string*
+        uuid: components/base-object-properties-1.1.0-uuid*
+        description: string*
+        extensions: object*
+        tags: object*
+        lineage: components/lineage-1.0.0*
+        bounding_box: components/bounding-box-1.0.1
+        coordinate_reference_system: components/crs-1.0.1
+    }
+    `components/base-object-properties-1.1.0` <|-- `components/base-spatial-data-properties-1.1.0`
+    class `objects/design-geometry-1.1.0`:::schemaObject {
+        name: string*
+        uuid: components/base-object-properties-1.1.0-uuid*
+        description: string*
+        extensions: object*
+        tags: object*
+        lineage: components/lineage-1.0.0*
+        bounding_box: components/bounding-box-1.0.1*
+        coordinate_reference_system: components/crs-1.0.1*
+        kind: string
+        distance_unit: elements/unit-length-1.0.1-unit_categories
+        materials: array
+        vertices_2d: components/vertices-2d-1.0.1
+        vertices_3d: components/vertices-3d-1.0.1
+        lines_2d: components/lines-2d-indices-1.0.1
+        lines_3d: components/lines-3d-indices-1.0.1
+        parts: array
+    }
+    `components/base-spatial-data-properties-1.1.0` <|-- `objects/design-geometry-1.1.0`
+    `components/base-object-properties-1.1.0` *-- `components/base-object-properties-1.1.0-uuid` : ref uuid*
+    `components/base-object-properties-1.1.0` *-- `components/lineage-1.0.0` : ref lineage*
+    `components/base-spatial-data-properties-1.1.0` *-- `components/bounding-box-1.0.1` : ref bounding_box*
+    `components/base-spatial-data-properties-1.1.0` *-- `components/crs-1.0.1` : ref coordinate_reference_system*
+    `objects/design-geometry-1.1.0` *-- `elements/unit-length-1.0.1-unit_categories` : ref distance_unit*
+    `objects/design-geometry-1.1.0` *-- `components/vertices-2d-1.0.1` : ref vertices_2d*
+    `objects/design-geometry-1.1.0` *-- `components/vertices-3d-1.0.1` : ref vertices_3d*
+    `objects/design-geometry-1.1.0` *-- `components/lines-2d-indices-1.0.1` : ref lines_2d*
+    `objects/design-geometry-1.1.0` *-- `components/lines-3d-indices-1.0.1` : ref lines_3d*
+    class `components/lineage-1.0.0`:::schemaComponent {
+        self_link: string
+        events: array
+    }
+    class `components/bounding-box-1.0.1`:::schemaComponent {
+        min_x: number
+        max_x: number
+        min_y: number
+        max_y: number
+        min_z: number
+        max_z: number
+    }
+    class `components/base-object-properties-1.1.0-uuid`:::schemaImplicit {
+    }
+    class `components/vertices-3d-1.0.1`:::schemaComponent {
+        vertices: elements/float-array-3-1.0.1
+    }
+    `components/vertices-3d-1.0.1` *-- `elements/float-array-3-1.0.1` : ref vertices*
+    class `elements/float-array-md-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1
+        length: integer
+        width: integer
+        data_type: string = float64
+    }
+    class `elements/float-array-3-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1*
+        length: integer*
+        data_type: string = float64*
+        width: integer = 3
+    }
+    `elements/float-array-md-1.0.1` <|-- `elements/float-array-3-1.0.1`
+    `elements/float-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
+    class `elements/binary-blob-1.0.1`:::schemaElement {
+    }
+    class `elements/unit-length-1.0.1-unit_categories`:::schemaImplicit {
+    }
+    class `components/vertices-2d-1.0.1`:::schemaComponent {
+        vertices: elements/float-array-2-1.0.1
+    }
+    `components/vertices-2d-1.0.1` *-- `elements/float-array-2-1.0.1` : ref vertices*
+    class `elements/float-array-2-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1*
+        length: integer*
+        data_type: string = float64*
+        width: integer = 2
+    }
+    `elements/float-array-md-1.0.1` <|-- `elements/float-array-2-1.0.1`
+    class `components/lines-3d-indices-1.0.1`:::schemaComponent {
+        indices: elements/index-array-2-1.0.1
+    }
+    `components/lines-3d-indices-1.0.1` *-- `elements/index-array-2-1.0.1` : ref indices*
+    class `elements/index-array-2-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1
+        length: integer
+        width: integer = 2
+        data_type: string = uint64
+    }
+    `elements/index-array-2-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
+    class `components/lines-2d-indices-1.0.1`:::schemaComponent {
+        indices: components/lines-2d-indices-1.0.1-indices
+    }
+    `components/lines-2d-indices-1.0.1` *-- `components/lines-2d-indices-1.0.1-indices` : ref indices*
+    class `components/lines-2d-indices-1.0.1-indices`:::schemaImplicit {
+        data: elements/binary-blob-1.0.1
+        length: integer
+        width: integer = 3
+        data_type: string
+    }
+    `components/lines-2d-indices-1.0.1-indices` *-- `elements/binary-blob-1.0.1` : ref data*
+    class `components/crs-1.0.1`:::schemaComponent {
+    }

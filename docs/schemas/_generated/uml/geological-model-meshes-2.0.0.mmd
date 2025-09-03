@@ -1,0 +1,147 @@
+---
+config:
+    class:
+        hideEmptyMembersBox: true
+---
+
+classDiagram
+    class `components/base-object-properties-1.0.1`:::schemaComponent {
+        name: string
+        uuid: components/base-object-properties-1.0.1-uuid
+        description: string
+        extensions: object
+        tags: object
+    }
+    class `components/base-spatial-data-properties-1.0.1`:::schemaComponent {
+        name: string*
+        uuid: components/base-object-properties-1.0.1-uuid*
+        description: string*
+        extensions: object*
+        tags: object*
+        bounding_box: components/bounding-box-1.0.1
+        coordinate_reference_system: components/crs-1.0.1
+    }
+    `components/base-object-properties-1.0.1` <|-- `components/base-spatial-data-properties-1.0.1`
+    class `objects/geological-model-meshes-2.0.0`:::schemaObject {
+        name: string*
+        uuid: components/base-object-properties-1.0.1-uuid*
+        description: string*
+        extensions: object*
+        tags: object*
+        bounding_box: components/bounding-box-1.0.1*
+        coordinate_reference_system: components/crs-1.0.1*
+        folders: array
+        triangle_geometry: objects/geological-model-meshes-2.0.0-triangle_geometry
+        materials: array
+        volumes: array
+        volume_attributes: components/one-of-attribute-1.2.0
+        surfaces: array
+        surface_attributes: components/one-of-attribute-1.2.0
+    }
+    `components/base-spatial-data-properties-1.0.1` <|-- `objects/geological-model-meshes-2.0.0`
+    `components/base-object-properties-1.0.1` *-- `components/base-object-properties-1.0.1-uuid` : ref uuid*
+    `components/base-spatial-data-properties-1.0.1` *-- `components/bounding-box-1.0.1` : ref bounding_box*
+    `components/base-spatial-data-properties-1.0.1` *-- `components/crs-1.0.1` : ref coordinate_reference_system*
+    `objects/geological-model-meshes-2.0.0` *-- `objects/geological-model-meshes-2.0.0-triangle_geometry` : ref triangle_geometry*
+    `objects/geological-model-meshes-2.0.0` *-- `components/one-of-attribute-1.2.0` : ref volume_attributes*
+    `objects/geological-model-meshes-2.0.0` *-- `components/one-of-attribute-1.2.0` : ref surface_attributes*
+    class `components/crs-1.0.1`:::schemaComponent {
+    }
+    class `components/one-of-attribute-1.2.0`:::schemaComponent {
+    }
+    class `components/bounding-box-1.0.1`:::schemaComponent {
+        min_x: number
+        max_x: number
+        min_y: number
+        max_y: number
+        min_z: number
+        max_z: number
+    }
+    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
+    }
+    class `components/embedded-triangulated-mesh-2.1.0`:::schemaComponent {
+        triangles: components/triangles-1.2.0
+        parts: components/embedded-triangulated-mesh-2.1.0-parts
+    }
+    class `objects/geological-model-meshes-2.0.0-triangle_geometry`:::schemaImplicit {
+        triangles: components/triangles-1.2.0*
+        parts: components/embedded-triangulated-mesh-2.1.0-parts*
+    }
+    `components/embedded-triangulated-mesh-2.1.0` <|-- `objects/geological-model-meshes-2.0.0-triangle_geometry`
+    `components/embedded-triangulated-mesh-2.1.0` *-- `components/triangles-1.2.0` : ref triangles*
+    `components/embedded-triangulated-mesh-2.1.0` *-- `components/embedded-triangulated-mesh-2.1.0-parts` : ref parts*
+    class `components/attribute-list-property-1.2.0`:::schemaComponent {
+        attributes: components/one-of-attribute-1.2.0
+    }
+    class `components/embedded-triangulated-mesh-2.1.0-parts`:::schemaImplicit {
+        attributes: components/one-of-attribute-1.2.0*
+        chunks: elements/index-array-2-1.0.1
+        triangle_indices: elements/index-array-1-1.0.1
+    }
+    `components/attribute-list-property-1.2.0` <|-- `components/embedded-triangulated-mesh-2.1.0-parts`
+    `components/attribute-list-property-1.2.0` *-- `components/one-of-attribute-1.2.0` : ref attributes*
+    `components/embedded-triangulated-mesh-2.1.0-parts` *-- `elements/index-array-2-1.0.1` : ref chunks*
+    `components/embedded-triangulated-mesh-2.1.0-parts` *-- `elements/index-array-1-1.0.1` : ref triangle_indices*
+    class `elements/index-array-1-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1
+        length: integer
+        width: integer = 1
+        data_type: string = uint64
+    }
+    `elements/index-array-1-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
+    class `elements/binary-blob-1.0.1`:::schemaElement {
+    }
+    class `elements/index-array-2-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1
+        length: integer
+        width: integer = 2
+        data_type: string = uint64
+    }
+    `elements/index-array-2-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
+    class `components/triangles-1.2.0`:::schemaComponent {
+        vertices: components/triangles-1.2.0-vertices
+        indices: components/triangles-1.2.0-indices
+    }
+    `components/triangles-1.2.0` *-- `components/triangles-1.2.0-vertices` : ref vertices*
+    `components/triangles-1.2.0` *-- `components/triangles-1.2.0-indices` : ref indices*
+    class `elements/index-array-3-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1
+        length: integer
+        width: integer = 3
+        data_type: string = uint64
+    }
+    class `components/triangles-1.2.0-indices`:::schemaImplicit {
+        data: elements/binary-blob-1.0.1*
+        length: integer*
+        width: integer = 3*
+        data_type: string = uint64*
+        attributes: components/one-of-attribute-1.2.0*
+    }
+    `elements/index-array-3-1.0.1` <|-- `components/triangles-1.2.0-indices`
+    `components/attribute-list-property-1.2.0` <|-- `components/triangles-1.2.0-indices`
+    `elements/index-array-3-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
+    class `elements/float-array-md-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1
+        length: integer
+        width: integer
+        data_type: string = float64
+    }
+    class `elements/float-array-3-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1*
+        length: integer*
+        data_type: string = float64*
+        width: integer = 3
+    }
+    `elements/float-array-md-1.0.1` <|-- `elements/float-array-3-1.0.1`
+    class `components/triangles-1.2.0-vertices`:::schemaImplicit {
+        data: elements/binary-blob-1.0.1*
+        length: integer*
+        width: integer*
+        data_type: string = float64*
+        width: integer = 3*
+        attributes: components/one-of-attribute-1.2.0*
+    }
+    `elements/float-array-md-1.0.1` <|-- `components/triangles-1.2.0-vertices`
+    `elements/float-array-3-1.0.1` <|-- `components/triangles-1.2.0-vertices`
+    `components/attribute-list-property-1.2.0` <|-- `components/triangles-1.2.0-vertices`
+    `elements/float-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
