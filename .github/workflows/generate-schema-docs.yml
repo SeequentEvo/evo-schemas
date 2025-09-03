@@ -1,0 +1,35 @@
+name: Generate and Commit Schema Docs
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  generate-schema-docs:
+    name: Generate and commit schema docs
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+
+      - name: Install dependencies
+        run: pip install --upgrade pip .[release]
+
+      - name: Generate schema docs
+        run: python tools/documentation.py --autodoc
+
+      - name: Commit generated docs
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/schemas/_generated
+          git commit -m "Update generated schema docs" || echo "No changes to commit"
+          git push origin HEAD:${{ github.ref_name }}
