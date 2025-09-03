@@ -24,7 +24,7 @@ jobs:
         run: pip install --upgrade pip .[release]
 
       - name: Generate schema docs
-        run: python tools/documentation.py --autodoc
+        run: python -m tools.documentation --autodoc
 
       - name: Commit generated docs
         run: |
