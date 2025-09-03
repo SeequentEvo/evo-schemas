@@ -37,8 +37,6 @@ classDiagram
     `components/base-spatial-data-properties-1.0.1` *-- `components/bounding-box-1.0.1` : ref bounding_box*
     `components/base-spatial-data-properties-1.0.1` *-- `components/crs-1.0.1` : ref coordinate_reference_system*
     `objects/line-segments-1.1.0` *-- `components/segments-1.1.0` : ref segments*
-    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
-    }
     class `components/segments-1.1.0`:::schemaComponent {
         vertices: components/segments-1.1.0-vertices
         indices: components/segments-1.1.0-indices
@@ -74,9 +72,9 @@ classDiagram
     `components/attribute-list-property-1.1.0` <|-- `components/segments-1.1.0-vertices`
     `elements/float-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
     `components/attribute-list-property-1.1.0` *-- `components/one-of-attribute-1.1.0` : ref attributes*
-    class `elements/binary-blob-1.0.1`:::schemaElement {
-    }
     class `components/one-of-attribute-1.1.0`:::schemaComponent {
+    }
+    class `elements/binary-blob-1.0.1`:::schemaElement {
     }
     class `elements/index-array-2-1.0.1`:::schemaElement {
         data: elements/binary-blob-1.0.1
@@ -94,7 +92,7 @@ classDiagram
     `elements/index-array-2-1.0.1` <|-- `components/segments-1.1.0-indices`
     `components/attribute-list-property-1.1.0` <|-- `components/segments-1.1.0-indices`
     `elements/index-array-2-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
-    class `components/crs-1.0.1`:::schemaComponent {
+    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
     }
     class `components/bounding-box-1.0.1`:::schemaComponent {
         min_x: number
@@ -103,4 +101,6 @@ classDiagram
         max_y: number
         min_z: number
         max_z: number
+    }
+    class `components/crs-1.0.1`:::schemaComponent {
     }

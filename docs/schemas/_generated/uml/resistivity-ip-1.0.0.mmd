@@ -42,6 +42,8 @@ classDiagram
     `components/base-spatial-data-properties-1.0.1` *-- `components/crs-1.0.1` : ref coordinate_reference_system*
     `objects/resistivity-ip-1.0.0` *-- `objects/resistivity-ip-1.0.0-survey` : ref survey*
     `objects/resistivity-ip-1.0.0` *-- `objects/resistivity-ip-1.0.0-configuration` : ref configuration*
+    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
+    }
     class `objects/resistivity-ip-1.0.0-configuration`:::schemaImplicit {
     }
     class `components/bounding-box-1.0.1`:::schemaComponent {
@@ -51,8 +53,6 @@ classDiagram
         max_y: number
         min_z: number
         max_z: number
-    }
-    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
     }
     class `objects/resistivity-ip-1.0.0-survey`:::schemaImplicit {
     }

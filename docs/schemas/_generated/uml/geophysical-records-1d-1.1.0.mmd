@@ -42,8 +42,37 @@ classDiagram
     `objects/geophysical-records-1d-1.1.0` *-- `objects/geophysical-records-1d-1.1.0-locations` : ref locations*
     `objects/geophysical-records-1d-1.1.0` *-- `objects/geophysical-records-1d-1.1.0-depths` : ref depths*
     `objects/geophysical-records-1d-1.1.0` *-- `components/category-data-1.0.1` : ref line_numbers*
-    class `components/crs-1.0.1`:::schemaComponent {
+    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
     }
+    class `components/category-data-1.0.1`:::schemaComponent {
+        table: elements/lookup-table-1.0.1
+        values: elements/integer-array-1-1.0.1
+    }
+    `components/category-data-1.0.1` *-- `elements/lookup-table-1.0.1` : ref table*
+    `components/category-data-1.0.1` *-- `elements/integer-array-1-1.0.1` : ref values*
+    class `elements/integer-array-md-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1
+        length: integer
+        width: integer
+        data_type: string
+    }
+    class `elements/integer-array-1-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1*
+        length: integer*
+        data_type: string*
+        width: integer = 1
+    }
+    `elements/integer-array-md-1.0.1` <|-- `elements/integer-array-1-1.0.1`
+    `elements/integer-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
+    class `elements/binary-blob-1.0.1`:::schemaElement {
+    }
+    class `elements/lookup-table-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1
+        length: integer
+        keys_data_type: string
+        values_data_type: string = string
+    }
+    `elements/lookup-table-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
     class `components/bounding-box-1.0.1`:::schemaComponent {
         min_x: number
         max_x: number
@@ -80,38 +109,7 @@ classDiagram
     }
     `elements/float-array-md-1.0.1` <|-- `elements/float-array-1-1.0.1`
     `elements/float-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
-    class `elements/binary-blob-1.0.1`:::schemaElement {
-    }
     class `components/one-of-attribute-1.1.0`:::schemaComponent {
-    }
-    class `components/category-data-1.0.1`:::schemaComponent {
-        table: elements/lookup-table-1.0.1
-        values: elements/integer-array-1-1.0.1
-    }
-    `components/category-data-1.0.1` *-- `elements/lookup-table-1.0.1` : ref table*
-    `components/category-data-1.0.1` *-- `elements/integer-array-1-1.0.1` : ref values*
-    class `elements/lookup-table-1.0.1`:::schemaElement {
-        data: elements/binary-blob-1.0.1
-        length: integer
-        keys_data_type: string
-        values_data_type: string = string
-    }
-    `elements/lookup-table-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
-    class `elements/integer-array-md-1.0.1`:::schemaElement {
-        data: elements/binary-blob-1.0.1
-        length: integer
-        width: integer
-        data_type: string
-    }
-    class `elements/integer-array-1-1.0.1`:::schemaElement {
-        data: elements/binary-blob-1.0.1*
-        length: integer*
-        data_type: string*
-        width: integer = 1
-    }
-    `elements/integer-array-md-1.0.1` <|-- `elements/integer-array-1-1.0.1`
-    `elements/integer-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
-    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
     }
     class `components/locations-1.0.1`:::schemaComponent {
         coordinates: elements/float-array-3-1.0.1
@@ -130,3 +128,5 @@ classDiagram
         width: integer = 3
     }
     `elements/float-array-md-1.0.1` <|-- `elements/float-array-3-1.0.1`
+    class `components/crs-1.0.1`:::schemaComponent {
+    }

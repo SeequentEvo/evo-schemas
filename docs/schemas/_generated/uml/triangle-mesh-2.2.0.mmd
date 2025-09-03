@@ -51,6 +51,12 @@ classDiagram
     `components/embedded-triangulated-mesh-2.1.0` *-- `components/triangles-1.2.0` : ref triangles*
     `components/embedded-triangulated-mesh-2.1.0` *-- `components/embedded-triangulated-mesh-2.1.0-parts` : ref parts*
     `objects/triangle-mesh-2.2.0` *-- `objects/triangle-mesh-2.2.0-edges` : ref edges*
+    class `components/base-object-properties-1.1.0-uuid`:::schemaImplicit {
+    }
+    class `components/lineage-1.0.0`:::schemaComponent {
+        self_link: string
+        events: array
+    }
     class `components/triangles-1.2.0`:::schemaComponent {
         vertices: components/triangles-1.2.0-vertices
         indices: components/triangles-1.2.0-indices
@@ -77,9 +83,9 @@ classDiagram
     `components/attribute-list-property-1.2.0` <|-- `components/triangles-1.2.0-indices`
     `elements/index-array-3-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
     `components/attribute-list-property-1.2.0` *-- `components/one-of-attribute-1.2.0` : ref attributes*
-    class `elements/binary-blob-1.0.1`:::schemaElement {
-    }
     class `components/one-of-attribute-1.2.0`:::schemaComponent {
+    }
+    class `elements/binary-blob-1.0.1`:::schemaElement {
     }
     class `elements/float-array-md-1.0.1`:::schemaElement {
         data: elements/binary-blob-1.0.1
@@ -127,18 +133,6 @@ classDiagram
         data_type: string = uint64
     }
     `elements/index-array-2-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
-    class `components/lineage-1.0.0`:::schemaComponent {
-        self_link: string
-        events: array
-    }
-    class `components/bounding-box-1.0.1`:::schemaComponent {
-        min_x: number
-        max_x: number
-        min_y: number
-        max_y: number
-        min_z: number
-        max_z: number
-    }
     class `components/embedded-triangulated-mesh-2.1.0-parts`:::schemaImplicit {
         attributes: components/one-of-attribute-1.2.0*
         chunks: elements/index-array-2-1.0.1
@@ -154,7 +148,13 @@ classDiagram
         data_type: string = uint64
     }
     `elements/index-array-1-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
-    class `components/base-object-properties-1.1.0-uuid`:::schemaImplicit {
+    class `components/bounding-box-1.0.1`:::schemaComponent {
+        min_x: number
+        max_x: number
+        min_y: number
+        max_y: number
+        min_z: number
+        max_z: number
     }
     class `components/crs-1.0.1`:::schemaComponent {
     }

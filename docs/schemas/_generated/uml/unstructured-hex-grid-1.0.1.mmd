@@ -39,6 +39,16 @@ classDiagram
     `objects/unstructured-hex-grid-1.0.1` *-- `components/hexahedrons-1.0.1` : ref hexahedrons*
     class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
     }
+    class `components/bounding-box-1.0.1`:::schemaComponent {
+        min_x: number
+        max_x: number
+        min_y: number
+        max_y: number
+        min_z: number
+        max_z: number
+    }
+    class `components/crs-1.0.1`:::schemaComponent {
+    }
     class `components/hexahedrons-1.0.1`:::schemaComponent {
         vertices: components/hexahedrons-1.0.1-vertices
         indices: components/hexahedrons-1.0.1-indices
@@ -74,9 +84,9 @@ classDiagram
     `components/attribute-list-property-1.0.1` <|-- `components/hexahedrons-1.0.1-vertices`
     `elements/float-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
     `components/attribute-list-property-1.0.1` *-- `components/one-of-attribute-1.0.1` : ref attributes*
-    class `elements/binary-blob-1.0.1`:::schemaElement {
-    }
     class `components/one-of-attribute-1.0.1`:::schemaComponent {
+    }
+    class `elements/binary-blob-1.0.1`:::schemaElement {
     }
     class `elements/index-array-8-1.0.1`:::schemaElement {
         data: elements/binary-blob-1.0.1
@@ -94,13 +104,3 @@ classDiagram
     `elements/index-array-8-1.0.1` <|-- `components/hexahedrons-1.0.1-indices`
     `components/attribute-list-property-1.0.1` <|-- `components/hexahedrons-1.0.1-indices`
     `elements/index-array-8-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
-    class `components/crs-1.0.1`:::schemaComponent {
-    }
-    class `components/bounding-box-1.0.1`:::schemaComponent {
-        min_x: number
-        max_x: number
-        min_y: number
-        max_y: number
-        min_z: number
-        max_z: number
-    }

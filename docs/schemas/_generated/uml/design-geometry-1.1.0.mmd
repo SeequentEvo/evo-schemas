@@ -52,6 +52,8 @@ classDiagram
     `objects/design-geometry-1.1.0` *-- `components/vertices-3d-1.0.1` : ref vertices_3d*
     `objects/design-geometry-1.1.0` *-- `components/lines-2d-indices-1.0.1` : ref lines_2d*
     `objects/design-geometry-1.1.0` *-- `components/lines-3d-indices-1.0.1` : ref lines_3d*
+    class `components/base-object-properties-1.1.0-uuid`:::schemaImplicit {
+    }
     class `components/lineage-1.0.0`:::schemaComponent {
         self_link: string
         events: array
@@ -63,8 +65,6 @@ classDiagram
         max_y: number
         min_z: number
         max_z: number
-    }
-    class `components/base-object-properties-1.1.0-uuid`:::schemaImplicit {
     }
     class `components/vertices-3d-1.0.1`:::schemaComponent {
         vertices: elements/float-array-3-1.0.1
@@ -85,8 +85,6 @@ classDiagram
     `elements/float-array-md-1.0.1` <|-- `elements/float-array-3-1.0.1`
     `elements/float-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
     class `elements/binary-blob-1.0.1`:::schemaElement {
-    }
-    class `elements/unit-length-1.0.1-unit_categories`:::schemaImplicit {
     }
     class `components/vertices-2d-1.0.1`:::schemaComponent {
         vertices: elements/float-array-2-1.0.1
@@ -110,6 +108,10 @@ classDiagram
         data_type: string = uint64
     }
     `elements/index-array-2-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
+    class `elements/unit-length-1.0.1-unit_categories`:::schemaImplicit {
+    }
+    class `components/crs-1.0.1`:::schemaComponent {
+    }
     class `components/lines-2d-indices-1.0.1`:::schemaComponent {
         indices: components/lines-2d-indices-1.0.1-indices
     }
@@ -121,5 +123,3 @@ classDiagram
         data_type: string
     }
     `components/lines-2d-indices-1.0.1-indices` *-- `elements/binary-blob-1.0.1` : ref data*
-    class `components/crs-1.0.1`:::schemaComponent {
-    }

@@ -44,11 +44,13 @@ classDiagram
     `components/base-spatial-data-properties-1.1.0` *-- `components/bounding-box-1.0.1` : ref bounding_box*
     `components/base-spatial-data-properties-1.1.0` *-- `components/crs-1.0.1` : ref coordinate_reference_system*
     `objects/block-model-1.0.0` *-- `objects/block-model-1.0.0-geometry` : ref geometry*
-    class `objects/block-model-1.0.0-geometry`:::schemaImplicit {
+    class `components/base-object-properties-1.1.0-uuid`:::schemaImplicit {
     }
     class `components/lineage-1.0.0`:::schemaComponent {
         self_link: string
         events: array
+    }
+    class `objects/block-model-1.0.0-geometry`:::schemaImplicit {
     }
     class `components/bounding-box-1.0.1`:::schemaComponent {
         min_x: number
@@ -57,8 +59,6 @@ classDiagram
         max_y: number
         min_z: number
         max_z: number
-    }
-    class `components/base-object-properties-1.1.0-uuid`:::schemaImplicit {
     }
     class `components/crs-1.0.1`:::schemaComponent {
     }

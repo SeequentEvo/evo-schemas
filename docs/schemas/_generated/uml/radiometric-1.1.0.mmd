@@ -45,7 +45,8 @@ classDiagram
     `objects/radiometric-1.1.0` *-- `objects/radiometric-1.1.0-survey` : ref survey*
     class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
     }
-    class `components/crs-1.0.1`:::schemaComponent {
+    class `objects/radiometric-1.1.0-survey`:::schemaImplicit {
+        type: string
     }
     class `components/bounding-box-1.0.1`:::schemaComponent {
         min_x: number
@@ -55,6 +56,5 @@ classDiagram
         min_z: number
         max_z: number
     }
-    class `objects/radiometric-1.1.0-survey`:::schemaImplicit {
-        type: string
+    class `components/crs-1.0.1`:::schemaComponent {
     }

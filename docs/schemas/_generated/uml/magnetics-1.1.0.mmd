@@ -45,7 +45,9 @@ classDiagram
     `objects/magnetics-1.1.0` *-- `objects/magnetics-1.1.0-gradient_magnetic` : ref gradient_magnetic*
     class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
     }
-    class `components/crs-1.0.1`:::schemaComponent {
+    class `objects/magnetics-1.1.0-gradient_magnetic`:::schemaImplicit {
+        number_of_sensors: integer
+        sensor_offsets: array
     }
     class `components/bounding-box-1.0.1`:::schemaComponent {
         min_x: number
@@ -55,7 +57,5 @@ classDiagram
         min_z: number
         max_z: number
     }
-    class `objects/magnetics-1.1.0-gradient_magnetic`:::schemaImplicit {
-        number_of_sensors: integer
-        sensor_offsets: array
+    class `components/crs-1.0.1`:::schemaComponent {
     }

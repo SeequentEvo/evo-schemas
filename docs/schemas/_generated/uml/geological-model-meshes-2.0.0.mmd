@@ -45,6 +45,8 @@ classDiagram
     `objects/geological-model-meshes-2.0.0` *-- `objects/geological-model-meshes-2.0.0-triangle_geometry` : ref triangle_geometry*
     `objects/geological-model-meshes-2.0.0` *-- `components/one-of-attribute-1.2.0` : ref volume_attributes*
     `objects/geological-model-meshes-2.0.0` *-- `components/one-of-attribute-1.2.0` : ref surface_attributes*
+    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
+    }
     class `components/crs-1.0.1`:::schemaComponent {
     }
     class `components/one-of-attribute-1.2.0`:::schemaComponent {
@@ -56,8 +58,6 @@ classDiagram
         max_y: number
         min_z: number
         max_z: number
-    }
-    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
     }
     class `components/embedded-triangulated-mesh-2.1.0`:::schemaComponent {
         triangles: components/triangles-1.2.0

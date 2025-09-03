@@ -44,6 +44,8 @@ classDiagram
     `components/base-spatial-data-properties-1.1.0` *-- `components/bounding-box-1.0.1` : ref bounding_box*
     `components/base-spatial-data-properties-1.1.0` *-- `components/crs-1.0.1` : ref coordinate_reference_system*
     `objects/frequency-domain-electromagnetic-1.1.0` *-- `objects/frequency-domain-electromagnetic-1.1.0-survey` : ref survey*
+    class `components/base-object-properties-1.1.0-uuid`:::schemaImplicit {
+    }
     class `components/lineage-1.0.0`:::schemaComponent {
         self_link: string
         events: array
@@ -58,8 +60,6 @@ classDiagram
         max_y: number
         min_z: number
         max_z: number
-    }
-    class `components/base-object-properties-1.1.0-uuid`:::schemaImplicit {
     }
     class `components/crs-1.0.1`:::schemaComponent {
     }

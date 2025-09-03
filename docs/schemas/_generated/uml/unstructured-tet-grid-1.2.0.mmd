@@ -72,9 +72,9 @@ classDiagram
     `components/attribute-list-property-1.2.0` <|-- `components/tetrahedra-1.2.0-vertices`
     `elements/float-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
     `components/attribute-list-property-1.2.0` *-- `components/one-of-attribute-1.2.0` : ref attributes*
-    class `elements/binary-blob-1.0.1`:::schemaElement {
-    }
     class `components/one-of-attribute-1.2.0`:::schemaComponent {
+    }
+    class `elements/binary-blob-1.0.1`:::schemaElement {
     }
     class `elements/index-array-4-1.0.1`:::schemaElement {
         data: elements/binary-blob-1.0.1
@@ -94,8 +94,6 @@ classDiagram
     `elements/index-array-4-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
     class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
     }
-    class `components/crs-1.0.1`:::schemaComponent {
-    }
     class `components/bounding-box-1.0.1`:::schemaComponent {
         min_x: number
         max_x: number
@@ -103,4 +101,6 @@ classDiagram
         max_y: number
         min_z: number
         max_z: number
+    }
+    class `components/crs-1.0.1`:::schemaComponent {
     }
