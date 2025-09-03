@@ -1,9 +1,6 @@
 name: Generate and Commit Schema Docs
 
 on:
-  push:
-    branches:
-      - '**'
   workflow_dispatch:
     inputs:
       branch:
@@ -34,5 +31,5 @@ jobs:
       - name: Upload generated docs as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: schema-docs
+          name: generated-schema-docs
           path: docs/schemas/_generated
