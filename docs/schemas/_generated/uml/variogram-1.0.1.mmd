@@ -1,0 +1,33 @@
+---
+config:
+    class:
+        hideEmptyMembersBox: true
+---
+
+classDiagram
+    class `components/base-object-properties-1.0.1`:::schemaComponent {
+        name: string
+        uuid: components/base-object-properties-1.0.1-uuid
+        description: string
+        extensions: object
+        tags: object
+    }
+    class `objects/variogram-1.0.1`:::schemaObject {
+        name: string*
+        uuid: components/base-object-properties-1.0.1-uuid*
+        description: string*
+        extensions: object*
+        tags: object*
+        nugget: number
+        sill: number
+        data_variance: number
+        is_rotation_fixed: boolean
+        structures: array
+        modelling_space: string
+        domain: string
+        attribute: string
+    }
+    `components/base-object-properties-1.0.1` <|-- `objects/variogram-1.0.1`
+    `components/base-object-properties-1.0.1` *-- `components/base-object-properties-1.0.1-uuid` : ref uuid*
+    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
+    }
