@@ -17,6 +17,7 @@ def _prebuild() -> None:
     import os
     import shutil
     from pathlib import Path
+    import re
 
     from code_generator.parser import run_parser_on_object_schemas
     from code_generator.python_generator import generate_python_files
@@ -41,6 +42,22 @@ def _prebuild() -> None:
 
     shutil.copytree(src=root_dir / "schema", dst=output_dir / "schema", ignore=schema_filter)
 
+    # Replace relative links in README.md with absolute links for PyPI
+    readme_path = root_dir / "README.md"
+    output_readme_path = root_dir / "README.pypi.md"
+
+    if readme_path.exists():
+        with open(readme_path, "r", encoding="utf-8") as f:
+            content = f.read()
+        # Replace relative with absolute links
+        # regex from https://github.com/hynek/hatch-fancy-pypi-readme/blob/main/tests/example_pyproject.toml#L48
+        content = re.sub(
+            r'\[(.+?)\]\(((?!https?://)\S+?)\)',
+            r'[\1](https://github.com/SeequentEvo/evo-schemas/tree/main/\g<2>)',
+            content,
+        )
+        with open(output_readme_path, "w", encoding="utf-8") as f:
+            f.write(content)
 
 def get_requires_for_build_editable(*args, **kwargs):
     _prebuild()
