@@ -1,5 +1,16 @@
 # Evo schemas changelog
 
+## v2025.9.12
+### What's Changed
+#### Other Changes
+* Replace relative links with absolute links by @rachelcarpenterseequent in https://github.com/SeequentEvo/evo-schemas/pull/38
+* Version bump for minor release v2025.9.12 by @l-macdonald in https://github.com/SeequentEvo/evo-schemas/pull/39
+
+#### New Contributors
+* @rachelcarpenterseequent made their first contribution in https://github.com/SeequentEvo/evo-schemas/pull/38
+
+**Full Changelog**: https://github.com/SeequentEvo/evo-schemas/compare/v2025.9.2...v2025.9.12
+
 ## v2025.9.2
 ### What's Changed
 #### New Features 🎉
