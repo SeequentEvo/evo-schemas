@@ -3,7 +3,6 @@ doc/
 docs/md/
 docs/python/
 docs/generated
-docs/schemas/_generated
 examples/.env
 README.pypi.md
 

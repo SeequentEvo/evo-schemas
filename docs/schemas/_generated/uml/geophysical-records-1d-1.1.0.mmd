@@ -1,0 +1,132 @@
+---
+config:
+    class:
+        hideEmptyMembersBox: true
+---
+
+classDiagram
+    class `components/base-object-properties-1.0.1`:::schemaComponent {
+        name: string
+        uuid: components/base-object-properties-1.0.1-uuid
+        description: string
+        extensions: object
+        tags: object
+    }
+    class `components/base-spatial-data-properties-1.0.1`:::schemaComponent {
+        name: string*
+        uuid: components/base-object-properties-1.0.1-uuid*
+        description: string*
+        extensions: object*
+        tags: object*
+        bounding_box: components/bounding-box-1.0.1
+        coordinate_reference_system: components/crs-1.0.1
+    }
+    `components/base-object-properties-1.0.1` <|-- `components/base-spatial-data-properties-1.0.1`
+    class `objects/geophysical-records-1d-1.1.0`:::schemaObject {
+        name: string*
+        uuid: components/base-object-properties-1.0.1-uuid*
+        description: string*
+        extensions: object*
+        tags: object*
+        bounding_box: components/bounding-box-1.0.1*
+        coordinate_reference_system: components/crs-1.0.1*
+        number_of_layers: integer
+        locations: objects/geophysical-records-1d-1.1.0-locations
+        depths: objects/geophysical-records-1d-1.1.0-depths
+        line_numbers: components/category-data-1.0.1
+    }
+    `components/base-spatial-data-properties-1.0.1` <|-- `objects/geophysical-records-1d-1.1.0`
+    `components/base-object-properties-1.0.1` *-- `components/base-object-properties-1.0.1-uuid` : ref uuid*
+    `components/base-spatial-data-properties-1.0.1` *-- `components/bounding-box-1.0.1` : ref bounding_box*
+    `components/base-spatial-data-properties-1.0.1` *-- `components/crs-1.0.1` : ref coordinate_reference_system*
+    `objects/geophysical-records-1d-1.1.0` *-- `objects/geophysical-records-1d-1.1.0-locations` : ref locations*
+    `objects/geophysical-records-1d-1.1.0` *-- `objects/geophysical-records-1d-1.1.0-depths` : ref depths*
+    `objects/geophysical-records-1d-1.1.0` *-- `components/category-data-1.0.1` : ref line_numbers*
+    class `components/category-data-1.0.1`:::schemaComponent {
+        table: elements/lookup-table-1.0.1
+        values: elements/integer-array-1-1.0.1
+    }
+    `components/category-data-1.0.1` *-- `elements/lookup-table-1.0.1` : ref table*
+    `components/category-data-1.0.1` *-- `elements/integer-array-1-1.0.1` : ref values*
+    class `elements/lookup-table-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1
+        length: integer
+        keys_data_type: string
+        values_data_type: string = string
+    }
+    `elements/lookup-table-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
+    class `elements/binary-blob-1.0.1`:::schemaElement {
+    }
+    class `elements/integer-array-md-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1
+        length: integer
+        width: integer
+        data_type: string
+    }
+    class `elements/integer-array-1-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1*
+        length: integer*
+        data_type: string*
+        width: integer = 1
+    }
+    `elements/integer-array-md-1.0.1` <|-- `elements/integer-array-1-1.0.1`
+    `elements/integer-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
+    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
+    }
+    class `components/bounding-box-1.0.1`:::schemaComponent {
+        min_x: number
+        max_x: number
+        min_y: number
+        max_y: number
+        min_z: number
+        max_z: number
+    }
+    class `components/crs-1.0.1`:::schemaComponent {
+    }
+    class `components/locations-1.0.1`:::schemaComponent {
+        coordinates: elements/float-array-3-1.0.1
+    }
+    class `components/attribute-list-property-1.1.0`:::schemaComponent {
+        attributes: components/one-of-attribute-1.1.0
+    }
+    class `objects/geophysical-records-1d-1.1.0-locations`:::schemaImplicit {
+        coordinates: elements/float-array-3-1.0.1*
+        attributes: components/one-of-attribute-1.1.0*
+    }
+    `components/locations-1.0.1` <|-- `objects/geophysical-records-1d-1.1.0-locations`
+    `components/attribute-list-property-1.1.0` <|-- `objects/geophysical-records-1d-1.1.0-locations`
+    `components/locations-1.0.1` *-- `elements/float-array-3-1.0.1` : ref coordinates*
+    `components/attribute-list-property-1.1.0` *-- `components/one-of-attribute-1.1.0` : ref attributes*
+    class `elements/float-array-md-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1
+        length: integer
+        width: integer
+        data_type: string = float64
+    }
+    class `elements/float-array-3-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1*
+        length: integer*
+        data_type: string = float64*
+        width: integer = 3
+    }
+    `elements/float-array-md-1.0.1` <|-- `elements/float-array-3-1.0.1`
+    `elements/float-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
+    class `components/one-of-attribute-1.1.0`:::schemaComponent {
+    }
+    class `components/lengths-1.0.1`:::schemaComponent {
+        lengths: elements/float-array-1-1.0.1
+    }
+    class `objects/geophysical-records-1d-1.1.0-depths`:::schemaImplicit {
+        lengths: elements/float-array-1-1.0.1*
+        attributes: components/one-of-attribute-1.1.0*
+    }
+    `components/lengths-1.0.1` <|-- `objects/geophysical-records-1d-1.1.0-depths`
+    `components/attribute-list-property-1.1.0` <|-- `objects/geophysical-records-1d-1.1.0-depths`
+    `components/lengths-1.0.1` *-- `elements/float-array-1-1.0.1` : ref lengths*
+    class `elements/float-array-1-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1*
+        length: integer*
+        data_type: string = float64*
+        width: integer = 1
+    }
+    `elements/float-array-md-1.0.1` <|-- `elements/float-array-1-1.0.1`

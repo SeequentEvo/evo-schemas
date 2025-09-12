@@ -1,0 +1,35 @@
+name: Generate Schema Docs
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to generate the docs for'
+        required: true
+
+jobs:
+  generate-schema-docs:
+    name: Generate and commit schema docs
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.branch }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+
+      - name: Install dependencies
+        run: pip install --upgrade pip .[release,test]
+
+      - name: Generate schema docs
+        run: python -m tools.documentation --autodoc
+
+      - name: Upload generated docs as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated-schema-docs
+          path: docs/schemas/_generated
