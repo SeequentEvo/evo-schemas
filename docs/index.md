@@ -1,5 +1,7 @@
 # Summary
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis felis malesuada augue sodales semper. Nullam aliquet odio velit, non blandit diam malesuada eget. Donec et vulputate felis. Cras quis velit et dui pretium fermentum. Nullam lobortis sagittis diam. Aenean auctor est sit amet nibh rutrum, non sagittis nibh facilisis. Maecenas tincidunt tincidunt ligula, in ullamcorper eros accumsan et. Proin vulputate ac eros facilisis tempus. Pellentesque tempor viverra molestie.
+
 Seequent Geoscience Objects Schemas define metadata and data serialisation of various geoscience objects. The goals include:
 * Facilitate interoperabilities between various applications and services that produce and consume geoscience data.
 * A data interchange specification to facilitate interoperabilities between various industry/segment standards.
