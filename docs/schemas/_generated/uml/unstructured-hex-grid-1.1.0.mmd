@@ -37,9 +37,9 @@ classDiagram
     `components/base-spatial-data-properties-1.0.1` *-- `components/bounding-box-1.0.1` : ref bounding_box*
     `components/base-spatial-data-properties-1.0.1` *-- `components/crs-1.0.1` : ref coordinate_reference_system*
     `objects/unstructured-hex-grid-1.1.0` *-- `components/hexahedrons-1.1.0` : ref hexahedrons*
-    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
-    }
     class `components/crs-1.0.1`:::schemaComponent {
+    }
+    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
     }
     class `components/hexahedrons-1.1.0`:::schemaComponent {
         vertices: components/hexahedrons-1.1.0-vertices
@@ -76,9 +76,9 @@ classDiagram
     `components/attribute-list-property-1.1.0` <|-- `components/hexahedrons-1.1.0-vertices`
     `elements/float-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
     `components/attribute-list-property-1.1.0` *-- `components/one-of-attribute-1.1.0` : ref attributes*
-    class `components/one-of-attribute-1.1.0`:::schemaComponent {
-    }
     class `elements/binary-blob-1.0.1`:::schemaElement {
+    }
+    class `components/one-of-attribute-1.1.0`:::schemaComponent {
     }
     class `elements/index-array-8-1.0.1`:::schemaElement {
         data: elements/binary-blob-1.0.1

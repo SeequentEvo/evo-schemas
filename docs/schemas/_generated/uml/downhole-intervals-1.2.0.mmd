@@ -53,35 +53,35 @@ classDiagram
     `objects/downhole-intervals-1.2.0` *-- `components/locations-1.0.1` : ref mid_points*
     `objects/downhole-intervals-1.2.0` *-- `components/from-to-1.0.1` : ref from_to*
     `objects/downhole-intervals-1.2.0` *-- `components/category-data-1.0.1` : ref hole_id*
-    class `components/one-of-attribute-1.2.0`:::schemaComponent {
+    class `components/crs-1.0.1`:::schemaComponent {
     }
-    class `components/from-to-1.0.1`:::schemaComponent {
-        intervals: components/intervals-1.0.1
-        unit: elements/unit-length-1.0.1-unit_categories
+    class `components/locations-1.0.1`:::schemaComponent {
+        coordinates: elements/float-array-3-1.0.1
     }
-    `components/from-to-1.0.1` *-- `components/intervals-1.0.1` : ref intervals*
-    `components/from-to-1.0.1` *-- `elements/unit-length-1.0.1-unit_categories` : ref unit*
-    class `elements/unit-length-1.0.1-unit_categories`:::schemaImplicit {
-    }
-    class `components/intervals-1.0.1`:::schemaComponent {
-        start_and_end: elements/float-array-2-1.0.1
-    }
-    `components/intervals-1.0.1` *-- `elements/float-array-2-1.0.1` : ref start_and_end*
+    `components/locations-1.0.1` *-- `elements/float-array-3-1.0.1` : ref coordinates*
     class `elements/float-array-md-1.0.1`:::schemaElement {
         data: elements/binary-blob-1.0.1
         length: integer
         width: integer
         data_type: string = float64
     }
-    class `elements/float-array-2-1.0.1`:::schemaElement {
+    class `elements/float-array-3-1.0.1`:::schemaElement {
         data: elements/binary-blob-1.0.1*
         length: integer*
         data_type: string = float64*
-        width: integer = 2
+        width: integer = 3
     }
-    `elements/float-array-md-1.0.1` <|-- `elements/float-array-2-1.0.1`
+    `elements/float-array-md-1.0.1` <|-- `elements/float-array-3-1.0.1`
     `elements/float-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
     class `elements/binary-blob-1.0.1`:::schemaElement {
+    }
+    class `components/bounding-box-1.0.1`:::schemaComponent {
+        min_x: number
+        max_x: number
+        min_y: number
+        max_y: number
+        min_z: number
+        max_z: number
     }
     class `components/category-data-1.0.1`:::schemaComponent {
         table: elements/lookup-table-1.0.1
@@ -89,13 +89,6 @@ classDiagram
     }
     `components/category-data-1.0.1` *-- `elements/lookup-table-1.0.1` : ref table*
     `components/category-data-1.0.1` *-- `elements/integer-array-1-1.0.1` : ref values*
-    class `elements/lookup-table-1.0.1`:::schemaElement {
-        data: elements/binary-blob-1.0.1
-        length: integer
-        keys_data_type: string
-        values_data_type: string = string
-    }
-    `elements/lookup-table-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
     class `elements/integer-array-md-1.0.1`:::schemaElement {
         data: elements/binary-blob-1.0.1
         length: integer
@@ -110,26 +103,33 @@ classDiagram
     }
     `elements/integer-array-md-1.0.1` <|-- `elements/integer-array-1-1.0.1`
     `elements/integer-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
-    class `components/locations-1.0.1`:::schemaComponent {
-        coordinates: elements/float-array-3-1.0.1
+    class `elements/lookup-table-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1
+        length: integer
+        keys_data_type: string
+        values_data_type: string = string
     }
-    `components/locations-1.0.1` *-- `elements/float-array-3-1.0.1` : ref coordinates*
-    class `elements/float-array-3-1.0.1`:::schemaElement {
+    `elements/lookup-table-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
+    class `components/from-to-1.0.1`:::schemaComponent {
+        intervals: components/intervals-1.0.1
+        unit: elements/unit-length-1.0.1-unit_categories
+    }
+    `components/from-to-1.0.1` *-- `components/intervals-1.0.1` : ref intervals*
+    `components/from-to-1.0.1` *-- `elements/unit-length-1.0.1-unit_categories` : ref unit*
+    class `elements/unit-length-1.0.1-unit_categories`:::schemaImplicit {
+    }
+    class `components/intervals-1.0.1`:::schemaComponent {
+        start_and_end: elements/float-array-2-1.0.1
+    }
+    `components/intervals-1.0.1` *-- `elements/float-array-2-1.0.1` : ref start_and_end*
+    class `elements/float-array-2-1.0.1`:::schemaElement {
         data: elements/binary-blob-1.0.1*
         length: integer*
         data_type: string = float64*
-        width: integer = 3
+        width: integer = 2
     }
-    `elements/float-array-md-1.0.1` <|-- `elements/float-array-3-1.0.1`
+    `elements/float-array-md-1.0.1` <|-- `elements/float-array-2-1.0.1`
+    class `components/one-of-attribute-1.2.0`:::schemaComponent {
+    }
     class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
-    }
-    class `components/bounding-box-1.0.1`:::schemaComponent {
-        min_x: number
-        max_x: number
-        min_y: number
-        max_y: number
-        min_z: number
-        max_z: number
-    }
-    class `components/crs-1.0.1`:::schemaComponent {
     }

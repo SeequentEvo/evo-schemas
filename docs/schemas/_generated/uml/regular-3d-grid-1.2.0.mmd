@@ -44,9 +44,7 @@ classDiagram
     `objects/regular-3d-grid-1.2.0` *-- `components/rotation-1.1.0` : ref rotation*
     `objects/regular-3d-grid-1.2.0` *-- `components/one-of-attribute-1.2.0` : ref cell_attributes*
     `objects/regular-3d-grid-1.2.0` *-- `components/one-of-attribute-1.2.0` : ref vertex_attributes*
-    class `components/one-of-attribute-1.2.0`:::schemaComponent {
-    }
-    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
+    class `components/crs-1.0.1`:::schemaComponent {
     }
     class `components/bounding-box-1.0.1`:::schemaComponent {
         min_x: number
@@ -61,5 +59,7 @@ classDiagram
         dip: number
         pitch: number
     }
-    class `components/crs-1.0.1`:::schemaComponent {
+    class `components/one-of-attribute-1.2.0`:::schemaComponent {
+    }
+    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
     }

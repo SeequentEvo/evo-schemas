@@ -46,7 +46,7 @@ classDiagram
     `objects/block-model-1.0.0` *-- `objects/block-model-1.0.0-geometry` : ref geometry*
     class `objects/block-model-1.0.0-geometry`:::schemaImplicit {
     }
-    class `components/base-object-properties-1.1.0-uuid`:::schemaImplicit {
+    class `components/crs-1.0.1`:::schemaComponent {
     }
     class `components/bounding-box-1.0.1`:::schemaComponent {
         min_x: number
@@ -56,9 +56,9 @@ classDiagram
         min_z: number
         max_z: number
     }
+    class `components/base-object-properties-1.1.0-uuid`:::schemaImplicit {
+    }
     class `components/lineage-1.0.0`:::schemaComponent {
         self_link: string
         events: array
-    }
-    class `components/crs-1.0.1`:::schemaComponent {
     }

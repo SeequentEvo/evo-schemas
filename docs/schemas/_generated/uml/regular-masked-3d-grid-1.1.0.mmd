@@ -45,12 +45,12 @@ classDiagram
     `objects/regular-masked-3d-grid-1.1.0` *-- `components/rotation-1.0.1` : ref rotation*
     `objects/regular-masked-3d-grid-1.1.0` *-- `components/bool-attribute-1.0.1` : ref mask*
     `objects/regular-masked-3d-grid-1.1.0` *-- `components/one-of-attribute-1.1.0` : ref cell_attributes*
-    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
-    }
     class `components/rotation-1.0.1`:::schemaComponent {
         dip_azimuth: number
         dip: number
         pitch: number
+    }
+    class `components/crs-1.0.1`:::schemaComponent {
     }
     class `components/bounding-box-1.0.1`:::schemaComponent {
         min_x: number
@@ -68,12 +68,6 @@ classDiagram
     }
     `components/bool-attribute-1.0.1` *-- `components/category-attribute-description-1.0.1` : ref attribute_description*
     `components/bool-attribute-1.0.1` *-- `elements/bool-array-1-1.0.1` : ref values*
-    class `components/category-attribute-description-1.0.1`:::schemaComponent {
-        discipline: string
-        type: string
-        extensions: object
-        tags: object
-    }
     class `elements/bool-array-1-1.0.1`:::schemaElement {
         data: elements/binary-blob-1.0.1
         length: integer
@@ -82,7 +76,13 @@ classDiagram
     `elements/bool-array-1-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
     class `elements/binary-blob-1.0.1`:::schemaElement {
     }
-    class `components/crs-1.0.1`:::schemaComponent {
+    class `components/category-attribute-description-1.0.1`:::schemaComponent {
+        discipline: string
+        type: string
+        extensions: object
+        tags: object
+    }
+    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
     }
     class `components/one-of-attribute-1.1.0`:::schemaComponent {
     }

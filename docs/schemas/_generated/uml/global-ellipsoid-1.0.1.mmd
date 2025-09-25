@@ -47,12 +47,12 @@ classDiagram
     `components/base-spatial-data-properties-1.0.1` *-- `components/crs-1.0.1` : ref coordinate_reference_system*
     `components/ellipsoid-1.0.1` *-- `components/ellipsoid-1.0.1-ellipsoid_ranges` : ref ellipsoid_ranges*
     `components/ellipsoid-1.0.1` *-- `components/rotation-1.0.1` : ref rotation*
-    class `components/ellipsoid-1.0.1-ellipsoid_ranges`:::schemaImplicit {
-        major: number
-        semi_major: number
-        minor: number
+    class `components/rotation-1.0.1`:::schemaComponent {
+        dip_azimuth: number
+        dip: number
+        pitch: number
     }
-    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
+    class `components/crs-1.0.1`:::schemaComponent {
     }
     class `components/bounding-box-1.0.1`:::schemaComponent {
         min_x: number
@@ -62,10 +62,10 @@ classDiagram
         min_z: number
         max_z: number
     }
-    class `components/rotation-1.0.1`:::schemaComponent {
-        dip_azimuth: number
-        dip: number
-        pitch: number
+    class `components/ellipsoid-1.0.1-ellipsoid_ranges`:::schemaImplicit {
+        major: number
+        semi_major: number
+        minor: number
     }
-    class `components/crs-1.0.1`:::schemaComponent {
+    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
     }

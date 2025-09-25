@@ -41,6 +41,8 @@ classDiagram
     `components/base-spatial-data-properties-1.0.1` *-- `components/crs-1.0.1` : ref coordinate_reference_system*
     `objects/local-ellipsoids-1.1.0` *-- `components/locations-1.0.1` : ref locations*
     `objects/local-ellipsoids-1.1.0` *-- `objects/local-ellipsoids-1.1.0-ellipsoids` : ref ellipsoids*
+    class `components/crs-1.0.1`:::schemaComponent {
+    }
     class `components/locations-1.0.1`:::schemaComponent {
         coordinates: elements/float-array-3-1.0.1
     }
@@ -60,8 +62,6 @@ classDiagram
     `elements/float-array-md-1.0.1` <|-- `elements/float-array-3-1.0.1`
     `elements/float-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
     class `elements/binary-blob-1.0.1`:::schemaElement {
-    }
-    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
     }
     class `components/bounding-box-1.0.1`:::schemaComponent {
         min_x: number
@@ -94,5 +94,5 @@ classDiagram
         width: integer = 6
     }
     `elements/float-array-md-1.0.1` <|-- `elements/float-array-6-1.0.1`
-    class `components/crs-1.0.1`:::schemaComponent {
+    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
     }

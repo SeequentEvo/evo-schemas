@@ -48,40 +48,27 @@ classDiagram
     `objects/design-geometry-1.0.1` *-- `components/vertices-3d-1.0.1` : ref vertices_3d*
     `objects/design-geometry-1.0.1` *-- `components/lines-2d-indices-1.0.1` : ref lines_2d*
     `objects/design-geometry-1.0.1` *-- `components/lines-3d-indices-1.0.1` : ref lines_3d*
-    class `elements/unit-length-1.0.1-unit_categories`:::schemaImplicit {
+    class `components/crs-1.0.1`:::schemaComponent {
     }
-    class `components/lines-2d-indices-1.0.1`:::schemaComponent {
-        indices: components/lines-2d-indices-1.0.1-indices
+    class `components/vertices-2d-1.0.1`:::schemaComponent {
+        vertices: elements/float-array-2-1.0.1
     }
-    `components/lines-2d-indices-1.0.1` *-- `components/lines-2d-indices-1.0.1-indices` : ref indices*
-    class `components/lines-2d-indices-1.0.1-indices`:::schemaImplicit {
-        data: elements/binary-blob-1.0.1
-        length: integer
-        width: integer = 3
-        data_type: string
-    }
-    `components/lines-2d-indices-1.0.1-indices` *-- `elements/binary-blob-1.0.1` : ref data*
-    class `elements/binary-blob-1.0.1`:::schemaElement {
-    }
-    class `components/vertices-3d-1.0.1`:::schemaComponent {
-        vertices: elements/float-array-3-1.0.1
-    }
-    `components/vertices-3d-1.0.1` *-- `elements/float-array-3-1.0.1` : ref vertices*
+    `components/vertices-2d-1.0.1` *-- `elements/float-array-2-1.0.1` : ref vertices*
     class `elements/float-array-md-1.0.1`:::schemaElement {
         data: elements/binary-blob-1.0.1
         length: integer
         width: integer
         data_type: string = float64
     }
-    class `elements/float-array-3-1.0.1`:::schemaElement {
+    class `elements/float-array-2-1.0.1`:::schemaElement {
         data: elements/binary-blob-1.0.1*
         length: integer*
         data_type: string = float64*
-        width: integer = 3
+        width: integer = 2
     }
-    `elements/float-array-md-1.0.1` <|-- `elements/float-array-3-1.0.1`
+    `elements/float-array-md-1.0.1` <|-- `elements/float-array-2-1.0.1`
     `elements/float-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
-    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
+    class `elements/binary-blob-1.0.1`:::schemaElement {
     }
     class `components/bounding-box-1.0.1`:::schemaComponent {
         min_x: number
@@ -91,18 +78,18 @@ classDiagram
         min_z: number
         max_z: number
     }
-    class `components/vertices-2d-1.0.1`:::schemaComponent {
-        vertices: elements/float-array-2-1.0.1
+    class `components/vertices-3d-1.0.1`:::schemaComponent {
+        vertices: elements/float-array-3-1.0.1
     }
-    `components/vertices-2d-1.0.1` *-- `elements/float-array-2-1.0.1` : ref vertices*
-    class `elements/float-array-2-1.0.1`:::schemaElement {
+    `components/vertices-3d-1.0.1` *-- `elements/float-array-3-1.0.1` : ref vertices*
+    class `elements/float-array-3-1.0.1`:::schemaElement {
         data: elements/binary-blob-1.0.1*
         length: integer*
         data_type: string = float64*
-        width: integer = 2
+        width: integer = 3
     }
-    `elements/float-array-md-1.0.1` <|-- `elements/float-array-2-1.0.1`
-    class `components/crs-1.0.1`:::schemaComponent {
+    `elements/float-array-md-1.0.1` <|-- `elements/float-array-3-1.0.1`
+    class `elements/unit-length-1.0.1-unit_categories`:::schemaImplicit {
     }
     class `components/lines-3d-indices-1.0.1`:::schemaComponent {
         indices: elements/index-array-2-1.0.1
@@ -115,3 +102,16 @@ classDiagram
         data_type: string = uint64
     }
     `elements/index-array-2-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
+    class `components/lines-2d-indices-1.0.1`:::schemaComponent {
+        indices: components/lines-2d-indices-1.0.1-indices
+    }
+    `components/lines-2d-indices-1.0.1` *-- `components/lines-2d-indices-1.0.1-indices` : ref indices*
+    class `components/lines-2d-indices-1.0.1-indices`:::schemaImplicit {
+        data: elements/binary-blob-1.0.1
+        length: integer
+        width: integer = 3
+        data_type: string
+    }
+    `components/lines-2d-indices-1.0.1-indices` *-- `elements/binary-blob-1.0.1` : ref data*
+    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
+    }
