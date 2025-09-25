@@ -1,13 +1,11 @@
-import CheckIcon from '@mui/icons-material/Check';
-import Chip from '@mui/material/Chip';
-import Grid from '@mui/material/Grid';
+import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from './_generated/flatmd/objects/tensor-3d-grid-1.3.0.md';
 
-<Grid container>
+<OverlineWithVersion title="Geoscience Objects" version="1.3.0" badge="supported" />
+
 # tensor-3d-grid
-<Chip color="info" icon={<CheckIcon />} label="Supported" style={{margin: '0.75em'}} />
-</Grid>
+
 <SchemaUri uri="schema/objects/tensor-3d-grid/1.3.0/tensor-3d-grid.schema.json" />
 
 Represents a three-dimensional tensor grid where cells may have different sizes.

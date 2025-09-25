@@ -1,13 +1,11 @@
-import CheckIcon from '@mui/icons-material/Check';
-import Chip from '@mui/material/Chip';
-import Grid from '@mui/material/Grid';
+import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from './_generated/flatmd/objects/gravity-1.2.0.md';
 
-<Grid container>
+<OverlineWithVersion title="Geoscience Objects" version="1.2.0" badge="supported" />
+
 # gravity
-<Chip color="info" icon={<CheckIcon />} label="Supported" style={{margin: '0.75em'}} />
-</Grid>
+
 <SchemaUri uri="schema/objects/gravity/1.2.0/gravity.schema.json" />
 
 A gravity object represents geolocated, time stamped gravity survey data. This is generally, but not exclusively, collected along nearly parallel lines. This type of data is used extensively in exploration for mineral resources, fundamental earth science mapping and other fields where the density of subsurface materials provides insight.

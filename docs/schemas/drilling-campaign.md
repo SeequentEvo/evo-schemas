@@ -1,13 +1,11 @@
-import Chip from '@mui/material/Chip';
-import { Flask as FlaskIcon } from '@local/web-design-system-2/dist/icons';
-import Grid from '@mui/material/Grid';
+import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from './_generated/flatmd/objects/drilling-campaign-1.0.0.md';
 
-<Grid container>
+<OverlineWithVersion title="Geoscience Objects" version="1.0.0" badge="techPreview" />
+
 # drilling-campaign
-<Chip color="warning" icon={<FlaskIcon />} label="Tech Preview" style={{margin: '0.75em'}} />
-</Grid>
+
 <SchemaUri uri="schema/objects/drilling-campaign/1.0.0/drilling-campaign.schema.json" />
 
 ## Overview
