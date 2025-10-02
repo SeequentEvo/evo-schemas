@@ -37,6 +37,18 @@ classDiagram
     `components/base-spatial-data-properties-1.0.1` *-- `components/bounding-box-1.0.1` : ref bounding_box*
     `components/base-spatial-data-properties-1.0.1` *-- `components/crs-1.0.1` : ref coordinate_reference_system*
     `objects/unstructured-quad-grid-1.0.1` *-- `components/quadrilaterals-1.0.1` : ref quadrilaterals*
+    class `components/crs-1.0.1`:::schemaComponent {
+    }
+    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
+    }
+    class `components/bounding-box-1.0.1`:::schemaComponent {
+        min_x: number
+        max_x: number
+        min_y: number
+        max_y: number
+        min_z: number
+        max_z: number
+    }
     class `components/quadrilaterals-1.0.1`:::schemaComponent {
         vertices: components/quadrilaterals-1.0.1-vertices
         indices: components/quadrilaterals-1.0.1-indices
@@ -92,15 +104,3 @@ classDiagram
     `elements/float-array-3-1.0.1` <|-- `components/quadrilaterals-1.0.1-vertices`
     `components/attribute-list-property-1.0.1` <|-- `components/quadrilaterals-1.0.1-vertices`
     `elements/float-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
-    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
-    }
-    class `components/crs-1.0.1`:::schemaComponent {
-    }
-    class `components/bounding-box-1.0.1`:::schemaComponent {
-        min_x: number
-        max_x: number
-        min_y: number
-        max_y: number
-        min_z: number
-        max_z: number
-    }

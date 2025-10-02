@@ -37,6 +37,10 @@ classDiagram
     `components/base-spatial-data-properties-1.0.1` *-- `components/bounding-box-1.0.1` : ref bounding_box*
     `components/base-spatial-data-properties-1.0.1` *-- `components/crs-1.0.1` : ref coordinate_reference_system*
     `objects/unstructured-quad-grid-1.2.0` *-- `components/quadrilaterals-1.2.0` : ref quadrilaterals*
+    class `components/crs-1.0.1`:::schemaComponent {
+    }
+    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
+    }
     class `components/quadrilaterals-1.2.0`:::schemaComponent {
         vertices: components/quadrilaterals-1.2.0-vertices
         indices: components/quadrilaterals-1.2.0-indices
@@ -72,9 +76,9 @@ classDiagram
     `components/attribute-list-property-1.2.0` <|-- `components/quadrilaterals-1.2.0-vertices`
     `elements/float-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
     `components/attribute-list-property-1.2.0` *-- `components/one-of-attribute-1.2.0` : ref attributes*
-    class `components/one-of-attribute-1.2.0`:::schemaComponent {
-    }
     class `elements/binary-blob-1.0.1`:::schemaElement {
+    }
+    class `components/one-of-attribute-1.2.0`:::schemaComponent {
     }
     class `elements/index-array-4-1.0.1`:::schemaElement {
         data: elements/binary-blob-1.0.1
@@ -92,10 +96,6 @@ classDiagram
     `elements/index-array-4-1.0.1` <|-- `components/quadrilaterals-1.2.0-indices`
     `components/attribute-list-property-1.2.0` <|-- `components/quadrilaterals-1.2.0-indices`
     `elements/index-array-4-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
-    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
-    }
-    class `components/crs-1.0.1`:::schemaComponent {
-    }
     class `components/bounding-box-1.0.1`:::schemaComponent {
         min_x: number
         max_x: number

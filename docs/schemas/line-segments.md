@@ -1,13 +1,11 @@
-import CheckIcon from '@mui/icons-material/Check';
-import Chip from '@mui/material/Chip';
-import Grid from '@mui/material/Grid';
+import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from './_generated/flatmd/objects/line-segments-2.2.0.md';
 
-<Grid container>
+<OverlineWithVersion title="Geoscience Objects" version="2.2.0" badge="supported" />
+
 # line-segments
-<Chip color="info" icon={<CheckIcon />} label="Supported" style={{margin: '0.75em'}} />
-</Grid>
+
 <SchemaUri uri="schema/objects/line-segments/2.2.0/line-segments.schema.json" />
 
 A collection of lines composed of straight segments.

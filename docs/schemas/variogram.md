@@ -1,13 +1,11 @@
-import CheckIcon from '@mui/icons-material/Check';
-import Chip from '@mui/material/Chip';
-import Grid from '@mui/material/Grid';
+import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from './_generated/flatmd/objects/variogram-1.2.0.md';
 
-<Grid container>
+<OverlineWithVersion title="Geoscience Objects" version="1.2.0" badge="supported" />
+
 # variogram
-<Chip color="info" icon={<CheckIcon />} label="Supported" style={{margin: '0.75em'}} />
-</Grid>
+
 <SchemaUri uri="schema/objects/variogram/1.2.0/variogram.schema.json" />
 
 The variogram object captures the parameters of variogram models as used in geostatistical analysis and modelling. A variogram describes the degree of spatial dependence of properties such as mineral grades, porosity, or petrophysical properties. It is used to quantify how data points are related to each other based on their spatial separation and direction.

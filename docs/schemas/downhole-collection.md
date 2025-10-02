@@ -1,13 +1,11 @@
-import CheckIcon from '@mui/icons-material/Check';
-import Chip from '@mui/material/Chip';
-import Grid from '@mui/material/Grid';
+import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from './_generated/flatmd/objects/downhole-collection-1.3.0.md';
 
-<Grid container>
+<OverlineWithVersion title="Geoscience Objects" version="1.3.0" badge="supported" />
+
 # downhole-collection
-<Chip color="info" icon={<CheckIcon />} label="Supported" style={{margin: '0.75em'}} />
-</Grid>
+
 <SchemaUri uri="schema/objects/downhole-collection/1.3.0/downhole-collection.schema.json" />
 
 ## Overview

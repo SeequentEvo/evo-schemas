@@ -45,9 +45,12 @@ classDiagram
     `objects/tensor-3d-grid-1.0.1` *-- `components/rotation-1.0.1` : ref rotation*
     `objects/tensor-3d-grid-1.0.1` *-- `components/one-of-attribute-1.0.1` : ref cell_attributes*
     `objects/tensor-3d-grid-1.0.1` *-- `components/one-of-attribute-1.0.1` : ref vertex_attributes*
-    class `components/one-of-attribute-1.0.1`:::schemaComponent {
+    class `components/rotation-1.0.1`:::schemaComponent {
+        dip_azimuth: number
+        dip: number
+        pitch: number
     }
-    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
+    class `components/crs-1.0.1`:::schemaComponent {
     }
     class `components/bounding-box-1.0.1`:::schemaComponent {
         min_x: number
@@ -57,15 +60,12 @@ classDiagram
         min_z: number
         max_z: number
     }
-    class `components/rotation-1.0.1`:::schemaComponent {
-        dip_azimuth: number
-        dip: number
-        pitch: number
+    class `components/one-of-attribute-1.0.1`:::schemaComponent {
+    }
+    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
     }
     class `objects/tensor-3d-grid-1.0.1-grid_cells_3d`:::schemaImplicit {
         cell_sizes_x: array
         cell_sizes_y: array
         cell_sizes_z: array
-    }
-    class `components/crs-1.0.1`:::schemaComponent {
     }

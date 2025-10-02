@@ -1,13 +1,11 @@
-import CheckIcon from '@mui/icons-material/Check';
-import Chip from '@mui/material/Chip';
-import Grid from '@mui/material/Grid';
+import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from './_generated/flatmd/objects/unstructured-tet-grid-1.3.0.md';
 
-<Grid container>
+<OverlineWithVersion title="Geoscience Objects" version="1.3.0" badge="supported" />
+
 # unstructured-tet-grid
-<Chip color="info" icon={<CheckIcon />} label="Supported" style={{margin: '0.75em'}} />
-</Grid>
+
 <SchemaUri uri="schema/objects/unstructured-tet-grid/1.3.0/unstructured-tet-grid.schema.json" />
 
 Represents an unstructured tetrahedral grid where cells are tetrahedrons.

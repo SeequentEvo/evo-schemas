@@ -1,13 +1,11 @@
-import CheckIcon from '@mui/icons-material/Check';
-import Chip from '@mui/material/Chip';
-import Grid from '@mui/material/Grid';
+import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from './_generated/flatmd/objects/design-geometry-1.1.0.md';
 
-<Grid container>
+<OverlineWithVersion title="Geoscience Objects" version="1.1.0" badge="supported" />
+
 # design-geometry
-<Chip color="info" icon={<CheckIcon />} label="Supported" style={{margin: '0.75em'}} />
-</Grid>
+
 <SchemaUri uri="schema/objects/design-geometry/1.1.0/design-geometry.schema.json" />
 
 A design geometry describes either a 2D planar or 3D geometry suitable for use in a numerical model. Design geometry objects can contain both geology and engineering objects like a plates or anchors.
