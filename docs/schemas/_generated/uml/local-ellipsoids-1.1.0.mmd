@@ -63,13 +63,7 @@ classDiagram
     `elements/float-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
     class `elements/binary-blob-1.0.1`:::schemaElement {
     }
-    class `components/bounding-box-1.0.1`:::schemaComponent {
-        min_x: number
-        max_x: number
-        min_y: number
-        max_y: number
-        min_z: number
-        max_z: number
+    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
     }
     class `components/ellipsoids-1.0.1`:::schemaComponent {
         values: elements/float-array-6-1.0.1
@@ -94,5 +88,11 @@ classDiagram
         width: integer = 6
     }
     `elements/float-array-md-1.0.1` <|-- `elements/float-array-6-1.0.1`
-    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
+    class `components/bounding-box-1.0.1`:::schemaComponent {
+        min_x: number
+        max_x: number
+        min_y: number
+        max_y: number
+        min_z: number
+        max_z: number
     }

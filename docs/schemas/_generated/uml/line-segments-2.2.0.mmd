@@ -43,42 +43,11 @@ classDiagram
     `components/base-spatial-data-properties-1.1.0` *-- `components/crs-1.0.1` : ref coordinate_reference_system*
     `objects/line-segments-2.2.0` *-- `components/segments-1.2.0` : ref segments*
     `objects/line-segments-2.2.0` *-- `objects/line-segments-2.2.0-parts` : ref parts*
-    class `components/crs-1.0.1`:::schemaComponent {
-    }
-    class `components/bounding-box-1.0.1`:::schemaComponent {
-        min_x: number
-        max_x: number
-        min_y: number
-        max_y: number
-        min_z: number
-        max_z: number
-    }
-    class `components/base-object-properties-1.1.0-uuid`:::schemaImplicit {
-    }
-    class `components/attribute-list-property-1.2.0`:::schemaComponent {
-        attributes: components/one-of-attribute-1.2.0
-    }
-    class `objects/line-segments-2.2.0-parts`:::schemaImplicit {
-        attributes: components/one-of-attribute-1.2.0*
-        chunks: elements/index-array-2-1.0.1
-    }
-    `components/attribute-list-property-1.2.0` <|-- `objects/line-segments-2.2.0-parts`
-    `components/attribute-list-property-1.2.0` *-- `components/one-of-attribute-1.2.0` : ref attributes*
-    `objects/line-segments-2.2.0-parts` *-- `elements/index-array-2-1.0.1` : ref chunks*
-    class `elements/index-array-2-1.0.1`:::schemaElement {
-        data: elements/binary-blob-1.0.1
-        length: integer
-        width: integer = 2
-        data_type: string = uint64
-    }
-    `elements/index-array-2-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
-    class `elements/binary-blob-1.0.1`:::schemaElement {
-    }
-    class `components/one-of-attribute-1.2.0`:::schemaComponent {
-    }
     class `components/lineage-1.0.0`:::schemaComponent {
         self_link: string
         events: array
+    }
+    class `components/crs-1.0.1`:::schemaComponent {
     }
     class `components/segments-1.2.0`:::schemaComponent {
         vertices: components/segments-1.2.0-vertices
@@ -86,6 +55,15 @@ classDiagram
     }
     `components/segments-1.2.0` *-- `components/segments-1.2.0-vertices` : ref vertices*
     `components/segments-1.2.0` *-- `components/segments-1.2.0-indices` : ref indices*
+    class `elements/index-array-2-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1
+        length: integer
+        width: integer = 2
+        data_type: string = uint64
+    }
+    class `components/attribute-list-property-1.2.0`:::schemaComponent {
+        attributes: components/one-of-attribute-1.2.0
+    }
     class `components/segments-1.2.0-indices`:::schemaImplicit {
         data: elements/binary-blob-1.0.1*
         length: integer*
@@ -95,6 +73,12 @@ classDiagram
     }
     `elements/index-array-2-1.0.1` <|-- `components/segments-1.2.0-indices`
     `components/attribute-list-property-1.2.0` <|-- `components/segments-1.2.0-indices`
+    `elements/index-array-2-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
+    `components/attribute-list-property-1.2.0` *-- `components/one-of-attribute-1.2.0` : ref attributes*
+    class `components/one-of-attribute-1.2.0`:::schemaComponent {
+    }
+    class `elements/binary-blob-1.0.1`:::schemaElement {
+    }
     class `elements/float-array-md-1.0.1`:::schemaElement {
         data: elements/binary-blob-1.0.1
         length: integer
@@ -120,3 +104,19 @@ classDiagram
     `elements/float-array-3-1.0.1` <|-- `components/segments-1.2.0-vertices`
     `components/attribute-list-property-1.2.0` <|-- `components/segments-1.2.0-vertices`
     `elements/float-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
+    class `components/base-object-properties-1.1.0-uuid`:::schemaImplicit {
+    }
+    class `objects/line-segments-2.2.0-parts`:::schemaImplicit {
+        attributes: components/one-of-attribute-1.2.0*
+        chunks: elements/index-array-2-1.0.1
+    }
+    `components/attribute-list-property-1.2.0` <|-- `objects/line-segments-2.2.0-parts`
+    `objects/line-segments-2.2.0-parts` *-- `elements/index-array-2-1.0.1` : ref chunks*
+    class `components/bounding-box-1.0.1`:::schemaComponent {
+        min_x: number
+        max_x: number
+        min_y: number
+        max_y: number
+        min_z: number
+        max_z: number
+    }

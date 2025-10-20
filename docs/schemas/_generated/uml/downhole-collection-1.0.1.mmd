@@ -44,18 +44,6 @@ classDiagram
     `objects/downhole-collection-1.0.1` *-- `objects/downhole-collection-1.0.1-location` : ref location*
     class `components/crs-1.0.1`:::schemaComponent {
     }
-    class `components/bounding-box-1.0.1`:::schemaComponent {
-        min_x: number
-        max_x: number
-        min_y: number
-        max_y: number
-        min_z: number
-        max_z: number
-    }
-    class `elements/unit-length-1.0.1-unit_categories`:::schemaImplicit {
-    }
-    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
-    }
     class `components/locations-1.0.1`:::schemaComponent {
         coordinates: elements/float-array-3-1.0.1
     }
@@ -91,9 +79,29 @@ classDiagram
         width: integer = 3
     }
     `elements/float-array-md-1.0.1` <|-- `elements/float-array-3-1.0.1`
+    class `objects/downhole-collection-1.0.1-location-path`:::schemaImplicit {
+        data: elements/binary-blob-1.0.1*
+        length: integer*
+        width: integer*
+        data_type: string = float64*
+        width: integer = 3*
+        attributes: components/one-of-attribute-1.0.1*
+    }
+    `elements/float-array-md-1.0.1` <|-- `objects/downhole-collection-1.0.1-location-path`
+    `elements/float-array-3-1.0.1` <|-- `objects/downhole-collection-1.0.1-location-path`
+    `components/attribute-list-property-1.0.1` <|-- `objects/downhole-collection-1.0.1-location-path`
     `elements/float-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
+    class `components/one-of-attribute-1.0.1`:::schemaComponent {
+    }
     class `elements/binary-blob-1.0.1`:::schemaElement {
     }
+    class `objects/downhole-collection-1.0.1-location-holes`:::schemaImplicit {
+        data: elements/binary-blob-1.0.1
+        length: integer
+        width: integer = 3
+        data_type: string
+    }
+    `objects/downhole-collection-1.0.1-location-holes` *-- `elements/binary-blob-1.0.1` : ref data*
     class `components/category-data-1.0.1`:::schemaComponent {
         table: elements/lookup-table-1.0.1
         values: elements/integer-array-1-1.0.1
@@ -121,23 +129,15 @@ classDiagram
         values_data_type: string = string
     }
     `elements/lookup-table-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
-    class `objects/downhole-collection-1.0.1-location-path`:::schemaImplicit {
-        data: elements/binary-blob-1.0.1*
-        length: integer*
-        width: integer*
-        data_type: string = float64*
-        width: integer = 3*
-        attributes: components/one-of-attribute-1.0.1*
+    class `elements/unit-length-1.0.1-unit_categories`:::schemaImplicit {
     }
-    `elements/float-array-md-1.0.1` <|-- `objects/downhole-collection-1.0.1-location-path`
-    `elements/float-array-3-1.0.1` <|-- `objects/downhole-collection-1.0.1-location-path`
-    `components/attribute-list-property-1.0.1` <|-- `objects/downhole-collection-1.0.1-location-path`
-    class `components/one-of-attribute-1.0.1`:::schemaComponent {
+    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
     }
-    class `objects/downhole-collection-1.0.1-location-holes`:::schemaImplicit {
-        data: elements/binary-blob-1.0.1
-        length: integer
-        width: integer = 3
-        data_type: string
+    class `components/bounding-box-1.0.1`:::schemaComponent {
+        min_x: number
+        max_x: number
+        min_y: number
+        max_y: number
+        min_z: number
+        max_z: number
     }
-    `objects/downhole-collection-1.0.1-location-holes` *-- `elements/binary-blob-1.0.1` : ref data*

@@ -37,17 +37,9 @@ classDiagram
     `components/base-spatial-data-properties-1.0.1` *-- `components/bounding-box-1.0.1` : ref bounding_box*
     `components/base-spatial-data-properties-1.0.1` *-- `components/crs-1.0.1` : ref coordinate_reference_system*
     `objects/lineations-data-pointset-1.0.1` *-- `objects/lineations-data-pointset-1.0.1-locations` : ref locations*
-    class `components/crs-1.0.1`:::schemaComponent {
-    }
     class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
     }
-    class `components/bounding-box-1.0.1`:::schemaComponent {
-        min_x: number
-        max_x: number
-        min_y: number
-        max_y: number
-        min_z: number
-        max_z: number
+    class `components/crs-1.0.1`:::schemaComponent {
     }
     class `components/locations-1.0.1`:::schemaComponent {
         coordinates: elements/float-array-3-1.0.1
@@ -69,23 +61,11 @@ classDiagram
     `components/locations-1.0.1` *-- `elements/float-array-3-1.0.1` : ref coordinates*
     `components/lineation-data-1.0.1` *-- `elements/float-array-2-1.0.1` : ref lineations*
     `components/attribute-list-property-1.0.1` *-- `components/one-of-attribute-1.0.1` : ref attributes*
-    class `components/one-of-attribute-1.0.1`:::schemaComponent {
-    }
     class `elements/float-array-md-1.0.1`:::schemaElement {
         data: elements/binary-blob-1.0.1
         length: integer
         width: integer
         data_type: string = float64
-    }
-    class `elements/float-array-2-1.0.1`:::schemaElement {
-        data: elements/binary-blob-1.0.1*
-        length: integer*
-        data_type: string = float64*
-        width: integer = 2
-    }
-    `elements/float-array-md-1.0.1` <|-- `elements/float-array-2-1.0.1`
-    `elements/float-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
-    class `elements/binary-blob-1.0.1`:::schemaElement {
     }
     class `elements/float-array-3-1.0.1`:::schemaElement {
         data: elements/binary-blob-1.0.1*
@@ -94,3 +74,23 @@ classDiagram
         width: integer = 3
     }
     `elements/float-array-md-1.0.1` <|-- `elements/float-array-3-1.0.1`
+    `elements/float-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
+    class `elements/binary-blob-1.0.1`:::schemaElement {
+    }
+    class `components/one-of-attribute-1.0.1`:::schemaComponent {
+    }
+    class `elements/float-array-2-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1*
+        length: integer*
+        data_type: string = float64*
+        width: integer = 2
+    }
+    `elements/float-array-md-1.0.1` <|-- `elements/float-array-2-1.0.1`
+    class `components/bounding-box-1.0.1`:::schemaComponent {
+        min_x: number
+        max_x: number
+        min_y: number
+        max_y: number
+        min_z: number
+        max_z: number
+    }
