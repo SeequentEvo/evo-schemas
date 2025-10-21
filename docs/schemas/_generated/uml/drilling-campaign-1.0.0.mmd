@@ -48,7 +48,83 @@ classDiagram
     `objects/drilling-campaign-1.0.0` *-- `components/category-data-1.0.1` : ref hole_id*
     `objects/drilling-campaign-1.0.0` *-- `objects/drilling-campaign-1.0.0-planned` : ref planned*
     `objects/drilling-campaign-1.0.0` *-- `objects/drilling-campaign-1.0.0-interim` : ref interim*
+    class `components/lineage-1.0.0`:::schemaComponent {
+        self_link: string
+        events: array
+    }
+    class `objects/drilling-campaign-1.0.0-interim`:::schemaImplicit {
+        collar: components/hole-collars-1.0.0
+        path: components/downhole-direction-vector-1.0.0
+        desurvey: components/desurvey-method-1.0.0
+        collections: components/downhole-attributes-1.0.0
+    }
+    `objects/drilling-campaign-1.0.0-interim` *-- `components/hole-collars-1.0.0` : ref collar*
+    `objects/drilling-campaign-1.0.0-interim` *-- `components/downhole-direction-vector-1.0.0` : ref path*
+    `objects/drilling-campaign-1.0.0-interim` *-- `components/desurvey-method-1.0.0` : ref desurvey*
+    `objects/drilling-campaign-1.0.0-interim` *-- `components/downhole-attributes-1.0.0` : ref collections*
+    class `elements/float-array-md-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1
+        length: integer
+        width: integer
+        data_type: string = float64
+    }
+    class `elements/float-array-3-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1*
+        length: integer*
+        data_type: string = float64*
+        width: integer = 3
+    }
+    `elements/float-array-md-1.0.1` <|-- `elements/float-array-3-1.0.1`
+    class `components/attribute-list-property-1.2.0`:::schemaComponent {
+        attributes: components/one-of-attribute-1.2.0
+    }
+    class `components/downhole-direction-vector-1.0.0`:::schemaComponent {
+        data: elements/binary-blob-1.0.1*
+        length: integer*
+        width: integer*
+        data_type: string = float64*
+        width: integer = 3*
+        attributes: components/one-of-attribute-1.2.0*
+    }
+    `elements/float-array-md-1.0.1` <|-- `components/downhole-direction-vector-1.0.0`
+    `elements/float-array-3-1.0.1` <|-- `components/downhole-direction-vector-1.0.0`
+    `components/attribute-list-property-1.2.0` <|-- `components/downhole-direction-vector-1.0.0`
+    `elements/float-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
+    `components/attribute-list-property-1.2.0` *-- `components/one-of-attribute-1.2.0` : ref attributes*
+    class `components/one-of-attribute-1.2.0`:::schemaComponent {
+    }
+    class `elements/binary-blob-1.0.1`:::schemaElement {
+    }
+    class `components/desurvey-method-1.0.0`:::schemaComponent {
+    }
+    class `components/downhole-attributes-1.0.0`:::schemaComponent {
+    }
+    class `components/locations-1.0.1`:::schemaComponent {
+        coordinates: elements/float-array-3-1.0.1
+    }
+    class `components/hole-collars-1.0.0`:::schemaComponent {
+        coordinates: elements/float-array-3-1.0.1*
+        attributes: components/one-of-attribute-1.2.0*
+        distances: elements/float-array-3-1.0.1
+        holes: components/hole-chunks-1.0.0
+    }
+    `components/locations-1.0.1` <|-- `components/hole-collars-1.0.0`
+    `components/attribute-list-property-1.2.0` <|-- `components/hole-collars-1.0.0`
+    `components/locations-1.0.1` *-- `elements/float-array-3-1.0.1` : ref coordinates*
+    `components/hole-collars-1.0.0` *-- `elements/float-array-3-1.0.1` : ref distances*
+    `components/hole-collars-1.0.0` *-- `components/hole-chunks-1.0.0` : ref holes*
+    class `components/hole-chunks-1.0.0`:::schemaComponent {
+        data: elements/binary-blob-1.0.1
+        length: integer
+        width: integer = 3
+        data_type: string
+    }
+    `components/hole-chunks-1.0.0` *-- `elements/binary-blob-1.0.1` : ref data*
     class `components/crs-1.0.1`:::schemaComponent {
+    }
+    class `elements/unit-length-1.0.1-unit_categories`:::schemaImplicit {
+    }
+    class `components/base-object-properties-1.1.0-uuid`:::schemaImplicit {
     }
     class `components/bounding-box-1.0.1`:::schemaComponent {
         min_x: number
@@ -57,8 +133,6 @@ classDiagram
         max_y: number
         min_z: number
         max_z: number
-    }
-    class `components/base-object-properties-1.1.0-uuid`:::schemaImplicit {
     }
     class `components/category-data-1.0.1`:::schemaComponent {
         table: elements/lookup-table-1.0.1
@@ -80,8 +154,6 @@ classDiagram
     }
     `elements/integer-array-md-1.0.1` <|-- `elements/integer-array-1-1.0.1`
     `elements/integer-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
-    class `elements/binary-blob-1.0.1`:::schemaElement {
-    }
     class `elements/lookup-table-1.0.1`:::schemaElement {
         data: elements/binary-blob-1.0.1
         length: integer
@@ -89,10 +161,6 @@ classDiagram
         values_data_type: string = string
     }
     `elements/lookup-table-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
-    class `components/lineage-1.0.0`:::schemaComponent {
-        self_link: string
-        events: array
-    }
     class `objects/drilling-campaign-1.0.0-planned`:::schemaImplicit {
         collar: components/hole-collars-1.0.0
         path: objects/drilling-campaign-1.0.0-planned-path
@@ -101,73 +169,5 @@ classDiagram
     `objects/drilling-campaign-1.0.0-planned` *-- `components/hole-collars-1.0.0` : ref collar*
     `objects/drilling-campaign-1.0.0-planned` *-- `objects/drilling-campaign-1.0.0-planned-path` : ref path*
     `objects/drilling-campaign-1.0.0-planned` *-- `components/downhole-attributes-1.0.0` : ref collections*
-    class `components/locations-1.0.1`:::schemaComponent {
-        coordinates: elements/float-array-3-1.0.1
-    }
-    class `components/attribute-list-property-1.2.0`:::schemaComponent {
-        attributes: components/one-of-attribute-1.2.0
-    }
-    class `components/hole-collars-1.0.0`:::schemaComponent {
-        coordinates: elements/float-array-3-1.0.1*
-        attributes: components/one-of-attribute-1.2.0*
-        distances: elements/float-array-3-1.0.1
-        holes: components/hole-chunks-1.0.0
-    }
-    `components/locations-1.0.1` <|-- `components/hole-collars-1.0.0`
-    `components/attribute-list-property-1.2.0` <|-- `components/hole-collars-1.0.0`
-    `components/locations-1.0.1` *-- `elements/float-array-3-1.0.1` : ref coordinates*
-    `components/attribute-list-property-1.2.0` *-- `components/one-of-attribute-1.2.0` : ref attributes*
-    `components/hole-collars-1.0.0` *-- `elements/float-array-3-1.0.1` : ref distances*
-    `components/hole-collars-1.0.0` *-- `components/hole-chunks-1.0.0` : ref holes*
-    class `components/one-of-attribute-1.2.0`:::schemaComponent {
-    }
-    class `components/hole-chunks-1.0.0`:::schemaComponent {
-        data: elements/binary-blob-1.0.1
-        length: integer
-        width: integer = 3
-        data_type: string
-    }
-    `components/hole-chunks-1.0.0` *-- `elements/binary-blob-1.0.1` : ref data*
-    class `elements/float-array-md-1.0.1`:::schemaElement {
-        data: elements/binary-blob-1.0.1
-        length: integer
-        width: integer
-        data_type: string = float64
-    }
-    class `elements/float-array-3-1.0.1`:::schemaElement {
-        data: elements/binary-blob-1.0.1*
-        length: integer*
-        data_type: string = float64*
-        width: integer = 3
-    }
-    `elements/float-array-md-1.0.1` <|-- `elements/float-array-3-1.0.1`
-    `elements/float-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
-    class `components/downhole-attributes-1.0.0`:::schemaComponent {
-    }
     class `objects/drilling-campaign-1.0.0-planned-path`:::schemaImplicit {
-    }
-    class `objects/drilling-campaign-1.0.0-interim`:::schemaImplicit {
-        collar: components/hole-collars-1.0.0
-        path: components/downhole-direction-vector-1.0.0
-        desurvey: components/desurvey-method-1.0.0
-        collections: components/downhole-attributes-1.0.0
-    }
-    `objects/drilling-campaign-1.0.0-interim` *-- `components/hole-collars-1.0.0` : ref collar*
-    `objects/drilling-campaign-1.0.0-interim` *-- `components/downhole-direction-vector-1.0.0` : ref path*
-    `objects/drilling-campaign-1.0.0-interim` *-- `components/desurvey-method-1.0.0` : ref desurvey*
-    `objects/drilling-campaign-1.0.0-interim` *-- `components/downhole-attributes-1.0.0` : ref collections*
-    class `components/desurvey-method-1.0.0`:::schemaComponent {
-    }
-    class `components/downhole-direction-vector-1.0.0`:::schemaComponent {
-        data: elements/binary-blob-1.0.1*
-        length: integer*
-        width: integer*
-        data_type: string = float64*
-        width: integer = 3*
-        attributes: components/one-of-attribute-1.2.0*
-    }
-    `elements/float-array-md-1.0.1` <|-- `components/downhole-direction-vector-1.0.0`
-    `elements/float-array-3-1.0.1` <|-- `components/downhole-direction-vector-1.0.0`
-    `components/attribute-list-property-1.2.0` <|-- `components/downhole-direction-vector-1.0.0`
-    class `elements/unit-length-1.0.1-unit_categories`:::schemaImplicit {
     }

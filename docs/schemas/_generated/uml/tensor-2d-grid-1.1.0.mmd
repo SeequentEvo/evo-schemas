@@ -45,12 +45,16 @@ classDiagram
     `objects/tensor-2d-grid-1.1.0` *-- `components/rotation-1.0.1` : ref rotation*
     `objects/tensor-2d-grid-1.1.0` *-- `components/one-of-attribute-1.1.0` : ref cell_attributes*
     `objects/tensor-2d-grid-1.1.0` *-- `components/one-of-attribute-1.1.0` : ref vertex_attributes*
+    class `components/crs-1.0.1`:::schemaComponent {
+    }
+    class `components/one-of-attribute-1.1.0`:::schemaComponent {
+    }
+    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
+    }
     class `components/rotation-1.0.1`:::schemaComponent {
         dip_azimuth: number
         dip: number
         pitch: number
-    }
-    class `components/crs-1.0.1`:::schemaComponent {
     }
     class `components/bounding-box-1.0.1`:::schemaComponent {
         min_x: number
@@ -63,8 +67,4 @@ classDiagram
     class `objects/tensor-2d-grid-1.1.0-grid_cells_2d`:::schemaImplicit {
         cell_sizes_x: array
         cell_sizes_y: array
-    }
-    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
-    }
-    class `components/one-of-attribute-1.1.0`:::schemaComponent {
     }

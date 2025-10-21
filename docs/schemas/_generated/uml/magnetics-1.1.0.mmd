@@ -43,13 +43,9 @@ classDiagram
     `components/base-spatial-data-properties-1.0.1` *-- `components/bounding-box-1.0.1` : ref bounding_box*
     `components/base-spatial-data-properties-1.0.1` *-- `components/crs-1.0.1` : ref coordinate_reference_system*
     `objects/magnetics-1.1.0` *-- `objects/magnetics-1.1.0-gradient_magnetic` : ref gradient_magnetic*
-    class `components/crs-1.0.1`:::schemaComponent {
-    }
     class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
     }
-    class `objects/magnetics-1.1.0-gradient_magnetic`:::schemaImplicit {
-        number_of_sensors: integer
-        sensor_offsets: array
+    class `components/crs-1.0.1`:::schemaComponent {
     }
     class `components/bounding-box-1.0.1`:::schemaComponent {
         min_x: number
@@ -58,4 +54,8 @@ classDiagram
         max_y: number
         min_z: number
         max_z: number
+    }
+    class `objects/magnetics-1.1.0-gradient_magnetic`:::schemaImplicit {
+        number_of_sensors: integer
+        sensor_offsets: array
     }

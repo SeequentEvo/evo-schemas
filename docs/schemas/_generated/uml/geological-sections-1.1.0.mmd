@@ -53,23 +53,11 @@ classDiagram
     `objects/geological-sections-1.1.0` *-- `components/one-of-attribute-1.2.0` : ref section_attributes*
     `objects/geological-sections-1.1.0` *-- `components/one-of-attribute-1.2.0` : ref volume_attributes*
     `objects/geological-sections-1.1.0` *-- `components/one-of-attribute-1.2.0` : ref surface_attributes*
-    class `components/crs-1.0.1`:::schemaComponent {
-    }
-    class `components/bounding-box-1.0.1`:::schemaComponent {
-        min_x: number
-        max_x: number
-        min_y: number
-        max_y: number
-        min_z: number
-        max_z: number
-    }
-    class `components/base-object-properties-1.1.0-uuid`:::schemaImplicit {
-    }
     class `components/lineage-1.0.0`:::schemaComponent {
         self_link: string
         events: array
     }
-    class `components/one-of-attribute-1.2.0`:::schemaComponent {
+    class `components/crs-1.0.1`:::schemaComponent {
     }
     class `components/embedded-line-geometry-1.0.0`:::schemaComponent {
         vertices: components/embedded-line-geometry-1.0.0-vertices
@@ -108,15 +96,10 @@ classDiagram
     `components/attribute-list-property-1.2.0` <|-- `components/embedded-line-geometry-1.0.0-vertices`
     `elements/float-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
     `components/attribute-list-property-1.2.0` *-- `components/one-of-attribute-1.2.0` : ref attributes*
+    class `components/one-of-attribute-1.2.0`:::schemaComponent {
+    }
     class `elements/binary-blob-1.0.1`:::schemaElement {
     }
-    class `elements/index-array-1-1.0.1`:::schemaElement {
-        data: elements/binary-blob-1.0.1
-        length: integer
-        width: integer = 1
-        data_type: string = uint64
-    }
-    `elements/index-array-1-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
     class `elements/index-array-2-1.0.1`:::schemaElement {
         data: elements/binary-blob-1.0.1
         length: integer
@@ -133,3 +116,20 @@ classDiagram
     `elements/index-array-2-1.0.1` <|-- `components/embedded-line-geometry-1.0.0-chunks`
     `components/attribute-list-property-1.2.0` <|-- `components/embedded-line-geometry-1.0.0-chunks`
     `elements/index-array-2-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
+    class `elements/index-array-1-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1
+        length: integer
+        width: integer = 1
+        data_type: string = uint64
+    }
+    `elements/index-array-1-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
+    class `components/base-object-properties-1.1.0-uuid`:::schemaImplicit {
+    }
+    class `components/bounding-box-1.0.1`:::schemaComponent {
+        min_x: number
+        max_x: number
+        min_y: number
+        max_y: number
+        min_z: number
+        max_z: number
+    }

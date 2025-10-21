@@ -37,9 +37,9 @@ classDiagram
     `components/base-spatial-data-properties-1.0.1` *-- `components/bounding-box-1.0.1` : ref bounding_box*
     `components/base-spatial-data-properties-1.0.1` *-- `components/crs-1.0.1` : ref coordinate_reference_system*
     `objects/unstructured-hex-grid-1.0.1` *-- `components/hexahedrons-1.0.1` : ref hexahedrons*
-    class `components/crs-1.0.1`:::schemaComponent {
-    }
     class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
+    }
+    class `components/crs-1.0.1`:::schemaComponent {
     }
     class `components/bounding-box-1.0.1`:::schemaComponent {
         min_x: number
@@ -55,6 +55,30 @@ classDiagram
     }
     `components/hexahedrons-1.0.1` *-- `components/hexahedrons-1.0.1-vertices` : ref vertices*
     `components/hexahedrons-1.0.1` *-- `components/hexahedrons-1.0.1-indices` : ref indices*
+    class `elements/index-array-8-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1
+        length: integer
+        width: integer = 8
+        data_type: string = uint64
+    }
+    class `components/attribute-list-property-1.0.1`:::schemaComponent {
+        attributes: components/one-of-attribute-1.0.1
+    }
+    class `components/hexahedrons-1.0.1-indices`:::schemaImplicit {
+        data: elements/binary-blob-1.0.1*
+        length: integer*
+        width: integer = 8*
+        data_type: string = uint64*
+        attributes: components/one-of-attribute-1.0.1*
+    }
+    `elements/index-array-8-1.0.1` <|-- `components/hexahedrons-1.0.1-indices`
+    `components/attribute-list-property-1.0.1` <|-- `components/hexahedrons-1.0.1-indices`
+    `elements/index-array-8-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
+    `components/attribute-list-property-1.0.1` *-- `components/one-of-attribute-1.0.1` : ref attributes*
+    class `components/one-of-attribute-1.0.1`:::schemaComponent {
+    }
+    class `elements/binary-blob-1.0.1`:::schemaElement {
+    }
     class `elements/float-array-md-1.0.1`:::schemaElement {
         data: elements/binary-blob-1.0.1
         length: integer
@@ -68,9 +92,6 @@ classDiagram
         width: integer = 3
     }
     `elements/float-array-md-1.0.1` <|-- `elements/float-array-3-1.0.1`
-    class `components/attribute-list-property-1.0.1`:::schemaComponent {
-        attributes: components/one-of-attribute-1.0.1
-    }
     class `components/hexahedrons-1.0.1-vertices`:::schemaImplicit {
         data: elements/binary-blob-1.0.1*
         length: integer*
@@ -83,24 +104,3 @@ classDiagram
     `elements/float-array-3-1.0.1` <|-- `components/hexahedrons-1.0.1-vertices`
     `components/attribute-list-property-1.0.1` <|-- `components/hexahedrons-1.0.1-vertices`
     `elements/float-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
-    `components/attribute-list-property-1.0.1` *-- `components/one-of-attribute-1.0.1` : ref attributes*
-    class `components/one-of-attribute-1.0.1`:::schemaComponent {
-    }
-    class `elements/binary-blob-1.0.1`:::schemaElement {
-    }
-    class `elements/index-array-8-1.0.1`:::schemaElement {
-        data: elements/binary-blob-1.0.1
-        length: integer
-        width: integer = 8
-        data_type: string = uint64
-    }
-    class `components/hexahedrons-1.0.1-indices`:::schemaImplicit {
-        data: elements/binary-blob-1.0.1*
-        length: integer*
-        width: integer = 8*
-        data_type: string = uint64*
-        attributes: components/one-of-attribute-1.0.1*
-    }
-    `elements/index-array-8-1.0.1` <|-- `components/hexahedrons-1.0.1-indices`
-    `components/attribute-list-property-1.0.1` <|-- `components/hexahedrons-1.0.1-indices`
-    `elements/index-array-8-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*

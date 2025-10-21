@@ -57,17 +57,11 @@ classDiagram
     `objects/downhole-intervals-1.3.0` *-- `components/locations-1.0.1` : ref mid_points*
     `objects/downhole-intervals-1.3.0` *-- `components/from-to-1.0.1` : ref from_to*
     `objects/downhole-intervals-1.3.0` *-- `components/category-data-1.0.1` : ref hole_id*
+    class `components/lineage-1.0.0`:::schemaComponent {
+        self_link: string
+        events: array
+    }
     class `components/crs-1.0.1`:::schemaComponent {
-    }
-    class `components/bounding-box-1.0.1`:::schemaComponent {
-        min_x: number
-        max_x: number
-        min_y: number
-        max_y: number
-        min_z: number
-        max_z: number
-    }
-    class `components/base-object-properties-1.1.0-uuid`:::schemaImplicit {
     }
     class `components/locations-1.0.1`:::schemaComponent {
         coordinates: elements/float-array-3-1.0.1
@@ -88,6 +82,37 @@ classDiagram
     `elements/float-array-md-1.0.1` <|-- `elements/float-array-3-1.0.1`
     `elements/float-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
     class `elements/binary-blob-1.0.1`:::schemaElement {
+    }
+    class `components/base-object-properties-1.1.0-uuid`:::schemaImplicit {
+    }
+    class `components/one-of-attribute-1.2.0`:::schemaComponent {
+    }
+    class `components/from-to-1.0.1`:::schemaComponent {
+        intervals: components/intervals-1.0.1
+        unit: elements/unit-length-1.0.1-unit_categories
+    }
+    `components/from-to-1.0.1` *-- `components/intervals-1.0.1` : ref intervals*
+    `components/from-to-1.0.1` *-- `elements/unit-length-1.0.1-unit_categories` : ref unit*
+    class `elements/unit-length-1.0.1-unit_categories`:::schemaImplicit {
+    }
+    class `components/intervals-1.0.1`:::schemaComponent {
+        start_and_end: elements/float-array-2-1.0.1
+    }
+    `components/intervals-1.0.1` *-- `elements/float-array-2-1.0.1` : ref start_and_end*
+    class `elements/float-array-2-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1*
+        length: integer*
+        data_type: string = float64*
+        width: integer = 2
+    }
+    `elements/float-array-md-1.0.1` <|-- `elements/float-array-2-1.0.1`
+    class `components/bounding-box-1.0.1`:::schemaComponent {
+        min_x: number
+        max_x: number
+        min_y: number
+        max_y: number
+        min_z: number
+        max_z: number
     }
     class `components/category-data-1.0.1`:::schemaComponent {
         table: elements/lookup-table-1.0.1
@@ -116,28 +141,3 @@ classDiagram
         values_data_type: string = string
     }
     `elements/lookup-table-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
-    class `components/lineage-1.0.0`:::schemaComponent {
-        self_link: string
-        events: array
-    }
-    class `components/from-to-1.0.1`:::schemaComponent {
-        intervals: components/intervals-1.0.1
-        unit: elements/unit-length-1.0.1-unit_categories
-    }
-    `components/from-to-1.0.1` *-- `components/intervals-1.0.1` : ref intervals*
-    `components/from-to-1.0.1` *-- `elements/unit-length-1.0.1-unit_categories` : ref unit*
-    class `elements/unit-length-1.0.1-unit_categories`:::schemaImplicit {
-    }
-    class `components/intervals-1.0.1`:::schemaComponent {
-        start_and_end: elements/float-array-2-1.0.1
-    }
-    `components/intervals-1.0.1` *-- `elements/float-array-2-1.0.1` : ref start_and_end*
-    class `elements/float-array-2-1.0.1`:::schemaElement {
-        data: elements/binary-blob-1.0.1*
-        length: integer*
-        data_type: string = float64*
-        width: integer = 2
-    }
-    `elements/float-array-md-1.0.1` <|-- `elements/float-array-2-1.0.1`
-    class `components/one-of-attribute-1.2.0`:::schemaComponent {
-    }
