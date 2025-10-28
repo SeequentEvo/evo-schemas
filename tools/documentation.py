@@ -349,7 +349,7 @@ class SchemaVisualizer:
         """
         parent = None
         lines = []
-        extra_schemas = set()
+        extra_schemas = dict()
         associations = []
         parent_props = defaultdict(list)
         hierarchy = self._get_hierarchy(schema_type)
@@ -381,7 +381,7 @@ class SchemaVisualizer:
                     continue
                 elif isinstance(prop.type, SchemaClass):
                     if render_associations > 0:
-                        extra_schemas.add(self._types[prop.type.id])
+                        extra_schemas[self._types[prop.type.id].id] = self._types[prop.type.id]
                     ref_name = self._make_full_name(prop.type)
                     propline = self._make_mermaid_prop_line(prop.name, ref_name, ref=True)
                     parent_props[schema_ref.id].append(
@@ -414,7 +414,7 @@ class SchemaVisualizer:
             parent = schema_ref
         if render_associations > 0:
             lines.extend(associations)
-        for schema_ref in extra_schemas:
+        for schema_ref in extra_schemas.values():
             sublines = self._generate_mermaid_for_subtree(schema_ref, render_associations - 1, seen=seen)
             lines.extend(sublines)
         return lines
@@ -459,7 +459,7 @@ class SchemaVisualizer:
         """
         parent = None
         lines = []
-        extra_schemas = set()
+        extra_schemas = dict()
         associations = []
         parent_props = defaultdict(list)
         hierarchy = self._get_hierarchy(schema_type)
@@ -498,7 +498,7 @@ class SchemaVisualizer:
                     continue
                 elif isinstance(prop.type, SchemaClass):
                     if render_associations > 0:
-                        extra_schemas.add(self._types[prop.type.id])
+                        extra_schemas[self._types[prop.type.id].id] = self._types[prop.type.id]
                     ref_name = self._make_full_name(prop.type)
                     propline = self._make_plantuml_prop_line(prop.name, ref_name, ref=True)
                     parent_props[schema_ref.id].append(
@@ -531,7 +531,7 @@ class SchemaVisualizer:
             parent = schema_ref
         if render_associations > 0:
             lines.extend(associations)
-        for schema_ref in extra_schemas:
+        for schema_ref in extra_schemas.values():
             sublines = self._generate_plantuml_for_subtree(schema_ref, render_associations - 1, seen=seen)
             lines.extend(sublines)
         return lines
