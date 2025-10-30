@@ -1,0 +1,22 @@
+{
+  "schema": "/objects/experimental-variogram/1.0.0/experimental-variogram.schema.json",
+  "name": "Example Experimental Variogram",
+  "uuid": "11111111-1111-1111-1111-111111111111",
+  "description": "Example data for an experimental variogram object, demonstrating spatial continuity statistics for a single variable.",
+  "domain": "Domain-one",
+  "attribute": "porosity",
+  "data_variance": 0.25,
+  "variogram_type": "traditional semi-variogram",
+  "directions": {
+    "data": "abababababababababababababababababababababababababababababababab",
+    "data_type": "uint64/uint64/string/float64/float64/float64/float64/float64/float64",
+    "length": 2,
+    "width": 9
+  },
+  "lags": {
+    "data": "abababababababababababababababababababababababababababababababab",
+    "length": 6,
+    "width": 5,
+    "data_type": "float64/float64/float64/float64/uint64"
+  }
+}
