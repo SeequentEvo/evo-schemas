@@ -1,0 +1,95 @@
+{
+  "name": "magnetics_v2",
+  "schema": "/objects/magnetics/2.0.0/magnetics.schema.json",
+  "survey_type": "MGRM",
+  "type": "AIR",
+  "uuid": null,
+  "attribute_definition_list": [
+    {
+      "key": "123e4567-e89b-12d3-a456-426614174000",
+      "name": "MAG"
+    }
+  ],
+  "base_stations": [
+    {
+      "collections": [
+        {
+          "date": "2023-10-01",
+          "group": 0,
+          "identifier": "B0",
+          "locations": {
+            "coordinates": {
+              "data_type": "float64",
+              "length": 0,
+              "width": 0
+            },
+            "increment": 0.0,
+            "start": 0.0
+          },
+          "survey_attributes": [],
+          "type": "Line",
+          "version": 0
+        }
+      ],
+      "location": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "name": "BaseStation1",
+      "survey_type": "TMI"
+    }
+  ],
+  "bounding_box": {
+    "max_x": 10.0,
+    "max_y": 10.0,
+    "max_z": 100.0,
+    "min_x": -10.0,
+    "min_y": -10.0,
+    "min_z": -100.0
+  },
+  "collections": [
+    {
+      "identifier": "L0",
+      "locations": {
+        "coordinates": {
+          "data": "abababababababababababababababab",
+          "data_type": "float64",
+          "length": 1024,
+          "width": 3
+        },
+        "increment": 1.0,
+        "start": 1000.0
+      },
+      "survey_attributes": [
+        {
+          "definition_key": "123e4567-e89b-12d3-a456-426614174000",
+          "fiducial": {
+            "increment": 1.0,
+            "start": 1000.0
+          },
+          "values": {
+            "data": "abababababababababababababababab",
+            "data_type": "float64",
+            "length": 1024,
+            "width": 1
+          }
+        }
+      ],
+      "type": "Line"
+    }
+  ],
+  "coordinate_reference_system": {
+    "epsg_code": 4326
+  },
+  "gradient_magnetic": {
+    "number_of_sensors": 1,
+    "sensor_offsets": [
+      {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    ]
+  }
+}

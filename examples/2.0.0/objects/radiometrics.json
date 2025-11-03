@@ -1,0 +1,59 @@
+{
+  "name": "radiometrics_v2",
+  "sample_time": 1.0,
+  "schema": "/objects/radiometric/2.0.0/radiometric.schema.json",
+  "survey": {
+    "type": "AIR"
+  },
+  "uuid": null,
+  "array_dimension": 1024,
+  "energy_level": 2.92968,
+  "attribute_definition_list": [
+    {
+      "key": "123e4567-e89b-12d3-a456-426614174000",
+      "name": "SPECTRO"
+    }
+  ],
+  "bounding_box": {
+    "max_x": 10.0,
+    "max_y": 10.0,
+    "max_z": 100.0,
+    "min_x": -10.0,
+    "min_y": -10.0,
+    "min_z": -100.0
+  },
+  "collections": [
+    {
+      "identifier": "L0",
+      "locations": {
+        "coordinates": {
+          "data": "abababababababababababababababab",
+          "data_type": "float64",
+          "length": 1024,
+          "width": 3
+        },
+        "increment": 1.0,
+        "start": 1000.0
+      },
+      "survey_attributes": [
+        {
+          "definition_key": "123e4567-e89b-12d3-a456-426614174000",
+          "fiducial": {
+            "increment": 1.0,
+            "start": 1000.0
+          },
+          "values": {
+            "data": "abababababababababababababababab",
+            "data_type": "float64",
+            "length": 1024,
+            "width": 1
+          }
+        }
+      ],
+      "type": "Line"
+    }
+  ],
+  "coordinate_reference_system": {
+    "epsg_code": 4326
+  }
+}
