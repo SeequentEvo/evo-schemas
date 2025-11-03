@@ -46,12 +46,12 @@
                 "description": "Base station location.",
                 "$ref": "/elements/coordinates-3d/1.0.0/coordinates-3d.schema.json"
               },
-              "line_list": {
-                "description": "Base station gravity line list.",
+              "collections": {
+                "description": "Survey collections taken at the gravity base station.",
                 "type": "array",
                 "minItems": 1,
                 "items": {
-                  "description": "Gravity survey line list.",
+                  "description": "Gravity survey collection.",
                   "$ref": "/components/survey-collection/1.0.1/survey-collection.schema.json"
                 }
               }
@@ -59,7 +59,7 @@
             "required": [
               "name",
               "location",
-              "line_list"
+              "collections"
             ]
           }
         },
@@ -71,12 +71,12 @@
             "$ref": "/components/survey-attribute-definition/1.0.1/survey-attribute-definition.schema.json"
           }
         },
-        "line_list": {
-          "description": "Gravity survey line list.",
+        "collections": {
+          "description": "Gravity survey collections.",
           "type": "array",
           "minItems": 1,
           "items": {
-            "description": "Gravity survey line.",
+            "description": "Gravity survey collection.",
             "$ref": "/components/survey-collection/1.0.1/survey-collection.schema.json"
           }
         }
@@ -88,7 +88,7 @@
     "type",
     "survey_type",
     "attribute_definition_list",
-    "line_list"
+    "collections"
   ],
   "unevaluatedProperties": false
 }

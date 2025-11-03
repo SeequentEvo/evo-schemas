@@ -53,8 +53,8 @@
             "$ref": "/components/survey-attribute-definition/1.0.1/survey-attribute-definition.schema.json"
           }
         },
-        "line_list": {
-          "description": "Line list.",
+        "collections": {
+          "description": "Survey collections.",
           "type": "array",
           "minItems": 1,
           "items": {
@@ -69,7 +69,7 @@
     "survey",
     "array_dimension",
     "attribute_definition_list",
-    "line_list"
+    "collections"
   ],
   "unevaluatedProperties": false
 }

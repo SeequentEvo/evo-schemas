@@ -77,12 +77,12 @@
                   "VMG"
                 ]
               },
-              "line_list": {
-                "description": "Base station magnetic line list.",
+              "collections": {
+                "description": "Survey collections taken at the magnetic base station.",
                 "type": "array",
                 "minItems": 1,
                 "items": {
-                  "description": "Magnetic survey line.",
+                  "description": "Magnetic survey collection.",
                   "$ref": "/components/survey-collection/1.0.1/survey-collection.schema.json"
                 }
               }
@@ -91,7 +91,7 @@
               "name",
               "location",
               "survey_type",
-              "line_list"
+              "collections"
             ]
           }
         },
@@ -103,12 +103,12 @@
             "$ref": "/components/survey-attribute-definition/1.0.1/survey-attribute-definition.schema.json"
           }
         },
-        "line_list": {
-          "description": "Magnetic line list.",
+        "collections": {
+          "description": "Magnetic survey collections.",
           "type": "array",
           "minItems": 1,
           "items": {
-            "description": "Magnetic survey line.",
+            "description": "Magnetic survey collection.",
             "$ref": "/components/survey-collection/1.0.1/survey-collection.schema.json"
           }
         },
@@ -116,7 +116,7 @@
           "description": "QA/QC Magnetic azimuth test list.",
           "type": "array",
           "items": {
-            "description": "QA/QC Magnetic azimuth test line.",
+            "description": "QA/QC Magnetic azimuth test collection.",
             "$ref": "/components/survey-collection/1.0.1/survey-collection.schema.json"
           }
         },
@@ -124,7 +124,7 @@
           "description": "QA/QC Magnetic noise test list.",
           "type": "array",
           "items": {
-            "description": "QA/QC Magnetic noise test line.",
+            "description": "QA/QC Magnetic noise test collection.",
             "$ref": "/components/survey-collection/1.0.1/survey-collection.schema.json"
           }
         }
@@ -136,7 +136,7 @@
     "type",
     "survey_type",
     "attribute_definition_list",
-    "line_list"
+    "collections"
   ],
   "unevaluatedProperties": false
 }
