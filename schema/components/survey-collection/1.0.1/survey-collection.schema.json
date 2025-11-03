@@ -1,7 +1,7 @@
 {
   "$id": "/components/survey-collection/1.0.1/survey-collection.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "description": "A survey collection containing a collection number, type, and channel attributes.",
+  "description": "A survey collection containing a collection number, type, and attributes.",
   "type": "object",
   "properties": {
     "key": {
@@ -51,9 +51,9 @@
         }
       ]
     },
-    "channel_attributes": {
-      "title": "List of Channel Attributes",
-      "description": "List of channel attributes.",
+    "survey_attributes": {
+      "title": "List of survey Attributes",
+      "description": "List of survey attributes.",
       "type": "array",
       "items": {
         "$ref": "/components/survey-attribute/2.0.0/survey-attribute.schema.json"
@@ -63,6 +63,6 @@
   "required": [
     "key",
     "type",
-    "channel_attributes"
+    "survey_attributes"
   ]
 }
