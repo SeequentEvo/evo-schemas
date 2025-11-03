@@ -52,7 +52,7 @@
                 "minItems": 1,
                 "items": {
                   "description": "Gravity survey line list.",
-                  "$ref": "/components/survey-line/2.0.0/survey-line.schema.json"
+                  "$ref": "/components/survey-collection/1.0.1/survey-collection.schema.json"
                 }
               }
             },
@@ -77,7 +77,7 @@
           "minItems": 1,
           "items": {
             "description": "Gravity survey line.",
-            "$ref": "/components/survey-line/2.0.0/survey-line.schema.json"
+            "$ref": "/components/survey-collection/1.0.1/survey-collection.schema.json"
           }
         }
       }

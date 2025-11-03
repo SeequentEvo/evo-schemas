@@ -1,32 +1,32 @@
 {
-  "$id": "/components/survey-line/2.0.0/survey-line.schema.json",
+  "$id": "/components/survey-collection/1.0.1/survey-collection.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "description": "A survey line containing a line number, type, and channel attributes.",
+  "description": "A survey collection containing a collection number, type, and channel attributes.",
   "type": "object",
   "properties": {
-    "line_number": {
-      "description": "The number of the line, can be alphanumeric.",
+    "key": {
+      "description": "The collection identifier. In line-based surveys, this will typically be the line number.",
       "type": "string"
     },
     "date": {
-      "description": "The date the survey line was conducted.",
+      "description": "The date the survey collection was conducted.",
       "type": "string",
       "format": "date-time"
     },
     "version": {
-      "description": "The version of the survey line.",
+      "description": "The version of the survey collection.",
       "type": "integer",
       "default": 0,
       "minimum": 0
     },
     "group": {
-      "description": "The group of the survey line.",
+      "description": "The group of the survey collection.",
       "type": "integer",
       "default": 0,
       "minimum": 0
     },
     "type": {
-      "description": "Survey line type.",
+      "description": "Survey collection type.",
       "enum": [
         "Line",
         "Base",
@@ -41,7 +41,7 @@
     },
     "locations": {
       "type": "object",
-      "description": "Survey line locations.",
+      "description": "Survey collection locations.",
       "allOf": [
         {
           "$ref": "/components/locations/1.0.1/locations.schema.json"
@@ -61,7 +61,7 @@
     }
   },
   "required": [
-    "line_number",
+    "key",
     "type",
     "channel_attributes"
   ]
