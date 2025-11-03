@@ -39,6 +39,9 @@
         },
         {
           "$ref": "/elements/color-array/1.0.1/color-array.schema.json"
+        },
+        {
+          "$ref": "/elements/integer-array-md/1.0.1/integer-array-md.schema.json"
         }
       ]
     }
