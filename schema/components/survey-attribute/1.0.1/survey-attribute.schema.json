@@ -4,7 +4,7 @@
   "description": "A list of values corresponding to survey data.",
   "type": "object",
   "properties": {
-    "definition_key": {
+    "key": {
       "description": "A key that identifies the attribute definition.",
       "type": "string"
     },
