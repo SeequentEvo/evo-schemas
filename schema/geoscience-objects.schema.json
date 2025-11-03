@@ -41,9 +41,6 @@
       "$ref": "/objects/frequency-domain-electromagnetic/1.1.0/frequency-domain-electromagnetic.schema.json"
     },
     {
-      "$ref": "/objects/frequency-domain-electromagnetic/2.0.0/frequency-domain-electromagnetic.schema.json"
-    },
-    {
       "$ref": "/objects/geological-model-meshes/1.0.1/geological-model-meshes.schema.json"
     },
     {
