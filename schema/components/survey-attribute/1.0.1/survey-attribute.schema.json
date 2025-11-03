@@ -47,7 +47,7 @@
     }
   },
   "required": [
-    "definition_key",
+    "key",
     "fiducial",
     "values"
   ]

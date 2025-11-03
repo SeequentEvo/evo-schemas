@@ -62,11 +62,11 @@
       },
       "survey_attributes": [
         {
-          "definition_key": "123e4567-e89b-12d3-a456-426614174000",
           "fiducial": {
             "increment": 1.0,
             "start": 1000.0
           },
+          "key": "123e4567-e89b-12d3-a456-426614174000",
           "values": {
             "data": "abababababababababababababababab",
             "data_type": "float64",
