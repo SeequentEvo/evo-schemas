@@ -63,7 +63,7 @@
             ]
           }
         },
-        "channel_definition_list": {
+        "attribute_definition_list": {
           "description": "List of channel definitions.",
           "type": "array",
           "minItems": 1,
@@ -87,7 +87,7 @@
     "schema",
     "type",
     "survey_type",
-    "channel_definition_list",
+    "attribute_definition_list",
     "line_list"
   ],
   "unevaluatedProperties": false
