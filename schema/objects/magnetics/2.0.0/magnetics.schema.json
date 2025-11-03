@@ -103,7 +103,22 @@
             "description": "Magnetic survey line.",
             "$ref": "/components/survey-line/2.0.0/survey-line.schema.json"
           }
-        }
+        },
+        "qaqc_magnetic_azimuth_test_list": {
+          "description": "QA/QC Magnetic azimuth test list.",
+          "type": "array",
+          "items": {
+            "description": "QA/QC Magnetic azimuth test line.",
+            "$ref": "/components/survey-line/2.0.0/survey-line.schema.json"
+          }
+        },
+        "qaqc_noise_test_list": {
+          "description": "QA/QC Magnetic noise test list.",
+          "type": "array",
+          "items": {
+            "description": "QA/QC Magnetic noise test line.",
+            "$ref": "/components/survey-line/2.0.0/survey-line.schema.json"
+           }
       }
     }
   ],
