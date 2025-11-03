@@ -46,7 +46,7 @@
           "minimum": 0.0
         },
         "attribute_definition_list": {
-          "description": "List of channel definitions.",
+          "description": "List of attribute definitions. These will be referenced in survey collections.",
           "type": "array",
           "minItems": 1,
           "items": {
