@@ -4,7 +4,7 @@
   "description": "A survey collection containing a collection number, type, and attributes.",
   "type": "object",
   "properties": {
-    "key": {
+    "identifier": {
       "description": "The collection identifier. In line-based surveys, this will typically be the line number.",
       "type": "string"
     },
@@ -61,7 +61,7 @@
     }
   },
   "required": [
-    "key",
+    "identifier",
     "type",
     "survey_attributes"
   ]
