@@ -1,9 +1,12 @@
+import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from './_generated/flatmd/objects/magnetics-1.2.0.md';
+import FlatProperties from './_generated/flatmd/objects/magnetics-2.0.0.md';
+
+<OverlineWithVersion title="Geoscience Objects" version="2.0.0" badge="techPreview" />
 
 # magnetics
 
-<SchemaUri uri="schema/objects/magnetics/1.2.0/magnetics.schema.json" />
+<SchemaUri uri="schema/objects/magnetics/2.0.0/magnetics.schema.json" />
 
 A magnetics object represents geolocated, time stamped geomagnetic survey data. This data is used extensively in exploration for mineral resources, environmental investigations, fundamental earth science mapping, and other fields where the magnetic properties of subsurface materials provide insight.
 
@@ -19,7 +22,7 @@ The `gradient_magnetic` object includes details about gradient magnetic measurem
 
 The `base_stations` array includes at least one base station definition, comprising `name`, `location`, `survey_type` and a list of magnetic lines for which it is associated. In this case, `survey_type` in the sub-object refers to the survey type of the base station measurements.
 
-The `magnetic_line_list` array includes one or more survey-line definitions, including the `date`, `version`, and `group` of the survey. Each survey-line definition indicates the type of survey line (the geometry and intended use), channel mappings, and the associated channel attribute data.
+The `collections` array includes one or more `survey-collection` components. Each collection will reference a `survey-attribute-definition` from the `attribute-definition-list`. The definition includes information such as the `name`, spatial `offset`, and `attribute-description`. Individual collections will include the `date`, `identifier`, `version`, `group`, `type` (the geometry and intended use), `locations`, and associated `survey_attributes` (collection data).
 
 The `qaqc_magnetic_azimuth_test_list` array includes QA/QC information describing the magnetic asimuth tests done at the beginning of the survey in a non-magnetically responsive location.
 
@@ -29,4 +32,4 @@ The `qaqc_noise_test_list` array includes QA/QC information measuring ambient no
 
 <FlatProperties />
 
-::mermaid[_generated/uml/magnetics-1.2.0.mmd]
+::mermaid[_generated/uml/magnetics-2.0.0.mmd]
