@@ -1,5 +1,5 @@
 {
-  "$id": "/components/channel-definition/1.0.0/channel-definition.schema.json",
+  "$id": "/components/channel-definition/1.0.1/channel-definition.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "Common properties for channel attributes in geophysical data.",
   "type": "object",

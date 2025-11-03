@@ -45,6 +45,9 @@
       "allOf": [
         {
           "$ref": "/components/locations/1.0.1/locations.schema.json"
+        },
+        {
+          "$ref": "/components/fiducial-description/1.0.1/fiducial-description.schema.json"
         }
       ]
     },

@@ -4,18 +4,13 @@
   "description": "An attribute for a channel.",
   "type": "object",
   "properties": {
-    "channel_reference": {
-      "description": "A reference to the definition of the channel in the survey object header (the 'key' of the channel).",
+    "channel_definition_key": {
+      "description": "A key that identifies the channel definition.",
       "type": "string"
     },
-    "fiducial_start": {
-      "description": "Starting fiducial number.",
-      "type": "number"
-    },
-    "fiducial_increment": {
-      "description": "Fiducial increment amount.",
-      "type": "number",
-      "exclusiveMinimum": 0.0
+    "fiducial": {
+      "description": "The fiducial properties of the channel.",
+      "$ref": "/components/fiducial-description/1.0.1/fiducial-description.schema.json"
     },
     "values": {
       "description": "Values associated with the channel.",
@@ -34,12 +29,23 @@
           "$ref": "/elements/integer-array-1/1.0.1/integer-array-1.schema.json"
         },
         {
+          "$ref": "/elements/integer-array-md/1.0.1/integer-array-md.schema.json"
+        },
+        {
           "$ref": "/elements/date-time-array/1.0.1/date-time-array.schema.json"
         },
         {
           "$ref": "/elements/string-array/1.0.1/string-array.schema.json"
+        },
+        {
+          "$ref": "/elements/color-array/1.0.1/color-array.schema.json"
         }
       ]
     }
-  }
+  },
+  "required": [
+    "channel_definition_key",
+    "fiducial",
+    "values"
+  ]
 }
