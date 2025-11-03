@@ -56,7 +56,7 @@
       "description": "List of channel attributes.",
       "type": "array",
       "items": {
-        "$ref": "/components/channel-attribute/2.0.0/channel-attribute.schema.json"
+        "$ref": "/components/survey-attribute/2.0.0/survey-attribute.schema.json"
       }
     }
   },

@@ -1,19 +1,19 @@
 {
-  "$id": "/components/channel-definition/1.0.1/channel-definition.schema.json",
+  "$id": "/components/survey-attribute-definition/1.0.1/survey-attribute-definition.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "description": "Common properties for channel attributes in geophysical data.",
+  "description": "Common properties for attributes in survey data.",
   "type": "object",
   "properties": {
     "name": {
       "type": "string",
-      "description": "The name of the channel."
+      "description": "The name of the attribute."
     },
     "key": {
       "type": "string",
-      "description": "An identifier of the channel. Must be unique within a list of channels."
+      "description": "An identifier of the attribute. Must be unique within a list of attributes."
     },
     "offset": {
-      "description": "Offset of channel measurements relative to the point of reference.",
+      "description": "Offset of attribute measurements relative to the point of reference.",
       "$ref": "/elements/coordinates-3d/1.0.0/coordinates-3d.schema.json"
     },
     "significant_digits": {
@@ -21,8 +21,8 @@
       "type": "integer",
       "minimum": 0
     },
-    "channel_description": {
-      "description": "Attributes describing the channel data.",
+    "description": {
+      "description": "Attribute-specific properties for survey data.",
       "$ref": "/components/attribute-description/1.0.1/attribute-description.schema.json"
     }
   },

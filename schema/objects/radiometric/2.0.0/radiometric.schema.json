@@ -50,7 +50,7 @@
           "type": "array",
           "minItems": 1,
           "items": {
-            "$ref": "/components/channel-definition/1.0.1/channel-definition.schema.json"
+            "$ref": "/components/survey-attribute-definition/1.0.1/survey-attribute-definition.schema.json"
           }
         },
         "line_list": {
