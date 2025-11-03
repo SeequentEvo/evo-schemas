@@ -1,5 +1,5 @@
 {
-  "$id": "/components/survey-attribute/2.0.0/survey-attribute.schema.json",
+  "$id": "/components/survey-attribute/1.0.1/survey-attribute.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "A list of values corresponding to survey data.",
   "type": "object",

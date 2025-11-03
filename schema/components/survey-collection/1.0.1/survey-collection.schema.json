@@ -56,7 +56,7 @@
       "description": "List of survey attributes.",
       "type": "array",
       "items": {
-        "$ref": "/components/survey-attribute/2.0.0/survey-attribute.schema.json"
+        "$ref": "/components/survey-attribute/1.0.1/survey-attribute.schema.json"
       }
     }
   },
