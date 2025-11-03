@@ -30,7 +30,7 @@
           ]
         },
         "sample_time": {
-          "description": "Total time that elapses between each record (msec).",
+          "description": "Total time that elapses between each record (msec). Required for idle/live time corrections.",
           "type": "number",
           "minimum": 0.0
         },
@@ -60,8 +60,7 @@
     "schema",
     "survey",
     "array_dimension",
-    "line_list",
-    "sample_time"
+    "line_list"
   ],
   "unevaluatedProperties": false
 }
