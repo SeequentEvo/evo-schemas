@@ -1,5 +1,8 @@
+import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from './_generated/flatmd/objects/unstructured-quad-grid-1.3.0.md';
+
+<OverlineWithVersion title="Geoscience Objects" version="1.3.0" badge="supported" />
 
 # unstructured-quad-grid
 

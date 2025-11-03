@@ -1,0 +1,29 @@
+{
+  "$schema": "/components/block-model-fully-subblocked-structure/1.0.0/block-model-fully-subblocked-structure.schema.json",
+  "model_type": "fully-sub-blocked",
+  "origin": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "n_parent_blocks": [
+    10,
+    10,
+    20
+  ],
+  "parent_block_size": [
+    1.5,
+    1.5,
+    2.5
+  ],
+  "n_subblocks_per_parent": [
+    8,
+    20,
+    15
+  ],
+  "rotation": {
+    "dip_azimuth": 270.0,
+    "dip": 5.0,
+    "pitch": 150.0
+  }
+}

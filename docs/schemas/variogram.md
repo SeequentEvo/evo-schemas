@@ -1,5 +1,8 @@
+import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from './_generated/flatmd/objects/variogram-1.2.0.md';
+
+<OverlineWithVersion title="Geoscience Objects" version="1.2.0" badge="supported" />
 
 # variogram
 

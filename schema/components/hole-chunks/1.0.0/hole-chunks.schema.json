@@ -1,0 +1,33 @@
+{
+  "$id": "/components/hole-chunks/1.0.0/hole-chunks.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Used to indicate which rows of the segment and attribute tables are associated with a specific drillhole. The indices, counts, and offsets into locations and attribute tables of each hole. Columns: hole_index, offset, count.",
+  "type": "object",
+  "properties": {
+    "data": {
+      "description": "The binary data for the holes. Columns: hole_index, offset, count.",
+      "$ref": "/elements/binary-blob/1.0.1/binary-blob.schema.json"
+    },
+    "length": {
+      "type": "integer",
+      "description": "length of array",
+      "minimum": 0,
+      "default": 0
+    },
+    "width": {
+      "description": "number of columns",
+      "const": 3
+    },
+    "data_type": {
+      "type": "string",
+      "description": "Data type for the columns. 1st column is of type int32, 2nd is uint64 and 3rd is uint64.",
+      "const": "int32/uint64/uint64"
+    }
+  },
+  "required": [
+    "data",
+    "length",
+    "width",
+    "data_type"
+  ]
+}

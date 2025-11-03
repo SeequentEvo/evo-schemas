@@ -1,0 +1,29 @@
+{
+  "$schema": "/components/block-model-variable-octree-structure/1.0.0/block-model-variable-octree-structure.schema.json",
+  "model_type": "variable-octree",
+  "origin": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "n_parent_blocks": [
+    10,
+    10,
+    20
+  ],
+  "parent_block_size": [
+    1.5,
+    1.5,
+    2.5
+  ],
+  "n_subblocks_per_parent": [
+    8,
+    64,
+    1
+  ],
+  "rotation": {
+    "dip_azimuth": 9.0,
+    "dip": 4.5,
+    "pitch": 151.0
+  }
+}

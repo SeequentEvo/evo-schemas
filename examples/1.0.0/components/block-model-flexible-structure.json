@@ -1,0 +1,29 @@
+{
+  "$schema": "/components/block-model-flexible-structure/1.0.0/block-model-flexible-structure.schema.json",
+  "model_type": "flexible",
+  "origin": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "n_parent_blocks": [
+    10,
+    10,
+    20
+  ],
+  "parent_block_size": [
+    1.5,
+    1.5,
+    2.5
+  ],
+  "n_subblocks_per_parent": [
+    15,
+    64,
+    21
+  ],
+  "rotation": {
+    "dip_azimuth": 90.0,
+    "dip": 45.0,
+    "pitch": 15.0
+  }
+}

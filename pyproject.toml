@@ -1,12 +1,12 @@
 [project]
 name = "evo-schemas"
-version = "2024.4"
+version = "2025.9.12"
 authors = [
     { name = "Seequent", email = "support@seequent.com" }
 ]
 description = "Seequent Geoscience Object Schemas define metadata and data serialisation of various geoscience objects."
 keywords = []
-readme = "README.md"
+readme = "README.pypi.md"
 license-files = ["LICENSE.md"]
 requires-python = ">=3.10"
 
@@ -51,7 +51,6 @@ examples = [
 ]
 
 release = [
-    "bump-my-version",
     "twine",
 ]
 

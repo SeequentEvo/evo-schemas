@@ -1,5 +1,8 @@
+import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from './_generated/flatmd/objects/geophysical-records-1d-1.3.0.md';
+
+<OverlineWithVersion title="Geoscience Objects" version="1.3.0" badge="supported" />
 
 # geophysical-records-1d
 

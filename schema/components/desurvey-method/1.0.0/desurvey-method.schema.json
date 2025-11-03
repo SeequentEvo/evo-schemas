@@ -1,0 +1,11 @@
+{
+  "$id": "/components/desurvey-method/1.0.0/desurvey-method.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "The desurvey algorithm used to calculate 3D drillhole paths from survey measurements.",
+  "enum": [
+    "minimum_curvature",
+    "balanced_tangent",
+    "trench"
+  ],
+  "type": "string"
+}

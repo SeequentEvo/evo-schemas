@@ -1,0 +1,125 @@
+{
+  "$id": "/objects/experimental-variogram/1.0.0/experimental-variogram.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Experimental Variogram",
+  "description": "An experimental variogram object representing spatial continuity statistics for a single variable, grouped by direction and lag distance.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-object-properties/1.1.0/base-object-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/experimental-variogram/1.0.0/experimental-variogram.schema.json"
+        },
+        "domain": {
+          "description": "The domain the experimental variogram is calculated for.",
+          "type": "string"
+        },
+        "attribute": {
+          "description": "The attribute the experimental variogram is calculated for.",
+          "type": "string"
+        },
+        "data_variance": {
+          "description": "The variance of the source data, often used as the expected sill of the variogram.",
+          "type": "number"
+        },
+        "variogram_type": {
+          "description": "The type of calculation performed (e.g., variogram, semi-variogram, covariance, correlogram).",
+          "type": "string",
+          "default": "variogram"
+        },
+        "distance_unit": {
+          "description": "Distance unit.",
+          "$ref": "/elements/unit/1.0.1/categories/unit-length.schema.json"
+        },
+        "attribute_unit": {
+          "description": "Attribute unit",
+          "$ref": "/elements/unit/1.0.1/unit.schema.json"
+        },
+        "directions": {
+          "description": "A data-table defining the parameters for each variogram direction.",
+          "allOf": [
+            {
+              "$ref": "/components/attribute-list-property/1.2.0/attribute-list-property.schema.json",
+              "description": "Optional attributes for each direction, such as a 'name'. The length of each attribute array must match the number of directions."
+            },
+            {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "description": "Binary blob reference for the directions data table. Columns: offset, count, direction_type, azimuth, dip, azimuth_tolerance, dip_tolerance, bandwidth, bandheight.",
+                  "$ref": "/elements/binary-blob/1.0.1/binary-blob.schema.json"
+                },
+                "length": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "description": "Number of directions."
+                },
+                "width": {
+                  "description": "Number of columns in the core directions data table.",
+                  "const": 9
+                },
+                "data_type": {
+                  "description": "Data types for the core directions columns.",
+                  "const": "uint64/uint64/string/float64/float64/float64/float64/float64/float64"
+                }
+              },
+              "required": [
+                "data",
+                "length",
+                "width",
+                "data_type"
+              ]
+            }
+          ]
+        },
+        "lags": {
+          "description": "A data-table containing the calculated values for each lag bin.",
+          "allOf": [
+            {
+              "$ref": "/components/attribute-list-property/1.2.0/attribute-list-property.schema.json",
+              "description": "Optional attributes for each lag bin, such as 'weights'. The length of each attribute array must match the total number of lag bins."
+            },
+            {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "description": "Binary blob reference for the lag data table. The columns must be: start, end, centroid, value, num_pairs.",
+                  "$ref": "/elements/binary-blob/1.0.1/binary-blob.schema.json"
+                },
+                "length": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "description": "Total number of lag bins across all directions."
+                },
+                "width": {
+                  "description": "Number of columns in the core lag data table.",
+                  "const": 5
+                },
+                "data_type": {
+                  "description": "Data types for the core lag data columns.",
+                  "const": "float64/float64/float64/float64/uint64"
+                }
+              },
+              "required": [
+                "data",
+                "length",
+                "width",
+                "data_type"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "directions",
+    "lags",
+    "data_variance"
+  ],
+  "unevaluatedProperties": false
+}

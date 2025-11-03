@@ -1,0 +1,74 @@
+---
+config:
+    class:
+        hideEmptyMembersBox: true
+---
+
+classDiagram
+    class `components/base-object-properties-1.1.0`:::schemaComponent {
+        name: string
+        uuid: components/base-object-properties-1.1.0-uuid
+        description: string
+        extensions: object
+        tags: object
+        lineage: components/lineage-1.0.0
+    }
+    class `objects/experimental-variogram-1.0.0`:::schemaObject {
+        name: string*
+        uuid: components/base-object-properties-1.1.0-uuid*
+        description: string*
+        extensions: object*
+        tags: object*
+        lineage: components/lineage-1.0.0*
+        domain: string
+        attribute: string
+        data_variance: number
+        variogram_type: string
+        distance_unit: elements/unit-length-1.0.1-unit_categories
+        attribute_unit: elements/unit-1.0.1
+        directions: objects/experimental-variogram-1.0.0-directions
+        lags: objects/experimental-variogram-1.0.0-lags
+    }
+    `components/base-object-properties-1.1.0` <|-- `objects/experimental-variogram-1.0.0`
+    `components/base-object-properties-1.1.0` *-- `components/base-object-properties-1.1.0-uuid` : ref uuid*
+    `components/base-object-properties-1.1.0` *-- `components/lineage-1.0.0` : ref lineage*
+    `objects/experimental-variogram-1.0.0` *-- `elements/unit-length-1.0.1-unit_categories` : ref distance_unit*
+    `objects/experimental-variogram-1.0.0` *-- `elements/unit-1.0.1` : ref attribute_unit*
+    `objects/experimental-variogram-1.0.0` *-- `objects/experimental-variogram-1.0.0-directions` : ref directions*
+    `objects/experimental-variogram-1.0.0` *-- `objects/experimental-variogram-1.0.0-lags` : ref lags*
+    class `components/base-object-properties-1.1.0-uuid`:::schemaImplicit {
+    }
+    class `components/lineage-1.0.0`:::schemaComponent {
+        self_link: string
+        events: array
+    }
+    class `elements/unit-length-1.0.1-unit_categories`:::schemaImplicit {
+    }
+    class `elements/unit-1.0.1`:::schemaElement {
+    }
+    class `components/attribute-list-property-1.2.0`:::schemaComponent {
+        attributes: components/one-of-attribute-1.2.0
+    }
+    class `objects/experimental-variogram-1.0.0-directions`:::schemaImplicit {
+        attributes: components/one-of-attribute-1.2.0*
+        data: elements/binary-blob-1.0.1
+        length: integer
+        width: integer = 9
+        data_type: string = uint64/uint64/string/float64/float64/float64/float64/float64/float64
+    }
+    `components/attribute-list-property-1.2.0` <|-- `objects/experimental-variogram-1.0.0-directions`
+    `components/attribute-list-property-1.2.0` *-- `components/one-of-attribute-1.2.0` : ref attributes*
+    `objects/experimental-variogram-1.0.0-directions` *-- `elements/binary-blob-1.0.1` : ref data*
+    class `components/one-of-attribute-1.2.0`:::schemaComponent {
+    }
+    class `elements/binary-blob-1.0.1`:::schemaElement {
+    }
+    class `objects/experimental-variogram-1.0.0-lags`:::schemaImplicit {
+        attributes: components/one-of-attribute-1.2.0*
+        data: elements/binary-blob-1.0.1
+        length: integer
+        width: integer = 5
+        data_type: string = float64/float64/float64/float64/uint64
+    }
+    `components/attribute-list-property-1.2.0` <|-- `objects/experimental-variogram-1.0.0-lags`
+    `objects/experimental-variogram-1.0.0-lags` *-- `elements/binary-blob-1.0.1` : ref data*
