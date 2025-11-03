@@ -1,0 +1,62 @@
+{
+  "$id": "/objects/frequency-domain-electromagnetic/2.0.0/frequency-domain-electromagnetic.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Frequency Domain Electromagnetic data.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.1.0/base-spatial-data-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/frequency-domain-electromagnetic/2.0.0/frequency-domain-electromagnetic.schema.json"
+        },
+        "survey": {
+          "description": "Survey information.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "description": "Survey type.",
+              "type": "string",
+              "enum": [
+                "GROUND",
+                "AIR"
+              ]
+            }
+          },
+          "required": [
+            "type"
+          ]
+        },
+        "data_type": {
+          "description": "Data type.",
+          "type": "string"
+        },
+        "channels": {
+          "description": "Channel information.",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "/components/frequency-domain-electromagnetic-channel/1.0.0/frequency-domain-electromagnetic-channel.schema.json"
+          }
+        },
+        "line_list": {
+          "description": "Line list.",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "/components/survey-line/2.0.0/survey-line.schema.json"
+          }
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "survey",
+    "channels",
+    "line_list"
+  ],
+  "unevaluatedProperties": false
+}
