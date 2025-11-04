@@ -25,28 +25,18 @@
   "collections": [
     {
       "identifier": "L0",
-      "locations": {
-        "coordinates": {
-          "data": "abababababababababababababababababababababababababababababababab",
-          "data_type": "float64",
-          "length": 1024,
-          "width": 3
-        },
-        "increment": 1.0,
-        "start": 1000.0
-      },
       "survey_attributes": [
         {
+          "key": "123e4567-e89b-12d3-a456-426614174000",
           "fiducial": {
             "increment": 1.0,
             "start": 1000.0
           },
-          "key": "123e4567-e89b-12d3-a456-426614174000",
           "values": {
-            "data": "abababababababababababababababababababababababababababababababab",
-            "data_type": "float64",
-            "length": 1024,
-            "width": 1
+              "width": 3,
+              "data_type": "float64",
+              "length": 3,
+              "data": "abababababababababababababababababababababababababababababababab"
           }
         }
       ],
