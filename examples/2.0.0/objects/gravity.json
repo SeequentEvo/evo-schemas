@@ -19,12 +19,13 @@
           "identifier": "B0",
           "locations": {
             "coordinates": {
+              "width": 3,
               "data_type": "float64",
-              "length": 0,
-              "width": 0
+              "length": 3,
+              "data": "abababababababababababababababababababababababababababababababab"
             },
-            "increment": 0.0,
-            "start": 0.0
+            "increment": 1,
+            "start": 1
           },
           "survey_attributes": [],
           "type": "Line",
@@ -52,7 +53,7 @@
       "identifier": "L0",
       "locations": {
         "coordinates": {
-          "data": "abababababababababababababababab",
+          "data": "abababababababababababababababababababababababababababababababab",
           "data_type": "float64",
           "length": 1024,
           "width": 3
@@ -68,7 +69,7 @@
           },
           "key": "123e4567-e89b-12d3-a456-426614174000",
           "values": {
-            "data": "abababababababababababababababab",
+            "data": "abababababababababababababababababababababababababababababababab",
             "data_type": "float64",
             "length": 1024,
             "width": 1
