@@ -33,10 +33,10 @@
             "start": 1000.0
           },
           "values": {
-              "width": 3,
-              "data_type": "float64",
-              "length": 3,
-              "data": "abababababababababababababababababababababababababababababababab"
+            "width": 3,
+            "data_type": "float64",
+            "length": 3,
+            "data": "abababababababababababababababababababababababababababababababab"
           }
         }
       ],
