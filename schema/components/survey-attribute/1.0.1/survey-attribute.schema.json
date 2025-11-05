@@ -20,13 +20,7 @@
           "$ref": "/elements/bool-array-1/1.0.1/bool-array-1.schema.json"
         },
         {
-          "$ref": "/elements/float-array-1/1.0.1/float-array-1.schema.json"
-        },
-        {
           "$ref": "/elements/float-array-md/1.0.1/float-array-md.schema.json"
-        },
-        {
-          "$ref": "/elements/integer-array-1/1.0.1/integer-array-1.schema.json"
         },
         {
           "$ref": "/elements/integer-array-md/1.0.1/integer-array-md.schema.json"
@@ -39,9 +33,6 @@
         },
         {
           "$ref": "/elements/color-array/1.0.1/color-array.schema.json"
-        },
-        {
-          "$ref": "/elements/integer-array-md/1.0.1/integer-array-md.schema.json"
         }
       ]
     }
