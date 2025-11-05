@@ -1,0 +1,45 @@
+{
+  "$id": "/components/survey-attribute/1.0.1/survey-attribute.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A list of values corresponding to survey data.",
+  "type": "object",
+  "properties": {
+    "key": {
+      "description": "A key that identifies the attribute definition.",
+      "type": "string"
+    },
+    "fiducial": {
+      "description": "The fiducial properties of the attribute.",
+      "$ref": "/components/fiducial-description/1.0.1/fiducial-description.schema.json"
+    },
+    "values": {
+      "description": "Values associated with the attribute.",
+      "type": "object",
+      "oneOf": [
+        {
+          "$ref": "/elements/bool-array-md/1.0.1/bool-array-md.schema.json"
+        },
+        {
+          "$ref": "/elements/float-array-md/1.0.1/float-array-md.schema.json"
+        },
+        {
+          "$ref": "/elements/integer-array-md/1.0.1/integer-array-md.schema.json"
+        },
+        {
+          "$ref": "/elements/date-time-array/1.0.1/date-time-array.schema.json"
+        },
+        {
+          "$ref": "/elements/string-array/1.0.1/string-array.schema.json"
+        },
+        {
+          "$ref": "/elements/color-array/1.0.1/color-array.schema.json"
+        }
+      ]
+    }
+  },
+  "required": [
+    "key",
+    "fiducial",
+    "values"
+  ]
+}

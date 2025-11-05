@@ -1,0 +1,103 @@
+{
+  "attribute_definition_list": [
+    {
+      "key": "d09d1b7f-62ec-4d51-a8ab-00248d1f431a",
+      "name": "mag"
+    },
+    {
+      "key": "6021b524-e54a-449c-a896-964f3b19d215",
+      "name": "base_station_mag"
+    }
+  ],
+  "base_stations": [
+    {
+      "collections": [
+        {
+          "date": "2023-10-01",
+          "identifier": "B0",
+          "survey_attributes": [
+            {
+              "fiducial": {
+                "increment": 1.0,
+                "start": 0.0
+              },
+              "key": "6021b524-e54a-449c-a896-964f3b19d215",
+              "values": {
+                "data": "abababababababababababababababababababababababababababababababab",
+                "data_type": "float64",
+                "length": 10,
+                "width": 1
+              }
+            }
+          ],
+          "type": "Base",
+          "version": 1
+        }
+      ],
+      "location": {
+        "x": -79.380611,
+        "y": 43.63883,
+        "z": 0.0
+      },
+      "name": "BaseStation1",
+      "survey_type": "TMI"
+    }
+  ],
+  "bounding_box": {
+    "max_x": 10.0,
+    "max_y": 10.0,
+    "max_z": 100.0,
+    "min_x": -10.0,
+    "min_y": -10.0,
+    "min_z": -100.0
+  },
+  "collections": [
+    {
+      "identifier": "L0",
+      "locations": {
+        "coordinates": {
+          "data": "abababababababababababababababababababababababababababababababab",
+          "data_type": "float64",
+          "length": 1024,
+          "width": 3
+        },
+        "increment": 1.0,
+        "start": 1000.0
+      },
+      "survey_attributes": [
+        {
+          "fiducial": {
+            "increment": 1.0,
+            "start": 1000.0
+          },
+          "key": "d09d1b7f-62ec-4d51-a8ab-00248d1f431a",
+          "values": {
+            "data": "abababababababababababababababababababababababababababababababab",
+            "data_type": "float64",
+            "length": 1024,
+            "width": 1
+          }
+        }
+      ],
+      "type": "Line"
+    }
+  ],
+  "coordinate_reference_system": {
+    "epsg_code": 4326
+  },
+  "gradient_magnetic": {
+    "number_of_sensors": 1,
+    "sensor_offsets": [
+      {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    ]
+  },
+  "name": "magnetics_v2",
+  "schema": "/objects/magnetics/2.0.0/magnetics.schema.json",
+  "survey_type": "MGRM",
+  "type": "AIR",
+  "uuid": null
+}

@@ -1,0 +1,142 @@
+{
+  "$id": "/objects/magnetics/2.0.0/magnetics.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Magnetics survey data.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.1.0/base-spatial-data-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/magnetics/2.0.0/magnetics.schema.json"
+        },
+        "type": {
+          "description": "Survey mode.",
+          "type": "string",
+          "enum": [
+            "GROUND",
+            "AIR",
+            "MARINE"
+          ]
+        },
+        "survey_type": {
+          "description": "Type of survey.",
+          "type": "string",
+          "enum": [
+            "TMI",
+            "VMG",
+            "MGRM"
+          ]
+        },
+        "gradient_magnetic": {
+          "type": "object",
+          "description": "Gradient magnetic details.",
+          "properties": {
+            "number_of_sensors": {
+              "type": "integer",
+              "description": "Number of sensors.",
+              "minimum": 1,
+              "default": 1
+            },
+            "sensor_offsets": {
+              "type": "array",
+              "description": "Sensor offsets relative to the point of reference.",
+              "items": {
+                "$ref": "/elements/coordinates-3d/1.0.0/coordinates-3d.schema.json"
+              }
+            }
+          },
+          "required": [
+            "number_of_sensors",
+            "sensor_offsets"
+          ]
+        },
+        "base_stations": {
+          "type": "array",
+          "description": "Base stations.",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "description": "Base station.",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Base station name."
+              },
+              "location": {
+                "description": "Base station location.",
+                "$ref": "/elements/coordinates-3d/1.0.0/coordinates-3d.schema.json"
+              },
+              "survey_type": {
+                "description": "Type of survey.",
+                "type": "string",
+                "enum": [
+                  "TMI",
+                  "VMG"
+                ]
+              },
+              "collections": {
+                "description": "Survey collections taken at the magnetic base station.",
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "description": "Magnetic survey collection.",
+                  "$ref": "/components/survey-collection/1.0.1/survey-collection.schema.json"
+                }
+              }
+            },
+            "required": [
+              "name",
+              "location",
+              "survey_type",
+              "collections"
+            ]
+          }
+        },
+        "attribute_definition_list": {
+          "description": "List of attribute definitions. These will be referenced in survey collections.",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "/components/survey-attribute-definition/1.0.1/survey-attribute-definition.schema.json"
+          }
+        },
+        "collections": {
+          "description": "Magnetic survey collections.",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "description": "Magnetic survey collection.",
+            "$ref": "/components/survey-collection/1.0.1/survey-collection.schema.json"
+          }
+        },
+        "qaqc_magnetic_azimuth_test_list": {
+          "description": "QA/QC Magnetic azimuth test list.",
+          "type": "array",
+          "items": {
+            "description": "QA/QC Magnetic azimuth test collection.",
+            "$ref": "/components/survey-collection/1.0.1/survey-collection.schema.json"
+          }
+        },
+        "qaqc_noise_test_list": {
+          "description": "QA/QC Magnetic noise test list.",
+          "type": "array",
+          "items": {
+            "description": "QA/QC Magnetic noise test collection.",
+            "$ref": "/components/survey-collection/1.0.1/survey-collection.schema.json"
+          }
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "type",
+    "survey_type",
+    "attribute_definition_list",
+    "collections"
+  ],
+  "unevaluatedProperties": false
+}

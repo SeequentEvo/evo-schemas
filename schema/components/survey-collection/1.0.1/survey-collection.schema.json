@@ -1,0 +1,68 @@
+{
+  "$id": "/components/survey-collection/1.0.1/survey-collection.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A survey collection containing a collection number, type, and attributes.",
+  "type": "object",
+  "properties": {
+    "identifier": {
+      "description": "The collection identifier. In line-based surveys, this will typically be the line number.",
+      "type": "string"
+    },
+    "date": {
+      "description": "The date the survey collection was conducted.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "version": {
+      "description": "The version of the survey collection.",
+      "type": "integer",
+      "default": 0,
+      "minimum": 0
+    },
+    "group": {
+      "description": "The group of the survey collection.",
+      "type": "integer",
+      "default": 0,
+      "minimum": 0
+    },
+    "type": {
+      "description": "Survey collection type.",
+      "enum": [
+        "Line",
+        "Base",
+        "Tie",
+        "Trend",
+        "Special",
+        "Random",
+        "Test"
+      ],
+      "type": "string",
+      "default": "Line"
+    },
+    "locations": {
+      "type": "object",
+      "description": "Survey collection locations.",
+      "allOf": [
+        {
+          "$ref": "/components/locations/1.0.1/locations.schema.json"
+        },
+        {
+          "$ref": "/components/fiducial-description/1.0.1/fiducial-description.schema.json"
+        }
+      ]
+    },
+    "survey_attributes": {
+      "title": "List of survey Attributes",
+      "description": "List of survey attributes.",
+      "type": "array",
+      "items": {
+        "$ref": "/components/survey-attribute/1.0.1/survey-attribute.schema.json"
+      }
+    }
+  },
+  "required": [
+    "identifier",
+    "type",
+    "survey_attributes"
+  ]
+}

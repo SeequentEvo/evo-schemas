@@ -101,6 +101,9 @@
       "$ref": "/objects/gravity/1.2.0/gravity.schema.json"
     },
     {
+      "$ref": "/objects/gravity/2.0.0/gravity.schema.json"
+    },
+    {
       "$ref": "/objects/line-segments/1.0.1/line-segments.schema.json"
     },
     {
@@ -149,6 +152,9 @@
       "$ref": "/objects/magnetics/1.2.0/magnetics.schema.json"
     },
     {
+      "$ref": "/objects/magnetics/2.0.0/magnetics.schema.json"
+    },
+    {
       "$ref": "/objects/non-parametric-continuous-cumulative-distribution/1.0.1/non-parametric-continuous-cumulative-distribution.schema.json"
     },
     {
@@ -189,6 +195,9 @@
     },
     {
       "$ref": "/objects/radiometric/1.2.0/radiometric.schema.json"
+    },
+    {
+      "$ref": "/objects/radiometric/2.0.0/radiometric.schema.json"
     },
     {
       "$ref": "/objects/regular-2d-grid/1.0.1/regular-2d-grid.schema.json"
