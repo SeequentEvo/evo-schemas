@@ -1,13 +1,8 @@
 {
-  "name": "magnetics_v2",
-  "schema": "/objects/magnetics/2.0.0/magnetics.schema.json",
-  "survey_type": "MGRM",
-  "type": "AIR",
-  "uuid": null,
   "attribute_definition_list": [
     {
-      "key": "123e4567-e89b-12d3-a456-426614174000",
-      "name": "MAG"
+      "key": "d09d1b7f-62ec-4d51-a8ab-00248d1f431a",
+      "name": "mag"
     }
   ],
   "base_stations": [
@@ -19,17 +14,16 @@
           "identifier": "B0",
           "locations": {
             "coordinates": {
-              "width": 3,
               "data_type": "float64",
-              "length": 3,
-              "data": "abababababababababababababababababababababababababababababababab"
+              "length": 0,
+              "width": 0
             },
-            "increment": 1,
-            "start": 1
+            "increment": 0.0,
+            "start": 0.0
           },
           "survey_attributes": [],
-          "type": "Line",
-          "version": 0
+          "type": "Base",
+          "version": 1
         }
       ],
       "location": {
@@ -52,18 +46,28 @@
   "collections": [
     {
       "identifier": "L0",
+      "locations": {
+        "coordinates": {
+          "data": "abababababababababababababababababababababababababababababababab",
+          "data_type": "float64",
+          "length": 1024,
+          "width": 3
+        },
+        "increment": 1.0,
+        "start": 1000.0
+      },
       "survey_attributes": [
         {
-          "key": "123e4567-e89b-12d3-a456-426614174000",
           "fiducial": {
             "increment": 1.0,
             "start": 1000.0
           },
+          "key": "d09d1b7f-62ec-4d51-a8ab-00248d1f431a",
           "values": {
-            "width": 3,
+            "data": "abababababababababababababababababababababababababababababababab",
             "data_type": "float64",
-            "length": 3,
-            "data": "abababababababababababababababababababababababababababababababab"
+            "length": 1024,
+            "width": 1
           }
         }
       ],
@@ -82,5 +86,10 @@
         "z": 0.0
       }
     ]
-  }
+  },
+  "name": "magnetics_v2",
+  "schema": "/objects/magnetics/2.0.0/magnetics.schema.json",
+  "survey_type": "MGRM",
+  "type": "AIR",
+  "uuid": null
 }

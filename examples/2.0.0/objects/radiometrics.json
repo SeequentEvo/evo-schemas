@@ -1,17 +1,9 @@
 {
-  "name": "radiometrics_v2",
-  "sample_time": 1.0,
-  "schema": "/objects/radiometric/2.0.0/radiometric.schema.json",
-  "survey": {
-    "type": "AIR"
-  },
-  "uuid": null,
   "array_dimension": 1024,
-  "energy_level": 2.92968,
   "attribute_definition_list": [
     {
-      "key": "123e4567-e89b-12d3-a456-426614174000",
-      "name": "SPECTRO"
+      "key": "047c8f3b-339c-4289-b26b-abeae6a9b926",
+      "name": "stabilized_spectra_1024"
     }
   ],
   "bounding_box": {
@@ -25,18 +17,28 @@
   "collections": [
     {
       "identifier": "L0",
+      "locations": {
+        "coordinates": {
+          "data": "abababababababababababababababababababababababababababababababab",
+          "data_type": "float64",
+          "length": 256,
+          "width": 3
+        },
+        "increment": 1.0,
+        "start": 1000.0
+      },
       "survey_attributes": [
         {
-          "key": "123e4567-e89b-12d3-a456-426614174000",
           "fiducial": {
             "increment": 1.0,
             "start": 1000.0
           },
+          "key": "047c8f3b-339c-4289-b26b-abeae6a9b926",
           "values": {
-            "width": 3,
-            "data_type": "float64",
-            "length": 3,
-            "data": "abababababababababababababababababababababababababababababababab"
+            "data": "abababababababababababababababababababababababababababababababab",
+            "data_type": "int64",
+            "length": 256,
+            "width": 1024
           }
         }
       ],
@@ -45,5 +47,13 @@
   ],
   "coordinate_reference_system": {
     "epsg_code": 4326
-  }
+  },
+  "energy_level": 2.92968,
+  "name": "radiometrics_v2",
+  "sample_time": 1.0,
+  "schema": "/objects/radiometric/2.0.0/radiometric.schema.json",
+  "survey": {
+    "type": "AIR"
+  },
+  "uuid": null
 }

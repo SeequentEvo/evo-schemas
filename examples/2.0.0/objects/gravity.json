@@ -1,37 +1,43 @@
 {
-  "name": "gravity_v2",
-  "schema": "/objects/gravity/2.0.0/gravity.schema.json",
-  "survey_type": "GRAV",
-  "type": "AIR",
-  "uuid": null,
   "attribute_definition_list": [
     {
-      "key": "123e4567-e89b-12d3-a456-426614174000",
-      "name": "GRAV"
+      "key": "e069696d-6802-4f1b-87ec-16c85941898f",
+      "name": "grav"
+    },
+    {
+      "key": "6021b524-e54a-449c-a896-964f3b19d215",
+      "name": "base_station_grav"
     }
   ],
   "base_stations": [
     {
       "collections": [
         {
+          "date": "2023-10-01",
+          "group": 0,
           "identifier": "B0",
-          "locations": {
-            "coordinates": {
-              "width": 3,
-              "data_type": "float64",
-              "length": 3,
-              "data": "abababababababababababababababababababababababababababababababab"
-            },
-            "increment": 1.0,
-            "start": 1.0
-          },
-          "survey_attributes": [],
-          "type": "Line"
+          "survey_attributes": [
+            {
+              "fiducial": {
+                "increment": 1.0,
+                "start": 0.0
+              },
+              "key": "6021b524-e54a-449c-a896-964f3b19d215",
+              "values": {
+                "data": "abababababababababababababababababababababababababababababababab",
+                "data_type": "float64",
+                "length": 10,
+                "width": 1
+              }
+            }
+          ],
+          "type": "Base",
+          "version": 1
         }
       ],
       "location": {
-        "x": 0.0,
-        "y": 0.0,
+        "x": -79.380611,
+        "y": 43.63883,
         "z": 0.0
       },
       "name": "BaseStation1"
@@ -48,18 +54,57 @@
   "collections": [
     {
       "identifier": "L0",
+      "locations": {
+        "coordinates": {
+          "data": "abababababababababababababababababababababababababababababababab",
+          "data_type": "float64",
+          "length": 256,
+          "width": 3
+        },
+        "increment": 1.0,
+        "start": 2000.0
+      },
       "survey_attributes": [
         {
-          "key": "123e4567-e89b-12d3-a456-426614174000",
           "fiducial": {
             "increment": 1.0,
             "start": 1000.0
           },
+          "key": "e069696d-6802-4f1b-87ec-16c85941898f",
           "values": {
-            "width": 3,
+            "data": "abababababababababababababababababababababababababababababababab",
             "data_type": "float64",
-            "length": 3,
-            "data": "abababababababababababababababababababababababababababababababab"
+            "length": 256,
+            "width": 1
+          }
+        }
+      ],
+      "type": "Line"
+    },
+    {
+      "identifier": "L1",
+      "locations": {
+        "coordinates": {
+          "data": "abababababababababababababababababababababababababababababababab",
+          "data_type": "float64",
+          "length": 256,
+          "width": 3
+        },
+        "increment": 1.0,
+        "start": 2000.0
+      },
+      "survey_attributes": [
+        {
+          "fiducial": {
+            "increment": 1.0,
+            "start": 2000.0
+          },
+          "key": "e069696d-6802-4f1b-87ec-16c85941898f",
+          "values": {
+            "data": "abababababababababababababababababababababababababababababababab",
+            "data_type": "float64",
+            "length": 256,
+            "width": 1
           }
         }
       ],
@@ -68,5 +113,10 @@
   ],
   "coordinate_reference_system": {
     "epsg_code": 4326
-  }
+  },
+  "name": "gravity_v2",
+  "schema": "/objects/gravity/2.0.0/gravity.schema.json",
+  "survey_type": "GRAV",
+  "type": "AIR",
+  "uuid": null
 }
