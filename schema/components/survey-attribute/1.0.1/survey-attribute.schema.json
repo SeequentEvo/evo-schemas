@@ -17,7 +17,7 @@
       "type": "object",
       "oneOf": [
         {
-          "$ref": "/elements/bool-array-1/1.0.1/bool-array-1.schema.json"
+          "$ref": "/elements/bool-array-md/1.0.1/bool-array-md.schema.json"
         },
         {
           "$ref": "/elements/float-array-md/1.0.1/float-array-md.schema.json"
