@@ -1,0 +1,111 @@
+{
+  "$id": "/components/time-domain-electromagnetic-waveform/1.0.0/time-domain-electromagnetic-waveform.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Time domain electromagnetic waveform.",
+  "type": "object",
+  "properties": {
+    "cycle_duration": {
+      "description": "Waveform cycle duration (msec).",
+      "type": "number",
+      "minimum": 0
+    },
+    "sampling_time": {
+      "description": "Sampling time (relative to starting time = 0) (msec), precision: 1/1000 of a second",
+      "type": "number",
+      "minimum": 0.0
+    },
+    "type": {
+      "description": "The waveform type.",
+      "type": "string",
+      "enum": [
+        "SQUARE",
+        "BIPOLARTRAPEZOID"
+      ]
+    },
+    "waveforms": {
+      "description": "Description of waveforms",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Waveform ID number.",
+            "minimum": 0
+          },          
+          "time": {
+            "description": "Waveform time (s)",
+            "type": "number"
+          },
+          "amplitude": {
+            "description": "Waveform amplitude (current) (Amp)",
+            "type": "number"
+          }
+        },
+        "required": [
+          "id",
+          "time",
+          "amplitude"
+        ]
+      }
+    },
+    "system_responses": {
+      "description": "Description of system responses, only required if using SkyTEM systems.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "number_repetitions": {
+            "type": "integer",
+            "description": "Number of repetitions",
+            "minimum": 0
+          },          
+          "start_timestamp": {
+            "description": "Beginning of time where system response is applied.",
+            "type": "string",
+            "format": "date-time"
+          },
+          "end_timestamp": {
+            "description": "End of time where system response is applied.",
+            "type": "string",
+            "format": "date-time"
+          },
+          "times": {
+            "description": "System response times",
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "responses": {
+            "description": "System responses",
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "sign_pattern": {
+            "description": "Sign pattern eg. 1, -1",
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "required": [
+          "number_repetitions",
+          "start_timestamp",
+          "end_timestamp",
+          "times",
+          "respones",
+          "sign_pattern"
+        ]
+      }
+    }
+  },
+  "required": [
+    "waveforms"
+  ]
+}

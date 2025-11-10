@@ -53,6 +53,18 @@
             "$ref": "/components/time-domain-electromagnetic-channel/1.0.0/time-domain-electromagnetic-channel.schema.json"
           }
         },
+        "waveforms": {
+          "description": "Waveform information.",
+          "$ref": "/components/time-domain-electromagnetic-waveform/1.0.0/time-domain-electromagnetic-waveform.schema.json"
+        },
+        "frame_geometry": {
+          "description": "Frame geometry information.",
+          "$ref": "/components/time-domain-electromagnetic-frame-geometry/1.0.0/time-domain-electromagnetic-frame-geometry.schema.json"
+        },
+        "time_gates": {
+          "description": "Time gate information.",
+          "$ref": "/components/time-domain-electromagnetic-time-gates/1.0.0/time-domain-electromagnetic-time-gates.schema.json"
+        },
         "attribute_definition_list": {
           "description": "List of attribute definitions. These will be referenced in survey collections.",
           "type": "array",
