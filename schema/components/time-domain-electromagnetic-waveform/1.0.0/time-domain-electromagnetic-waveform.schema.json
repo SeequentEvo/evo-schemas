@@ -41,8 +41,7 @@
         },
         "required": [
           "id",
-          "time",
-          "amplitude"
+          "waveform"
         ]
       }
     },
@@ -104,7 +103,7 @@
           "number_repetitions",
           "start_timestamp",
           "end_timestamp",
-          "respone"
+          "response"
         ]
       }
     }
