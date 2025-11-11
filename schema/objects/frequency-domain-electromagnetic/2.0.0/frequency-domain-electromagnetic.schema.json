@@ -33,16 +33,16 @@
           "description": "Data type.",
           "type": "string"
         },        
-        "attribute_definition_list": {
-          "description": "List of attribute definitions. These will be referenced in survey collections.",
+        "configurations": {
+          "description": "Frequency domain electromagnetic configurations.",
           "type": "array",
           "minItems": 1,
           "items": {
-            "$ref": "/components/survey-attribute-definition/1.0.1/survey-attribute-definition.schema.json"
+            "$ref": "/components/frequency-domain-electromagnetic-configuration/1.0.0/frequency-domain-electromagnetic-configuration.schema.json"
           }
         },
-        "collections": {
-          "description": "Survey collections.",
+        "attribute_definition_list": {
+          "description": "List of attribute definitions. These will be referenced in survey collections.",
           "type": "array",
           "minItems": 1,
           "items": {
@@ -51,9 +51,18 @@
                 "$ref": "/components/survey-attribute-definition/1.0.1/survey-attribute-definition.schema.json"
               },
               {
-                "$ref": "/components/survey-attribute-definition/1.0.1/frequency-domain-electromagnetic-attribute-definition.schema.json"
+                "$ref": "/components/frequency-domain-electromagnetic-attribute-definition/1.0.0/frequency-domain-electromagnetic-attribute-definition.schema.json"
               }
             ]
+          }
+        },
+        "collections": {
+          "description": "Survey collections.",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "description": "Survey collections.",
+            "$ref": "/components/survey-collection/1.0.1/survey-collection.schema.json"
           }
         }
       }

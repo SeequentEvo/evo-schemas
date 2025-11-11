@@ -57,6 +57,14 @@
           "description": "Time gate information.",
           "$ref": "/components/time-domain-electromagnetic-time-gates/1.0.0/time-domain-electromagnetic-time-gates.schema.json"
         },
+        "configurations": {
+          "description": "Time domain electromagnetic configurations.",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "/components/time-domain-electromagnetic-configuration/1.0.0/time-domain-electromagnetic-configuration.schema.json"
+          }
+        },
         "attribute_definition_list": {
           "description": "List of attribute definitions. These will be referenced in survey collections.",
           "type": "array",
@@ -67,7 +75,7 @@
                 "$ref": "/components/survey-attribute-definition/1.0.1/survey-attribute-definition.schema.json"
               },
               {
-                "$ref": "/components/survey-attribute-definition/1.0.1/time-domain-electromagnetic-attribute-definition.schema.json"
+                "$ref": "/components/time-domain-electromagnetic-attribute-definition/1.0.0/time-domain-electromagnetic-attribute-definition.schema.json"
               }
             ]
           }
@@ -92,6 +100,7 @@
     "waveforms",
     "frame_geometry",
     "time_gates",
+    "configurations",
     "attribute_definition_list",
     "collections"
   ],

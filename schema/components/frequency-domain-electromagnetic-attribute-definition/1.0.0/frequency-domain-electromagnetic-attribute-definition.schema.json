@@ -9,61 +9,14 @@
     },
     {
       "properties": {
-        "relative_quadrature_standard_deviation": {
-          "description": "Relative (%) qaudrature standard deviation.",
-          "type": "integer",
-          "minimum": 0.0
-        },
-        "relative_in_phase_standard_deviation": {
-          "description": "Relative (%) in-phase standard deviation.",
-          "type": "integer",
-          "minimum": 0.0
-        },
-        "coil_configuration": {
-          "description": "Coil configuration. Frequency is provided in increasing order.",
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "type": "object",
-            "properties": {
-              "frequency": {
-                "description": "Frequency (Hz) used during measurements.",
-                "type": "number"
-              },
-              "geometry": {
-                "description": "The configuration consists of 2 coils and their relative orientation(Horizontal or Vertical), direction relative to each other (Coaxial or Coplanar) and separation between the coils.",
-                "type": "string",
-                "enum": [
-                  "VCA",
-                  "VCP",
-                  "HCP",
-                  "PRP"
-                ]
-              },
-              "separation": {
-                "description": "Separation (m) between centre of coils.",
-                "type": "number",
-                "minimum": 0.0
-              }
-            },
-            "required": [
-              "frequency",
-              "geometry",
-              "separation"
-            ]
-          }
-        },
-        "gps": {
-          "description": "Location of GPS relative to point of reference.",
-          "$ref": "/elements/coordinates-3d/1.0.0/coordinates-3d.schema.json"
-        }
+        "configuration_key": {
+          "description": "The configuration for this attribute.",
+          "type": "string"
+        }        
       }
     }
   ],
   "required": [
-    "relative_quadrature_standard_deviation",
-    "relative_in_phase_standard_deviation",
-    "coil_configuration",
-    "gps"
+    "configuration_key"
   ]
 }
