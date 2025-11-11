@@ -1,0 +1,147 @@
+{
+  "$id": "/components/time-domain-electromagnetic-attribute-definition/1.0.0/time-domain-electromagnetic-attribute-definition.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Time domain electromagnetic attribute-definition.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/survey-attribute-definition/1.0.1/survey-attribute-definition.schema.json"
+    },
+    {
+      "properties": {
+        "repetition_frequency": {
+          "description": "Repetition frequency (Hz).",
+          "type": "number",
+          "minimum": 0
+        },
+        "zero_time": {
+          "description": "Current turn off time (msec) relative to start of cycle.",
+          "type": "number",
+          "minimum": 0.0
+        },
+        "start_time": {
+          "description": "Time (msec) delay of first gate relative to turn off time.",
+          "type": "number",
+          "minimum": 0.0
+        },
+        "transmitter_id": {
+          "description": "Transmitter Id.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "receiver_id": {
+          "description": "Receiver Id.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "waveform_id": {
+          "description": "Waveform Id.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "gates_id": {
+          "description": "Gates Id.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "inclinometers_transmitter_position": {
+          "description": "Inclinometers transmitter position.",
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 2,
+          "items": {
+            "$ref": "/elements/coordinates-3d/1.0.0/coordinates-3d.schema.json"
+          }
+        },
+        "inclinometers_receiver_position": {
+          "description": "Inclinometers receiver position.",
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 2,
+          "items": {
+            "$ref": "/elements/coordinates-3d/1.0.0/coordinates-3d.schema.json"
+          }
+        },
+        "gates_factor": {
+          "description": "Gate factor (calibrations factor).",
+          "type": "number",
+          "minimum": 0.0,
+          "default": 1.0
+        },
+        "gates_time_shift": {
+          "description": "Gate time shift (calibration factor).",
+          "type": "number",
+          "minimum": 0.0,
+          "default": 0.0
+        },
+        "uniform_standard_deviation": {
+          "description": "Uniform data standard deviation.",
+          "type": "number",
+          "minimum": 0.0,
+          "default": 0.0
+        },
+        "number_of_transmitter_turns": {
+          "description": "Number of transmitter loop turns.",
+          "type": "number",
+          "minimum": 0.0
+        },
+        "base_transmitter_frequency": {
+          "description": "Base frequency (Hz) at the transmitter.",
+          "type": "number",
+          "minimum": 0.0
+        },
+        "peak_transmitter_frequency": {
+          "description": "Peak current (Amp).",
+          "type": "number",
+          "minimum": 0.0
+        },
+        "primary_field_damping_factor": {
+          "description": "Primary field damping factor.",
+          "type": "number",
+          "minimum": 0.0
+        },
+        "front_gate_filter": {
+          "description": "Front gate filter.",
+          "$ref": "#/$defs/filter"
+        },
+        "front_gate_time": {
+          "description": "Front gate time (sec).",
+          "type": "number",
+          "minimum": 0.0
+        },
+        "front_gate_slope_low_pass_filter": {
+          "description": "Slope low pass filter before front gate.",
+          "type": "object",
+          "properties": {
+            "order": {
+              "description": "Filter order.",
+              "type": "number",
+              "minimum": 0.0
+            },
+            "frequency": {
+              "description": "Filter frequency.",
+              "type": "number",
+              "minimum": 0.0
+            }
+          },
+          "required": [
+            "order",
+            "frequency"
+          ]
+        }
+      }
+    }
+  ],
+  "required": [
+    "repetition_frequency",
+    "zero_time",
+    "start_time",
+    "transmitter_id",
+    "receiver_id",
+    "waveform_id",
+    "gates_id",
+    "number_of_transmitter_turns",
+    "base_transmitter_frequency",
+    "peak_transmitter_frequency"
+  ]
+}

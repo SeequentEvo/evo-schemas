@@ -32,15 +32,7 @@
         "data_type": {
           "description": "Data type.",
           "type": "string"
-        },
-        "channels": {
-          "description": "Channel information.",
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "$ref": "/components/frequency-domain-electromagnetic-channel/1.0.0/frequency-domain-electromagnetic-channel.schema.json"
-          }
-        },
+        },        
         "attribute_definition_list": {
           "description": "List of attribute definitions. These will be referenced in survey collections.",
           "type": "array",
@@ -54,8 +46,14 @@
           "type": "array",
           "minItems": 1,
           "items": {
-            "description": "Survey collections.",
-            "$ref": "/components/survey-collection/1.0.1/survey-collection.schema.json"
+            "oneOf": [
+              {
+                "$ref": "/components/survey-attribute-definition/1.0.1/survey-attribute-definition.schema.json"
+              },
+              {
+                "$ref": "/components/survey-attribute-definition/1.0.1/frequency-domain-electromagnetic-attribute-definition.schema.json"
+              }
+            ]
           }
         }
       }
@@ -64,7 +62,6 @@
   "required": [
     "schema",
     "survey",
-    "channels",
     "attribute_definition_list",
     "collections"
   ],

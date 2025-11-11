@@ -33,14 +33,10 @@
             "type": "integer",
             "description": "Waveform ID number.",
             "minimum": 0
-          },          
-          "time": {
-            "description": "Waveform time (s)",
-            "type": "number"
-          },
-          "amplitude": {
-            "description": "Waveform amplitude (current) (Amp)",
-            "type": "number"
+          },      
+          "waveform": {
+            "description": "First column is the time (s), second column is the amplitude (current) (Amp).",
+            "$ref": "/elements/float-array-2/1.0.1/float-array-2.schema.json"
           }
         },
         "required": [
@@ -72,35 +68,43 @@
             "type": "string",
             "format": "date-time"
           },
-          "times": {
+          "response": {
             "description": "System response times",
-            "type": "array",
-            "items": {
-              "type": "number"
-            }
-          },
-          "responses": {
-            "description": "System responses",
-            "type": "array",
-            "items": {
-              "type": "number"
-            }
-          },
-          "sign_pattern": {
-            "description": "Sign pattern eg. 1, -1",
-            "type": "array",
-            "items": {
-              "type": "integer"
-            }
-          }
+            "type": "object",
+            "properties": {
+              "data": {
+                "description": "The binary data for the system response. Columns: time, response, sign pattern.",
+                "$ref": "/elements/binary-blob/1.0.1/binary-blob.schema.json"
+              },
+              "length": {
+                "type": "integer",
+                "description": "length of array",
+                "minimum": 0,
+                "default": 0
+              },
+              "width": {
+                "description": "number of columns",
+                "const": 3
+              },
+              "data_type": {
+                "type": "string",
+                "description": "Data type for the columns. 1st column is of type float64, 2nd is float64 and 3rd is bool.",
+                "const": "float64/float64/bool"
+              }
+            },
+            "required": [
+              "data",
+              "length",
+              "width",
+              "data_type"
+            ]            
+          }          
         },
         "required": [
           "number_repetitions",
           "start_timestamp",
           "end_timestamp",
-          "times",
-          "respones",
-          "sign_pattern"
+          "respone"
         ]
       }
     }

@@ -45,14 +45,6 @@
           "description": "Location of GPS relative to point of reference.",
           "$ref": "/elements/coordinates-3d/1.0.0/coordinates-3d.schema.json"
         },
-        "channels": {
-          "description": "Channel information.",
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "$ref": "/components/time-domain-electromagnetic-channel/1.0.0/time-domain-electromagnetic-channel.schema.json"
-          }
-        },
         "waveforms": {
           "description": "Waveform information.",
           "$ref": "/components/time-domain-electromagnetic-waveform/1.0.0/time-domain-electromagnetic-waveform.schema.json"
@@ -70,7 +62,14 @@
           "type": "array",
           "minItems": 1,
           "items": {
-            "$ref": "/components/survey-attribute-definition/1.0.1/survey-attribute-definition.schema.json"
+            "oneOf": [
+              {
+                "$ref": "/components/survey-attribute-definition/1.0.1/survey-attribute-definition.schema.json"
+              },
+              {
+                "$ref": "/components/survey-attribute-definition/1.0.1/time-domain-electromagnetic-attribute-definition.schema.json"
+              }
+            ]
           }
         },
         "collections": {
@@ -90,7 +89,9 @@
     "survey",
     "geometry_category",
     "gps",
-    "channels",
+    "waveforms",
+    "frame_geometry",
+    "time_gates",
     "attribute_definition_list",
     "collections"
   ],
