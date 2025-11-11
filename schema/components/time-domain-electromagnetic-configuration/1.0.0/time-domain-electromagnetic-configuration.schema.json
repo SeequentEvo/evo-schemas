@@ -105,7 +105,19 @@
     },
     "front_gate_filter": {
       "description": "Front gate filter.",
-      "$ref": "#/$defs/filter"
+      "type": "object",
+      "properties": {
+        "order": {
+          "description": "Filter order.",
+          "type": "number",
+          "minimum": 0.0
+        },
+        "frequency": {
+          "description": "Filter frequency.",
+          "type": "number",
+          "minimum": 0.0
+        }
+      }
     },
     "front_gate_time": {
       "description": "Front gate time (sec).",
@@ -134,6 +146,8 @@
     }
   },
   "required": [
+    "name",
+    "key",
     "repetition_frequency",
     "zero_time",
     "start_time",
