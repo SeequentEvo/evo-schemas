@@ -32,7 +32,7 @@
         "data_type": {
           "description": "Data type.",
           "type": "string"
-        },        
+        },
         "configurations": {
           "description": "Frequency domain electromagnetic configurations.",
           "type": "array",

@@ -33,7 +33,7 @@
             "type": "integer",
             "description": "Waveform ID number.",
             "minimum": 0
-          },      
+          },
           "waveform": {
             "description": "First column is the time (s), second column is the amplitude (current) (Amp).",
             "$ref": "/elements/float-array-2/1.0.1/float-array-2.schema.json"
@@ -56,7 +56,7 @@
             "type": "integer",
             "description": "Number of repetitions",
             "minimum": 0
-          },          
+          },
           "start_timestamp": {
             "description": "Beginning of time where system response is applied.",
             "type": "string",
@@ -96,8 +96,8 @@
               "length",
               "width",
               "data_type"
-            ]            
-          }          
+            ]
+          }
         },
         "required": [
           "number_repetitions",

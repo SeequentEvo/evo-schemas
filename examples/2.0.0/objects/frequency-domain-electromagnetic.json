@@ -1,0 +1,122 @@
+{
+  "attribute_definition_list": [
+    {
+      "configuration_key": "e069696d-6802-4f1b-87ec-16c85941898f",
+      "description": {
+        "discipline": "Geophysics",
+        "scale": "Linear",
+        "type": "Frequency Domain Electromagnetic"
+      },
+      "key": "047c8f3b-339c-4289-b26b-abeae6a9b926",
+      "name": "fem_attr_1",
+      "offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "significant_digits": 5
+    },
+    {
+      "configuration_key": "e069696d-6802-4f1b-87ec-16c85941898f",
+      "description": {
+        "discipline": "Geophysics",
+        "scale": "Linear",
+        "type": "Frequency Domain Electromagnetic"
+      },
+      "key": "6021b524-e54a-449c-a896-964f3b19d215",
+      "name": "fem_att2_1",
+      "offset": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      },
+      "significant_digits": 5
+    }
+  ],
+  "bounding_box": {
+    "max_x": 10.0,
+    "max_y": 10.0,
+    "max_z": 100.0,
+    "min_x": -10.0,
+    "min_y": -10.0,
+    "min_z": -100.0
+  },
+  "collections": [
+    {
+      "date": "2023-10-01",
+      "group": 0,
+      "identifier": "L0",
+      "locations": {
+        "coordinates": {
+          "data": "abababababababababababababababababababababababababababababababab",
+          "data_type": "float64",
+          "length": 256,
+          "width": 3
+        },
+        "increment": 1.0,
+        "start": 1000.0
+      },
+      "survey_attributes": [
+        {
+          "fiducial": {
+            "increment": 1.0,
+            "start": 1000.0
+          },
+          "key": "047c8f3b-339c-4289-b26b-abeae6a9b926",
+          "values": {
+            "data": "abababababababababababababababababababababababababababababababab",
+            "data_type": "float64",
+            "length": 256,
+            "width": 1
+          }
+        },
+        {
+          "fiducial": {
+            "increment": 2.0,
+            "start": 1000.0
+          },
+          "key": "6021b524-e54a-449c-a896-964f3b19d215",
+          "values": {
+            "data": "abababababababababababababababababababababababababababababababab",
+            "data_type": "float64",
+            "length": 128,
+            "width": 1
+          }
+        }
+      ],
+      "type": "Line",
+      "version": 1
+    }
+  ],
+  "configurations": [
+    {
+      "coil_configuration": [
+        {
+          "frequency": 1000.0,
+          "geometry": "HCP",
+          "separation": 10.0
+        }
+      ],
+      "gps": {
+        "x": 100.0,
+        "y": 200.0,
+        "z": 50.0
+      },
+      "key": "e069696d-6802-4f1b-87ec-16c85941898f",
+      "name": "FEM Channel 1",
+      "relative_in_phase_standard_deviation": 0,
+      "relative_quadrature_standard_deviation": 0
+    }
+  ],
+  "coordinate_reference_system": {
+    "epsg_code": 4326
+  },
+  "data_type": "FEM",
+  "description": "This is an example to ensure the object validates properly.",
+  "name": "frequency_domain_electromagnetic_v2",
+  "schema": "/objects/frequency-domain-electromagnetic/2.0.0/frequency-domain-electromagnetic.schema.json",
+  "survey": {
+    "type": "GROUND"
+  },
+  "uuid": null
+}

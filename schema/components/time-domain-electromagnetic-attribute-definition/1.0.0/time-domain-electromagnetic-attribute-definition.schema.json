@@ -12,7 +12,7 @@
         "configuration_key": {
           "description": "The configuration for this attribute.",
           "type": "string"
-        }        
+        }
       }
     }
   ],

@@ -7,7 +7,7 @@
     "name": {
       "description": "Frame geometry name",
       "type": "string"
-    },    
+    },
     "transmitters": {
       "description": "Description of the transmitters in the frame.",
       "type": "array",
@@ -19,7 +19,7 @@
             "type": "integer",
             "description": "Transmitter identifier.",
             "minimum": 0
-          },          
+          },
           "center": {
             "description": "The center of the first transmitter coil, is the origin of the geometry. First transmitter: 0,0,0 Although it is not necessary to supply the origin of the first transmitter, it is declared as mandatory to eliminate potential ambiguity about the origin of the additional transmitters. For multiple transmitter coils, the offset of the center of each transmitter is relative to the first transmitter. Z axis is positive up (left-handed coordinate system).",
             "$ref": "/elements/coordinates-3d/1.0.0/coordinates-3d.schema.json"
@@ -65,7 +65,7 @@
             "type": "integer",
             "description": "Receiver identifier.",
             "minimum": 0
-          },          
+          },
           "offset": {
             "description": "Receiver coil center offset from transmitter 1 center",
             "$ref": "/elements/coordinates-3d/1.0.0/coordinates-3d.schema.json"
@@ -90,7 +90,7 @@
           "average_terrain_clearance": {
             "description": "Average EM Bird terrain clearance above ground (m)",
             "type": "number"
-          },  
+          },
           "filter": {
             "description": "Receiver coil Low Pass filter (order, frequency).",
             "type": "array",
@@ -100,7 +100,7 @@
                 "order": {
                   "description": "low pass filter order",
                   "type": "number"
-                },  
+                },
                 "frequency": {
                   "description": "low pass filter Frequency",
                   "type": "number"
