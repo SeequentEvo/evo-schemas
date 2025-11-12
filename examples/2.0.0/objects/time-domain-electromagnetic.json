@@ -215,7 +215,7 @@
     "sampling_time": 0.0001,
     "system_responses": [
       {
-        "end_timestamp": "2023-10-01T12:05:00Z",
+        "end_timestamp": "2025-11-11T20:21:39+00:00",
         "number_repetitions": 5,
         "response": {
           "data": "abababababababababababababababababababababababababababababababab",
@@ -223,7 +223,7 @@
           "length": 200,
           "width": 3
         },
-        "start_timestamp": "2023-10-01T12:00:00Z"
+        "start_timestamp": "2025-11-11T20:20:39+00:00"
       }
     ],
     "type": "BIPOLARTRAPEZOID",
