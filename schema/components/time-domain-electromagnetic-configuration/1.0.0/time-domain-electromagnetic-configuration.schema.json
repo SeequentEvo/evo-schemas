@@ -93,7 +93,7 @@
       "type": "number",
       "minimum": 0.0
     },
-    "peak_transmitter_frequency": {
+    "peak_transmitter_current": {
       "description": "Peak current (Amp).",
       "type": "number",
       "minimum": 0.0
@@ -157,6 +157,6 @@
     "gates_id",
     "number_of_transmitter_turns",
     "base_transmitter_frequency",
-    "peak_transmitter_frequency"
+    "peak_transmitter_current"
   ]
 }

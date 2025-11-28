@@ -5,7 +5,7 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "/components/survey-attribute-definition/1.0.1/survey-attribute-definition.schema.json"
+      "$ref": "/components/survey-attribute-definition/1.1.0/survey-attribute-definition.schema.json"
     },
     {
       "properties": {

@@ -48,7 +48,7 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "/components/survey-attribute-definition/1.0.1/survey-attribute-definition.schema.json"
+                "$ref": "/components/survey-attribute-definition/1.1.0/survey-attribute-definition.schema.json"
               },
               {
                 "$ref": "/components/frequency-domain-electromagnetic-attribute-definition/1.0.0/frequency-domain-electromagnetic-attribute-definition.schema.json"
