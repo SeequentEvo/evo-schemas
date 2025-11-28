@@ -53,6 +53,9 @@
       "$ref": "/objects/frequency-domain-electromagnetic/1.1.0/frequency-domain-electromagnetic.schema.json"
     },
     {
+      "$ref": "/objects/frequency-domain-electromagnetic/2.0.0/frequency-domain-electromagnetic.schema.json"
+    },
+    {
       "$ref": "/objects/geological-model-meshes/1.0.1/geological-model-meshes.schema.json"
     },
     {
@@ -270,6 +273,9 @@
     },
     {
       "$ref": "/objects/time-domain-electromagnetic/1.1.0/time-domain-electromagnetic.schema.json"
+    },
+    {
+      "$ref": "/objects/time-domain-electromagnetic/2.0.0/time-domain-electromagnetic.schema.json"
     },
     {
       "$ref": "/objects/triangle-mesh/1.0.1/triangle-mesh.schema.json"
