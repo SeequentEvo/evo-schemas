@@ -105,14 +105,13 @@
       "key": "e069696d-6802-4f1b-87ec-16c85941898f",
       "name": "configuration_1",
       "number_of_transmitter_turns": 4.0,
-      "peak_transmitter_frequency": 263.0,
+      "peak_transmitter_current": 263.0,
       "receiver_id": 1,
-      "repetition_frequency": 20.0,
-      "start_time": 2500.0,
-      "transmitter_id": 1,
+      "start_time": 1000.0,
+      "transmitter_id": 2500,
       "uniform_standard_deviation": 0.0,
       "waveform_id": 1,
-      "zero_time": 1000.0
+      "zero_time": 20.0
     },
     {
       "base_transmitter_frequency": 30.0,
@@ -130,14 +129,13 @@
       "key": "d09d1b7f-62ec-4d51-a8ab-00248d1f431a",
       "name": "configuration_2",
       "number_of_transmitter_turns": 4.0,
-      "peak_transmitter_frequency": 300.0,
+      "peak_transmitter_current": 300.0,
       "receiver_id": 2,
-      "repetition_frequency": 30.0,
-      "start_time": 500.0,
-      "transmitter_id": 2,
+      "start_time": 1000.0,
+      "transmitter_id": 500,
       "uniform_standard_deviation": 0.0,
       "waveform_id": 2,
-      "zero_time": 1000.0
+      "zero_time": 30.0
     }
   ],
   "coordinate_reference_system": {
