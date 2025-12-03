@@ -12,11 +12,6 @@
       "type": "string",
       "description": "An identifier of the configuration. Must be unique within a list of configurations."
     },
-    "repetition_frequency": {
-      "description": "Repetition frequency (Hz).",
-      "type": "number",
-      "minimum": 0
-    },
     "zero_time": {
       "description": "Current turn off time (msec) relative to start of cycle.",
       "type": "number",
@@ -148,7 +143,6 @@
   "required": [
     "name",
     "key",
-    "repetition_frequency",
     "zero_time",
     "start_time",
     "transmitter_id",
@@ -156,7 +150,6 @@
     "waveform_id",
     "gates_id",
     "number_of_transmitter_turns",
-    "base_transmitter_frequency",
     "peak_transmitter_current"
   ]
 }
