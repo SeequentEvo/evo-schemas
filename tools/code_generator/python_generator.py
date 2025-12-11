@@ -637,10 +637,10 @@ class PythonGenerator:
         Recursively collect all properties from baseclasses and the current class.
         """
         # Collect properties from the current class
-        properties = {prop.name: prop for prop in getattr(cls, 'props', [])}
+        properties = {prop.name: prop for prop in getattr(cls, "props", [])}
 
         # Collect properties from baseclasses
-        for base in getattr(cls, 'baseclasses', []) or []:
+        for base in getattr(cls, "baseclasses", []) or []:
             base_cls = base if isinstance(base, SchemaClass) else self.parser.classes.get(base)
             if base_cls:
                 for prop in self._collect_all_properties(base_cls):
@@ -653,10 +653,10 @@ class PythonGenerator:
         Recursively collect all required property names from baseclasses and the current class.
         """
         # Collect required properties from the current class
-        required = set(getattr(cls, 'required', []))
+        required = set(getattr(cls, "required", []))
 
         # Collect required properties from baseclasses
-        for base in getattr(cls, 'baseclasses', []) or []:
+        for base in getattr(cls, "baseclasses", []) or []:
             base_cls = base if isinstance(base, SchemaClass) else self.parser.classes.get(base)
             if base_cls:
                 required.update(self._collect_all_required_properties(base_cls))
@@ -687,7 +687,7 @@ class PythonGenerator:
                 doc_lines.append(f"{self.INDENT}{prop.name} ({self._get_type(prop)}{optional}){description}")
 
         if doc_lines:
-            yield from self._doc_string('\n'.join(doc_lines))
+            yield from self._doc_string("\n".join(doc_lines))
 
     def _generate_class(self, cls):
         try:
