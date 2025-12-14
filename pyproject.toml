@@ -1,6 +1,6 @@
 [project]
 name = "evo-schemas"
-version = "2025.9.12"
+version = "2025.12.15"
 authors = [
     { name = "Seequent", email = "support@seequent.com" }
 ]
