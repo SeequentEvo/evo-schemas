@@ -1,0 +1,187 @@
+{
+  "$id": "/objects/geological-model-meshes/2.1.1/geological-model-meshes.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A collection of geological volumes and surfaces.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.1.0/base-spatial-data-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/geological-model-meshes/2.1.1/geological-model-meshes.schema.json"
+        },
+        "folders": {
+          "type": "array",
+          "description": "A recursive list of folders containing indices into the volume and surface lists.",
+          "items": {
+            "$ref": "#/$defs/folder"
+          }
+        },
+        "triangle_geometry": {
+          "description": "The embedded mesh, defining vertices, triangles and parts.",
+          "allOf": [
+            {
+              "$ref": "/components/embedded-triangulated-mesh/2.1.0/embedded-triangulated-mesh.schema.json"
+            },
+            {
+              "required": [
+                "parts"
+              ]
+            }
+          ]
+        },
+        "materials": {
+          "type": "array",
+          "description": "Materials used by this mesh collection.",
+          "items": {
+            "$ref": "/components/material/1.0.1/material.schema.json"
+          }
+        },
+        "volumes": {
+          "type": "array",
+          "description": "A list of embedded volumes. Each volume consists of a number of parts.",
+          "items": {
+            "$ref": "#/$defs/gm_embedded_volume"
+          }
+        },
+        "volume_attributes": {
+          "description": "Attributes associated with each volume. The attribute tables have one row per volume.",
+          "$ref": "/components/one-of-attribute/1.2.0/one-of-attribute.schema.json"
+        },
+        "surfaces": {
+          "type": "array",
+          "description": "A list of embedded surfaces. Each surface consists of a number of parts.",
+          "items": {
+            "$ref": "#/$defs/gm_embedded_surface"
+          }
+        },
+        "surface_attributes": {
+          "description": "Attributes associated with each surface. The attribute tables have one row per surface.",
+          "$ref": "/components/one-of-attribute/1.2.0/one-of-attribute.schema.json"
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "folders",
+    "triangle_geometry",
+    "volumes",
+    "surfaces"
+  ],
+  "$defs": {
+    "folder": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the folder."
+        },
+        "items": {
+          "type": "array",
+          "description": "A list of folders containing meshes and subfolders.",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/folder"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "volume_index": {
+                    "description": "The index of the volume in the list of embedded volumes",
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "required": [
+                  "volume_index"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "surface_index": {
+                    "description": "The index of the surface in the list of embedded surfaces",
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "required": [
+                  "surface_index"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "required": [
+        "name",
+        "items"
+      ]
+    },
+    "gm_embedded_volume": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "/components/embedded-mesh-object/1.0.0/embedded-mesh-object.schema.json"
+        },
+        {
+          "properties": {
+            "material_key": {
+              "type": "string",
+              "description": "Unique identifier of the material."
+            },
+            "feature": {
+              "type": "string",
+              "description": "Kind of feature.",
+              "enum": [
+                "Void",
+                "OutputVolume",
+                "Vein",
+                "VeinSystem",
+                "Generic"
+              ]
+            }
+          }
+        }
+      ],
+      "required": [
+        "feature"
+      ]
+    },
+    "gm_embedded_surface": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "/components/embedded-mesh-object/1.0.0/embedded-mesh-object.schema.json"
+        },
+        {
+          "properties": {
+            "material_key": {
+              "type": "string",
+              "description": "Unique identifier of the material."
+            },
+            "feature": {
+              "type": "string",
+              "description": "Kind of feature.",
+              "enum": [
+                "Fault",
+                "ContactSurface",
+                "Topography",
+                "BoundarySurface",
+                "StratigraphicContactSurface",
+                "Generic"
+              ]
+            }
+          }
+        }
+      ],
+      "required": [
+        "feature"
+      ]
+    }
+  }
+}

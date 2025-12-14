@@ -1,5 +1,5 @@
 {
-  "$id": "/objects/geological-sections/1.1.0/geological-sections.schema.json",
+  "$id": "/objects/geological-sections/1.1.1/geological-sections.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "A collection of cross-sections made up from multiple polygons/polylines.",
   "type": "object",
@@ -10,7 +10,7 @@
     {
       "properties": {
         "schema": {
-          "const": "/objects/geological-sections/1.1.0/geological-sections.schema.json"
+          "const": "/objects/geological-sections/1.1.1/geological-sections.schema.json"
         },
         "folders": {
           "type": "array",
@@ -199,7 +199,8 @@
                 "Void",
                 "OutputVolume",
                 "Vein",
-                "VeinSystem"
+                "VeinSystem",
+                "Generic"
               ]
             },
             "layer": {

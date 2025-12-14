@@ -1,12 +1,12 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from './_generated/flatmd/objects/geological-model-meshes-2.1.0.md';
+import FlatProperties from './_generated/flatmd/objects/geological-model-meshes-2.1.1.md';
 
-<OverlineWithVersion title="Geoscience Objects" version="2.1.0" badge="supported" />
+<OverlineWithVersion title="Geoscience Objects" version="2.1.1" badge="supported" />
 
 # geological-model-meshes
 
-<SchemaUri uri="schema/objects/geological-model-meshes/2.1.0/geological-model-meshes.schema.json" />
+<SchemaUri uri="schema/objects/geological-model-meshes/2.1.1/geological-model-meshes.schema.json" />
 
 A collection of one or more meshes from a geological model, organized by folder. Volumes are represented as a triangular mesh hull, surfaces as a triangular mesh surface. Volumes and surfaces may reference a material. Only geology and its associated properties are expected in a geological-model-meshes object.
 
@@ -37,6 +37,7 @@ Each volume contains:
   - "OutputVolume"
   - "Vein"
   - "VeinSystem"
+  - "Generic"
 
 ### volume_attributes
 
@@ -64,6 +65,7 @@ Each surface contains:
   - "Topography",
   - "BoundarySurface",
   - "StratigraphicContactSurface"
+  - "Generic"
 
 ### surface_attributes
 
@@ -102,4 +104,4 @@ A set of triangulated mesh parts in 3D space. [Parts](../understanding-schemas/u
 
 <FlatProperties />
 
-::mermaid[_generated/uml/geological-model-meshes-2.1.0.mmd]
+::mermaid[_generated/uml/geological-model-meshes-2.1.1.mmd]
