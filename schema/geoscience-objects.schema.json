@@ -65,10 +65,16 @@
       "$ref": "/objects/geological-model-meshes/2.1.0/geological-model-meshes.schema.json"
     },
     {
+      "$ref": "/objects/geological-model-meshes/2.2.0/geological-model-meshes.schema.json"
+    },
+    {
       "$ref": "/objects/geological-sections/1.0.0/geological-sections.schema.json"
     },
     {
       "$ref": "/objects/geological-sections/1.1.0/geological-sections.schema.json"
+    },
+    {
+      "$ref": "/objects/geological-sections/1.2.0/geological-sections.schema.json"
     },
     {
       "$ref": "/objects/geophysical-records-1d/1.0.1/geophysical-records-1d.schema.json"
