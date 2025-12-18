@@ -1,12 +1,12 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from './_generated/flatmd/objects/geological-sections-1.1.1.md';
+import FlatProperties from './_generated/flatmd/objects/geological-sections-1.2.0.md';
 
-<OverlineWithVersion title="Geoscience Objects" version="1.1.1" badge="supported" />
+<OverlineWithVersion title="Geoscience Objects" version="1.2.0" badge="supported" />
 
 # geological-sections
 
-<SchemaUri uri="schema/objects/geological-sections/1.1.1/geological-sections.schema.json" />
+<SchemaUri uri="schema/objects/geological-sections/1.2.0/geological-sections.schema.json" />
 
 The geological-sections schema is used to store geology as a set of planar cross sections. Soil layers and volumes are represented using 2D line segments on the section plane. This object does not support curved or crooked sections. Only geology and its associated properties are expected in a geological-sections object.
 
@@ -129,4 +129,4 @@ Volumes A1, A2 with overlapping volume B. All of the following representations a
 
 <FlatProperties />
 
-::mermaid[_generated/uml/geological-sections-1.1.1.mmd]
+::mermaid[_generated/uml/geological-sections-1.2.0.mmd]

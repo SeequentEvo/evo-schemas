@@ -1,5 +1,5 @@
 {
-  "$id": "/objects/geological-model-meshes/2.1.1/geological-model-meshes.schema.json",
+  "$id": "/objects/geological-model-meshes/2.2.0/geological-model-meshes.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "A collection of geological volumes and surfaces.",
   "type": "object",
@@ -10,7 +10,7 @@
     {
       "properties": {
         "schema": {
-          "const": "/objects/geological-model-meshes/2.1.1/geological-model-meshes.schema.json"
+          "const": "/objects/geological-model-meshes/2.2.0/geological-model-meshes.schema.json"
         },
         "folders": {
           "type": "array",
