@@ -17,7 +17,7 @@ from textwrap import dedent, indent
 from typing import Union
 
 from .code_generator.markdown_generator import MarkdownGenerator
-from .code_generator.parser import SchemaClass, run_parser_on_object_schemas
+from .code_generator.parser import SchemaClass, run_parser_on_all_schemas
 
 
 class SchemaType:
@@ -88,7 +88,7 @@ class SchemaVisualizer:
 
     def _index_all_objects(self) -> None:
         """Build an index of all objects and their versions"""
-        parser = run_parser_on_object_schemas()
+        parser = run_parser_on_all_schemas()
         for schema in parser.iter_classes():
             schema_type = SchemaType(schema)
             self._types[schema_type.id] = schema_type
@@ -765,7 +765,7 @@ class SchemaVisualizer:
                         fp.write(mermaid)
             print(f"Generated docs code for {schema_count} schema objects with {schema_version_count} total versions")
             print("Running Markdown generator for flattened schema model...")
-            generator = MarkdownGenerator(run_parser_on_object_schemas(), flatmd_dir)
+            generator = MarkdownGenerator(run_parser_on_all_schemas(), flatmd_dir)
             generator.generate()
             print(f"Output directory: {output_dir}")
             sys.exit(0)

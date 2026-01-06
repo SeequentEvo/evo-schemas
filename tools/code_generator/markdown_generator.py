@@ -12,7 +12,7 @@
 import builtins
 import pathlib
 
-from tools.code_generator.parser import SchemaClass, SchemaProperty, run_parser_on_object_schemas
+from tools.code_generator.parser import SchemaClass, SchemaProperty, run_parser_on_all_schemas
 from tools.schemas import schema_base_path
 
 
@@ -112,7 +112,7 @@ def generate_markdown_files(parser, result_path=None) -> pathlib.Path:
 
 
 def main():
-    parser = run_parser_on_object_schemas()
+    parser = run_parser_on_all_schemas()
     generate_markdown_files(parser)
 
 

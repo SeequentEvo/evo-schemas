@@ -463,3 +463,13 @@ def run_parser_on_object_schemas():
     parser = Parser(schemas)
     parser.walk()
     return parser
+
+
+def run_parser_on_all_schemas():
+    schemas = []
+    schemas.extend(generate_all_paths(schema_base_path(), "/objects/**/*.json"))
+    schemas.extend(generate_all_paths(schema_base_path(), "/components/**/*.json"))
+    schemas.extend(generate_all_paths(schema_base_path(), "/elements/**/*.json"))
+    parser = Parser(schemas)
+    parser.walk()
+    return parser
