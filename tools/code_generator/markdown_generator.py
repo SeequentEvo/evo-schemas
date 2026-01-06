@@ -38,9 +38,7 @@ class MarkdownGenerator:
     def _get_flags(self, prop, inherited: bool = False) -> str:
         flags = []
         if inherited:
-            # Uncomment when we want to re-enable linking individual pages
-            # flags.append(f"[⬆️]({self._get_link(prop.parent)})")
-            flags.append("⬆️")
+            flags.append(f"[⬆️]({self._get_link(prop.parent)})")
         if prop.name in prop.parent.required:
             flags.append("✅")
 
