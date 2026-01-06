@@ -12,7 +12,7 @@
 import builtins
 import pathlib
 
-from tools.code_generator.parser import SchemaClass, SchemaProperty, run_parser_on_all_schemas
+from tools.code_generator.parser import SchemaClass, SchemaProperty, run_parser_on_object_schemas
 from tools.schemas import schema_base_path
 
 
@@ -56,10 +56,7 @@ class MarkdownGenerator:
             case "array":
                 return f"Array[{self._get_type(prop.items)}]"
             case SchemaClass():
-                # Uncomment when we want to re-enable linking individual types
-                # return f"[{self._get_name(prop_type, include_version=False)}]({self._get_link(prop_type)})"
-                return f"{self._get_name(prop_type, include_version=False)}"
-
+                return f"[{self._get_name(prop_type, include_version=False)}]({self._get_link(prop_type)})"
             case _:
                 raise ValueError(f"Unknown type {prop_type}")
 
@@ -112,7 +109,7 @@ def generate_markdown_files(parser, result_path=None) -> pathlib.Path:
 
 
 def main():
-    parser = run_parser_on_all_schemas()
+    parser = run_parser_on_object_schemas()
     generate_markdown_files(parser)
 
 
