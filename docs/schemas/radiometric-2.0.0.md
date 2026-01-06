@@ -1,6 +1,6 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from './_generated/flatmd/objects/radiometric-2.0.0.md';
+import FlatProperties from './generated/flatmd/objects/radiometric-2.0.0.md';
 
 <OverlineWithVersion title="Geoscience Objects" version="2.0.0" badge="techPreview" />
 
@@ -22,4 +22,4 @@ The `collections` array includes one or more `survey-collection` components. Eac
 
 <FlatProperties />
 
-::mermaid[_generated/uml/radiometric-2.0.0.mmd]
+::mermaid[generated/uml/radiometric-2.0.0.mmd]

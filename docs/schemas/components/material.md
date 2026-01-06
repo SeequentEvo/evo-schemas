@@ -1,5 +1,5 @@
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../_generated/flatmd/components/material-1.0.1.md';
+import FlatProperties from '../generated/flatmd/components/material-1.0.1.md';
 
 # material
 

@@ -1,6 +1,6 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from './_generated/flatmd/objects/non-parametric-continuous-cumulative-distribution-1.2.0.md';
+import FlatProperties from './generated/flatmd/objects/non-parametric-continuous-cumulative-distribution-1.2.0.md';
 
 <OverlineWithVersion title="Geoscience Objects" version="1.2.0" badge="supported" />
 
@@ -24,4 +24,4 @@ To create this object, the user must provide:
 
 <FlatProperties />
 
-::mermaid[_generated/uml/non-parametric-continuous-cumulative-distribution-1.2.0.mmd]
+::mermaid[generated/uml/non-parametric-continuous-cumulative-distribution-1.2.0.mmd]

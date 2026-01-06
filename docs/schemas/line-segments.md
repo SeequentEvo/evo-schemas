@@ -1,6 +1,6 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from './_generated/flatmd/objects/line-segments-2.2.0.md';
+import FlatProperties from './generated/flatmd/objects/line-segments-2.2.0.md';
 
 <OverlineWithVersion title="Geoscience Objects" version="2.2.0" badge="supported" />
 
@@ -38,4 +38,4 @@ Each chunk is a tuple defining the first index and the length of a chunk of vert
 
 <FlatProperties />
 
-::mermaid[_generated/uml/line-segments-2.2.0.mmd]
+::mermaid[generated/uml/line-segments-2.2.0.mmd]

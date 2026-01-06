@@ -1,6 +1,6 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from './_generated/flatmd/objects/frequency-domain-electromagnetic-1.1.0.md';
+import FlatProperties from './generated/flatmd/objects/frequency-domain-electromagnetic-1.1.0.md';
 
 <OverlineWithVersion title="Geoscience Objects" version="1.1.0" badge="supported" />
 
@@ -43,4 +43,4 @@ Each line list entry contains:
 
 <FlatProperties />
 
-::mermaid[_generated/uml/frequency-domain-electromagnetic-1.1.0.mmd]
+::mermaid[generated/uml/frequency-domain-electromagnetic-1.1.0.mmd]

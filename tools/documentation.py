@@ -726,8 +726,8 @@ class SchemaVisualizer:
         parser.add_argument(
             "--output_dir",
             type=str,
-            default=Path.cwd() / "docs" / "schemas" / "_generated",
-            help="Output directory for the generated documentation (default: docs/schemas/_generated)",
+            default=Path.cwd() / "docs" / "schemas" / "generated",
+            help="Output directory for the generated documentation (default: docs/schemas/generated)",
         )
         parser.add_argument(
             "--output_mermaid",
