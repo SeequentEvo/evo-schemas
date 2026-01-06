@@ -766,7 +766,7 @@ class SchemaVisualizer:
             with open(output_dir / "_category_.json", "w") as f:
                 f.write(
                     """{
-    "className": "hidden"
+  "className": "hidden"
 }
 """
                 )
