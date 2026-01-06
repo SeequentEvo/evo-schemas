@@ -1,0 +1,126 @@
+---
+config:
+    class:
+        hideEmptyMembersBox: true
+---
+
+classDiagram
+    class `components/base-object-properties-1.0.1`:::schemaComponent {
+        name: string
+        uuid: components/base-object-properties-1.0.1-uuid
+        description: string
+        extensions: object
+        tags: object
+    }
+    class `components/base-spatial-data-properties-1.0.1`:::schemaComponent {
+        name: string*
+        uuid: components/base-object-properties-1.0.1-uuid*
+        description: string*
+        extensions: object*
+        tags: object*
+        bounding_box: components/bounding-box-1.0.1
+        coordinate_reference_system: components/crs-1.0.1
+    }
+    `components/base-object-properties-1.0.1` <|-- `components/base-spatial-data-properties-1.0.1`
+    class `objects/geological-sections-1.0.0`:::schemaObject {
+        name: string*
+        uuid: components/base-object-properties-1.0.1-uuid*
+        description: string*
+        extensions: object*
+        tags: object*
+        bounding_box: components/bounding-box-1.0.1*
+        coordinate_reference_system: components/crs-1.0.1*
+        folders: array
+        line_geometry: components/embedded-line-geometry-1.0.0
+        materials: array
+        sections: array
+        section_attributes: components/one-of-attribute-1.2.0
+        volumes: array
+        volume_attributes: components/one-of-attribute-1.2.0
+        surfaces: array
+        surface_attributes: components/one-of-attribute-1.2.0
+    }
+    `components/base-spatial-data-properties-1.0.1` <|-- `objects/geological-sections-1.0.0`
+    `components/base-object-properties-1.0.1` *-- `components/base-object-properties-1.0.1-uuid` : ref uuid*
+    `components/base-spatial-data-properties-1.0.1` *-- `components/bounding-box-1.0.1` : ref bounding_box*
+    `components/base-spatial-data-properties-1.0.1` *-- `components/crs-1.0.1` : ref coordinate_reference_system*
+    `objects/geological-sections-1.0.0` *-- `components/embedded-line-geometry-1.0.0` : ref line_geometry*
+    `objects/geological-sections-1.0.0` *-- `components/one-of-attribute-1.2.0` : ref section_attributes*
+    `objects/geological-sections-1.0.0` *-- `components/one-of-attribute-1.2.0` : ref volume_attributes*
+    `objects/geological-sections-1.0.0` *-- `components/one-of-attribute-1.2.0` : ref surface_attributes*
+    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
+    }
+    class `components/bounding-box-1.0.1`:::schemaComponent {
+        min_x: number
+        max_x: number
+        min_y: number
+        max_y: number
+        min_z: number
+        max_z: number
+    }
+    class `components/crs-1.0.1`:::schemaComponent {
+    }
+    class `components/embedded-line-geometry-1.0.0`:::schemaComponent {
+        vertices: components/embedded-line-geometry-1.0.0-vertices
+        chunks: components/embedded-line-geometry-1.0.0-chunks
+        indices: elements/index-array-1-1.0.1
+    }
+    `components/embedded-line-geometry-1.0.0` *-- `components/embedded-line-geometry-1.0.0-vertices` : ref vertices*
+    `components/embedded-line-geometry-1.0.0` *-- `components/embedded-line-geometry-1.0.0-chunks` : ref chunks*
+    `components/embedded-line-geometry-1.0.0` *-- `elements/index-array-1-1.0.1` : ref indices*
+    class `elements/float-array-md-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1
+        length: integer
+        width: integer
+        data_type: string = float64
+    }
+    class `elements/float-array-2-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1*
+        length: integer*
+        data_type: string = float64*
+        width: integer = 2
+    }
+    `elements/float-array-md-1.0.1` <|-- `elements/float-array-2-1.0.1`
+    class `components/attribute-list-property-1.2.0`:::schemaComponent {
+        attributes: components/one-of-attribute-1.2.0
+    }
+    class `components/embedded-line-geometry-1.0.0-vertices`:::schemaImplicit {
+        data: elements/binary-blob-1.0.1*
+        length: integer*
+        width: integer*
+        data_type: string = float64*
+        width: integer = 2*
+        attributes: components/one-of-attribute-1.2.0*
+    }
+    `elements/float-array-md-1.0.1` <|-- `components/embedded-line-geometry-1.0.0-vertices`
+    `elements/float-array-2-1.0.1` <|-- `components/embedded-line-geometry-1.0.0-vertices`
+    `components/attribute-list-property-1.2.0` <|-- `components/embedded-line-geometry-1.0.0-vertices`
+    `elements/float-array-md-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
+    `components/attribute-list-property-1.2.0` *-- `components/one-of-attribute-1.2.0` : ref attributes*
+    class `elements/binary-blob-1.0.1`:::schemaElement {
+    }
+    class `components/one-of-attribute-1.2.0`:::schemaComponent {
+    }
+    class `elements/index-array-2-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1
+        length: integer
+        width: integer = 2
+        data_type: string = uint64
+    }
+    class `components/embedded-line-geometry-1.0.0-chunks`:::schemaImplicit {
+        data: elements/binary-blob-1.0.1*
+        length: integer*
+        width: integer = 2*
+        data_type: string = uint64*
+        attributes: components/one-of-attribute-1.2.0*
+    }
+    `elements/index-array-2-1.0.1` <|-- `components/embedded-line-geometry-1.0.0-chunks`
+    `components/attribute-list-property-1.2.0` <|-- `components/embedded-line-geometry-1.0.0-chunks`
+    `elements/index-array-2-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
+    class `elements/index-array-1-1.0.1`:::schemaElement {
+        data: elements/binary-blob-1.0.1
+        length: integer
+        width: integer = 1
+        data_type: string = uint64
+    }
+    `elements/index-array-1-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*

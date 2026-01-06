@@ -1,0 +1,69 @@
+---
+config:
+    class:
+        hideEmptyMembersBox: true
+---
+
+classDiagram
+    class `components/base-object-properties-1.1.0`:::schemaComponent {
+        name: string
+        uuid: components/base-object-properties-1.1.0-uuid
+        description: string
+        extensions: object
+        tags: object
+        lineage: components/lineage-1.0.0
+    }
+    class `components/base-spatial-data-properties-1.1.0`:::schemaComponent {
+        name: string*
+        uuid: components/base-object-properties-1.1.0-uuid*
+        description: string*
+        extensions: object*
+        tags: object*
+        lineage: components/lineage-1.0.0*
+        bounding_box: components/bounding-box-1.0.1
+        coordinate_reference_system: components/crs-1.0.1
+    }
+    `components/base-object-properties-1.1.0` <|-- `components/base-spatial-data-properties-1.1.0`
+    class `objects/magnetics-1.2.0`:::schemaObject {
+        name: string*
+        uuid: components/base-object-properties-1.1.0-uuid*
+        description: string*
+        extensions: object*
+        tags: object*
+        lineage: components/lineage-1.0.0*
+        bounding_box: components/bounding-box-1.0.1*
+        coordinate_reference_system: components/crs-1.0.1*
+        type: string
+        survey_type: string
+        gradient_magnetic: objects/magnetics-1.2.0-gradient_magnetic
+        base_stations: array
+        magnetic_line_list: array
+        qaqc_magnetic_azimuth_test_list: array
+        qaqc_noise_test_list: array
+    }
+    `components/base-spatial-data-properties-1.1.0` <|-- `objects/magnetics-1.2.0`
+    `components/base-object-properties-1.1.0` *-- `components/base-object-properties-1.1.0-uuid` : ref uuid*
+    `components/base-object-properties-1.1.0` *-- `components/lineage-1.0.0` : ref lineage*
+    `components/base-spatial-data-properties-1.1.0` *-- `components/bounding-box-1.0.1` : ref bounding_box*
+    `components/base-spatial-data-properties-1.1.0` *-- `components/crs-1.0.1` : ref coordinate_reference_system*
+    `objects/magnetics-1.2.0` *-- `objects/magnetics-1.2.0-gradient_magnetic` : ref gradient_magnetic*
+    class `components/base-object-properties-1.1.0-uuid`:::schemaImplicit {
+    }
+    class `components/lineage-1.0.0`:::schemaComponent {
+        self_link: string
+        events: array
+    }
+    class `components/bounding-box-1.0.1`:::schemaComponent {
+        min_x: number
+        max_x: number
+        min_y: number
+        max_y: number
+        min_z: number
+        max_z: number
+    }
+    class `components/crs-1.0.1`:::schemaComponent {
+    }
+    class `objects/magnetics-1.2.0-gradient_magnetic`:::schemaImplicit {
+        number_of_sensors: integer
+        sensor_offsets: array
+    }

@@ -1,0 +1,53 @@
+---
+config:
+    class:
+        hideEmptyMembersBox: true
+---
+
+classDiagram
+    class `components/base-object-properties-1.0.1`:::schemaComponent {
+        name: string
+        uuid: components/base-object-properties-1.0.1-uuid
+        description: string
+        extensions: object
+        tags: object
+    }
+    class `components/base-spatial-data-properties-1.0.1`:::schemaComponent {
+        name: string*
+        uuid: components/base-object-properties-1.0.1-uuid*
+        description: string*
+        extensions: object*
+        tags: object*
+        bounding_box: components/bounding-box-1.0.1
+        coordinate_reference_system: components/crs-1.0.1
+    }
+    `components/base-object-properties-1.0.1` <|-- `components/base-spatial-data-properties-1.0.1`
+    class `objects/gravity-1.0.1`:::schemaObject {
+        name: string*
+        uuid: components/base-object-properties-1.0.1-uuid*
+        description: string*
+        extensions: object*
+        tags: object*
+        bounding_box: components/bounding-box-1.0.1*
+        coordinate_reference_system: components/crs-1.0.1*
+        type: string
+        survey_type: string
+        base_stations: array
+        gravity_line_list: array
+    }
+    `components/base-spatial-data-properties-1.0.1` <|-- `objects/gravity-1.0.1`
+    `components/base-object-properties-1.0.1` *-- `components/base-object-properties-1.0.1-uuid` : ref uuid*
+    `components/base-spatial-data-properties-1.0.1` *-- `components/bounding-box-1.0.1` : ref bounding_box*
+    `components/base-spatial-data-properties-1.0.1` *-- `components/crs-1.0.1` : ref coordinate_reference_system*
+    class `components/base-object-properties-1.0.1-uuid`:::schemaImplicit {
+    }
+    class `components/bounding-box-1.0.1`:::schemaComponent {
+        min_x: number
+        max_x: number
+        min_y: number
+        max_y: number
+        min_z: number
+        max_z: number
+    }
+    class `components/crs-1.0.1`:::schemaComponent {
+    }
