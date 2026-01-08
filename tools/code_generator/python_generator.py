@@ -632,6 +632,63 @@ class PythonGenerator:
             if add_pass:
                 yield "pass"
 
+    def _collect_all_properties(self, cls):
+        """
+        Recursively collect all properties from baseclasses and the current class.
+        """
+        # Collect properties from the current class
+        properties = {prop.name: prop for prop in getattr(cls, "props", [])}
+
+        # Collect properties from baseclasses
+        for base in getattr(cls, "baseclasses", []) or []:
+            base_cls = base if isinstance(base, SchemaClass) else self.parser.classes.get(base)
+            if base_cls:
+                for prop in self._collect_all_properties(base_cls):
+                    properties[prop.name] = prop
+
+        return list(properties.values())
+
+    def _collect_all_required_properties(self, cls):
+        """
+        Recursively collect all required property names from baseclasses and the current class.
+        """
+        # Collect required properties from the current class
+        required = set(getattr(cls, "required", []))
+
+        # Collect required properties from baseclasses
+        for base in getattr(cls, "baseclasses", []) or []:
+            base_cls = base if isinstance(base, SchemaClass) else self.parser.classes.get(base)
+            if base_cls:
+                required.update(self._collect_all_required_properties(base_cls))
+
+        return required
+
+    def _format_doc_string(self, cls):
+        """
+        Formats the docstring for a class, including its description and attributes.
+
+        A Google-style docstring format is used to allow for parsing the attributes in IDEs, as they're not always
+        directly in the root class.
+        """
+        all_properties = self._collect_all_properties(cls)
+        all_required = self._collect_all_required_properties(cls)
+        doc_lines = []
+
+        # description
+        if cls.description:
+            doc_lines += [cls.description, ""]
+
+        # attributes
+        if all_properties:
+            doc_lines.append("Attributes:")
+            for prop in all_properties:
+                optional = ", optional" if prop.name not in all_required else ""
+                description = f": {prop.description}" if prop.description else ""
+                doc_lines.append(f"{self.INDENT}{prop.name} ({self._get_type(prop)}{optional}){description}")
+
+        if doc_lines:
+            yield from self._doc_string("\n".join(doc_lines))
+
     def _generate_class(self, cls):
         try:
             yield from self._generate_collection(cls)
@@ -656,9 +713,7 @@ class PythonGenerator:
             self._file.imported_classes.add(("elements", "serialiser", None, "Serialiser"))
 
         with self.indent():
-            # description
-            if cls.description:
-                yield from self._doc_string(cls.description)
+            yield from self._format_doc_string(cls)
 
             # add schema id as class attribute
             schema_id = cls.schema.get("$id")
