@@ -1,6 +1,6 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from './_generated/flatmd/objects/magnetics-1.2.0.md';
+import FlatProperties from './generated/flatmd/objects/magnetics-1.2.0.md';
 
 <OverlineWithVersion title="Geoscience Objects" version="1.2.0" badge="supported" />
 
@@ -32,4 +32,4 @@ The `qaqc_noise_test_list` array includes QA/QC information measuring ambient no
 
 <FlatProperties />
 
-::mermaid[_generated/uml/magnetics-1.2.0.mmd]
+::mermaid[generated/uml/magnetics-1.2.0.mmd]

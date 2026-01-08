@@ -1,6 +1,6 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from './_generated/flatmd/objects/resistivity-ip-1.1.0.md';
+import FlatProperties from './generated/flatmd/objects/resistivity-ip-1.1.0.md';
 
 <OverlineWithVersion title="Geoscience Objects" version="1.3.0" badge="supported" />
 
@@ -28,4 +28,4 @@ The `line_list` array includes one or more resistivity-IP line definitions, incl
 
 <FlatProperties />
 
-::mermaid[_generated/uml/resistivity-ip-1.1.0.mmd]
+::mermaid[generated/uml/resistivity-ip-1.1.0.mmd]

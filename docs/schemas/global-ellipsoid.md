@@ -1,6 +1,6 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from './_generated/flatmd/objects/global-ellipsoid-1.2.0.md';
+import FlatProperties from './generated/flatmd/objects/global-ellipsoid-1.2.0.md';
 
 <OverlineWithVersion title="Geoscience Objects" version="1.2.0" badge="supported" />
 
@@ -20,4 +20,4 @@ This object is related to [the variogram object](variogram.md) as both can be us
 
 <FlatProperties />
 
-::mermaid[_generated/uml/global-ellipsoid-1.2.0.mmd]
+::mermaid[generated/uml/global-ellipsoid-1.2.0.mmd]

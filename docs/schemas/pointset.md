@@ -1,6 +1,6 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from './_generated/flatmd/objects/pointset-1.3.0.md';
+import FlatProperties from './generated/flatmd/objects/pointset-1.3.0.md';
 
 <OverlineWithVersion title="Geoscience Objects" version="1.3.0" badge="supported" />
 
@@ -41,4 +41,4 @@ There are two derived schema for storing specific data at the locations.
 
 <FlatProperties />
 
-::mermaid[_generated/uml/pointset-1.3.0.mmd]
+::mermaid[generated/uml/pointset-1.3.0.mmd]

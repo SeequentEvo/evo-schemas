@@ -1,6 +1,6 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from './_generated/flatmd/objects/variogram-1.2.0.md';
+import FlatProperties from './generated/flatmd/objects/variogram-1.2.0.md';
 
 <OverlineWithVersion title="Geoscience Objects" version="1.2.0" badge="supported" />
 
@@ -29,4 +29,4 @@ This object can be used when performing kriging, conditional simulations, and ch
 
 <FlatProperties />
 
-::mermaid[_generated/uml/variogram-1.2.0.mmd]
+::mermaid[generated/uml/variogram-1.2.0.mmd]

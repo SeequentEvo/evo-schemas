@@ -1,5 +1,5 @@
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../_generated/flatmd/components/rotation-1.1.0.md';
+import FlatProperties from '../generated/flatmd/components/rotation-1.1.0.md';
 
 # rotation
 

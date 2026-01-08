@@ -1,6 +1,6 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from './_generated/flatmd/objects/unstructured-grid-1.3.0.md';
+import FlatProperties from './generated/flatmd/objects/unstructured-grid-1.3.0.md';
 
 <OverlineWithVersion title="Geoscience Objects" version="1.3.0" badge="supported" />
 
@@ -27,4 +27,4 @@ See also:
 
 <FlatProperties />
 
-::mermaid[_generated/uml/unstructured-grid-1.3.0.mmd]
+::mermaid[generated/uml/unstructured-grid-1.3.0.mmd]

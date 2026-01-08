@@ -726,8 +726,8 @@ class SchemaVisualizer:
         parser.add_argument(
             "--output_dir",
             type=str,
-            default=Path.cwd() / "docs" / "schemas" / "_generated",
-            help="Output directory for the generated documentation (default: docs/schemas/_generated)",
+            default=Path.cwd() / "docs" / "schemas" / "generated",
+            help="Output directory for the generated documentation (default: docs/schemas/generated)",
         )
         parser.add_argument(
             "--output_mermaid",
@@ -763,6 +763,13 @@ class SchemaVisualizer:
                     outfile = f"{schema_object.name}-{schema_object.object_version}.mmd"
                     with open(uml_dir / outfile, "w") as fp:
                         fp.write(mermaid)
+            with open(output_dir / "_category_.json", "w") as f:
+                f.write(
+                    """{
+  "className": "hidden"
+}
+"""
+                )
             print(f"Generated docs code for {schema_count} schema objects with {schema_version_count} total versions")
             print("Running Markdown generator for flattened schema model...")
             generator = MarkdownGenerator(run_parser_on_object_schemas(), flatmd_dir)

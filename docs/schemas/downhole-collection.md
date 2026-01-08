@@ -1,6 +1,6 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from './_generated/flatmd/objects/downhole-collection-1.3.0.md';
+import FlatProperties from './generated/flatmd/objects/downhole-collection-1.3.0.md';
 
 <OverlineWithVersion title="Geoscience Objects" version="1.3.0" badge="supported" />
 
@@ -41,7 +41,7 @@ The JSON schema for downhole collection geoscience objects is structured to capt
 
 <FlatProperties />
 
-::mermaid[_generated/uml/downhole-collection-1.3.0.mmd]
+::mermaid[generated/uml/downhole-collection-1.3.0.mmd]
 
 ## Schema definitions
 

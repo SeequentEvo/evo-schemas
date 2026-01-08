@@ -38,9 +38,7 @@ class MarkdownGenerator:
     def _get_flags(self, prop, inherited: bool = False) -> str:
         flags = []
         if inherited:
-            # Uncomment when we want to re-enable linking individual pages
-            # flags.append(f"[⬆️]({self._get_link(prop.parent)})")
-            flags.append("⬆️")
+            flags.append(f"[⬆️]({self._get_link(prop.parent)})")
         if prop.name in prop.parent.required:
             flags.append("✅")
 
@@ -58,10 +56,7 @@ class MarkdownGenerator:
             case "array":
                 return f"Array[{self._get_type(prop.items)}]"
             case SchemaClass():
-                # Uncomment when we want to re-enable linking individual types
-                # return f"[{self._get_name(prop_type, include_version=False)}]({self._get_link(prop_type)})"
-                return f"{self._get_name(prop_type, include_version=False)}"
-
+                return f"[{self._get_name(prop_type, include_version=False)}]({self._get_link(prop_type)})"
             case _:
                 raise ValueError(f"Unknown type {prop_type}")
 

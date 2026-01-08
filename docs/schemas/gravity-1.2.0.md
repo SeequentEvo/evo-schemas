@@ -1,6 +1,6 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from './_generated/flatmd/objects/gravity-1.2.0.md';
+import FlatProperties from './generated/flatmd/objects/gravity-1.2.0.md';
 
 <OverlineWithVersion title="Geoscience Objects" version="1.2.0" badge="supported" />
 
@@ -28,4 +28,4 @@ The `gravity_line_list` array includes one or more survey-line definitions, incl
 
 <FlatProperties />
 
-::mermaid[_generated/uml/gravity-1.2.0.mmd]
+::mermaid[generated/uml/gravity-1.2.0.mmd]

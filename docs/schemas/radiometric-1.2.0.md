@@ -1,6 +1,6 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from './_generated/flatmd/objects/radiometric-1.2.0.md';
+import FlatProperties from './generated/flatmd/objects/radiometric-1.2.0.md';
 
 <OverlineWithVersion title="Geoscience Objects" version="1.2.0" badge="supported" />
 
@@ -22,4 +22,4 @@ The `line_list` array includes one or more survey-line definitions, including th
 
 <FlatProperties />
 
-::mermaid[_generated/uml/radiometric-1.2.0.mmd]
+::mermaid[generated/uml/radiometric-1.2.0.mmd]
