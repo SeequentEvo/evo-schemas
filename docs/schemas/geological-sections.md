@@ -1,6 +1,6 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from './_generated/flatmd/objects/geological-sections-1.2.0.md';
+import FlatProperties from './generated/flatmd/objects/geological-sections-1.2.0.md';
 
 <OverlineWithVersion title="Geoscience Objects" version="1.2.0" badge="supported" />
 
@@ -129,4 +129,4 @@ Volumes A1, A2 with overlapping volume B. All of the following representations a
 
 <FlatProperties />
 
-::mermaid[_generated/uml/geological-sections-1.2.0.mmd]
+::mermaid[generated/uml/geological-sections-1.2.0.mmd]
