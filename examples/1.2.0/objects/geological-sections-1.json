@@ -1,0 +1,220 @@
+{
+  "schema": "/objects/geological-sections/1.2.0/geological-sections.schema.json",
+  "name": "Serial section example",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "description": "This is example data to ensure the object validates properly.",
+  "bounding_box": {
+    "min_x": 0,
+    "max_x": 10,
+    "min_y": 0,
+    "max_y": 10,
+    "min_z": 10,
+    "max_z": 20
+  },
+  "coordinate_reference_system": {
+    "epsg_code": 1024
+  },
+  "folders": [
+    {
+      "name": "Sections 492",
+      "items": [
+        {
+          "section_index": 0
+        },
+        {
+          "section_index": 1
+        }
+      ]
+    },
+    {
+      "name": "Sections 493",
+      "items": [
+        {
+          "section_index": 2
+        }
+      ]
+    }
+  ],
+  "line_geometry": {
+    "vertices": {
+      "width": 2,
+      "data_type": "float64",
+      "length": 30,
+      "data": "abababababababababababababababababababababababababababababababab",
+      "attributes": []
+    },
+    "chunks": {
+      "width": 2,
+      "data_type": "uint64",
+      "length": 7,
+      "data": "abababababababababababababababababababababababababababababababab"
+    }
+  },
+  "materials": [
+    {
+      "key": "rock",
+      "name": "Rock",
+      "color": 4278190335,
+      "data_source": "Link_to_another_Geoscience_Object"
+    }
+  ],
+  "sections": [
+    {
+      "name": "492,900 North",
+      "origin": [
+        444700,
+        492900,
+        3290
+      ],
+      "rotation": {
+        "dip": 90.0,
+        "dip_azimuth": 180.0,
+        "pitch": 0.0
+      },
+      "volumes": {
+        "offset": 0,
+        "count": 2
+      },
+      "surfaces": {
+        "offset": 0,
+        "count": 1
+      }
+    },
+    {
+      "name": "492,970 North",
+      "origin": [
+        444700,
+        492970,
+        3290
+      ],
+      "rotation": {
+        "dip": 90.0,
+        "dip_azimuth": 180.0,
+        "pitch": 0.0
+      },
+      "volumes": {
+        "offset": 2,
+        "count": 1
+      },
+      "surfaces": {
+        "offset": 1,
+        "count": 1
+      }
+    },
+    {
+      "name": "493,040 North",
+      "origin": [
+        444700,
+        493040,
+        3290
+      ],
+      "rotation": {
+        "dip": 90.0,
+        "dip_azimuth": 180.0,
+        "pitch": 0.0
+      },
+      "surfaces": {
+        "offset": 2,
+        "count": 1
+      }
+    }
+  ],
+  "volumes": [
+    {
+      "name": "Lithology A",
+      "parts": [
+        {
+          "index": 0
+        },
+        {
+          "index": 1
+        }
+      ],
+      "layer": "1",
+      "material_key": "rock",
+      "feature": "OutputVolume"
+    },
+    {
+      "name": "Lithology B",
+      "parts": [
+        {
+          "index": 2,
+          "reversed": true
+        }
+      ],
+      "layer": "2",
+      "feature": "Void"
+    },
+    {
+      "name": "Lithology A",
+      "parts": [
+        {
+          "index": 3
+        }
+      ],
+      "layer": "1",
+      "material_key": "rock",
+      "feature": "Generic"
+    }
+  ],
+  "volume_attributes": [
+    {
+      "name": "Lithology",
+      "key": "Lithology",
+      "attribute_type": "category",
+      "nan_description": {
+        "values": [
+          -1
+        ]
+      },
+      "attribute_description": {
+        "discipline": "Geology",
+        "type": "Lithology"
+      },
+      "values": {
+        "data_type": "int32",
+        "length": 3,
+        "width": 1,
+        "data": "abababababababababababababababababababababababababababababababab"
+      },
+      "table": {
+        "keys_data_type": "int32",
+        "values_data_type": "string",
+        "length": 2,
+        "data": "abababababababababababababababababababababababababababababababab"
+      }
+    }
+  ],
+  "surfaces": [
+    {
+      "name": "Topography",
+      "parts": [
+        {
+          "index": 4
+        }
+      ],
+      "layer": "1",
+      "feature": "Topography"
+    },
+    {
+      "name": "Topography",
+      "parts": [
+        {
+          "index": 5
+        }
+      ],
+      "layer": "1",
+      "feature": "Topography"
+    },
+    {
+      "name": "Topography",
+      "parts": [
+        {
+          "index": 6
+        }
+      ],
+      "layer": "1",
+      "feature": "Generic"
+    }
+  ]
+}
