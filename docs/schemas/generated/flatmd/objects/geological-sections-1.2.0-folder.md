@@ -3,7 +3,7 @@
 | Property | Type | Description | Flags |
 |---|---|---|---|
 | name | String | Name of the folder. | ✅ |
-| items | Array[geological-sections] | A list of folders containing cross-sections. | ✅ |
+| items | Array[[geological-sections](../objects/geological-sections-1.2.0-folder-items.md)] | A list of folders containing cross-sections. | ✅ |
 
 
 #### Legend
