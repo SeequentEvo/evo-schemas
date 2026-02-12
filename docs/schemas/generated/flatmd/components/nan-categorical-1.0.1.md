@@ -3,7 +3,7 @@ Values used to designate not-a-number (NaN) for integral values. Can be used for
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| values | Array[Integer] | An array of integral values that represent not-a-number (NaN). | ✅ |
+| values | Array[Integer] | An array of integral values that represent not-a-number (NaN). |  |
 
 
 #### Legend

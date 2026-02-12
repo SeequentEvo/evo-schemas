@@ -3,8 +3,8 @@ Power model
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| min | Number | minimum | ✅ |
-| power | Number | power | ✅ |
+| min | Number | minimum |  |
+| power | Number | power |  |
 
 
 #### Legend

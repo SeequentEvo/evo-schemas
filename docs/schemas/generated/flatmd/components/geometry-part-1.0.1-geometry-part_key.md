@@ -3,7 +3,7 @@ Another part in the geometry
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| part_key | String | Unique identifier of another part in the geometry. | ✅ |
+| part_key | String | Unique identifier of another part in the geometry. |  |
 
 
 #### Legend

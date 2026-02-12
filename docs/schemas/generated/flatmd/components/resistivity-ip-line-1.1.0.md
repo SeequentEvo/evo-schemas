@@ -3,11 +3,11 @@ Resistivity IP Line.
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| group_number | String | Group number. | ✅ |
-| date | String | Date. | ✅ |
-| station | String | Station identifier. | ✅ |
-| number_of_electrodes | Integer | Number of electrodes. | ✅ |
-| channel_attributes | Array[[channel-attribute](../components/channel-attribute-1.1.0.md)] | List of channel attributes. | ✅ |
+| group_number | String | Group number. |  |
+| date | String | Date. |  |
+| station | String | Station identifier. |  |
+| number_of_electrodes | Integer | Number of electrodes. |  |
+| channel_attributes | Array[[channel-attribute](../components/channel-attribute-1.1.0.md)] | List of channel attributes. |  |
 
 
 #### Legend

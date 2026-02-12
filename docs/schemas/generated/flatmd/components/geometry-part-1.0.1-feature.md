@@ -3,8 +3,8 @@ Geometry part feature.
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| name | String | Feature name. | ✅ |
-| kind | String | Kind of feature. | ✅ |
+| name | String | Feature name. |  |
+| kind | String | Kind of feature. |  |
 | material_key | String | Unique identifier of the material. |  |
 
 

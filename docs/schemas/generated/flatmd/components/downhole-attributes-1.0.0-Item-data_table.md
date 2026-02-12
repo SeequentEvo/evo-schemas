@@ -2,10 +2,10 @@
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| name | String | The name of the table. | [⬆️](../components/data-table-1.2.0.md) ✅ |
-| collection_type | String | The type of the collection. | [⬆️](../components/data-table-1.2.0.md) ✅ |
+| name | String | The name of the table. | [⬆️](../components/data-table-1.2.0.md) |
+| collection_type | String | The type of the collection. | [⬆️](../components/data-table-1.2.0.md) |
 | attributes | [one-of-attribute](../components/one-of-attribute-1.2.0.md) | Attribute data. | [⬆️](../components/data-table-1.2.0.md) |
-| holes | [hole-chunks](../components/hole-chunks-1.0.0.md) | The data describing the holes. | ✅ |
+| holes | [hole-chunks](../components/hole-chunks-1.0.0.md) | The data describing the holes. |  |
 
 
 #### Legend

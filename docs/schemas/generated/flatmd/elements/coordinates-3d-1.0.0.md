@@ -3,9 +3,9 @@
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| x | Number | x-coordinate position. | ✅ |
-| y | Number | y-coordinate position. | ✅ |
-| z | Number | z-coordinate position. | ✅ |
+| x | Number | x-coordinate position. |  |
+| y | Number | y-coordinate position. |  |
+| z | Number | z-coordinate position. |  |
 
 
 #### Legend

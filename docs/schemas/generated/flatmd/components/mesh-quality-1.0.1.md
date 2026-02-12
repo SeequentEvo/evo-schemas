@@ -3,7 +3,7 @@ This component describes a mesh quality.
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| characteristics | Array[String] | Mesh characteristics. | ✅ |
+| characteristics | Array[String] | Mesh characteristics. |  |
 
 
 #### Legend

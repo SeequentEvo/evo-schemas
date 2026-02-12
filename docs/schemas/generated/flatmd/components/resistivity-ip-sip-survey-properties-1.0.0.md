@@ -3,8 +3,8 @@ Resistivity-IP properties for Spectral Induced Polarization (SIP) surveys.
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| type | String | Type of survey. | ✅ |
-| frequencies | Array[Number] | Frequencies (Hz) used during measurements. | ✅ |
+| type | String | Type of survey. |  |
+| frequencies | Array[Number] | Frequencies (Hz) used during measurements. |  |
 
 
 #### Legend

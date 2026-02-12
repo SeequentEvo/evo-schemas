@@ -3,7 +3,7 @@ A structure holding an index of a model part, and optionally, a flag speficying 
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| index | Integer | The index of the part in the geometry parts list. | ✅ |
+| index | Integer | The index of the part in the geometry parts list. |  |
 | reversed | Boolean | Whether the part should be reversed. |  |
 
 

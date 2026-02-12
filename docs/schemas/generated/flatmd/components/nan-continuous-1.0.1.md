@@ -3,7 +3,7 @@ Values used to designate not-a-number (NaN) for floating point values. Can be us
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| values | Array[Number] | An array of floating point values that represent not-a-number (NaN). IEEE-754 NaN is always considered NaN and should not be specified. | ✅ |
+| values | Array[Number] | An array of floating point values that represent not-a-number (NaN). IEEE-754 NaN is always considered NaN and should not be specified. |  |
 
 
 #### Legend

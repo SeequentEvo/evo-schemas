@@ -8,7 +8,7 @@ Attributes are associated with each chunk.
 | chunks | [index-array-2](../elements/index-array-2-1.0.1.md) | A list of chunks of segments.
 A chunk consists of consecutive segments, defined by the index of the first segment and the number of segments.
 Chunks do not have to include all segments, and chunks can overlap.
-Columns: offset, count | ✅ |
+Columns: offset, count |  |
 
 
 #### Legend

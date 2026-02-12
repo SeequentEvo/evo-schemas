@@ -3,8 +3,8 @@ General information for an attribute.
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| discipline | String | Discipline attribute comes from, e.g. Geochemistry, Geophysics, Geotechnical, Geology, Structural. None if not known | ✅ |
-| type | String | Type of the attribute, e.g. Gold, Azimuth, Resistivity | ✅ |
+| discipline | String | Discipline attribute comes from, e.g. Geochemistry, Geophysics, Geotechnical, Geology, Structural. None if not known |  |
+| type | String | Type of the attribute, e.g. Gold, Azimuth, Resistivity |  |
 | unit | [unit](../elements/unit-1.0.1.md) | Unit |  |
 | scale | String | Scale of the attribute e.g. log10, log2, exp, lin |  |
 | extensions | Object | Extended properties that may be associated to the attribute, but not specified in the schema |  |

@@ -2,7 +2,7 @@
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| section_index | Integer | The index of the section in the sections list. | ✅ |
+| section_index | Integer | The index of the section in the sections list. |  |
 
 
 #### Legend

@@ -3,7 +3,7 @@ Locations are coordinates in 3D space.
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| coordinates | [float-array-3](../elements/float-array-3-1.0.1.md) | Coordinates. Columns: x, y, z. | ✅ |
+| coordinates | [float-array-3](../elements/float-array-3-1.0.1.md) | Coordinates. Columns: x, y, z. |  |
 
 
 #### Legend

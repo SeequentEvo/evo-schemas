@@ -8,7 +8,7 @@ A structure defining chunks the mesh is composed of.
 If triangle_indices is defined, the chunk refers to a segment of the triangle_indices array.
 Otherwise, the chunk refers to a segment of the triangles array.
 Chunks do not have to include all triangles, and chunks can overlap.
-Columns: offset, count | ✅ |
+Columns: offset, count |  |
 | triangle_indices | [index-array-1](../elements/index-array-1-1.0.1.md) | An optional index array into the triangle indices set.
 This is used to define chunks if the mesh triangle indices do not contain contiguous chunks. |  |
 

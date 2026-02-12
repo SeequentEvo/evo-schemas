@@ -3,9 +3,9 @@ Rotation in 3D space described by 3 angles, all rotating clockwise about the Z, 
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| dip_azimuth | Number | first rotation, about the z-axis | ✅ |
-| dip | Number | second rotation, about the x-axis | ✅ |
-| pitch | Number | third rotation, about the z-axis | ✅ |
+| dip_azimuth | Number | first rotation, about the z-axis |  |
+| dip | Number | second rotation, about the x-axis |  |
+| pitch | Number | third rotation, about the z-axis |  |
 
 
 #### Legend

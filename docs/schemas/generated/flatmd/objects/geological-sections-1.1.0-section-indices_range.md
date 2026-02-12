@@ -2,8 +2,8 @@
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| offset | Integer | The first index | ✅ |
-| count | Integer | The number of objects referenced. | ✅ |
+| offset | Integer | The first index |  |
+| count | Integer | The number of objects referenced. |  |
 
 
 #### Legend

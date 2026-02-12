@@ -5,17 +5,17 @@ Optionally, parts and edges can be defined.
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| name | String | Name of the object. | [⬆️](../components/base-object-properties-1.1.0.md) ✅ |
-| uuid | [base-object-properties](../components/base-object-properties-1.1.0-uuid.md) | Identifier of the object. | [⬆️](../components/base-object-properties-1.1.0.md) ✅ |
+| name | String | Name of the object. | [⬆️](../components/base-object-properties-1.1.0.md) |
+| uuid | [base-object-properties](../components/base-object-properties-1.1.0-uuid.md) | Identifier of the object. | [⬆️](../components/base-object-properties-1.1.0.md) |
 | description | String | Optional field for adding additional description to uniquely identify this object. | [⬆️](../components/base-object-properties-1.1.0.md) |
 | extensions | Object | Extended properties that may be associated to the object, but not specified in the schema | [⬆️](../components/base-object-properties-1.1.0.md) |
 | tags | Object | Key-value pairs of user-defined metadata | [⬆️](../components/base-object-properties-1.1.0.md) |
 | lineage | [lineage](../components/lineage-1.0.0.md) | Information about the history of the object | [⬆️](../components/base-object-properties-1.1.0.md) |
-| bounding_box | [bounding-box](../components/bounding-box-1.0.1.md) | Bounding box of the spatial data. | [⬆️](../components/base-spatial-data-properties-1.1.0.md) ✅ |
-| coordinate_reference_system | [crs](../components/crs-1.0.1.md) | Coordinate system of the spatial data | [⬆️](../components/base-spatial-data-properties-1.1.0.md) ✅ |
-| triangles | [triangles](../components/triangles-1.2.0.md) | The vertices and triangle indices of the mesh. | [⬆️](../components/embedded-triangulated-mesh-2.1.0.md) ✅ |
+| bounding_box | [bounding-box](../components/bounding-box-1.0.1.md) | Bounding box of the spatial data. | [⬆️](../components/base-spatial-data-properties-1.1.0.md) |
+| coordinate_reference_system | [crs](../components/crs-1.0.1.md) | Coordinate system of the spatial data | [⬆️](../components/base-spatial-data-properties-1.1.0.md) |
+| triangles | [triangles](../components/triangles-1.2.0.md) | The vertices and triangle indices of the mesh. | [⬆️](../components/embedded-triangulated-mesh-2.1.0.md) |
 | parts | [embedded-triangulated-mesh](../components/embedded-triangulated-mesh-2.1.0-parts.md) | A structure defining triangle chunks the mesh is composed of. | [⬆️](../components/embedded-triangulated-mesh-2.1.0.md) |
-| schema | String |  | ✅ |
+| schema | String |  |  |
 | edges | [triangle-mesh](../objects/triangle-mesh-2.2.0-edges.md) | An optional structure defining edges and edge chunks of the mesh. |  |
 
 

@@ -2,7 +2,7 @@
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| type | String | Type of survey. | ✅ |
+| type | String | Type of survey. |  |
 
 
 #### Legend

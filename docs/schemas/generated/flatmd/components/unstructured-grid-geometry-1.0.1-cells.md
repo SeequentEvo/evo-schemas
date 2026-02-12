@@ -4,10 +4,10 @@ Cell descriptions which consists of an array of triples. The first item in the t
 | Property | Type | Description | Flags |
 |---|---|---|---|
 | attributes | [one-of-attribute](../components/one-of-attribute-1.0.1.md) | Attribute data. | [⬆️](../components/attribute-list-property-1.0.1.md) |
-| data | [binary-blob](../elements/binary-blob-1.0.1.md) | Data stored as a binary blob. | ✅ |
-| length | Integer | length of array | ✅ |
-| width | Integer | number of columns | ✅ |
-| data_type | String | Data type for the columns. 1st column is of type int32, 2nd is uint64 and 3rd is int32. | ✅ |
+| data | [binary-blob](../elements/binary-blob-1.0.1.md) | Data stored as a binary blob. |  |
+| length | Integer | length of array |  |
+| width | Integer | number of columns |  |
+| data_type | String | Data type for the columns. 1st column is of type int32, 2nd is uint64 and 3rd is int32. |  |
 
 
 #### Legend
