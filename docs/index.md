@@ -4,6 +4,10 @@ Seequent Geoscience Objects Schemas define metadata and data serialisation of va
 * Facilitate interoperabilities between various applications and services that produce and consume geoscience data.
 * A data interchange specification to facilitate interoperabilities between various industry/segment standards.
 
+:::info
+This documentation is authored in the [`SeequentEvo/evo-schemas`](https://github.com/SeequentEvo/evo-schemas) repository and rendered on the [Seequent Developer Portal](https://developer.seequent.com/docs/data-structures/geoscience-objects). To contribute to these docs, submit a pull request to the repository — changes will be reflected on the Developer Portal once merged.
+:::
+
 ## Concepts
 
 The schemas are divided into the following categories:
