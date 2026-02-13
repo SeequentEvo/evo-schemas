@@ -4,6 +4,8 @@ Components are reusable building blocks composed into [geoscience object schemas
 
 ## Foundational
 
+Core components inherited by all geoscience objects. These define identity, spatial context, and shared metadata.
+
 * [Base object properties](base-object-properties.md) — common fields for all objects (name, uuid, description)
 * [Base spatial data properties](base-spatial-data-properties.md) — adds bounding box and CRS to base properties
 * [Coordinate reference system](crs.md) — EPSG code or WKT spatial reference
@@ -13,7 +15,11 @@ Components are reusable building blocks composed into [geoscience object schemas
 
 ## Attributes
 
+Attributes attach data values to geometric elements. The attribute system uses a discriminated union ([one-of-attribute](one-of-attribute.md)) so that any attribute list can contain a mix of scalar, categorical, ensemble, and time-series types.
+
 ### Core
+
+Base types, metadata descriptors, and NaN handling shared across all attribute kinds.
 
 * [One-of-attribute](one-of-attribute.md) — discriminated union of all attribute types
 * [Attribute list property](attribute-list-property.md) — attribute list container
@@ -28,6 +34,8 @@ Components are reusable building blocks composed into [geoscience object schemas
 
 ### Scalar types
 
+Concrete attribute types for individual values — one value per geometric element.
+
 * [Continuous attribute](continuous-attribute.md) — floating-point values
 * [Integer attribute](integer-attribute.md) — integer values
 * [Bool attribute](bool-attribute.md) — boolean values
@@ -39,6 +47,8 @@ Components are reusable building blocks composed into [geoscience object schemas
 * [Category attribute](category-attribute.md) — categorical values with lookup table
 
 ### Ensembles and time series
+
+Attributes that store multiple realisations (ensembles) or values varying over time steps.
 
 * [Continuous ensemble](continuous-ensemble.md) — ensemble of continuous realisations
 * [Category ensemble](category-ensemble.md) — ensemble of categorical realisations
@@ -52,7 +62,11 @@ Components are reusable building blocks composed into [geoscience object schemas
 
 ## Geometry
 
+Primitives for defining spatial structures — vertex sets, cell connectivity, polylines, and composed mesh/line geometries.
+
 ### Vertices and meshes
+
+Vertex coordinate arrays and cell types that define volumetric and surface geometry.
 
 * [Vertices 2D](vertices-2d.md) — 2D vertex coordinates
 * [Vertices 3D](vertices-3d.md) — 3D vertex coordinates
@@ -67,12 +81,16 @@ Components are reusable building blocks composed into [geoscience object schemas
 
 ### Lines and polylines
 
+Polyline definitions and line-segment index arrays in 2D and 3D.
+
 * [Polyline 2D](polyline-2d.md) — 2D polyline
 * [Polyline 3D](polyline-3d.md) — 3D polyline
 * [2D line indices](lines-2d-indices.md) — 2D line endpoints with arc support
 * [3D line indices](lines-3d-indices.md) — 3D line endpoints
 
 ### Composite and embedded geometry
+
+Higher-order compositions that group meshes, polylines, and boundary representations into named parts and composites.
 
 * [Embedded triangulated mesh](embedded-triangulated-mesh.md) — mesh with optional parts
 * [Geometry composite](geometry-composite.md) — grouped geometry types
@@ -84,9 +102,15 @@ Components are reusable building blocks composed into [geoscience object schemas
 
 ## Geoscience disciplines
 
+Components specific to geoscientific domains. Some components appear in both this section and the generic Geometry section above when they serve both roles.
+
 ### Drilling and downhole data
 
+Components for representing drillhole surveys and the data collected along them. Tabular data types (data tables, interval tables, distance tables) are included here because they are almost exclusively consumed within drilling workflows via [downhole-attributes](downhole-attributes.md).
+
 #### Drilling survey
+
+Drillhole collar locations, survey path interpolation, and segment geometry.
 
 * [Hole collars](hole-collars.md) — drillhole surface locations
 * [Hole chunks](hole-chunks.md) — row associations for drillhole data
@@ -94,6 +118,8 @@ Components are reusable building blocks composed into [geoscience object schemas
 * [Downhole direction vector](downhole-direction-vector.md) — segment direction and length
 
 #### Downhole data
+
+Attribute tables and depth/distance range definitions for data sampled along drillhole traces.
 
 * [Downhole attributes](downhole-attributes.md) — attributes along drillhole traces
 * [Data table](data-table.md) — named table of attributes
@@ -104,10 +130,14 @@ Components are reusable building blocks composed into [geoscience object schemas
 
 #### Relative orientation data
 
+Structural geology measurements (lineation and planar data) recorded relative to drillhole depth intervals.
+
 * [Relative lineation data table](relative-lineation-data-table.md) — lineation data relative to drillholes
 * [Relative planar data table](relative-planar-data-table.md) — planar data relative to drillholes
 
 ### Geological modelling
+
+Components used by geological model objects ([geological-model-meshes](../geological-model-meshes.md), [geological-sections](../geological-sections.md), [design-geometry](../design-geometry.md)) to represent model surfaces, cross-sections, and material assignments.
 
 * [Embedded triangulated mesh](embedded-triangulated-mesh.md) — mesh with optional parts
 * [Embedded mesh object](embedded-mesh-object.md) — named mesh referencing parts
@@ -120,6 +150,8 @@ Components are reusable building blocks composed into [geoscience object schemas
 
 ### Orientation and anisotropy
 
+Rotation conventions, structural geology measurements at point locations, and ellipsoid definitions for describing spatial anisotropy in geostatistical models.
+
 * [Rotation](rotation.md) — 3D rotation (dip azimuth, dip, pitch)
 * [Lineation data](lineation-data.md) — lineation measurements at locations
 * [Planar data](planar-data.md) — planar orientation measurements at locations
@@ -127,6 +159,8 @@ Components are reusable building blocks composed into [geoscience object schemas
 * [Ellipsoids](ellipsoids.md) — spatially varying ellipsoids
 
 ### Block model structures
+
+Attribute types and grid structure definitions for block models. Structure components define how parent blocks are subdivided — from uniform grids to octree-based refinement.
 
 * [Block model attribute](block-model-attribute.md) — continuous attribute for block models
 * [Block model category attribute](block-model-category-attribute.md) — categorical attribute for block models
@@ -136,6 +170,8 @@ Components are reusable building blocks composed into [geoscience object schemas
 * [Variable octree structure](block-model-variable-octree-structure.md) — octree-based anisotropic refinement
 
 ### Survey and geophysics
+
+Components for geophysical survey data — survey lines, collections, attribute definitions, and instrument-specific configurations for resistivity-IP and electromagnetic surveys.
 
 * [Survey line](survey-line.md) — spatial path of survey measurements
 * [Survey collection](survey-collection.md) — grouped survey data
@@ -153,6 +189,8 @@ Components are reusable building blocks composed into [geoscience object schemas
 * [TDEM channel](time-domain-electromagnetic-channel.md) — time-domain EM channel
 
 ### Geostatistics
+
+Variogram model structures and distribution functions used by geostatistical objects for spatial modelling and uncertainty quantification.
 
 * [Cumulative distribution function](cumulative-distribution-function.md) — empirical CDF
 * [Spherical variogram](variogram-spherical-structure.md) — spherical model
