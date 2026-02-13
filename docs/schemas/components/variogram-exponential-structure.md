@@ -10,6 +10,8 @@ The exponential model approaches the sill asymptotically and is commonly used in
 
 **See also:** other variogram models: [spherical](variogram-spherical-structure.md), [Gaussian](variogram-gaussian-structure.md), [cubic](variogram-cubic-structure.md), [linear](variogram-linear-structure.md), [generalised Cauchy](variogram-generalisedcauchy-structure.md), [spheroidal](variogram-spheroidal-structure.md).
 
+**Used by:** [variogram](../variogram.md).
+
 ## Properties
 
 <FlatProperties />

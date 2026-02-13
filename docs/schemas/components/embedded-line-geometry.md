@@ -13,6 +13,8 @@ The `embedded-line-geometry` component represents a set of polylines composed of
 
 **See also:** [embedded-triangulated-mesh](embedded-triangulated-mesh.md) (mesh equivalent), [embedded-polyline-object](embedded-polyline-object.md).
 
+**Used by:** [geological-sections](../geological-sections.md).
+
 ## Properties
 
 <FlatProperties />

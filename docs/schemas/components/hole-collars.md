@@ -15,6 +15,8 @@ This component is used by the [drilling-campaign](../drilling-campaign.md) schem
 
 **See also:** [hole-chunks](hole-chunks.md), [desurvey-method](desurvey-method.md).
 
+**Used by:** [drilling-campaign](../drilling-campaign.md), [downhole-collection](../downhole-collection.md).
+
 ## Properties
 
 <FlatProperties />

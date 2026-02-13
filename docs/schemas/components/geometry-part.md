@@ -20,6 +20,8 @@ shared geometry with metadata.
 
 See [Understanding parts](../../understanding-schemas/understanding-parts.md) for more context.
 
+**Used by:** [design-geometry](../design-geometry.md).
+
 ## Properties
 
 <FlatProperties />

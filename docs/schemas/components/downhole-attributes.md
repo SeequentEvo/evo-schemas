@@ -10,7 +10,9 @@ the indices, counts, and offsets into locations and attribute tables.
 
 This is used by schemas that store data along drillhole traces.
 
-**See also:** [hole-chunks](hole-chunks.md), [downhole-direction-vector](downhole-direction-vector.md).
+**See also:** [hole-chunks](hole-chunks.md), [downhole-direction-vector](downhole-direction-vector.md), [data-table](data-table.md), [interval-table](interval-table.md), [distance-table](distance-table.md).
+
+**Used by:** [drilling-campaign](../drilling-campaign.md), [downhole-collection](../downhole-collection.md).
 
 ## Properties
 

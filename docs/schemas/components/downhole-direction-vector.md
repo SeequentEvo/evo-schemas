@@ -9,7 +9,9 @@ The `downhole-direction-vector` component represents the direction and length of
 
 Columns: `distance`, `azimuth`, `dip`.
 
-**See also:** [desurvey-method](desurvey-method.md), [downhole-attributes](downhole-attributes.md).
+**See also:** [desurvey-method](desurvey-method.md), [downhole-attributes](downhole-attributes.md), [hole-collars](hole-collars.md).
+
+**Used by:** [drilling-campaign](../drilling-campaign.md), [downhole-collection](../downhole-collection.md).
 
 ## Properties
 

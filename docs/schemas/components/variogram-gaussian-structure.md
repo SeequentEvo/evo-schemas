@@ -10,6 +10,8 @@ The Gaussian model is characterised by a parabolic behaviour near the origin, pr
 
 **See also:** other variogram models: [spherical](variogram-spherical-structure.md), [exponential](variogram-exponential-structure.md), [cubic](variogram-cubic-structure.md), [linear](variogram-linear-structure.md), [generalised Cauchy](variogram-generalisedcauchy-structure.md), [spheroidal](variogram-spheroidal-structure.md).
 
+**Used by:** [variogram](../variogram.md).
+
 ## Properties
 
 <FlatProperties />

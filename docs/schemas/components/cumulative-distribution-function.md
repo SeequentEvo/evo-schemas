@@ -10,6 +10,8 @@ It stores the empirical distribution as a set of quantile–value pairs.
 
 This component is used by the [non-parametric-continuous-cumulative-distribution](../non-parametric-continuous-cumulative-distribution.md) object.
 
+**Used by:** [non-parametric-continuous-cumulative-distribution](../non-parametric-continuous-cumulative-distribution.md).
+
 ## Properties
 
 <FlatProperties />

@@ -13,6 +13,8 @@ flight line or traverse.
 
 **See also:** [survey-line](survey-line.md), [survey-attribute](survey-attribute.md).
 
+**Used by:** [gravity](../gravity-2.0.0.md), [magnetics](../magnetics-2.0.0.md), [radiometric](../radiometric-2.0.0.md).
+
 ## Properties
 
 <FlatProperties />

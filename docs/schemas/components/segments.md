@@ -12,6 +12,8 @@ The `segments` component defines a set of line segments by pairs of vertex indic
 
 **See also:** [triangles](triangles.md), [quadrilaterals](quadrilaterals.md), [hexahedrons](hexahedrons.md), [tetrahedra](tetrahedra.md) (other cell types).
 
+**Used by:** [line-segments](../line-segments.md).
+
 ## Properties
 
 <FlatProperties />

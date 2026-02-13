@@ -10,6 +10,8 @@ electromagnetic (TDEM) survey, including the time window and associated measurem
 
 **See also:** [frequency-domain-electromagnetic-channel](frequency-domain-electromagnetic-channel.md) (frequency-domain counterpart).
 
+**Used by:** [time-domain-electromagnetic](../time-domain-electromagnetic.md).
+
 ## Properties
 
 <FlatProperties />

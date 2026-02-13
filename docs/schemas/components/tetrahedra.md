@@ -12,6 +12,8 @@ The `tetrahedra` component defines a set of tetrahedral cells by their vertices 
 
 **See also:** [triangles](triangles.md), [quadrilaterals](quadrilaterals.md), [hexahedrons](hexahedrons.md), [segments](segments.md) (other cell types).
 
+**Used by:** [unstructured-tet-grid](../unstructured-tet-grid.md).
+
 ## Properties
 
 <FlatProperties />

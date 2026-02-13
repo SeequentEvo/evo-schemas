@@ -13,6 +13,8 @@ to describe the measurements collected.
 
 **See also:** [survey-attribute](survey-attribute.md).
 
+**Used by:** [gravity](../gravity-2.0.0.md), [magnetics](../magnetics-2.0.0.md), [radiometric](../radiometric-2.0.0.md).
+
 ## Properties
 
 <FlatProperties />

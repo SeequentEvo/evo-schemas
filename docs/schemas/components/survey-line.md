@@ -10,6 +10,8 @@ were collected. It includes location data, timing, and associated survey attribu
 
 **See also:** [survey-collection](survey-collection.md), [survey-attribute](survey-attribute.md).
 
+**Used by:** [frequency-domain-electromagnetic](../frequency-domain-electromagnetic.md), [time-domain-electromagnetic](../time-domain-electromagnetic.md).
+
 ## Properties
 
 <FlatProperties />

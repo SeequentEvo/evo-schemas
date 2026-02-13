@@ -14,6 +14,8 @@ within an [embedded-line-geometry](embedded-line-geometry.md).
 
 **See also:** [embedded-mesh-object](embedded-mesh-object.md) (mesh equivalent).
 
+**Used by:** [geological-sections](../geological-sections.md).
+
 ## Properties
 
 <FlatProperties />

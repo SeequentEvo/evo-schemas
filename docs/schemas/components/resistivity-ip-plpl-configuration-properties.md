@@ -9,6 +9,8 @@ Configuration properties for pole-pole electrode arrangements in resistivity-IP 
 
 **See also:** [resistivity-ip-pldp-configuration-properties](resistivity-ip-pldp-configuration-properties.md), [resistivity-ip-line](resistivity-ip-line.md).
 
+**Used by:** [resistivity-ip](../resistivity-ip.md).
+
 ## Properties
 
 <FlatProperties />

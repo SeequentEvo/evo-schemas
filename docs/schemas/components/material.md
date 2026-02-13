@@ -23,6 +23,8 @@ Each material contains:
 Multiple materials can have the same name because they can be sourced from different geological models. For example "material A" can show up in two geological models that are sourced from different borehole data, and they can have different colours. To deal with this, materials have a name (not unique) and a key identifier (unique).
 :::
 
+**Used by:** [design-geometry](../design-geometry.md), [geological-model-meshes](../geological-model-meshes.md), [geological-sections](../geological-sections.md).
+
 ## Properties
 
 <FlatProperties />

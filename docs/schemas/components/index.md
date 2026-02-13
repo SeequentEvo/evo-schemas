@@ -82,35 +82,51 @@ Components are reusable building blocks composed into [geoscience object schemas
 * [Embedded polyline object](embedded-polyline-object.md) — named polyline referencing parts
 * [BRep container](brep-container.md) — boundary representation model
 
-## Tabular data
+## Geoscience disciplines
 
+### Drilling and downhole data
+
+#### Drilling survey
+
+* [Hole collars](hole-collars.md) — drillhole surface locations
+* [Hole chunks](hole-chunks.md) — row associations for drillhole data
+* [Desurvey method](desurvey-method.md) — drillhole path interpolation algorithm
+* [Downhole direction vector](downhole-direction-vector.md) — segment direction and length
+
+#### Downhole data
+
+* [Downhole attributes](downhole-attributes.md) — attributes along drillhole traces
 * [Data table](data-table.md) — named table of attributes
 * [Interval table](interval-table.md) — interval data with attributes
 * [Distance table](distance-table.md) — distance-based data
 * [Intervals](intervals.md) — depth or distance ranges
 * [From-to](from-to.md) — from-to depth ranges
-* [Lengths](lengths.md) — segment or interval lengths
 
-## Drilling
+#### Relative orientation data
 
-* [Hole collars](hole-collars.md) — drillhole surface locations
-* [Hole chunks](hole-chunks.md) — row associations for drillhole data
-* [Desurvey method](desurvey-method.md) — drillhole path interpolation algorithm
-* [Downhole attributes](downhole-attributes.md) — attributes along drillhole traces
-* [Downhole direction vector](downhole-direction-vector.md) — segment direction and length
+* [Relative lineation data table](relative-lineation-data-table.md) — lineation data relative to drillholes
+* [Relative planar data table](relative-planar-data-table.md) — planar data relative to drillholes
 
-## Orientation data
+### Geological modelling
+
+* [Embedded triangulated mesh](embedded-triangulated-mesh.md) — mesh with optional parts
+* [Embedded mesh object](embedded-mesh-object.md) — named mesh referencing parts
+* [Embedded line geometry](embedded-line-geometry.md) — polylines from line segments
+* [Embedded polyline object](embedded-polyline-object.md) — named polyline referencing parts
+* [Geometry part](geometry-part.md) — named part within a composite
+* [Surface mesh](surface-mesh.md) — triangulated surface (open or closed)
+* [Mesh quality](mesh-quality.md) — quality guarantees for meshes
+* [Material](material.md) — material identity and colour
+
+### Orientation and anisotropy
 
 * [Rotation](rotation.md) — 3D rotation (dip azimuth, dip, pitch)
 * [Lineation data](lineation-data.md) — lineation measurements at locations
 * [Planar data](planar-data.md) — planar orientation measurements at locations
-* [Relative lineation data table](relative-lineation-data-table.md) — lineation data relative to drillholes
-* [Relative planar data table](relative-planar-data-table.md) — planar data relative to drillholes
 * [Ellipsoid](ellipsoid.md) — single ellipsoid (anisotropy)
 * [Ellipsoids](ellipsoids.md) — spatially varying ellipsoids
-* [Material](material.md) — material identity and colour
 
-## Block model structures
+### Block model structures
 
 * [Block model attribute](block-model-attribute.md) — continuous attribute for block models
 * [Block model category attribute](block-model-category-attribute.md) — categorical attribute for block models
@@ -119,13 +135,14 @@ Components are reusable building blocks composed into [geoscience object schemas
 * [Fully subblocked structure](block-model-fully-subblocked-structure.md) — all-or-nothing subblocking
 * [Variable octree structure](block-model-variable-octree-structure.md) — octree-based anisotropic refinement
 
-## Survey and geophysics
+### Survey and geophysics
 
 * [Survey line](survey-line.md) — spatial path of survey measurements
 * [Survey collection](survey-collection.md) — grouped survey data
 * [Survey attribute](survey-attribute.md) — survey data values
 * [Survey attribute definition](survey-attribute-definition.md) — survey attribute metadata
 * [Fiducial description](fiducial-description.md) — spatial reference markers
+* [Lengths](lengths.md) — segment or interval lengths
 * [Resistivity-IP line](resistivity-ip-line.md) — resistivity-IP survey line
 * [Resistivity-IP DCIP properties](resistivity-ip-dcip-survey-properties.md) — DC induced polarization
 * [Resistivity-IP Phase IP properties](resistivity-ip-phaseip-survey-properties.md) — phase induced polarization
@@ -135,7 +152,7 @@ Components are reusable building blocks composed into [geoscience object schemas
 * [FDEM channel](frequency-domain-electromagnetic-channel.md) — frequency-domain EM channel
 * [TDEM channel](time-domain-electromagnetic-channel.md) — time-domain EM channel
 
-## Statistics
+### Geostatistics
 
 * [Cumulative distribution function](cumulative-distribution-function.md) — empirical CDF
 * [Spherical variogram](variogram-spherical-structure.md) — spherical model

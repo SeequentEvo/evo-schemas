@@ -12,6 +12,8 @@ The `quadrilaterals` component defines a set of quadrilateral cells by their ver
 
 **See also:** [triangles](triangles.md), [hexahedrons](hexahedrons.md), [tetrahedra](tetrahedra.md), [segments](segments.md) (other cell types).
 
+**Used by:** [unstructured-quad-grid](../unstructured-quad-grid.md).
+
 ## Properties
 
 <FlatProperties />

@@ -10,6 +10,8 @@ The cubic model provides a smooth transition from the origin with a defined rang
 
 **See also:** other variogram models: [spherical](variogram-spherical-structure.md), [exponential](variogram-exponential-structure.md), [Gaussian](variogram-gaussian-structure.md), [linear](variogram-linear-structure.md), [generalised Cauchy](variogram-generalisedcauchy-structure.md), [spheroidal](variogram-spheroidal-structure.md).
 
+**Used by:** [variogram](../variogram.md).
+
 ## Properties
 
 <FlatProperties />
