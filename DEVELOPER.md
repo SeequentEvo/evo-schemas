@@ -47,7 +47,7 @@ The `oneOf` keyword is used to select exactly one of several options. One exampl
 
 ### Validation errors
 
-This repository is using [jsonschema](https://pypi.org/project/jsonschema/) to validate the examples. Note that the error messages produced by this library are sometimes misleading. For example in a subschema, instead of reporting a problem in the `allOf`/`oneOf` validation, it often reports missing attributes which are present in the JSON data. 
+This repository is using [jsonschema](https://pypi.org/project/jsonschema/) to validate the examples. Note that the error messages produced by this library are sometimes misleading. For example in a subschema, instead of reporting a problem in the `allOf`/`oneOf` validation, it often reports missing attributes which are present in the JSON data.
 
 ## Writing schemas
 
@@ -57,7 +57,7 @@ The schemas in this repository make heavy use of composition to create complex o
 
 The easiest way to write a new schema is to use some of the simpler objects as examples or templates. [Pointsets](schema/objects/pointset/1.0.1/pointset.schema.json) are one of the simpler schemas. If you are looking for a schema that also has properties as well as references to components, then a good starting point is [Regular 2D grid](schema/objects/regular-2d-grid/1.0.1/regular-2d-grid.schema.json). In both of these schemas, notice how components are shared and referenced.
 
-There is also a Python function to help get started with an empty template. See `generate_json_schema()` in [tools/schemas.py](tools/schemas.py). This function generates a new JSON schema at the appropriate path with the required meta-schema version. 
+There is also a Python function to help get started with an empty template. See `generate_json_schema()` in [tools/schemas.py](tools/schemas.py). This function generates a new JSON schema at the appropriate path with the required meta-schema version.
 
 ### Standards
 
@@ -82,7 +82,7 @@ Property names must be snake case. This makes it easier for automatic tools to p
 #### Coordinates
 
 2D coordinates are represented as a pair of X, Y values. When coordinates come from a vertical plane, Y is elevation, otherwise X and Y depend on the CRS in use.
-3D coordinates are represented as a tuple X, Y, Z values, where Z is elevation. No other fixed convention exists on the direction for 'X' and 'Y' as it depends on the CRS in use. 
+3D coordinates are represented as a tuple X, Y, Z values, where Z is elevation. No other fixed convention exists on the direction for 'X' and 'Y' as it depends on the CRS in use.
 
 ### Unit tests
 
