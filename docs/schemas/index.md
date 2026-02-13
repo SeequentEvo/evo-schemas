@@ -1,35 +1,35 @@
-# Geoscience object schemas
+# Evo schemas
 
-The following schemas are available for use:
+Geoscience object schemas define the data structures used in the Evo platform. The schema hierarchy is organised into three tiers — objects, components, and elements — each documented in its own section below.
 
-* [design-geometry](design-geometry.md)
-* [downhole-collection](downhole-collection.md)
-* [downhole-intervals](downhole-intervals.md)
-* [drilling-campaign](drilling-campaign.md)
-* [frequency-domain-electromagnetic](frequency-domain-electromagnetic.md)
-* [geological-model-meshes](geological-model-meshes.md)
-* [geological-sections](geological-sections.md)
-* [geophysical-records-1d](geophysical-records-1d.md)
-* [global-ellipsoid](global-ellipsoid.md)
-* gravity – [1.2.0](gravity-1.2.0.md) | [2.0.0](gravity-2.0.0.md)
-* [line-segments](line-segments.md)
-* [lineations-data-pointset](lineations-data-pointset.md)
-* [local-ellipsoids](local-ellipsoids.md)
-* magnetics – [1.2.0](magnetics-1.2.0.md) | [2.0.0](magnetics-2.0.0.md)
-* [non-parametric-continuous-cumulative-distribution](non-parametric-continuous-cumulative-distribution.md)
-* [planar-data-pointset](planar-data-pointset.md)
-* [pointset](pointset.md)
-* radiometric – [1.2.0](radiometric-1.2.0.md) | [2.0.0](radiometric-2.0.0.md)
-* [regular-2d-grid](regular-2d-grid.md)
-* [regular-3d-grid](regular-3d-grid.md)
-* [regular-masked-3d-grid](regular-masked-3d-grid.md)
-* [resistivity-ip](resistivity-ip.md)
-* [tensor-2d-grid](tensor-2d-grid.md)
-* [tensor-3d-grid](tensor-3d-grid.md)
-* [time-domain-electromagnetic](time-domain-electromagnetic.md)
-* [triangle-mesh](triangle-mesh.md)
-* [unstructured-grid](unstructured-grid.md)
-* [unstructured-hex-grid](unstructured-hex-grid.md)
-* [unstructured-quad-grid](unstructured-quad-grid.md)
-* [unstructured-tet-grid](unstructured-tet-grid.md)
-* [variogram](variogram.md)
+## [Object schemas](objects/index.md)
+
+Objects are the top-level data structures — the entities that consumers create, read, and exchange. Each object describes a complete geoscience dataset, organised into the following categories:
+
+- [Points and surfaces](objects/index.md#points-and-surfaces) — point clouds, triangulated surfaces, and line geometries
+- [Grids and block models](objects/index.md#grids-and-block-models) — regular, tensor, and unstructured grid geometries
+- [Drilling and downhole data](objects/index.md#drilling-and-downhole-data) — drillhole survey campaigns and downhole measurements
+- [Geological modelling](objects/index.md#geological-modelling) — model surfaces, cross-sections, and design geometries
+- [Structural geology](objects/index.md#structural-geology) — lineation and planar orientation measurements
+- [Survey and geophysics](objects/index.md#survey-and-geophysics) — potential fields, electromagnetic, and resistivity-IP surveys
+- [Geostatistics](objects/index.md#geostatistics) — variogram models, distribution functions, and anisotropy ellipsoids
+
+## [Component schemas](components/index.md)
+
+Components are reusable building blocks that objects compose via `allOf`. They define shared structures such as coordinate systems, attribute lists, geometry primitives, and domain-specific data formats.
+
+- [Foundational](components/index.md#foundational) — identity, spatial context, and shared metadata inherited by all objects
+- [Attributes](components/index.md#attributes) — typed data arrays, ensembles, and time series
+- [Geometry](components/index.md#geometry) — vertices, meshes, lines, polylines, and composite geometry
+- [Geoscience disciplines](components/index.md#geoscience-disciplines) — drilling, geological modelling, orientation, block models, geophysics, and geostatistics
+
+## [Element schemas](elements/index.md)
+
+Elements are the lowest-level primitives — typed binary arrays, colour values, spatial coordinates, lookup tables, and the unit system. Components are built from elements.
+
+- [Binary storage](elements/index.md#binary-storage) — binary blob references
+- [Typed arrays](elements/index.md#floating-point-arrays) — floating-point, integer, index, boolean, string, and date-time arrays
+- [Colour](elements/index.md#colour) — colour values and colour arrays
+- [Spatial primitives](elements/index.md#spatial-primitives) — 3D coordinates and reversible index mappings
+- [Lookup and categorisation](elements/index.md#lookup-and-categorisation) — lookup tables for categorical data
+- [Units](elements/index.md#units) — physical measurement unit definitions

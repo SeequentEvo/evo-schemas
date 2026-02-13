@@ -10,7 +10,7 @@ along a hole trace.
 
 **See also:** [intervals](intervals.md), [interval-table](interval-table.md), [lengths](lengths.md).
 
-**Used by:** [downhole-intervals](../downhole-intervals.md).
+**Used by:** [downhole-intervals](../objects/downhole-intervals.md).
 
 ## Properties
 

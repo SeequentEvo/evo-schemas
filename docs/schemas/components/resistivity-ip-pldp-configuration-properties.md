@@ -9,7 +9,7 @@ Configuration properties for pole-dipole or offset pole-dipole electrode arrange
 
 **See also:** [resistivity-ip-plpl-configuration-properties](resistivity-ip-plpl-configuration-properties.md), [resistivity-ip-line](resistivity-ip-line.md).
 
-**Used by:** [resistivity-ip](../resistivity-ip.md).
+**Used by:** [resistivity-ip](../objects/resistivity-ip.md).
 
 ## Properties
 

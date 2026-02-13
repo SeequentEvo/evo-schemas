@@ -5,12 +5,12 @@ import FlatProperties from '../generated/flatmd/components/variogram-generalised
 
 <SchemaUri uri="schema/components/variogram-generalisedcauchy-structure/1.1.0/variogram-generalisedcauchy-structure.schema.json" />
 
-A Generalised Cauchy variogram model structure, used as a component of the [variogram](../variogram.md) object.
+A Generalised Cauchy variogram model structure, used as a component of the [variogram](../objects/variogram.md) object.
 This model provides flexibility through additional shape parameters.
 
 **See also:** other variogram models: [spherical](variogram-spherical-structure.md), [exponential](variogram-exponential-structure.md), [Gaussian](variogram-gaussian-structure.md), [cubic](variogram-cubic-structure.md), [linear](variogram-linear-structure.md), [spheroidal](variogram-spheroidal-structure.md).
 
-**Used by:** [variogram](../variogram.md).
+**Used by:** [variogram](../objects/variogram.md).
 
 ## Properties
 

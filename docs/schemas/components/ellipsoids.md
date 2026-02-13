@@ -10,7 +10,7 @@ or cell, used to describe spatially varying anisotropy.
 
 **See also:** [ellipsoid](ellipsoid.md) (single definition).
 
-**Used by:** [local-ellipsoids](../local-ellipsoids.md).
+**Used by:** [local-ellipsoids](../objects/local-ellipsoids.md).
 
 ## Properties
 

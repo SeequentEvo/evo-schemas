@@ -1,6 +1,6 @@
 # Component schemas
 
-Components are reusable building blocks composed into [geoscience object schemas](../index.md). They define shared structures such as coordinate systems, attributes, geometry primitives, and domain-specific data formats. Components are themselves built from [elements](../elements/index.md) — the lowest-level data primitives.
+Components are reusable building blocks composed into [geoscience object schemas](../objects/index.md). They define shared structures such as coordinate systems, attributes, geometry primitives, and domain-specific data formats. Components are themselves built from [elements](../elements/index.md) — the lowest-level data primitives.
 
 ## Foundational
 
@@ -137,7 +137,7 @@ Structural geology measurements (lineation and planar data) recorded relative to
 
 ### Geological modelling
 
-Components used by geological model objects ([geological-model-meshes](../geological-model-meshes.md), [geological-sections](../geological-sections.md), [design-geometry](../design-geometry.md)) to represent model surfaces, cross-sections, and material assignments.
+Components used by geological model objects ([geological-model-meshes](../objects/geological-model-meshes.md), [geological-sections](../objects/geological-sections.md), [design-geometry](../objects/design-geometry.md)) to represent model surfaces, cross-sections, and material assignments.
 
 * [Embedded triangulated mesh](embedded-triangulated-mesh.md) — mesh with optional parts
 * [Embedded mesh object](embedded-mesh-object.md) — named mesh referencing parts

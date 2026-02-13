@@ -11,7 +11,7 @@ Columns: `distance`, `azimuth`, `dip`.
 
 **See also:** [desurvey-method](desurvey-method.md), [downhole-attributes](downhole-attributes.md), [hole-collars](hole-collars.md).
 
-**Used by:** [drilling-campaign](../drilling-campaign.md), [downhole-collection](../downhole-collection.md).
+**Used by:** [drilling-campaign](../objects/drilling-campaign.md), [downhole-collection](../objects/downhole-collection.md).
 
 ## Properties
 

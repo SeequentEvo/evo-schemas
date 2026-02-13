@@ -13,7 +13,7 @@ minimum curvature and tangential approaches.
 
 **See also:** [hole-collars](hole-collars.md), [downhole-direction-vector](downhole-direction-vector.md).
 
-**Used by:** [drilling-campaign](../drilling-campaign.md), [downhole-collection](../downhole-collection.md).
+**Used by:** [drilling-campaign](../objects/drilling-campaign.md), [downhole-collection](../objects/downhole-collection.md).
 
 ## Properties
 

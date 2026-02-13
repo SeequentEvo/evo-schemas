@@ -13,7 +13,7 @@ The `embedded-triangulated-mesh` component represents a triangulated mesh that c
 
 **See also:** [embedded-line-geometry](embedded-line-geometry.md) (polyline equivalent), [embedded-mesh-object](embedded-mesh-object.md).
 
-**Used by:** [triangle-mesh](../triangle-mesh.md), [geological-model-meshes](../geological-model-meshes.md).
+**Used by:** [triangle-mesh](../objects/triangle-mesh.md), [geological-model-meshes](../objects/geological-model-meshes.md).
 
 ## Properties
 

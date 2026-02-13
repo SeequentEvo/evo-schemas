@@ -11,7 +11,7 @@ The `vertices-3d` component stores a set of 3D vertex coordinates.
 
 **See also:** [vertices-2d](vertices-2d.md) (2D counterpart).
 
-**Used by:** [design-geometry](../design-geometry.md).
+**Used by:** [design-geometry](../objects/design-geometry.md).
 
 ## Properties
 

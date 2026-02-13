@@ -14,7 +14,7 @@ cell definitions, and connectivity indices.
 
 See [Cell-type geometry](../../understanding-schemas/cell-type-geometry.md) for details on how cell types are encoded.
 
-**Used by:** [unstructured-grid](../unstructured-grid.md).
+**Used by:** [unstructured-grid](../objects/unstructured-grid.md).
 
 ## Properties
 

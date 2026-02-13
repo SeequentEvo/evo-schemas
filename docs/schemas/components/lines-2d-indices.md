@@ -13,7 +13,7 @@ The `lines-2d-indices` component describes endpoints for 2D line segments. Each 
 
 **See also:** [lines-3d-indices](lines-3d-indices.md) (3D counterpart).
 
-**Used by:** [design-geometry](../design-geometry.md).
+**Used by:** [design-geometry](../objects/design-geometry.md).
 
 ## Properties
 

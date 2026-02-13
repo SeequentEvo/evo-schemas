@@ -10,7 +10,7 @@ or intervals.
 
 **See also:** [intervals](intervals.md), [from-to](from-to.md).
 
-**Used by:** [geophysical-records-1d](../geophysical-records-1d.md).
+**Used by:** [geophysical-records-1d](../objects/geophysical-records-1d.md).
 
 ## Properties
 

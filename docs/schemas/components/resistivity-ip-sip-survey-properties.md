@@ -9,7 +9,7 @@ Survey properties specific to Spectral Induced Polarization (SIP) resistivity-IP
 
 **See also:** [resistivity-ip-dcip-survey-properties](resistivity-ip-dcip-survey-properties.md), [resistivity-ip-phaseip-survey-properties](resistivity-ip-phaseip-survey-properties.md), [resistivity-ip-pldp-configuration-properties](resistivity-ip-pldp-configuration-properties.md), [resistivity-ip-plpl-configuration-properties](resistivity-ip-plpl-configuration-properties.md).
 
-**Used by:** [resistivity-ip](../resistivity-ip.md).
+**Used by:** [resistivity-ip](../objects/resistivity-ip.md).
 
 ## Properties
 

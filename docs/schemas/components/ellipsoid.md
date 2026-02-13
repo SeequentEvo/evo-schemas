@@ -10,7 +10,7 @@ geostatistical models. Includes the semi-axis lengths and orientation.
 
 **See also:** [ellipsoids](ellipsoids.md) (spatially varying collection).
 
-**Used by:** [global-ellipsoid](../global-ellipsoid.md).
+**Used by:** [global-ellipsoid](../objects/global-ellipsoid.md).
 
 ## Properties
 

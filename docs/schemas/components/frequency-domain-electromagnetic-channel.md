@@ -10,7 +10,7 @@ electromagnetic (FDEM) survey, including the operating frequency and associated 
 
 **See also:** [time-domain-electromagnetic-channel](time-domain-electromagnetic-channel.md) (time-domain counterpart).
 
-**Used by:** [frequency-domain-electromagnetic](../frequency-domain-electromagnetic.md).
+**Used by:** [frequency-domain-electromagnetic](../objects/frequency-domain-electromagnetic.md).
 
 ## Properties
 

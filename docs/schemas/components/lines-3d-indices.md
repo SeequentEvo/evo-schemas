@@ -14,7 +14,7 @@ Unlike 2D lines, curved segments in 3D are represented via a 2D segment with a t
 
 **See also:** [lines-2d-indices](lines-2d-indices.md) (2D counterpart).
 
-**Used by:** [design-geometry](../design-geometry.md).
+**Used by:** [design-geometry](../objects/design-geometry.md).
 
 ## Properties
 

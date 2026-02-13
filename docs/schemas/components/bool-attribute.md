@@ -10,7 +10,7 @@ A boolean attribute stores true/false values. It uses `attribute_type = "bool"`.
 * `values` — An array of boolean values, one per geometric element.
 * Inherits from [base-category-attribute](base-category-attribute.md).
 
-**Used by:** [regular-masked-3d-grid](../regular-masked-3d-grid.md).
+**Used by:** [regular-masked-3d-grid](../objects/regular-masked-3d-grid.md).
 
 ## Properties
 

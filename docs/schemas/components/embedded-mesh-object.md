@@ -15,7 +15,7 @@ The `embedded-mesh-object` component represents a named mesh object that referen
 
 **See also:** [embedded-polyline-object](embedded-polyline-object.md) (polyline equivalent).
 
-**Used by:** [geological-model-meshes](../geological-model-meshes.md).
+**Used by:** [geological-model-meshes](../objects/geological-model-meshes.md).
 
 ## Properties
 

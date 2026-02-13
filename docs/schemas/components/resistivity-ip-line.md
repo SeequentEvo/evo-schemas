@@ -8,7 +8,7 @@ import FlatProperties from '../generated/flatmd/components/resistivity-ip-line-1
 The `resistivity-ip-line` component represents a single line of resistivity-IP survey data, including
 electrode positions, measurements, and associated attributes.
 
-**Used by:** [resistivity-ip](../resistivity-ip.md).
+**Used by:** [resistivity-ip](../objects/resistivity-ip.md).
 
 ## Properties
 

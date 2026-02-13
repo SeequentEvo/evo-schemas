@@ -8,12 +8,12 @@ import FlatProperties from '../generated/flatmd/components/survey-attribute-defi
 The `survey-attribute-definition` component defines common properties for attributes in survey data, including
 the attribute name, spatial offset, and description.
 
-This is used by geophysical survey schemas (e.g., [gravity](../gravity-2.0.0.md), [magnetics](../magnetics-2.0.0.md))
+This is used by geophysical survey schemas (e.g., [gravity](../objects/gravity-2.0.0.md), [magnetics](../objects/magnetics-2.0.0.md))
 to describe the measurements collected.
 
 **See also:** [survey-attribute](survey-attribute.md).
 
-**Used by:** [gravity](../gravity-2.0.0.md), [magnetics](../magnetics-2.0.0.md), [radiometric](../radiometric-2.0.0.md).
+**Used by:** [gravity](../objects/gravity-2.0.0.md), [magnetics](../objects/magnetics-2.0.0.md), [radiometric](../objects/radiometric-2.0.0.md).
 
 ## Properties
 

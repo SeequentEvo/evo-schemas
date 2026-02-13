@@ -10,7 +10,7 @@ The `category-data` component defines the lookup-table structure used by [catego
 * `table` — A lookup table (using the `lookup-table` element) mapping integer keys to category names.
 * `values` — An integer array storing the category index for each geometric element.
 
-**Used by:** [downhole-collection](../downhole-collection.md), [downhole-intervals](../downhole-intervals.md), [drilling-campaign](../drilling-campaign.md), [geophysical-records-1d](../geophysical-records-1d.md).
+**Used by:** [downhole-collection](../objects/downhole-collection.md), [downhole-intervals](../objects/downhole-intervals.md), [drilling-campaign](../objects/drilling-campaign.md), [geophysical-records-1d](../objects/geophysical-records-1d.md).
 
 ## Properties
 

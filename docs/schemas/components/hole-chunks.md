@@ -10,7 +10,7 @@ the indices, counts, and offsets into locations and attribute tables for each ho
 
 Columns: `hole_index`, `offset`, `count`.
 
-This component is used by the [drilling-campaign](../drilling-campaign.md) schema.
+This component is used by the [drilling-campaign](../objects/drilling-campaign.md) schema.
 
 **See also:** [hole-collars](hole-collars.md), [downhole-attributes](downhole-attributes.md), [data-table](data-table.md), [interval-table](interval-table.md), [distance-table](distance-table.md).
 

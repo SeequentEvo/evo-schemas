@@ -12,7 +12,7 @@ The `hexahedrons` component defines a set of hexahedral (brick) cells by their v
 
 **See also:** [triangles](triangles.md), [quadrilaterals](quadrilaterals.md), [tetrahedra](tetrahedra.md), [segments](segments.md) (other cell types).
 
-**Used by:** [unstructured-hex-grid](../unstructured-hex-grid.md).
+**Used by:** [unstructured-hex-grid](../objects/unstructured-hex-grid.md).
 
 ## Properties
 
