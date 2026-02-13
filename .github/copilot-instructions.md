@@ -2,12 +2,12 @@
 
 ## Important: Open Source information boundary
 
-This repository (`SeequentEvo/evo-schemas`) is **Open Source** under the Apache 2.0 licence. All content in this repo — including these instructions, schemas, documentation, issues, and pull requests — is publicly visible.
+This repository is **Open Source** under the Apache 2.0 licence. All content — including these instructions, schemas, documentation, issues, and pull requests — is publicly visible.
 
-Repositories under the `seequent` GitHub organisation (as distinct from `SeequentEvo`) are **not** open source. When working in this repository:
+When working in this repository:
 
-- **DO** reference anything in the `SeequentEvo` org, this repo's issues/PRs, and the public [Seequent Developer Portal](https://developer.seequent.com/).
-- **DO NOT** reference internal repository paths, internal tooling, CI/CD pipelines, or any resources from the `seequent` GitHub org. Even if you have access to private repositories, do not introduce references to them in code, documentation, or commit messages within this repo.
+- **DO** reference anything that is already public: this repo, its issues and PRs, other public repositories in the `SeequentEvo` org, and the public [Seequent Developer Portal](https://developer.seequent.com/).
+- **DO NOT** reference, link to, or externalise information from any private repository, internal tooling, or non-public infrastructure — even if you have access to such resources. This includes repository paths, CI/CD pipelines, internal documentation, and any other content not intended for public consumption.
 
 Documentation authored in this repository's `docs/` directory is rendered on the Seequent Developer Portal. The sync mechanism is outside this repo's scope — your responsibility is to get the docs right in `docs/`; rendering happens downstream.
 
