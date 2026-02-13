@@ -18,4 +18,4 @@ This documentation is authored in the [`SeequentEvo/evo-schemas`](https://github
 
 [Understanding schemas](understanding-schemas/blob-storage.md) — conceptual guides covering blob storage, attributes, parts, and cell-type geometry.
 
-[Versioning & release process](versioning-and-release-process/schema-versioning-policy.md) — the schema versioning policy and development lifecycle.
+[Development, contributing & governance](versioning-and-release-process/schema-versioning-policy.md) — the schema versioning policy, development lifecycle, and documentation conventions.
