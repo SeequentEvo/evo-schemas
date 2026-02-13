@@ -98,7 +98,7 @@ Python dataclasses are auto-generated from schemas during the build via a custom
 
 - All property names must be **snake_case**.
 - Schema file names must be **kebab-case** (`<name>.schema.json`).
-- The folder name must match the schema file name (minus `.schema.json`).
+- The schema's parent folder name (i.e., the folder above the version directory) must match the schema file name (minus `.schema.json`).
 - Every schema must have a non-empty `description` and specify `$schema` as Draft 2020-12.
 - Every object must have a `schema` property that is `const` matching the schema's `$id`, and it must be listed in `required`.
 - Objects must reference either `base-object-properties` or `base-spatial-data-properties` via `allOf`.
