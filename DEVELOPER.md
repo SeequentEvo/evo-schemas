@@ -76,7 +76,7 @@ This repository is using [jsonschema](https://pypi.org/project/jsonschema/) to v
 
 ## Writing schemas
 
-The schemas are written according to the JSON Schema Draft 2020-12. See [JSON schema](https://json-schema.org/draft/2020-12/json-schema-core.html) for more information. The JSON Schema book (Understanding JSON Schema)[https://json-schema.org/understanding-json-schema/index.html] is a great place to start. 
+The schemas are written according to the JSON Schema Draft 2020-12. See [JSON schema](https://json-schema.org/draft/2020-12/json-schema-core.html) for more information. The JSON Schema book [Understanding JSON Schema](https://json-schema.org/understanding-json-schema/index.html) is a great place to start.
 
 The schemas in this repository make heavy use of composition to create complex objects. The schemas are broken into elements, components, and objects. See the [README.md](README.md) for the differences.
 
