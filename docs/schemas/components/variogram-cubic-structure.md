@@ -1,0 +1,13 @@
+import SchemaUri from '@theme/SchemaUri';
+import FlatProperties from '../generated/flatmd/components/variogram-cubic-structure-1.1.0.md';
+
+# variogram-cubic-structure
+
+<SchemaUri uri="schema/components/variogram-cubic-structure/1.1.0/variogram-cubic-structure.schema.json" />
+
+A cubic variogram model structure, used as a component of the [variogram](../variogram.md) object.
+The cubic model provides a smooth transition from the origin with a defined range and sill.
+
+## Properties
+
+<FlatProperties />
