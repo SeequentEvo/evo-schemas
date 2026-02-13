@@ -8,6 +8,8 @@ import FlatProperties from '../generated/flatmd/components/continuous-time-serie
 A continuous time-series attribute stores floating-point values that vary over time. Each time step has a
 corresponding array of continuous values.
 
+**See also:** [category-time-series](category-time-series.md), [bool-time-series](bool-time-series.md).
+
 ## Properties
 
 <FlatProperties />

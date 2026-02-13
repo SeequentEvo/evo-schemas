@@ -11,6 +11,8 @@ identifier, and associated survey attributes.
 Collections represent a logical grouping of measurements — for example, all data collected along a single
 flight line or traverse.
 
+**See also:** [survey-line](survey-line.md), [survey-attribute](survey-attribute.md).
+
 ## Properties
 
 <FlatProperties />

@@ -12,6 +12,8 @@ within an [embedded-line-geometry](embedded-line-geometry.md).
 * `description` — An optional description.
 * `parts` — A list of part references into the parent line geometry.
 
+**See also:** [embedded-mesh-object](embedded-mesh-object.md) (mesh equivalent).
+
 ## Properties
 
 <FlatProperties />

@@ -14,6 +14,8 @@ This is the base for continuous-valued attribute types including [continuous-att
 [integer-attribute](integer-attribute.md), [date-time-attribute](date-time-attribute.md),
 [vector-attribute](vector-attribute.md), and [indices-attribute](indices-attribute.md).
 
+**See also:** [base-category-attribute](base-category-attribute.md) (categorical counterpart).
+
 ## Properties
 
 <FlatProperties />

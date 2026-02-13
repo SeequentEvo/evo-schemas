@@ -13,6 +13,8 @@ The `embedded-mesh-object` component represents a named mesh object that referen
 * `quality` — An optional [mesh-quality](mesh-quality.md) specification.
 * `parts` — A list of part references into the parent mesh.
 
+**See also:** [embedded-polyline-object](embedded-polyline-object.md) (polyline equivalent).
+
 ## Properties
 
 <FlatProperties />

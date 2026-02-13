@@ -10,6 +10,8 @@ the indices, counts, and offsets into locations and attribute tables.
 
 This is used by schemas that store data along drillhole traces.
 
+**See also:** [hole-chunks](hole-chunks.md), [downhole-direction-vector](downhole-direction-vector.md).
+
 ## Properties
 
 <FlatProperties />

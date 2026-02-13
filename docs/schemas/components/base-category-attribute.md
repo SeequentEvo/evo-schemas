@@ -12,6 +12,8 @@ that provides metadata such as discipline and type.
 This is the base for categorical attribute types including [category-attribute](category-attribute.md)
 and [bool-attribute](bool-attribute.md).
 
+**See also:** [base-continuous-attribute](base-continuous-attribute.md) (continuous counterpart).
+
 ## Properties
 
 <FlatProperties />

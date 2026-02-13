@@ -7,6 +7,8 @@ import FlatProperties from '../generated/flatmd/components/resistivity-ip-pldp-c
 
 Configuration properties for pole-dipole or offset pole-dipole electrode arrangements in resistivity-IP surveys.
 
+**See also:** [resistivity-ip-plpl-configuration-properties](resistivity-ip-plpl-configuration-properties.md), [resistivity-ip-line](resistivity-ip-line.md).
+
 ## Properties
 
 <FlatProperties />

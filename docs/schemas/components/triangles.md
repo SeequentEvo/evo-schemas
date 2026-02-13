@@ -12,6 +12,8 @@ The `triangles` component defines a set of triangles by their vertices and conne
 
 An optional attribute list can be associated with both vertices and indices.
 
+**See also:** [quadrilaterals](quadrilaterals.md), [hexahedrons](hexahedrons.md), [tetrahedra](tetrahedra.md), [segments](segments.md) (other cell types).
+
 ## Properties
 
 <FlatProperties />

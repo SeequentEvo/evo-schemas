@@ -8,6 +8,8 @@ import FlatProperties from '../generated/flatmd/components/bool-time-series-1.1.
 A boolean time-series attribute stores boolean values that vary over time. Each time step has a
 corresponding array of boolean values.
 
+**See also:** [continuous-time-series](continuous-time-series.md), [category-time-series](category-time-series.md).
+
 ## Properties
 
 <FlatProperties />

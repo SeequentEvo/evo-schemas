@@ -11,6 +11,8 @@ measurements (azimuth and dip readings at measured depths).
 The method determines how the path between survey stations is interpolated — common methods include
 minimum curvature and tangential approaches.
 
+**See also:** [hole-collars](hole-collars.md), [downhole-direction-vector](downhole-direction-vector.md).
+
 ## Properties
 
 <FlatProperties />

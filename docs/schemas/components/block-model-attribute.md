@@ -11,6 +11,8 @@ attributes accommodate the variable-length sub-block structure of block models.
 This component composes [base-continuous-attribute](base-continuous-attribute.md) and adds block-model-specific
 value storage.
 
+**See also:** [block-model-category-attribute](block-model-category-attribute.md) (categorical counterpart).
+
 ## Properties
 
 <FlatProperties />

@@ -11,6 +11,8 @@ the attribute name, spatial offset, and description.
 This is used by geophysical survey schemas (e.g., [gravity](../gravity-2.0.0.md), [magnetics](../magnetics-2.0.0.md))
 to describe the measurements collected.
 
+**See also:** [survey-attribute](survey-attribute.md).
+
 ## Properties
 
 <FlatProperties />

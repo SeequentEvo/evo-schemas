@@ -10,6 +10,8 @@ The `hexahedrons` component defines a set of hexahedral (brick) cells by their v
 * `vertices` — An array of 3D coordinates.
 * `indices` — An index array of 8-tuples defining hexahedral cells. Indices are 0-based.
 
+**See also:** [triangles](triangles.md), [quadrilaterals](quadrilaterals.md), [tetrahedra](tetrahedra.md), [segments](segments.md) (other cell types).
+
 ## Properties
 
 <FlatProperties />

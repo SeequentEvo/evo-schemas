@@ -11,6 +11,8 @@ The `polyline-3d` component describes a 3D polyline, defined as a contiguous seq
 * `count` — The number of vertices in the polyline.
 * `closed` — Whether the polyline forms a closed loop.
 
+**See also:** [polyline-2d](polyline-2d.md) (2D counterpart).
+
 ## Properties
 
 <FlatProperties />

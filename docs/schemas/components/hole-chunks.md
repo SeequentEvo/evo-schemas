@@ -12,6 +12,8 @@ Columns: `hole_index`, `offset`, `count`.
 
 This component is used by the [drilling-campaign](../drilling-campaign.md) schema.
 
+**See also:** [hole-collars](hole-collars.md), [downhole-attributes](downhole-attributes.md).
+
 ## Properties
 
 <FlatProperties />

@@ -8,6 +8,8 @@ import FlatProperties from '../generated/flatmd/components/time-domain-electroma
 The `time-domain-electromagnetic-channel` component defines a single time channel (time gate) in a time-domain
 electromagnetic (TDEM) survey, including the time window and associated measurement parameters.
 
+**See also:** [frequency-domain-electromagnetic-channel](frequency-domain-electromagnetic-channel.md) (frequency-domain counterpart).
+
 ## Properties
 
 <FlatProperties />

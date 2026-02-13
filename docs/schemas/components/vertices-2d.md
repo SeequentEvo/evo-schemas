@@ -9,6 +9,8 @@ The `vertices-2d` component stores a set of 2D vertex coordinates.
 
 * `vertices` — An array of 2D coordinates (x, y), stored as a `float-array-2` element.
 
+**See also:** [vertices-3d](vertices-3d.md) (3D counterpart).
+
 ## Properties
 
 <FlatProperties />

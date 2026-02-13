@@ -13,6 +13,8 @@ The `hole-collars` component represents the surface locations where drillholes b
 
 This component is used by the [drilling-campaign](../drilling-campaign.md) schema.
 
+**See also:** [hole-chunks](hole-chunks.md), [desurvey-method](desurvey-method.md).
+
 ## Properties
 
 <FlatProperties />

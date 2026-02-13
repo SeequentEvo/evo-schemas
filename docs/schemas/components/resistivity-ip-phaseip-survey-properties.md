@@ -7,6 +7,8 @@ import FlatProperties from '../generated/flatmd/components/resistivity-ip-phasei
 
 Survey properties specific to Phase Induced Polarization (PHASEIP) resistivity-IP surveys.
 
+**See also:** [resistivity-ip-dcip-survey-properties](resistivity-ip-dcip-survey-properties.md), [resistivity-ip-sip-survey-properties](resistivity-ip-sip-survey-properties.md), [resistivity-ip-pldp-configuration-properties](resistivity-ip-pldp-configuration-properties.md), [resistivity-ip-plpl-configuration-properties](resistivity-ip-plpl-configuration-properties.md).
+
 ## Properties
 
 <FlatProperties />

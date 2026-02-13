@@ -8,6 +8,8 @@ import FlatProperties from '../generated/flatmd/components/time-step-continuous-
 The `time-step-continuous-attribute` component represents a time step defined as elapsed time since a start time,
 with associated continuous (floating-point) values.
 
+**See also:** [time-step-attribute](time-step-attribute.md) (base), [time-step-date-time-attribute](time-step-date-time-attribute.md) (date-time variant).
+
 ## Properties
 
 <FlatProperties />

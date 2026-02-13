@@ -10,6 +10,8 @@ The `tetrahedra` component defines a set of tetrahedral cells by their vertices 
 * `vertices` — An array of 3D coordinates.
 * `indices` — An index array of vertex quadruplets, each defining a tetrahedron. Indices are 0-based.
 
+**See also:** [triangles](triangles.md), [quadrilaterals](quadrilaterals.md), [hexahedrons](hexahedrons.md), [segments](segments.md) (other cell types).
+
 ## Properties
 
 <FlatProperties />

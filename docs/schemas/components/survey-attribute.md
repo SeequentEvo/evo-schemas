@@ -8,6 +8,8 @@ import FlatProperties from '../generated/flatmd/components/survey-attribute-1.0.
 A survey attribute stores a list of values corresponding to survey data points. Each value is associated with
 a measurement location along a survey line.
 
+**See also:** [survey-attribute-definition](survey-attribute-definition.md), [survey-line](survey-line.md).
+
 ## Properties
 
 <FlatProperties />

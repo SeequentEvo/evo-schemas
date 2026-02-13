@@ -10,6 +10,8 @@ The `block-model-fully-subblocked-structure` component defines the structure of 
 Each parent block is either split into exactly the grid defined by `n_subblocks_per_parent`, or left whole.
 There is no partial subblocking — a block is either fully subdivided or not subdivided at all.
 
+**See also:** [block-model-regular-structure](block-model-regular-structure.md), [block-model-flexible-structure](block-model-flexible-structure.md), [block-model-variable-octree-structure](block-model-variable-octree-structure.md) (alternative structures).
+
 ## Properties
 
 <FlatProperties />

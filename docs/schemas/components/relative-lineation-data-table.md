@@ -8,6 +8,8 @@ import FlatProperties from '../generated/flatmd/components/relative-lineation-da
 The `relative-lineation-data-table` component stores lineation measurement data relative to a drillhole,
 combining depth intervals with lineation orientations.
 
+**See also:** [lineation-data](lineation-data.md) (absolute variant), [relative-planar-data-table](relative-planar-data-table.md).
+
 ## Properties
 
 <FlatProperties />
