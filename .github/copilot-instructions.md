@@ -253,7 +253,7 @@ All of the following are enforced by the test suite (`pytest`):
 
 ### 4. Decompose into components
 
-If your schema includes structures that could be reused by other schemas, break them out into components under `schema/components/`. Follow the existing decomposition patterns — for example, the `drilling-campaign` schema introduced `hole-collars`, `hole-chunks`, and `desurvey-method` as separate components.
+Before creating new components, check whether existing components already provide the functionality you need — reuse is strongly preferred over duplication. Browse `schema/components/` and the component documentation in `docs/schemas/components/` to find candidates. If your schema includes structures that are not already covered and could be reused by other schemas, break them out into new components under `schema/components/`. Follow the existing decomposition patterns — for example, the `drilling-campaign` schema introduced `hole-collars`, `hole-chunks`, and `desurvey-method` as separate components.
 
 ### 5. Provide examples
 
