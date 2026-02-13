@@ -1,7 +1,12 @@
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/components/lineage-1.0.0.md';
+import Alert from '@mui/material/Alert';
 
 # lineage
+
+<Alert severity="warning">
+The lineage component is deprecated and will be removed in a future schema version. New integrations should not rely on this component.
+</Alert>
 
 <SchemaUri uri="schema/components/lineage/1.0.0/lineage.schema.json" />
 

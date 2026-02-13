@@ -8,7 +8,7 @@ Components are reusable building blocks composed into [geoscience object schemas
 * [Base spatial data properties](base-spatial-data-properties.md) — adds bounding box and CRS to base properties
 * [Coordinate reference system](crs.md) — EPSG code or WKT spatial reference
 * [Bounding box](bounding-box.md) — axis-aligned geographic extents
-* [Lineage](lineage.md) — provenance and processing history
+* [Lineage](lineage.md) — provenance and processing history (deprecated)
 * [Locations](locations.md) — 3D point coordinates
 
 ## Attributes
