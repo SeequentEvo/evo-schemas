@@ -39,8 +39,8 @@ class MarkdownGenerator:
         flags = []
         if inherited:
             flags.append(f"[⬆️]({self._get_link(prop.parent)})")
-        # if prop.name in prop.parent.required:
-        #     flags.append("✅")
+        if prop.name in prop.parent.required:
+            flags.append("✅")
 
         return " ".join(flags)
 
