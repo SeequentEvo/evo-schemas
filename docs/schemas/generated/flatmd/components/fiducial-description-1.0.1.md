@@ -3,8 +3,8 @@ A fiducial is a value which uniquely describes data acquired at a specific insta
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| start | Number | Starting fiducial number. |  |
-| increment | Number | Fiducial increment amount. |  |
+| start | Number | Starting fiducial number. | ✅ |
+| increment | Number | Fiducial increment amount. | ✅ |
 
 
 #### Legend

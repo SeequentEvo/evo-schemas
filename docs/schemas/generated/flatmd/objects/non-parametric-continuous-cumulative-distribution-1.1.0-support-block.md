@@ -2,7 +2,7 @@
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| block | [non-parametric-continuous-cumulative-distribution](../objects/non-parametric-continuous-cumulative-distribution-1.1.0-support-block-block.md) | Block option. |  |
+| block | [non-parametric-continuous-cumulative-distribution](../objects/non-parametric-continuous-cumulative-distribution-1.1.0-support-block-block.md) | Block option. | ✅ |
 
 
 #### Legend

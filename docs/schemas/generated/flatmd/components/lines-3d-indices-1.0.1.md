@@ -3,7 +3,7 @@ This component describes line endpoints for 3D lines. It has two columns (start,
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| indices | [index-array-2](../elements/index-array-2-1.0.1.md) | 0-based indices into the vertices. Columns: start, end. |  |
+| indices | [index-array-2](../elements/index-array-2-1.0.1.md) | 0-based indices into the vertices. Columns: start, end. | ✅ |
 
 
 #### Legend

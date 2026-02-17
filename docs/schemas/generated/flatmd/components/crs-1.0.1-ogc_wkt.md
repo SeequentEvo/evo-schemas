@@ -2,7 +2,7 @@
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| ogc_wkt | String | Well-known text representation of coordinate reference systems. |  |
+| ogc_wkt | String | Well-known text representation of coordinate reference systems. | ✅ |
 
 
 #### Legend

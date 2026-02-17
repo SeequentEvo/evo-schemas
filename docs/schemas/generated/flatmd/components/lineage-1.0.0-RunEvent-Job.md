@@ -2,8 +2,8 @@
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| namespace | String | The namespace containing that job |  |
-| name | String | The unique name for that job within that namespace |  |
+| namespace | String | The namespace containing that job | ✅ |
+| name | String | The unique name for that job within that namespace | ✅ |
 | facets | Object | The job facets. |  |
 
 

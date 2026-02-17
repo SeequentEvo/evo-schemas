@@ -2,8 +2,8 @@
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| order | Number | Filter order. |  |
-| frequency | Number | Filter frequency. |  |
+| order | Number | Filter order. | ✅ |
+| frequency | Number | Filter frequency. | ✅ |
 
 
 #### Legend

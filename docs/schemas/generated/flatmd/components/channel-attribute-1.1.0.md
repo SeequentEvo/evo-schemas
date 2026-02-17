@@ -3,11 +3,11 @@ An attribute for a channel.
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| name | String | The name of the channel. |  |
+| name | String | The name of the channel. | ✅ |
 | start_fiducial | Number | Starting fiducial number. |  |
 | fiducial_increment | Number | Fiducial increment amount. |  |
 | significant_digits | Integer | Significant digits. |  |
-| attribute | [channel-attribute](../components/channel-attribute-1.1.0-attribute.md) | Attribute associated with the channel. |  |
+| attribute | [channel-attribute](../components/channel-attribute-1.1.0-attribute.md) | Attribute associated with the channel. | ✅ |
 
 
 #### Legend

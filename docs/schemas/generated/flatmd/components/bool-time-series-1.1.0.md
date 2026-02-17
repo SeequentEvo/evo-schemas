@@ -3,15 +3,15 @@ An attribute that describes a bool time series.
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| name | String | The name of the attribute | [⬆️](../components/base-attribute-1.0.0.md) |
+| name | String | The name of the attribute | [⬆️](../components/base-attribute-1.0.0.md) ✅ |
 | key | String | An identifier of the attribute, used to keep track of the attribute when it is renamed.
-The identifier must be unique within an attribute list. | [⬆️](../components/base-attribute-1.0.0.md) |
-| attribute_type | String | Type of the attribute. | [⬆️](../components/base-attribute-1.0.0.md) |
+The identifier must be unique within an attribute list. | [⬆️](../components/base-attribute-1.0.0.md) ✅ |
+| attribute_type | String | Type of the attribute. | [⬆️](../components/base-attribute-1.0.0.md) ✅ |
 | attribute_description | [attribute-description](../components/attribute-description-1.0.1.md) | The attribute description record. | [⬆️](../components/base-continuous-attribute-1.0.0.md) |
-| attribute_type | String |  |  |
-| num_time_steps | Integer | Number of time steps. |  |
-| time_step | [time-step-attribute](../components/time-step-attribute-1.1.0.md) | Time step attribute component. |  |
-| values | [bool-array-md](../elements/bool-array-md-1.0.1.md) | The values of the series where 'num_time_steps' is the width of the array. |  |
+| attribute_type | String |  | ✅ |
+| num_time_steps | Integer | Number of time steps. | ✅ |
+| time_step | [time-step-attribute](../components/time-step-attribute-1.1.0.md) | Time step attribute component. | ✅ |
+| values | [bool-array-md](../elements/bool-array-md-1.0.1.md) | The values of the series where 'num_time_steps' is the width of the array. | ✅ |
 
 
 #### Legend

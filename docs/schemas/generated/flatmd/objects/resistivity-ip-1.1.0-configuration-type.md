@@ -2,7 +2,7 @@
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| type | String | Type of configuration. |  |
+| type | String | Type of configuration. | ✅ |
 
 
 #### Legend

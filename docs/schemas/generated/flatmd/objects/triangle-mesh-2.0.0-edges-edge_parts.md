@@ -7,7 +7,7 @@ A structure defining edge chunks of the mesh.
 | chunks | [index-array-2](../elements/index-array-2-1.0.1.md) | A tuple defining the first index and the length of a chunk.
 The chunk refers to a segment of the edges array.
 Chunks do not have to include all edges, and chunks can overlap.
-Columns: offset, count |  |
+Columns: offset, count | ✅ |
 
 
 #### Legend

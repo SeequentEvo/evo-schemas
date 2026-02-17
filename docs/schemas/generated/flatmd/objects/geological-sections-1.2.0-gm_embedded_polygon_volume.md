@@ -3,11 +3,11 @@ A closed polyline defining the external ring of the polygon.
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| name | String | Name of the object. | [⬆️](../components/embedded-polyline-object-1.0.0.md) |
+| name | String | Name of the object. | [⬆️](../components/embedded-polyline-object-1.0.0.md) ✅ |
 | description | String | Optional field for adding additional description to uniquely identify this object. | [⬆️](../components/embedded-polyline-object-1.0.0.md) |
-| parts | Array[[reversible-index](../elements/reversible-index-1.0.0.md)] | A list of parts and whether they are reversed. | [⬆️](../components/embedded-polyline-object-1.0.0.md) |
+| parts | Array[[reversible-index](../elements/reversible-index-1.0.0.md)] | A list of parts and whether they are reversed. | [⬆️](../components/embedded-polyline-object-1.0.0.md) ✅ |
 | material_key | String | Unique identifier of the material. |  |
-| feature | String | Kind of feature. |  |
+| feature | String | Kind of feature. | ✅ |
 | layer | String | Optional identifier for the layer containing the polygon. Polygons in the same layer should not overlap. Polygons in different layers can overlap. Layer precidence may matters s follow a layer precidence where defined |  |
 | internal_rings | Array[[embedded-polyline-object](../components/embedded-polyline-object-1.0.0.md)] | Optional field representing internal rings (holes) inside the volume. When multiple inner_ring's exist they can touch but should not overlap. There may or may not be another volume whose external ring overlaps an inner ring |  |
 

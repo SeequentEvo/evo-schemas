@@ -3,7 +3,7 @@ Survey information.
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| type | String | Survey type. |  |
+| type | String | Survey type. | ✅ |
 
 
 #### Legend

@@ -2,7 +2,7 @@
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| runId | String | The globally unique ID of the run associated with the job. |  |
+| runId | String | The globally unique ID of the run associated with the job. | ✅ |
 | facets | Object | The run facets. |  |
 
 

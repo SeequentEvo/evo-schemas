@@ -3,7 +3,7 @@ This component describes line endpoints for 2D lines. It has three columns (star
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
-| indices | [lines-2d-indices](../components/lines-2d-indices-1.0.1-indices.md) | Array of lines. Columns: start, end, arcCenter. Start/End are 0-based indices into the vertices |  |
+| indices | [lines-2d-indices](../components/lines-2d-indices-1.0.1-indices.md) | Array of lines. Columns: start, end, arcCenter. Start/End are 0-based indices into the vertices | ✅ |
 
 
 #### Legend
