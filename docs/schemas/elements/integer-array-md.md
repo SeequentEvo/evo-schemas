@@ -9,7 +9,7 @@ Multi-dimensional array of integer values. The base type for all integer array s
 
 The integer array family uses a width specialisation pattern: `integer-array-md` defines the general case with a variable `width`, while fixed-width variants (`integer-array-1`, `integer-array-2`, `integer-array-3`) constrain `width` to a constant value for specific use cases.
 
-**See also:** [integer-array-1](integer-array-1.md) (1D), [integer-array-2](integer-array-2.md) (2D), [integer-array-3](integer-array-3.md) (3D) — width specialisations.
+**See also:** [integer-array-1](integer-array-1.md) (width 1), [integer-array-2](integer-array-2.md) (width 2), [integer-array-3](integer-array-3.md) (width 3) — width specialisations.
 
 ## Properties
 

@@ -12,20 +12,20 @@ The foundational storage reference used by all array elements to point to binary
 
 64-bit floating-point arrays for continuous numeric data. The base type ([float-array-md](float-array-md.md)) supports arbitrary width; fixed-width specialisations constrain `width` to match specific geometric or physical use cases.
 
-* [Float array (multi-dimensional)](float-array-md.md) — base type with variable width
-* [Float array (1D)](float-array-1.md) — scalar values (width = 1)
-* [Float array (2D)](float-array-2.md) — paired values such as 2D coordinates (width = 2)
-* [Float array (3D)](float-array-3.md) — 3D coordinates and vectors (width = 3)
-* [Float array (6D)](float-array-6.md) — symmetric tensor components (width = 6)
+* [Float array (variable width)](float-array-md.md) — base type with variable width
+* [Float array (width 1)](float-array-1.md) — scalar values (width = 1)
+* [Float array (width 2)](float-array-2.md) — paired values such as 2D coordinates (width = 2)
+* [Float array (width 3)](float-array-3.md) — 3D coordinates and vectors (width = 3)
+* [Float array (width 6)](float-array-6.md) — symmetric tensor components (width = 6)
 
 ## Integer arrays
 
 Integer arrays supporting int32 and int64 encoding. Follows the same base-plus-specialisation pattern as floating-point arrays.
 
-* [Integer array (multi-dimensional)](integer-array-md.md) — base type with variable width
-* [Integer array (1D)](integer-array-1.md) — scalar integer values (width = 1)
-* [Integer array (2D)](integer-array-2.md) — paired integer values (width = 2)
-* [Integer array (3D)](integer-array-3.md) — triple integer values (width = 3)
+* [Integer array (variable width)](integer-array-md.md) — base type with variable width
+* [Integer array (width 1)](integer-array-1.md) — scalar integer values (width = 1)
+* [Integer array (width 2)](integer-array-2.md) — paired integer values (width = 2)
+* [Integer array (width 3)](integer-array-3.md) — triple integer values (width = 3)
 
 ## Index arrays
 
@@ -41,8 +41,8 @@ Unsigned 64-bit integer arrays for topology and connectivity. Each width corresp
 
 Boolean data arrays for flags, masks, and binary-state attributes.
 
-* [Bool array (1D)](bool-array-1.md) — single boolean per element
-* [Bool array (multi-dimensional)](bool-array-md.md) — multiple booleans per element
+* [Bool array (width 1)](bool-array-1.md) — single boolean per element
+* [Bool array (variable width)](bool-array-md.md) — multiple booleans per element
 
 ## String and date-time arrays
 

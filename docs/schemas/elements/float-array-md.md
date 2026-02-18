@@ -9,7 +9,7 @@ Multi-dimensional array of 64-bit floating-point values. The base type for all f
 
 The float array family uses a width specialisation pattern: `float-array-md` defines the general case with a variable `width`, while fixed-width variants (`float-array-1`, `float-array-2`, `float-array-3`, `float-array-6`) constrain `width` to a constant value for specific use cases.
 
-**See also:** [float-array-1](float-array-1.md) (1D), [float-array-2](float-array-2.md) (2D), [float-array-3](float-array-3.md) (3D), [float-array-6](float-array-6.md) (6D) — width specialisations.
+**See also:** [float-array-1](float-array-1.md) (width 1), [float-array-2](float-array-2.md) (width 2), [float-array-3](float-array-3.md) (width 3), [float-array-6](float-array-6.md) (width 6) — width specialisations.
 
 ## Properties
 
