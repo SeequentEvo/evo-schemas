@@ -29,6 +29,23 @@ can open an RFC at any time by creating an issue, and selecting the "RFC" issue 
 
 For more information on the RFC lifecycle, please see ["Open source" in the Seequent Developer Portal.](https://developer.seequent.com/docs/guides/open-source)
 
+## Schema contributions
+
+If you are contributing a new schema or modifying an existing one, ensure your pull request includes all of the following:
+
+- [ ] Schema JSON file(s) at the correct path (`schema/<tier>/<name>/<semver>/<name>.schema.json`)
+- [ ] Any new components or elements required by the schema
+- [ ] Example JSON instances in `examples/<schema-version>/<tier>/`
+- [ ] A documentation page in `docs/schemas/` (use `docs/schemas/pointset.md` as a template)
+- [ ] Updated schema listing in `docs/schemas/index.md`
+- [ ] Regenerated docs (`make generate-schema-docs`)
+- [ ] All tests passing (`pytest`)
+- [ ] Pre-commit hooks passing (`pre-commit run --all-files`)
+
+For new schemas, an accepted RFC (`rfc/accepted` label) should exist before implementation begins. Reference the RFC issue in your pull request description.
+
+For version bumps, use `tools/clone_schema.py` to create the new version and cascade updates to dependent schemas. See the [Developer documentation](DEVELOPER.md) for details on schema composition and versioning.
+
 ## Opening a pull request
 
 We welcome all forms of pull requests, and strive to ensure contributions are reviewed and merged promptly.
