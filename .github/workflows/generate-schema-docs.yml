@@ -40,5 +40,6 @@ jobs:
         uses: actions/github-script@v8
         with:
           script: |
+            const commitMessage = 'Update to schema docs';
             const script = require('${{ github.workspace }}/.github/scripts/create-verified-commit.js');
-            await script({ github, context });
+            await script({ github, context: { ...context, commitMessage } });

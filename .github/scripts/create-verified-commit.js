@@ -2,6 +2,10 @@ const fs = require('fs');
 const { execSync } = require('child_process');
 
 module.exports = async ({ github, context }) => {
+    if (!context.commitMessage) {
+        throw new Error('commitMessage is required in context');
+    }
+
     const headSha = execSync('git rev-parse HEAD').toString().trim();
 
     const changedFiles = execSync('git diff --name-only HEAD').toString().trim().split('\n').filter(f => f);
@@ -32,7 +36,7 @@ module.exports = async ({ github, context }) => {
     const commit = await github.rest.git.createCommit({
       owner: context.repo.owner,
       repo: context.repo.repo,
-      message: 'Update to schema docs',
+      message: context.commitMessage,
       tree: tree.data.sha,
       parents: [headSha]
     });
