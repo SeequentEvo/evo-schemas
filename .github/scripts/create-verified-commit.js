@@ -41,13 +41,25 @@ module.exports = async ({ github, context }) => {
       parents: [headSha]
     });
 
-    const branchName = context.ref.split('/').pop();
+    let targetBranch;
+    const ref = context.ref || '';
+
+    if (ref.startsWith('refs/heads/')) {
+      targetBranch = context.ref.split('/').pop();
+    } else {
+      const repo = await github.rest.repos.get({
+        owner: context.repo.owner,
+        repo: context.repo.repo
+      });
+      targetBranch = repo.data.default_branch;
+    }
+
     await github.rest.git.updateRef({
       owner: context.repo.owner,
       repo: context.repo.repo,
-      ref: `heads/${branchName}`,
+      ref: `heads/${targetBranch}`,
       sha: commit.data.sha
     });
 
-    console.log(`Created verified commit: ${commit.data.sha}`);
+    console.log(`Created verified commit: ${commit.data.sha} on branch ${targetBranch}`);
 };
