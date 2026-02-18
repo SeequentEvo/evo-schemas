@@ -42,5 +42,4 @@ jobs:
           script: |
             const commitMessage = 'Update to schema docs';
             const script = require('${{ github.workspace }}/.github/scripts/create-verified-commit.js');
-            const [owner, repo] = process.env.GITHUB_REPOSITORY.split('/');
-            await script({ github, context: { ...context, commitMessage, repo: { owner, repo } } });
+            await script({ github, context: { ...context, commitMessage } });

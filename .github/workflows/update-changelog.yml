@@ -34,4 +34,5 @@ jobs:
           script: |
             const commitMessage = 'Update CHANGELOG.md';
             const script = require('${{ github.workspace }}/.github/scripts/create-verified-commit.js');
-            await script({ github, context: { ...context, commitMessage } });
+            const [owner, repo] = process.env.GITHUB_REPOSITORY.split('/');
+            await script({ github, context: { ...context, commitMessage, repo: { owner, repo } } });
