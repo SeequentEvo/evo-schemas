@@ -12,7 +12,11 @@ import FlatProperties from '../generated/flatmd/objects/gravity-2.0.0.md';
 - [survey-collection](../components/survey-collection.md) — Logical grouping of survey measurements
 - [survey-attribute-definition](../components/survey-attribute-definition.md) — Common properties for survey measurement attributes
 
-**See also:** [magnetics-2.0.0](magnetics-2.0.0.md) (magnetic surveys), [radiometric-2.0.0](radiometric-2.0.0.md) (radiometric surveys).
+**See also:** [magnetics-2.0.0](magnetics-2.0.0.md) (magnetic surveys), [radiometric-2.0.0](radiometric-2.0.0.md) (radiometric surveys), [gravity-1.2.0](gravity-1.2.0.md) (previous version).
+
+:::note[Changes from 1.2.0]
+Version 2.0.0 replaces the `gravity_line_list` / `survey-line` structure with the `collections` / [survey-collection](../components/survey-collection.md) pattern and adds an `attribute_definition_list` of [survey-attribute-definition](../components/survey-attribute-definition.md) entries. This provides a more flexible and consistent data model shared across all survey types.
+:::
 
 ## Overview
 
