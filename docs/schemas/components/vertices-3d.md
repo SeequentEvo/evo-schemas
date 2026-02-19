@@ -7,7 +7,7 @@ import FlatProperties from '../generated/flatmd/components/vertices-3d-1.0.1.md'
 
 The `vertices-3d` component stores a set of 3D vertex coordinates.
 
-* `vertices` — An array of 3D coordinates (x, y, z), stored as a `float-array-3` element.
+* `vertices` — An N×3 array of (x, y, z) coordinates, stored as a [float-array-3](../elements/float-array-3.md) element. Vertex ordering is significant — other components (e.g., segment indices, triangle indices) reference vertices by their 0-based position in this array.
 
 **Used by:** [design-geometry](../objects/design-geometry.md).
 

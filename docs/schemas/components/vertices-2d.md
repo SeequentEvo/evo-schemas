@@ -7,7 +7,7 @@ import FlatProperties from '../generated/flatmd/components/vertices-2d-1.0.1.md'
 
 The `vertices-2d` component stores a set of 2D vertex coordinates.
 
-* `vertices` — An array of 2D coordinates (x, y), stored as a `float-array-2` element.
+* `vertices` — An N×2 array of (x, y) coordinates, stored as a [float-array-2](../elements/float-array-2.md) element. Vertex ordering is significant — other components (e.g., segment indices, polyline indices) reference vertices by their 0-based position in this array.
 
 **Used by:** [design-geometry](../objects/design-geometry.md).
 
