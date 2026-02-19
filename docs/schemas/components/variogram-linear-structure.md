@@ -6,7 +6,9 @@ import FlatProperties from '../generated/flatmd/components/variogram-linear-stru
 <SchemaUri uri="schema/components/variogram-linear-structure/1.1.0/variogram-linear-structure.schema.json" />
 
 A linear variogram model structure, used as a component of the [variogram](../objects/variogram.md) object.
-The linear model increases linearly with distance.
+The linear model increases linearly with distance up to the sill. It is the simplest bounded variogram
+model and is typically used as one structure within a nested variogram rather than as a standalone
+model.
 
 **Used by:** [variogram](../objects/variogram.md).
 

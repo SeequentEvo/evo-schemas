@@ -6,7 +6,10 @@ import FlatProperties from '../generated/flatmd/components/variogram-generalised
 <SchemaUri uri="schema/components/variogram-generalisedcauchy-structure/1.1.0/variogram-generalisedcauchy-structure.schema.json" />
 
 A Generalised Cauchy variogram model structure, used as a component of the [variogram](../objects/variogram.md) object.
-This model provides flexibility through additional shape parameters.
+The Generalised Cauchy model offers flexibility through additional shape parameters that independently
+control the behaviour near the origin and at large distances. This allows it to model both smooth
+and rough spatial correlation structures, making it useful when standard models (spherical, exponential)
+do not adequately fit the experimental variogram.
 
 **Used by:** [variogram](../objects/variogram.md).
 
