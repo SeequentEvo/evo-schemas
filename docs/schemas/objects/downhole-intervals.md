@@ -8,6 +8,14 @@ import FlatProperties from '../generated/flatmd/objects/downhole-intervals-1.3.0
 
 <SchemaUri uri="schema/objects/downhole-intervals/1.3.0/downhole-intervals.schema.json" />
 
+**Key components:**
+- [from-to](../components/from-to.md) — Depth range intervals along drillhole traces
+- [category-data](../components/category-data.md) — Lookup table mapping integer keys to category names
+
+**See also:** [drilling-campaign](drilling-campaign.md) (campaign-level), [downhole-collection](downhole-collection.md) (per-hole data).
+
+## Overview
+
 The downhole-intervals object captures the downhole geometry and data once desurveyed and possibly composited into target length intervals. They are represented as a series of lines grouped by hole ID.
 
 Note that a downhole-interval object is a derivative object from the source data. The desurveying process adds a series of assumptions on the locations of each resulting segment. Different desurveying algorithms will provide different geometries.

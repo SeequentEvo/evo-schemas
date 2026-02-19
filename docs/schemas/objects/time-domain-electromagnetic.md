@@ -8,6 +8,14 @@ import FlatProperties from '../generated/flatmd/objects/time-domain-electromagne
 
 <SchemaUri uri="schema/objects/time-domain-electromagnetic/1.1.0/time-domain-electromagnetic.schema.json" />
 
+**Key components:**
+- [survey-line](../components/survey-line.md) — Survey line spatial path with location data
+- [time-domain-electromagnetic-channel](../components/time-domain-electromagnetic-channel.md) — Single time gate/channel definition
+
+**See also:** [frequency-domain-electromagnetic](frequency-domain-electromagnetic.md) (frequency-domain counterpart).
+
+## Overview
+
 A time-domain electromagnetic (TDEM) object represents geolocated, time-stamped TDEM survey data. This data is used extensively in exploration for mineral resources, groundwater investigations, and other fields where the electrical conductivity of subsurface materials provides insight.
 
 Electromagnetic (EM) methods do not require direct contact with the ground.  EM methods use the phenomenon of electromagnetic induction to create a subsurface current flow, then measure its dissipation.  This provides information about the electrical conductivity/chargeability of the subsurface, by measuring the ease with which induced electrical currents flow in the subsurface and the rate at which the electrical chargeability discharges at rock unit boundaries. Rather than the rock units, it is the porosity and the content in the pores space that influence the conductivity of the rock. EM methods provide a measure of the geometry, dimension and electrical characteristics of the source of the anomalous response.

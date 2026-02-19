@@ -8,6 +8,19 @@ import FlatProperties from '../generated/flatmd/objects/variogram-1.2.0.md';
 
 <SchemaUri uri="schema/objects/variogram/1.2.0/variogram.schema.json" />
 
+**Key components:**
+- [variogram-spherical-structure](../components/variogram-spherical-structure.md) — Spherical model reaching sill at finite range
+- [variogram-exponential-structure](../components/variogram-exponential-structure.md) — Exponential model approaching sill asymptotically
+- [variogram-gaussian-structure](../components/variogram-gaussian-structure.md) — Gaussian model with parabolic origin behaviour
+- [variogram-cubic-structure](../components/variogram-cubic-structure.md) — Cubic model with smooth transition
+- [variogram-linear-structure](../components/variogram-linear-structure.md) — Linear model increasing with distance
+- [variogram-spheroidal-structure](../components/variogram-spheroidal-structure.md) — Spheroidal model for geostatistical analysis
+- [variogram-generalisedcauchy-structure](../components/variogram-generalisedcauchy-structure.md) — Generalised Cauchy model with flexible shape parameters
+
+**See also:** [experimental-variogram](experimental-variogram.md) (experimental counterpart), [local-ellipsoids](local-ellipsoids.md) (anisotropy ellipsoids).
+
+## Overview
+
 The variogram object captures the parameters of variogram models as used in geostatistical analysis and modelling. A variogram describes the degree of spatial dependence of properties such as mineral grades, porosity, or petrophysical properties. It is used to quantify how data points are related to each other based on their spatial separation and direction.
 
 A variogram is required anytime one uses the Kriging family of algorithms, including most geostatistical conditional simulations and non-linear estimation methods such as LUC and MIK.

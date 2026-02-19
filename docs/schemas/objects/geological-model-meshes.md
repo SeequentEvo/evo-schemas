@@ -8,6 +8,15 @@ import FlatProperties from '../generated/flatmd/objects/geological-model-meshes-
 
 <SchemaUri uri="schema/objects/geological-model-meshes/2.2.0/geological-model-meshes.schema.json" />
 
+**Key components:**
+- [embedded-mesh-object](../components/embedded-mesh-object.md) — Named mesh object parts within the model
+- [embedded-triangulated-mesh](../components/embedded-triangulated-mesh.md) — Triangulated mesh decomposed into named parts
+- [material](../components/material.md) — Material properties including name, colour, and data source
+
+**See also:** [geological-sections](geological-sections.md) (section-based modelling), [triangle-mesh](triangle-mesh.md) (individual mesh).
+
+## Overview
+
 A collection of one or more meshes from a geological model, organized by folder. Volumes are represented as a triangular mesh hull, surfaces as a triangular mesh surface. Volumes and surfaces may reference a material. Only geology and its associated properties are expected in a geological-model-meshes object.
 
 ## `folders` *array*

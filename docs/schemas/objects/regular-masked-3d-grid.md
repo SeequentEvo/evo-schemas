@@ -8,6 +8,13 @@ import FlatProperties from '../generated/flatmd/objects/regular-masked-3d-grid-1
 
 <SchemaUri uri="schema/objects/regular-masked-3d-grid/1.3.0/regular-masked-3d-grid.schema.json" />
 
+**Key components:**
+- [bool-attribute](../components/bool-attribute.md) — Boolean mask defining which cells contain data
+
+**See also:** [regular-3d-grid](regular-3d-grid.md) (all cells populated), [tensor-3d-grid](tensor-3d-grid.md) (variable cell sizes).
+
+## Overview
+
 The regular-masked-3d-grid object captures the geometry and attributes of a regular grid with inactive cells. This object is used to represent a 3D grid where only active cells are considered for attribute properties. As a result, the size of the attribute data can be much smaller than the underlying regular grid.
 
 This object is particularly useful in geological and geostatistical analysis when working with a sub-space of a regular grid, such as a domain or a mining pit. It eliminates the need to externally track which cells are inside or outside the region of interest.
@@ -28,11 +35,6 @@ The size of the cells in the grid corresponds to the number of true elements in 
 The cell_attributes field accepts a variety of scalar values (see One of Attribute component), defined for number_of_active_cells (number of true elements in the mask array).
 
 As with all objects, this grid implements spatial properties including a coordinate reference system and bounding box in world coordinates.
-
-See also:
-
-- For a 3D grid with data defined on all cells or vertices, see [`regular-3d-grid`](regular-3d-grid.md).
-- For a 3D grid with tensor values, see [`tensor-3d-grid`](tensor-3d-grid.md).
 
 ## Properties
 

@@ -8,6 +8,13 @@ import FlatProperties from '../generated/flatmd/objects/triangle-mesh-2.2.0.md';
 
 <SchemaUri uri="schema/objects/triangle-mesh/2.2.0/triangle-mesh.schema.json" />
 
+**Key components:**
+- [segments](../components/segments.md) — Line segments defined by vertex index pairs
+
+**See also:** [line-segments](line-segments.md) (line geometry), [pointset](pointset.md) (vertices only).
+
+## Overview
+
 A discretization of a 3D domain into triangles. The triangles are defined by triplets of indices into a vertex list. Optionally, parts and edges can be specified.
 
 ## `triangles`

@@ -18,11 +18,7 @@ The size of the grid is specified in cells (see `size`), each of which has the s
 
 Fields `cell_attributes` and `vertex_attributes` provide an optional [attribute list](../../understanding-schemas/understanding-attributes.md) attached to either the cells (of length `grid_size_x * grid_size_y * grid_size_z`) or vertices (of length `[grid_size_x + 1] * [grid_size_y + 1] * [grid_size_z + 1]`).
 
-See also:
-
-- For a 2D grid, see [`regular-2d-grid`](regular-2d-grid.md).
-- For a 3D grid with data defined on only some cells, see [`regular-masked-3d-grid`](regular-masked-3d-grid.md).
-- For a 3D grid with variable cell sizes, see [`tensor-3d-grid`](tensor-3d-grid.md).
+**See also:** [regular-2d-grid](regular-2d-grid.md) (2D counterpart), [regular-masked-3d-grid](regular-masked-3d-grid.md) (masked subset of cells), [tensor-3d-grid](tensor-3d-grid.md) (variable cell sizes).
 
 ## Properties
 

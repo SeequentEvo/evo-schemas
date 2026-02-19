@@ -8,6 +8,15 @@ import FlatProperties from '../generated/flatmd/objects/geological-sections-1.2.
 
 <SchemaUri uri="schema/objects/geological-sections/1.2.0/geological-sections.schema.json" />
 
+**Key components:**
+- [embedded-line-geometry](../components/embedded-line-geometry.md) — Polylines composed of straight line segments
+- [embedded-polyline-object](../components/embedded-polyline-object.md) — Named polyline/polygon parts within line geometry
+- [material](../components/material.md) — Material properties including name, colour, and data source
+
+**See also:** [geological-model-meshes](geological-model-meshes.md) (mesh-based modelling).
+
+## Overview
+
 The geological-sections schema is used to store geology as a set of planar cross sections. Soil layers and volumes are represented using 2D line segments on the section plane. This object does not support curved or crooked sections. Only geology and its associated properties are expected in a geological-sections object.
 
 ## `folders` *array*

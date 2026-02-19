@@ -8,6 +8,14 @@ import FlatProperties from '../generated/flatmd/objects/frequency-domain-electro
 
 <SchemaUri uri="schema/objects/frequency-domain-electromagnetic/1.1.0/frequency-domain-electromagnetic.schema.json" />
 
+**Key components:**
+- [survey-line](../components/survey-line.md) — Survey line spatial path with location data
+- [frequency-domain-electromagnetic-channel](../components/frequency-domain-electromagnetic-channel.md) — Single frequency channel definition
+
+**See also:** [time-domain-electromagnetic](time-domain-electromagnetic.md) (time-domain counterpart).
+
+## Overview
+
 The frequency-domain-electromagnetic object captures the properties and measurements related to frequency domain electromagnetic surveys. This object is used to represent the data collected during such surveys, including the configuration of the equipment and the resulting measurements.
 
 This object is particularly useful in geophysical analysis where the electromagnetic properties of the subsurface are studied. It provides a standardized way to store and share the data collected during frequency domain electromagnetic surveys.

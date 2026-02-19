@@ -8,6 +8,10 @@ import FlatProperties from '../generated/flatmd/objects/pointset-1.3.0.md';
 
 <SchemaUri uri="schema/objects/pointset/1.3.0/pointset.schema.json" />
 
+**See also:** [lineations-data-pointset](lineations-data-pointset.md) (lineation measurements), [planar-data-pointset](planar-data-pointset.md) (planar orientation measurements) — derived schemas for storing specific data at the locations.
+
+## Overview
+
 The pointset object captures a set of points in space and their associated attributes. This object is widely used in earth sciences for various applications such as geological mapping, geostatistical analysis, and environmental monitoring.
 
 A pointset can represent different types of spatial data, including:
@@ -29,13 +33,6 @@ This property has two sub-properties
 * `coordinates` - an array property with the coordinates (xyz) of each point.
 * An optional [attribute list.](../../understanding-schemas/understanding-attributes.md)
 
-
-See also:
-
-There are two derived schema for storing specific data at the locations.
-
-- For a pointset with lineation measurements, see [lineations-data-pointset](lineations-data-pointset.md).
-- For a pointset with planar orientation measurements, see [planar-data-pointset](planar-data-pointset.md).
 
 ## Properties
 

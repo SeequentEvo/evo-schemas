@@ -8,6 +8,10 @@ import FlatProperties from '../generated/flatmd/objects/planar-data-pointset-1.3
 
 <SchemaUri uri="schema/objects/planar-data-pointset/1.3.0/planar-data-pointset.schema.json" />
 
+**See also:** [pointset](pointset.md) (base schema), [lineations-data-pointset](lineations-data-pointset.md) (lineation measurements).
+
+## Overview
+
 The `planar-data-pointset` schema is a variant of the generic [pointset](pointset.md) schema. See that schema for general information.
 
 It enhances the base pointset by allowing planar data to be associated with each point.
@@ -30,10 +34,6 @@ This property has four sub-properties, two for the planar data and two from the 
 * `plane_polarity` - a boolean array with the *polarity* flags.
 * `coordinates` - an array property with the coordinates (xyz) of each point.
 * An optional [attribute list.](../../understanding-schemas/understanding-attributes.md)
-
-See also:
-- The base [pointset](pointset.md) documentation.
-- For a pointset with lineation measurements, see [lineations-data-pointset](lineations-data-pointset.md).
 
 ## Properties
 

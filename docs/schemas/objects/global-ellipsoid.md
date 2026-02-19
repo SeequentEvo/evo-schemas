@@ -8,6 +8,13 @@ import FlatProperties from '../generated/flatmd/objects/global-ellipsoid-1.2.0.m
 
 <SchemaUri uri="schema/objects/global-ellipsoid/1.2.0/global-ellipsoid.schema.json" />
 
+**Key components:**
+- [ellipsoid](../components/ellipsoid.md) — Single ellipsoid definition for anisotropy
+
+**See also:** [local-ellipsoids](local-ellipsoids.md) (per-element ellipsoids).
+
+## Overview
+
 The global-ellipsoid object captures the parameters of an ellipsoid. Such an object is typically used to represent the anisotropy or the main direction of continuity of spatial geological properties such as mineral grades, petrophysical properties, or lithology.
 
 An ellipsoid is defined by three lengths for the major, semi-major, and minor axes, rotated in space as defined by the rotation.

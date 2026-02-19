@@ -8,6 +8,10 @@ import FlatProperties from '../generated/flatmd/objects/lineations-data-pointset
 
 <SchemaUri uri="schema/objects/lineations-data-pointset/1.3.0/lineations-data-pointset.schema.json" />
 
+**See also:** [pointset](pointset.md) (base schema), [planar-data-pointset](planar-data-pointset.md) (planar orientation measurements).
+
+## Overview
+
 The `lineations-data-pointset` schema is a variant of the generic [pointset](pointset.md) schema. See that schema for general information.
 
 It enhances the base pointset by allowing lineation data to be associated with each point.
@@ -30,10 +34,6 @@ This property has three sub-properties, one with the lineation data and two from
 * `lineations` - a two column float array with the *trend* and *plunge* angles.
 * `coordinates` - an array property with the coordinates (xyz) of each point.
 * An optional [attribute list.](../../understanding-schemas/understanding-attributes.md)
-
-See also:
-- The base [pointset](pointset.md) documentation.
-- For a pointset with planar orientation measurements, see [planar-data-pointset](planar-data-pointset.md).
 
 ## Properties
 

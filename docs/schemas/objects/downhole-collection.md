@@ -8,6 +8,15 @@ import FlatProperties from '../generated/flatmd/objects/downhole-collection-1.3.
 
 <SchemaUri uri="schema/objects/downhole-collection/1.3.0/downhole-collection.schema.json" />
 
+**Key components:**
+- [hole-collars](../components/hole-collars.md) — Surface drillhole locations with 3D coordinates and depth
+- [desurvey-method](../components/desurvey-method.md) — Algorithm for calculating 3D drillhole paths from survey data
+- [downhole-attributes](../components/downhole-attributes.md) — Attributes associated with downhole locations
+- [downhole-direction-vector](../components/downhole-direction-vector.md) — Direction and length of downhole segments
+- [category-data](../components/category-data.md) — Lookup table mapping integer keys to category names
+
+**See also:** [drilling-campaign](drilling-campaign.md) (campaign-level), [downhole-intervals](downhole-intervals.md) (interval data).
+
 ## Overview
 
 ### Objective

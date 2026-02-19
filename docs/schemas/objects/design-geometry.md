@@ -8,6 +8,18 @@ import FlatProperties from '../generated/flatmd/objects/design-geometry-1.1.0.md
 
 <SchemaUri uri="schema/objects/design-geometry/1.1.0/design-geometry.schema.json" />
 
+**Key components:**
+- [geometry-part](../components/geometry-part.md) — Named parts within composite geometry
+- [lines-2d-indices](../components/lines-2d-indices.md) — 2D line segment endpoints with arc support
+- [lines-3d-indices](../components/lines-3d-indices.md) — 3D line segment endpoints
+- [material](../components/material.md) — Material properties including name, colour, and data source
+- [vertices-2d](../components/vertices-2d.md) — 2D vertex coordinates
+- [vertices-3d](../components/vertices-3d.md) — 3D vertex coordinates
+
+**See also:** [line-segments](line-segments.md) (3D line geometry), [triangle-mesh](triangle-mesh.md) (mesh geometry).
+
+## Overview
+
 A design geometry describes either a 2D planar or 3D geometry suitable for use in a numerical model. Design geometry objects can contain both geology and engineering objects like a plates or anchors.
 - A 3D geometry can contain 2D parts with an associated transform to place them in 3D space.
 - A 2D geometry does not support 3D parts. All parts of a 2D geometry should be on the same plane.

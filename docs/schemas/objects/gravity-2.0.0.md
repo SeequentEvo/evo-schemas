@@ -8,6 +8,14 @@ import FlatProperties from '../generated/flatmd/objects/gravity-2.0.0.md';
 
 <SchemaUri uri="schema/objects/gravity/2.0.0/gravity.schema.json" />
 
+**Key components:**
+- [survey-collection](../components/survey-collection.md) — Logical grouping of survey measurements
+- [survey-attribute-definition](../components/survey-attribute-definition.md) — Common properties for survey measurement attributes
+
+**See also:** [magnetics-2.0.0](magnetics-2.0.0.md) (magnetic surveys), [radiometric-2.0.0](radiometric-2.0.0.md) (radiometric surveys).
+
+## Overview
+
 A gravity object represents geolocated, time stamped gravity survey data. This is generally, but not exclusively, collected along nearly parallel lines. This type of data is used extensively in exploration for mineral resources, fundamental earth science mapping and other fields where the density of subsurface materials provides insight.
 
 The `type` parameter describes the survey mode (i.e., how the acquisition was carried out), and must take one of the values "GROUND", "AIR" or "MARINE".

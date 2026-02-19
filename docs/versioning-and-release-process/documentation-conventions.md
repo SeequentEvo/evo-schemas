@@ -42,6 +42,9 @@ import FlatProperties from '../generated/flatmd/objects/<name>-<version>.md';
 
 <SchemaUri uri="schema/objects/<name>/<version>/<name>.schema.json" />
 
+<!-- Key components (if object uses specialised components) -->
+<!-- See also (if related objects exist) -->
+
 <!-- Description -->
 
 ## Properties
@@ -111,7 +114,17 @@ Keep descriptions concise. The auto-generated property table already documents e
 
 ## Cross-referencing
 
-Cross-references help readers navigate between related schemas. There are two types:
+Cross-references help readers navigate between related schemas. There are three types:
+
+### "Key components" — composition references (objects only)
+
+Links from an object to the specialised components it composes, giving readers a forward-navigation path. Only include components specific to the object or a small family — skip ubiquitous components like `locations` or `scalar-attribute`:
+
+```markdown
+**Key components:**
+- [survey-collection](../components/survey-collection.md) — Logical grouping of survey measurements
+- [survey-attribute-definition](../components/survey-attribute-definition.md) — Common properties for survey measurement attributes
+```
 
 ### "See also" — peer references
 
@@ -131,7 +144,7 @@ Links from a schema to the schemas that directly reference it, one tier up (comp
 
 Skip "Used by" for schemas that are referenced so broadly that listing consumers adds noise rather than value (e.g., `base-spatial-data-properties`, `attribute-list-property`, most array elements).
 
-When both are present, "See also" comes first, then "Used by", then `## Properties`.
+When multiple cross-reference types are present, the ordering is: "Key components" first (objects only), then "See also", then "Used by" (components/elements only), then `## Properties`.
 
 ## Index pages
 

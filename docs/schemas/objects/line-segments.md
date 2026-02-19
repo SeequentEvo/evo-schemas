@@ -8,6 +8,13 @@ import FlatProperties from '../generated/flatmd/objects/line-segments-2.2.0.md';
 
 <SchemaUri uri="schema/objects/line-segments/2.2.0/line-segments.schema.json" />
 
+**Key components:**
+- [segments](../components/segments.md) — Line segments defined by vertex index pairs
+
+**See also:** [triangle-mesh](triangle-mesh.md) (surface geometry), [pointset](pointset.md) (vertices only).
+
+## Overview
+
 A collection of lines composed of straight segments.
 Often the collection will be broken down into connected linear structures called *strings* or *polylines*.  The [Parts](../../understanding-schemas/understanding-parts.md) mechanism can be used for capturing the details of that additional structure.
 

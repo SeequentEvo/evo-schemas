@@ -18,10 +18,7 @@ The size of the grid is specified in cells (see `size`), each of which has the s
 
 Fields `cell_attributes` and `vertex_attributes` accept a variety of scalar values (see One of Attribute component), attached to either the cells (of length `grid_size_x * grid_size_y`) or vertices (of length `[grid_size_x + 1] * [grid_size_y + 1]`).
 
-See also:
-
-- For a 3D grid, see [`regular-3d-grid`](regular-3d-grid.md).
-- For a 2D grid with variable cell sizes, see [`tensor-2d-grid`](tensor-2d-grid.md).
+**See also:** [regular-3d-grid](regular-3d-grid.md) (3D counterpart), [tensor-2d-grid](tensor-2d-grid.md) (variable cell sizes).
 
 ## Properties
 

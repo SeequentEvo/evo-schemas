@@ -8,6 +8,14 @@ import FlatProperties from '../generated/flatmd/objects/radiometric-1.2.0.md';
 
 <SchemaUri uri="schema/objects/radiometric/1.2.0/radiometric.schema.json" />
 
+**Key components:**
+- [survey-collection](../components/survey-collection.md) — Logical grouping of survey measurements
+- [survey-attribute-definition](../components/survey-attribute-definition.md) — Common properties for survey measurement attributes
+
+**See also:** [gravity-1.2.0](gravity-1.2.0.md) (gravity surveys), [magnetics-1.2.0](magnetics-1.2.0.md) (magnetic surveys).
+
+## Overview
+
 A radiometric object represents geolocated, time stamped radiometric survey data. Radiometric surveys measure naturally occurring radioactivity in the form of gamma-rays, which mostly originate from mineral species containing radioactive isotopes of Potassium (K), Uranium (U), and Thorium (Th). The gamma-rays emitted by different elements have different energy levels, and the number of counts at each energy level indicates the presence of that element. This type of survey is most often carried out alongside other geophysical methods (e.g., aeromagnetic surveys) to provide additional information about naturally occurring radioactive mineral species in the area.
 
 The `survey` object includes details about the survey type, which can be either "GROUND" or "AIR".

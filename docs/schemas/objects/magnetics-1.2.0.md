@@ -8,6 +8,14 @@ import FlatProperties from '../generated/flatmd/objects/magnetics-1.2.0.md';
 
 <SchemaUri uri="schema/objects/magnetics/1.2.0/magnetics.schema.json" />
 
+**Key components:**
+- [survey-collection](../components/survey-collection.md) — Logical grouping of survey measurements
+- [survey-attribute-definition](../components/survey-attribute-definition.md) — Common properties for survey measurement attributes
+
+**See also:** [gravity-1.2.0](gravity-1.2.0.md) (gravity surveys), [radiometric-1.2.0](radiometric-1.2.0.md) (radiometric surveys).
+
+## Overview
+
 A magnetics object represents geolocated, time stamped geomagnetic survey data. This data is used extensively in exploration for mineral resources, environmental investigations, fundamental earth science mapping, and other fields where the magnetic properties of subsurface materials provide insight.
 
 The `type` parameter describes the survey mode (i.e., how the acquisition was carried out), and must take one of the values "GROUND", "AIR" or "MARINE".

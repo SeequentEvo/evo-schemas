@@ -8,6 +8,14 @@ import FlatProperties from '../generated/flatmd/objects/geophysical-records-1d-1
 
 <SchemaUri uri="schema/objects/geophysical-records-1d/1.3.0/geophysical-records-1d.schema.json" />
 
+**Key components:**
+- [category-data](../components/category-data.md) — Lookup table mapping integer keys to category names
+- [lengths](../components/lengths.md) — Length values for segments or intervals
+
+**See also:** [resistivity-ip](resistivity-ip.md) (resistivity/IP surveys).
+
+## Overview
+
 The geophysical-records-1d object captures physical properties related to 1D geophysical records. These records are the product of geophysical inversion. These are composed of a series of 1D, vertical (columnar) datasets, each of which contains records (or dummy values) for a series of layers.
 
 To define the geophysical-records-1d object, the following properties are required:
