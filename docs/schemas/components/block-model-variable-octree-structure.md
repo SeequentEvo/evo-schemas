@@ -8,7 +8,9 @@ import FlatProperties from '../generated/flatmd/components/block-model-variable-
 The `block-model-variable-octree-structure` component defines the structure of a variable-octree subblocked model.
 
 Subblocking repeatedly splits blocks along each axis until there are a maximum of `n_subblocks_per_parent`
-subblocks. The number of splits can differ per axis, allowing anisotropic refinement.
+subblocks. The number of splits can differ per axis, allowing anisotropic refinement — for example,
+finer vertical resolution than horizontal. This is the most flexible subblocking strategy and is
+well suited to models that need multi-scale resolution adapted to complex geological boundaries.
 
 **Used by:** block-model.
 

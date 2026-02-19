@@ -8,7 +8,9 @@ import FlatProperties from '../generated/flatmd/components/block-model-fully-sub
 The `block-model-fully-subblocked-structure` component defines the structure of a fully-subblocked block model.
 
 Each parent block is either split into exactly the grid defined by `n_subblocks_per_parent`, or left whole.
-There is no partial subblocking — a block is either fully subdivided or not subdivided at all.
+There is no partial subblocking — a block is either fully subdivided or not subdivided at all. This
+all-or-nothing approach is simpler to implement than flexible subblocking and is appropriate when uniform
+subdivision within refined areas is acceptable.
 
 **Used by:** block-model.
 
