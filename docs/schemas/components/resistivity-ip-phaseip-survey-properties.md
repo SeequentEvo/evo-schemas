@@ -5,7 +5,9 @@ import FlatProperties from '../generated/flatmd/components/resistivity-ip-phasei
 
 <SchemaUri uri="schema/components/resistivity-ip-phaseip-survey-properties/1.0.0/resistivity-ip-phaseip-survey-properties.schema.json" />
 
-Survey properties specific to Phase Induced Polarization (PHASEIP) resistivity-IP surveys.
+Survey properties specific to Phase Induced Polarization (PHASEIP) resistivity-IP surveys. Phase IP
+measures the phase shift between injected current and measured voltage at a single frequency,
+providing an alternative chargeability indicator to the time-domain DCIP method.
 
 **Used by:** [resistivity-ip](../objects/resistivity-ip.md).
 

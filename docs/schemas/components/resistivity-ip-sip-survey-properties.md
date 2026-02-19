@@ -5,7 +5,10 @@ import FlatProperties from '../generated/flatmd/components/resistivity-ip-sip-su
 
 <SchemaUri uri="schema/components/resistivity-ip-sip-survey-properties/1.0.0/resistivity-ip-sip-survey-properties.schema.json" />
 
-Survey properties specific to Spectral Induced Polarization (SIP) resistivity-IP surveys.
+Survey properties specific to Spectral Induced Polarization (SIP) resistivity-IP surveys. SIP extends
+phase IP by measuring the complex impedance across a range of frequencies, allowing decomposition of
+the IP response into frequency-dependent components for more detailed characterisation of subsurface
+mineralogy.
 
 **Used by:** [resistivity-ip](../objects/resistivity-ip.md).
 

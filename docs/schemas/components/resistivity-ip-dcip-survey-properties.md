@@ -5,7 +5,9 @@ import FlatProperties from '../generated/flatmd/components/resistivity-ip-dcip-s
 
 <SchemaUri uri="schema/components/resistivity-ip-dcip-survey-properties/1.0.0/resistivity-ip-dcip-survey-properties.schema.json" />
 
-Survey properties specific to Direct Current Induced Polarization (DCIP) resistivity-IP surveys.
+Survey properties specific to Direct Current Induced Polarization (DCIP) resistivity-IP surveys. DCIP
+measures the voltage decay after a current injection is switched off, characterising the chargeability
+of the subsurface. This is the most common IP survey type in mineral exploration.
 
 **Used by:** [resistivity-ip](../objects/resistivity-ip.md).
 

@@ -5,7 +5,10 @@ import FlatProperties from '../generated/flatmd/components/resistivity-ip-plpl-c
 
 <SchemaUri uri="schema/components/resistivity-ip-plpl-configuration-properties/1.0.0/resistivity-ip-plpl-configuration-properties.schema.json" />
 
-Configuration properties for pole-pole electrode arrangements in resistivity-IP surveys.
+Configuration properties for pole-pole electrode arrangements in resistivity-IP surveys. In a pole-pole
+array, both a current electrode and a potential electrode are placed at large distances ("infinity"),
+leaving one current and one potential electrode as the active pair. This configuration provides the
+deepest penetration but the lowest spatial resolution.
 
 **Used by:** [resistivity-ip](../objects/resistivity-ip.md).
 

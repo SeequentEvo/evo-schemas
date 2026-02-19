@@ -5,7 +5,10 @@ import FlatProperties from '../generated/flatmd/components/resistivity-ip-pldp-c
 
 <SchemaUri uri="schema/components/resistivity-ip-pldp-configuration-properties/1.0.0/resistivity-ip-pldp-configuration-properties.schema.json" />
 
-Configuration properties for pole-dipole or offset pole-dipole electrode arrangements in resistivity-IP surveys.
+Configuration properties for pole-dipole or offset pole-dipole electrode arrangements in resistivity-IP
+surveys. In a pole-dipole array, one current electrode is placed at a large distance ("infinity"),
+while the other current electrode and a pair of potential electrodes form the measurement. This
+configuration offers a good balance between signal strength and lateral resolution.
 
 **Used by:** [resistivity-ip](../objects/resistivity-ip.md).
 
