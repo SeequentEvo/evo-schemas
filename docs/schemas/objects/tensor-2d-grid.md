@@ -8,7 +8,7 @@ import FlatProperties from '../generated/flatmd/objects/tensor-2d-grid-1.3.0.md'
 
 <SchemaUri uri="schema/objects/tensor-2d-grid/1.3.0/tensor-2d-grid.schema.json" />
 
-Represents a two-dimensional tensor grid where cells may have different sizes.
+Represents a two-dimensional tensor grid where cells may have different sizes. Tensor grids allow variable cell dimensions along each axis, making them suitable for problems that require local refinement (e.g., finer cells near a feature of interest) or stretched grids for geophysical modelling. For uniform cell sizes, use a [regular-2d-grid](regular-2d-grid.md) instead.
 
 The grid implements spatial properties including a coordinate reference system and bounding box in world coordinates.
 

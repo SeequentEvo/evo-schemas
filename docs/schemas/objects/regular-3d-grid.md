@@ -8,7 +8,7 @@ import FlatProperties from '../generated/flatmd/objects/regular-3d-grid-1.3.0.md
 
 <SchemaUri uri="schema/objects/regular-3d-grid/1.3.0/regular-3d-grid.schema.json" />
 
-Represents a regularly-sampled three-dimensional grid (i.e., image) and data attached to the cells and vertices.
+Represents a regularly-sampled three-dimensional grid (i.e., image) and data attached to the cells and vertices. Regular grids have uniform cell dimensions throughout — use a [tensor-3d-grid](tensor-3d-grid.md) when variable cell sizes are needed (e.g., for local refinement or stretched grids).
 
 The grid implements spatial properties including a coordinate reference system and bounding box in world coordinates.
 
