@@ -23,7 +23,7 @@ import FlatProperties from '../generated/flatmd/objects/variogram-1.2.0.md';
 
 The variogram object captures the parameters of variogram models as used in geostatistical analysis and modelling. A variogram describes the degree of spatial dependence of properties such as mineral grades, porosity, or petrophysical properties. It is used to quantify how data points are related to each other based on their spatial separation and direction.
 
-A variogram is required anytime one uses the Kriging family of algorithms, including most geostatistical conditional simulations and non-linear estimation methods such as LUC and MIK.
+A variogram is required anytime one uses the Kriging family of algorithms (a group of geostatistical interpolation methods that produce optimal predictions by weighting nearby samples according to their spatial correlation), including most geostatistical conditional simulations (stochastic models that honour both the data values and the spatial statistics) and non-linear estimation methods such as LUC (Local Uniform Conditioning) and MIK (Multiple Indicator Kriging).
 
 The variogram model object can be composed of several structures. Each structure is independently composed of a type (e.g., spherical, exponential) and an anisotropy (ranges, sill and rotation angles).
 

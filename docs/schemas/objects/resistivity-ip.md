@@ -27,12 +27,12 @@ The `number_of_dimensions` parameter describes the survey dimension and can take
 The `number_contributing_electrodes` parameter indicates the number of contributing electrodes, excluding remote electrodes.
 
 The `survey` object includes details about the survey type, which can be one of the following:
-- DCIP (Direct Current Induced Polarization): Includes timing information, duty cycle, and number of pulses per recording
+- DCIP (Direct Current Induced Polarization): Measures the voltage decay after current injection is switched off, characterising subsurface chargeability. Includes timing information, duty cycle, and number of pulses per recording
 - SIP (Spectral Induced Polarization): Specifies a list of frequencies used during measurement
 - PHASEIP (Phased Induced Polarization): Specifies a list of frequencies used during measurement
 - DCRES (Direct Current Resistivity)
 
-The `configuration` object includes details about the survey configuration, as well as location information for the remote survey elements in the case of Pole-Dipole (transmitter) or Pole-Pole (transmitter and receiver).
+The `configuration` object includes details about the survey configuration, as well as location information for the remote survey elements in the case of Pole-Dipole (one current electrode at "infinity", offering good lateral resolution) or Pole-Pole (both a current and potential electrode at "infinity", offering the deepest penetration but lowest resolution).
 
 The `line_list` array includes one or more resistivity-IP line definitions, including the `group_number`, `date`, `station`, `number_of_electrodes`, and `channel_attributes`.
 

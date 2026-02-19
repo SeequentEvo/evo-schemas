@@ -42,7 +42,7 @@ A list of planar cross sections. Each cross section contains a set of volumes an
 
 ### `volumes` *array*
 
-A list of polygon volumes. Each volume consists of one or more connected polyline parts which together represent a closed polygon (a ring). Holes in a volume can optionally be represented using a set of internal rings, where each ring is a non-intersected hole in the volume. Holes can also be represented using an overlapping volume in a different layer.
+A list of polygon volumes. Each volume consists of one or more connected polyline parts which together represent a closed polygon (a *ring* — a closed loop of line segments that defines a boundary). Holes in a volume can optionally be represented using a set of internal rings, where each internal ring defines a hole (void) within the outer boundary. Holes can also be represented using an overlapping volume in a different layer.
 
 * `name` : Volume name
 
@@ -113,7 +113,7 @@ If indices are defined
 
 ### `materials` *array*
 
-[Materials](../components/material) associated with volumes or surfaces. 
+[Materials](../components/material.md) associated with volumes or surfaces. 
 
 ### `layer_order` *array*
 

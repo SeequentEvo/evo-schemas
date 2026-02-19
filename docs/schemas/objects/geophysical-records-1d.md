@@ -16,7 +16,7 @@ import FlatProperties from '../generated/flatmd/objects/geophysical-records-1d-1
 
 ## Overview
 
-The geophysical-records-1d object captures physical properties related to 1D geophysical records. These records are the product of geophysical inversion. These are composed of a series of 1D, vertical (columnar) datasets, each of which contains records (or dummy values) for a series of layers.
+The geophysical-records-1d object captures physical properties related to 1D geophysical records. These records are typically the product of geophysical inversion (the process of estimating subsurface physical properties from measured geophysical data). They are composed of a series of 1D, vertical columnar datasets — each column represents a stack of layers at a single surface location, with a property value (e.g., resistivity, density, susceptibility) assigned to each layer.
 
 To define the geophysical-records-1d object, the following properties are required:
 
