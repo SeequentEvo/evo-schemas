@@ -8,6 +8,8 @@ import FlatProperties from '../generated/flatmd/components/fiducial-description-
 The `fiducial-description` component defines a fiducial — a value that uniquely describes data acquired at a
 specific instance along a survey line. Fiducials serve as spatial reference markers in geophysical surveys.
 
+**Used by:** [survey-attribute](survey-attribute.md), [survey-collection](survey-collection.md).
+
 ## Properties
 
 <FlatProperties />

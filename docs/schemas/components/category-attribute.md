@@ -15,6 +15,8 @@ Values are stored as integers that index into a lookup table (via [category-data
 
 See [Understanding attributes](../../understanding-schemas/understanding-attributes.md) for more detail.
 
+**Used by:** [channel-attribute](channel-attribute.md), [one-of-attribute](one-of-attribute.md).
+
 ## Properties
 
 <FlatProperties />

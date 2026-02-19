@@ -14,6 +14,8 @@ The `attribute-description` component provides general metadata for a continuous
 * `extensions` — An optional map for application-specific metadata.
 * `tags` — An optional list of tags.
 
+**Used by:** [non-parametric-continuous-cumulative-distribution](../objects/non-parametric-continuous-cumulative-distribution.md).
+
 ## Properties
 
 <FlatProperties />

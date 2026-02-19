@@ -12,6 +12,8 @@ The `brep-container` component stores a Boundary Representation (BRep) model alo
 * `brep` — The BRep data (as blob storage).
 * `discretized_brep` — An optional discretised (triangulated) representation of the BRep.
 
+**Used by:** [geometry-composite](geometry-composite.md).
+
 ## Properties
 
 <FlatProperties />

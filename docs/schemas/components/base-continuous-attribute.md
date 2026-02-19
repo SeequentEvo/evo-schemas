@@ -14,6 +14,8 @@ This is the base for continuous-valued attribute types including [continuous-att
 [integer-attribute](integer-attribute.md), [date-time-attribute](date-time-attribute.md),
 [vector-attribute](vector-attribute.md), and [indices-attribute](indices-attribute.md).
 
+**Used by:** [block-model-attribute](block-model-attribute.md), [bool-time-series](bool-time-series.md), [color-attribute](color-attribute.md), [continuous-attribute](continuous-attribute.md), [continuous-ensemble](continuous-ensemble.md), [continuous-time-series](continuous-time-series.md), [date-time-attribute](date-time-attribute.md), [indices-attribute](indices-attribute.md), [integer-attribute](integer-attribute.md), [string-attribute](string-attribute.md), [time-step-continuous-attribute](time-step-continuous-attribute.md), [time-step-date-time-attribute](time-step-date-time-attribute.md), [vector-attribute](vector-attribute.md).
+
 **See also:** [base-category-attribute](base-category-attribute.md) (categorical counterpart).
 
 ## Properties

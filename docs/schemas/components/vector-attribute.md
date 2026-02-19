@@ -11,6 +11,8 @@ A vector attribute stores N-dimensional vectors. It uses `attribute_type = "vect
 * `nan_description` — A [nan-continuous](nan-continuous.md) component defining how NaN values are interpreted.
 * Inherits from [base-continuous-attribute](base-continuous-attribute.md).
 
+**Used by:** [one-of-attribute](one-of-attribute.md).
+
 ## Properties
 
 <FlatProperties />

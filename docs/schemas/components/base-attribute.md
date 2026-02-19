@@ -13,6 +13,8 @@ The `base-attribute` component defines the three properties common to all attrib
 
 All attribute schemas compose this component via `allOf`.
 
+**Used by:** [base-category-attribute](base-category-attribute.md), [base-continuous-attribute](base-continuous-attribute.md).
+
 ## Properties
 
 <FlatProperties />

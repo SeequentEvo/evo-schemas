@@ -9,6 +9,8 @@ The `continuous-ensemble` component stores an ensemble of continuous-valued real
 is a separate set of values over the same geometric elements, enabling uncertainty quantification and
 probabilistic analysis.
 
+**Used by:** [channel-attribute](channel-attribute.md), [one-of-attribute](one-of-attribute.md).
+
 **See also:** [category-ensemble](category-ensemble.md) (categorical counterpart).
 
 ## Properties

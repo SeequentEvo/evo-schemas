@@ -11,6 +11,8 @@ The `surface-mesh` component describes a triangulated surface mesh.
 * `quality` — An optional [mesh-quality](mesh-quality.md) component specifying quality guarantees.
 * `triangles` — An index array of vertex triplets defining the mesh triangles (0-based indices).
 
+**Used by:** [brep-container](brep-container.md), [geometry-composite](geometry-composite.md).
+
 ## Properties
 
 <FlatProperties />

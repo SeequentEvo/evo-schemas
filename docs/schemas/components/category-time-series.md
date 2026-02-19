@@ -8,6 +8,8 @@ import FlatProperties from '../generated/flatmd/components/category-time-series-
 A category time-series attribute stores categorical values that vary over time. Each time step has a
 corresponding set of categorical assignments.
 
+**Used by:** [one-of-attribute](one-of-attribute.md).
+
 **See also:** [continuous-time-series](continuous-time-series.md), [bool-time-series](bool-time-series.md).
 
 ## Properties

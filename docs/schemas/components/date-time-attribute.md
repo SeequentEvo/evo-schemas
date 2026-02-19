@@ -11,6 +11,8 @@ A date-time attribute stores a range of timestamps. It uses `attribute_type = "d
 * `nan_description` — A [nan-continuous](nan-continuous.md) component defining how NaN values are interpreted.
 * Inherits from [base-continuous-attribute](base-continuous-attribute.md).
 
+**Used by:** [channel-attribute](channel-attribute.md), [one-of-attribute](one-of-attribute.md).
+
 ## Properties
 
 <FlatProperties />

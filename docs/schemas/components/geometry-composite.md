@@ -14,6 +14,8 @@ The `geometry-composite` component groups multiple geometry types into a single 
 * `points_3d` — Optional 3D point coordinates.
 * `polylines_3d` — Optional 3D polylines.
 
+**Used by:** [geometry-part](geometry-part.md).
+
 ## Properties
 
 <FlatProperties />

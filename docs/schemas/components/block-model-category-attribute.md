@@ -10,6 +10,8 @@ A block model category attribute extends the categorical attribute system for us
 This component composes [base-category-attribute](base-category-attribute.md) and [category-data](category-data.md)
 with block-model-specific value storage.
 
+**Used by:** block-model.
+
 **See also:** [block-model-attribute](block-model-attribute.md) (continuous counterpart).
 
 ## Properties

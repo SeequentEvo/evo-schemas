@@ -12,6 +12,8 @@ The `polyline-2d` component describes a 2D polyline, defined as a contiguous seq
 * `closed` — Whether the polyline forms a closed loop.
 * `shape` — The shape type of the polyline.
 
+**Used by:** [geometry-composite](geometry-composite.md).
+
 **See also:** [polyline-3d](polyline-3d.md) (3D counterpart).
 
 ## Properties

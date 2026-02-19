@@ -8,6 +8,8 @@ import FlatProperties from '../generated/flatmd/components/relative-planar-data-
 The `relative-planar-data-table` component stores planar orientation measurement data relative to a drillhole,
 combining depth intervals with planar orientations (dip/dip-azimuth).
 
+**Used by:** [downhole-collection](../objects/downhole-collection.md).
+
 **See also:** [planar-data](planar-data.md) (absolute variant), [relative-lineation-data-table](relative-lineation-data-table.md).
 
 ## Properties

@@ -31,6 +31,8 @@ The supported attribute types are:
 See [Understanding attributes](../../understanding-schemas/understanding-attributes.md) for guidance on how
 attributes are associated with geometry.
 
+**Used by:** [geological-model-meshes](../objects/geological-model-meshes.md), [geological-sections](../objects/geological-sections.md), [regular-2d-grid](../objects/regular-2d-grid.md), [regular-3d-grid](../objects/regular-3d-grid.md), [regular-masked-3d-grid](../objects/regular-masked-3d-grid.md), [tensor-2d-grid](../objects/tensor-2d-grid.md), [tensor-3d-grid](../objects/tensor-3d-grid.md).
+
 ## Properties
 
 <FlatProperties />

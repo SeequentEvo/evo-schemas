@@ -12,6 +12,8 @@ It supports three representations, exactly one of which must be provided:
 * `ogc_wkt` — A [WKT2](https://www.ogc.org/standards/wkt-crs) string representation of the CRS.
 * An unspecified CRS (no properties), used when the coordinate reference system is unknown or not applicable.
 
+**Used by:** [base-spatial-data-properties](base-spatial-data-properties.md).
+
 ## Properties
 
 <FlatProperties />

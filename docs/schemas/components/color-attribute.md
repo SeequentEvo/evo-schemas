@@ -10,6 +10,8 @@ A colour attribute stores colour values encoded as ABGR integers. It uses `attri
 * `values` — An array of ABGR-encoded integer colour values, one per geometric element.
 * Inherits from [base-continuous-attribute](base-continuous-attribute.md).
 
+**Used by:** [one-of-attribute](one-of-attribute.md).
+
 ## Properties
 
 <FlatProperties />

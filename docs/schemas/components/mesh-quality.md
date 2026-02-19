@@ -19,6 +19,8 @@ The quality can be one or more of:
 - "NonSelfIntersecting": No element in a mesh intersects another.
 - "Continuous": Adjacent elements share nodes.
 
+**Used by:** [embedded-mesh-object](embedded-mesh-object.md), [embedded-triangulated-mesh](embedded-triangulated-mesh.md), [surface-mesh](surface-mesh.md).
+
 ## Properties
 
 <FlatProperties />

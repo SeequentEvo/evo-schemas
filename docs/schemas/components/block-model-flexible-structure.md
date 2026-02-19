@@ -11,6 +11,8 @@ Subblocking divides each parent block into a fixed grid defined by `n_subblocks_
 subblocks into larger chunks. The resulting subblocks can have different sizes within the same parent block,
 but must remain cuboid and completely fill the parent block.
 
+**Used by:** block-model.
+
 **See also:** [block-model-regular-structure](block-model-regular-structure.md), [block-model-fully-subblocked-structure](block-model-fully-subblocked-structure.md), [block-model-variable-octree-structure](block-model-variable-octree-structure.md) (alternative structures).
 
 ## Properties

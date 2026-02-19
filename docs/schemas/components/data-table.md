@@ -12,6 +12,8 @@ that does not correspond directly to a geometric property.
 * `collection_type` — Always `"data"` (a constant discriminator).
 * `attributes` — An optional list of attributes (via [one-of-attribute](one-of-attribute.md)).
 
+**Used by:** [downhole-collection](../objects/downhole-collection.md).
+
 **See also:** [interval-table](interval-table.md), [distance-table](distance-table.md) (specialised table types), [downhole-attributes](downhole-attributes.md) (drilling context).
 
 ## Properties

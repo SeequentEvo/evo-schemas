@@ -12,6 +12,8 @@ to attach optional attribute data.
 See [Understanding attributes](../../understanding-schemas/understanding-attributes.md) for how attribute lists
 work in practice.
 
+**Used by:** Most object schemas.
+
 ## Properties
 
 <FlatProperties />

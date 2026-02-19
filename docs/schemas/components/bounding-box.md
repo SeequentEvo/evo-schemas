@@ -13,6 +13,8 @@ The `bounding-box` component defines the geographic extents of a spatial dataset
 
 All six fields are required.
 
+**Used by:** [base-spatial-data-properties](base-spatial-data-properties.md), [geometry-part](geometry-part.md).
+
 ## Properties
 
 <FlatProperties />

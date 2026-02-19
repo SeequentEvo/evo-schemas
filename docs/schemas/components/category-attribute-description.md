@@ -15,6 +15,8 @@ The `category-attribute-description` component provides general metadata for a c
 This is the categorical counterpart to [attribute-description](attribute-description.md), without `unit`
 and `scale` fields (which are not meaningful for categories).
 
+**Used by:** [base-category-attribute](base-category-attribute.md), [bool-attribute](bool-attribute.md), [category-attribute](category-attribute.md), [category-ensemble](category-ensemble.md), [category-time-series](category-time-series.md).
+
 ## Properties
 
 <FlatProperties />

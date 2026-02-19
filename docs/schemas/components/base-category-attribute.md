@@ -12,6 +12,8 @@ that provides metadata such as discipline and type.
 This is the base for categorical attribute types including [category-attribute](category-attribute.md)
 and [bool-attribute](bool-attribute.md).
 
+**Used by:** [block-model-category-attribute](block-model-category-attribute.md), [bool-attribute](bool-attribute.md), [category-attribute](category-attribute.md), [category-ensemble](category-ensemble.md), [category-time-series](category-time-series.md).
+
 **See also:** [base-continuous-attribute](base-continuous-attribute.md) (continuous counterpart).
 
 ## Properties

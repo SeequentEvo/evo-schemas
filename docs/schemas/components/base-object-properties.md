@@ -17,6 +17,8 @@ The core fields are:
 * `tags` — An optional list of tags for categorisation.
 * `lineage` — An optional [lineage](lineage.md) component recording the provenance of the object.
 
+**Used by:** [experimental-variogram](../objects/experimental-variogram.md), [variogram](../objects/variogram.md).
+
 ## Properties
 
 <FlatProperties />

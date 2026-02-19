@@ -11,6 +11,8 @@ An integer attribute stores a range of integer values. It uses `attribute_type =
 * `nan_description` — A [nan-continuous](nan-continuous.md) component defining how NaN values are interpreted.
 * Inherits from [base-continuous-attribute](base-continuous-attribute.md).
 
+**Used by:** [one-of-attribute](one-of-attribute.md).
+
 ## Properties
 
 <FlatProperties />

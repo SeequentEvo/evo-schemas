@@ -11,6 +11,8 @@ An indices attribute stores index references to elements of a related object. It
 * `related_object` — A reference to the object whose elements are indexed.
 * Inherits from [base-continuous-attribute](base-continuous-attribute.md).
 
+**Used by:** [one-of-attribute](one-of-attribute.md).
+
 ## Properties
 
 <FlatProperties />

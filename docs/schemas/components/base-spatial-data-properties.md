@@ -13,6 +13,8 @@ In addition to the inherited fields (name, uuid, description, etc.), it adds:
 * `bounding_box` — The geographic [bounding box](bounding-box.md) of the spatial data.
 * `coordinate_reference_system` — The [coordinate reference system](crs.md) in which the object's spatial data is defined.
 
+**Used by:** Most object schemas.
+
 ## Properties
 
 <FlatProperties />

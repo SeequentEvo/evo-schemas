@@ -8,6 +8,8 @@ import FlatProperties from '../generated/flatmd/components/time-step-date-time-a
 The `time-step-date-time-attribute` component represents a time step defined by a specific timestamp,
 with associated date-time values.
 
+**Used by:** [time-step-attribute](time-step-attribute.md).
+
 **See also:** [time-step-attribute](time-step-attribute.md) (base), [time-step-continuous-attribute](time-step-continuous-attribute.md) (elapsed-time variant).
 
 ## Properties

@@ -13,6 +13,8 @@ The `locations` component represents a set of point coordinates in 3D space. It 
 Attributes can be associated with locations via the optional attribute list (see
 [Understanding attributes](../../understanding-schemas/understanding-attributes.md)).
 
+**Used by:** [downhole-collection](../objects/downhole-collection.md), [downhole-intervals](../objects/downhole-intervals.md), [geophysical-records-1d](../objects/geophysical-records-1d.md), [lineations-data-pointset](../objects/lineations-data-pointset.md), [local-ellipsoids](../objects/local-ellipsoids.md), [planar-data-pointset](../objects/planar-data-pointset.md), [pointset](../objects/pointset.md).
+
 ## Properties
 
 <FlatProperties />

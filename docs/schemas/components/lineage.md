@@ -17,6 +17,8 @@ and what data sources contributed to it. The schema is based on a subset of the
 * `self_link` — An optional self-referencing link for the object.
 * `events` — A list of run events describing segments of the input lineage graph.
 
+**Used by:** [base-object-properties](base-object-properties.md).
+
 ## Properties
 
 <FlatProperties />
