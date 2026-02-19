@@ -11,9 +11,9 @@ The `lines-2d-indices` component describes endpoints for 2D line segments. Each 
 * `end` — Index into the 2D vertices for the line end.
 * `arcCenter` — The counter-clockwise signed distance from the line centre to the arc edge, enabling curved segments.
 
-**See also:** [lines-3d-indices](lines-3d-indices.md) (3D counterpart).
-
 **Used by:** [design-geometry](../objects/design-geometry.md).
+
+**See also:** [lines-3d-indices](lines-3d-indices.md) (3D counterpart).
 
 ## Properties
 

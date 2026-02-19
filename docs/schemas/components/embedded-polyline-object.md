@@ -12,9 +12,9 @@ within an [embedded-line-geometry](embedded-line-geometry.md).
 * `description` — An optional description.
 * `parts` — A list of part references into the parent line geometry.
 
-**See also:** [embedded-mesh-object](embedded-mesh-object.md) (mesh equivalent).
-
 **Used by:** [geological-sections](../objects/geological-sections.md).
+
+**See also:** [embedded-mesh-object](embedded-mesh-object.md) (mesh equivalent).
 
 ## Properties
 

@@ -11,9 +11,9 @@ The `embedded-triangulated-mesh` component represents a triangulated mesh that c
 * `triangles` — A [triangles](triangles.md) component defining the mesh geometry.
 * `parts` — An optional list of [geometry-part](geometry-part.md) components, each referencing a subset of the mesh.
 
-**See also:** [embedded-line-geometry](embedded-line-geometry.md) (polyline equivalent), [embedded-mesh-object](embedded-mesh-object.md).
-
 **Used by:** [triangle-mesh](../objects/triangle-mesh.md), [geological-model-meshes](../objects/geological-model-meshes.md).
+
+**See also:** [embedded-line-geometry](embedded-line-geometry.md) (polyline equivalent), [embedded-mesh-object](embedded-mesh-object.md).
 
 ## Properties
 

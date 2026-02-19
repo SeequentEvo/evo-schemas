@@ -7,9 +7,9 @@ import FlatProperties from '../generated/flatmd/elements/color-array-1.0.1.md';
 
 Array of 32-bit colour values stored as unsigned 32-bit integers. Each value packs ABGR channels (alpha, blue, green, red). Used for per-element colour data in attributes and survey data.
 
-**See also:** [color](color.md) (single value).
-
 **Used by:** [color-attribute](../components/color-attribute.md), [survey-attribute](../components/survey-attribute.md).
+
+**See also:** [color](color.md) (single value).
 
 ## Properties
 

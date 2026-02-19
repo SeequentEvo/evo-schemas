@@ -11,9 +11,9 @@ the attribute name, spatial offset, and description.
 This is used by geophysical survey schemas (e.g., [gravity](../objects/gravity-2.0.0.md), [magnetics](../objects/magnetics-2.0.0.md))
 to describe the measurements collected.
 
-**See also:** [survey-attribute](survey-attribute.md).
+**Used by:** [drilling-campaign](../objects/drilling-campaign.md), [gravity](../objects/gravity-2.0.0.md), [magnetics](../objects/magnetics-2.0.0.md), [radiometric](../objects/radiometric-2.0.0.md).
 
-**Used by:** [gravity](../objects/gravity-2.0.0.md), [magnetics](../objects/magnetics-2.0.0.md), [radiometric](../objects/radiometric-2.0.0.md).
+**See also:** [survey-attribute](survey-attribute.md).
 
 ## Properties
 

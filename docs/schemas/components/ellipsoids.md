@@ -8,9 +8,9 @@ import FlatProperties from '../generated/flatmd/components/ellipsoids-1.0.1.md';
 The `ellipsoids` component stores a collection of ellipsoid definitions, typically one per spatial location
 or cell, used to describe spatially varying anisotropy.
 
-**See also:** [ellipsoid](ellipsoid.md) (single definition).
-
 **Used by:** [local-ellipsoids](../objects/local-ellipsoids.md).
+
+**See also:** [ellipsoid](ellipsoid.md) (single definition).
 
 ## Properties
 

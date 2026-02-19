@@ -144,7 +144,7 @@ Links from a schema to the schemas that directly reference it, one tier up (comp
 
 Skip "Used by" for schemas that are referenced so broadly that listing consumers adds noise rather than value (e.g., `base-spatial-data-properties`, `attribute-list-property`, most array elements).
 
-When multiple cross-reference types are present, the ordering is: "Key components" first (objects only), then "See also", then "Used by" (components/elements only), then `## Properties`.
+When multiple cross-reference types are present, the ordering is: "Key components" (objects only) → "Used by" (components/elements only) → "See also" → `## Properties`. Structural relationships (composition and consumption) take precedence over the less-structured associative "See also" links.
 
 ## Index pages
 

@@ -12,9 +12,9 @@ The `lines-3d-indices` component describes endpoints for 3D line segments. Each 
 
 Unlike 2D lines, curved segments in 3D are represented via a 2D segment with a transform, or via a BREP.
 
-**See also:** [lines-2d-indices](lines-2d-indices.md) (2D counterpart).
-
 **Used by:** [design-geometry](../objects/design-geometry.md).
+
+**See also:** [lines-2d-indices](lines-2d-indices.md) (2D counterpart).
 
 ## Properties
 

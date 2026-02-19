@@ -11,9 +11,9 @@ The `embedded-line-geometry` component represents a set of polylines composed of
 * `chunks` — Offset and count information defining individual polylines within the vertex array.
 * `indices` — Optional connectivity indices.
 
-**See also:** [embedded-triangulated-mesh](embedded-triangulated-mesh.md) (mesh equivalent), [embedded-polyline-object](embedded-polyline-object.md).
-
 **Used by:** [geological-sections](../objects/geological-sections.md).
+
+**See also:** [embedded-triangulated-mesh](embedded-triangulated-mesh.md) (mesh equivalent), [embedded-polyline-object](embedded-polyline-object.md).
 
 ## Properties
 
