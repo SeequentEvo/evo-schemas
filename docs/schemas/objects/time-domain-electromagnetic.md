@@ -20,8 +20,6 @@ A time-domain electromagnetic (TDEM) object represents geolocated, time-stamped 
 
 Electromagnetic (EM) methods do not require direct contact with the ground.  EM methods use the phenomenon of electromagnetic induction to create a subsurface current flow, then measure its dissipation.  This provides information about the electrical conductivity/chargeability of the subsurface, by measuring the ease with which induced electrical currents flow in the subsurface and the rate at which the electrical chargeability discharges at rock unit boundaries. Rather than the rock units, it is the porosity and the content in the pores space that influence the conductivity of the rock. EM methods provide a measure of the geometry, dimension and electrical characteristics of the source of the anomalous response.
 
-Electromagnetic (EM) methods do not require direct contact with the ground.  EM methods use the phenomenon of electromagnetic induction to create a subsurface current flow, then measure its dissipation.  EM methods provide information about the electrical conductivity/chargeability of the subsurface, by measuring the ease with which induced electrical currents flow in the subsurface and the rate at which the electrical chargeability discharges at rock unit boundaries. Rather than the rock units, it is the porosity and the content in the pores space that influence the conductivity of the rock.  EM methods provide a measure of the geometry, dimension and electrical characteristics of the source of the anomalous response.
-
 The `survey` object includes details about the survey type, which can be one of the following:
 - GROUND
 - AIR
