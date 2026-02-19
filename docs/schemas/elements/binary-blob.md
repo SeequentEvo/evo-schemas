@@ -7,6 +7,8 @@ import FlatProperties from '../generated/flatmd/elements/binary-blob-1.0.1.md';
 
 Reference to binary data storage. Accepts a file hash (64-character hex string), a UUID, or null (no data). This is the foundational storage primitive — all array elements reference a `binary-blob` for their `data` property.
 
+**See also:** [float-array-md](float-array-md.md) (floating-point arrays), [integer-array-md](integer-array-md.md) (integer arrays), [string-array](string-array.md) (string arrays), [lookup-table](lookup-table.md) (key-value mapping).
+
 ## Properties
 
 <FlatProperties />
