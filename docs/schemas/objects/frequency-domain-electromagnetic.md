@@ -31,7 +31,7 @@ To define the frequency domain electromagnetic object, the following properties 
 Each channel entry contains information about the:
 
 - Channel ID (integer)
-- The standard deviations for quadrature and in-phase measurements
+- The standard deviations for quadrature and in-phase measurements (the two components of the complex electromagnetic response: in-phase is the component in sync with the transmitted signal, quadrature is the 90°-shifted component)
 - The configuration of the coils used in the survey.
 - The GPS location of the survey.
 
