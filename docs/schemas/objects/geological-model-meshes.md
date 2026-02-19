@@ -105,7 +105,7 @@ A set of triangulated mesh parts in 3D space. [Parts](../../understanding-schema
     - The chunk offset/count points to a range of indices in the indices table. Each index in the indices table points to vertices.
 
 ## `materials` *array*
- [Materials](../components/material) referenced by volumes and surfaces.
+ [Materials](../components/material.md) referenced by volumes and surfaces.
 
 ## Properties
 
