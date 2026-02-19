@@ -59,19 +59,19 @@ Orientation measurements at point locations — lineation and planar data for st
 
 Geophysical survey data across multiple measurement types — potential fields, electromagnetic, and resistivity-IP.
 
-* Gravity — potential-field gravity survey data
+* Gravity — subsurface density variations measured via gravitational acceleration
   * [1.2.0](gravity-1.2.0.md)
   * [2.0.0](gravity-2.0.0.md)
-* Magnetics — magnetic field survey data
+* Magnetics — subsurface magnetic susceptibility measured via geomagnetic field variations
   * [1.2.0](magnetics-1.2.0.md)
   * [2.0.0](magnetics-2.0.0.md)
-* Radiometric — radiometric survey data
+* Radiometric — natural gamma-ray emissions from K, U, and Th isotopes
   * [1.2.0](radiometric-1.2.0.md)
   * [2.0.0](radiometric-2.0.0.md)
-* [Resistivity-IP](resistivity-ip.md) — resistivity and induced polarisation data
-* [Frequency-domain electromagnetic](frequency-domain-electromagnetic.md) — FDEM survey data
-* [Time-domain electromagnetic](time-domain-electromagnetic.md) — TDEM survey data
-* [Geophysical records 1D](geophysical-records-1d.md) — 1D geophysical records
+* [Resistivity-IP](resistivity-ip.md) — subsurface electrical resistivity and chargeability
+* [Frequency-domain electromagnetic](frequency-domain-electromagnetic.md) — FDEM survey data (complex impedance at discrete frequencies)
+* [Time-domain electromagnetic](time-domain-electromagnetic.md) — TDEM survey data (transient decay after current shutoff)
+* [Geophysical records 1D](geophysical-records-1d.md) — 1D columnar inversion products
 
 ## Geostatistics
 

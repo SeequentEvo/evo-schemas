@@ -2,6 +2,8 @@
 
 Geoscience object schemas define the data structures used in the Evo platform. The schema hierarchy is organised into three tiers — objects, components, and elements — each documented in its own section below.
 
+**Where to start:** Data producers and consumers should begin with [object schemas](objects/index.md) — these are the top-level entities you create and exchange. Implementers building serialisation or storage layers may prefer to start with [element schemas](elements/index.md) (the binary primitives) and work upward through [components](components/index.md).
+
 ## [Object schemas](objects/index.md)
 
 Objects are the top-level data structures — the entities that consumers create, read, and exchange. Each object describes a complete geoscience dataset, organised into the following categories:
