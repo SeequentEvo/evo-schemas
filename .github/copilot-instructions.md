@@ -140,7 +140,7 @@ The `_category_.json` files in doc directories control Docusaurus sidebar labels
 
 ### Schema documentation pages
 
-Each schema object has a corresponding doc page in `docs/schemas/`. Use `docs/schemas/pointset.md` as the canonical template when writing a new page. The standard structure is:
+Each schema object has a corresponding doc page in `docs/schemas/objects/`. Use `docs/schemas/objects/pointset.md` as the canonical template when writing a new page. The standard structure is:
 
 ```mdx
 import OverlineWithVersion from '@theme/OverlineWithVersion';

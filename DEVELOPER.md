@@ -39,7 +39,7 @@ Documentation for the Geoscience Object Schemas is authored in the `docs/` direc
 
 As a contributor, your responsibility is to ensure the documentation in `docs/` is correct and complete. This includes:
 
-- Writing or updating schema doc pages in `docs/schemas/` (see `docs/schemas/pointset.md` as the canonical template).
+- Writing or updating schema doc pages in `docs/schemas/` (see `docs/schemas/objects/pointset.md` as the canonical template).
 - Adding new schemas to the listing in `docs/schemas/index.md`.
 - Regenerating auto-generated content (`make generate-schema-docs`) after schema changes.
 - Never editing files in `docs/schemas/generated/` directly — they are overwritten by the generation tool.

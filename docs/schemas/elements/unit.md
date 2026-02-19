@@ -172,4 +172,4 @@ The categories are organised by physical dimension:
 
 - `unit-currency` — monetary value
 
-For the complete list of supported unit strings within each category, refer to the [schema source](schema/elements/unit/1.0.1/unit.schema.json).
+For the complete list of supported unit strings within each category, refer to the schema source.
