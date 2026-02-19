@@ -12,7 +12,7 @@ import FlatProperties from '../generated/flatmd/objects/experimental-variogram-1
 
 ## Overview
 
-The experimental-variogram object is used to capture spatial variability of univariate data acorss an area of interest. Spatial variability is described by direction and summarized per each lag in a direction. 
+The experimental-variogram object is used to capture spatial variability of univariate data across an area of interest. Spatial variability is described by direction and summarized per each lag in a direction.
 
 The experimental variogram is calculated a part of a standard variography workflow and is precursor to variogram modeling. An experimental variogram is a key input to fitting a variogram model.
 

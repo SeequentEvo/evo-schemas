@@ -90,8 +90,6 @@ A set of triangulated mesh parts in 3D space. [Parts](../../understanding-schema
 
     Volumes and surfaces can share parts. We do this to encourage conformal meshes that exactly abut adjacent meshes. Using shared parts makes it easier to validate if a set of meshes are conformal.
 
-    (needs work)
-
     ![parts](_img/geological-model-meshes-1.png)
 
     The part index is an index into "chunks" of vertices. If a polygon, the vertices represent a closed sequence. Each "chunk" has a set of vertices that are a member of that chunk.

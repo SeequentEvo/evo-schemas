@@ -80,7 +80,7 @@ A list of polyline surfaces. Each surface consists of one or more connected poly
 * `material_key`: Unique identifier to a material in the materials list. 
 
 * `feature`: Geology feature represented by this volume. Can be one of
-  - "Fault
+  - "Fault"
   - "ContactSurface"
   - "Topography"
   - "BoundarySurface"
