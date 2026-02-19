@@ -146,6 +146,17 @@ Skip "Used by" for schemas that are referenced so broadly that listing consumers
 
 When multiple cross-reference types are present, the ordering is: "Key components" (objects only) → "Used by" (components/elements only) → "See also" → `## Properties`. Structural relationships (composition and consumption) take precedence over the less-structured associative "See also" links.
 
+### Maintaining cross-references
+
+Cross-references are bidirectional and must be kept in sync when schemas are added, removed, or refactored:
+
+- **Adding a new object**: Add "Key components" entries on the object page for any specialised components it uses. Update each referenced component's "Used by" line to include the new object.
+- **Adding a new component**: Add a "Used by" line listing the object(s) or parent component(s) that reference it. If the consuming object has a "Key components" section, add the new component there as well.
+- **Renaming or removing a schema**: Search for all cross-references (Key components, Used by, See also) that point to the old name and update or remove them.
+- **Version-bumping a schema**: After running `clone_schema.py`, update doc page imports and cross-reference links to point to the new version where applicable.
+
+When in doubt, grep the `docs/schemas/` directory for the schema name to find all references that may need updating.
+
 ## Index pages
 
 Each tier has an `index.md` that groups schemas by functional domain rather than alphabetically. This aids discoverability — a reader looking for drilling-related schemas can jump straight to the relevant section.
@@ -192,7 +203,13 @@ This populates `docs/schemas/generated/`. Always run this before opening a PR th
 
 - [ ] Doc page follows the appropriate tier template (object, component, or element).
 - [ ] Description explains purpose and key properties.
-- [ ] Cross-references ("See also" and/or "Used by") are present where appropriate.
+- [ ] Cross-references are present and bidirectionally consistent:
+  - [ ] Objects: "Key components" lists specialised components (with em-dash role descriptions).
+  - [ ] Components/elements: "Used by" links to direct consumers one tier up.
+  - [ ] "See also" links to related peers where a natural relationship exists.
+  - [ ] Each "Key components" entry has a corresponding "Used by" on the target component.
+  - [ ] Each "Used by" entry has a corresponding "Key components" (or inline reference) on the consuming object.
+- [ ] Cross-reference ordering follows convention: Key components → Used by → See also → Properties.
 - [ ] Schema is listed in the correct section of the tier's `index.md`.
 - [ ] `make generate-schema-docs` has been run.
 - [ ] Page renders correctly in a local build.
