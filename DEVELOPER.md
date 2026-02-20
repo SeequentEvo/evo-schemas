@@ -58,7 +58,7 @@ The publication of docs from this repository to the Developer Portal is handled 
 
 ## Schema composition
 
-[JSON schema](https://json-schema.org/draft/2020-12/json-schema-core.html) draft 2019-09 added the [oneOf, anyOf, allOf](https://json-schema.org/understanding-json-schema/reference/combining.html) keywords to allow schema composition.
+[JSON Schema](https://json-schema.org/draft/2020-12/json-schema-core.html) provides the [oneOf, anyOf, allOf](https://json-schema.org/understanding-json-schema/reference/combining.html) keywords for schema composition. This repository uses Draft 2020-12.
 This repository makes use of the oneOf and allOf keywords.
 
 ### allOf
