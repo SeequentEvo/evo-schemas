@@ -7,7 +7,7 @@ applyTo: "schema/**/*.json"
 
 ### Prerequisites
 
-Ensure an RFC has been accepted (`rfc/accepted` label) or that this is an iteration on an existing schema. Read the RFC discussion for design decisions and reviewer expectations. The RFC workflow is:
+An accepted RFC (`rfc/accepted` label) is required for new schemas and major version bumps. Minor and patch iterations on existing schemas do not require an RFC, but should reference the original RFC if one exists. Read the RFC discussion for design decisions and reviewer expectations. The RFC workflow is:
 
 1. **Open an RFC issue** using the [RFC issue template](https://github.com/SeequentEvo/evo-schemas/issues/new?template=rfc.yaml). The template requires: Summary, Motivation, Basic example, Detailed design, Drawbacks, Alternatives, and Adoption strategy.
 2. **Discussion** — Maintainers and community discuss the proposal.

@@ -10,7 +10,6 @@ This repository values careful, reviewed changes. When working on non-trivial ta
 - **Discuss before implementing.** For tasks that involve design decisions, structural changes, or multi-file modifications, first outline the approach and confirm it with the user before writing code. Ask clarifying questions early — it is better to ask than to assume.
 - **Work step-by-step.** Break implementation into discrete, reviewable steps. Execute one step at a time — propose, review, adjust, approve — before moving to the next.
 - **Ask between steps.** After completing each logical step, pause and check in with the user before proceeding. Offer to continue with the next step, and allow the user to request changes, ask questions, or redirect. Never silently move to the next step on multi-step work.
-- **Be additive, not rewriting.** Existing human-authored content should be preserved. Expansions add context; they don't restructure or replace prose unless explicitly asked.
 
 ## Commit conventions
 
