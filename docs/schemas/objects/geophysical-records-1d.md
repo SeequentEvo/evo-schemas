@@ -10,7 +10,7 @@ import FlatProperties from '../generated/flatmd/objects/geophysical-records-1d-1
 
 **Key components:**
 - [category-data](../components/category-data.md) — Lookup table mapping integer keys to category names
-- [lengths](../components/lengths.md) — Length values for segments or intervals
+- [lengths](../components/lengths.md) — Layer thickness values
 
 **See also:** [resistivity-ip](resistivity-ip.md) (resistivity/IP surveys).
 
@@ -22,7 +22,7 @@ To define the geophysical-records-1d object, the following properties are requir
 
 - The number of layers (integer; this is consistent for all records)
 - An array of locations
-- An array of depths
+- An array of depths (layer thicknesses)
 - The standard required information for a Geoscience Object
 
 Each location entry contains information about the:
@@ -31,7 +31,7 @@ Each location entry contains information about the:
 
 Each depth entry contains:
 
-- Length values.
+- Layer thickness values. The `depths` property uses the [lengths](../components/lengths.md) component to store the thickness of each layer. Cumulating these thicknesses from the surface yields the depth to each layer boundary.
 
 Additionally, the object can include:
 

@@ -178,7 +178,7 @@ Components for geophysical survey data — survey lines, collections, attribute 
 * [Survey attribute](survey-attribute.md) — survey data values
 * [Survey attribute definition](survey-attribute-definition.md) — survey attribute metadata
 * [Fiducial description](fiducial-description.md) — spatial reference markers
-* [Lengths](lengths.md) — segment or interval lengths
+* [Lengths](lengths.md) — layer thickness values
 * [Resistivity-IP line](resistivity-ip-line.md) — resistivity-IP survey line
 * [Resistivity-IP DCIP properties](resistivity-ip-dcip-survey-properties.md) — DC induced polarization
 * [Resistivity-IP Phase IP properties](resistivity-ip-phaseip-survey-properties.md) — phase induced polarization
