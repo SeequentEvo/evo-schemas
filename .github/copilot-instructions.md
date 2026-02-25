@@ -140,7 +140,7 @@ The `_category_.json` files in doc directories control Docusaurus sidebar labels
 
 ### Schema documentation pages
 
-Each schema object has a corresponding doc page in `docs/schemas/`. Use `docs/schemas/pointset.md` as the canonical template when writing a new page. The standard structure is:
+Each schema object has a corresponding doc page in `docs/schemas/objects/`. Use `docs/schemas/objects/pointset.md` as the canonical template when writing a new page. The standard structure is:
 
 ```mdx
 import OverlineWithVersion from '@theme/OverlineWithVersion';
@@ -265,6 +265,12 @@ Create a doc page at `docs/schemas/<name>.md` following the template described i
 
 - Add the schema to the listing in `docs/schemas/index.md`.
 - Run `make generate-schema-docs` to produce the flat property tables and UML diagrams.
+- **Maintain cross-references bidirectionally:**
+  - For new objects: add a "Key components" section listing specialised components (skip ubiquitous ones like `locations`). Update each listed component's "Used by" to include the new object.
+  - For new components: add a "Used by" line linking to the consuming object(s) or parent component(s). If the consuming object has a "Key components" section, add the new component there.
+  - For new elements: add a "Used by" line linking to the consuming component(s).
+  - Add "See also" peer links where a natural relationship exists (e.g., dimensional variants, domain siblings).
+  - Cross-reference ordering: Key components → Used by → See also → `## Properties`.
 
 ### 7. Validate
 

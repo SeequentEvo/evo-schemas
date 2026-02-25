@@ -39,7 +39,7 @@ Documentation for the Geoscience Object Schemas is authored in the `docs/` direc
 
 As a contributor, your responsibility is to ensure the documentation in `docs/` is correct and complete. This includes:
 
-- Writing or updating schema doc pages in `docs/schemas/` (see `docs/schemas/pointset.md` as the canonical template).
+- Writing or updating schema doc pages in `docs/schemas/` (see `docs/schemas/objects/pointset.md` as the canonical template).
 - Adding new schemas to the listing in `docs/schemas/index.md`.
 - Regenerating auto-generated content (`make generate-schema-docs`) after schema changes.
 - Never editing files in `docs/schemas/generated/` directly — they are overwritten by the generation tool.
@@ -58,7 +58,7 @@ The publication of docs from this repository to the Developer Portal is handled 
 
 ## Schema composition
 
-[JSON schema](https://json-schema.org/draft/2020-12/json-schema-core.html) draft 2019-09 added the [oneOf, anyOf, allOf](https://json-schema.org/understanding-json-schema/reference/combining.html) keywords to allow schema composition.
+[JSON Schema](https://json-schema.org/draft/2020-12/json-schema-core.html) provides the [oneOf, anyOf, allOf](https://json-schema.org/understanding-json-schema/reference/combining.html) keywords for schema composition. This repository uses Draft 2020-12.
 This repository makes use of the oneOf and allOf keywords.
 
 ### allOf

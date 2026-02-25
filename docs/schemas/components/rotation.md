@@ -13,6 +13,8 @@ Rotation in 3D space described by 3 in-plane rotations, all rotating clockwise a
 
 - `Pitch` [0-360]: The angle, measured on the inclined plane, between the strike (horizontal line within the plane) and any other line that lies in the plane
 
+**Used by:** [geological-sections](../objects/geological-sections.md), [non-parametric-continuous-cumulative-distribution](../objects/non-parametric-continuous-cumulative-distribution.md), [regular-2d-grid](../objects/regular-2d-grid.md), [regular-3d-grid](../objects/regular-3d-grid.md), [regular-masked-3d-grid](../objects/regular-masked-3d-grid.md), [tensor-2d-grid](../objects/tensor-2d-grid.md), [tensor-3d-grid](../objects/tensor-3d-grid.md).
+
 ## Properties
 
 <FlatProperties />
