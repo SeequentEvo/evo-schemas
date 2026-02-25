@@ -6,10 +6,7 @@ import FlatProperties from '../generated/flatmd/components/variogram-exponential
 <SchemaUri uri="schema/components/variogram-exponential-structure/1.1.0/variogram-exponential-structure.schema.json" />
 
 An exponential variogram model structure, used as a component of the [variogram](../objects/variogram.md) object.
-The exponential model approaches the sill asymptotically — unlike the spherical model, it never fully
-reaches the sill but gets arbitrarily close. The practical range (where it reaches ~95% of the sill)
-is about three times the range parameter. This model is well suited to phenomena with a gradual
-decay in spatial correlation.
+The exponential model approaches the sill asymptotically and is commonly used in geostatistics.
 
 **Used by:** [variogram](../objects/variogram.md).
 

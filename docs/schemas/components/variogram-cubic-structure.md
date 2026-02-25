@@ -6,10 +6,7 @@ import FlatProperties from '../generated/flatmd/components/variogram-cubic-struc
 <SchemaUri uri="schema/components/variogram-cubic-structure/1.1.0/variogram-cubic-structure.schema.json" />
 
 A cubic variogram model structure, used as a component of the [variogram](../objects/variogram.md) object.
-The cubic model provides a smooth, parabolic transition from the origin — similar to the Gaussian model
-in its near-origin behaviour — but reaches the sill at a finite range. This makes it a useful
-alternative to the Gaussian model when a smooth interpolation is desired without the numerical
-instability that can accompany asymptotic models.
+The cubic model provides a smooth transition from the origin with a defined range and sill.
 
 **Used by:** [variogram](../objects/variogram.md).
 
