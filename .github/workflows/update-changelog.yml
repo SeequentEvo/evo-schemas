@@ -8,6 +8,8 @@ jobs:
   update-changelog:
     name: Update CHANGELOG.md
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
@@ -32,7 +34,15 @@ jobs:
         uses: actions/github-script@v8
         with:
           script: |
-            const commitMessage = 'Update CHANGELOG.md';
-            const script = require('${{ github.workspace }}/.github/scripts/create-verified-commit.js');
-            const [owner, repo] = process.env.GITHUB_REPOSITORY.split('/');
-            await script({ github, context: { ...context, commitMessage, repo: { owner, repo } } });
+            const script = require('${{ github.workspace }}/.github/scripts/create-verified-pr.js');
+            const tagName = '${{ github.event.release.tag_name }}';
+            await script({
+              github,
+              context: {
+                ...context,
+                commitMessage: `Update CHANGELOG.md for ${tagName}`,
+                branchName: `update-changelog-${tagName}`,
+                prTitle: `Update CHANGELOG.md for ${tagName}`,
+                prBody: `Automated update of CHANGELOG.md for release ${tagName}.`
+              }
+            });
