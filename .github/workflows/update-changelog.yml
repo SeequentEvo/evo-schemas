@@ -29,7 +29,7 @@ jobs:
             echo "has_changes=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Commit and push changes
+      - name: Create PR with changes
         if: steps.changes.outputs.has_changes == 'true'
         uses: actions/github-script@v8
         with:
