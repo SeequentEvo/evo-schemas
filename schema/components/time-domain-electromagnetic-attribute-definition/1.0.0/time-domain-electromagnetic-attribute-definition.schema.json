@@ -1,0 +1,22 @@
+{
+  "$id": "/components/time-domain-electromagnetic-attribute-definition/1.0.0/time-domain-electromagnetic-attribute-definition.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Time domain electromagnetic attribute-definition.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/survey-attribute-definition/1.0.1/survey-attribute-definition.schema.json"
+    },
+    {
+      "properties": {
+        "configuration_key": {
+          "description": "The configuration for this attribute.",
+          "type": "string"
+        }
+      }
+    }
+  ],
+  "required": [
+    "configuration_key"
+  ]
+}

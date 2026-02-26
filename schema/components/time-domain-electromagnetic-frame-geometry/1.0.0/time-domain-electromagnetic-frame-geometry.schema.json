@@ -1,0 +1,128 @@
+{
+  "$id": "/components/time-domain-electromagnetic-frame-geometry/1.0.0/time-domain-electromagnetic-frame-geometry.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Time domain electromagnetic frame geometry.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "Frame geometry name",
+      "type": "string"
+    },
+    "transmitters": {
+      "description": "Description of the transmitters in the frame.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Transmitter identifier.",
+            "minimum": 0
+          },
+          "center": {
+            "description": "The center of the first transmitter coil, is the origin of the geometry. First transmitter: 0,0,0 Although it is not necessary to supply the origin of the first transmitter, it is declared as mandatory to eliminate potential ambiguity about the origin of the additional transmitters. For multiple transmitter coils, the offset of the center of each transmitter is relative to the first transmitter. Z axis is positive up (left-handed coordinate system).",
+            "$ref": "/elements/coordinates-3d/1.0.0/coordinates-3d.schema.json"
+          },
+          "direction": {
+            "description": "Transmitter loop orientation.",
+            "type": "string",
+            "enum": [
+              "X",
+              "Y",
+              "Z"
+            ]
+          },
+          "area": {
+            "description": "This is the actual transmitter area.  The effective area is TXnAREA * TXnTURNS (m^2)",
+            "type": "number"
+          },
+          "node_coordinates": {
+            "description": "Node coordinates, Set of x,y,z coordinates relative to the first transmitter.",
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "$ref": "/elements/coordinates-3d/1.0.0/coordinates-3d.schema.json"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "center",
+          "direction",
+          "area"
+        ]
+      }
+    },
+    "receivers": {
+      "description": "Description of the receivers in the frame.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Receiver identifier.",
+            "minimum": 0
+          },
+          "offset": {
+            "description": "Receiver coil center offset from transmitter 1 center",
+            "$ref": "/elements/coordinates-3d/1.0.0/coordinates-3d.schema.json"
+          },
+          "direction": {
+            "description": "Receiver loop orientation.",
+            "type": "string",
+            "enum": [
+              "X",
+              "Y",
+              "Z"
+            ]
+          },
+          "area": {
+            "description": "Coil area (m^2)",
+            "type": "number"
+          },
+          "turns": {
+            "type": "integer",
+            "description": "Number of receiver coil turns."
+          },
+          "average_terrain_clearance": {
+            "description": "Average EM Bird terrain clearance above ground (m)",
+            "type": "number"
+          },
+          "filter": {
+            "description": "Receiver coil Low Pass filter (order, frequency).",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "order": {
+                  "description": "low pass filter order",
+                  "type": "number"
+                },
+                "frequency": {
+                  "description": "low pass filter Frequency",
+                  "type": "number"
+                }
+              },
+              "required": [
+                "order",
+                "frequency"
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "offset",
+          "direction"
+        ]
+      }
+    }
+  },
+  "required": [
+    "transmitters",
+    "receivers"
+  ]
+}
