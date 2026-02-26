@@ -2,6 +2,9 @@ name: Generate Schema Docs
 
 on:
   push:
+    branches-ignore:
+      - main
+  pull_request:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -11,6 +14,8 @@ jobs:
   generate-schema-docs:
     name: Generate and commit schema docs
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     # Skip if the commit was made by github-actions[bot] (to prevent infinite loops)
     if: ${{ github.actor != 'github-actions[bot]' }}
     steps:
