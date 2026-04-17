@@ -36,7 +36,7 @@ If you are contributing a new schema or modifying an existing one, ensure your p
 - [ ] Schema JSON file(s) at the correct path (`schema/<tier>/<name>/<semver>/<name>.schema.json`)
 - [ ] Any new components or elements required by the schema
 - [ ] Example JSON instances in `examples/<schema-version>/<tier>/`
-- [ ] A documentation page in `docs/schemas/` (use `docs/schemas/pointset.md` as a template)
+- [ ] A documentation page in `docs/schemas/` (use `docs/schemas/objects/pointset.md` as a template)
 - [ ] Updated schema listing in `docs/schemas/index.md`
 - [ ] Regenerated docs (`make generate-schema-docs`)
 - [ ] All tests passing (`pytest`)
