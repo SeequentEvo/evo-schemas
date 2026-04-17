@@ -64,7 +64,7 @@ Each schema lives at `schema/<tier>/<name>/<semver>/<name>.schema.json`. Multipl
 - Objects must compose `base-object-properties` or `base-spatial-data-properties` via `allOf`.
 - `unevaluatedProperties: false` only on objects (not elements or components).
 - Latest schema versions must only reference latest versions of other schemas.
-- JSON formatting: 2-space indent, no key sorting, no ASCII escaping (enforced by pre-commit).
+- JSON formatting: 2-space indent, no key sorting, no ASCII escaping. The `pretty-format-json` pre-commit hook auto-fixes on commit.
 - All commits must be signed with verified signatures.
 
 ## Documentation

@@ -5,7 +5,18 @@ applyTo: "docs/**/*.md,docs/**/*.mdx"
 
 ## Directory structure
 
-Documentation is organised into three parallel subdirectories under `docs/schemas/`:
+Documentation lives in `docs/` and is rendered on the [Seequent Developer Portal](https://developer.seequent.com/docs/data-structures/geoscience-objects). The top-level structure is:
+
+- `docs/index.md` — Landing page for the Geoscience Objects section.
+- `docs/schemas/` — Per-tier schema documentation (see below).
+- `docs/understanding-schemas/` — Conceptual guides (attributes, parts, blob storage, cell-type geometry).
+- `docs/versioning-and-release-process/` — Schema versioning policy and development lifecycle.
+
+The `_category_.json` files in doc directories control Docusaurus sidebar labels and ordering.
+
+### Schema documentation tree
+
+Schema docs are organised into three parallel subdirectories under `docs/schemas/`:
 
 ```
 docs/schemas/
@@ -27,6 +38,18 @@ docs/schemas/
     ├── flatmd/           # Flat property tables
     └── uml/              # Mermaid class diagrams
 ```
+
+### Generating documentation
+
+Auto-generated files (property tables and UML diagrams) are produced by:
+
+```bash
+make generate-schema-docs
+# or equivalently:
+python -m tools.documentation --autodoc
+```
+
+Run this after creating or modifying schemas. **Never edit files in `docs/schemas/generated/`** — they will be overwritten.
 
 ### Casing conventions
 

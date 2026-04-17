@@ -14,6 +14,8 @@ An accepted RFC (`rfc/accepted` label) is required for new schemas and major ver
 3. **Acceptance** — Label changes from `rfc/open` to `rfc/accepted`.
 4. **Implementation** — Work proceeds via a pull request.
 
+Active and historical RFCs can be found by searching [issues labelled `rfc`](https://github.com/SeequentEvo/evo-schemas/labels/rfc).
+
 ### Create the schema file
 
 Use the scaffolding tool:

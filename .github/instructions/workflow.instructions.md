@@ -16,7 +16,7 @@ This repository values careful, reviewed changes. When working on non-trivial ta
 - **Atomic commits**: Each logical change gets its own commit. Group related changes (e.g., expanding all variogram descriptions) but keep unrelated changes separate.
 - **Per-family commits for review**: When making changes across domain-specific families (e.g., variogram structures, resistivity-IP components), commit each family separately so subject-matter experts can review them independently.
 - **Stage before review**: Stage changes with `git add` and show the diff with `git --no-pager diff --cached` so the reviewer sees exactly what will be committed.
-- **Signed commits**: All commits must be signed with verified signatures.
+- **Signed commits**: All commits must be signed with verified signatures. A pre-commit hook (`tools/audit-commits.sh`) audits commit metadata.
 - **Run validation before presenting**: Always run tests and linting before presenting a step for review. The review should be of verified, passing code.
 
 ## Information boundaries
