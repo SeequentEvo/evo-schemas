@@ -103,8 +103,8 @@ Key rules:
 
 Place immediately after `<SchemaUri>`, before intro text or `## Properties`:
 
-1. **`**Key components:**`** — Bullet list with em-dash–separated role descriptions. Only include components specific to the object or a small group — skip ubiquitous ones like `locations`, `scalar-attribute`, or generic attribute types.
-2. **`**See also:**`** — Peer cross-references to related objects (variants, counterparts). Bold-inline format.
+1. **Key components:** Bullet list with em-dash–separated role descriptions. Only include components specific to the object or a small group — skip ubiquitous ones like `locations`, `scalar-attribute`, or generic attribute types.
+2. **See also:** Peer cross-references to related objects (variants, counterparts). Bold-inline format.
 
 ```markdown
 **Key components:**
