@@ -5,7 +5,16 @@ module.exports = async ({ github, context }) => {
         throw new Error('commitMessage is required in context');
     }
 
-    const { owner, repo } = context.repo;
+    const repoInfo = context.repo || (context.payload && context.payload.repository
+        ? { owner: context.payload.repository.owner.login, repo: context.payload.repository.name }
+        : null);
+
+    if (!repoInfo) {
+        console.warn('Warning: Could not create verified commit (unable to determine repository owner and name from context)');
+        return;
+    }
+
+    const { owner, repo } = repoInfo;
 
     const commitSha = await createVerifiedCommit({ github, owner, repo, commitMessage: context.commitMessage });
 
