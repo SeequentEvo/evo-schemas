@@ -1,24 +1,42 @@
 name: "Update Changelog"
 
 on:
-  release:
-    types: [released]
+  schedule:
+    - cron: '0 18 * * *'
+  workflow_dispatch:
 
 jobs:
   update-changelog:
     name: Update CHANGELOG.md
     runs-on: ubuntu-latest
+    if: github.repository == 'SeequentEvo/evo-schemas'
     permissions:
-      contents: write
+      contents: read
+      pull-requests: read
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
 
       - name: Update Changelog
-        uses: stefanzweifel/changelog-updater-action@v1
+        uses: actions/github-script@v8
         with:
-          latest-version: ${{ github.event.release.tag_name }}
-          release-notes: ${{ github.event.release.body }}
+          script: |
+            const fs = require('fs');
+            const releases = await github.paginate(
+              github.rest.repos.listReleases,
+              { owner: context.repo.owner, repo: context.repo.repo, per_page: 100 }
+            );
+            const published = releases
+              .filter(r => !r.draft)
+              .sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
+            let changelog = '# Changelog\n';
+            for (const release of published) {
+              changelog += `\n## ${release.tag_name}\n`;
+              if (release.body) {
+                changelog += `${release.body.trim()}\n`;
+              }
+            }
+            fs.writeFileSync('CHANGELOG.md', changelog + '\n');
 
       - name: Check for changes
         id: changes
@@ -29,20 +47,51 @@ jobs:
             echo "has_changes=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Create PR with changes
+      - name: Check for existing changelog PR
         if: steps.changes.outputs.has_changes == 'true'
-        uses: actions/github-script@v8
+        id: existing-pr
+        uses: actions/github-script@v9
         with:
           script: |
+            const { data: pullRequests } = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+            });
+            const existing = pullRequests.find(pr => pr.head.ref.startsWith('update-changelog-'));
+            if (existing) {
+              console.log(`Found existing changelog PR #${existing.number}: ${existing.html_url}`);
+              core.setOutput('pr_exists', 'true');
+            } else {
+              core.setOutput('pr_exists', 'false');
+            }
+
+      - name: Generate GitHub App token
+        if: steps.changes.outputs.has_changes == 'true' && steps.existing-pr.outputs.pr_exists == 'false'
+        id: app-token
+        uses: actions/create-github-app-token@v3
+        with:
+          app-id: ${{ secrets.CHANGE_LOG_UPDATE_APP_ID }}
+          private-key: ${{ secrets.CHANGE_LOG_UPDATER_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+
+      - name: Create PR with changes
+        if: steps.changes.outputs.has_changes == 'true' && steps.existing-pr.outputs.pr_exists == 'false'
+        uses: actions/github-script@v9
+        with:
+          github-token: ${{ steps.app-token.outputs.token }}
+          script: |
             const script = require('${{ github.workspace }}/.github/scripts/create-verified-pr.js');
-            const tagName = '${{ github.event.release.tag_name }}';
+            const [owner, repo] = process.env.GITHUB_REPOSITORY.split('/');
+            const runId = '${{ github.run_id }}';
             await script({
               github,
               context: {
                 ...context,
-                commitMessage: `Update CHANGELOG.md for ${tagName}`,
-                branchName: `update-changelog-${tagName}`,
-                prTitle: `Update CHANGELOG.md for ${tagName}`,
-                prBody: `Automated update of CHANGELOG.md for release ${tagName}.`
+                repo: { owner, repo },
+                commitMessage: 'Update CHANGELOG.md',
+                branchName: `update-changelog-${runId}`,
+                prTitle: 'Update CHANGELOG.md',
+                prBody: 'Automated daily update of CHANGELOG.md.'
               }
             });
