@@ -9,6 +9,7 @@ jobs:
   update-changelog:
     name: Update CHANGELOG.md
     runs-on: ubuntu-latest
+    if: github.repository == 'SeequentEvo/evo-schemas'
     permissions:
       contents: read
       pull-requests: read
