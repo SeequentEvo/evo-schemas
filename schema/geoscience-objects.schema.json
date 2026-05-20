@@ -293,6 +293,9 @@
       "$ref": "/objects/triangle-mesh/2.2.0/triangle-mesh.schema.json"
     },
     {
+      "$ref": "/objects/triangle-mesh/2.3.0/triangle-mesh.schema.json"
+    },
+    {
       "$ref": "/objects/unstructured-grid/1.0.1/unstructured-grid.schema.json"
     },
     {
