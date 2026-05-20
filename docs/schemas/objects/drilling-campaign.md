@@ -2,7 +2,7 @@ import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/objects/drilling-campaign-1.0.0.md';
 
-<OverlineWithVersion title="Geoscience Objects" version="1.0.0" badge="techPreview" />
+<OverlineWithVersion title="Geoscience Objects" version="1.0.0" badge="supported" />
 
 # drilling-campaign
 
