@@ -1,14 +1,15 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/objects/triangle-mesh-2.2.0.md';
+import FlatProperties from '../generated/flatmd/objects/triangle-mesh-2.3.0.md';
 
-<OverlineWithVersion title="Geoscience Objects" version="2.2.0" badge="supported" />
+<OverlineWithVersion title="Geoscience Objects" version="2.3.0" badge="supported" />
 
 # triangle-mesh
 
-<SchemaUri uri="schema/objects/triangle-mesh/2.2.0/triangle-mesh.schema.json" />
+<SchemaUri uri="schema/objects/triangle-mesh/2.3.0/triangle-mesh.schema.json" />
 
 **Key components:**
+- [mesh-quality](../components/mesh-quality.md) — Mesh quality guarantees
 - [segments](../components/segments.md) — Line segments defined by vertex index pairs
 
 **See also:** [line-segments](line-segments.md) (line geometry), [pointset](pointset.md) (vertices only).
@@ -40,6 +41,9 @@ Each chunk is a tuple defining the first index and the length of a chunk of vert
 `triangle_indices`
 An optional index array into the triangle indices set. This is used to define chunks if the mesh triangle indices do not contain contiguous chunks.
 
+### quality
+Optional hint about mesh [quality](../components/mesh-quality.md) characteristics that provide guarantees about the mesh (e.g., manifold, consistent winding, non-degenerate).
+
 ### edges
 An optional structure defining edges and edge chunks of the mesh. An optional attribute can be associated with each edge.
 
@@ -55,4 +59,4 @@ An optional structure defining edges and edge chunks of the mesh. An optional at
 
 <FlatProperties />
 
-::mermaid[../generated/uml/triangle-mesh-2.2.0.mmd]
+::mermaid[../generated/uml/triangle-mesh-2.3.0.mmd]
