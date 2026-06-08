@@ -1,0 +1,32 @@
+{
+  "$id": "/components/time-domain-electromagnetic-time-gates/1.0.0/time-domain-electromagnetic-time-gates.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Time domain electromagnetic time gate information.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "Gate identifier",
+      "type": "number",
+      "minimum": 0
+    },
+    "open": {
+      "description": "Array of time gate open intervals (s). Time open gates, as consecutive times relative to the Tx Turn off time+start time.",
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "close": {
+      "description": "Array of time gate close intervals (s). Time close gates, as consecutive times relative to the Tx Turn off time+start time.",
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "open",
+    "close"
+  ]
+}

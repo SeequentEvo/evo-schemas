@@ -1,0 +1,108 @@
+{
+  "$id": "/objects/time-domain-electromagnetic/2.0.0/time-domain-electromagnetic.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Time Domain Electromagnetic data.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/components/base-spatial-data-properties/1.1.0/base-spatial-data-properties.schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "const": "/objects/time-domain-electromagnetic/2.0.0/time-domain-electromagnetic.schema.json"
+        },
+        "survey": {
+          "description": "Survey information.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "description": "Survey type.",
+              "type": "string",
+              "enum": [
+                "GROUND",
+                "AIR",
+                "MOVING_GROUND",
+                "DAGCAP"
+              ]
+            }
+          },
+          "required": [
+            "type"
+          ]
+        },
+        "geometry_category": {
+          "description": "Geometry category.",
+          "type": "string",
+          "enum": [
+            "STXMRX",
+            "FGTXRX",
+            "MTXMRX",
+            "STXSRX"
+          ]
+        },
+        "gps": {
+          "description": "Location of GPS relative to point of reference.",
+          "$ref": "/elements/coordinates-3d/1.0.0/coordinates-3d.schema.json"
+        },
+        "waveforms": {
+          "description": "Waveform information.",
+          "$ref": "/components/time-domain-electromagnetic-waveform/1.0.0/time-domain-electromagnetic-waveform.schema.json"
+        },
+        "frame_geometry": {
+          "description": "Frame geometry information.",
+          "$ref": "/components/time-domain-electromagnetic-frame-geometry/1.0.0/time-domain-electromagnetic-frame-geometry.schema.json"
+        },
+        "time_gates": {
+          "description": "Time gate information.",
+          "$ref": "/components/time-domain-electromagnetic-time-gates/1.0.0/time-domain-electromagnetic-time-gates.schema.json"
+        },
+        "configurations": {
+          "description": "Time domain electromagnetic configurations.",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "/components/time-domain-electromagnetic-configuration/1.0.0/time-domain-electromagnetic-configuration.schema.json"
+          }
+        },
+        "attribute_definition_list": {
+          "description": "List of attribute definitions. These will be referenced in survey collections.",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "/components/survey-attribute-definition/1.0.1/survey-attribute-definition.schema.json"
+              },
+              {
+                "$ref": "/components/time-domain-electromagnetic-attribute-definition/1.0.0/time-domain-electromagnetic-attribute-definition.schema.json"
+              }
+            ]
+          }
+        },
+        "collections": {
+          "description": "Survey collections.",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "description": "Survey collections.",
+            "$ref": "/components/survey-collection/1.0.1/survey-collection.schema.json"
+          }
+        }
+      }
+    }
+  ],
+  "required": [
+    "schema",
+    "survey",
+    "geometry_category",
+    "gps",
+    "waveforms",
+    "frame_geometry",
+    "time_gates",
+    "configurations",
+    "attribute_definition_list",
+    "collections"
+  ],
+  "unevaluatedProperties": false
+}
