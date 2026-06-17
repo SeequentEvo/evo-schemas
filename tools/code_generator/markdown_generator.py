@@ -67,7 +67,7 @@ class MarkdownGenerator:
         for prop in cls.props:
             name = prop.name
             type_ = self._get_type(prop)
-            description = prop.description or ""
+            description = (prop.description or "").replace("|", "\\|").replace("\r\n", "\n").replace("\n", "<br>")
             flags = self._get_flags(prop, inherited)
             yield f"| {name} | {type_} | {description} | {flags} |\n"
 
