@@ -5,10 +5,7 @@ Attributes are associated with each chunk.
 | Property | Type | Description | Flags |
 |---|---|---|---|
 | attributes | [one-of-attribute](../components/one-of-attribute-1.1.0.md) | Attribute data. | [⬆️](../components/attribute-list-property-1.1.0.md) |
-| chunks | [index-array-2](../elements/index-array-2-1.0.1.md) | A list of chunks of segments.
-A chunk consists of consecutive segments, defined by the index of the first segment and the number of segments.
-Chunks do not have to include all segments, and chunks can overlap.
-Columns: offset, count | ✅ |
+| chunks | [index-array-2](../elements/index-array-2-1.0.1.md) | A list of chunks of segments.<br>A chunk consists of consecutive segments, defined by the index of the first segment and the number of segments.<br>Chunks do not have to include all segments, and chunks can overlap.<br>Columns: offset, count | ✅ |
 
 
 #### Legend
