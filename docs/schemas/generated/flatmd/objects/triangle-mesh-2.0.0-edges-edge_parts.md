@@ -4,7 +4,7 @@ A structure defining edge chunks of the mesh.
 | Property | Type | Description | Flags |
 |---|---|---|---|
 | attributes | [one-of-attribute](../components/one-of-attribute-1.1.0.md) | Attribute data. | [⬆️](../components/attribute-list-property-1.1.0.md) |
-| chunks | [index-array-2](../elements/index-array-2-1.0.1.md) | A tuple defining the first index and the length of a chunk.<br>The chunk refers to a segment of the edges array.<br>Chunks do not have to include all edges, and chunks can overlap.<br>Columns: offset, count | ✅ |
+| chunks | [index-array-2](../elements/index-array-2-1.0.1.md) | A tuple defining the first index and the length of a chunk.<br/>The chunk refers to a segment of the edges array.<br/>Chunks do not have to include all edges, and chunks can overlap.<br/>Columns: offset, count | ✅ |
 
 
 #### Legend
