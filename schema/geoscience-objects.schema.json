@@ -8,10 +8,16 @@
       "$ref": "/objects/block-model/1.0.0/block-model.schema.json"
     },
     {
+      "$ref": "/objects/block-model/1.0.1/block-model.schema.json"
+    },
+    {
       "$ref": "/objects/design-geometry/1.0.1/design-geometry.schema.json"
     },
     {
       "$ref": "/objects/design-geometry/1.1.0/design-geometry.schema.json"
+    },
+    {
+      "$ref": "/objects/design-geometry/1.1.1/design-geometry.schema.json"
     },
     {
       "$ref": "/objects/downhole-collection/1.0.1/downhole-collection.schema.json"
@@ -29,6 +35,9 @@
       "$ref": "/objects/downhole-collection/1.3.1/downhole-collection.schema.json"
     },
     {
+      "$ref": "/objects/downhole-collection/1.3.2/downhole-collection.schema.json"
+    },
+    {
       "$ref": "/objects/downhole-intervals/1.0.1/downhole-intervals.schema.json"
     },
     {
@@ -41,7 +50,13 @@
       "$ref": "/objects/downhole-intervals/1.3.0/downhole-intervals.schema.json"
     },
     {
+      "$ref": "/objects/downhole-intervals/1.3.1/downhole-intervals.schema.json"
+    },
+    {
       "$ref": "/objects/drilling-campaign/1.0.0/drilling-campaign.schema.json"
+    },
+    {
+      "$ref": "/objects/drilling-campaign/1.0.1/drilling-campaign.schema.json"
     },
     {
       "$ref": "/objects/experimental-variogram/1.0.0/experimental-variogram.schema.json"
@@ -51,6 +66,9 @@
     },
     {
       "$ref": "/objects/frequency-domain-electromagnetic/1.1.0/frequency-domain-electromagnetic.schema.json"
+    },
+    {
+      "$ref": "/objects/frequency-domain-electromagnetic/1.1.1/frequency-domain-electromagnetic.schema.json"
     },
     {
       "$ref": "/objects/geological-model-meshes/1.0.1/geological-model-meshes.schema.json"
@@ -68,6 +86,9 @@
       "$ref": "/objects/geological-model-meshes/2.2.0/geological-model-meshes.schema.json"
     },
     {
+      "$ref": "/objects/geological-model-meshes/2.2.1/geological-model-meshes.schema.json"
+    },
+    {
       "$ref": "/objects/geological-sections/1.0.0/geological-sections.schema.json"
     },
     {
@@ -75,6 +96,9 @@
     },
     {
       "$ref": "/objects/geological-sections/1.2.0/geological-sections.schema.json"
+    },
+    {
+      "$ref": "/objects/geological-sections/1.2.1/geological-sections.schema.json"
     },
     {
       "$ref": "/objects/geophysical-records-1d/1.0.1/geophysical-records-1d.schema.json"
@@ -89,6 +113,9 @@
       "$ref": "/objects/geophysical-records-1d/1.3.0/geophysical-records-1d.schema.json"
     },
     {
+      "$ref": "/objects/geophysical-records-1d/1.3.1/geophysical-records-1d.schema.json"
+    },
+    {
       "$ref": "/objects/global-ellipsoid/1.0.1/global-ellipsoid.schema.json"
     },
     {
@@ -96,6 +123,9 @@
     },
     {
       "$ref": "/objects/global-ellipsoid/1.2.0/global-ellipsoid.schema.json"
+    },
+    {
+      "$ref": "/objects/global-ellipsoid/1.2.1/global-ellipsoid.schema.json"
     },
     {
       "$ref": "/objects/gravity/1.0.1/gravity.schema.json"
@@ -108,6 +138,9 @@
     },
     {
       "$ref": "/objects/gravity/2.0.0/gravity.schema.json"
+    },
+    {
+      "$ref": "/objects/gravity/2.0.1/gravity.schema.json"
     },
     {
       "$ref": "/objects/line-segments/1.0.1/line-segments.schema.json"
@@ -125,6 +158,9 @@
       "$ref": "/objects/line-segments/2.2.0/line-segments.schema.json"
     },
     {
+      "$ref": "/objects/line-segments/2.2.1/line-segments.schema.json"
+    },
+    {
       "$ref": "/objects/lineations-data-pointset/1.0.1/lineations-data-pointset.schema.json"
     },
     {
@@ -135,6 +171,9 @@
     },
     {
       "$ref": "/objects/lineations-data-pointset/1.3.0/lineations-data-pointset.schema.json"
+    },
+    {
+      "$ref": "/objects/lineations-data-pointset/1.3.1/lineations-data-pointset.schema.json"
     },
     {
       "$ref": "/objects/local-ellipsoids/1.0.1/local-ellipsoids.schema.json"
@@ -149,6 +188,9 @@
       "$ref": "/objects/local-ellipsoids/1.3.0/local-ellipsoids.schema.json"
     },
     {
+      "$ref": "/objects/local-ellipsoids/1.3.1/local-ellipsoids.schema.json"
+    },
+    {
       "$ref": "/objects/magnetics/1.0.1/magnetics.schema.json"
     },
     {
@@ -161,6 +203,9 @@
       "$ref": "/objects/magnetics/2.0.0/magnetics.schema.json"
     },
     {
+      "$ref": "/objects/magnetics/2.0.1/magnetics.schema.json"
+    },
+    {
       "$ref": "/objects/non-parametric-continuous-cumulative-distribution/1.0.1/non-parametric-continuous-cumulative-distribution.schema.json"
     },
     {
@@ -168,6 +213,9 @@
     },
     {
       "$ref": "/objects/non-parametric-continuous-cumulative-distribution/1.2.0/non-parametric-continuous-cumulative-distribution.schema.json"
+    },
+    {
+      "$ref": "/objects/non-parametric-continuous-cumulative-distribution/1.2.1/non-parametric-continuous-cumulative-distribution.schema.json"
     },
     {
       "$ref": "/objects/planar-data-pointset/1.0.1/planar-data-pointset.schema.json"
@@ -182,6 +230,9 @@
       "$ref": "/objects/planar-data-pointset/1.3.0/planar-data-pointset.schema.json"
     },
     {
+      "$ref": "/objects/planar-data-pointset/1.3.1/planar-data-pointset.schema.json"
+    },
+    {
       "$ref": "/objects/pointset/1.0.1/pointset.schema.json"
     },
     {
@@ -192,6 +243,9 @@
     },
     {
       "$ref": "/objects/pointset/1.3.0/pointset.schema.json"
+    },
+    {
+      "$ref": "/objects/pointset/1.3.1/pointset.schema.json"
     },
     {
       "$ref": "/objects/radiometric/1.0.1/radiometric.schema.json"
@@ -206,6 +260,9 @@
       "$ref": "/objects/radiometric/2.0.0/radiometric.schema.json"
     },
     {
+      "$ref": "/objects/radiometric/2.0.1/radiometric.schema.json"
+    },
+    {
       "$ref": "/objects/regular-2d-grid/1.0.1/regular-2d-grid.schema.json"
     },
     {
@@ -216,6 +273,9 @@
     },
     {
       "$ref": "/objects/regular-2d-grid/1.3.0/regular-2d-grid.schema.json"
+    },
+    {
+      "$ref": "/objects/regular-2d-grid/1.3.1/regular-2d-grid.schema.json"
     },
     {
       "$ref": "/objects/regular-3d-grid/1.0.1/regular-3d-grid.schema.json"
@@ -230,6 +290,9 @@
       "$ref": "/objects/regular-3d-grid/1.3.0/regular-3d-grid.schema.json"
     },
     {
+      "$ref": "/objects/regular-3d-grid/1.3.1/regular-3d-grid.schema.json"
+    },
+    {
       "$ref": "/objects/regular-masked-3d-grid/1.0.1/regular-masked-3d-grid.schema.json"
     },
     {
@@ -242,10 +305,16 @@
       "$ref": "/objects/regular-masked-3d-grid/1.3.0/regular-masked-3d-grid.schema.json"
     },
     {
+      "$ref": "/objects/regular-masked-3d-grid/1.3.1/regular-masked-3d-grid.schema.json"
+    },
+    {
       "$ref": "/objects/resistivity-ip/1.0.0/resistivity-ip.schema.json"
     },
     {
       "$ref": "/objects/resistivity-ip/1.1.0/resistivity-ip.schema.json"
+    },
+    {
+      "$ref": "/objects/resistivity-ip/1.1.1/resistivity-ip.schema.json"
     },
     {
       "$ref": "/objects/tensor-2d-grid/1.0.1/tensor-2d-grid.schema.json"
@@ -260,6 +329,9 @@
       "$ref": "/objects/tensor-2d-grid/1.3.0/tensor-2d-grid.schema.json"
     },
     {
+      "$ref": "/objects/tensor-2d-grid/1.3.1/tensor-2d-grid.schema.json"
+    },
+    {
       "$ref": "/objects/tensor-3d-grid/1.0.1/tensor-3d-grid.schema.json"
     },
     {
@@ -272,10 +344,16 @@
       "$ref": "/objects/tensor-3d-grid/1.3.0/tensor-3d-grid.schema.json"
     },
     {
+      "$ref": "/objects/tensor-3d-grid/1.3.1/tensor-3d-grid.schema.json"
+    },
+    {
       "$ref": "/objects/time-domain-electromagnetic/1.0.0/time-domain-electromagnetic.schema.json"
     },
     {
       "$ref": "/objects/time-domain-electromagnetic/1.1.0/time-domain-electromagnetic.schema.json"
+    },
+    {
+      "$ref": "/objects/time-domain-electromagnetic/1.1.1/time-domain-electromagnetic.schema.json"
     },
     {
       "$ref": "/objects/triangle-mesh/1.0.1/triangle-mesh.schema.json"
@@ -296,6 +374,9 @@
       "$ref": "/objects/triangle-mesh/2.3.0/triangle-mesh.schema.json"
     },
     {
+      "$ref": "/objects/triangle-mesh/2.3.1/triangle-mesh.schema.json"
+    },
+    {
       "$ref": "/objects/unstructured-grid/1.0.1/unstructured-grid.schema.json"
     },
     {
@@ -306,6 +387,9 @@
     },
     {
       "$ref": "/objects/unstructured-grid/1.3.0/unstructured-grid.schema.json"
+    },
+    {
+      "$ref": "/objects/unstructured-grid/1.3.1/unstructured-grid.schema.json"
     },
     {
       "$ref": "/objects/unstructured-hex-grid/1.0.1/unstructured-hex-grid.schema.json"
@@ -320,6 +404,9 @@
       "$ref": "/objects/unstructured-hex-grid/1.3.0/unstructured-hex-grid.schema.json"
     },
     {
+      "$ref": "/objects/unstructured-hex-grid/1.3.1/unstructured-hex-grid.schema.json"
+    },
+    {
       "$ref": "/objects/unstructured-quad-grid/1.0.1/unstructured-quad-grid.schema.json"
     },
     {
@@ -332,6 +419,9 @@
       "$ref": "/objects/unstructured-quad-grid/1.3.0/unstructured-quad-grid.schema.json"
     },
     {
+      "$ref": "/objects/unstructured-quad-grid/1.3.1/unstructured-quad-grid.schema.json"
+    },
+    {
       "$ref": "/objects/unstructured-tet-grid/1.0.1/unstructured-tet-grid.schema.json"
     },
     {
@@ -342,6 +432,9 @@
     },
     {
       "$ref": "/objects/unstructured-tet-grid/1.3.0/unstructured-tet-grid.schema.json"
+    },
+    {
+      "$ref": "/objects/unstructured-tet-grid/1.3.1/unstructured-tet-grid.schema.json"
     },
     {
       "$ref": "/objects/variogram/1.0.1/variogram.schema.json"
