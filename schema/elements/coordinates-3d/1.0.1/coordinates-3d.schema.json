@@ -1,0 +1,25 @@
+{
+  "$id": "/elements/coordinates-3d/1.0.1/coordinates-3d.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A single point in 3D space. The x, y, z values follow the axis order of the object's coordinate_reference_system.",
+  "type": "object",
+  "properties": {
+    "x": {
+      "description": "Position along the first axis (x) of the object's coordinate reference system.",
+      "type": "number"
+    },
+    "y": {
+      "description": "Position along the second axis (y) of the object's coordinate reference system.",
+      "type": "number"
+    },
+    "z": {
+      "description": "Position along the third axis (z) of the object's coordinate reference system.",
+      "type": "number"
+    }
+  },
+  "required": [
+    "x",
+    "y",
+    "z"
+  ]
+}

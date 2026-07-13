@@ -1,0 +1,40 @@
+{
+  "$id": "/components/bounding-box/1.0.2/bounding-box.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Defines the geographic bounds of the dataset as an axis-aligned box. Each min_*/max_* pair gives the extent along the corresponding axis of the object's coordinate_reference_system (min_x/max_x is the first axis, min_y/max_y the second, min_z/max_z the third). The x, y, z labels denote the CRS axes in order.",
+  "type": "object",
+  "properties": {
+    "min_x": {
+      "type": "number",
+      "description": "Minimum value along the first axis (x) of the object's coordinate reference system."
+    },
+    "max_x": {
+      "type": "number",
+      "description": "Maximum value along the first axis (x) of the object's coordinate reference system."
+    },
+    "min_y": {
+      "type": "number",
+      "description": "Minimum value along the second axis (y) of the object's coordinate reference system."
+    },
+    "max_y": {
+      "type": "number",
+      "description": "Maximum value along the second axis (y) of the object's coordinate reference system."
+    },
+    "min_z": {
+      "type": "number",
+      "description": "Minimum value along the third axis (z) of the object's coordinate reference system."
+    },
+    "max_z": {
+      "type": "number",
+      "description": "Maximum value along the third axis (z) of the object's coordinate reference system."
+    }
+  },
+  "required": [
+    "min_x",
+    "max_x",
+    "min_y",
+    "max_y",
+    "min_z",
+    "max_z"
+  ]
+}
