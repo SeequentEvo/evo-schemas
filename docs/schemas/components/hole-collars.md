@@ -1,9 +1,9 @@
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/components/hole-collars-1.0.0.md';
+import FlatProperties from '../generated/flatmd/components/hole-collars-1.0.1.md';
 
 # hole-collars
 
-<SchemaUri uri="schema/components/hole-collars/1.0.0/hole-collars.schema.json" />
+<SchemaUri uri="schema/components/hole-collars/1.0.1/hole-collars.schema.json" />
 
 The `hole-collars` component represents the surface locations where drillholes begin. It contains:
 

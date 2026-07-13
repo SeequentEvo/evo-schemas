@@ -1,12 +1,12 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/objects/local-ellipsoids-1.3.0.md';
+import FlatProperties from '../generated/flatmd/objects/local-ellipsoids-1.3.1.md';
 
-<OverlineWithVersion title="Geoscience Objects" version="1.3.0" badge="supported" />
+<OverlineWithVersion title="Geoscience Objects" version="1.3.1" badge="supported" />
 
 # local-ellipsoids
 
-<SchemaUri uri="schema/objects/local-ellipsoids/1.3.0/local-ellipsoids.schema.json" />
+<SchemaUri uri="schema/objects/local-ellipsoids/1.3.1/local-ellipsoids.schema.json" />
 
 **Key components:**
 - [ellipsoids](../components/ellipsoids.md) — Collection of ellipsoid definitions for spatially varying anisotropy
@@ -30,4 +30,4 @@ This object is related to the global-ellipsoid and the variogram objects as each
 
 <FlatProperties />
 
-::mermaid[../generated/uml/local-ellipsoids-1.3.0.mmd]
+::mermaid[../generated/uml/local-ellipsoids-1.3.1.mmd]

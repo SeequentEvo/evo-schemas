@@ -1,12 +1,12 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/objects/drilling-campaign-1.0.0.md';
+import FlatProperties from '../generated/flatmd/objects/drilling-campaign-1.0.1.md';
 
-<OverlineWithVersion title="Geoscience Objects" version="1.0.0" badge="supported" />
+<OverlineWithVersion title="Geoscience Objects" version="1.0.1" badge="supported" />
 
 # drilling-campaign
 
-<SchemaUri uri="schema/objects/drilling-campaign/1.0.0/drilling-campaign.schema.json" />
+<SchemaUri uri="schema/objects/drilling-campaign/1.0.1/drilling-campaign.schema.json" />
 
 **Key components:**
 - [hole-collars](../components/hole-collars.md) — Surface drillhole locations with 3D coordinates and depth
@@ -57,7 +57,7 @@ The Planned and Interim drilling data have some common properties:
 
 <FlatProperties />
 
-::mermaid[../generated/uml/drilling-campaign-1.0.0.mmd]
+::mermaid[../generated/uml/drilling-campaign-1.0.1.mmd]
 
 ## Schema definitions
 
@@ -76,7 +76,7 @@ NOTE: To keep things simple, only the required properties are defined. For a ful
 
 |   Property  | Value | Example |
 | ------------- | ------- | ------- |
-|   schema        |  The specific version of the schema that the drilling campaign object will use. This will be used by the Geoscience Object Service to validate the properties of the object.  |   `"/objects/drilling-campaign/1.0.0/drilling-campaign.schema.json"` |
+|   schema        |  The specific version of the schema that the drilling campaign object will use. This will be used by the Geoscience Object Service to validate the properties of the object.  |   `"/objects/drilling-campaign/1.0.1/drilling-campaign.schema.json"` |
 |   type    |  The geoscience object type. For drilling campaign objects, this should be set as campaign.  |  `"campaign"` |
 |   distance_unit   |  The unit of measure that all depth values are in. This applies to all depth/from/to values across all collections.  |  `"m"` |
 |   hole_id |  A category attribute that provides the main index order for both planned drillholes and their associated interim drilling data in the drilling campaign. Category attributes are made up of a table and values. The values represent the index order of each drillhole and provide the main lookup for other attributes or properties. Each drillhole is represented by an integer index value, and the actual drillhole string value is included in the lookup table.    |

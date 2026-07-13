@@ -1,12 +1,12 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/objects/non-parametric-continuous-cumulative-distribution-1.2.0.md';
+import FlatProperties from '../generated/flatmd/objects/non-parametric-continuous-cumulative-distribution-1.2.1.md';
 
-<OverlineWithVersion title="Geoscience Objects" version="1.2.0" badge="supported" />
+<OverlineWithVersion title="Geoscience Objects" version="1.2.1" badge="supported" />
 
 # non-parametric-continuous-cumulative-distribution
 
-<SchemaUri uri="schema/objects/non-parametric-continuous-cumulative-distribution/1.2.0/non-parametric-continuous-cumulative-distribution.schema.json" />
+<SchemaUri uri="schema/objects/non-parametric-continuous-cumulative-distribution/1.2.1/non-parametric-continuous-cumulative-distribution.schema.json" />
 
 **Key components:**
 - [cumulative-distribution-function](../components/cumulative-distribution-function.md) — Non-parametric CDF as quantile-value pairs
@@ -29,4 +29,4 @@ To create this object, the user must provide:
 
 <FlatProperties />
 
-::mermaid[../generated/uml/non-parametric-continuous-cumulative-distribution-1.2.0.mmd]
+::mermaid[../generated/uml/non-parametric-continuous-cumulative-distribution-1.2.1.mmd]

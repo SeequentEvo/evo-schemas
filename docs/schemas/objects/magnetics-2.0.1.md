@@ -1,18 +1,18 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/objects/magnetics-2.0.0.md';
+import FlatProperties from '../generated/flatmd/objects/magnetics-2.0.1.md';
 
-<OverlineWithVersion title="Geoscience Objects" version="2.0.0" badge="techPreview" />
+<OverlineWithVersion title="Geoscience Objects" version="2.0.1" badge="techPreview" />
 
 # magnetics
 
-<SchemaUri uri="schema/objects/magnetics/2.0.0/magnetics.schema.json" />
+<SchemaUri uri="schema/objects/magnetics/2.0.1/magnetics.schema.json" />
 
 **Key components:**
 - [survey-collection](../components/survey-collection.md) — Logical grouping of survey measurements
 - [survey-attribute-definition](../components/survey-attribute-definition.md) — Common properties for survey measurement attributes
 
-**See also:** [gravity-2.0.0](gravity-2.0.0.md) (gravity surveys), [radiometric-2.0.0](radiometric-2.0.0.md) (radiometric surveys), [magnetics-1.2.0](magnetics-1.2.0.md) (previous version).
+**See also:** [gravity-2.0.1](gravity-2.0.1.md) (gravity surveys), [radiometric-2.0.1](radiometric-2.0.1.md) (radiometric surveys), [magnetics-1.2.0](magnetics-1.2.0.md) (previous version).
 
 :::note[Changes from 1.2.0]
 Version 2.0.0 replaces the `magnetics_line_list` / `survey-line` structure with the `collections` / [survey-collection](../components/survey-collection.md) pattern and adds an `attribute_definition_list` of [survey-attribute-definition](../components/survey-attribute-definition.md) entries. This provides a more flexible and consistent data model shared across all survey types.
@@ -44,4 +44,4 @@ The `qaqc_noise_test_list` array includes QA/QC information measuring ambient no
 
 <FlatProperties />
 
-::mermaid[../generated/uml/magnetics-2.0.0.mmd]
+::mermaid[../generated/uml/magnetics-2.0.1.mmd]

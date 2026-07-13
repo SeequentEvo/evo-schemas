@@ -1,9 +1,9 @@
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/components/bounding-box-1.0.1.md';
+import FlatProperties from '../generated/flatmd/components/bounding-box-1.0.2.md';
 
 # bounding-box
 
-<SchemaUri uri="schema/components/bounding-box/1.0.1/bounding-box.schema.json" />
+<SchemaUri uri="schema/components/bounding-box/1.0.2/bounding-box.schema.json" />
 
 The `bounding-box` component defines the geographic extents of a spatial dataset as an axis-aligned box:
 

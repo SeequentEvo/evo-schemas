@@ -1,12 +1,12 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/objects/lineations-data-pointset-1.3.0.md';
+import FlatProperties from '../generated/flatmd/objects/lineations-data-pointset-1.3.1.md';
 
-<OverlineWithVersion title="Geoscience Objects" version="1.3.0" badge="supported" />
+<OverlineWithVersion title="Geoscience Objects" version="1.3.1" badge="supported" />
 
 # lineations-data-pointset
 
-<SchemaUri uri="schema/objects/lineations-data-pointset/1.3.0/lineations-data-pointset.schema.json" />
+<SchemaUri uri="schema/objects/lineations-data-pointset/1.3.1/lineations-data-pointset.schema.json" />
 
 **See also:** [pointset](pointset.md) (base schema), [planar-data-pointset](planar-data-pointset.md) (planar orientation measurements).
 
@@ -39,4 +39,4 @@ This property has three sub-properties, one with the lineation data and two from
 
 <FlatProperties />
 
-::mermaid[../generated/uml/lineations-data-pointset-1.3.0.mmd]
+::mermaid[../generated/uml/lineations-data-pointset-1.3.1.mmd]

@@ -1,12 +1,12 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/objects/resistivity-ip-1.1.0.md';
+import FlatProperties from '../generated/flatmd/objects/resistivity-ip-1.1.1.md';
 
-<OverlineWithVersion title="Geoscience Objects" version="1.1.0" badge="supported" />
+<OverlineWithVersion title="Geoscience Objects" version="1.1.1" badge="supported" />
 
 # resistivity-ip
 
-<SchemaUri uri="schema/objects/resistivity-ip/1.1.0/resistivity-ip.schema.json" />
+<SchemaUri uri="schema/objects/resistivity-ip/1.1.1/resistivity-ip.schema.json" />
 
 **Key components:**
 - [resistivity-ip-line](../components/resistivity-ip-line.md) — Survey line with electrode positions and measurements
@@ -40,4 +40,4 @@ The `line_list` array includes one or more resistivity-IP line definitions, incl
 
 <FlatProperties />
 
-::mermaid[../generated/uml/resistivity-ip-1.1.0.mmd]
+::mermaid[../generated/uml/resistivity-ip-1.1.1.mmd]

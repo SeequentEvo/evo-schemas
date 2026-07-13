@@ -1,18 +1,18 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/objects/radiometric-2.0.0.md';
+import FlatProperties from '../generated/flatmd/objects/radiometric-2.0.1.md';
 
-<OverlineWithVersion title="Geoscience Objects" version="2.0.0" badge="techPreview" />
+<OverlineWithVersion title="Geoscience Objects" version="2.0.1" badge="techPreview" />
 
 # radiometric
 
-<SchemaUri uri="schema/objects/radiometric/2.0.0/radiometric.schema.json" />
+<SchemaUri uri="schema/objects/radiometric/2.0.1/radiometric.schema.json" />
 
 **Key components:**
 - [survey-collection](../components/survey-collection.md) — Logical grouping of survey measurements
 - [survey-attribute-definition](../components/survey-attribute-definition.md) — Common properties for survey measurement attributes
 
-**See also:** [gravity-2.0.0](gravity-2.0.0.md) (gravity surveys), [magnetics-2.0.0](magnetics-2.0.0.md) (magnetic surveys), [radiometric-1.2.0](radiometric-1.2.0.md) (previous version).
+**See also:** [gravity-2.0.1](gravity-2.0.1.md) (gravity surveys), [magnetics-2.0.1](magnetics-2.0.1.md) (magnetic surveys), [radiometric-1.2.0](radiometric-1.2.0.md) (previous version).
 
 :::note[Changes from 1.2.0]
 Version 2.0.0 replaces the `line_list` / `survey-line` structure with the `collections` / [survey-collection](../components/survey-collection.md) pattern and adds an `attribute_definition_list` of [survey-attribute-definition](../components/survey-attribute-definition.md) entries. This also replaces `dead_time`, `live_time`, and `idle_time` with a single `sample_time` parameter. The new structure provides a more flexible and consistent data model shared across all survey types.
@@ -34,4 +34,4 @@ The `collections` array includes one or more `survey-collection` components. Eac
 
 <FlatProperties />
 
-::mermaid[../generated/uml/radiometric-2.0.0.mmd]
+::mermaid[../generated/uml/radiometric-2.0.1.mmd]

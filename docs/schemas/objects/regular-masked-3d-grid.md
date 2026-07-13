@@ -1,12 +1,12 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/objects/regular-masked-3d-grid-1.3.0.md';
+import FlatProperties from '../generated/flatmd/objects/regular-masked-3d-grid-1.3.1.md';
 
-<OverlineWithVersion title="Geoscience Objects" version="1.3.0" badge="supported" />
+<OverlineWithVersion title="Geoscience Objects" version="1.3.1" badge="supported" />
 
 # regular-masked-3d-grid
 
-<SchemaUri uri="schema/objects/regular-masked-3d-grid/1.3.0/regular-masked-3d-grid.schema.json" />
+<SchemaUri uri="schema/objects/regular-masked-3d-grid/1.3.1/regular-masked-3d-grid.schema.json" />
 
 **Key components:**
 - [bool-attribute](../components/bool-attribute.md) — Boolean mask defining which cells contain data
@@ -40,4 +40,4 @@ As with all objects, this grid implements spatial properties including a coordin
 
 <FlatProperties />
 
-::mermaid[../generated/uml/regular-masked-3d-grid-1.3.0.mmd]
+::mermaid[../generated/uml/regular-masked-3d-grid-1.3.1.mmd]

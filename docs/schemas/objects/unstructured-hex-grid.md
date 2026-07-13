@@ -1,12 +1,12 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/objects/unstructured-hex-grid-1.3.0.md';
+import FlatProperties from '../generated/flatmd/objects/unstructured-hex-grid-1.3.1.md';
 
-<OverlineWithVersion title="Geoscience Objects" version="1.3.0" badge="supported" />
+<OverlineWithVersion title="Geoscience Objects" version="1.3.1" badge="supported" />
 
 # unstructured-hex-grid
 
-<SchemaUri uri="schema/objects/unstructured-hex-grid/1.3.0/unstructured-hex-grid.schema.json" />
+<SchemaUri uri="schema/objects/unstructured-hex-grid/1.3.1/unstructured-hex-grid.schema.json" />
 
 **Key components:**
 - [hexahedrons](../components/hexahedrons.md) — Hexahedral cell vertices and connectivity
@@ -25,4 +25,4 @@ The grid's data are all stored on the `hexahedrons` attribute, which defines the
 
 <FlatProperties />
 
-::mermaid[../generated/uml/unstructured-hex-grid-1.3.0.mmd]
+::mermaid[../generated/uml/unstructured-hex-grid-1.3.1.mmd]

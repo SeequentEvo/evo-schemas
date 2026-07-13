@@ -1,9 +1,9 @@
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/components/geometry-part-1.0.1.md';
+import FlatProperties from '../generated/flatmd/components/geometry-part-1.0.2.md';
 
 # geometry-part
 
-<SchemaUri uri="schema/components/geometry-part/1.0.1/geometry-part.schema.json" />
+<SchemaUri uri="schema/components/geometry-part/1.0.2/geometry-part.schema.json" />
 
 The `geometry-part` component describes a named part within a composite geometry, associating a section of
 shared geometry with metadata.

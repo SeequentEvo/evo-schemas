@@ -1,12 +1,12 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/objects/downhole-collection-1.3.0.md';
+import FlatProperties from '../generated/flatmd/objects/downhole-collection-1.3.2.md';
 
-<OverlineWithVersion title="Geoscience Objects" version="1.3.0" badge="supported" />
+<OverlineWithVersion title="Geoscience Objects" version="1.3.2" badge="supported" />
 
 # downhole-collection
 
-<SchemaUri uri="schema/objects/downhole-collection/1.3.0/downhole-collection.schema.json" />
+<SchemaUri uri="schema/objects/downhole-collection/1.3.2/downhole-collection.schema.json" />
 
 **Key components:**
 - [hole-collars](../components/hole-collars.md) — Surface drillhole locations with 3D coordinates and depth
@@ -50,7 +50,7 @@ The JSON schema for downhole collection geoscience objects is structured to capt
 
 <FlatProperties />
 
-::mermaid[../generated/uml/downhole-collection-1.3.0.mmd]
+::mermaid[../generated/uml/downhole-collection-1.3.2.mmd]
 
 ## Schema definitions
 
@@ -69,7 +69,7 @@ NOTE: To keep things simple, only the required properties are defined. For a ful
 
 |   Property	| Value | Example |
 | ------------- | ------- | ------- |
-|   schema        |   The specific version of the schema that the downhole collection object will use. This will be used by the Geoscience Object Service to validate the properties of the object.	|   `"/objects/downhole-collection/1.2.0/downhole-collection.schema.json"` |
+|   schema        |   The specific version of the schema that the downhole collection object will use. This will be used by the Geoscience Object Service to validate the properties of the object.	|   `"/objects/downhole-collection/1.3.2/downhole-collection.schema.json"` |
 |   type    |	The geoscience object type. For downhole collection objects, this should be set as “downhole”.  |	`"downhole"` |
 |   distance_unit   |	The unit of measure that all depth values are in. This applies to all depth/from/to values across all collections.  |	`"m"` |
 

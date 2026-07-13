@@ -1,12 +1,12 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/objects/global-ellipsoid-1.2.0.md';
+import FlatProperties from '../generated/flatmd/objects/global-ellipsoid-1.2.1.md';
 
-<OverlineWithVersion title="Geoscience Objects" version="1.2.0" badge="supported" />
+<OverlineWithVersion title="Geoscience Objects" version="1.2.1" badge="supported" />
 
 # global-ellipsoid
 
-<SchemaUri uri="schema/objects/global-ellipsoid/1.2.0/global-ellipsoid.schema.json" />
+<SchemaUri uri="schema/objects/global-ellipsoid/1.2.1/global-ellipsoid.schema.json" />
 
 **Key components:**
 - [ellipsoid](../components/ellipsoid.md) — Single ellipsoid definition for anisotropy
@@ -27,4 +27,4 @@ This object is related to [the variogram object](variogram.md) as both can be us
 
 <FlatProperties />
 
-::mermaid[../generated/uml/global-ellipsoid-1.2.0.mmd]
+::mermaid[../generated/uml/global-ellipsoid-1.2.1.mmd]

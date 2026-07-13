@@ -1,9 +1,9 @@
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/components/vertices-3d-1.0.1.md';
+import FlatProperties from '../generated/flatmd/components/vertices-3d-1.0.2.md';
 
 # vertices-3d
 
-<SchemaUri uri="schema/components/vertices-3d/1.0.1/vertices-3d.schema.json" />
+<SchemaUri uri="schema/components/vertices-3d/1.0.2/vertices-3d.schema.json" />
 
 The `vertices-3d` component stores a set of 3D vertex coordinates.
 

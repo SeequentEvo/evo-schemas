@@ -1,12 +1,12 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/objects/geophysical-records-1d-1.3.0.md';
+import FlatProperties from '../generated/flatmd/objects/geophysical-records-1d-1.3.1.md';
 
-<OverlineWithVersion title="Geoscience Objects" version="1.3.0" badge="supported" />
+<OverlineWithVersion title="Geoscience Objects" version="1.3.1" badge="supported" />
 
 # geophysical-records-1d
 
-<SchemaUri uri="schema/objects/geophysical-records-1d/1.3.0/geophysical-records-1d.schema.json" />
+<SchemaUri uri="schema/objects/geophysical-records-1d/1.3.1/geophysical-records-1d.schema.json" />
 
 **Key components:**
 - [category-data](../components/category-data.md) — Lookup table mapping integer keys to category names
@@ -41,4 +41,4 @@ Additionally, the object can include:
 
 <FlatProperties />
 
-::mermaid[../generated/uml/geophysical-records-1d-1.3.0.mmd]
+::mermaid[../generated/uml/geophysical-records-1d-1.3.1.mmd]

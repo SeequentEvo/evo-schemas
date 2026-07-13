@@ -1,12 +1,12 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/objects/geological-model-meshes-2.2.0.md';
+import FlatProperties from '../generated/flatmd/objects/geological-model-meshes-2.2.1.md';
 
-<OverlineWithVersion title="Geoscience Objects" version="2.2.0" badge="supported" />
+<OverlineWithVersion title="Geoscience Objects" version="2.2.1" badge="supported" />
 
 # geological-model-meshes
 
-<SchemaUri uri="schema/objects/geological-model-meshes/2.2.0/geological-model-meshes.schema.json" />
+<SchemaUri uri="schema/objects/geological-model-meshes/2.2.1/geological-model-meshes.schema.json" />
 
 **Key components:**
 - [embedded-mesh-object](../components/embedded-mesh-object.md) — Named mesh object parts within the model
@@ -111,4 +111,4 @@ A set of triangulated mesh parts in 3D space. [Parts](../../understanding-schema
 
 <FlatProperties />
 
-::mermaid[../generated/uml/geological-model-meshes-2.2.0.mmd]
+::mermaid[../generated/uml/geological-model-meshes-2.2.1.mmd]

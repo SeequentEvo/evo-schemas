@@ -1,9 +1,9 @@
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/components/segments-1.2.0.md';
+import FlatProperties from '../generated/flatmd/components/segments-1.2.1.md';
 
 # segments
 
-<SchemaUri uri="schema/components/segments/1.2.0/segments.schema.json" />
+<SchemaUri uri="schema/components/segments/1.2.1/segments.schema.json" />
 
 The `segments` component defines a set of line segments by pairs of vertex indices.
 

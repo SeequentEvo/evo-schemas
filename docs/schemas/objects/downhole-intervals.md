@@ -1,12 +1,12 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/objects/downhole-intervals-1.3.0.md';
+import FlatProperties from '../generated/flatmd/objects/downhole-intervals-1.3.1.md';
 
-<OverlineWithVersion title="Geoscience Objects" version="1.3.0" badge="supported" />
+<OverlineWithVersion title="Geoscience Objects" version="1.3.1" badge="supported" />
 
 # downhole-intervals
 
-<SchemaUri uri="schema/objects/downhole-intervals/1.3.0/downhole-intervals.schema.json" />
+<SchemaUri uri="schema/objects/downhole-intervals/1.3.1/downhole-intervals.schema.json" />
 
 **Key components:**
 - [from-to](../components/from-to.md) — Depth range intervals along drillhole traces
@@ -41,4 +41,4 @@ order rather than a fixed easting/northing/elevation ordering. See
 
 <FlatProperties />
 
-::mermaid[../generated/uml/downhole-intervals-1.3.0.mmd]
+::mermaid[../generated/uml/downhole-intervals-1.3.1.mmd]

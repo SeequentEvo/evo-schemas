@@ -1,12 +1,12 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/objects/triangle-mesh-2.3.0.md';
+import FlatProperties from '../generated/flatmd/objects/triangle-mesh-2.3.1.md';
 
-<OverlineWithVersion title="Geoscience Objects" version="2.3.0" badge="supported" />
+<OverlineWithVersion title="Geoscience Objects" version="2.3.1" badge="supported" />
 
 # triangle-mesh
 
-<SchemaUri uri="schema/objects/triangle-mesh/2.3.0/triangle-mesh.schema.json" />
+<SchemaUri uri="schema/objects/triangle-mesh/2.3.1/triangle-mesh.schema.json" />
 
 **Key components:**
 - [mesh-quality](../components/mesh-quality.md) — Mesh quality guarantees
@@ -59,4 +59,4 @@ An optional structure defining edges and edge chunks of the mesh. An optional at
 
 <FlatProperties />
 
-::mermaid[../generated/uml/triangle-mesh-2.3.0.mmd]
+::mermaid[../generated/uml/triangle-mesh-2.3.1.mmd]

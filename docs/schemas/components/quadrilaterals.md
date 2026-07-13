@@ -1,9 +1,9 @@
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/components/quadrilaterals-1.2.0.md';
+import FlatProperties from '../generated/flatmd/components/quadrilaterals-1.2.1.md';
 
 # quadrilaterals
 
-<SchemaUri uri="schema/components/quadrilaterals/1.2.0/quadrilaterals.schema.json" />
+<SchemaUri uri="schema/components/quadrilaterals/1.2.1/quadrilaterals.schema.json" />
 
 The `quadrilaterals` component defines a set of quadrilateral cells by their vertices and connectivity.
 

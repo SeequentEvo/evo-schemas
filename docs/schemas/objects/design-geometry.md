@@ -1,12 +1,12 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/objects/design-geometry-1.1.0.md';
+import FlatProperties from '../generated/flatmd/objects/design-geometry-1.1.1.md';
 
-<OverlineWithVersion title="Geoscience Objects" version="1.1.0" badge="supported" />
+<OverlineWithVersion title="Geoscience Objects" version="1.1.1" badge="supported" />
 
 # design-geometry
 
-<SchemaUri uri="schema/objects/design-geometry/1.1.0/design-geometry.schema.json" />
+<SchemaUri uri="schema/objects/design-geometry/1.1.1/design-geometry.schema.json" />
 
 **Key components:**
 - [geometry-part](../components/geometry-part.md) — Named parts within composite geometry
@@ -168,4 +168,4 @@ Fields:
 
 <FlatProperties />
 
-::mermaid[../generated/uml/design-geometry-1.1.0.mmd]
+::mermaid[../generated/uml/design-geometry-1.1.1.mmd]

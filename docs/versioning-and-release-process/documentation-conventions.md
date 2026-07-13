@@ -56,7 +56,7 @@ import FlatProperties from '../generated/flatmd/objects/<name>-<version>.md';
 
 The `badge` attribute reflects the schema's lifecycle state as described in the [Schema Development Lifecycle](schema-development-lifecycle.md). Use `"supported"` or `"techPreview"` as appropriate.
 
-For objects with multiple documented major versions (e.g., `gravity`), use version-suffixed filenames: `gravity-1.2.0.md`, `gravity-2.0.0.md`.
+For objects with multiple documented major versions (e.g., `gravity`), use version-suffixed filenames: `gravity-1.2.0.md`, `gravity-2.0.1.md`.
 
 ### Component schemas
 
@@ -172,7 +172,7 @@ For multi-version objects, use sub-bullets for version links:
 ```markdown
 * Gravity — potential-field gravity survey data
   * [1.2.0](gravity-1.2.0.md)
-  * [2.0.0](gravity-2.0.0.md)
+  * [2.0.1](gravity-2.0.1.md)
 ```
 
 ## Deprecation notices

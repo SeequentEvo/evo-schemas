@@ -1,9 +1,9 @@
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/components/resistivity-ip-pldp-configuration-properties-1.0.0.md';
+import FlatProperties from '../generated/flatmd/components/resistivity-ip-pldp-configuration-properties-1.0.1.md';
 
 # resistivity-ip-pldp-configuration-properties
 
-<SchemaUri uri="schema/components/resistivity-ip-pldp-configuration-properties/1.0.0/resistivity-ip-pldp-configuration-properties.schema.json" />
+<SchemaUri uri="schema/components/resistivity-ip-pldp-configuration-properties/1.0.1/resistivity-ip-pldp-configuration-properties.schema.json" />
 
 Configuration properties for pole-dipole or offset pole-dipole electrode arrangements in resistivity-IP
 surveys. In a pole-dipole array, one current electrode is placed at a large distance ("infinity"),

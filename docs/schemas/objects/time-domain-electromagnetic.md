@@ -1,12 +1,12 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/objects/time-domain-electromagnetic-1.1.0.md';
+import FlatProperties from '../generated/flatmd/objects/time-domain-electromagnetic-1.1.1.md';
 
-<OverlineWithVersion title="Geoscience Objects" version="1.1.0" badge="supported" />
+<OverlineWithVersion title="Geoscience Objects" version="1.1.1" badge="supported" />
 
 # time-domain-electromagnetic
 
-<SchemaUri uri="schema/objects/time-domain-electromagnetic/1.1.0/time-domain-electromagnetic.schema.json" />
+<SchemaUri uri="schema/objects/time-domain-electromagnetic/1.1.1/time-domain-electromagnetic.schema.json" />
 
 **Key components:**
 - [survey-line](../components/survey-line.md) — Survey line spatial path with location data
@@ -42,4 +42,4 @@ The `line_list` array includes one or more survey-line definitions, including th
 
 <FlatProperties />
 
-::mermaid[../generated/uml/time-domain-electromagnetic-1.1.0.mmd]
+::mermaid[../generated/uml/time-domain-electromagnetic-1.1.1.mmd]

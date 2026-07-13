@@ -1,12 +1,12 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/objects/line-segments-2.2.0.md';
+import FlatProperties from '../generated/flatmd/objects/line-segments-2.2.1.md';
 
-<OverlineWithVersion title="Geoscience Objects" version="2.2.0" badge="supported" />
+<OverlineWithVersion title="Geoscience Objects" version="2.2.1" badge="supported" />
 
 # line-segments
 
-<SchemaUri uri="schema/objects/line-segments/2.2.0/line-segments.schema.json" />
+<SchemaUri uri="schema/objects/line-segments/2.2.1/line-segments.schema.json" />
 
 **Key components:**
 - [segments](../components/segments.md) — Line segments defined by vertex index pairs
@@ -45,4 +45,4 @@ Each chunk is a tuple defining the first index and the length of a chunk of vert
 
 <FlatProperties />
 
-::mermaid[../generated/uml/line-segments-2.2.0.mmd]
+::mermaid[../generated/uml/line-segments-2.2.1.mmd]

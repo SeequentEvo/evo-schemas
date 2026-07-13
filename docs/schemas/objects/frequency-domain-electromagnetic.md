@@ -1,12 +1,12 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/objects/frequency-domain-electromagnetic-1.1.0.md';
+import FlatProperties from '../generated/flatmd/objects/frequency-domain-electromagnetic-1.1.1.md';
 
-<OverlineWithVersion title="Geoscience Objects" version="1.1.0" badge="supported" />
+<OverlineWithVersion title="Geoscience Objects" version="1.1.1" badge="supported" />
 
 # frequency-domain-electromagnetic
 
-<SchemaUri uri="schema/objects/frequency-domain-electromagnetic/1.1.0/frequency-domain-electromagnetic.schema.json" />
+<SchemaUri uri="schema/objects/frequency-domain-electromagnetic/1.1.1/frequency-domain-electromagnetic.schema.json" />
 
 **Key components:**
 - [survey-line](../components/survey-line.md) — Survey line spatial path with location data
@@ -51,4 +51,4 @@ Each line list entry contains:
 
 <FlatProperties />
 
-::mermaid[../generated/uml/frequency-domain-electromagnetic-1.1.0.mmd]
+::mermaid[../generated/uml/frequency-domain-electromagnetic-1.1.1.mmd]

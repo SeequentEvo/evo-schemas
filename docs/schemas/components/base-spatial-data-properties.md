@@ -1,9 +1,9 @@
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/components/base-spatial-data-properties-1.1.0.md';
+import FlatProperties from '../generated/flatmd/components/base-spatial-data-properties-1.1.1.md';
 
 # base-spatial-data-properties
 
-<SchemaUri uri="schema/components/base-spatial-data-properties/1.1.0/base-spatial-data-properties.schema.json" />
+<SchemaUri uri="schema/components/base-spatial-data-properties/1.1.1/base-spatial-data-properties.schema.json" />
 
 The `base-spatial-data-properties` component extends [base-object-properties](base-object-properties.md) with
 fields required by all spatial data objects. Most object schemas compose this component via `allOf`.

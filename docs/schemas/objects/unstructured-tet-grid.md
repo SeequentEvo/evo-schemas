@@ -1,12 +1,12 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/objects/unstructured-tet-grid-1.3.0.md';
+import FlatProperties from '../generated/flatmd/objects/unstructured-tet-grid-1.3.1.md';
 
-<OverlineWithVersion title="Geoscience Objects" version="1.3.0" badge="supported" />
+<OverlineWithVersion title="Geoscience Objects" version="1.3.1" badge="supported" />
 
 # unstructured-tet-grid
 
-<SchemaUri uri="schema/objects/unstructured-tet-grid/1.3.0/unstructured-tet-grid.schema.json" />
+<SchemaUri uri="schema/objects/unstructured-tet-grid/1.3.1/unstructured-tet-grid.schema.json" />
 
 **Key components:**
 - [tetrahedra](../components/tetrahedra.md) — Tetrahedral cell vertices and connectivity
@@ -25,4 +25,4 @@ The grid's data are all stored on the `tetrahedra` attribute, which includes the
 
 <FlatProperties />
 
-::mermaid[../generated/uml/unstructured-tet-grid-1.3.0.mmd]
+::mermaid[../generated/uml/unstructured-tet-grid-1.3.1.mmd]

@@ -1,12 +1,12 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/objects/tensor-3d-grid-1.3.0.md';
+import FlatProperties from '../generated/flatmd/objects/tensor-3d-grid-1.3.1.md';
 
-<OverlineWithVersion title="Geoscience Objects" version="1.3.0" badge="supported" />
+<OverlineWithVersion title="Geoscience Objects" version="1.3.1" badge="supported" />
 
 # tensor-3d-grid
 
-<SchemaUri uri="schema/objects/tensor-3d-grid/1.3.0/tensor-3d-grid.schema.json" />
+<SchemaUri uri="schema/objects/tensor-3d-grid/1.3.1/tensor-3d-grid.schema.json" />
 
 Represents a three-dimensional tensor grid where cells may have different sizes. Tensor grids allow variable cell dimensions along each axis, making them suitable for problems that require local refinement (e.g., finer cells near a feature of interest) or stretched grids for geophysical modelling. For uniform cell sizes, use a [regular-3d-grid](regular-3d-grid.md) instead.
 
@@ -24,4 +24,4 @@ Fields `cell_attributes` and `vertex_attributes` accept a variety of scalar valu
 
 <FlatProperties />
 
-::mermaid[../generated/uml/tensor-3d-grid-1.3.0.mmd]
+::mermaid[../generated/uml/tensor-3d-grid-1.3.1.mmd]

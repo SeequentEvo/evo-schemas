@@ -1,12 +1,12 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/objects/unstructured-grid-1.3.0.md';
+import FlatProperties from '../generated/flatmd/objects/unstructured-grid-1.3.1.md';
 
-<OverlineWithVersion title="Geoscience Objects" version="1.3.0" badge="supported" />
+<OverlineWithVersion title="Geoscience Objects" version="1.3.1" badge="supported" />
 
 # unstructured-grid
 
-<SchemaUri uri="schema/objects/unstructured-grid/1.3.0/unstructured-grid.schema.json" />
+<SchemaUri uri="schema/objects/unstructured-grid/1.3.1/unstructured-grid.schema.json" />
 
 **Key components:**
 - [unstructured-grid-geometry](../components/unstructured-grid-geometry.md) — Vertices, cells, and connectivity indices
@@ -28,4 +28,4 @@ The grid's data are all stored on the `geometry` attribute, which defines the sp
 
 <FlatProperties />
 
-::mermaid[../generated/uml/unstructured-grid-1.3.0.mmd]
+::mermaid[../generated/uml/unstructured-grid-1.3.1.mmd]

@@ -1,9 +1,9 @@
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/components/tetrahedra-1.2.0.md';
+import FlatProperties from '../generated/flatmd/components/tetrahedra-1.2.1.md';
 
 # tetrahedra
 
-<SchemaUri uri="schema/components/tetrahedra/1.2.0/tetrahedra.schema.json" />
+<SchemaUri uri="schema/components/tetrahedra/1.2.1/tetrahedra.schema.json" />
 
 The `tetrahedra` component defines a set of tetrahedral cells by their vertices and connectivity.
 

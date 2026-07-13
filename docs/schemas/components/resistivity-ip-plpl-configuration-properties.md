@@ -1,9 +1,9 @@
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/components/resistivity-ip-plpl-configuration-properties-1.0.0.md';
+import FlatProperties from '../generated/flatmd/components/resistivity-ip-plpl-configuration-properties-1.0.1.md';
 
 # resistivity-ip-plpl-configuration-properties
 
-<SchemaUri uri="schema/components/resistivity-ip-plpl-configuration-properties/1.0.0/resistivity-ip-plpl-configuration-properties.schema.json" />
+<SchemaUri uri="schema/components/resistivity-ip-plpl-configuration-properties/1.0.1/resistivity-ip-plpl-configuration-properties.schema.json" />
 
 Configuration properties for pole-pole electrode arrangements in resistivity-IP surveys. In a pole-pole
 array, both a current electrode and a potential electrode are placed at large distances ("infinity"),

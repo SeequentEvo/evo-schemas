@@ -61,13 +61,13 @@ Geophysical survey data across multiple measurement types — potential fields, 
 
 * Gravity — subsurface density variations measured via gravitational acceleration
   * [1.2.0](gravity-1.2.0.md)
-  * [2.0.0](gravity-2.0.0.md)
+  * [2.0.1](gravity-2.0.1.md)
 * Magnetics — subsurface magnetic susceptibility measured via geomagnetic field variations
   * [1.2.0](magnetics-1.2.0.md)
-  * [2.0.0](magnetics-2.0.0.md)
+  * [2.0.1](magnetics-2.0.1.md)
 * Radiometric — natural gamma-ray emissions from K, U, and Th isotopes
   * [1.2.0](radiometric-1.2.0.md)
-  * [2.0.0](radiometric-2.0.0.md)
+  * [2.0.1](radiometric-2.0.1.md)
 * [Resistivity-IP](resistivity-ip.md) — subsurface electrical resistivity and chargeability
 * [Frequency-domain electromagnetic](frequency-domain-electromagnetic.md) — FDEM survey data (complex impedance at discrete frequencies)
 * [Time-domain electromagnetic](time-domain-electromagnetic.md) — TDEM survey data (transient decay after current shutoff)

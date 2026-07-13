@@ -1,9 +1,9 @@
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/components/hexahedrons-1.2.0.md';
+import FlatProperties from '../generated/flatmd/components/hexahedrons-1.2.1.md';
 
 # hexahedrons
 
-<SchemaUri uri="schema/components/hexahedrons/1.2.0/hexahedrons.schema.json" />
+<SchemaUri uri="schema/components/hexahedrons/1.2.1/hexahedrons.schema.json" />
 
 The `hexahedrons` component defines a set of hexahedral (brick) cells by their vertices and connectivity.
 

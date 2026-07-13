@@ -1,12 +1,12 @@
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/objects/geological-sections-1.2.0.md';
+import FlatProperties from '../generated/flatmd/objects/geological-sections-1.2.1.md';
 
-<OverlineWithVersion title="Geoscience Objects" version="1.2.0" badge="supported" />
+<OverlineWithVersion title="Geoscience Objects" version="1.2.1" badge="supported" />
 
 # geological-sections
 
-<SchemaUri uri="schema/objects/geological-sections/1.2.0/geological-sections.schema.json" />
+<SchemaUri uri="schema/objects/geological-sections/1.2.1/geological-sections.schema.json" />
 
 **Key components:**
 - [embedded-line-geometry](../components/embedded-line-geometry.md) — Polylines composed of straight line segments
@@ -138,4 +138,4 @@ Volumes A1, A2 with overlapping volume B. All of the following representations a
 
 <FlatProperties />
 
-::mermaid[../generated/uml/geological-sections-1.2.0.mmd]
+::mermaid[../generated/uml/geological-sections-1.2.1.mmd]

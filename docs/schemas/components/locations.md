@@ -1,9 +1,9 @@
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/components/locations-1.0.1.md';
+import FlatProperties from '../generated/flatmd/components/locations-1.0.2.md';
 
 # locations
 
-<SchemaUri uri="schema/components/locations/1.0.1/locations.schema.json" />
+<SchemaUri uri="schema/components/locations/1.0.2/locations.schema.json" />
 
 The `locations` component represents a set of point coordinates in 3D space. It is used by objects such as
 [pointset](../objects/pointset.md) and others that need to define spatial positions.

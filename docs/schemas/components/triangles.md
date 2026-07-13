@@ -1,9 +1,9 @@
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/components/triangles-1.2.0.md';
+import FlatProperties from '../generated/flatmd/components/triangles-1.2.1.md';
 
 # triangles
 
-<SchemaUri uri="schema/components/triangles/1.2.0/triangles.schema.json" />
+<SchemaUri uri="schema/components/triangles/1.2.1/triangles.schema.json" />
 
 The `triangles` component defines a set of triangles by their vertices and connectivity.
 

@@ -1,9 +1,9 @@
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/components/unstructured-grid-geometry-1.2.0.md';
+import FlatProperties from '../generated/flatmd/components/unstructured-grid-geometry-1.2.1.md';
 
 # unstructured-grid-geometry
 
-<SchemaUri uri="schema/components/unstructured-grid-geometry/1.2.0/unstructured-grid-geometry.schema.json" />
+<SchemaUri uri="schema/components/unstructured-grid-geometry/1.2.1/unstructured-grid-geometry.schema.json" />
 
 The `unstructured-grid-geometry` component describes the geometry of an unstructured grid, composed of vertices,
 cell definitions, and connectivity indices.
