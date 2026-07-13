@@ -36,7 +36,7 @@ A list of planar cross sections. Each cross section contains a set of volumes an
 
 * `description`  - Optional field for adding additional description about this object.
 
-* `origin` - The coordinates of the section origin. [x, y, z].
+* `origin` - The coordinates of the section origin. [x, y, z]. The x, y, z values follow the axis order declared in the object's `coordinate_reference_system` — see [Coordinate reference systems and axis order](../../understanding-schemas/coordinate-reference-systems.md).
 
 * `Rotation` Section [Rotation](../components/rotation.md) in model space.
 

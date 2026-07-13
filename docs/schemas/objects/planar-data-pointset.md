@@ -32,7 +32,7 @@ This property has four sub-properties, two for the planar data and two from the 
 
 * `plane_orientations` - a two column float array with the *dip_azimuth* and *dip* angles.
 * `plane_polarity` - a boolean array with the *polarity* flags.
-* `coordinates` - an array property with the coordinates (xyz) of each point.
+* `coordinates` - an array property with the coordinates (xyz) of each point. The x, y, z columns follow the axis order declared in the object's `coordinate_reference_system` — see [Coordinate reference systems and axis order](../../understanding-schemas/coordinate-reference-systems.md).
 * An optional [attribute list.](../../understanding-schemas/understanding-attributes.md)
 
 ## Properties

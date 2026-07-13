@@ -11,6 +11,11 @@ The `hole-collars` component represents the surface locations where drillholes b
 * Depth information for each hole.
 * Hole indices and associated attributes.
 
+The `x`, `y`, `z` columns denote the first, second, and third axes of the object's
+`coordinate_reference_system` and follow that CRS's declared axis order, not necessarily
+easting/northing/elevation. See
+[Coordinate reference systems and axis order](../../understanding-schemas/coordinate-reference-systems.md).
+
 This component is used by the [drilling-campaign](../objects/drilling-campaign.md) schema.
 
 **Used by:** [drilling-campaign](../objects/drilling-campaign.md), [downhole-collection](../objects/downhole-collection.md).

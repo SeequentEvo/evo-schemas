@@ -30,7 +30,7 @@ To define a pointset, the object requires a `locations` property.
 
 This property has two sub-properties
 
-* `coordinates` - an array property with the coordinates (xyz) of each point.
+* `coordinates` - an array property with the coordinates (xyz) of each point. The x, y, z columns follow the axis order declared in the object's `coordinate_reference_system` — see [Coordinate reference systems and axis order](../../understanding-schemas/coordinate-reference-systems.md).
 * An optional [attribute list.](../../understanding-schemas/understanding-attributes.md)
 
 

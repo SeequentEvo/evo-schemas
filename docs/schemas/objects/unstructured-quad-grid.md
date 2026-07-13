@@ -19,7 +19,7 @@ Represents an unstructured grid where cells are quadrilaterals.
 
 The grid implements spatial properties including a coordinate reference system and bounding box in world coordinates.
 
-The grid's data are all stored on the `quadrilaterals` attribute, which defines the spatial layout of the grid, including the coordinates of the vertices and the connectivity between them to form quadrilateral cells.
+The grid's data are all stored on the `quadrilaterals` attribute, which defines the spatial layout of the grid, including the coordinates of the vertices and the connectivity between them to form quadrilateral cells. Vertex coordinate columns follow the axis order declared in the object's `coordinate_reference_system` — see [Coordinate reference systems and axis order](../../understanding-schemas/coordinate-reference-systems.md).
 
 ## Properties
 

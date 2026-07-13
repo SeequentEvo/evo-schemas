@@ -12,6 +12,11 @@ It supports three representations, exactly one of which must be provided:
 * `ogc_wkt` — A [WKT2](https://www.ogc.org/standards/wkt-crs) string representation of the CRS.
 * An unspecified CRS (no properties), used when the coordinate reference system is unknown or not applicable.
 
+The CRS defines the **order, direction, and meaning** of every coordinate axis. Coordinate field
+labels such as `x`, `y`, and `z` denote the first, second, and third CRS axes — they do **not** imply
+easting, northing, and elevation. See
+[Coordinate reference systems and axis order](../../understanding-schemas/coordinate-reference-systems.md).
+
 **Used by:** [base-spatial-data-properties](base-spatial-data-properties.md).
 
 ## Properties

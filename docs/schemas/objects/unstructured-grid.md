@@ -21,7 +21,7 @@ The grid implements spatial properties including a coordinate reference system a
 
 The grid's data are all stored on the `geometry` attribute, which defines the spatial layout of the grid, including the coordinates of the vertices and the connectivity between them to form cells.
 
-`vertices` - Table of 3D coordinates (x,y,z)
+`vertices` - Table of 3D coordinates (x,y,z). The x, y, z columns follow the axis order declared in the object's `coordinate_reference_system` — see [Coordinate reference systems and axis order](../../understanding-schemas/coordinate-reference-systems.md).
 `cells`- Table of cell descriptions. Each entry is an array of triples. The first item in the triple represents the shape, second item is an offset to the indices array and the third item is the number of vertices for the shape. Columns: shape, offset, num_vertices.". See [Cell Type Geometry](../../understanding-schemas/cell-type-geometry.md).
 
 ## Properties

@@ -32,6 +32,11 @@ To define the downhole intervals, the object requires:
 
 The object can also capture additional context such as whether the intervals are composited.
 
+The start, end, and mid-point locations are stored as coordinates whose axis order and meaning are
+defined by the object's `coordinate_reference_system` — the columns follow that CRS's declared axis
+order rather than a fixed easting/northing/elevation ordering. See
+[Coordinate reference systems and axis order](../../understanding-schemas/coordinate-reference-systems.md).
+
 ## Properties
 
 <FlatProperties />

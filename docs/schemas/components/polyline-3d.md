@@ -11,6 +11,8 @@ The `polyline-3d` component describes a 3D polyline, defined as a contiguous seq
 * `count` — The number of vertices in the polyline.
 * `closed` — Whether the polyline forms a closed loop.
 
+The referenced vertex coordinates follow the axis order declared in the object's `coordinate_reference_system` — see [Coordinate reference systems and axis order](../../understanding-schemas/coordinate-reference-systems.md).
+
 **Used by:** [geometry-composite](geometry-composite.md).
 
 **See also:** [polyline-2d](polyline-2d.md) (2D counterpart).
