@@ -12,7 +12,7 @@ Represents a regularly-sampled three-dimensional grid (i.e., image) and data att
 
 The grid implements spatial properties including a coordinate reference system and bounding box in world coordinates.
 
-The grid origin is defined in three dimensions, along with `rotation` (defined per the Rotation schema component).
+The grid origin is defined in three dimensions, along with `rotation` (defined per the Rotation schema component). The origin coordinates are expressed in the axes of the object's `coordinate_reference_system`, following that CRS's declared axis order — see [Coordinate reference systems and axis order](../../understanding-schemas/coordinate-reference-systems.md).
 
 The size of the grid is specified in cells (see `size`), each of which has the same length, width and height (see `cell_size`) throughout the grid.
 

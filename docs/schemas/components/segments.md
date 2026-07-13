@@ -10,6 +10,8 @@ The `segments` component defines a set of line segments by pairs of vertex indic
 * `vertices` — An N×3 array of 3D coordinates defining the vertex positions.
 * `indices` — An M×2 [index-array-2](../elements/index-array-2.md) of (start, end) vertex pairs, each defining one segment. Indices are 0-based and reference positions in the `vertices` array.
 
+The vertex coordinate columns follow the axis order declared in the object's `coordinate_reference_system` — see [Coordinate reference systems and axis order](../../understanding-schemas/coordinate-reference-systems.md).
+
 An optional attribute list can be associated with both vertices and indices, allowing per-vertex and per-segment properties.
 
 **Used by:** [line-segments](../objects/line-segments.md), [triangle-mesh](../objects/triangle-mesh.md).
