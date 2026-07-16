@@ -6,6 +6,7 @@
   "type": "string",
   "enum": [
     "%",
+    "count",
     "ppk",
     "ppm",
     "Euc",
