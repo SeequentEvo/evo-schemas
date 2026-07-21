@@ -13,6 +13,9 @@
           "description": "The data type of the attribute as stored in the Block Model Service.",
           "enum": [
             "Boolean",
+            "Float16",
+            "Float32",
+            "Float64",
             "Int8",
             "Int16",
             "Int32",
