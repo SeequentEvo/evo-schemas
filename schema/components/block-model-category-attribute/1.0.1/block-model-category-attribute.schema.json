@@ -1,7 +1,7 @@
 {
   "$id": "/components/block-model-category-attribute/1.0.0/block-model-category-attribute.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "description": "A block model category/string attribute stored by the Block Model Service.",
+  "description": "A block model category (string, boolean or number) attribute stored by the Block Model Service.",
   "type": "object",
   "allOf": [
     {
