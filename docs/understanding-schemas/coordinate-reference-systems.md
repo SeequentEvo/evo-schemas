@@ -36,7 +36,7 @@ Consider a point whose first two coordinate values are `(500000, 400000)`.
 as [EPSG:32633](https://epsg.io/32633) declares the opposite order, **(easting, northing)**. The same pair of numbers therefore describes two different ground positions depending on the CRS.
 
 The transformation below uses [pyproj](https://pyproj4.github.io/pyproj/stable/) to convert the point from EPSG:2180 to [EPSG:4326](https://epsg.io/4326) (WGS 84 geographic, axis order latitude, longitude). The `always_xy` flag on [`Transformer`](https://pyproj4.github.io/pyproj/stable/api/transformer.html) controls whether the
-CRS axis order is honoured:
+CRS axis order is honoured. **`always_xy=False` (the default) honours the CRS-declared axis order and is the correct setting here**. The use of `always_xy=True` forces an easting/longitude-first ordering and silently swaps the coordinates in many CRS configurations, e.g.:
 
 ```python
 import pyproj
@@ -44,8 +44,8 @@ import pyproj
 epsg_4326_gps    = pyproj.CRS.from_epsg(4326)   # WGS 84 geographic, axis order (lat, lon)
 epsg_2180_poland = pyproj.CRS.from_epsg(2180)   # axis order (northing, easting)
 
-# Honours the CRS axis order (CORRECT):
-t = pyproj.Transformer.from_crs(epsg_2180_poland, epsg_4326_gps)
+# Honours the CRS axis order — always_xy=False is the default (CORRECT):
+t = pyproj.Transformer.from_crs(epsg_2180_poland, epsg_4326_gps, always_xy=False)
 print(t.transform(500000, 400000, 0))
 # -> (52.356819022127155, 17.531162579943917, 0.0)   # (lat, lon, z)
 
