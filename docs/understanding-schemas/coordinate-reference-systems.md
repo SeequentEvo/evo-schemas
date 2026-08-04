@@ -75,12 +75,12 @@ The [bounding-box](../schemas/components/bounding-box.md) `min_*`/`max_*` fields
 
 ## Contrast with GeoJSON
 
-Readers coming from a [GeoJSON](https://www.rfc-editor.org/rfc/rfc7946) background should note an important difference. GeoJSON ([RFC 7946, §3.1.1 "Position"](https://www.rfc-editor.org/rfc/rfc7946#section-3.1.1)) mandates that coordinates are *always* ordered longitude, then latitude, then elevation — **regardless** of any CRS. Geoscience Objects do **not** follow this convention. They defer to the object's CRS, so the coordinate order can differ from GeoJSON's fixed longitude-first ordering.
+Readers coming from a [GeoJSON](https://www.rfc-editor.org/rfc/rfc7946) background should note an important difference. GeoJSON fixes its coordinate reference system to WGS 84 ([RFC 7946, §4](https://www.rfc-editor.org/rfc/rfc7946#section-4)) and always orders coordinates longitude, then latitude, then elevation ([§3.1.1 "Position"](https://www.rfc-editor.org/rfc/rfc7946#section-3.1.1)). This fixed longitude-first ordering (equivalent to `urn:ogc:def:crs:OGC::CRS84`) is why GeoJSON differs even from EPSG:4326, which uses the same WGS 84 datum but is latitude-first. Geoscience Objects do **not** pin a CRS this way — they defer to the object's `coordinate_reference_system`, so both the CRS and the coordinate order can differ from GeoJSON.
 
 ## Producer and consumer guidance
 
 * **Producers** should write coordinates (and bounding-box extents) in the CRS's native axis order, and set `coordinate_reference_system` to describe exactly that ordering.
-* **Consumers** should read the CRS *before* interpreting any coordinate, and transform using a library that honours CRS-declared axis order (for example, PROJ ≥ 6 / pyproj with the default `always_xy=False`). Be flexible on read: do not assume easting-first.
+* **Consumers** should read the CRS *before* interpreting any coordinate. A consumer that natively supports arbitrary CRSs can use the coordinates directly in their declared order; one that transforms to another CRS should use a library that honours CRS-declared axis order (for example, PROJ ≥ 6 / pyproj with the default `always_xy=False`). Be flexible on read: do not assume easting-first.
 
 ## References
 
