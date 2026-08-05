@@ -13,7 +13,7 @@ import FlatProperties from '../generated/flatmd/objects/geological-model-meshes-
 - [embedded-triangulated-mesh](../components/embedded-triangulated-mesh.md) — Triangulated mesh decomposed into named parts
 - [material](../components/material.md) — Material properties including name, colour, and data source
 
-**See also:** [geological-sections](geological-sections.md) (section-based modelling), [triangle-mesh](triangle-mesh.md) (individual mesh).
+**See also:** [geological-sections](geological-sections.md) (section-based modelling), [triangle-mesh](triangle-mesh.md) (individual mesh), [volumetric-model-meshes](volumetric-model-meshes.md) (the same structural pattern with volumetric rather than geological semantics).
 
 ## Overview
 

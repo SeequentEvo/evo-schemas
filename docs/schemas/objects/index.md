@@ -46,6 +46,7 @@ Model surfaces, cross-sections, and design geometries used in geological interpr
 
 * [Geological model meshes](geological-model-meshes.md) — a collection of geological volumes and surfaces
 * [Geological sections](geological-sections.md) — cross-sections composed of polygons and polylines
+* [Volumetric model meshes](volumetric-model-meshes.md) — surfaces and volumes over one shared conformal mesh
 * [Design geometry](design-geometry.md) — 2D/3D design geometry
 
 ## Structural geology

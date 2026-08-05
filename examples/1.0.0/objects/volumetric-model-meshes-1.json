@@ -1,0 +1,222 @@
+{
+  "schema": "/objects/volumetric-model-meshes/1.0.0/volumetric-model-meshes.schema.json",
+  "name": "Gold grade shells",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "description": "Isosurfaces at 0.5 and 1.0 g/t Au, with the volumes they bound.",
+  "bounding_box": {
+    "min_x": 0,
+    "max_x": 1000,
+    "min_y": 0,
+    "max_y": 1000,
+    "min_z": -500,
+    "max_z": 0
+  },
+  "coordinate_reference_system": {
+    "epsg_code": 32750
+  },
+  "triangle_geometry": {
+    "triangles": {
+      "vertices": {
+        "width": 3,
+        "data_type": "float64",
+        "length": 24,
+        "data": "abababababababababababababababababababababababababababababababab",
+        "attributes": []
+      },
+      "indices": {
+        "width": 3,
+        "data_type": "uint64",
+        "length": 32,
+        "data": "abababababababababababababababababababababababababababababababab",
+        "attributes": []
+      }
+    },
+    "parts": {
+      "chunks": {
+        "width": 2,
+        "data_type": "uint64",
+        "length": 8,
+        "data": "abababababababababababababababababababababababababababababababab"
+      },
+      "attributes": []
+    }
+  },
+  "surfaces": [
+    {
+      "name": "0.5 g/t shell",
+      "surface_type": "Isosurface",
+      "lower_bound": 0.5,
+      "upper_bound": 0.5,
+      "quality": {
+        "characteristics": [
+          "Manifold",
+          "NonSelfIntersecting"
+        ]
+      },
+      "parts": [
+        {
+          "index": 0
+        },
+        {
+          "index": 1
+        }
+      ]
+    },
+    {
+      "name": "1.0 g/t shell",
+      "surface_type": "Isosurface",
+      "lower_bound": 1.0,
+      "upper_bound": 1.0,
+      "parts": [
+        {
+          "index": 2
+        }
+      ]
+    },
+    {
+      "name": "Top boundary",
+      "surface_type": "ModelBoundary",
+      "boundary_face": "Top",
+      "parts": [
+        {
+          "index": 3
+        },
+        {
+          "index": 4
+        }
+      ]
+    },
+    {
+      "name": "Bottom boundary",
+      "surface_type": "ModelBoundary",
+      "boundary_face": "Bottom",
+      "parts": [
+        {
+          "index": 5
+        }
+      ]
+    }
+  ],
+  "surface_attributes": [
+    {
+      "name": "Area (m2)",
+      "key": "area_m2",
+      "attribute_type": "scalar",
+      "nan_description": {
+        "values": []
+      },
+      "values": {
+        "data_type": "float64",
+        "length": 4,
+        "width": 1,
+        "data": "abababababababababababababababababababababababababababababababab"
+      }
+    }
+  ],
+  "volumes": [
+    {
+      "name": "Below 0.5 g/t",
+      "volume_type": "IsoVolume",
+      "upper_bound": 0.5,
+      "parts": [
+        {
+          "index": 0
+        },
+        {
+          "index": 5
+        },
+        {
+          "index": 6
+        }
+      ]
+    },
+    {
+      "name": "0.5-1.0 g/t zone",
+      "volume_type": "IsoVolume",
+      "lower_bound": 0.5,
+      "upper_bound": 1.0,
+      "parts": [
+        {
+          "index": 0,
+          "reversed": true
+        },
+        {
+          "index": 2
+        },
+        {
+          "index": 7
+        }
+      ]
+    },
+    {
+      "name": "Above 1.0 g/t",
+      "volume_type": "IsoVolume",
+      "lower_bound": 1.0,
+      "parts": [
+        {
+          "index": 2,
+          "reversed": true
+        },
+        {
+          "index": 3
+        }
+      ]
+    },
+    {
+      "name": "Model extent",
+      "volume_type": "ModelBoundary",
+      "parts": [
+        {
+          "index": 3
+        },
+        {
+          "index": 4
+        },
+        {
+          "index": 5
+        },
+        {
+          "index": 6
+        },
+        {
+          "index": 7
+        }
+      ]
+    }
+  ],
+  "volume_attributes": [
+    {
+      "name": "Volume (m3)",
+      "key": "volume_m3",
+      "attribute_type": "scalar",
+      "nan_description": {
+        "values": []
+      },
+      "values": {
+        "data_type": "float64",
+        "length": 4,
+        "width": 1,
+        "data": "abababababababababababababababababababababababababababababababab"
+      }
+    }
+  ],
+  "bounds_unit": "g/t",
+  "isosurfaces": [
+    0,
+    1
+  ],
+  "boundary_surfaces": [
+    2,
+    3
+  ],
+  "volumes_below": [
+    0
+  ],
+  "volumes_between": [
+    1
+  ],
+  "volumes_above": [
+    2
+  ],
+  "boundary_volume": 3
+}

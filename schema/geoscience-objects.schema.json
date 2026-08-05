@@ -351,6 +351,9 @@
     },
     {
       "$ref": "/objects/variogram/1.2.0/variogram.schema.json"
+    },
+    {
+      "$ref": "/objects/volumetric-model-meshes/1.0.0/volumetric-model-meshes.schema.json"
     }
   ]
 }
