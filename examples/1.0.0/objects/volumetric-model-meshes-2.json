@@ -1,0 +1,138 @@
+{
+  "schema": "/objects/volumetric-model-meshes/1.0.0/volumetric-model-meshes.schema.json",
+  "name": "Lithology domains",
+  "uuid": "00000000-0000-0000-0000-000000000001",
+  "description": "A categorical domain model: one closed volume per rock type, with the contact surface between them.",
+  "bounding_box": {
+    "min_x": 0,
+    "max_x": 1000,
+    "min_y": 0,
+    "max_y": 1000,
+    "min_z": -500,
+    "max_z": 0
+  },
+  "coordinate_reference_system": {
+    "epsg_code": 32750
+  },
+  "triangle_geometry": {
+    "triangles": {
+      "vertices": {
+        "width": 3,
+        "data_type": "float64",
+        "length": 16,
+        "data": "abababababababababababababababababababababababababababababababab",
+        "attributes": []
+      },
+      "indices": {
+        "width": 3,
+        "data_type": "uint64",
+        "length": 20,
+        "data": "abababababababababababababababababababababababababababababababab",
+        "attributes": []
+      }
+    },
+    "parts": {
+      "chunks": {
+        "width": 2,
+        "data_type": "uint64",
+        "length": 3,
+        "data": "abababababababababababababababababababababababababababababababab"
+      },
+      "attributes": []
+    }
+  },
+  "category_lookup": {
+    "keys_data_type": "int32",
+    "values_data_type": "string",
+    "length": 2,
+    "data": "abababababababababababababababababababababababababababababababab"
+  },
+  "materials": [
+    {
+      "key": "granite",
+      "name": "Granite",
+      "color": 4285953654
+    },
+    {
+      "key": "basalt",
+      "name": "Basalt",
+      "color": 4281545523
+    }
+  ],
+  "surfaces": [
+    {
+      "name": "Granite / Basalt contact",
+      "surface_type": "CategoryBoundary",
+      "categories": [
+        1,
+        2
+      ],
+      "parts": [
+        {
+          "index": 0
+        }
+      ]
+    }
+  ],
+  "volumes": [
+    {
+      "name": "Granite",
+      "volume_type": "CategoryRegion",
+      "material_key": "granite",
+      "categories": [
+        1
+      ],
+      "parts": [
+        {
+          "index": 0
+        },
+        {
+          "index": 1
+        }
+      ]
+    },
+    {
+      "name": "Basalt",
+      "volume_type": "CategoryRegion",
+      "material_key": "basalt",
+      "categories": [
+        2
+      ],
+      "parts": [
+        {
+          "index": 0,
+          "reversed": true
+        },
+        {
+          "index": 2
+        }
+      ]
+    }
+  ],
+  "folders": [
+    {
+      "name": "Domains",
+      "items": [
+        {
+          "volume_index": 0
+        },
+        {
+          "volume_index": 1
+        }
+      ]
+    },
+    {
+      "name": "Contacts",
+      "items": [
+        {
+          "name": "Lithological",
+          "items": [
+            {
+              "surface_index": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
