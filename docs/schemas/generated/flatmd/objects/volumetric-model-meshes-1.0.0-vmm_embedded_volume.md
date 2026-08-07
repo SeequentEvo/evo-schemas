@@ -7,7 +7,7 @@
 | quality | [mesh-quality](../components/mesh-quality-1.0.1.md) | Mesh quality. | [⬆️](../components/embedded-mesh-object-1.0.0.md) |
 | parts | Array[[reversible-index](../elements/reversible-index-1.0.0.md)] | A list of parts and whether they are reversed. | [⬆️](../components/embedded-mesh-object-1.0.0.md) ✅ |
 | material_key | String | Key of the entry in 'materials' that describes how this volume should be presented. |  |
-| volume_type | String | Kind of volume. Consumers that do not recognise a value should treat it as 'Generic'. |  |
+| volume_type | String | Kind of volume. The set of values is closed in this version of the schema and may be extended in a later minor version; a consumer that encounters a value it does not recognise should treat it as 'Generic' rather than rejecting the volume. |  |
 | lower_bound | Number | Inclusive lower bound of the scalar range the volume encloses, in the model's 'bounds_unit'. Absent if the volume is unbounded below. |  |
 | upper_bound | Number | Exclusive upper bound of the scalar range the volume encloses, in the model's 'bounds_unit'. Absent if the volume is unbounded above. |  |
 | categories | Array[Integer] | Keys into 'category_lookup' identifying the categories the volume encloses. More than one entry means several source categories have been merged into a single domain. Unordered. |  |
