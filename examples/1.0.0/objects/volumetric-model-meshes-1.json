@@ -45,8 +45,7 @@
     {
       "name": "0.5 g/t shell",
       "surface_type": "Isosurface",
-      "lower_bound": 0.5,
-      "upper_bound": 0.5,
+      "bound": 0.5,
       "quality": {
         "characteristics": [
           "Manifold",
@@ -65,8 +64,7 @@
     {
       "name": "1.0 g/t shell",
       "surface_type": "Isosurface",
-      "lower_bound": 1.0,
-      "upper_bound": 1.0,
+      "bound": 1.0,
       "parts": [
         {
           "index": 2
@@ -76,7 +74,7 @@
     {
       "name": "Top boundary",
       "surface_type": "ModelBoundary",
-      "boundary_face": "Top",
+      "boundary_face": "PositiveZ",
       "parts": [
         {
           "index": 3
@@ -89,7 +87,7 @@
     {
       "name": "Bottom boundary",
       "surface_type": "ModelBoundary",
-      "boundary_face": "Bottom",
+      "boundary_face": "NegativeZ",
       "parts": [
         {
           "index": 5
