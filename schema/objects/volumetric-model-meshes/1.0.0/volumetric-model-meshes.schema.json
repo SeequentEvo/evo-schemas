@@ -80,7 +80,7 @@
         },
         "boundary_surfaces": {
           "type": "array",
-          "description": "Indices into 'surfaces' of the surfaces that lie on the boundary of the model extent. A derived index: if present it must list every surface that specifies 'boundary_face' and no others.",
+          "description": "Indices into 'surfaces' of the surfaces that lie on the boundary of the model extent, being those with a 'surface_type' of 'ModelBoundary' or 'NoData'. A derived index: if present it must list every such surface and no others. Together these surfaces cover the model hull, which is the same geometry as 'boundary_volume'.",
           "items": {
             "type": "integer",
             "minimum": 0
@@ -220,7 +220,7 @@
             },
             "boundary_face": {
               "type": "string",
-              "description": "For a surface lying on the boundary of the model extent, which face of the extent it lies on, named by the axis and direction that face points along. The axes are those of the extent itself, so for a rotated extent they are the rotated axes rather than those of the coordinate reference system. For example 'NegativeX' is the face at the extent's minimum X, whose outward normal points along negative X.",
+              "description": "For a surface lying on the boundary of the model extent, which face of the extent it lies on, named by the axis and direction that face points along. The axes are those of the extent itself, so for a rotated extent they are the rotated axes rather than those of the coordinate reference system. For example 'NegativeX' is the face at the extent's minimum X, whose outward normal points along negative X. Absent on a boundary surface that spans more than one face, or that the producer cannot attribute to a single face.",
               "enum": [
                 "NegativeX",
                 "PositiveX",

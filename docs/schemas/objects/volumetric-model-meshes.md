@@ -71,7 +71,7 @@ Open or closed surfaces in the model. May be empty. Each surface contains:
 
 * `categories`: Optional keys into `category_lookup`, ordered so that the triangle normals point **from `categories[0]` towards `categories[1]`** — the first entry is the category behind the surface, the second the category in front of it, as defined under [Orientation and winding](#orientation-and-winding). One entry for a category against unassigned or out-of-model space, where the normals point away from that category and out of the model.
 
-* `boundary_face`: For a surface on the model extent, which face it lies on, named by the axis and direction that face points along: `"NegativeX"`, `"PositiveX"`, `"NegativeY"`, `"PositiveY"`, `"NegativeZ"` or `"PositiveZ"`. The axes are those of the extent itself, so for a rotated extent they are the rotated axes rather than those of the coordinate reference system. `"NegativeX"` is the face at the extent's minimum X, whose outward normal points along negative X.
+* `boundary_face`: For a surface on the model extent, which face it lies on, named by the axis and direction that face points along: `"NegativeX"`, `"PositiveX"`, `"NegativeY"`, `"PositiveY"`, `"NegativeZ"` or `"PositiveZ"`. The axes are those of the extent itself, so for a rotated extent they are the rotated axes rather than those of the coordinate reference system. `"NegativeX"` is the face at the extent's minimum X, whose outward normal points along negative X. Omit it on a boundary surface that spans more than one face, or that the producer cannot attribute to a single face — a `"NoData"` patch, for instance, never carries one.
 
 * `material_key`: Optional key of an entry in `materials`, matching [geological-model-meshes](geological-model-meshes.md), where surfaces carry a material as well as volumes. Isosurfacing output normally omits it; interpreted models use it to preserve a surface's appearance.
 
@@ -146,7 +146,7 @@ Six optional properties provide named, ordered access into `surfaces` and `volum
 
 * `isosurfaces`: Indices into `surfaces` of the surfaces with `surface_type` of `"Isosurface"`, ordered by `bound` ascending.
 
-* `boundary_surfaces`: Indices into `surfaces` of the surfaces that specify a `boundary_face`.
+* `boundary_surfaces`: Indices into `surfaces` of the surfaces with `surface_type` of `"ModelBoundary"` or `"NoData"` — together, the model hull.
 
 * `volumes_below`: Indices into `volumes` of the volumes that specify `upper_bound` and not `lower_bound`, ordered by `upper_bound` ascending.
 
@@ -157,6 +157,8 @@ Six optional properties provide named, ordered access into `surfaces` and `volum
 * `boundary_volume`: Index into `volumes` of the closed hull of the model extent.
 
 The per-item metadata — `surface_type`, `boundary_face`, and the presence of `bound`, `lower_bound` and `upper_bound` — is the single normative source. Each grouping is a **derived index** over it: a producer may omit a grouping entirely, but a grouping that is present must be **exhaustive** — it must list every item matching its criterion and no others.
+
+Note that `volumes_between` covers only volumes with **both** bounds. A volume unbounded below belongs in `volumes_below` and one unbounded above in `volumes_above`, however the producer happened to generate it.
 
 That rule is what keeps the two routes to the same answer in agreement. A consumer that reads a grouping and a consumer that filters `surfaces` or `volumes` directly always obtain the same set; the grouping adds only the producer's ordering. If exhaustiveness were optional the two routes could disagree, and since JSON Schema cannot enforce cross-property invariants there would be no way to tell which was intended.
 
