@@ -79,9 +79,7 @@
       "name": "Granite",
       "volume_type": "CategoryRegion",
       "material_key": "granite",
-      "categories": [
-        1
-      ],
+      "category": 1,
       "parts": [
         {
           "index": 0
@@ -95,9 +93,7 @@
       "name": "Basalt",
       "volume_type": "CategoryRegion",
       "material_key": "basalt",
-      "categories": [
-        2
-      ],
+      "category": 2,
       "parts": [
         {
           "index": 0,

@@ -52,7 +52,7 @@
           "$ref": "/elements/unit/1.0.1/unit.schema.json"
         },
         "category_lookup": {
-          "description": "Lookup table resolving the integer keys used by the 'categories' property of surfaces and volumes to their names. The keys are those of the categorical attribute the model was built from, carried through unchanged. Must be present if any surface or volume specifies 'categories'.",
+          "description": "Lookup table resolving the integer keys used by the 'categories' property of surfaces and the 'category' property of volumes to their names. The keys are those of the categorical attribute the model was built from, carried through unchanged. Must be present if any surface specifies 'categories' or any volume specifies 'category'.",
           "$ref": "/elements/lookup-table/1.0.1/lookup-table.schema.json"
         },
         "materials": {
@@ -265,14 +265,9 @@
               "type": "number",
               "description": "Exclusive upper bound of the scalar range the volume encloses, in the model's 'bounds_unit'. Absent if the volume is unbounded above."
             },
-            "categories": {
-              "type": "array",
-              "description": "Keys into 'category_lookup' identifying the categories the volume encloses. More than one entry means several source categories have been merged into a single domain. Unordered.",
-              "items": {
-                "type": "integer"
-              },
-              "minItems": 1,
-              "uniqueItems": true
+            "category": {
+              "type": "integer",
+              "description": "Key into 'category_lookup' identifying the category the volume encloses. A volume encloses exactly one category; a domain merging several source categories is represented as one category of its own, added to 'category_lookup'."
             }
           }
         }
