@@ -10,7 +10,7 @@
 | volume_type | String | Kind of volume. The set of values is closed in this version of the schema and may be extended in a later minor version; a consumer that encounters a value it does not recognise should treat it as 'Generic' rather than rejecting the volume. |  |
 | lower_bound | Number | Inclusive lower bound of the scalar range the volume encloses, in the model's 'bounds_unit'. Absent if the volume is unbounded below. |  |
 | upper_bound | Number | Exclusive upper bound of the scalar range the volume encloses, in the model's 'bounds_unit'. Absent if the volume is unbounded above. |  |
-| categories | Array[Integer] | Keys into 'category_lookup' identifying the categories the volume encloses. More than one entry means several source categories have been merged into a single domain. Unordered. |  |
+| category | Integer | Key into 'category_lookup' identifying the category the volume encloses. A volume encloses exactly one category; a domain merging several source categories is represented as one category of its own, added to 'category_lookup'. |  |
 
 
 #### Legend

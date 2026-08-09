@@ -91,7 +91,7 @@ Closed volumes in the model. May be empty. A volume's parts must together form a
 
 * `upper_bound`: Optional exclusive upper bound of the scalar range enclosed, in the model's [`bounds_unit`](#bounds_unit). Absent if unbounded above.
 
-* `categories`: Optional keys into `category_lookup` for the categories enclosed. More than one entry means several source categories have been merged into a single domain. Unordered.
+* `category`: Optional key into `category_lookup` for the category enclosed. A volume encloses exactly one category. A domain that merges several source categories is represented as a category of its own, added to `category_lookup`, rather than as a list.
 
 * `material_key`: Optional key of an entry in `materials`.
 
@@ -124,7 +124,7 @@ A purely categorical model has no bounds and omits this property.
 
 ## `category_lookup`
 
-Maps the integer keys used by `categories` to their names. Required if any surface or volume specifies `categories`.
+Maps the integer keys used by `categories` and `category` to their names. Required if any surface specifies `categories` or any volume specifies `category`.
 
 The keys are those of the categorical attribute the model was built from, carried through unchanged, so that a consumer can join the model back to its source grid or block model. The table may contain keys that no surface or volume references — a category present in the source data but absent from this model extent.
 
