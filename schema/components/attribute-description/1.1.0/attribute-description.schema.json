@@ -1,0 +1,39 @@
+{
+  "$id": "/components/attribute-description/1.1.0/attribute-description.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "General information for an attribute.",
+  "type": "object",
+  "properties": {
+    "discipline": {
+      "type": "string",
+      "description": "Discipline attribute comes from, e.g. Geochemistry, Geophysics, Geotechnical, Geology, Structural. None if not known"
+    },
+    "type": {
+      "type": "string",
+      "description": "Type of the attribute, e.g. Gold, Azimuth, Resistivity"
+    },
+    "unit": {
+      "$ref": "/elements/unit/1.1.0/unit.schema.json",
+      "description": "Unit"
+    },
+    "scale": {
+      "type": "string",
+      "description": "Scale of the attribute e.g. log10, log2, exp, lin"
+    },
+    "extensions": {
+      "description": "Extended properties that may be associated to the attribute, but not specified in the schema",
+      "type": "object"
+    },
+    "tags": {
+      "type": "object",
+      "description": "Key-value pairs of user-defined metadata",
+      "additionalProperties": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "discipline",
+    "type"
+  ]
+}

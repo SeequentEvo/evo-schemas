@@ -1,9 +1,9 @@
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/components/attribute-description-1.0.1.md';
+import FlatProperties from '../generated/flatmd/components/attribute-description-1.1.0.md';
 
 # attribute-description
 
-<SchemaUri uri="schema/components/attribute-description/1.0.1/attribute-description.schema.json" />
+<SchemaUri uri="schema/components/attribute-description/1.1.0/attribute-description.schema.json" />
 
 The `attribute-description` component provides general metadata for a continuous attribute:
 

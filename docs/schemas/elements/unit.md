@@ -2,7 +2,7 @@ import SchemaUri from '@theme/SchemaUri';
 
 # unit
 
-<SchemaUri uri="schema/elements/unit/1.0.1/unit.schema.json" />
+<SchemaUri uri="schema/elements/unit/1.1.0/unit.schema.json" />
 
 Defines physical measurement units as a string enum with 125+ supported unit categories, each corresponding to a physical dimension. Components that describe measured quantities (e.g., distances, temperatures, pressures) reference this element to specify their unit of measure.
 

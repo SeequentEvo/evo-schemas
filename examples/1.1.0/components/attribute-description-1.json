@@ -1,0 +1,7 @@
+{
+  "$schema": "/components/attribute-description/1.1.0/attribute-description.schema.json",
+  "discipline": "Geophysics",
+  "scale": "log10",
+  "type": "Resistivity",
+  "unit": "ohm.m"
+}
