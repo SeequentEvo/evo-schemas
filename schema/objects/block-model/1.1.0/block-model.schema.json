@@ -48,7 +48,7 @@
                 "$ref": "/components/block-model-attribute/1.1.0/block-model-attribute.schema.json"
               },
               {
-                "$ref": "/components/block-model-category-attribute/1.0.0/block-model-category-attribute.schema.json"
+                "$ref": "/components/block-model-category-attribute/1.1.0/block-model-category-attribute.schema.json"
               }
             ]
           }
