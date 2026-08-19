@@ -36,7 +36,7 @@ Parts must be split finely enough that every part is wholly inside or wholly out
 
 ## Orientation and winding
 
-Several properties refer to the front and back of a surface. `evo-schemas` does not define a library-wide winding convention, so this object states one explicitly:
+Several properties refer to the front and back of a surface. `evo-schemas` does not define a platform-wide winding convention, so this object states one explicitly:
 
 * The **front** of a triangle is the side from which its three vertices appear in **counter-clockwise** order. Equivalently, its outward normal is `(v1 - v0) × (v2 - v0)` under the right-hand rule, and points away from the front face.
 
