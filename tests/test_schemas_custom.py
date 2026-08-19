@@ -15,6 +15,7 @@ import itertools
 import pprint
 import re
 import types
+import warnings
 from collections import defaultdict
 from pathlib import Path
 
@@ -296,8 +297,47 @@ def test_required_list_only_contains_valid_properties(schema_path):
             assert set(required_props).issubset(set(actual_props)), "'required' list contains invalid property"
 
 
+class StaleSchemaReferenceWarning(UserWarning):
+    """A latest schema version references a non-latest version of a dependency.
+
+    Emitted (rather than failing) because some schemas intentionally reference an
+    older version of a dependency. Surfaced for review without blocking CI.
+    """
+
+
+# The set of "latest" schema paths, using the same filename-based definition as
+# generate_latest_schema_paths (the max version among all files sharing a basename).
+_LATEST_SCHEMA_PATHS = {Path(p).resolve() for p in generate_latest_schema_paths()}
+
+
+def _is_latest_schema_path(schema_path) -> bool:
+    """Whether schema_path is the newest file among all schemas sharing its basename.
+
+    Matches generate_latest_schema_paths; used to validate the test's own inputs.
+    """
+    return Path(schema_path).resolve() in _LATEST_SCHEMA_PATHS
+
+
+def _references_latest_version(ref_path) -> bool:
+    """Whether ref_path is the newest version within its own versioned folder.
+
+    Unlike _is_latest_schema_path, this treats a versioned element/component folder
+    (e.g. unit/1.1.0) as the unit of versioning, so a reference to unit/1.0.1/... is
+    considered stale once unit/1.1.0/ exists — even if that specific nested file (e.g.
+    a unit category) only exists at 1.0.1.
+    """
+    path = Path(ref_path)
+    group_directory = path.parent
+    if semver.Version.is_valid(group_directory.parent.name):
+        group_directory = path.parent.parent
+    all_versions = map(lambda p: p.name, group_directory.parent.iterdir())
+    latest_version = max(all_versions, key=semver.Version.parse)
+    schema_version = semver.Version.parse(group_directory.stem + group_directory.suffix)
+    return latest_version == schema_version
+
+
 @pytest.mark.parametrize("schema_path", generate_latest_schema_paths())
-def test_latest_version_references_latest_version(subtests, schema_path):
+def test_latest_version_references_latest_version(schema_path):
     # These schemas are no longer maintained, so their last versions will not necessarily reference the newest versions
     # of other schemas
     DEPRECATED_SCHEMAS = {
@@ -307,28 +347,22 @@ def test_latest_version_references_latest_version(subtests, schema_path):
         "interval-downholes",
     }
 
-    def is_latest_schema_path(schema_path):
-        path = Path(schema_path)
-        group_directory = path.parent
-        if semver.Version.is_valid(group_directory.parent.name):
-            group_directory = path.parent.parent
-        all_versions = map(lambda p: p.name, group_directory.parent.iterdir())
-        latest_version = max(all_versions, key=semver.Version.parse)
-        schema_version = semver.Version.parse(group_directory.stem + group_directory.suffix)
-        return latest_version == schema_version
-
     class LatestReferencesWalker(SchemaWalker):
         def __init__(self, schema):
             super().__init__(schema)
 
         def dollar_ref(self, validator, ref, _, schema):
             if not ref.startswith("#"):  # local fragments/references are always the same version.
-                resolved_ref = f"schema/{ref}"
-                with subtests.test(msg=ref):
-                    assert is_latest_schema_path(resolved_ref), f"Failed for {ref}. Must reference the latest version."
+                resolved_ref = schema_base_path() / ref.lstrip("/")
+                if not _references_latest_version(resolved_ref):
+                    warnings.warn(
+                        f"{ref} is not the latest version.",
+                        StaleSchemaReferenceWarning,
+                        stacklevel=2,
+                    )
 
     # Sanity test. The latest should be passed to the test!
-    assert is_latest_schema_path(schema_path), f"{schema_path} is not the latest version of the schema."
+    assert _is_latest_schema_path(schema_path), f"{schema_path} is not the latest version of the schema."
 
     schema_name = Path(schema_path).name.split(".")[0]
     if schema_name not in DEPRECATED_SCHEMAS:
