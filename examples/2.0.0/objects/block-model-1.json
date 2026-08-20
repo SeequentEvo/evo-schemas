@@ -44,6 +44,7 @@
       "name": "AU",
       "key": "00000000-0000-0000-0000-000000000003",
       "block_model_column_uuid": "00000000-0000-0000-0000-000000000003",
+      "attribute_class": "continuous",
       "attribute_type": "Float16",
       "attribute_description": {
         "discipline": "Geochemistry",

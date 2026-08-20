@@ -9,6 +9,10 @@
     },
     {
       "properties": {
+        "attribute_class": {
+          "description": "Discriminator identifying the attribute variant. Always \"category\" for a category attribute.",
+          "const": "category"
+        },
         "attribute_type": {
           "description": "The data type of the attribute as stored in the Block Model Service.",
           "enum": [
@@ -36,6 +40,7 @@
     }
   ],
   "required": [
+    "attribute_class",
     "attribute_type",
     "block_model_column_uuid"
   ]

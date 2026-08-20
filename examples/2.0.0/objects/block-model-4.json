@@ -49,6 +49,7 @@
       "name": "example_attr",
       "key": "00000000-0000-0000-0000-000000000032",
       "block_model_column_uuid": "00000000-0000-0000-0000-000000000032",
+      "attribute_class": "continuous",
       "attribute_type": "Date32"
     }
   ],

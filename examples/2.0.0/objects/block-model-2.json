@@ -49,6 +49,7 @@
       "name": "example_attr",
       "key": "00000000-0000-0000-0000-000000000004",
       "block_model_column_uuid": "00000000-0000-0000-0000-000000000004",
+      "attribute_class": "category",
       "attribute_type": "Boolean"
     }
   ],
