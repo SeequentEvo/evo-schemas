@@ -11,6 +11,9 @@
       "$ref": "/objects/block-model/1.1.0/block-model.schema.json"
     },
     {
+      "$ref": "/objects/block-model/1.2.0/block-model.schema.json"
+    },
+    {
       "$ref": "/objects/design-geometry/1.0.1/design-geometry.schema.json"
     },
     {
