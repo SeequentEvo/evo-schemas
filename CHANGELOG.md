@@ -1,5 +1,34 @@
 # Changelog
 
+## v2026.8.12
+<!-- Release notes generated using configuration in .github/release.yml at main -->
+
+## What's Changed
+### Other Changes
+* Add links to UML diagram icons and individual types by @GriffinBaxterSeequent in https://github.com/SeequentEvo/evo-schemas/pull/51
+* Replace remaining `_generated` with `generated` by @GriffinBaxterSeequent in https://github.com/SeequentEvo/evo-schemas/pull/52
+* Improve contributor docs by @bsmithyman in https://github.com/SeequentEvo/evo-schemas/pull/54
+* Add GitHub Copilot instructions by @bsmithyman in https://github.com/SeequentEvo/evo-schemas/pull/53
+* Auto-generate and commit updated schema docs by @GriffinBaxterSeequent in https://github.com/SeequentEvo/evo-schemas/pull/56
+* Update CHANGELOG.md GitHub action by @GriffinBaxterSeequent in https://github.com/SeequentEvo/evo-schemas/pull/57
+* Documentation overhaul: component, element, and object schema docs by @bsmithyman in https://github.com/SeequentEvo/evo-schemas/pull/55
+* Update GitHub action to update changelog with PR by @GriffinBaxterSeequent in https://github.com/SeequentEvo/evo-schemas/pull/59
+* Print warning in cases where verified commit cannot be created by @GriffinBaxterSeequent in https://github.com/SeequentEvo/evo-schemas/pull/63
+* Use GitHub app to create changelog updater PRs by @GriffinBaxterSeequent in https://github.com/SeequentEvo/evo-schemas/pull/64
+* Restructure Copilot instructions with path-specific skill files by @bsmithyman in https://github.com/SeequentEvo/evo-schemas/pull/58
+* Promote Drilling Campaign v1.0.0 by @bsmithyman in https://github.com/SeequentEvo/evo-schemas/pull/61
+* Update CHANGELOG.md by @change-log-updater[bot] in https://github.com/SeequentEvo/evo-schemas/pull/65
+* Create new triangle-mesh minor version with optional quality property by @bsmithyman in https://github.com/SeequentEvo/evo-schemas/pull/67
+* Fix markdown table formatting by @AdamFreemanSeequent in https://github.com/SeequentEvo/evo-schemas/pull/68
+* Use tag friendly br tags by @AdamFreemanSeequent in https://github.com/SeequentEvo/evo-schemas/pull/70
+* Create Units v1.1.0 with count and ratio dimensionless additions by @AndreLobatoSeequent in https://github.com/SeequentEvo/evo-schemas/pull/75
+
+## New Contributors
+* @AdamFreemanSeequent made their first contribution in https://github.com/SeequentEvo/evo-schemas/pull/68
+* @AndreLobatoSeequent made their first contribution in https://github.com/SeequentEvo/evo-schemas/pull/75
+
+**Full Changelog**: https://github.com/SeequentEvo/evo-schemas/compare/v2026.1.8...v2026.8.12
+
 ## v2026.1.8
 <!-- Release notes generated using configuration in .github/release.yml at main -->
 
