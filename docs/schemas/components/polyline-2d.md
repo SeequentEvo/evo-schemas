@@ -12,6 +12,8 @@ The `polyline-2d` component describes a 2D polyline, defined as a contiguous seq
 * `closed` — Whether the polyline forms a closed loop.
 * `shape` — The shape type of the polyline.
 
+The referenced vertex coordinates follow the axis order declared in the object's `coordinate_reference_system` — see [Coordinate reference systems and axis order](../../understanding-schemas/coordinate-reference-systems.md).
+
 **Used by:** [geometry-composite](geometry-composite.md).
 
 **See also:** [polyline-3d](polyline-3d.md) (3D counterpart).

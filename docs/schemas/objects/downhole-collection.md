@@ -43,7 +43,7 @@ The JSON schema for downhole collection geoscience objects is structured to capt
 
 - Base Object Properties – The root component for all geoscience objects containing common attributes such as name, description, and a unique identifer.
 - Base Spatial Data Properties – A set of properties common to all spatial objects such as bounding box and coordinate reference system.
-- Location – The geographic reference of each drill hole in the downhole collection, described in XYZ notation (northing, easting, elevation). The XY coordinates (northing, easting) should be relative to the coordinate reference system defined in the base spatial data properties.
+- Location – The geographic reference of each drill hole in the downhole collection. Each location is stored as three values whose axis order and meaning are defined by the `coordinate_reference_system` in the base spatial data properties. The columns are labelled “x”, “y”, and “z”, denoting the first, second, and third CRS axes; for a CRS whose first axis is easting they are (easting, northing, elevation), while for a CRS whose first axis is northing they are (northing, easting, elevation). Always interpret the values according to the object's CRS rather than assuming a fixed order. See [Coordinate reference systems and axis order](../../understanding-schemas/coordinate-reference-systems.md).
 - Path – The trajectory of each drill hole in the downhole collection from the “top” of the hole to the “bottom” of the hole. The path is represented by a series of depth, azimuth, and dip values along the course of the drill hole. This is the raw survey data that is typically used in a desurveying algorithm to compute the geometry of the drill hole in three-dimensional space.
 - Collections – The downhole data stored in a series of related collections. Each collection is made up of attributes that are related to an interval or depth. Collections are analogous to Tables in a database and attributes are analogous to columns in a table.
 - Metadata – Information about the schema version, data source, units, and other metadata.
@@ -77,7 +77,7 @@ NOTE: To keep things simple, only the required properties are defined. For a ful
 
 |   Property	|   Value |
 | ------------- | ------- |
-|   coordinates |	The geographic location of each drill hole in the downhole collection. Each location is represented as X, Y, Z values (northing, easting, elevation). The coordinates array has 3 columns appropriately named “x”, “y”, and “z” and each value is a float. The row index where the coordinates appear in the array must match the row index where the drill holes appear in the hole_id property. For example, the values at index 4 of the coordinates array are the coordinates for the drill hole at index 4 in the hole_id array.   |
+|   coordinates |	The geographic location of each drill hole in the downhole collection. Each location is stored as three float values whose axis order and meaning are defined by the base `coordinate_reference_system` (for example, for a CRS whose first axis is northing, they are northing, easting, elevation). The coordinates array has 3 columns named “x”, “y”, and “z”, denoting the first, second, and third CRS axes. The row index where the coordinates appear in the array must match the row index where the drill holes appear in the hole_id property. For example, the values at index 4 of the coordinates array are the coordinates for the drill hole at index 4 in the hole_id array.   |
 |   distances   |   The depth values of each drill hole in the downhole collection. The columns are “final”, “target”, and “current”. These are the final/target/current depth values for every drill hole. Each depth value is a float and the row index in the distances must match the row index of the hole_id array.   |
 |   hole_id |   A category attribute that provides the main index order for the drill holes in the downhole collection. Category attributes are made up of a table and values. The values represent the index order of each drill hole and provide the main lookup for other attributes or properties. Each drill hole is represented by an integer index value, and the actual drill hole string value is included in the lookup table.    |
 |   path    |   The trajectory of each drill hole in the downhole collection. The columns are “distance” (for depth), “azimuth”, and “dip”. This is the raw downhole survey data. There is no reference to the hole id directly, this is handled by the holes property that provides the offset and count of rows for each drill hole.  |
@@ -100,7 +100,7 @@ With this index order established, we can now populate some of the other propert
 
 ![](_img/downhole-collection-02.png)
 
-Remember: the coordinates should be in the coordinate system established by the base `coordinate_reference_system` property.
+Remember: the coordinates should be in the coordinate system established by the base `coordinate_reference_system` property, following the axis order declared in that CRS. See [Coordinate reference systems and axis order](../../understanding-schemas/coordinate-reference-systems.md).
 
 Using the key indexes, we know which coordinate values are for which drill holes:
 

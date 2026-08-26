@@ -50,7 +50,7 @@ The JSON schema for drilling campaign geoscience objects is structured to captur
 - Metadata – Information about the schema version, data source, units, and other metadata.
 
 The Planned and Interim drilling data have some common properties:
-- Location – The geometry of each drillhole in the drilling campaign, described in XYZ notation (northing, easting, elevation). The XY coordinates (northing, easting) should be relative to the coordinate reference system defined in the base spatial data properties.
+- Location – The geometry of each drillhole in the drilling campaign. Each location is stored as three values whose axis order and meaning are defined by the base `coordinate_reference_system`. The columns are labelled “x”, “y”, and “z”, denoting the first, second, and third CRS axes; for a CRS whose first axis is easting they are (easting, northing, elevation), while for a CRS whose first axis is northing (such as EPSG:2180) they are (northing, easting, elevation). Always interpret the values according to the object's CRS rather than assuming a fixed order. See [Coordinate reference systems and axis order](../../understanding-schemas/coordinate-reference-systems.md).
 - Distances – The final, target and current length of the drillhole, measured along the drillhole. The final distance should be the target distance plus an option extension. These values should be given in the units specified by metadata depth unit.
 - Collections – The downhole data stored in a series of related collections. Each collection is made up of attributes that are related to an interval or depth. Collections are analogous to Tables in a database and attributes are analogous to columns in a table.
 
@@ -85,7 +85,7 @@ NOTE: To keep things simple, only the required properties are defined. For a ful
 
 |   Property  |   Value |
 | ------------- | ------- |
-|   collar   | The geographic location of each plannned drillhole in the drilling campaign. Each location is represented as X, Y, Z values (northing, easting, elevation). The coordinates array has 3 columns appropriately named “x”, “y”, and “z” and each value is a float. The row index where the coordinates appear in the array must match the row index where the drillholes appear in the hole_id property. For example, the values at index 4 of the coordinates array are the coordinates for the drillhole at index 4 in the hole_id array. |
+|   collar   | The geographic location of each plannned drillhole in the drilling campaign. Each location is stored as three float values whose axis order and meaning are defined by the base `coordinate_reference_system` (for example, for a CRS whose first axis is northing, they are northing, easting, elevation). The coordinates array has 3 columns named “x”, “y”, and “z”, denoting the first, second, and third CRS axes. The row index where the coordinates appear in the array must match the row index where the drillholes appear in the hole_id property. For example, the values at index 4 of the coordinates array are the coordinates for the drillhole at index 4 in the hole_id array. |
 |   path    |   The trajectory of each drillhole in the drilling campaign. The columns required depend on the deviation type. There is no reference to the hole id directly, this is handled by the holes property that provides the offset and count of rows for each drillhole.|
 |   collections   | Expected attributes of the planned drillholes at specific depths or depth intervals. Each collection contains a table including the downhole location and value of attributes, and an array indicating which table rows are associated with each planned drillhole.|
 
@@ -110,7 +110,7 @@ The properties of interim drilling data are substantially the same as those of p
 
 |   Property  |   Value |
 | ------------- | ------- |
-|   collar |  The geographic location of each interim drillhole in the drilling campaign. Each location is represented as X, Y, Z values (northing, easting, elevation). The coordinates array has 3 columns appropriately named “x”, “y”, and “z” and each value is a float. The row index where the coordinates appear in the array must match the row index where the drillholes appear in the hole_id property. For example, the values at index 4 of the coordinates array are the coordinates for the drillhole at index 4 in the hole_id array.   |
+|   collar |  The geographic location of each interim drillhole in the drilling campaign. Each location is stored as three float values whose axis order and meaning are defined by the base `coordinate_reference_system` (for example, for a CRS whose first axis is northing, they are northing, easting, elevation). The coordinates array has 3 columns named “x”, “y”, and “z”, denoting the first, second, and third CRS axes. The row index where the coordinates appear in the array must match the row index where the drillholes appear in the hole_id property. For example, the values at index 4 of the coordinates array are the coordinates for the drillhole at index 4 in the hole_id array.   |
 |   path    |   The trajectory of each drillhole in the drilling campaign. The columns are "distance" (length of the segment), "azimuth", "dip" (angle down from horizontal). This is the raw downhole survey data. There is no reference to the hole id directly, this is handled by the holes property that provides the offset and count of rows for each drillhole.|
 |   desurvey   |The desurvey method used to calculate the drillhole geometry. Available options are "minimum_curvature", "balanced_tangent" and "trench".|
 |   collections   | Attributes of the interim drillholes at specific depths or depth intervals. Each collection contains a table including the downhole location and value of attributes, and an array indicating which table rows are associated with each interim drillhole.|
@@ -118,7 +118,7 @@ The properties of interim drilling data are substantially the same as those of p
 ### Collar
 | Property | Value |
 | ------------- | ------- |
-|   locations |  The geographic location of each drillhole in the drilling campaign. Each location is represented as X, Y, Z values (northing, easting, elevation). The coordinates array has 3 columns appropriately named “x”, “y”, and “z” and each value is a float. The row index where the coordinates appear in the array must match the row index where the drillholes appear in the hole_id property. For example, the values at index 4 of the coordinates array are the coordinates for the drillhole at index 4 in the hole_id array.   |
+|   locations |  The geographic location of each drillhole in the drilling campaign. Each location is stored as three float values whose axis order and meaning are defined by the base `coordinate_reference_system` (for example, for a CRS whose first axis is northing, they are northing, easting, elevation). The coordinates array has 3 columns named “x”, “y”, and “z”, denoting the first, second, and third CRS axes. The row index where the coordinates appear in the array must match the row index where the drillholes appear in the hole_id property. For example, the values at index 4 of the coordinates array are the coordinates for the drillhole at index 4 in the hole_id array.   |
 |   distances   |   The total depth values of each drillhole in the drilling campaign. The columns are “final”, “target”, and “current”. These are the final/target/current depth values for every drillhole. Each depth value is a float and the row index in the distances must match the row index of the hole_id array.   |
 |   holes   |  The row offset and counts for the drillhole path data. Each drillhole in the drilling campaign appears once, using the hole index provided by the hole_id lookup. The offset is the starting row for each drillhole, and the count is the number of rows for each drillhole.  |
 
@@ -139,7 +139,7 @@ With this index order established, we can now populate some of the other propert
 
 ![](_img/drilling-campaign-02.png)
 
-Remember: the coordinates should be in the coordinate system established by the base `coordinate_reference_system` property.
+Remember: the coordinates should be in the coordinate system established by the base `coordinate_reference_system` property, following the axis order declared in that CRS. See [Coordinate reference systems and axis order](../../understanding-schemas/coordinate-reference-systems.md).
 
 Using the key indexes, we know which coordinate values are for which drillholes:
 

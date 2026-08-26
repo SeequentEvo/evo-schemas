@@ -8,7 +8,11 @@ import FlatProperties from '../generated/flatmd/components/locations-1.0.1.md';
 The `locations` component represents a set of point coordinates in 3D space. It is used by objects such as
 [pointset](../objects/pointset.md) and others that need to define spatial positions.
 
-* `coordinates` — An array of 3D coordinates (x, y, z), stored as a `float-array-3` element.
+* `coordinates` — An array of 3D coordinates (x, y, z), stored as a `float-array-3` element. The
+  column order follows the axis order declared in the object's `coordinate_reference_system`; the
+  labels `x`, `y`, `z` denote the first, second, and third CRS axes, not necessarily
+  easting/northing/elevation. See
+  [Coordinate reference systems and axis order](../../understanding-schemas/coordinate-reference-systems.md).
 
 Attributes can be associated with locations via the optional attribute list (see
 [Understanding attributes](../../understanding-schemas/understanding-attributes.md)).

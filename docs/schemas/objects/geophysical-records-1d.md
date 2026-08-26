@@ -27,7 +27,7 @@ To define the geophysical-records-1d object, the following properties are requir
 
 Each location entry contains information about the:
 
-- Coordinates (x, y, z).
+- Coordinates (x, y, z). The x, y, z values follow the axis order declared in the object's `coordinate_reference_system` — see [Coordinate reference systems and axis order](../../understanding-schemas/coordinate-reference-systems.md).
 
 Each depth entry contains:
 

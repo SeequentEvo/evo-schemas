@@ -22,7 +22,7 @@ This object is particularly useful in geological and geostatistical analysis whe
 To define the regular masked 3D grid, the object requires:
 
 - The dimensions of the grid in number of cells.
-- The coordinates of the origin [x, y, z].
+- The coordinates of the origin [x, y, z], expressed in the axes of the object's `coordinate_reference_system` (following that CRS's declared axis order — see [Coordinate reference systems and axis order](../../understanding-schemas/coordinate-reference-systems.md)).
 - The size of each cell in the grid [cell_size_x, cell_size_y, cell_size_z].
 - A mask (boolean array) indicating active and inactive cells.
 - The number of active cells, which corresponds to the number of true elements in the mask.

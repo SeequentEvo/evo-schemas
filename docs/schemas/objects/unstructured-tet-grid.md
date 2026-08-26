@@ -19,7 +19,7 @@ Represents an unstructured tetrahedral grid where cells are tetrahedrons.
 
 The grid implements spatial properties including a coordinate reference system and bounding box in world coordinates.
 
-The grid's data are all stored on the `tetrahedra` attribute, which includes the coordinates and connectivity information between them to form tetrahedral cells.
+The grid's data are all stored on the `tetrahedra` attribute, which includes the coordinates and connectivity information between them to form tetrahedral cells. Vertex coordinate columns follow the axis order declared in the object's `coordinate_reference_system` — see [Coordinate reference systems and axis order](../../understanding-schemas/coordinate-reference-systems.md).
 
 ## Properties
 
