@@ -1,0 +1,57 @@
+{
+  "$id": "/components/block-model-attribute-group/1.0.0/block-model-attribute-group.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Column group metadata",
+  "type": "object",
+  "properties": {
+    "group_uuid": {
+      "type": "string",
+      "format": "uuid",
+      "title": "Group UUID",
+      "description": "Unique identifier for the group."
+    },
+    "is_hidden": {
+      "type": "boolean",
+      "default": false,
+      "title": "Is Hidden",
+      "description": "When true, the group's direct member columns are excluded from wildcard queries (unless include_hidden is set in the query)."
+    },
+    "missing_column_policy": {
+      "type": "string",
+      "enum": [
+        "INHERIT",
+        "USE_PREVIOUS",
+        "SET_NULL",
+        "REJECT"
+      ],
+      "title": "Missing Column Policy",
+      "default": "USE_PREVIOUS",
+      "description": "Defines the update behaviour, for all columns in the group, for columns that do not have a value provided."
+    },
+    "parent_group_uuid": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Parent Group UUID",
+      "description": "Identifier of the parent group. Null means the group is a 'top-level' group."
+    },
+    "tags": {
+      "type": "object",
+      "title": "Tags",
+      "description": "Publisher-supplied free-form metadata for the group, as a JSON object. Keys must be 1-100 chars and cannot contain leading whitespace or dot, or the characters `/ \\ : > < | ? \" *`; keys are unique case-insensitively. Values may be any JSON-compatible type. A single `tags` object serialised as UTF-8 JSON must be at most 10 KiB."
+    },
+    "title": {
+      "type": "string",
+      "title": "Title",
+      "default": "",
+      "description": "'Human-readable label for the group, unique across the parent group, or across top-level groups if no parent. They must be 1-100 chars and cannot contain leading whitespace or dot, or the characters `/ \\ : > < | ? \" *`. Must not contain the qualified title separator `▸`.'"
+    }
+  },
+  "additionalProperties": false
+}
