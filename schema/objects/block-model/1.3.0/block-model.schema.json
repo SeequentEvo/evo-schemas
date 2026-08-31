@@ -47,7 +47,7 @@
           }
         },
         "groups": {
-          "description": "The attribute groups available on this blockmodel. Note that group memberships are not included in this data; group memberships are set by a uuid pointer in `attributes`.",
+          "description": "The block-model-attribute-groups available on this block model. Attribute membership is set by the `block_model_group_uuid` property.",
           "type": "array",
           "items": {
             "$ref": "/components/block-model-attribute-group/1.0.0/block-model-attribute-group.schema.json"

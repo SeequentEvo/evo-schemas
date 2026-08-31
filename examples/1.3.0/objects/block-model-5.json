@@ -2,7 +2,7 @@
   "schema": "/objects/block-model/1.3.0/block-model.schema.json",
   "name": "Gold Grade Estimation Block Model",
   "uuid": "6e15c8d1-4a2f-4b9e-8f73-1a9c5d2e7b40",
-  "description": "Example block model with nested attribute groups for gold grade estimation.",
+  "description": "Example block model with nested block-model-attribute-groups for gold grade estimation.",
   "bounding_box": {
     "min_x": 0,
     "max_x": 15,

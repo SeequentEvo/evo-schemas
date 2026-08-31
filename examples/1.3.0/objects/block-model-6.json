@@ -2,7 +2,7 @@
   "schema": "/objects/block-model/1.3.0/block-model.schema.json",
   "name": "Silver Scenario Block Model",
   "uuid": "d1c8a5f2-6e43-4b90-8d17-3f7a2c9e5b64",
-  "description": "Example block model with silver scenario attribute groups.",
+  "description": "Example block model with silver scenario block-model-attribute-groups.",
   "bounding_box": {
     "min_x": 0,
     "max_x": 15,

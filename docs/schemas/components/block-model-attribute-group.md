@@ -5,7 +5,7 @@ import FlatProperties from '../generated/flatmd/components/block-model-attribute
 
 <SchemaUri uri="schema/components/block-model-attribute-group/1.0.0/block-model-attribute-group.schema.json" />
 
-A block-model attribute group defines metadata for a logical grouping of block-model attributes. Groups can form a hierarchy using `parent_group_uuid`; attributes join a group through their `block_model_group_uuid`. Groups lacking a `parent_group_id` are treated implicitely as the "root groups". 
+A block-model-attribute-group defines metadata for a logical column group in a block model. Groups can form a hierarchy using `parent_group_uuid`; attributes join a group through their `block_model_group_uuid`. Groups without a `parent_group_uuid` are root groups.
 
 
 **See also:** [block-model-attribute](block-model-attribute.md) (block-model attribute metadata).

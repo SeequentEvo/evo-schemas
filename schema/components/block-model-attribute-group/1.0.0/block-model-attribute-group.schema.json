@@ -1,7 +1,7 @@
 {
   "$id": "/components/block-model-attribute-group/1.0.0/block-model-attribute-group.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "description": "Column group metadata",
+  "description": "A block-model-attribute-group represents metadata about a group of attributes (columns).",
   "type": "object",
   "properties": {
     "group_uuid": {
