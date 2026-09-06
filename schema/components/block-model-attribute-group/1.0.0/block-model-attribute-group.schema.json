@@ -14,7 +14,7 @@
       "type": "boolean",
       "default": false,
       "title": "Is Hidden",
-      "description": "When true, the group's direct member columns are excluded from wildcard queries (unless include_hidden is set in the query)."
+      "description": "When true, indicates that the Block Model Service will exclude group members from wildcard queries by default."
     },
     "missing_column_policy": {
       "type": "string",
@@ -26,7 +26,7 @@
       ],
       "title": "Missing Column Policy",
       "default": "use_previous",
-      "description": "Defines the update behaviour, for all columns in the group, for columns that do not have a value provided."
+      "description": "Defines the update behaviour for all columns in the group that do not have a value provided."
     },
     "parent_group_uuid": {
       "oneOf": [
@@ -44,7 +44,7 @@
     "tags": {
       "type": "object",
       "title": "Tags",
-      "description": "Publisher-supplied free-form metadata for the group, as a JSON object. Keys must be 1-100 chars and cannot contain leading whitespace or dot, or the characters `/ \\ : > < | ? \" *`; keys are unique case-insensitively. Values may be any JSON-compatible type. A single `tags` object serialised as UTF-8 JSON must be at most 10 KiB."
+      "description": "Publisher-supplied free-form metadata for the group, as a JSON object. Keys must be 1-100 characters and cannot contain leading whitespace or dot, or the characters `/ \\ : > < | ? \" *`; keys are unique case-insensitively. Values may be any JSON-compatible type. A single `tags` object serialised as UTF-8 JSON must be at most 10 KiB."
     },
     "title": {
       "type": "string",
