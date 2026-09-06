@@ -51,25 +51,25 @@
       "group_uuid": "4d9e1b72-a6c3-4f80-95d2-8b6a3e7c1f49",
       "parent_group_uuid": "f2a7c18d-95e4-4b63-8d20-7c1e4a9f6b35",
       "title": "Statistical evaluation",
-      "missing_column_policy": "INHERIT"
+      "missing_column_policy": "inherit"
     },
     {
       "group_uuid": "b5f0a3c8-2e71-4d96-8b4f-1c7a9e3d6f20",
       "parent_group_uuid": "4d9e1b72-a6c3-4f80-95d2-8b6a3e7c1f49",
       "title": "Ordinary kriging",
-      "missing_column_policy": "USE_PREVIOUS"
+      "missing_column_policy": "use_previous"
     },
     {
       "group_uuid": "8c3e7a1f-d952-4b60-9e18-4f6a2c8d1b75",
       "parent_group_uuid": "b5f0a3c8-2e71-4d96-8b4f-1c7a9e3d6f20",
       "title": "High-confidence estimate",
-      "missing_column_policy": "SET_NULL"
+      "missing_column_policy": "set_null"
     },
     {
       "group_uuid": "1b6d9f42-7e30-4c85-a1f6-9d3b2e8c5a74",
       "parent_group_uuid": "f2a7c18d-95e4-4b63-8d20-7c1e4a9f6b35",
       "title": "Constrained scenario",
-      "missing_column_policy": "REJECT",
+      "missing_column_policy": "reject",
       "is_hidden": true
     }
   ],

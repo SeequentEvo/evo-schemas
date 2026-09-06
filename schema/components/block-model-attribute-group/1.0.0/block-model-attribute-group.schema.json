@@ -19,13 +19,13 @@
     "missing_column_policy": {
       "type": "string",
       "enum": [
-        "INHERIT",
-        "USE_PREVIOUS",
-        "SET_NULL",
-        "REJECT"
+        "inherit",
+        "use_previous",
+        "set_null",
+        "reject"
       ],
       "title": "Missing Column Policy",
-      "default": "USE_PREVIOUS",
+      "default": "use_previous",
       "description": "Defines the update behaviour, for all columns in the group, for columns that do not have a value provided."
     },
     "parent_group_uuid": {
