@@ -49,12 +49,12 @@
     "title": {
       "type": "string",
       "title": "Title",
-      "default": "",
       "description": "Human-readable label for the group, unique across the parent group, or across top-level groups if no parent. Titles must be 1-100 characters and cannot contain leading whitespace or dot, or the characters `/ \\ : > < | ? \" *`. Must not contain the qualified title separator `▸`."
     }
   },
   "required": [
-    "group_uuid"
+    "group_uuid",
+    "title"
   ],
   "additionalProperties": false
 }
