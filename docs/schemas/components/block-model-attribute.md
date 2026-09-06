@@ -1,9 +1,9 @@
 import SchemaUri from '@theme/SchemaUri';
-import FlatProperties from '../generated/flatmd/components/block-model-attribute-1.2.0.md';
+import FlatProperties from '../generated/flatmd/components/block-model-attribute-1.3.0.md';
 
 # block-model-attribute
 
-<SchemaUri uri="schema/components/block-model-attribute/1.2.0/block-model-attribute.schema.json" />
+<SchemaUri uri="schema/components/block-model-attribute/1.3.0/block-model-attribute.schema.json" />
 
 A block model attribute extends the standard attribute system for use with block model data. Block model
 attributes accommodate the variable-length sub-block structure of block models.
@@ -13,10 +13,16 @@ value storage. As of 1.2.0 it is the single attribute type used by the block-mod
 continuous and categorical attributes via its `attribute_type` (`Boolean` and `Utf8` alongside the numeric,
 date, and timestamp types).
 
+As of 1.3.0 an attribute may also declare membership of an attribute group through the optional
+`block_model_group_uuid`, which references the `group_uuid` of a
+[block-model-attribute-group](block-model-attribute-group.md) declared on the block-model object. An attribute
+without `block_model_group_uuid` is ungrouped.
+
 **Used by:** block-model.
 
-**See also:** [block-model-category-attribute](block-model-category-attribute.md) (separate categorical
-attribute used by block-model 1.1.0 and earlier).
+**See also:** [block-model-attribute-group](block-model-attribute-group.md) (grouping metadata for these
+attributes), [block-model-category-attribute](block-model-category-attribute.md) (separate categorical attribute
+used by block-model 1.1.0 and earlier).
 
 ## Properties
 

@@ -9,7 +9,7 @@ A block model attribute stored by the Block Model Service. Covers both continuou
 | attribute_description | [attribute-description](../components/attribute-description-1.1.0.md) | The attribute description record. | [⬆️](../components/base-continuous-attribute-1.1.0.md) |
 | attribute_type | String | The data type of the attribute as stored in the Block Model Service. | ✅ |
 | block_model_column_uuid | String | The unique ID of the attribute on the block model. | ✅ |
-| block_model_group_uuid | String | The unique ID of the column group that that the attribute belongs to. |  |
+| block_model_group_uuid | String | The unique ID of the attribute group (column group) that the attribute belongs to. |  |
 
 
 #### Legend

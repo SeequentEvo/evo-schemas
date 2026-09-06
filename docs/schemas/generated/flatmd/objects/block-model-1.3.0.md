@@ -16,7 +16,7 @@ A reference to a block model stored in the Block Model Service.
 | block_model_version_uuid | String | The unique ID of this version of the block model in the Block Model Service. |  |
 | geometry | [block-model](../objects/block-model-1.3.0-geometry.md) | The geometry (including subblocking parameters, if applicable) of the block model. | ✅ |
 | attributes | Array[[block-model-attribute](../components/block-model-attribute-1.3.0.md)] | The attributes found on this version of the block model. |  |
-| groups | Array[[block-model-attribute-group](../components/block-model-attribute-group-1.0.0.md)] | The attribute groups available on this blockmodel. Note that group memberships are not included in this data; group memberships are set by a uuid pointer in `attributes`. |  |
+| groups | Array[[block-model-attribute-group](../components/block-model-attribute-group-1.0.0.md)] | The block-model-attribute-groups available on this block model. Attribute membership is set by the `block_model_group_uuid` property. |  |
 
 
 #### Legend

@@ -1,7 +1,7 @@
 {
   "$id": "/components/block-model-attribute-group/1.0.0/block-model-attribute-group.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "description": "A block-model-attribute-group represents metadata about a group of attributes (columns).",
+  "description": "Metadata for a named group of block model attributes (columns), optionally nested within a parent group.",
   "type": "object",
   "properties": {
     "group_uuid": {
@@ -50,7 +50,7 @@
       "type": "string",
       "title": "Title",
       "default": "",
-      "description": "'Human-readable label for the group, unique across the parent group, or across top-level groups if no parent. They must be 1-100 chars and cannot contain leading whitespace or dot, or the characters `/ \\ : > < | ? \" *`. Must not contain the qualified title separator `▸`.'"
+      "description": "Human-readable label for the group, unique across the parent group, or across top-level groups if no parent. Titles must be 1-100 characters and cannot contain leading whitespace or dot, or the characters `/ \\ : > < | ? \" *`. Must not contain the qualified title separator `▸`."
     }
   },
   "additionalProperties": false

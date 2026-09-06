@@ -35,7 +35,7 @@
           "format": "uuid"
         },
         "block_model_group_uuid": {
-          "description": "The unique ID of the block-model-attribute-group to which the attribute belongs.",
+          "description": "The unique ID of the attribute group (column group) that the attribute belongs to.",
           "type": "string",
           "format": "uuid"
         }
