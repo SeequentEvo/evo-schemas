@@ -44,23 +44,18 @@ def test_block_model_group_refs_are_coherent(example_path: str) -> None:
     example = json_file_to_dict(example_path)
 
     groups = example.get("groups", [])
-    group_ids = {group["group_uuid"] for group in groups}
+    groups_by_id = {group["group_uuid"]: group for group in groups}
+    group_ids = set(groups_by_id)
     assert len(group_ids) == len(groups), f"{example_path}: group UUIDs must be unique"
 
     for group in groups:
         parent_group_uuid = group.get("parent_group_uuid")
-        if parent_group_uuid is not None:
-            assert parent_group_uuid in group_ids, f"{example_path}: parent group UUID must reference a group"
-
         ancestor_ids = {group["group_uuid"]}
         while parent_group_uuid is not None:
+            assert parent_group_uuid in group_ids, f"{example_path}: parent group UUID must reference a group"
             assert parent_group_uuid not in ancestor_ids, f"{example_path}: group hierarchy must not be circular"
             ancestor_ids.add(parent_group_uuid)
-            parent_group_uuid = next(
-                candidate.get("parent_group_uuid")
-                for candidate in groups
-                if candidate["group_uuid"] == parent_group_uuid
-            )
+            parent_group_uuid = groups_by_id[parent_group_uuid].get("parent_group_uuid")
 
     for attribute in example.get("attributes", []):
         group_uuid = attribute.get("block_model_group_uuid")
