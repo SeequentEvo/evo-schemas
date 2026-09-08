@@ -1,0 +1,286 @@
+{
+  "schema": "/objects/block-model/1.3.0/block-model.schema.json",
+  "name": "Silver Scenario Block Model",
+  "uuid": "d1c8a5f2-6e43-4b90-8d17-3f7a2c9e5b64",
+  "description": "Example block model with silver scenario block-model-attribute-groups.",
+  "bounding_box": {
+    "min_x": 0,
+    "max_x": 15,
+    "min_y": 0,
+    "max_y": 15,
+    "min_z": 0,
+    "max_z": 50.0
+  },
+  "coordinate_reference_system": {
+    "epsg_code": 1024
+  },
+  "block_model_uuid": "5e2a9d71-c4f8-4b36-9a05-1d7c3e8f6b20",
+  "block_model_version_uuid": "a7b3e9c4-1f65-4d82-8c30-6e2a9f5b7d14",
+  "geometry": {
+    "model_type": "flexible",
+    "origin": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_parent_blocks": [
+      10,
+      10,
+      20
+    ],
+    "parent_block_size": [
+      1.5,
+      1.5,
+      2.5
+    ],
+    "n_subblocks_per_parent": [
+      15,
+      64,
+      21
+    ],
+    "rotation": {
+      "dip_azimuth": 90.0,
+      "dip": 45.0,
+      "pitch": 15.0
+    }
+  },
+  "groups": [
+    {
+      "group_uuid": "c9e4a172-5b8d-4f63-90c1-7a2e6d8f3b45",
+      "parent_group_uuid": null,
+      "title": "Ag",
+      "tags": {
+        "commodity": "silver",
+        "reporting_unit": "g/t"
+      }
+    },
+    {
+      "group_uuid": "2f7c8d5a-e149-4b60-a3f8-6d1e9c4b7a25",
+      "parent_group_uuid": "c9e4a172-5b8d-4f63-90c1-7a2e6d8f3b45",
+      "title": "Economic scenarios",
+      "tags": {
+        "purpose": "resource evaluation"
+      }
+    },
+    {
+      "group_uuid": "7b1e6a3d-c859-4f20-8d74-9a2c5e1f6b38",
+      "parent_group_uuid": "2f7c8d5a-e149-4b60-a3f8-6d1e9c4b7a25",
+      "title": "Base case",
+      "is_hidden": true
+    },
+    {
+      "group_uuid": "e3d9b6a1-4c72-4f85-91e0-8b5a2d7c6f49",
+      "parent_group_uuid": "2f7c8d5a-e149-4b60-a3f8-6d1e9c4b7a25",
+      "title": "Upside case"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "grade_gpt",
+      "key": "6c2a8f1d-b754-4e90-8c36-1e7a5d9b3f42",
+      "block_model_column_uuid": "6c2a8f1d-b754-4e90-8c36-1e7a5d9b3f42",
+      "block_model_group_uuid": "c9e4a172-5b8d-4f63-90c1-7a2e6d8f3b45",
+      "attribute_type": "Float32",
+      "attribute_description": {
+        "discipline": "Geochemistry",
+        "type": "Silver grade",
+        "unit": "g/t"
+      }
+    },
+    {
+      "name": "oxide_grade_gpt",
+      "key": "b1e6a3d9-5c72-4f80-8d24-7a1e9c5f6b43",
+      "block_model_column_uuid": "b1e6a3d9-5c72-4f80-8d24-7a1e9c5f6b43",
+      "block_model_group_uuid": "c9e4a172-5b8d-4f63-90c1-7a2e6d8f3b45",
+      "attribute_type": "Float32"
+    },
+    {
+      "name": "sulphide_grade_gpt",
+      "key": "6c1a8e4d-b253-4f90-9d76-2a7e5c1f8b34",
+      "block_model_column_uuid": "6c1a8e4d-b253-4f90-9d76-2a7e5c1f8b34",
+      "block_model_group_uuid": "c9e4a172-5b8d-4f63-90c1-7a2e6d8f3b45",
+      "attribute_type": "Float32"
+    },
+    {
+      "name": "cutoff_grade_gpt",
+      "key": "d8a2c7e1-4f65-4b90-8d31-6a7e1c9f5b24",
+      "block_model_column_uuid": "d8a2c7e1-4f65-4b90-8d31-6a7e1c9f5b24",
+      "block_model_group_uuid": "c9e4a172-5b8d-4f63-90c1-7a2e6d8f3b45",
+      "attribute_type": "Float32"
+    },
+    {
+      "name": "resource_classification",
+      "key": "3e9c1a7d-b452-4f80-9d26-5a7e2c1f8b63",
+      "block_model_column_uuid": "3e9c1a7d-b452-4f80-9d26-5a7e2c1f8b63",
+      "block_model_group_uuid": "c9e4a172-5b8d-4f63-90c1-7a2e6d8f3b45",
+      "attribute_type": "Utf8"
+    },
+    {
+      "name": "evaluation_count",
+      "key": "9a4e2c7d-f163-4b90-8d75-1e6a3c9f5b24",
+      "block_model_column_uuid": "9a4e2c7d-f163-4b90-8d75-1e6a3c9f5b24",
+      "block_model_group_uuid": "2f7c8d5a-e149-4b60-a3f8-6d1e9c4b7a25",
+      "attribute_type": "Int16"
+    },
+    {
+      "name": "discount_rate",
+      "key": "e2d7a5c9-1b64-4f80-9d38-6a1e7c5f8b42",
+      "block_model_column_uuid": "e2d7a5c9-1b64-4f80-9d38-6a1e7c5f8b42",
+      "block_model_group_uuid": "2f7c8d5a-e149-4b60-a3f8-6d1e9c4b7a25",
+      "attribute_type": "Float64"
+    },
+    {
+      "name": "metal_price",
+      "key": "5f1a9e4d-c273-4b90-8d65-2a7e1c9f5b34",
+      "block_model_column_uuid": "5f1a9e4d-c273-4b90-8d65-2a7e1c9f5b34",
+      "block_model_group_uuid": "2f7c8d5a-e149-4b60-a3f8-6d1e9c4b7a25",
+      "attribute_type": "Float64"
+    },
+    {
+      "name": "processing_cost",
+      "key": "c7e1a6d3-5b94-4f80-9d20-7a2e5c1f8b46",
+      "block_model_column_uuid": "c7e1a6d3-5b94-4f80-9d20-7a2e5c1f8b46",
+      "block_model_group_uuid": "2f7c8d5a-e149-4b60-a3f8-6d1e9c4b7a25",
+      "attribute_type": "Float64"
+    },
+    {
+      "name": "recovery",
+      "key": "1d8a4e7c-f265-4b90-8d31-6a2e9c5f1b43",
+      "block_model_column_uuid": "1d8a4e7c-f265-4b90-8d31-6a2e9c5f1b43",
+      "block_model_group_uuid": "2f7c8d5a-e149-4b60-a3f8-6d1e9c4b7a25",
+      "attribute_type": "Float32"
+    },
+    {
+      "name": "net_value",
+      "key": "b8d3e6a9-25f1-4c70-9b48-2a7e5d1f6c34",
+      "block_model_column_uuid": "b8d3e6a9-25f1-4c70-9b48-2a7e5d1f6c34",
+      "block_model_group_uuid": "7b1e6a3d-c859-4f20-8d74-9a2c5e1f6b38",
+      "attribute_type": "Float64"
+    },
+    {
+      "name": "ore_tonnage",
+      "key": "8c3e1a6d-b754-4f90-9d26-5a7e2c1f8b43",
+      "block_model_column_uuid": "8c3e1a6d-b754-4f90-9d26-5a7e2c1f8b43",
+      "block_model_group_uuid": "7b1e6a3d-c859-4f20-8d74-9a2c5e1f6b38",
+      "attribute_type": "Float64"
+    },
+    {
+      "name": "gross_revenue",
+      "key": "4e9a2c7d-f163-4b80-8d75-1a6e3c9f5b24",
+      "block_model_column_uuid": "4e9a2c7d-f163-4b80-8d75-1a6e3c9f5b24",
+      "block_model_group_uuid": "7b1e6a3d-c859-4f20-8d74-9a2c5e1f6b38",
+      "attribute_type": "Float64"
+    },
+    {
+      "name": "operating_cost",
+      "key": "d1c7a5e9-6b24-4f90-8d36-2a7e1c9f5b43",
+      "block_model_column_uuid": "d1c7a5e9-6b24-4f90-8d36-2a7e1c9f5b43",
+      "block_model_group_uuid": "7b1e6a3d-c859-4f20-8d74-9a2c5e1f6b38",
+      "attribute_type": "Float64"
+    },
+    {
+      "name": "operating_margin",
+      "key": "7a2e9c4d-b153-4f80-9d65-6a1e3c5f8b24",
+      "block_model_column_uuid": "7a2e9c4d-b153-4f80-9d65-6a1e3c5f8b24",
+      "block_model_group_uuid": "7b1e6a3d-c859-4f20-8d74-9a2c5e1f6b38",
+      "attribute_type": "Float64"
+    },
+    {
+      "name": "alternative_value",
+      "key": "4a9f2c7e-d638-4b15-8e70-5c1a9d3f6b28",
+      "block_model_column_uuid": "4a9f2c7e-d638-4b15-8e70-5c1a9d3f6b28",
+      "block_model_group_uuid": "e3d9b6a1-4c72-4f85-91e0-8b5a2d7c6f49",
+      "attribute_type": "Float64"
+    },
+    {
+      "name": "recoverable_tonnage",
+      "key": "b6d1e8a3-4c75-4f90-9a26-7e2c5d1f8b43",
+      "block_model_column_uuid": "b6d1e8a3-4c75-4f90-9a26-7e2c5d1f8b43",
+      "block_model_group_uuid": "e3d9b6a1-4c72-4f85-91e0-8b5a2d7c6f49",
+      "attribute_type": "Float64"
+    },
+    {
+      "name": "projected_revenue",
+      "key": "2c8e5a7d-f164-4b90-8d35-1a6e3c9f5b42",
+      "block_model_column_uuid": "2c8e5a7d-f164-4b90-8d35-1a6e3c9f5b42",
+      "block_model_group_uuid": "e3d9b6a1-4c72-4f85-91e0-8b5a2d7c6f49",
+      "attribute_type": "Float64"
+    },
+    {
+      "name": "projected_cost",
+      "key": "e7a2c9d1-5b63-4f80-9d24-6a1e7c5f8b43",
+      "block_model_column_uuid": "e7a2c9d1-5b63-4f80-9d24-6a1e7c5f8b43",
+      "block_model_group_uuid": "e3d9b6a1-4c72-4f85-91e0-8b5a2d7c6f49",
+      "attribute_type": "Float64"
+    },
+    {
+      "name": "projected_margin",
+      "key": "6d1a8e4c-b275-4f90-8d36-2a7e5c9f1b43",
+      "block_model_column_uuid": "6d1a8e4c-b275-4f90-8d36-2a7e5c9f1b43",
+      "block_model_group_uuid": "e3d9b6a1-4c72-4f85-91e0-8b5a2d7c6f49",
+      "attribute_type": "Float64"
+    },
+    {
+      "name": "density",
+      "key": "a3e7c1d9-5b64-4f80-8d25-7a1e9c5f6b43",
+      "block_model_column_uuid": "a3e7c1d9-5b64-4f80-8d25-7a1e9c5f6b43",
+      "attribute_type": "Float32"
+    },
+    {
+      "name": "lithology_code",
+      "key": "5c1a8e4d-b273-4f90-9d65-2a7e1c9f5b34",
+      "block_model_column_uuid": "5c1a8e4d-b273-4f90-9d65-2a7e1c9f5b34",
+      "attribute_type": "Int32"
+    },
+    {
+      "name": "alteration_code",
+      "key": "d9e2a7c1-4b65-4f80-8d36-6a1e3c9f5b24",
+      "block_model_column_uuid": "d9e2a7c1-4b65-4f80-8d36-6a1e3c9f5b24",
+      "attribute_type": "Int16"
+    },
+    {
+      "name": "east",
+      "key": "1a7e9c4d-b253-4f90-8d64-5a2e6c1f8b43",
+      "block_model_column_uuid": "1a7e9c4d-b253-4f90-8d64-5a2e6c1f8b43",
+      "attribute_type": "Float64"
+    },
+    {
+      "name": "north",
+      "key": "8d3a1e6c-f274-4b90-9d35-2a7e5c1f8b46",
+      "block_model_column_uuid": "8d3a1e6c-f274-4b90-9d35-2a7e5c1f8b46",
+      "attribute_type": "Float64"
+    },
+    {
+      "name": "elevation",
+      "key": "c6e1a9d3-5b24-4f80-8d75-1a7e3c9f5b42",
+      "block_model_column_uuid": "c6e1a9d3-5b24-4f80-8d75-1a7e3c9f5b42",
+      "attribute_type": "Float64"
+    },
+    {
+      "name": "volume",
+      "key": "4f8a2c7d-b163-4f90-9d25-6a1e3c5f8b47",
+      "block_model_column_uuid": "4f8a2c7d-b163-4f90-9d25-6a1e3c5f8b47",
+      "attribute_type": "Float64"
+    },
+    {
+      "name": "domain",
+      "key": "e1c7a4d9-5b62-4f80-8d36-2a7e9c1f5b43",
+      "block_model_column_uuid": "e1c7a4d9-5b62-4f80-8d36-2a7e9c1f5b43",
+      "attribute_type": "Utf8"
+    },
+    {
+      "name": "block_active",
+      "key": "7a3e1c9d-f264-4b90-8d75-5a2e6c1f9b43",
+      "block_model_column_uuid": "7a3e1c9d-f264-4b90-8d75-5a2e6c1f9b43",
+      "attribute_type": "Boolean"
+    },
+    {
+      "name": "model_date",
+      "key": "b2d8a5e1-6c74-4f90-9d35-2a7e1c5f8b46",
+      "block_model_column_uuid": "b2d8a5e1-6c74-4f90-9d35-2a7e1c5f8b46",
+      "attribute_type": "Date32"
+    }
+  ],
+  "tags": {},
+  "extensions": {}
+}

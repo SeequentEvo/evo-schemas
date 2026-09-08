@@ -1,0 +1,10 @@
+{
+  "$schema": "/components/block-model-attribute-group/1.0.0/block-model-attribute-group.schema.json",
+  "group_uuid": "f2a7c18d-95e4-4b63-8d20-7c1e4a9f6b35",
+  "title": "Resource estimation",
+  "missing_column_policy": "use_previous",
+  "tags": {
+    "domain": "resource-modeling",
+    "owner": "geology"
+  }
+}
