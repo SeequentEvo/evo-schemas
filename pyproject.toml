@@ -1,6 +1,6 @@
 [project]
 name = "evo-schemas"
-version = "2026.8.28"
+version = "2026.9.9"
 authors = [
     { name = "Seequent", email = "support@seequent.com" }
 ]
@@ -8,7 +8,7 @@ description = "Seequent Geoscience Object Schemas define metadata and data seria
 keywords = []
 readme = "README.pypi.md"
 license-files = ["LICENSE.md"]
-requires-python = ">=3.10"
+requires-python = ">=3.10,<3.15"
 
 classifiers = [
     "Programming Language :: Python",
@@ -33,12 +33,16 @@ test = [
     "pytest-subtests==0.13.1",
     "ruff==0.8.1",
     "semver==3.0.2",
+    "tomli >= 2.0.1; python_version < '3.11'", # drop-in replacement for the built-in tomllib in Python < 3.11
+    "pyyaml>=6.0.3",
 ]
 
 tools = [
     "evo-schemas[test]",
     "GitPython>=3.1.43",
     "PyGithub>=2.4.0",
+    "packaging>=26.3",
+
 ]
 
 examples = [
