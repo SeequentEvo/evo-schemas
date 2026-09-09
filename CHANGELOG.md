@@ -1,5 +1,26 @@
 # Changelog
 
+## v2026.9.9
+<!-- Release notes generated using configuration in .github/release.yml at main -->
+
+## What's Changed
+### evo-schemas
+* Update generated files by @GriffinBaxterSeequent in https://github.com/SeequentEvo/evo-schemas/pull/80
+* Merge block-model-attributes-category and block-model-attributes by @AndreLobatoSeequent in https://github.com/SeequentEvo/evo-schemas/pull/82
+* Clarify CRS axis order in docs by @bsmithyman in https://github.com/SeequentEvo/evo-schemas/pull/74
+* Bump the pip group across 1 directory with 2 updates by @dependabot[bot] in https://github.com/SeequentEvo/evo-schemas/pull/77
+* Update CHANGELOG.md by @change-log-updater[bot] in https://github.com/SeequentEvo/evo-schemas/pull/78
+* Add secondary approver by @bsmithyman in https://github.com/SeequentEvo/evo-schemas/pull/85
+* blockmodel-1.3.0 - add support for attribute groups (i.e. column groups) . by @mikecowie-seequent in https://github.com/SeequentEvo/evo-schemas/pull/86
+* Bump to version 2026.8.28 by @AndreLobatoSeequent in https://github.com/SeequentEvo/evo-schemas/pull/84
+* Fix: backslash syntax handling codegen by @mikecowie-seequent in https://github.com/SeequentEvo/evo-schemas/pull/87
+
+## New Contributors
+* @dependabot[bot] made their first contribution in https://github.com/SeequentEvo/evo-schemas/pull/77
+* @mikecowie-seequent made their first contribution in https://github.com/SeequentEvo/evo-schemas/pull/86
+
+**Full Changelog**: https://github.com/SeequentEvo/evo-schemas/compare/v2026.8.12...v2026.9.9
+
 ## v2026.8.12
 <!-- Release notes generated using configuration in .github/release.yml at main -->
 
