@@ -180,10 +180,15 @@ class Serialiser:
                     raise cls._validation_error(t, value, name)
                 return result
 
-            case builtins.bool | builtins.str | types.NoneType:
+            case builtins.bool | types.NoneType:
                 if type(value) is not t:
                     raise cls._validation_error(t, value, name)
                 return value
+
+            case builtins.str:
+                if type(value) is not t:
+                    raise cls._validation_error(t, value, name)
+                return value.replace('\0', '')
 
             case uuid.UUID if isinstance(value, uuid.UUID):
                 return value
