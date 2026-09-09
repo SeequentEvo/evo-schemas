@@ -282,6 +282,9 @@ class PythonGenerator:
         return validators
 
     def _doc_string(self, line):
+        # Escape backslashes and quotes so the description can't produce invalid escape
+        # sequences or break out of the surrounding """ docstring delimiters.
+        line = line.replace("\\", "\\\\").replace('"', '\\"')
         if "\n" in line:
             # PEP-257
             for idx, part in enumerate(line.split("\n")):
