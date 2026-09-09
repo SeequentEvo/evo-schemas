@@ -1,3 +1,8 @@
+---
+seoTitle: string-attribute Component for Evo Schemas | Seequent Developer
+description: Review the string attribute component schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/components/string-attribute-1.1.0.md';
 

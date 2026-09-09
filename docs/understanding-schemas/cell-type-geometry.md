@@ -1,3 +1,8 @@
+---
+seoTitle: Cell Type Geometry Understanding Schemas for Geoscience Objects | Seequent Developer
+description: Learn how cell type geometry works in Geoscience Objects schemas, with guidance for trusted Seequent Evo data workflows.
+---
+
 # Cell type geometry
 
 All binary blobs that store cell geometry such as tetrahedrons and hexahedrons should follow the convention taken in the VTK library for vertex ordering. This ensures that all consumers of the binary blob will know the vertex ordering and can transform it to fit their needs.

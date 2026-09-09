@@ -1,3 +1,8 @@
+---
+seoTitle: resistivity-ip Object for Evo Schemas | Seequent Developer
+description: Review the resistivity IP object schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/objects/resistivity-ip-1.1.0.md';

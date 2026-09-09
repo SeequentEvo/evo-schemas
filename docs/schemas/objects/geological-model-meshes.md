@@ -1,3 +1,8 @@
+---
+seoTitle: geological-model-meshes Object for Evo Schemas | Seequent Developer
+description: Review the geological model meshes object schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/objects/geological-model-meshes-2.2.0.md';

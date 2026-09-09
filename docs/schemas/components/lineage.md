@@ -1,3 +1,8 @@
+---
+seoTitle: lineage Component for Evo Schemas | Seequent Developer
+description: Review the lineage component schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/components/lineage-1.0.0.md';
 import Alert from '@mui/material/Alert';

@@ -1,3 +1,8 @@
+---
+seoTitle: Understanding Attributes Understanding Schemas for Geoscience Objects | Seequent Developer
+description: Learn how attributes works in Geoscience Objects schemas, with guidance for trusted Seequent Evo data workflows.
+---
+
 # Understanding attributes
 
 Most objects can have generic attributes associated with some of their components.

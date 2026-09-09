@@ -1,3 +1,8 @@
+---
+seoTitle: attribute-list-property Component for Evo Schemas | Seequent Developer
+description: Review the attribute list property component schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/components/attribute-list-property-1.2.0.md';
 

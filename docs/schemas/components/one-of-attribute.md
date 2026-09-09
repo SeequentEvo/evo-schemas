@@ -1,3 +1,8 @@
+---
+seoTitle: one-of-attribute Component for Evo Schemas | Seequent Developer
+description: Review the one of attribute component schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/components/one-of-attribute-1.2.0.md';
 

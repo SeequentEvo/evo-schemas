@@ -1,3 +1,8 @@
+---
+seoTitle: variogram Object for Evo Schemas | Seequent Developer
+description: Review the variogram object schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/objects/variogram-1.2.0.md';

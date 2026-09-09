@@ -1,3 +1,8 @@
+---
+seoTitle: triangles Component for Evo Schemas | Seequent Developer
+description: Review the triangles component schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/components/triangles-1.2.0.md';
 

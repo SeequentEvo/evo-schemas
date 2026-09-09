@@ -1,3 +1,8 @@
+---
+seoTitle: lineations-data-pointset Object for Evo Schemas | Seequent Developer
+description: Review the lineations data pointset object schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/objects/lineations-data-pointset-1.3.0.md';

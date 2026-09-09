@@ -1,3 +1,8 @@
+---
+seoTitle: unit Element for Evo Schemas | Seequent Developer
+description: Review the unit element schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import SchemaUri from '@theme/SchemaUri';
 
 # unit

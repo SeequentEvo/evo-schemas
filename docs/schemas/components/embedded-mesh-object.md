@@ -1,3 +1,8 @@
+---
+seoTitle: embedded-mesh-object Component for Evo Schemas | Seequent Developer
+description: Review the embedded mesh object component schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/components/embedded-mesh-object-1.0.0.md';
 

@@ -1,3 +1,8 @@
+---
+seoTitle: integer-array-2 Element for Evo Schemas | Seequent Developer
+description: Review the integer array 2 element schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import SchemaUri from '@theme/SchemaUri';
 
 # integer-array-2

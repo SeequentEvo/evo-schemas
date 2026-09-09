@@ -1,3 +1,8 @@
+---
+seoTitle: index-array-8 Element for Evo Schemas | Seequent Developer
+description: Review the index array 8 element schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/elements/index-array-8-1.0.1.md';
 

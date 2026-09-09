@@ -1,3 +1,8 @@
+---
+seoTitle: category-data Component for Evo Schemas | Seequent Developer
+description: Review the category data component schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/components/category-data-1.0.1.md';
 

@@ -1,3 +1,8 @@
+---
+seoTitle: Element Evo Schemas for Geoscience Objects | Seequent Developer
+description: Explore Geoscience Objects elements schemas for Seequent Evo, supporting consistent data structures and reliable workflows.
+---
+
 # Element schemas
 
 Elements are the lowest-level building blocks in the schema hierarchy — primitive data types that [components](../components/index.md) compose into higher-order structures. They define binary array formats, colour values, spatial coordinates, lookup tables, and the unit system.

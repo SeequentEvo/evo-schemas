@@ -1,3 +1,8 @@
+---
+seoTitle: unstructured-quad-grid Object for Evo Schemas | Seequent Developer
+description: Review the unstructured quad grid object schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/objects/unstructured-quad-grid-1.3.0.md';

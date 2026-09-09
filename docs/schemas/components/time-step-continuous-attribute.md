@@ -1,3 +1,8 @@
+---
+seoTitle: time-step-continuous-attribute Component for Evo Schemas | Seequent Developer
+description: Review the time step continuous attribute component schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/components/time-step-continuous-attribute-1.1.0.md';
 

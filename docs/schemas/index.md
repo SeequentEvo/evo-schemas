@@ -1,3 +1,8 @@
+---
+seoTitle: Schemas for Geoscience Objects Data Structures | Seequent Developer
+description: Explore Geoscience Objects schemas for Seequent Evo, with resources for consistent, trustworthy data structures and custom workflows.
+---
+
 # Evo schemas
 
 Geoscience object schemas define the data structures used in the Evo platform. The schema hierarchy is organised into three tiers — objects, components, and elements — each documented in its own section below.

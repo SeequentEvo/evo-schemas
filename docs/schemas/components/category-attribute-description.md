@@ -1,3 +1,8 @@
+---
+seoTitle: category-attribute-description Component for Evo Schemas | Seequent Developer
+description: Review the category attribute description component schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/components/category-attribute-description-1.0.1.md';
 

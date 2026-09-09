@@ -1,3 +1,8 @@
+---
+seoTitle: brep-container Component for Evo Schemas | Seequent Developer
+description: Review the brep container component schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/components/brep-container-1.0.1.md';
 

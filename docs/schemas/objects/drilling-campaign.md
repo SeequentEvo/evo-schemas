@@ -1,3 +1,8 @@
+---
+seoTitle: drilling-campaign Object for Evo Schemas | Seequent Developer
+description: Review the drilling campaign object schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/objects/drilling-campaign-1.0.0.md';

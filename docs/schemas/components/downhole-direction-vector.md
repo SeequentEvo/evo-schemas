@@ -1,3 +1,8 @@
+---
+seoTitle: downhole-direction-vector Component for Evo Schemas | Seequent Developer
+description: Review the downhole direction vector component schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/components/downhole-direction-vector-1.0.0.md';
 

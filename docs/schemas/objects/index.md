@@ -1,3 +1,8 @@
+---
+seoTitle: Geoscience Object Schemas, Evo Data Structures | Seequent Developer
+description: Explore Geoscience Objects objects schemas for Seequent Evo, supporting consistent data structures and reliable workflows.
+---
+
 # Geoscience object schemas
 
 Object schemas are the top-level data structures in the schema hierarchy. Each object composes reusable [components](../components/index.md), which are in turn built from primitive [elements](../elements/index.md).
