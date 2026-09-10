@@ -1,3 +1,8 @@
+---
+seoTitle: Schema Development Lifecycle Versioning And Release Process for Geoscience Objects | Seequent Developer
+description: Review schema development lifecycle for Geoscience Objects, including schema governance practices that support reliable Seequent Evo data workflows.
+---
+
 import Alert from '@mui/material/Alert';
 
 # Schema Development Lifecycle

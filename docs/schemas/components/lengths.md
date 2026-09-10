@@ -1,3 +1,8 @@
+---
+seoTitle: lengths Component for Evo Schemas | Seequent Developer
+description: Review the lengths component schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/components/lengths-1.0.1.md';
 

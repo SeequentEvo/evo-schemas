@@ -1,3 +1,8 @@
+---
+seoTitle: frequency-domain-electromagnetic-channel Component for Evo Schemas | Seequent Developer
+description: Review the frequency domain electromagnetic channel component schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/components/frequency-domain-electromagnetic-channel-1.0.0.md';
 

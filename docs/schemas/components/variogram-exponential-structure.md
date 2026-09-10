@@ -1,3 +1,8 @@
+---
+seoTitle: variogram-exponential-structure Component for Evo Schemas | Seequent Developer
+description: Review the variogram exponential structure component schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/components/variogram-exponential-structure-1.1.0.md';
 

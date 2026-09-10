@@ -1,3 +1,8 @@
+---
+seoTitle: non-parametric-continuous-cumulative-distribution Object for Evo Schemas | Seequent Developer
+description: Review the non parametric continuous cumulative distribution object schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/objects/non-parametric-continuous-cumulative-distribution-1.2.0.md';

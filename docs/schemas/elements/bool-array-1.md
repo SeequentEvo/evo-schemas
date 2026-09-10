@@ -1,3 +1,8 @@
+---
+seoTitle: bool-array-1 Element for Evo Schemas | Seequent Developer
+description: Review the bool array 1 element schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/elements/bool-array-1-1.0.1.md';
 

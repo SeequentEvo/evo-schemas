@@ -1,3 +1,8 @@
+---
+seoTitle: relative-planar-data-table Component for Evo Schemas | Seequent Developer
+description: Review the relative planar data table component schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/components/relative-planar-data-table-1.2.0.md';
 

@@ -1,3 +1,8 @@
+---
+seoTitle: Schema Versioning Policy Versioning And Release Process for Geoscience Objects | Seequent Developer
+description: Review schema versioning policy for Geoscience Objects, including versioning practices that support reliable Seequent Evo data workflows.
+---
+
 import Alert from '@mui/material/Alert';
 
 # Schema Versioning Policy

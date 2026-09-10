@@ -1,3 +1,8 @@
+---
+seoTitle: segments Component for Evo Schemas | Seequent Developer
+description: Review the segments component schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/components/segments-1.2.0.md';
 

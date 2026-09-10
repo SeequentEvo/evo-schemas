@@ -1,3 +1,8 @@
+---
+seoTitle: geophysical-records-1d Object for Evo Schemas | Seequent Developer
+description: Review the geophysical records 1d object schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/objects/geophysical-records-1d-1.3.0.md';

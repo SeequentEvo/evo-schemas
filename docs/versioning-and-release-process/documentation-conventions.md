@@ -1,3 +1,11 @@
+---
+seoTitle: Documentation Conventions Versioning And Release Process for Geoscience Objects | Seequent Developer
+description: Review documentation conventions for Geoscience Objects, including schema governance practices that support reliable Seequent Evo data workflows.
+structuredData:
+  softwareSourceCode:
+    - name: Documentation Conventions | Seequent Developer Portal
+---
+
 import Alert from '@mui/material/Alert';
 
 # Documentation Conventions

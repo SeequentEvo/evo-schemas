@@ -1,3 +1,8 @@
+---
+seoTitle: Component Evo Schemas for Geoscience Objects | Seequent Developer
+description: Explore Geoscience Objects components schemas for Seequent Evo, supporting consistent data structures and reliable workflows.
+---
+
 # Component schemas
 
 Components are reusable building blocks composed into [geoscience object schemas](../objects/index.md). They define shared structures such as coordinate systems, attributes, geometry primitives, and domain-specific data formats. Components are themselves built from [elements](../elements/index.md) — the lowest-level data primitives.

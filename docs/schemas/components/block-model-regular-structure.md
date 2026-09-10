@@ -1,3 +1,8 @@
+---
+seoTitle: block-model-regular-structure Component for Evo Schemas | Seequent Developer
+description: Review the block model regular structure component schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/components/block-model-regular-structure-1.0.0.md';
 

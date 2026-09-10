@@ -1,3 +1,8 @@
+---
+seoTitle: category-time-series Component for Evo Schemas | Seequent Developer
+description: Review the category time series component schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/components/category-time-series-1.1.0.md';
 

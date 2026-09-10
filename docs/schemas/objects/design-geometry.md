@@ -1,3 +1,8 @@
+---
+seoTitle: design-geometry Object for Evo Schemas | Seequent Developer
+description: Review the design geometry object schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import OverlineWithVersion from '@theme/OverlineWithVersion';
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/objects/design-geometry-1.1.0.md';

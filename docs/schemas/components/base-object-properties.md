@@ -1,3 +1,8 @@
+---
+seoTitle: base-object-properties Component for Evo Schemas | Seequent Developer
+description: Review the base object properties component schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/components/base-object-properties-1.1.0.md';
 

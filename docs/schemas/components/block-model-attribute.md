@@ -1,3 +1,8 @@
+---
+seoTitle: block-model-attribute Component for Evo Schemas | Seequent Developer
+description: Review the block model attribute component schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/components/block-model-attribute-1.3.0.md';
 

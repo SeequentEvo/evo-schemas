@@ -1,3 +1,8 @@
+---
+seoTitle: reversible-index Element for Evo Schemas | Seequent Developer
+description: Review the reversible index element schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/elements/reversible-index-1.0.0.md';
 

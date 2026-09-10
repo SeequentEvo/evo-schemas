@@ -1,3 +1,8 @@
+---
+seoTitle: Geoscience Objects Data Structures | Seequent Developer
+description: Explore Geoscience Objects data structures for Seequent Evo, supporting trustworthy data, integrations, and custom workflows.
+---
+
 # Geoscience Objects
 
 Geoscience Objects is Seequent's open schema standard for geoscience data. It defines how geoscience datasets — point clouds, drillhole campaigns, geological models, geophysical surveys, and more — are structured and serialised for exchange between applications and services.

@@ -1,3 +1,8 @@
+---
+seoTitle: Understanding Parts Understanding Schemas for Geoscience Objects | Seequent Developer
+description: Learn how parts works in Geoscience Objects schemas, with guidance for trusted Seequent Evo data workflows.
+---
+
 # Understanding parts
 
 We decompose complex geometry into parts.

@@ -1,3 +1,8 @@
+---
+seoTitle: geometry-part Component for Evo Schemas | Seequent Developer
+description: Review the geometry part component schema for Geoscience Objects, supporting consistent data structures and reliable Seequent Evo workflows.
+---
+
 import SchemaUri from '@theme/SchemaUri';
 import FlatProperties from '../generated/flatmd/components/geometry-part-1.0.1.md';
 

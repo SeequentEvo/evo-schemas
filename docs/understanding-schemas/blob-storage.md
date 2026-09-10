@@ -1,3 +1,8 @@
+---
+seoTitle: Blob Storage Understanding Schemas for Geoscience Objects | Seequent Developer
+description: Learn how blob storage works in Geoscience Objects schemas, with guidance for trusted Seequent Evo data workflows.
+---
+
 # Array storage
 
 ## File format
