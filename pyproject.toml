@@ -7,7 +7,7 @@ authors = [
 description = "Seequent Geoscience Object Schemas define metadata and data serialisation of various geoscience objects."
 keywords = []
 readme = "README.pypi.md"
-license-files = ["LICENSE.md"]
+license-files = ["LICENSE.md", "NOTICE"]
 requires-python = ">=3.10,<3.15"
 
 classifiers = [

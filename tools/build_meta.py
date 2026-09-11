@@ -35,6 +35,9 @@ def _prebuild() -> None:
             return True
         if filename.lower().endswith(".schema.json"):
             return True
+        # Attribution notices must travel with the schemas they apply to.
+        if filename.upper().startswith(("NOTICE", "LICENSE")):
+            return True
         return False
 
     def schema_filter(directory, contents):
