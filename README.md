@@ -43,6 +43,15 @@ Thank you for your interest in contributing to Seequent software. Please have a 
 
 We rely on an open, friendly, inclusive environment. To help us ensure this remains possible, please familiarise yourself with our [code of conduct](./CODE_OF_CONDUCT.md).
 
+## Third-party content
+
+This repository includes material originating from third parties, retained under their own terms and recorded in the [NOTICE](./NOTICE) file:
+
+* The unit enumerations under `schema/elements/unit/` are derived from the Energistics Unit of Measure Standard. The derivation extracts unit symbols and dimension names only. Individual schema files carry the applicable notice in their `$comment` field, and a copy is held alongside the schemas in [schema/elements/unit/NOTICE.md](./schema/elements/unit/NOTICE.md).
+* A portion of the OpenLineage schema, licensed under Apache 2.0.
+
+If you redistribute this work, you must carry the `NOTICE` file with it, as required by section 4(d) of the Apache 2.0 licence.
+
 ## License
 Evo schemas are open source and licensed under the [Apache 2.0 license](./LICENSE.md).
 

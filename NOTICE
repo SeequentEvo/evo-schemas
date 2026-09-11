@@ -1,1 +1,7 @@
 This repository includes a portion of the OpenLineage v2.0.2 schema (https://openlineage.io/spec/2-0-2/OpenLineage.json), Copyright 2018-2024 contributors to the OpenLineage project, licenced under the Apache 2.0 licence.  This includes a subset of the OpenLineage schema's component schemas, modified to flatten referenced schemas where possible, with some schemas removed and replaced with generic object schemas.
+
+The following Energistics® products were used in the creation of this work: Energistics Unit of Measure Standard v1.0.1 (Energistics Unit of Measure Dictionary V1.0).
+
+The unit enumerations under schema/elements/unit/ are derived from that product.  The derivation extracts unit symbols and unit dimension names only; it does not reproduce conversion factors, base units, canonical units, quantity classes, integer codes, prefixes, unit names, unit descriptions or mapping sets.  A small number of additional units originated with Seequent and are identified as such in the individual schema files.
+
+This data is distributed under the Energistics License Agreement at http://www.energistics.org.  Use of this data constitutes agreement with the Energistics License Agreement.  Copyright (c) 2014 Energistics.  All rights reserved.
