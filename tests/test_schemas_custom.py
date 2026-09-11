@@ -330,7 +330,7 @@ def _references_latest_version(ref_path) -> bool:
     group_directory = path.parent
     if semver.Version.is_valid(group_directory.parent.name):
         group_directory = path.parent.parent
-    all_versions = map(lambda p: p.name, group_directory.parent.iterdir())
+    all_versions = [p.name for p in group_directory.parent.iterdir() if p.is_dir()]
     latest_version = max(all_versions, key=semver.Version.parse)
     schema_version = semver.Version.parse(group_directory.stem + group_directory.suffix)
     return latest_version == schema_version
