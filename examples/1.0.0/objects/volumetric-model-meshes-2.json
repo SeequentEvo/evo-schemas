@@ -2,7 +2,7 @@
   "schema": "/objects/volumetric-model-meshes/1.0.0/volumetric-model-meshes.schema.json",
   "name": "Lithology domains",
   "uuid": "00000000-0000-0000-0000-000000000001",
-  "description": "A categorical domain model: one closed volume per rock type, with the contact surface between them.",
+  "description": "A categorical domain model: granite beneath basalt, one closed volume per rock type, the contact between them, and the patches of the model extent that close each region.",
   "bounding_box": {
     "min_x": 0,
     "max_x": 1000,
@@ -35,7 +35,7 @@
       "chunks": {
         "width": 2,
         "data_type": "uint64",
-        "length": 3,
+        "length": 11,
         "data": "abababababababababababababababababababababababababababababababab"
       },
       "attributes": []
@@ -47,6 +47,7 @@
     "length": 2,
     "data": "abababababababababababababababababababababababababababababababab"
   },
+  "category_attribute": "Lithology",
   "materials": [
     {
       "key": "granite",
@@ -72,6 +73,116 @@
           "index": 0
         }
       ]
+    },
+    {
+      "name": "Granite west",
+      "surface_type": "ModelBoundary",
+      "category": 1,
+      "boundary_face": "NegativeX",
+      "parts": [
+        {
+          "index": 1
+        }
+      ]
+    },
+    {
+      "name": "Granite east",
+      "surface_type": "ModelBoundary",
+      "category": 1,
+      "boundary_face": "PositiveX",
+      "parts": [
+        {
+          "index": 2
+        }
+      ]
+    },
+    {
+      "name": "Granite south",
+      "surface_type": "ModelBoundary",
+      "category": 1,
+      "boundary_face": "NegativeY",
+      "parts": [
+        {
+          "index": 3
+        }
+      ]
+    },
+    {
+      "name": "Granite north",
+      "surface_type": "ModelBoundary",
+      "category": 1,
+      "boundary_face": "PositiveY",
+      "parts": [
+        {
+          "index": 4
+        }
+      ]
+    },
+    {
+      "name": "Granite bottom",
+      "surface_type": "ModelBoundary",
+      "category": 1,
+      "boundary_face": "NegativeZ",
+      "parts": [
+        {
+          "index": 5
+        }
+      ]
+    },
+    {
+      "name": "Basalt west",
+      "surface_type": "ModelBoundary",
+      "category": 2,
+      "boundary_face": "NegativeX",
+      "parts": [
+        {
+          "index": 6
+        }
+      ]
+    },
+    {
+      "name": "Basalt east",
+      "surface_type": "ModelBoundary",
+      "category": 2,
+      "boundary_face": "PositiveX",
+      "parts": [
+        {
+          "index": 7
+        }
+      ]
+    },
+    {
+      "name": "Basalt south",
+      "surface_type": "ModelBoundary",
+      "category": 2,
+      "boundary_face": "NegativeY",
+      "parts": [
+        {
+          "index": 8
+        }
+      ]
+    },
+    {
+      "name": "Basalt north",
+      "surface_type": "ModelBoundary",
+      "category": 2,
+      "boundary_face": "PositiveY",
+      "parts": [
+        {
+          "index": 9
+        }
+      ]
+    },
+    {
+      "name": "Basalt top",
+      "surface_type": "ModelBoundary",
+      "category": 2,
+      "boundary_face": "PositiveZ",
+      "parts": [
+        {
+          "index": 10
+        }
+      ]
     }
   ],
   "volumes": [
@@ -86,6 +197,18 @@
         },
         {
           "index": 1
+        },
+        {
+          "index": 2
+        },
+        {
+          "index": 3
+        },
+        {
+          "index": 4
+        },
+        {
+          "index": 5
         }
       ]
     },
@@ -100,7 +223,55 @@
           "reversed": true
         },
         {
+          "index": 6
+        },
+        {
+          "index": 7
+        },
+        {
+          "index": 8
+        },
+        {
+          "index": 9
+        },
+        {
+          "index": 10
+        }
+      ]
+    },
+    {
+      "name": "Model extent",
+      "volume_type": "ModelBoundary",
+      "parts": [
+        {
+          "index": 1
+        },
+        {
           "index": 2
+        },
+        {
+          "index": 3
+        },
+        {
+          "index": 4
+        },
+        {
+          "index": 5
+        },
+        {
+          "index": 6
+        },
+        {
+          "index": 7
+        },
+        {
+          "index": 8
+        },
+        {
+          "index": 9
+        },
+        {
+          "index": 10
         }
       ]
     }
@@ -129,6 +300,52 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Category closure",
+      "items": [
+        {
+          "name": "Granite",
+          "items": [
+            {
+              "surface_index": 1
+            },
+            {
+              "surface_index": 2
+            },
+            {
+              "surface_index": 3
+            },
+            {
+              "surface_index": 4
+            },
+            {
+              "surface_index": 5
+            }
+          ]
+        },
+        {
+          "name": "Basalt",
+          "items": [
+            {
+              "surface_index": 6
+            },
+            {
+              "surface_index": 7
+            },
+            {
+              "surface_index": 8
+            },
+            {
+              "surface_index": 9
+            },
+            {
+              "surface_index": 10
+            }
+          ]
+        }
+      ]
     }
-  ]
+  ],
+  "boundary_volume": 2
 }

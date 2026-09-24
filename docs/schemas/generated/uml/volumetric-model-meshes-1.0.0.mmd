@@ -39,14 +39,12 @@ classDiagram
         volumes: array
         volume_attributes: components/one-of-attribute-1.2.0
         bounds_unit: elements/unit-1.0.1
+        bounds_attribute: string
         category_lookup: elements/lookup-table-1.0.1
+        category_attribute: string
         materials: array
         folders: array
-        isosurfaces: array
-        boundary_surfaces: array
-        volumes_below: array
-        volumes_between: array
-        volumes_above: array
+        extent_rotation: components/rotation-1.1.0
         boundary_volume: integer
     }
     `components/base-spatial-data-properties-1.1.0` <|-- `objects/volumetric-model-meshes-1.0.0`
@@ -59,6 +57,7 @@ classDiagram
     `objects/volumetric-model-meshes-1.0.0` *-- `components/one-of-attribute-1.2.0` : ref volume_attributes*
     `objects/volumetric-model-meshes-1.0.0` *-- `elements/unit-1.0.1` : ref bounds_unit*
     `objects/volumetric-model-meshes-1.0.0` *-- `elements/lookup-table-1.0.1` : ref category_lookup*
+    `objects/volumetric-model-meshes-1.0.0` *-- `components/rotation-1.1.0` : ref extent_rotation*
     class `components/base-object-properties-1.1.0-uuid`:::schemaImplicit {
     }
     class `components/lineage-1.0.0`:::schemaComponent {
@@ -172,3 +171,8 @@ classDiagram
         values_data_type: string = string
     }
     `elements/lookup-table-1.0.1` *-- `elements/binary-blob-1.0.1` : ref data*
+    class `components/rotation-1.1.0`:::schemaComponent {
+        dip_azimuth: number
+        dip: number
+        pitch: number
+    }

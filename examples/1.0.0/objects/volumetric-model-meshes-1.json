@@ -2,7 +2,7 @@
   "schema": "/objects/volumetric-model-meshes/1.0.0/volumetric-model-meshes.schema.json",
   "name": "Gold grade shells",
   "uuid": "00000000-0000-0000-0000-000000000000",
-  "description": "Isosurfaces at 0.5 and 1.0 g/t Au, with the volumes they bound.",
+  "description": "Isosurfaces at 0.5 and 1.0 g/t Au, with the volumes they bound. Grade increases with depth, so the shells stack into three bands within a box-shaped extent. Only the bands are published; cumulative volumes are left for consumers to build.",
   "bounding_box": {
     "min_x": 0,
     "max_x": 1000,
@@ -35,7 +35,7 @@
       "chunks": {
         "width": 2,
         "data_type": "uint64",
-        "length": 8,
+        "length": 16,
         "data": "abababababababababababababababababababababababababababababababab"
       },
       "attributes": []
@@ -55,9 +55,6 @@
       "parts": [
         {
           "index": 0
-        },
-        {
-          "index": 1
         }
       ]
     },
@@ -67,7 +64,7 @@
       "bound": 1.0,
       "parts": [
         {
-          "index": 2
+          "index": 1
         }
       ]
     },
@@ -77,10 +74,7 @@
       "boundary_face": "PositiveZ",
       "parts": [
         {
-          "index": 3
-        },
-        {
-          "index": 4
+          "index": 2
         }
       ]
     },
@@ -90,7 +84,72 @@
       "boundary_face": "NegativeZ",
       "parts": [
         {
+          "index": 3
+        }
+      ]
+    },
+    {
+      "name": "West boundary",
+      "description": "Cut by the shells into one patch per band.",
+      "surface_type": "ModelBoundary",
+      "boundary_face": "NegativeX",
+      "parts": [
+        {
+          "index": 4
+        },
+        {
+          "index": 8
+        },
+        {
+          "index": 12
+        }
+      ]
+    },
+    {
+      "name": "East boundary",
+      "surface_type": "ModelBoundary",
+      "boundary_face": "PositiveX",
+      "parts": [
+        {
           "index": 5
+        },
+        {
+          "index": 9
+        },
+        {
+          "index": 13
+        }
+      ]
+    },
+    {
+      "name": "South boundary",
+      "surface_type": "ModelBoundary",
+      "boundary_face": "NegativeY",
+      "parts": [
+        {
+          "index": 6
+        },
+        {
+          "index": 10
+        },
+        {
+          "index": 14
+        }
+      ]
+    },
+    {
+      "name": "North boundary",
+      "surface_type": "ModelBoundary",
+      "boundary_face": "PositiveY",
+      "parts": [
+        {
+          "index": 7
+        },
+        {
+          "index": 11
+        },
+        {
+          "index": 15
         }
       ]
     }
@@ -105,7 +164,7 @@
       },
       "values": {
         "data_type": "float64",
-        "length": 4,
+        "length": 8,
         "width": 1,
         "data": "abababababababababababababababababababababababababababababababab"
       }
@@ -118,13 +177,22 @@
       "upper_bound": 0.5,
       "parts": [
         {
-          "index": 0
+          "index": 2
+        },
+        {
+          "index": 4
         },
         {
           "index": 5
         },
         {
           "index": 6
+        },
+        {
+          "index": 7
+        },
+        {
+          "index": 0
         }
       ]
     },
@@ -139,10 +207,19 @@
           "reversed": true
         },
         {
-          "index": 2
+          "index": 8
         },
         {
-          "index": 7
+          "index": 9
+        },
+        {
+          "index": 10
+        },
+        {
+          "index": 11
+        },
+        {
+          "index": 1
         }
       ]
     },
@@ -152,8 +229,20 @@
       "lower_bound": 1.0,
       "parts": [
         {
-          "index": 2,
+          "index": 1,
           "reversed": true
+        },
+        {
+          "index": 12
+        },
+        {
+          "index": 13
+        },
+        {
+          "index": 14
+        },
+        {
+          "index": 15
         },
         {
           "index": 3
@@ -164,6 +253,9 @@
       "name": "Model extent",
       "volume_type": "ModelBoundary",
       "parts": [
+        {
+          "index": 2
+        },
         {
           "index": 3
         },
@@ -178,6 +270,30 @@
         },
         {
           "index": 7
+        },
+        {
+          "index": 8
+        },
+        {
+          "index": 9
+        },
+        {
+          "index": 10
+        },
+        {
+          "index": 11
+        },
+        {
+          "index": 12
+        },
+        {
+          "index": 13
+        },
+        {
+          "index": 14
+        },
+        {
+          "index": 15
         }
       ]
     }
@@ -199,22 +315,6 @@
     }
   ],
   "bounds_unit": "g/t",
-  "isosurfaces": [
-    0,
-    1
-  ],
-  "boundary_surfaces": [
-    2,
-    3
-  ],
-  "volumes_below": [
-    0
-  ],
-  "volumes_between": [
-    1
-  ],
-  "volumes_above": [
-    2
-  ],
+  "bounds_attribute": "Au",
   "boundary_volume": 3
 }

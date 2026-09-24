@@ -27,9 +27,25 @@
         },
         "surfaces": {
           "type": "array",
-          "description": "A list of embedded surfaces, each composed of a number of parts. May be empty.",
+          "description": "A list of embedded surfaces, each composed of a number of parts. Every surface declares its kind in 'surface_type', which selects the data it carries. May be empty, but a model with no surfaces and no volumes carries no content.",
           "items": {
-            "$ref": "#/$defs/vmm_embedded_surface"
+            "oneOf": [
+              {
+                "$ref": "#/$defs/vmm_isosurface"
+              },
+              {
+                "$ref": "#/$defs/vmm_category_boundary_surface"
+              },
+              {
+                "$ref": "#/$defs/vmm_model_boundary_surface"
+              },
+              {
+                "$ref": "#/$defs/vmm_no_data_surface"
+              },
+              {
+                "$ref": "#/$defs/vmm_generic_surface"
+              }
+            ]
           }
         },
         "surface_attributes": {
@@ -38,9 +54,22 @@
         },
         "volumes": {
           "type": "array",
-          "description": "A list of embedded volumes, each composed of a number of parts that together form a closed hull. May be empty.",
+          "description": "A list of embedded volumes, each composed of a number of parts that together form a closed hull. Every volume declares its kind in 'volume_type', which selects the data it carries. May be empty, but a model with no surfaces and no volumes carries no content.",
           "items": {
-            "$ref": "#/$defs/vmm_embedded_volume"
+            "oneOf": [
+              {
+                "$ref": "#/$defs/vmm_iso_volume"
+              },
+              {
+                "$ref": "#/$defs/vmm_category_region"
+              },
+              {
+                "$ref": "#/$defs/vmm_model_boundary_volume"
+              },
+              {
+                "$ref": "#/$defs/vmm_generic_volume"
+              }
+            ]
           }
         },
         "volume_attributes": {
@@ -48,12 +77,20 @@
           "$ref": "/components/one-of-attribute/1.2.0/one-of-attribute.schema.json"
         },
         "bounds_unit": {
-          "description": "Unit of measure of the 'bound' value of every surface and the 'lower_bound' and 'upper_bound' values of every volume in this model. All bounds are expressed in this unit, as they are all derived from a single scalar field. Absent if the unit is unknown or the bounds are dimensionless.",
+          "description": "Unit of measure of the 'bound' value of every isosurface and the 'lower_bound' and 'upper_bound' values of every iso-volume in this model. All bounds are expressed in this unit, as they are all derived from a single scalar field. Absent if the unit is unknown or the bounds are dimensionless.",
           "$ref": "/elements/unit/1.0.1/unit.schema.json"
         },
+        "bounds_attribute": {
+          "type": "string",
+          "description": "Name of the scalar attribute the bounds are measured on, such as 'Au'. Absent if the model has no bounds or the name is unknown."
+        },
         "category_lookup": {
-          "description": "Lookup table resolving the integer keys used by the 'categories' property of surfaces and the 'category' property of volumes to their names. The keys are those of the categorical attribute the model was built from, carried through unchanged. Must be present if any surface specifies 'categories' or any volume specifies 'category'.",
+          "description": "Lookup table resolving the integer keys used by the 'categories' property of category boundary surfaces, the 'category' property of category regions, and the 'category' property of model boundary surfaces to their names. Must be present if any surface or volume specifies a category.",
           "$ref": "/elements/lookup-table/1.0.1/lookup-table.schema.json"
+        },
+        "category_attribute": {
+          "type": "string",
+          "description": "Name of the categorical attribute the model was built from, such as 'Lithology', whose keys 'category_lookup' resolves. Absent if the model has no categories or the name is unknown."
         },
         "materials": {
           "type": "array",
@@ -69,54 +106,13 @@
             "$ref": "#/$defs/vmm_folder"
           }
         },
-        "isosurfaces": {
-          "type": "array",
-          "description": "Indices into 'surfaces' of the surfaces that were extracted at a scalar threshold, ordered by threshold ascending. A derived index: if present it must list every surface with 'surface_type' of 'Isosurface' and no others, so that a consumer that ignores it and filters 'surfaces' itself obtains the same set.",
-          "items": {
-            "type": "integer",
-            "minimum": 0
-          },
-          "uniqueItems": true
-        },
-        "boundary_surfaces": {
-          "type": "array",
-          "description": "Indices into 'surfaces' of the surfaces that lie on the boundary of the model extent, being those with a 'surface_type' of 'ModelBoundary' or 'NoData'. A derived index: if present it must list every such surface and no others. Together these surfaces cover the model hull, which is the same geometry as 'boundary_volume'.",
-          "items": {
-            "type": "integer",
-            "minimum": 0
-          },
-          "uniqueItems": true
-        },
-        "volumes_below": {
-          "type": "array",
-          "description": "Indices into 'volumes' of the volumes that are bounded above only, ordered by 'upper_bound' ascending. A derived index: if present it must list every volume that specifies 'upper_bound' and not 'lower_bound', and no others.",
-          "items": {
-            "type": "integer",
-            "minimum": 0
-          },
-          "uniqueItems": true
-        },
-        "volumes_between": {
-          "type": "array",
-          "description": "Indices into 'volumes' of the volumes that are bounded both above and below, ordered by 'lower_bound' ascending. A derived index: if present it must list every volume that specifies both 'lower_bound' and 'upper_bound', and no others.",
-          "items": {
-            "type": "integer",
-            "minimum": 0
-          },
-          "uniqueItems": true
-        },
-        "volumes_above": {
-          "type": "array",
-          "description": "Indices into 'volumes' of the volumes that are bounded below only, ordered by 'lower_bound' ascending. A derived index: if present it must list every volume that specifies 'lower_bound' and not 'upper_bound', and no others.",
-          "items": {
-            "type": "integer",
-            "minimum": 0
-          },
-          "uniqueItems": true
+        "extent_rotation": {
+          "description": "Orientation of the axes of the model extent, for a model built on a rotated grid. Only 'boundary_face' is interpreted against these axes; vertices remain in the coordinate reference system. Absent if the extent is aligned with the axes of the coordinate reference system.",
+          "$ref": "/components/rotation/1.1.0/rotation.schema.json"
         },
         "boundary_volume": {
           "type": "integer",
-          "description": "Index into 'volumes' of the volume that is the closed hull of the model extent.",
+          "description": "Index into 'volumes' of the volume whose hull is the boundary of the model extent. That volume has a 'volume_type' of 'ModelBoundary'. Absent if the model does not include its extent as a volume.",
           "minimum": 0
         }
       }
@@ -181,6 +177,7 @@
       ]
     },
     "vmm_embedded_surface": {
+      "description": "Properties shared by every kind of surface. Not used directly: each concrete surface type extends this with the data that its kind requires.",
       "type": "object",
       "allOf": [
         {
@@ -190,37 +187,86 @@
           "properties": {
             "material_key": {
               "type": "string",
-              "description": "Key of the entry in 'materials' that describes how this surface should be presented."
-            },
+              "description": "Key of the entry in 'materials' that describes how this surface should be presented. A surface carries a single material, so a surface that separates two differently presented regions takes its appearance from that one entry."
+            }
+          }
+        }
+      ]
+    },
+    "vmm_isosurface": {
+      "description": "A surface extracted from a scalar field at a single threshold, such as a grade shell. Triangle normals point towards increasing values of the field, so the region above the threshold lies in front of the surface and the region below it lies behind.",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/$defs/vmm_embedded_surface"
+        },
+        {
+          "properties": {
             "surface_type": {
-              "type": "string",
-              "description": "Kind of surface. The set of values is closed in this version of the schema and may be extended in a later minor version; a consumer that encounters a value it does not recognise should treat it as 'Generic' rather than rejecting the surface.",
-              "enum": [
-                "Isosurface",
-                "CategoryBoundary",
-                "ModelBoundary",
-                "NoData",
-                "Generic"
-              ],
-              "default": "Generic"
+              "description": "Identifies this surface as an isosurface.",
+              "const": "Isosurface"
             },
             "bound": {
               "type": "number",
-              "description": "The scalar value the surface was extracted at, in the model's 'bounds_unit'. Present for a surface extracted at a threshold; absent otherwise, such as for a model extent face or a category boundary."
+              "description": "The scalar value the surface was extracted at, in the model's 'bounds_unit'. A surface is extracted at a single threshold, so it carries one value rather than a range."
+            }
+          },
+          "required": [
+            "surface_type",
+            "bound"
+          ]
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "vmm_category_boundary_surface": {
+      "description": "A contact between two categories, or between one category and unassigned space inside the model extent. Where a category meets the boundary of the extent, the surface is a model boundary surface carrying that category instead.",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/$defs/vmm_embedded_surface"
+        },
+        {
+          "properties": {
+            "surface_type": {
+              "description": "Identifies this surface as a contact between categories.",
+              "const": "CategoryBoundary"
             },
             "categories": {
               "type": "array",
-              "description": "Keys into 'category_lookup' identifying the categories the surface separates, ordered so that the triangle normals point from 'categories[0]' towards 'categories[1]'. Two entries for a contact between two categories, where the first is the category behind the surface and the second is the category in front of it. One entry for a category against unassigned or out-of-model space, where the normals point away from that category. The front of a triangle is the side from which its three vertices appear in counter-clockwise order, which is the side its normal points towards; a part referenced with 'reversed' set to true has its front and back swapped.",
+              "description": "Keys into 'category_lookup' identifying the categories the surface separates, ordered so that the triangle normals point from 'categories[0]' towards 'categories[1]'. Two entries for a contact between two categories, where the first is the category behind the surface and the second is the category in front of it. One entry for a category against unassigned space inside the model extent, where the normals point away from that category. The front of a triangle is the side from which its three vertices appear in counter-clockwise order, which is the side its normal points towards; a part referenced with 'reversed' set to true has its front and back swapped.",
               "items": {
                 "type": "integer"
               },
               "minItems": 1,
               "maxItems": 2,
               "uniqueItems": true
+            }
+          },
+          "required": [
+            "surface_type",
+            "categories"
+          ]
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "vmm_model_boundary_surface": {
+      "description": "A surface lying on the boundary of the model extent, introduced where the model was clipped rather than where the data changes.",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/$defs/vmm_embedded_surface"
+        },
+        {
+          "properties": {
+            "surface_type": {
+              "description": "Identifies this surface as part of the model extent boundary.",
+              "const": "ModelBoundary"
             },
             "boundary_face": {
               "type": "string",
-              "description": "For a surface lying on the boundary of the model extent, which face of the extent it lies on, named by the axis and direction that face points along. The axes are those of the extent itself, so for a rotated extent they are the rotated axes rather than those of the coordinate reference system. For example 'NegativeX' is the face at the extent's minimum X, whose outward normal points along negative X. Absent on a boundary surface that spans more than one face, or that the producer cannot attribute to a single face.",
+              "description": "Which face of the model extent this surface lies on, named by the axis and direction its outward normal points along. The axes are those of the extent: rotated by the model's 'extent_rotation' if present, otherwise those of the coordinate reference system. For example 'NegativeX' is the face at the extent's minimum X, whose outward normal points along negative X. Absent if the surface spans more than one face or the producer cannot attribute it to a single face.",
               "enum": [
                 "NegativeX",
                 "PositiveX",
@@ -229,12 +275,63 @@
                 "NegativeZ",
                 "PositiveZ"
               ]
+            },
+            "category": {
+              "type": "integer",
+              "description": "Key into 'category_lookup' identifying the category whose region this surface closes, for a categorical model clipped by its extent. Absent if the surface closes no single category, as in a model without categories."
             }
-          }
+          },
+          "required": [
+            "surface_type"
+          ]
         }
-      ]
+      ],
+      "unevaluatedProperties": false
+    },
+    "vmm_no_data_surface": {
+      "description": "A surface closing the model where the source data was absent, so geometrically part of the model hull but not a real contact. Arises where a scalar field is undefined over part of the extent; a categorical model represents absent data as a category of its own instead.",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/$defs/vmm_embedded_surface"
+        },
+        {
+          "properties": {
+            "surface_type": {
+              "description": "Identifies this surface as the edge of the region where data was available.",
+              "const": "NoData"
+            }
+          },
+          "required": [
+            "surface_type"
+          ]
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "vmm_generic_surface": {
+      "description": "A surface that is part of the model but is none of the other kinds. Intended for meshes carried alongside a model for context, such as a topography or an imported wireframe, where no threshold, category or extent face applies. A consumer can display it but can draw no inference from it, so prefer a more specific kind wherever one fits.",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/$defs/vmm_embedded_surface"
+        },
+        {
+          "properties": {
+            "surface_type": {
+              "description": "Identifies this surface as none of the other kinds.",
+              "const": "Generic"
+            }
+          },
+          "required": [
+            "surface_type"
+          ]
+        }
+      ],
+      "unevaluatedProperties": false
     },
     "vmm_embedded_volume": {
+      "description": "Properties shared by every kind of volume. Not used directly: each concrete volume type extends this with the data that its kind requires. A volume's parts must together form a closed hull.",
       "type": "object",
       "allOf": [
         {
@@ -245,17 +342,23 @@
             "material_key": {
               "type": "string",
               "description": "Key of the entry in 'materials' that describes how this volume should be presented."
-            },
+            }
+          }
+        }
+      ]
+    },
+    "vmm_iso_volume": {
+      "description": "A band of a scalar field: the region where the field lies between two consecutive thresholds, below the lowest threshold, or above the highest. The iso-volumes of a model partition its extent without overlap, so cumulative volumes, such as everything below a threshold other than the lowest, are not published; a consumer builds them from the bands. At least one of 'lower_bound' and 'upper_bound' must be present, otherwise the volume constrains nothing.",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/$defs/vmm_embedded_volume"
+        },
+        {
+          "properties": {
             "volume_type": {
-              "type": "string",
-              "description": "Kind of volume. The set of values is closed in this version of the schema and may be extended in a later minor version; a consumer that encounters a value it does not recognise should treat it as 'Generic' rather than rejecting the volume.",
-              "enum": [
-                "IsoVolume",
-                "CategoryRegion",
-                "ModelBoundary",
-                "Generic"
-              ],
-              "default": "Generic"
+              "description": "Identifies this volume as the region between two scalar thresholds.",
+              "const": "IsoVolume"
             },
             "lower_bound": {
               "type": "number",
@@ -263,15 +366,83 @@
             },
             "upper_bound": {
               "type": "number",
-              "description": "Exclusive upper bound of the scalar range the volume encloses, in the model's 'bounds_unit'. Absent if the volume is unbounded above."
+              "description": "Exclusive upper bound of the scalar range the volume encloses, in the model's 'bounds_unit'. Absent if the volume is unbounded above. The range is half-open so that adjacent iso-volumes tile the scalar range without overlap; the threshold itself is the shared bounding surface, which has no volume of its own."
+            }
+          },
+          "required": [
+            "volume_type"
+          ]
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "vmm_category_region": {
+      "description": "A volume enclosing the region occupied by one category of a categorical model, such as a lithological domain.",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/$defs/vmm_embedded_volume"
+        },
+        {
+          "properties": {
+            "volume_type": {
+              "description": "Identifies this volume as the region occupied by a single category.",
+              "const": "CategoryRegion"
             },
             "category": {
               "type": "integer",
-              "description": "Key into 'category_lookup' identifying the category the volume encloses. A volume encloses exactly one category; a domain merging several source categories is represented as one category of its own, added to 'category_lookup'."
+              "description": "Key into 'category_lookup' identifying the category the volume encloses. A volume encloses exactly one category, so a domain that groups several source categories is published as a single category with its own key and name."
             }
-          }
+          },
+          "required": [
+            "volume_type",
+            "category"
+          ]
         }
-      ]
+      ],
+      "unevaluatedProperties": false
+    },
+    "vmm_model_boundary_volume": {
+      "description": "The volume whose hull is the boundary of the model extent. A model has at most one, referenced by the model's 'boundary_volume'. Its hull may include inner shells, which enclose interior voids that lie outside the model.",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/$defs/vmm_embedded_volume"
+        },
+        {
+          "properties": {
+            "volume_type": {
+              "description": "Identifies this volume as the extent of the model.",
+              "const": "ModelBoundary"
+            }
+          },
+          "required": [
+            "volume_type"
+          ]
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "vmm_generic_volume": {
+      "description": "A volume that is part of the model but is none of the other kinds. Intended for closed regions carried alongside a model for context, such as an imported solid, where no scalar range, category or extent applies. A consumer can display it but can draw no inference from it, so prefer a more specific kind wherever one fits.",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/$defs/vmm_embedded_volume"
+        },
+        {
+          "properties": {
+            "volume_type": {
+              "description": "Identifies this volume as none of the other kinds.",
+              "const": "Generic"
+            }
+          },
+          "required": [
+            "volume_type"
+          ]
+        }
+      ],
+      "unevaluatedProperties": false
     }
   }
 }
