@@ -134,7 +134,7 @@ Together the `"ModelBoundary"` and `"NoData"` surfaces cover the model hull, the
 
 A surface closing the model where the source data was absent. It is geometrically part of the model hull but is not a real contact, and a consumer should not present it as one.
 
-This arises where a scalar field is undefined over part of the extent — the usual case being isosurfacing output over sparse data. A categorical model does not normally need it, because absent data is naturally represented as a category of its own with an ordinary `"CategoryBoundary"` around it.
+This arises where a scalar field is undefined over part of the extent — the usual case being isosurfacing output over sparse data. A categorical model does not need it. Absent data there is either a category of its own, bounded by ordinary two-entry `"CategoryBoundary"` surfaces, or unassigned space inside the model extent, bounded by single-entry `"CategoryBoundary"` surfaces. Either way the surface records the category on the data side, which a `"NoData"` surface, carrying no category, could not.
 
 ### `"Generic"`
 

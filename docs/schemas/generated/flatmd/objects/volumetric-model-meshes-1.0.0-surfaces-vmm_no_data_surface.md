@@ -1,5 +1,5 @@
 ### volumetric-model-meshes (v1.0.0)
-A surface closing the model where the source data was absent, so geometrically part of the model hull but not a real contact. Arises where a scalar field is undefined over part of the extent; a categorical model represents absent data as a category of its own instead.
+A surface closing the model where the source data was absent, so geometrically part of the model hull but not a real contact. Arises where a scalar field is undefined over part of the extent; a categorical model instead represents absent data as a category of its own or as unassigned space, bounded by 'CategoryBoundary' surfaces that record the category on the data side.
 
 | Property | Type | Description | Flags |
 |---|---|---|---|
