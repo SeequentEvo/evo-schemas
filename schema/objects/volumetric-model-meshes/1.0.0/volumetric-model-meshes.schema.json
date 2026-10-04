@@ -77,7 +77,7 @@
           "$ref": "/components/one-of-attribute/1.2.0/one-of-attribute.schema.json"
         },
         "bounds_unit": {
-          "description": "Unit of measure of the 'bound' value of every isosurface and the 'lower_bound' and 'upper_bound' values of every iso-volume in this model. All bounds are expressed in this unit, as they are all derived from a single scalar field. Absent if the unit is unknown or the bounds are dimensionless.",
+          "description": "Unit of measure of the 'bound' value of every isosurface and the 'lower_bound' and 'upper_bound' values of every iso-volume in this model. All bounds are expressed in this unit, as they are all derived from a single scalar field. Absent if the unit is unknown or the bounds are unitless.",
           "$ref": "/elements/unit/1.0.1/unit.schema.json"
         },
         "bounds_attribute": {
@@ -112,7 +112,7 @@
         },
         "boundary_volume": {
           "type": "integer",
-          "description": "Index into 'volumes' of the volume whose hull is the boundary of the model extent. That volume has a 'volume_type' of 'ModelBoundary'. Absent if the model does not include its extent as a volume.",
+          "description": "Index into 'volumes' of the volume whose hull is the boundary of the model extent. The referenced volume must have a 'volume_type' of 'ModelBoundary'. Absent if the model does not include its extent as a volume.",
           "minimum": 0
         }
       }

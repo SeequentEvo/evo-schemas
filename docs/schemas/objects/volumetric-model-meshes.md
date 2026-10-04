@@ -96,11 +96,11 @@ Open or closed surfaces in the model. May be empty, though a model with neither 
 
 * `parts`: The mesh parts that make up this surface, and whether traversal order within each part is reversed.
 
-* `surface_type`: Required kind of surface, which selects the properties below.
-
 * `material_key`: Optional key of an entry in `materials`, matching [geological-model-meshes](geological-model-meshes.md), where surfaces carry a material as well as volumes. Isosurfacing output normally omits it; interpreted models use it to preserve a surface's appearance.
 
   A surface has one `material_key`, not one per side. Where a surface separates two differently presented regions, that single entry is its whole appearance; a consumer that wants to shade the two sides differently should take its colours from the volumes on either side instead. This is a known limitation, shared with [geological-model-meshes](geological-model-meshes.md).
+
+* `surface_type`: Required kind of surface, which selects the properties below.
 
 ### `"Isosurface"`
 
@@ -198,13 +198,13 @@ Attributes associated with each volume. Attribute tables have one row per volume
 
 The [unit](../elements/unit.md) of measure of every `bound`, `lower_bound` and `upper_bound` in the model — for example `"g/t"` for grade shells, `"ohm.m"` for a resistivity model, or `"m"` for an elevation cut.
 
-A single model-level unit is sufficient because all bounds derive from one scalar field. Omit it when the bounds are dimensionless, or when the producer does not know the unit — in which case a consumer must treat the bounds as opaque numbers and must not convert or label them.
+A single model-level unit is sufficient because all bounds derive from one scalar field. Omit it when the bounds are unitless, or when the producer does not know the unit — in which case a consumer must treat the bounds as opaque numbers and must not convert or label them.
 
 A purely categorical model has no bounds and omits this property.
 
 ## `bounds_attribute`
 
-Optional name of the scalar attribute the bounds are measured on — for example `"Au"`. `bounds_unit` says what the numbers are measured in; this says what is being measured, so that a consumer can label the model as "Au 0.5 g/t" rather than just "0.5 g/t". Use [`lineage`](../components/lineage.md) to link to the source object itself.
+Optional name of the scalar attribute the bounds are measured on — for example `"Au"`. `bounds_unit` says what the numbers are measured in; this says what is being measured, so that a consumer can label the model as "Au 0.5 g/t" rather than just "0.5 g/t". The source object can be recorded as lineage.
 
 ## `category_lookup`
 
@@ -238,7 +238,7 @@ It only defines the axes that [`boundary_face`](#modelboundary) names faces agai
 
 ## `boundary_volume`
 
-Index into `volumes` of the volume whose hull is the boundary of the model extent. That volume has a `volume_type` of `"ModelBoundary"`. Omit it when the model does not publish its extent as a volume.
+Index into `volumes` of the volume whose hull is the boundary of the model extent. The referenced volume must have a `volume_type` of `"ModelBoundary"`. Omit it when the model does not publish its extent as a volume.
 
 The hull need not be simply connected. Where the source data was absent over an interior region, the model has an interior void, and the boundary volume's hull then consists of an outer shell plus one inner shell per void. The inner shells follow the same rule as every other closed volume — fronts facing outwards, away from the enclosed region — which here means facing *into* the void, since the void lies outside the model. The surfaces making up those inner shells are `"NoData"` surfaces, not `"ModelBoundary"` ones: they mark the edge of the data, not the edge of the extent.
 
