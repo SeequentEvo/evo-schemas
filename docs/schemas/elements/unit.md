@@ -1,8 +1,13 @@
 import SchemaUri from '@theme/SchemaUri';
+import Alert from '@mui/material/Alert';
 
 # unit
 
 <SchemaUri uri="schema/elements/unit/1.1.0/unit.schema.json" />
+
+<Alert severity="info">
+The unit symbols and dimension categories on this page are derived from the Energistics Unit of Measure Standard. See <a href="https://github.com/SeequentEvo/evo-schemas/blob/main/NOTICE">NOTICE</a> for the applicable attribution and licence terms. The version number above is an evo-schemas element version and does not correspond to any Energistics version number.
+</Alert>
 
 Defines physical measurement units as a string enum with 125+ supported unit categories, each corresponding to a physical dimension. Components that describe measured quantities (e.g., distances, temperatures, pressures) reference this element to specify their unit of measure.
 

@@ -2,7 +2,7 @@
   "$id": "/elements/unit/1.0.1/categories/unit-volume-per-time-per-pressure-length.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "Units ((volume per time) per (pressure length))",
-  "$comment": "OSDU Units",
+  "$comment": "This data is distributed under the Energistics License Agreement at http://www.energistics.org. Use of this data constitutes agreement with the Energistics License Agreement. Copyright (c) 2014 Energistics. All rights reserved.",
   "type": "string",
   "enum": [
     "m2/(Pa.s)",

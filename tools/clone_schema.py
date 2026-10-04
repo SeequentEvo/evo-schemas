@@ -77,6 +77,8 @@ def is_latest_version_of_schema(schema_id: pathlib.PurePosixPath, options):
     current_version = get_version(schema_id)
     path = schema_root / schema_id
     for path in path.parent.parent.iterdir():
+        if not path.is_dir():
+            continue  # e.g. a NOTICE file alongside the version folders
         if not any(path.iterdir()):
             continue  # empty folder
         version = semver.Version.parse(path.name)
