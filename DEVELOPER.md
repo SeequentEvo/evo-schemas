@@ -26,7 +26,7 @@ The examples in the [service](./examples/service) folder require some shared sec
 
 1. Create a copy of [.env.default](./examples/.env.default) and name it [.env](./examples/.env)
 2. Open [.env](./examples/.env) and fill in all items
-   - `HOST` is the full URL of the Seequent Geoscience Object API, e.g. https://your-hub-code.api.seequent.com/geoscience-object
+   - `HOST` is the full URL of the Seequent Geoscience Object API, e.g. https://api.your-hub-code.seequent.net/geoscience-object
    - `ID_TOKEN` is your long-lived access token. This will be used to get a fresh authentication token from `ID_API_HOST`.
 
 3. Ensure that you enter those details into [.env](./examples/.env) - this file is excluded from source control to avoid getting committed by accident.
