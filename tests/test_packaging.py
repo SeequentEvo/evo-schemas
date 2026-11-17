@@ -1,22 +1,10 @@
 """Test that our github test matrix matches the supported python versions."""
+
 import itertools
-from typing import TYPE_CHECKING
-
-import yaml
-
-if TYPE_CHECKING:
-    # Hide the import shenanigans that follow from our IDE / type-checkers
-    import tomllib
-else:
-    # In reality we need to deal with tomllib not being available for
-    # python3.10, by using the backport package tomli.
-    try:
-        import tomllib
-    except ModuleNotFoundError:
-        import tomli as tomllib
-
 from pathlib import Path
 
+import tomllib
+import yaml
 from packaging.specifiers import SpecifierSet
 
 
@@ -48,3 +36,9 @@ def test_supported_python_version_matches_gha_matrix():
     required_python_spec = _get_required_python()
     allowed_pythons = _get_allowed_python_versions(required_python_spec)
     assert allowed_pythons == _get_tested_pythons()
+
+
+def test_minimum_python_version():
+    required_python_spec = _get_required_python()
+    assert "3.10" not in required_python_spec
+    assert "3.11" in required_python_spec
