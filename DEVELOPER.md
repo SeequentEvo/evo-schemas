@@ -2,7 +2,7 @@
 
 ## Pre-requisites
 
-* Python >= 3.10
+* Python >= 3.11
 
 ## Set up your environment
 

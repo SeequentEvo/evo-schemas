@@ -25,7 +25,7 @@ Seequent geoscience object schemas define metadata and data serialisation of var
 For more details on geoscience object schemas, see the geoscience object schema [documentation.](https://developer.seequent.com/docs/data-structures/geoscience-objects/)
 
 ## Pre-requisites
-- Python >= 3.10
+- Python >= 3.11
 
 ## Installation
 
