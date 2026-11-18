@@ -1,5 +1,21 @@
 # Changelog
 
+## v2026.11.17
+<!-- Release notes generated using configuration in .github/release.yml at main -->
+
+## What's Changed
+### evo-schemas
+* Attribution in Units by @bsmithyman in https://github.com/SeequentEvo/evo-schemas/pull/90
+* Added schema for volumetric meshes by @zinovya in https://github.com/SeequentEvo/evo-schemas/pull/76
+* URL-Update by @shivangj-10 in https://github.com/SeequentEvo/evo-schemas/pull/91
+* Require Python 3.11 and run checks on PRs by @GriffinBaxterSeequent in https://github.com/SeequentEvo/evo-schemas/pull/92
+
+## New Contributors
+* @zinovya made their first contribution in https://github.com/SeequentEvo/evo-schemas/pull/76
+* @shivangj-10 made their first contribution in https://github.com/SeequentEvo/evo-schemas/pull/91
+
+**Full Changelog**: https://github.com/SeequentEvo/evo-schemas/compare/v2026.9.9...v2026.11.17
+
 ## v2026.9.9
 <!-- Release notes generated using configuration in .github/release.yml at main -->
 
