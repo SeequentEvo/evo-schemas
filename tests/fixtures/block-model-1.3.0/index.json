@@ -1,0 +1,2672 @@
+{
+  "valid-regular.json": null,
+  "valid-flexible.json": null,
+  "valid-fully-subblocked.json": null,
+  "valid-variable-octree.json": null,
+  "valid-null-uuid.json": null,
+  "valid-unspecified-crs.json": null,
+  "valid-wkt-crs.json": null,
+  "valid-epsg-1024.json": null,
+  "valid-epsg-32767.json": null,
+  "valid-group-parent-null.json": null,
+  "valid-group-tags-arbitrary-json.json": null,
+  "valid-lineage.json": null,
+  "valid-extensions.json": null,
+  "root-not-object.json": {
+    "keyword": "type",
+    "path": []
+  },
+  "missing-schema.json": {
+    "keyword": "required",
+    "path": [],
+    "message_contains": "'schema'"
+  },
+  "missing-name.json": {
+    "keyword": "required",
+    "path": [],
+    "message_contains": "'name'"
+  },
+  "missing-uuid.json": {
+    "keyword": "required",
+    "path": [],
+    "message_contains": "'uuid'"
+  },
+  "missing-bounding-box.json": {
+    "keyword": "required",
+    "path": [],
+    "message_contains": "'bounding_box'"
+  },
+  "missing-coordinate-reference-system.json": {
+    "keyword": "required",
+    "path": [],
+    "message_contains": "'coordinate_reference_system'"
+  },
+  "missing-block-model-uuid.json": {
+    "keyword": "required",
+    "path": [],
+    "message_contains": "'block_model_uuid'"
+  },
+  "missing-geometry.json": {
+    "keyword": "required",
+    "path": [],
+    "message_contains": "'geometry'"
+  },
+  "wrong-schema.json": {
+    "keyword": "const",
+    "path": [
+      "schema"
+    ]
+  },
+  "extra-object-property.json": {
+    "keyword": "unevaluatedProperties",
+    "path": [],
+    "message_contains": "unexpected"
+  },
+  "name-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "name"
+    ]
+  },
+  "description-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "description"
+    ]
+  },
+  "block-model-uuid-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "block_model_uuid"
+    ]
+  },
+  "block-model-version-uuid-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "block_model_version_uuid"
+    ]
+  },
+  "block-model-uuid-invalid-uuid.json": {
+    "keyword": "format",
+    "path": [
+      "block_model_uuid"
+    ]
+  },
+  "block-model-version-uuid-invalid-uuid.json": {
+    "keyword": "format",
+    "path": [
+      "block_model_version_uuid"
+    ]
+  },
+  "object-uuid-invalid-format.json": {
+    "keyword": "format",
+    "path": [
+      "uuid"
+    ]
+  },
+  "object-uuid-too-short.json": {
+    "keyword": "minLength",
+    "path": [
+      "uuid"
+    ]
+  },
+  "object-uuid-too-long.json": {
+    "keyword": "maxLength",
+    "path": [
+      "uuid"
+    ]
+  },
+  "object-uuid-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "uuid"
+    ]
+  },
+  "tags-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "tags"
+    ]
+  },
+  "tag-value-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "tags",
+      "source"
+    ]
+  },
+  "extensions-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "extensions"
+    ]
+  },
+  "bounding-box-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "bounding_box"
+    ]
+  },
+  "bounding-box-missing-min_x.json": {
+    "keyword": "required",
+    "path": [
+      "bounding_box"
+    ],
+    "message_contains": "'min_x'"
+  },
+  "bounding-box-min_x-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "bounding_box",
+      "min_x"
+    ]
+  },
+  "bounding-box-missing-max_x.json": {
+    "keyword": "required",
+    "path": [
+      "bounding_box"
+    ],
+    "message_contains": "'max_x'"
+  },
+  "bounding-box-max_x-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "bounding_box",
+      "max_x"
+    ]
+  },
+  "bounding-box-missing-min_y.json": {
+    "keyword": "required",
+    "path": [
+      "bounding_box"
+    ],
+    "message_contains": "'min_y'"
+  },
+  "bounding-box-min_y-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "bounding_box",
+      "min_y"
+    ]
+  },
+  "bounding-box-missing-max_y.json": {
+    "keyword": "required",
+    "path": [
+      "bounding_box"
+    ],
+    "message_contains": "'max_y'"
+  },
+  "bounding-box-max_y-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "bounding_box",
+      "max_y"
+    ]
+  },
+  "bounding-box-missing-min_z.json": {
+    "keyword": "required",
+    "path": [
+      "bounding_box"
+    ],
+    "message_contains": "'min_z'"
+  },
+  "bounding-box-min_z-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "bounding_box",
+      "min_z"
+    ]
+  },
+  "bounding-box-missing-max_z.json": {
+    "keyword": "required",
+    "path": [
+      "bounding_box"
+    ],
+    "message_contains": "'max_z'"
+  },
+  "bounding-box-max_z-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "bounding_box",
+      "max_z"
+    ]
+  },
+  "bounding-box-extra-property.json": {
+    "keyword": "unevaluatedProperties",
+    "path": [
+      "bounding_box"
+    ]
+  },
+  "crs-invalid-choice.json": {
+    "keyword": "oneOf",
+    "path": [
+      "coordinate_reference_system"
+    ]
+  },
+  "crs-empty-object.json": {
+    "keyword": "oneOf",
+    "path": [
+      "coordinate_reference_system"
+    ]
+  },
+  "epsg-too-low.json": {
+    "keyword": "minimum",
+    "path": [
+      "coordinate_reference_system",
+      "epsg_code"
+    ]
+  },
+  "epsg-too-high.json": {
+    "keyword": "maximum",
+    "path": [
+      "coordinate_reference_system",
+      "epsg_code"
+    ]
+  },
+  "epsg-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "coordinate_reference_system",
+      "epsg_code"
+    ]
+  },
+  "wkt-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "coordinate_reference_system",
+      "ogc_wkt"
+    ]
+  },
+  "crs-extra-property.json": {
+    "keyword": "unevaluatedProperties",
+    "path": [
+      "coordinate_reference_system"
+    ]
+  },
+  "flexible-missing-model-type.json": {
+    "keyword": "required",
+    "path": [
+      "geometry"
+    ],
+    "message_contains": "'model_type'",
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      0
+    ]
+  },
+  "flexible-missing-origin.json": {
+    "keyword": "required",
+    "path": [
+      "geometry"
+    ],
+    "message_contains": "'origin'",
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      0
+    ]
+  },
+  "flexible-missing-n-parent-blocks.json": {
+    "keyword": "required",
+    "path": [
+      "geometry"
+    ],
+    "message_contains": "'n_parent_blocks'",
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      0
+    ]
+  },
+  "flexible-missing-parent-block-size.json": {
+    "keyword": "required",
+    "path": [
+      "geometry"
+    ],
+    "message_contains": "'parent_block_size'",
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      0
+    ]
+  },
+  "flexible-missing-n-subblocks-per-parent.json": {
+    "keyword": "required",
+    "path": [
+      "geometry"
+    ],
+    "message_contains": "'n_subblocks_per_parent'",
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      0
+    ]
+  },
+  "flexible-extra-property.json": {
+    "keyword": "additionalProperties",
+    "path": [
+      "geometry"
+    ],
+    "message_contains": "extra",
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      0
+    ]
+  },
+  "flexible-origin-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "origin"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      0
+    ]
+  },
+  "flexible-origin-too-short.json": {
+    "keyword": "minItems",
+    "path": [
+      "geometry",
+      "origin"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      0
+    ]
+  },
+  "flexible-origin-too-long.json": {
+    "keyword": "maxItems",
+    "path": [
+      "geometry",
+      "origin"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      0
+    ]
+  },
+  "flexible-origin-item-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "origin",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      0
+    ]
+  },
+  "flexible-n-parent-blocks-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "n_parent_blocks"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      0
+    ]
+  },
+  "flexible-n-parent-blocks-too-short.json": {
+    "keyword": "minItems",
+    "path": [
+      "geometry",
+      "n_parent_blocks"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      0
+    ]
+  },
+  "flexible-n-parent-blocks-too-long.json": {
+    "keyword": "maxItems",
+    "path": [
+      "geometry",
+      "n_parent_blocks"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      0
+    ]
+  },
+  "flexible-n-parent-blocks-item-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "n_parent_blocks",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      0
+    ]
+  },
+  "flexible-n-parent-blocks-fractional-item.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "n_parent_blocks",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      0
+    ]
+  },
+  "flexible-n-parent-blocks-zero.json": {
+    "keyword": "minimum",
+    "path": [
+      "geometry",
+      "n_parent_blocks",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      0
+    ]
+  },
+  "flexible-parent-block-size-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "parent_block_size"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      0
+    ]
+  },
+  "flexible-parent-block-size-too-short.json": {
+    "keyword": "minItems",
+    "path": [
+      "geometry",
+      "parent_block_size"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      0
+    ]
+  },
+  "flexible-parent-block-size-too-long.json": {
+    "keyword": "maxItems",
+    "path": [
+      "geometry",
+      "parent_block_size"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      0
+    ]
+  },
+  "flexible-parent-block-size-item-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "parent_block_size",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      0
+    ]
+  },
+  "flexible-parent-block-size-zero.json": {
+    "keyword": "exclusiveMinimum",
+    "path": [
+      "geometry",
+      "parent_block_size",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      0
+    ]
+  },
+  "flexible-parent-block-size-negative.json": {
+    "keyword": "exclusiveMinimum",
+    "path": [
+      "geometry",
+      "parent_block_size",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      0
+    ]
+  },
+  "flexible-n-subblocks-per-parent-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "n_subblocks_per_parent"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      0
+    ]
+  },
+  "flexible-n-subblocks-per-parent-too-short.json": {
+    "keyword": "minItems",
+    "path": [
+      "geometry",
+      "n_subblocks_per_parent"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      0
+    ]
+  },
+  "flexible-n-subblocks-per-parent-too-long.json": {
+    "keyword": "maxItems",
+    "path": [
+      "geometry",
+      "n_subblocks_per_parent"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      0
+    ]
+  },
+  "flexible-n-subblocks-per-parent-item-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "n_subblocks_per_parent",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      0
+    ]
+  },
+  "flexible-n-subblocks-per-parent-fractional-item.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "n_subblocks_per_parent",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      0
+    ]
+  },
+  "flexible-n-subblocks-per-parent-zero.json": {
+    "keyword": "minimum",
+    "path": [
+      "geometry",
+      "n_subblocks_per_parent",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      0
+    ]
+  },
+  "flexible-subblocks-over-maximum.json": {
+    "keyword": "maximum",
+    "path": [
+      "geometry",
+      "n_subblocks_per_parent",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      0
+    ]
+  },
+  "valid-flexible-subblocks-boundaries.json": null,
+  "fully-subblocked-missing-model-type.json": {
+    "keyword": "required",
+    "path": [
+      "geometry"
+    ],
+    "message_contains": "'model_type'",
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      1
+    ]
+  },
+  "fully-subblocked-missing-origin.json": {
+    "keyword": "required",
+    "path": [
+      "geometry"
+    ],
+    "message_contains": "'origin'",
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      1
+    ]
+  },
+  "fully-subblocked-missing-n-parent-blocks.json": {
+    "keyword": "required",
+    "path": [
+      "geometry"
+    ],
+    "message_contains": "'n_parent_blocks'",
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      1
+    ]
+  },
+  "fully-subblocked-missing-parent-block-size.json": {
+    "keyword": "required",
+    "path": [
+      "geometry"
+    ],
+    "message_contains": "'parent_block_size'",
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      1
+    ]
+  },
+  "fully-subblocked-missing-n-subblocks-per-parent.json": {
+    "keyword": "required",
+    "path": [
+      "geometry"
+    ],
+    "message_contains": "'n_subblocks_per_parent'",
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      1
+    ]
+  },
+  "fully-subblocked-extra-property.json": {
+    "keyword": "additionalProperties",
+    "path": [
+      "geometry"
+    ],
+    "message_contains": "extra",
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      1
+    ]
+  },
+  "fully-subblocked-origin-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "origin"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      1
+    ]
+  },
+  "fully-subblocked-origin-too-short.json": {
+    "keyword": "minItems",
+    "path": [
+      "geometry",
+      "origin"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      1
+    ]
+  },
+  "fully-subblocked-origin-too-long.json": {
+    "keyword": "maxItems",
+    "path": [
+      "geometry",
+      "origin"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      1
+    ]
+  },
+  "fully-subblocked-origin-item-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "origin",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      1
+    ]
+  },
+  "fully-subblocked-n-parent-blocks-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "n_parent_blocks"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      1
+    ]
+  },
+  "fully-subblocked-n-parent-blocks-too-short.json": {
+    "keyword": "minItems",
+    "path": [
+      "geometry",
+      "n_parent_blocks"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      1
+    ]
+  },
+  "fully-subblocked-n-parent-blocks-too-long.json": {
+    "keyword": "maxItems",
+    "path": [
+      "geometry",
+      "n_parent_blocks"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      1
+    ]
+  },
+  "fully-subblocked-n-parent-blocks-item-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "n_parent_blocks",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      1
+    ]
+  },
+  "fully-subblocked-n-parent-blocks-fractional-item.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "n_parent_blocks",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      1
+    ]
+  },
+  "fully-subblocked-n-parent-blocks-zero.json": {
+    "keyword": "minimum",
+    "path": [
+      "geometry",
+      "n_parent_blocks",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      1
+    ]
+  },
+  "fully-subblocked-parent-block-size-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "parent_block_size"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      1
+    ]
+  },
+  "fully-subblocked-parent-block-size-too-short.json": {
+    "keyword": "minItems",
+    "path": [
+      "geometry",
+      "parent_block_size"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      1
+    ]
+  },
+  "fully-subblocked-parent-block-size-too-long.json": {
+    "keyword": "maxItems",
+    "path": [
+      "geometry",
+      "parent_block_size"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      1
+    ]
+  },
+  "fully-subblocked-parent-block-size-item-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "parent_block_size",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      1
+    ]
+  },
+  "fully-subblocked-parent-block-size-zero.json": {
+    "keyword": "exclusiveMinimum",
+    "path": [
+      "geometry",
+      "parent_block_size",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      1
+    ]
+  },
+  "fully-subblocked-parent-block-size-negative.json": {
+    "keyword": "exclusiveMinimum",
+    "path": [
+      "geometry",
+      "parent_block_size",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      1
+    ]
+  },
+  "fully-subblocked-n-subblocks-per-parent-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "n_subblocks_per_parent"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      1
+    ]
+  },
+  "fully-subblocked-n-subblocks-per-parent-too-short.json": {
+    "keyword": "minItems",
+    "path": [
+      "geometry",
+      "n_subblocks_per_parent"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      1
+    ]
+  },
+  "fully-subblocked-n-subblocks-per-parent-too-long.json": {
+    "keyword": "maxItems",
+    "path": [
+      "geometry",
+      "n_subblocks_per_parent"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      1
+    ]
+  },
+  "fully-subblocked-n-subblocks-per-parent-item-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "n_subblocks_per_parent",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      1
+    ]
+  },
+  "fully-subblocked-n-subblocks-per-parent-fractional-item.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "n_subblocks_per_parent",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      1
+    ]
+  },
+  "fully-subblocked-n-subblocks-per-parent-zero.json": {
+    "keyword": "minimum",
+    "path": [
+      "geometry",
+      "n_subblocks_per_parent",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      1
+    ]
+  },
+  "fully-subblocked-subblocks-over-maximum.json": {
+    "keyword": "maximum",
+    "path": [
+      "geometry",
+      "n_subblocks_per_parent",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      1
+    ]
+  },
+  "valid-fully-subblocked-subblocks-boundaries.json": null,
+  "regular-missing-model-type.json": {
+    "keyword": "required",
+    "path": [
+      "geometry"
+    ],
+    "message_contains": "'model_type'",
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "regular-missing-origin.json": {
+    "keyword": "required",
+    "path": [
+      "geometry"
+    ],
+    "message_contains": "'origin'",
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "regular-missing-n-blocks.json": {
+    "keyword": "required",
+    "path": [
+      "geometry"
+    ],
+    "message_contains": "'n_blocks'",
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "regular-missing-block-size.json": {
+    "keyword": "required",
+    "path": [
+      "geometry"
+    ],
+    "message_contains": "'block_size'",
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "regular-extra-property.json": {
+    "keyword": "additionalProperties",
+    "path": [
+      "geometry"
+    ],
+    "message_contains": "extra",
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "regular-origin-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "origin"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "regular-origin-too-short.json": {
+    "keyword": "minItems",
+    "path": [
+      "geometry",
+      "origin"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "regular-origin-too-long.json": {
+    "keyword": "maxItems",
+    "path": [
+      "geometry",
+      "origin"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "regular-origin-item-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "origin",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "regular-n-blocks-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "n_blocks"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "regular-n-blocks-too-short.json": {
+    "keyword": "minItems",
+    "path": [
+      "geometry",
+      "n_blocks"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "regular-n-blocks-too-long.json": {
+    "keyword": "maxItems",
+    "path": [
+      "geometry",
+      "n_blocks"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "regular-n-blocks-item-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "n_blocks",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "regular-n-blocks-fractional-item.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "n_blocks",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "regular-n-blocks-zero.json": {
+    "keyword": "minimum",
+    "path": [
+      "geometry",
+      "n_blocks",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "regular-block-size-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "block_size"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "regular-block-size-too-short.json": {
+    "keyword": "minItems",
+    "path": [
+      "geometry",
+      "block_size"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "regular-block-size-too-long.json": {
+    "keyword": "maxItems",
+    "path": [
+      "geometry",
+      "block_size"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "regular-block-size-item-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "block_size",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "regular-block-size-zero.json": {
+    "keyword": "exclusiveMinimum",
+    "path": [
+      "geometry",
+      "block_size",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "regular-block-size-negative.json": {
+    "keyword": "exclusiveMinimum",
+    "path": [
+      "geometry",
+      "block_size",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "variable-octree-missing-model-type.json": {
+    "keyword": "required",
+    "path": [
+      "geometry"
+    ],
+    "message_contains": "'model_type'",
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "variable-octree-missing-origin.json": {
+    "keyword": "required",
+    "path": [
+      "geometry"
+    ],
+    "message_contains": "'origin'",
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "variable-octree-missing-n-parent-blocks.json": {
+    "keyword": "required",
+    "path": [
+      "geometry"
+    ],
+    "message_contains": "'n_parent_blocks'",
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "variable-octree-missing-parent-block-size.json": {
+    "keyword": "required",
+    "path": [
+      "geometry"
+    ],
+    "message_contains": "'parent_block_size'",
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "variable-octree-missing-n-subblocks-per-parent.json": {
+    "keyword": "required",
+    "path": [
+      "geometry"
+    ],
+    "message_contains": "'n_subblocks_per_parent'",
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "variable-octree-extra-property.json": {
+    "keyword": "additionalProperties",
+    "path": [
+      "geometry"
+    ],
+    "message_contains": "extra",
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "variable-octree-origin-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "origin"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "variable-octree-origin-too-short.json": {
+    "keyword": "minItems",
+    "path": [
+      "geometry",
+      "origin"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "variable-octree-origin-too-long.json": {
+    "keyword": "maxItems",
+    "path": [
+      "geometry",
+      "origin"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "variable-octree-origin-item-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "origin",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "variable-octree-n-parent-blocks-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "n_parent_blocks"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "variable-octree-n-parent-blocks-too-short.json": {
+    "keyword": "minItems",
+    "path": [
+      "geometry",
+      "n_parent_blocks"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "variable-octree-n-parent-blocks-too-long.json": {
+    "keyword": "maxItems",
+    "path": [
+      "geometry",
+      "n_parent_blocks"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "variable-octree-n-parent-blocks-item-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "n_parent_blocks",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "variable-octree-n-parent-blocks-fractional-item.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "n_parent_blocks",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "variable-octree-n-parent-blocks-zero.json": {
+    "keyword": "minimum",
+    "path": [
+      "geometry",
+      "n_parent_blocks",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "variable-octree-parent-block-size-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "parent_block_size"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "variable-octree-parent-block-size-too-short.json": {
+    "keyword": "minItems",
+    "path": [
+      "geometry",
+      "parent_block_size"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "variable-octree-parent-block-size-too-long.json": {
+    "keyword": "maxItems",
+    "path": [
+      "geometry",
+      "parent_block_size"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "variable-octree-parent-block-size-item-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "parent_block_size",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "variable-octree-parent-block-size-zero.json": {
+    "keyword": "exclusiveMinimum",
+    "path": [
+      "geometry",
+      "parent_block_size",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "variable-octree-parent-block-size-negative.json": {
+    "keyword": "exclusiveMinimum",
+    "path": [
+      "geometry",
+      "parent_block_size",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "variable-octree-n-subblocks-per-parent-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "n_subblocks_per_parent"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "variable-octree-n-subblocks-per-parent-too-short.json": {
+    "keyword": "minItems",
+    "path": [
+      "geometry",
+      "n_subblocks_per_parent"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "variable-octree-n-subblocks-per-parent-too-long.json": {
+    "keyword": "maxItems",
+    "path": [
+      "geometry",
+      "n_subblocks_per_parent"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "variable-octree-n-subblocks-per-parent-item-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "n_subblocks_per_parent",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "variable-octree-n-subblocks-per-parent-fractional-item.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "n_subblocks_per_parent",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "variable-octree-subblocks-0.json": {
+    "keyword": "enum",
+    "path": [
+      "geometry",
+      "n_subblocks_per_parent",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "variable-octree-subblocks-3.json": {
+    "keyword": "enum",
+    "path": [
+      "geometry",
+      "n_subblocks_per_parent",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "variable-octree-subblocks-128.json": {
+    "keyword": "enum",
+    "path": [
+      "geometry",
+      "n_subblocks_per_parent",
+      0
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      3
+    ]
+  },
+  "valid-variable-octree-subblocks-boundaries.json": null,
+  "geometry-wrong-type.json": {
+    "keyword": "oneOf",
+    "path": [
+      "geometry"
+    ]
+  },
+  "geometry-unknown-model-type.json": {
+    "keyword": "oneOf",
+    "path": [
+      "geometry"
+    ]
+  },
+  "rotation-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "rotation"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "rotation-missing-dip-azimuth.json": {
+    "keyword": "required",
+    "path": [
+      "geometry",
+      "rotation"
+    ],
+    "message_contains": "'dip_azimuth'",
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "rotation-dip-azimuth-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "rotation",
+      "dip_azimuth"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "rotation-dip-azimuth-below-minimum.json": {
+    "keyword": "minimum",
+    "path": [
+      "geometry",
+      "rotation",
+      "dip_azimuth"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "rotation-dip-azimuth-above-maximum.json": {
+    "keyword": "maximum",
+    "path": [
+      "geometry",
+      "rotation",
+      "dip_azimuth"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "rotation-missing-dip.json": {
+    "keyword": "required",
+    "path": [
+      "geometry",
+      "rotation"
+    ],
+    "message_contains": "'dip'",
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "rotation-dip-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "rotation",
+      "dip"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "rotation-dip-below-minimum.json": {
+    "keyword": "minimum",
+    "path": [
+      "geometry",
+      "rotation",
+      "dip"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "rotation-dip-above-maximum.json": {
+    "keyword": "maximum",
+    "path": [
+      "geometry",
+      "rotation",
+      "dip"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "rotation-missing-pitch.json": {
+    "keyword": "required",
+    "path": [
+      "geometry",
+      "rotation"
+    ],
+    "message_contains": "'pitch'",
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "rotation-pitch-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "geometry",
+      "rotation",
+      "pitch"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "rotation-pitch-below-minimum.json": {
+    "keyword": "minimum",
+    "path": [
+      "geometry",
+      "rotation",
+      "pitch"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "rotation-pitch-above-maximum.json": {
+    "keyword": "maximum",
+    "path": [
+      "geometry",
+      "rotation",
+      "pitch"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "valid-rotation-boundaries.json": null,
+  "rotation-extra-property.json": {
+    "keyword": "unevaluatedProperties",
+    "path": [
+      "geometry",
+      "rotation"
+    ],
+    "schema_prefix": [
+      "allOf",
+      1,
+      "properties",
+      "geometry",
+      "oneOf",
+      2
+    ]
+  },
+  "attributes-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "attributes"
+    ]
+  },
+  "attribute-item-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "attributes",
+      0
+    ]
+  },
+  "attribute-missing-name.json": {
+    "keyword": "required",
+    "path": [
+      "attributes",
+      0
+    ],
+    "message_contains": "'name'"
+  },
+  "attribute-missing-key.json": {
+    "keyword": "required",
+    "path": [
+      "attributes",
+      0
+    ],
+    "message_contains": "'key'"
+  },
+  "attribute-missing-attribute-type.json": {
+    "keyword": "required",
+    "path": [
+      "attributes",
+      0
+    ],
+    "message_contains": "'attribute_type'"
+  },
+  "attribute-missing-block-model-column-uuid.json": {
+    "keyword": "required",
+    "path": [
+      "attributes",
+      0
+    ],
+    "message_contains": "'block_model_column_uuid'"
+  },
+  "attribute-name-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "attributes",
+      0,
+      "name"
+    ]
+  },
+  "attribute-key-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "attributes",
+      0,
+      "key"
+    ]
+  },
+  "attribute-attribute-type-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "attributes",
+      0,
+      "attribute_type"
+    ]
+  },
+  "attribute-block-model-column-uuid-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "attributes",
+      0,
+      "block_model_column_uuid"
+    ]
+  },
+  "attribute-unknown-type.json": {
+    "keyword": "enum",
+    "path": [
+      "attributes",
+      0,
+      "attribute_type"
+    ]
+  },
+  "attribute-block-model-column-uuid-invalid-uuid.json": {
+    "keyword": "format",
+    "path": [
+      "attributes",
+      0,
+      "block_model_column_uuid"
+    ]
+  },
+  "attribute-block-model-group-uuid-invalid-uuid.json": {
+    "keyword": "format",
+    "path": [
+      "attributes",
+      0,
+      "block_model_group_uuid"
+    ]
+  },
+  "valid-attribute-extra-property.json": null,
+  "attribute-description-missing-discipline.json": {
+    "keyword": "required",
+    "path": [
+      "attributes",
+      0,
+      "attribute_description"
+    ],
+    "message_contains": "'discipline'"
+  },
+  "attribute-description-discipline-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "attributes",
+      0,
+      "attribute_description",
+      "discipline"
+    ]
+  },
+  "attribute-description-missing-type.json": {
+    "keyword": "required",
+    "path": [
+      "attributes",
+      0,
+      "attribute_description"
+    ],
+    "message_contains": "'type'"
+  },
+  "attribute-description-type-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "attributes",
+      0,
+      "attribute_description",
+      "type"
+    ]
+  },
+  "attribute-description-invalid-unit.json": {
+    "keyword": "oneOf",
+    "path": [
+      "attributes",
+      0,
+      "attribute_description",
+      "unit"
+    ]
+  },
+  "attribute-description-wrong-unit-type.json": {
+    "keyword": "type",
+    "path": [
+      "attributes",
+      0,
+      "attribute_description",
+      "unit"
+    ]
+  },
+  "attribute-description-extra-property.json": {
+    "keyword": "unevaluatedProperties",
+    "path": [
+      "attributes",
+      0,
+      "attribute_description"
+    ]
+  },
+  "valid-attribute-unit.json": null,
+  "groups-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "groups"
+    ]
+  },
+  "group-item-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "groups",
+      0
+    ]
+  },
+  "group-missing-group-uuid.json": {
+    "keyword": "required",
+    "path": [
+      "groups",
+      0
+    ],
+    "message_contains": "'group_uuid'"
+  },
+  "group-missing-title.json": {
+    "keyword": "required",
+    "path": [
+      "groups",
+      0
+    ],
+    "message_contains": "'title'"
+  },
+  "group-group-uuid-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "groups",
+      0,
+      "group_uuid"
+    ]
+  },
+  "group-title-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "groups",
+      0,
+      "title"
+    ]
+  },
+  "group-is-hidden-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "groups",
+      0,
+      "is_hidden"
+    ]
+  },
+  "group-missing-column-policy-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "groups",
+      0,
+      "missing_column_policy"
+    ]
+  },
+  "group-tags-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "groups",
+      0,
+      "tags"
+    ]
+  },
+  "group-group-uuid-invalid-uuid.json": {
+    "keyword": "format",
+    "path": [
+      "groups",
+      0,
+      "group_uuid"
+    ]
+  },
+  "group-parent-group-uuid-invalid-uuid.json": {
+    "keyword": "format",
+    "path": [
+      "groups",
+      0,
+      "parent_group_uuid"
+    ]
+  },
+  "group-parent-wrong-type.json": {
+    "keyword": "oneOf",
+    "path": [
+      "groups",
+      0,
+      "parent_group_uuid"
+    ]
+  },
+  "group-invalid-policy.json": {
+    "keyword": "enum",
+    "path": [
+      "groups",
+      0,
+      "missing_column_policy"
+    ]
+  },
+  "group-extra-property.json": {
+    "keyword": "additionalProperties",
+    "path": [
+      "groups",
+      0
+    ],
+    "message_contains": "extra"
+  },
+  "lineage-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "lineage"
+    ]
+  },
+  "lineage-missing-events.json": {
+    "keyword": "required",
+    "path": [
+      "lineage"
+    ],
+    "message_contains": "'events'"
+  },
+  "lineage-events-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "lineage",
+      "events"
+    ]
+  },
+  "lineage-invalid-json-pointer.json": {
+    "keyword": "format",
+    "path": [
+      "lineage",
+      "self_link"
+    ]
+  },
+  "lineage-event-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "lineage",
+      "events",
+      0
+    ]
+  },
+  "lineage-event-missing-run.json": {
+    "keyword": "required",
+    "path": [
+      "lineage",
+      "events",
+      0
+    ],
+    "message_contains": "'run'"
+  },
+  "lineage-event-missing-job.json": {
+    "keyword": "required",
+    "path": [
+      "lineage",
+      "events",
+      0
+    ],
+    "message_contains": "'job'"
+  },
+  "lineage-event-missing-eventtime.json": {
+    "keyword": "required",
+    "path": [
+      "lineage",
+      "events",
+      0
+    ],
+    "message_contains": "'eventTime'"
+  },
+  "lineage-event-missing-producer.json": {
+    "keyword": "required",
+    "path": [
+      "lineage",
+      "events",
+      0
+    ],
+    "message_contains": "'producer'"
+  },
+  "lineage-event-missing-schemaurl.json": {
+    "keyword": "required",
+    "path": [
+      "lineage",
+      "events",
+      0
+    ],
+    "message_contains": "'schemaURL'"
+  },
+  "lineage-invalid-producer.json": {
+    "keyword": "format",
+    "path": [
+      "lineage",
+      "events",
+      0,
+      "producer"
+    ]
+  },
+  "lineage-invalid-schemaurl.json": {
+    "keyword": "format",
+    "path": [
+      "lineage",
+      "events",
+      0,
+      "schemaURL"
+    ]
+  },
+  "lineage-invalid-event-type.json": {
+    "keyword": "enum",
+    "path": [
+      "lineage",
+      "events",
+      0,
+      "eventType"
+    ]
+  },
+  "lineage-invalid-run-uuid.json": {
+    "keyword": "format",
+    "path": [
+      "lineage",
+      "events",
+      0,
+      "run",
+      "runId"
+    ]
+  },
+  "lineage-run-missing-id.json": {
+    "keyword": "required",
+    "path": [
+      "lineage",
+      "events",
+      0,
+      "run"
+    ],
+    "message_contains": "'runId'"
+  },
+  "lineage-job-missing-namespace.json": {
+    "keyword": "required",
+    "path": [
+      "lineage",
+      "events",
+      0,
+      "job"
+    ],
+    "message_contains": "'namespace'"
+  },
+  "lineage-job-missing-name.json": {
+    "keyword": "required",
+    "path": [
+      "lineage",
+      "events",
+      0,
+      "job"
+    ],
+    "message_contains": "'name'"
+  },
+  "lineage-inputs-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "lineage",
+      "events",
+      0,
+      "inputs"
+    ]
+  },
+  "lineage-inputs-dataset-missing-name.json": {
+    "keyword": "required",
+    "path": [
+      "lineage",
+      "events",
+      0,
+      "inputs",
+      0
+    ],
+    "message_contains": "'name'"
+  },
+  "lineage-outputs-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "lineage",
+      "events",
+      0,
+      "outputs"
+    ]
+  },
+  "lineage-outputs-dataset-missing-name.json": {
+    "keyword": "required",
+    "path": [
+      "lineage",
+      "events",
+      0,
+      "outputs",
+      0
+    ],
+    "message_contains": "'name'"
+  },
+  "lineage-run-facet-wrong-type.json": {
+    "keyword": "type",
+    "path": [
+      "lineage",
+      "events",
+      0,
+      "run",
+      "facets",
+      "custom"
+    ]
+  }
+}

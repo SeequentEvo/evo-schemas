@@ -1,0 +1,52 @@
+{
+  "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+  "name": "Example pointset.",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "locations": {
+    "coordinates": {
+      "width": 3,
+      "data_type": "float64",
+      "length": 3,
+      "data": "abababababababababababababababababababababababababababababababab"
+    },
+    "attributes": [
+      {
+        "name": "lithology",
+        "key": "lith",
+        "attribute_type": "category",
+        "nan_description": {
+          "values": [
+            -1
+          ]
+        },
+        "attribute_description": {
+          "discipline": "Geology",
+          "type": "Lithology"
+        },
+        "values": {
+          "data_type": "int32",
+          "length": 3,
+          "width": 1,
+          "data": "abababababababababababababababababababababababababababababababab"
+        },
+        "table": {
+          "keys_data_type": "int32",
+          "values_data_type": "string",
+          "length": 2,
+          "data": "abababababababababababababababababababababababababababababababab"
+        }
+      }
+    ]
+  },
+  "bounding_box": {
+    "min_y": 5,
+    "max_y": 10,
+    "min_x": 0,
+    "max_x": 10,
+    "min_z": 5,
+    "max_z": 10
+  },
+  "coordinate_reference_system": {
+    "epsg_code": 2048
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema": "/objects/geological-model-meshes/2.2.0/geological-model-meshes.schema.json",
+  "name": "Example geological meshes collection",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "bounding_box": {
+    "min_x": 0,
+    "max_x": 10,
+    "min_y": 0,
+    "max_y": 10,
+    "min_z": 10,
+    "max_z": 20
+  },
+  "coordinate_reference_system": {
+    "epsg_code": 1024
+  },
+  "folders": [
+    {
+      "name": "outer",
+      "items": [
+        {
+          "items": [
+            {
+              "volume_index": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "triangle_geometry": {
+    "triangles": {
+      "vertices": {
+        "width": 3,
+        "data_type": "float64",
+        "length": 3,
+        "data": "abababababababababababababababababababababababababababababababab",
+        "attributes": []
+      },
+      "indices": {
+        "width": 3,
+        "data_type": "uint64",
+        "length": 1,
+        "data": "abababababababababababababababababababababababababababababababab",
+        "attributes": []
+      }
+    },
+    "parts": {
+      "chunks": {
+        "width": 2,
+        "data_type": "uint64",
+        "length": 6,
+        "data": "abababababababababababababababababababababababababababababababab"
+      },
+      "attributes": [
+        {
+          "name": "Source",
+          "key": "source",
+          "attribute_type": "string",
+          "values": {
+            "data_type": "string",
+            "length": 6,
+            "data": "abababababababababababababababababababababababababababababababab"
+          }
+        }
+      ]
+    }
+  },
+  "volumes": [],
+  "surfaces": []
+}
