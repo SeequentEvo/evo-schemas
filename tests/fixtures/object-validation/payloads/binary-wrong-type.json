@@ -1,0 +1,23 @@
+{
+  "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+  "name": "Example pointset.",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "locations": {
+    "coordinates": {
+      "width": 3,
+      "data_type": "float64",
+      "length": 3,
+      "data": 5
+    },
+    "attributes": []
+  },
+  "bounding_box": {
+    "min_y": 5,
+    "max_y": 10,
+    "min_x": 0,
+    "max_x": 10,
+    "min_z": 5,
+    "max_z": 10
+  },
+  "coordinate_reference_system": "unspecified"
+}

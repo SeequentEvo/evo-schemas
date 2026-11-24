@@ -1,0 +1,56 @@
+{
+  "schema": "/objects/volumetric-model-meshes/1.0.0/volumetric-model-meshes.schema.json",
+  "name": "Gold grade shells",
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "bounding_box": {
+    "min_x": 0,
+    "max_x": 1000,
+    "min_y": 0,
+    "max_y": 1000,
+    "min_z": -500,
+    "max_z": 0
+  },
+  "coordinate_reference_system": {
+    "epsg_code": 32750
+  },
+  "triangle_geometry": {
+    "triangles": {
+      "vertices": {
+        "width": 3,
+        "data_type": "float64",
+        "length": 24,
+        "data": "abababababababababababababababababababababababababababababababab",
+        "attributes": []
+      },
+      "indices": {
+        "width": 3,
+        "data_type": "uint64",
+        "length": 32,
+        "data": "abababababababababababababababababababababababababababababababab",
+        "attributes": []
+      }
+    },
+    "parts": {
+      "chunks": {
+        "width": 2,
+        "data_type": "uint64",
+        "length": 16,
+        "data": "abababababababababababababababababababababababababababababababab"
+      },
+      "attributes": []
+    }
+  },
+  "surfaces": [
+    {
+      "name": "contact",
+      "surface_type": "CategoryBoundary",
+      "categories": [],
+      "parts": [
+        {
+          "index": 0
+        }
+      ]
+    }
+  ],
+  "volumes": []
+}

@@ -1,0 +1,1008 @@
+{
+  "valid-binary-hash.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": null
+  },
+  "valid-binary-uppercase-hash.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": null
+  },
+  "valid-binary-uuid.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": null
+  },
+  "valid-binary-null.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": null
+  },
+  "binary-hash-invalid-character.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": {
+      "keyword": "pattern",
+      "path": [
+        "locations",
+        "coordinates",
+        "data"
+      ]
+    }
+  },
+  "binary-hash-too-short.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": {
+      "keyword": "minLength",
+      "path": [
+        "locations",
+        "coordinates",
+        "data"
+      ]
+    }
+  },
+  "binary-hash-too-long.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": {
+      "keyword": "maxLength",
+      "path": [
+        "locations",
+        "coordinates",
+        "data"
+      ],
+      "schema_prefix": [
+        "allOf",
+        1,
+        "properties",
+        "locations",
+        "allOf",
+        0,
+        "properties",
+        "coordinates",
+        "allOf",
+        0,
+        "properties",
+        "data",
+        "oneOf",
+        0
+      ]
+    }
+  },
+  "binary-invalid-uuid.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": {
+      "keyword": "format",
+      "path": [
+        "locations",
+        "coordinates",
+        "data"
+      ]
+    }
+  },
+  "binary-wrong-type.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": {
+      "keyword": "oneOf",
+      "path": [
+        "locations",
+        "coordinates",
+        "data"
+      ]
+    }
+  },
+  "array-missing-data.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": {
+      "keyword": "required",
+      "path": [
+        "locations",
+        "coordinates"
+      ],
+      "message_contains": "'data'"
+    }
+  },
+  "array-width-wrong-constant.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": {
+      "keyword": "const",
+      "path": [
+        "locations",
+        "coordinates",
+        "width"
+      ]
+    }
+  },
+  "array-data-type-wrong-constant.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": {
+      "keyword": "const",
+      "path": [
+        "locations",
+        "coordinates",
+        "data_type"
+      ]
+    }
+  },
+  "array-negative-length.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": {
+      "keyword": "minimum",
+      "path": [
+        "locations",
+        "coordinates",
+        "length"
+      ]
+    }
+  },
+  "array-fractional-length.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": {
+      "keyword": "type",
+      "path": [
+        "locations",
+        "coordinates",
+        "length"
+      ]
+    }
+  },
+  "valid-array-zero-length.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": null
+  },
+  "valid-indices-attribute.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": null
+  },
+  "valid-indices-version-zero.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": null
+  },
+  "indices-version-leading-zero.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": {
+      "keyword": "pattern",
+      "path": [
+        "locations",
+        "attributes",
+        0,
+        "related_object",
+        "version"
+      ]
+    }
+  },
+  "indices-version-missing-patch.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": {
+      "keyword": "pattern",
+      "path": [
+        "locations",
+        "attributes",
+        0,
+        "related_object",
+        "version"
+      ]
+    }
+  },
+  "indices-version-prerelease.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": {
+      "keyword": "pattern",
+      "path": [
+        "locations",
+        "attributes",
+        0,
+        "related_object",
+        "version"
+      ]
+    }
+  },
+  "indices-missing-related-component.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": {
+      "keyword": "required",
+      "path": [
+        "locations",
+        "attributes",
+        0,
+        "related_object"
+      ],
+      "message_contains": "'component'"
+    }
+  },
+  "attribute-unknown-discriminator.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": {
+      "keyword": "oneOf",
+      "path": [
+        "locations",
+        "attributes",
+        0
+      ]
+    }
+  },
+  "indices-wrong-array-width.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": {
+      "keyword": "const",
+      "path": [
+        "locations",
+        "attributes",
+        0,
+        "values",
+        "width"
+      ],
+      "schema_prefix": [
+        "allOf",
+        1,
+        "properties",
+        "locations",
+        "allOf",
+        1,
+        "properties",
+        "attributes",
+        "items",
+        "oneOf",
+        13
+      ]
+    }
+  },
+  "valid-bool-time-series.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": null
+  },
+  "time-series-negative-step-count.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": {
+      "keyword": "minimum",
+      "path": [
+        "locations",
+        "attributes",
+        0,
+        "num_time_steps"
+      ],
+      "schema_prefix": [
+        "allOf",
+        1,
+        "properties",
+        "locations",
+        "allOf",
+        1,
+        "properties",
+        "attributes",
+        "items",
+        "oneOf",
+        8
+      ]
+    }
+  },
+  "time-series-invalid-start-time.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": {
+      "keyword": "format",
+      "path": [
+        "locations",
+        "attributes",
+        0,
+        "time_step",
+        "start_time"
+      ],
+      "schema_prefix": [
+        "allOf",
+        1,
+        "properties",
+        "locations",
+        "allOf",
+        1,
+        "properties",
+        "attributes",
+        "items",
+        "oneOf",
+        8
+      ]
+    }
+  },
+  "time-series-invalid-time-unit.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": {
+      "keyword": "enum",
+      "path": [
+        "locations",
+        "attributes",
+        0,
+        "time_step",
+        "unit"
+      ],
+      "schema_prefix": [
+        "allOf",
+        1,
+        "properties",
+        "locations",
+        "allOf",
+        1,
+        "properties",
+        "attributes",
+        "items",
+        "oneOf",
+        8
+      ]
+    }
+  },
+  "time-series-unknown-time-step-type.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": {
+      "keyword": "oneOf",
+      "path": [
+        "locations",
+        "attributes",
+        0,
+        "time_step"
+      ],
+      "schema_prefix": [
+        "allOf",
+        1,
+        "properties",
+        "locations",
+        "allOf",
+        1,
+        "properties",
+        "attributes",
+        "items",
+        "oneOf",
+        8
+      ]
+    }
+  },
+  "valid-category-attribute-lookup.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": null
+  },
+  "lookup-invalid-keys-data-type.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": {
+      "keyword": "enum",
+      "path": [
+        "locations",
+        "attributes",
+        0,
+        "table",
+        "keys_data_type"
+      ],
+      "schema_prefix": [
+        "allOf",
+        1,
+        "properties",
+        "locations",
+        "allOf",
+        1,
+        "properties",
+        "attributes",
+        "items",
+        "oneOf",
+        4
+      ]
+    }
+  },
+  "lookup-invalid-values-data-type.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": {
+      "keyword": "const",
+      "path": [
+        "locations",
+        "attributes",
+        0,
+        "table",
+        "values_data_type"
+      ],
+      "schema_prefix": [
+        "allOf",
+        1,
+        "properties",
+        "locations",
+        "allOf",
+        1,
+        "properties",
+        "attributes",
+        "items",
+        "oneOf",
+        4
+      ]
+    }
+  },
+  "lookup-missing-keys-data-type.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": {
+      "keyword": "required",
+      "path": [
+        "locations",
+        "attributes",
+        0,
+        "table"
+      ],
+      "message_contains": "'keys_data_type'",
+      "schema_prefix": [
+        "allOf",
+        1,
+        "properties",
+        "locations",
+        "allOf",
+        1,
+        "properties",
+        "attributes",
+        "items",
+        "oneOf",
+        4
+      ]
+    }
+  },
+  "valid-lineage-facet-and-datetime.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": null
+  },
+  "lineage-facet-anyof.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": {
+      "keyword": "anyOf",
+      "path": [
+        "lineage",
+        "events",
+        0,
+        "run",
+        "facets"
+      ]
+    }
+  },
+  "lineage-invalid-datetime.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": {
+      "keyword": "format",
+      "path": [
+        "lineage",
+        "events",
+        0,
+        "eventTime"
+      ]
+    }
+  },
+  "lineage-impossible-datetime.json": {
+    "schema": "/objects/pointset/1.3.0/pointset.schema.json",
+    "expected": {
+      "keyword": "format",
+      "path": [
+        "lineage",
+        "events",
+        0,
+        "eventTime"
+      ]
+    }
+  },
+  "valid-distinct-mesh-characteristics.json": {
+    "schema": "/objects/volumetric-model-meshes/1.0.0/volumetric-model-meshes.schema.json",
+    "expected": null
+  },
+  "duplicate-mesh-characteristics.json": {
+    "schema": "/objects/volumetric-model-meshes/1.0.0/volumetric-model-meshes.schema.json",
+    "expected": {
+      "keyword": "uniqueItems",
+      "path": [
+        "surfaces",
+        0,
+        "quality",
+        "characteristics"
+      ],
+      "schema_prefix": [
+        "allOf",
+        1,
+        "properties",
+        "surfaces",
+        "items",
+        "oneOf",
+        0
+      ]
+    }
+  },
+  "valid-distinct-surface-categories.json": {
+    "schema": "/objects/volumetric-model-meshes/1.0.0/volumetric-model-meshes.schema.json",
+    "expected": null
+  },
+  "valid-single-surface-category.json": {
+    "schema": "/objects/volumetric-model-meshes/1.0.0/volumetric-model-meshes.schema.json",
+    "expected": null
+  },
+  "duplicate-surface-categories.json": {
+    "schema": "/objects/volumetric-model-meshes/1.0.0/volumetric-model-meshes.schema.json",
+    "expected": {
+      "keyword": "uniqueItems",
+      "path": [
+        "surfaces",
+        0,
+        "categories"
+      ]
+    }
+  },
+  "surface-categories-empty.json": {
+    "schema": "/objects/volumetric-model-meshes/1.0.0/volumetric-model-meshes.schema.json",
+    "expected": {
+      "keyword": "minItems",
+      "path": [
+        "surfaces",
+        0,
+        "categories"
+      ]
+    }
+  },
+  "surface-categories-too-many.json": {
+    "schema": "/objects/volumetric-model-meshes/1.0.0/volumetric-model-meshes.schema.json",
+    "expected": {
+      "keyword": "maxItems",
+      "path": [
+        "surfaces",
+        0,
+        "categories"
+      ]
+    }
+  },
+  "surface-invalid-kind.json": {
+    "schema": "/objects/volumetric-model-meshes/1.0.0/volumetric-model-meshes.schema.json",
+    "expected": {
+      "keyword": "oneOf",
+      "path": [
+        "surfaces",
+        0
+      ]
+    }
+  },
+  "surface-missing-bound.json": {
+    "schema": "/objects/volumetric-model-meshes/1.0.0/volumetric-model-meshes.schema.json",
+    "expected": {
+      "keyword": "required",
+      "path": [
+        "surfaces",
+        0
+      ],
+      "message_contains": "'bound'"
+    }
+  },
+  "valid-recursive-folders.json": {
+    "schema": "/objects/geological-model-meshes/2.2.0/geological-model-meshes.schema.json",
+    "expected": null
+  },
+  "recursive-folder-negative-index.json": {
+    "schema": "/objects/geological-model-meshes/2.2.0/geological-model-meshes.schema.json",
+    "expected": {
+      "keyword": "minimum",
+      "path": [
+        "folders",
+        0,
+        "items",
+        0,
+        "items",
+        0,
+        "volume_index"
+      ]
+    }
+  },
+  "recursive-folder-unknown-item.json": {
+    "schema": "/objects/geological-model-meshes/2.2.0/geological-model-meshes.schema.json",
+    "expected": {
+      "keyword": "oneOf",
+      "path": [
+        "folders",
+        0,
+        "items",
+        0,
+        "items",
+        0
+      ]
+    }
+  },
+  "recursive-folder-conflicting-references.json": {
+    "schema": "/objects/geological-model-meshes/2.2.0/geological-model-meshes.schema.json",
+    "expected": {
+      "keyword": "oneOf",
+      "path": [
+        "folders",
+        0,
+        "items",
+        0,
+        "items",
+        0
+      ]
+    }
+  },
+  "recursive-folder-missing-name.json": {
+    "schema": "/objects/geological-model-meshes/2.2.0/geological-model-meshes.schema.json",
+    "expected": {
+      "keyword": "required",
+      "path": [
+        "folders",
+        0,
+        "items",
+        0
+      ],
+      "message_contains": "'name'"
+    }
+  },
+  "valid-grid-two-dimensions.json": {
+    "schema": "/objects/regular-2d-grid/1.3.0/regular-2d-grid.schema.json",
+    "expected": null
+  },
+  "grid-size-too-short.json": {
+    "schema": "/objects/regular-2d-grid/1.3.0/regular-2d-grid.schema.json",
+    "expected": {
+      "keyword": "minItems",
+      "path": [
+        "size"
+      ]
+    }
+  },
+  "grid-size-too-long.json": {
+    "schema": "/objects/regular-2d-grid/1.3.0/regular-2d-grid.schema.json",
+    "expected": {
+      "keyword": "maxItems",
+      "path": [
+        "size"
+      ]
+    }
+  },
+  "valid-design-transform.json": {
+    "schema": "/objects/design-geometry/1.1.0/design-geometry.schema.json",
+    "expected": null
+  },
+  "design-transform-too-short.json": {
+    "schema": "/objects/design-geometry/1.1.0/design-geometry.schema.json",
+    "expected": {
+      "keyword": "minItems",
+      "path": [
+        "parts",
+        0,
+        "transform"
+      ]
+    }
+  },
+  "design-transform-too-long.json": {
+    "schema": "/objects/design-geometry/1.1.0/design-geometry.schema.json",
+    "expected": {
+      "keyword": "maxItems",
+      "path": [
+        "parts",
+        0,
+        "transform"
+      ]
+    }
+  },
+  "valid-design-geometry-composite.json": {
+    "schema": "/objects/design-geometry/1.1.0/design-geometry.schema.json",
+    "expected": null
+  },
+  "design-geometry-composite-negative-index.json": {
+    "schema": "/objects/design-geometry/1.1.0/design-geometry.schema.json",
+    "expected": {
+      "keyword": "minimum",
+      "path": [
+        "parts",
+        0,
+        "geometry",
+        "points_2d",
+        0
+      ]
+    }
+  },
+  "valid-old-rotation-boundary.json": {
+    "schema": "/objects/regular-2d-grid/1.0.1/regular-2d-grid.schema.json",
+    "expected": null
+  },
+  "old-rotation-dip-too-large.json": {
+    "schema": "/objects/regular-2d-grid/1.0.1/regular-2d-grid.schema.json",
+    "expected": {
+      "keyword": "maximum",
+      "path": [
+        "rotation",
+        "dip"
+      ]
+    }
+  },
+  "old-rotation-pitch-too-large.json": {
+    "schema": "/objects/regular-2d-grid/1.0.1/regular-2d-grid.schema.json",
+    "expected": {
+      "keyword": "maximum",
+      "path": [
+        "rotation",
+        "pitch"
+      ]
+    }
+  },
+  "valid-cdf-block-support.json": {
+    "schema": "/objects/non-parametric-continuous-cumulative-distribution/1.2.0/non-parametric-continuous-cumulative-distribution.schema.json",
+    "expected": null
+  },
+  "valid-cdf-point-support.json": {
+    "schema": "/objects/non-parametric-continuous-cumulative-distribution/1.2.0/non-parametric-continuous-cumulative-distribution.schema.json",
+    "expected": null
+  },
+  "valid-cdf-no-upper-extrapolation.json": {
+    "schema": "/objects/non-parametric-continuous-cumulative-distribution/1.2.0/non-parametric-continuous-cumulative-distribution.schema.json",
+    "expected": null
+  },
+  "valid-cdf-upper-power-boundary.json": {
+    "schema": "/objects/non-parametric-continuous-cumulative-distribution/1.2.0/non-parametric-continuous-cumulative-distribution.schema.json",
+    "expected": null
+  },
+  "valid-cdf-lower-power-boundary.json": {
+    "schema": "/objects/non-parametric-continuous-cumulative-distribution/1.2.0/non-parametric-continuous-cumulative-distribution.schema.json",
+    "expected": null
+  },
+  "cdf-lower-power-too-low.json": {
+    "schema": "/objects/non-parametric-continuous-cumulative-distribution/1.2.0/non-parametric-continuous-cumulative-distribution.schema.json",
+    "expected": {
+      "keyword": "minimum",
+      "path": [
+        "cdf",
+        "lower_tail_extrapolation",
+        "power_model",
+        "power"
+      ]
+    }
+  },
+  "cdf-unknown-support.json": {
+    "schema": "/objects/non-parametric-continuous-cumulative-distribution/1.2.0/non-parametric-continuous-cumulative-distribution.schema.json",
+    "expected": {
+      "keyword": "oneOf",
+      "path": [
+        "support"
+      ]
+    }
+  },
+  "cdf-block-size-zero.json": {
+    "schema": "/objects/non-parametric-continuous-cumulative-distribution/1.2.0/non-parametric-continuous-cumulative-distribution.schema.json",
+    "expected": {
+      "keyword": "exclusiveMinimum",
+      "path": [
+        "support",
+        "block",
+        "size_x"
+      ]
+    }
+  },
+  "cdf-upper-power-zero.json": {
+    "schema": "/objects/non-parametric-continuous-cumulative-distribution/1.2.0/non-parametric-continuous-cumulative-distribution.schema.json",
+    "expected": {
+      "keyword": "exclusiveMinimum",
+      "path": [
+        "cdf",
+        "upper_tail_extrapolation",
+        "power_model",
+        "power"
+      ]
+    }
+  },
+  "cdf-upper-power-too-large.json": {
+    "schema": "/objects/non-parametric-continuous-cumulative-distribution/1.2.0/non-parametric-continuous-cumulative-distribution.schema.json",
+    "expected": {
+      "keyword": "maximum",
+      "path": [
+        "cdf",
+        "upper_tail_extrapolation",
+        "power_model",
+        "power"
+      ]
+    }
+  },
+  "cdf-upper-power-missing.json": {
+    "schema": "/objects/non-parametric-continuous-cumulative-distribution/1.2.0/non-parametric-continuous-cumulative-distribution.schema.json",
+    "expected": {
+      "keyword": "required",
+      "path": [
+        "cdf",
+        "upper_tail_extrapolation",
+        "power_model"
+      ],
+      "message_contains": "'power'"
+    }
+  },
+  "valid-resistivity-survey.json": {
+    "schema": "/objects/resistivity-ip/1.1.0/resistivity-ip.schema.json",
+    "expected": null
+  },
+  "valid-resistivity-dcres-survey.json": {
+    "schema": "/objects/resistivity-ip/1.1.0/resistivity-ip.schema.json",
+    "expected": null
+  },
+  "valid-resistivity-generic-configuration.json": {
+    "schema": "/objects/resistivity-ip/1.1.0/resistivity-ip.schema.json",
+    "expected": null
+  },
+  "resistivity-invalid-survey.json": {
+    "schema": "/objects/resistivity-ip/1.1.0/resistivity-ip.schema.json",
+    "expected": {
+      "keyword": "oneOf",
+      "path": [
+        "survey"
+      ]
+    }
+  },
+  "resistivity-invalid-configuration.json": {
+    "schema": "/objects/resistivity-ip/1.1.0/resistivity-ip.schema.json",
+    "expected": {
+      "keyword": "oneOf",
+      "path": [
+        "configuration"
+      ]
+    }
+  },
+  "resistivity-empty-frequencies.json": {
+    "schema": "/objects/resistivity-ip/1.1.0/resistivity-ip.schema.json",
+    "expected": {
+      "keyword": "minItems",
+      "path": [
+        "survey",
+        "frequencies"
+      ]
+    }
+  },
+  "resistivity-invalid-datetime.json": {
+    "schema": "/objects/resistivity-ip/1.1.0/resistivity-ip.schema.json",
+    "expected": {
+      "keyword": "format",
+      "path": [
+        "line_list",
+        0,
+        "date"
+      ]
+    }
+  },
+  "resistivity-electrode-count-too-high.json": {
+    "schema": "/objects/resistivity-ip/1.1.0/resistivity-ip.schema.json",
+    "expected": {
+      "keyword": "maximum",
+      "path": [
+        "line_list",
+        0,
+        "number_of_electrodes"
+      ]
+    }
+  },
+  "valid-drilling-mixed-deviation.json": {
+    "schema": "/objects/drilling-campaign/1.0.0/drilling-campaign.schema.json",
+    "expected": null
+  },
+  "valid-drilling-natural-deviation.json": {
+    "schema": "/objects/drilling-campaign/1.0.0/drilling-campaign.schema.json",
+    "expected": null
+  },
+  "drilling-unknown-deviation.json": {
+    "schema": "/objects/drilling-campaign/1.0.0/drilling-campaign.schema.json",
+    "expected": {
+      "keyword": "oneOf",
+      "path": [
+        "planned",
+        "path"
+      ]
+    }
+  },
+  "drilling-mixed-width.json": {
+    "schema": "/objects/drilling-campaign/1.0.0/drilling-campaign.schema.json",
+    "expected": {
+      "keyword": "const",
+      "path": [
+        "planned",
+        "path",
+        "segment_properties",
+        "width"
+      ]
+    }
+  },
+  "valid-drilling-distance-table.json": {
+    "schema": "/objects/drilling-campaign/1.0.0/drilling-campaign.schema.json",
+    "expected": null
+  },
+  "drilling-invalid-collection-type.json": {
+    "schema": "/objects/drilling-campaign/1.0.0/drilling-campaign.schema.json",
+    "expected": {
+      "keyword": "oneOf",
+      "path": [
+        "planned",
+        "collections",
+        0
+      ]
+    }
+  },
+  "drilling-distance-table-missing-holes.json": {
+    "schema": "/objects/drilling-campaign/1.0.0/drilling-campaign.schema.json",
+    "expected": {
+      "keyword": "required",
+      "path": [
+        "planned",
+        "collections",
+        0
+      ],
+      "message_contains": "'holes'",
+      "schema_prefix": [
+        "allOf",
+        1,
+        "properties",
+        "planned",
+        "properties",
+        "collections",
+        "items",
+        "oneOf",
+        1
+      ]
+    }
+  },
+  "valid-variogram-spherical.json": {
+    "schema": "/objects/variogram/1.2.0/variogram.schema.json",
+    "expected": null
+  },
+  "valid-variogram-cauchy.json": {
+    "schema": "/objects/variogram/1.2.0/variogram.schema.json",
+    "expected": null
+  },
+  "variogram-invalid-alpha.json": {
+    "schema": "/objects/variogram/1.2.0/variogram.schema.json",
+    "expected": {
+      "keyword": "enum",
+      "path": [
+        "structures",
+        0,
+        "alpha"
+      ],
+      "schema_prefix": [
+        "allOf",
+        1,
+        "properties",
+        "structures",
+        "items",
+        "oneOf",
+        2
+      ]
+    }
+  },
+  "variogram-zero-contribution.json": {
+    "schema": "/objects/variogram/1.2.0/variogram.schema.json",
+    "expected": {
+      "keyword": "exclusiveMinimum",
+      "path": [
+        "structures",
+        0,
+        "contribution"
+      ],
+      "schema_prefix": [
+        "allOf",
+        1,
+        "properties",
+        "structures",
+        "items",
+        "oneOf",
+        3
+      ]
+    }
+  },
+  "variogram-zero-ellipsoid-range.json": {
+    "schema": "/objects/variogram/1.2.0/variogram.schema.json",
+    "expected": {
+      "keyword": "exclusiveMinimum",
+      "path": [
+        "structures",
+        0,
+        "anisotropy",
+        "ellipsoid_ranges",
+        "major"
+      ],
+      "schema_prefix": [
+        "allOf",
+        1,
+        "properties",
+        "structures",
+        "items",
+        "oneOf",
+        3
+      ]
+    }
+  },
+  "variogram-unknown-structure.json": {
+    "schema": "/objects/variogram/1.2.0/variogram.schema.json",
+    "expected": {
+      "keyword": "oneOf",
+      "path": [
+        "structures",
+        0
+      ]
+    }
+  }
+}
